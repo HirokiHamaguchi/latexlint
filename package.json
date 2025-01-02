@@ -19,6 +19,10 @@
       {
         "command": "latexlint.renameCommand",
         "title": "Rename Command"
+      },
+      {
+        "command": "latexlint.lintLaTeX",
+        "title": "Lint LaTeX for academic writing"
       }
     ],
     "keybindings": [

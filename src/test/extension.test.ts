@@ -2,9 +2,9 @@ import * as assert from 'assert';
 import * as vscode from 'vscode';
 import * as path from 'path';
 
-import renameCommand from '../commands/renameCommand';
+import findModifyTargets from '../commands/findModifyTargets';
 
-async function testRenameCommand() {
+async function testFindModifyTargets() {
 	const uri = vscode.Uri.file(path.resolve(__dirname, '../../src/test/sample/sample.tex'));
 	if (!await vscode.workspace.fs.stat(uri)) throw new Error('File not found');
 	const document = await vscode.workspace.openTextDocument(uri);
@@ -26,7 +26,7 @@ async function testRenameCommand() {
 		editor.selection = new vscode.Selection(start, end);
 		editor.revealRange(editor.selection);
 		await new Promise(resolve => setTimeout(resolve, 500));
-		assert.notStrictEqual(renameCommand(editor), undefined);
+		assert.notStrictEqual(findModifyTargets(editor), undefined);
 	}
 }
 
@@ -34,5 +34,5 @@ suite('Extension Test Suite', () => {
 	suiteTeardown(() => {
 		vscode.window.showInformationMessage('All tests done!');
 	});
-	test('Rename Command Test', testRenameCommand);
+	test('Test findModifyTargets', testFindModifyTargets);
 });

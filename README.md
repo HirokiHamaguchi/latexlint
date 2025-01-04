@@ -1,12 +1,22 @@
+<!-- markdownlint-disable heading-start-left first-line-h1 -->
+
+<div align="center">
+
+<img src="images/mainIcon512.png" alt="logo" width="150">
+
 # LaTeX Lint
+
+</div>
 
 ## Features
 
-This extension provides a LaTeX Linter for `.tex` and `.md` files.
+This extension provides a LaTeX Linter for `.tex` and `.md` files with commands renaming feature.
 
-\!\[feature X\]\(images/feature-x.png\)
+![lint](doc/lint.gif)
 
-Our extension resembles [chktex](https://ctan.org/pkg/chktex) and [LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename) in some aspects.
+![rename](doc/rename.gif)
+
+Our extension resembles a LaTeX package [chktex](https://ctan.org/pkg/chktex) and a VSCode Extension [LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename) in some aspects.
 We sincerely appreciate the developers of these extensions.
 
 ## Rules
@@ -254,6 +264,12 @@ Detect `et al.`.
 In most cases, you can use `\citep` instead.
 
 -->
+
+## Rename
+
+By pressing `F2` on the command in `\begin{}` and `\end{}` in `.tex` or `.md` files, you can rename the command.
+
+Refer to the GIF animation at [Features](#features).
 
 ## Release Notes
 

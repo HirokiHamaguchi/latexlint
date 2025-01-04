@@ -85,5 +85,13 @@
     "webpack-cli": "^5.1.4",
     "@vscode/test-cli": "^0.0.10",
     "@vscode/test-electron": "^2.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hari64boli64/latexlint"
+  },
+  "bugs": {
+    "url": "https://github.com/hari64boli64/latexlint/issues",
+    "email": "hari64boli64@gmail.com"
   }
 }

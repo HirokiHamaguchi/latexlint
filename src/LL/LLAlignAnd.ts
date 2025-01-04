@@ -1,8 +1,8 @@
 import * as vscode from 'vscode';
-import regex2ranges from '../util/regex2ranges';
+import regex2diagnostics from '../util/regex2diagnostics';
 
 export default function LLAlignAnd(doc: vscode.TextDocument): vscode.Diagnostic[] {
-    return regex2ranges(
+    return regex2diagnostics(
         doc,
         "LLAlignAnd",
         /=[\t ]*&/g

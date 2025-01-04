@@ -8,6 +8,7 @@
     "name": "hari64boli64",
     "email": "hari64boli64@gmail.com"
   },
+  "license": "MIT",
   "engines": {
     "vscode": "^1.96.0"
   },
@@ -19,7 +20,8 @@
     "Academic Writing"
   ],
   "categories": [
-    "Other"
+    "Linters",
+    "Education"
   ],
   "activationEvents": [
     "onLanguage:latex",

@@ -136,7 +136,7 @@ However, we do not detect the following as an exception.
 * `Fritz-John` (optimization, name of a person)
 * (ToDo: add more examples)
 
-We might have false postives something like `Wrong-Example`, which are not the name of a person.
+We might have false positives something like `Wrong-Example`, which are not the name of a person.
 
 As a side note, we should use `--` instead of `-` to indicate a range of pages, e.g., `123--456` instead of `123-456`.
 We do not detect this because it might be just a subtraction.
@@ -229,7 +229,7 @@ This pattern should be appeared only in math mode.
 Title name in `\title{}`, `\section{}`, `\subsection{}`, `\subsubsection{}`, `\paragraph{}`, and `\subparagraph{}` should be in title case in `.tex` files.
 
 It is very difficult to detect all non title cases because of a lot of exceptions and styles.
-We highly recommend to use [Title Case Converter](https://titlecaseconverter.com/) or [Captilize My Title](https://capitalizemytitle.com/) to convert the title in your preferred style.
+We highly recommend to use [Title Case Converter](https://titlecaseconverter.com/) or [Capitalize My Title](https://capitalizemytitle.com/) to convert the title in your preferred style.
 
 We test the string inside the `{}` is invariant by the function `toTitleCase` implemented based on [to-title-case](https://github.com/gouch/to-title-case/tree/master), JavaScript library. There might be some false positives and negatives.
 
@@ -279,4 +279,4 @@ Refer to [CHANGELOG.md](CHANGELOG.md).
 
 We use [MIT License](LICENSE).
 
-(The libray [to-title-case](https://github.com/gouch/to-title-case/tree/master) is also under MIT License.)
+(The library [to-title-case](https://github.com/gouch/to-title-case/tree/master) is also under MIT License.)

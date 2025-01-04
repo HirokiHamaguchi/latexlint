@@ -1,0 +1,140 @@
+\documentclass[a4paper, 10pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{siunitx}
+\usepackage{cleveref}
+\usepackage{mathtools}
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+\definecolor{cA}{HTML}{0072BD}
+\definecolor{cB}{HTML}{EDB120}
+\definecolor{cC}{HTML}{77AC30}
+\definecolor{cD}{HTML}{D95319}
+
+\newcommand{\tA}[1]{\textcolor{cA}{#1}}
+\newcommand{\tB}[1]{\textcolor{cB}{#1}}
+\newcommand{\tC}[1]{\textcolor{cC}{#1}}
+\newcommand{\tD}[1]{\textcolor{cD}{#1}}
+
+\newtheorem{theorem}{Theorem}
+\crefname{theorem}{Thm.}{Thms.}
+
+\begin{document}
+
+\title{Sample document}
+\author{hari64boli64}
+\date{\today}
+\maketitle
+
+\section{LLAlignAnd}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lll}
+        \&=              &
+        $\begin{aligned}
+                 a & = b \\
+                 c & = d
+             \end{aligned}$ &
+        \tA{ok}            \\[0.3cm]
+        =\&              &
+        $\begin{aligned}
+                 a = & b \\
+                 c = & d
+             \end{aligned}$ &
+        \tD{ng}            \\[0.3cm]
+        =\{\}\&          &
+        $\begin{aligned}
+                 a = {} & b \\
+                 c = {} & d
+             \end{aligned}$ &
+        \tA{ok}
+    \end{tabular}
+\end{table}
+
+\section{LLColonEqq}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lll}
+        x := y                   & $x := y$        & \tD{ng} \\
+        x $\backslash$coloneqq y & $x \coloneqq y$ & \tA{ok} \\
+        x ::= y                  & $x ::= y$       & \tD{ng} \\
+        x $\backslash$Coloneqq y & $x \Coloneqq y$ & \tA{ok}
+    \end{tabular}
+\end{table}
+
+\section{LLCref}
+
+\begin{theorem}
+    \label{thm:sample}
+    This is a sample theorem.
+\end{theorem}
+
+Use \cref{thm:sample} instead of Theorem~\ref{thm:sample}.
+
+\section{LLDoubleQuotation}
+
+Use ``XXX'' instead of “XXX” or "XXX".
+
+\section{LLENDash}
+
+\begin{itemize}
+    \item Erdos-Renyi (random graph, Erd\H{o}s--R\'enyi)
+    \item Einstein-Podolsky-Rosen (quantum mechanics, Einstein--Podolsky--Rosen)
+    \item Fruchterman-Reingold (graph drawing, Fruchterman--Reingold)
+    \item Gauss-Legendre (numerical integration, Gauss--Legendre)
+    \item Gibbs-Helmholtz (thermodynamics, Gibbs--Helmholtz)
+    \item Karush-Kuhn-Tucker (optimization, Karush--Kuhn--Tucker)
+\end{itemize}
+
+Exception: Fritz-John (optimization, name of a person)
+
+False Positive: Wrong-Example
+
+\section{LLNonASCII}
+
+ {　}！＂＃＄％＆＇（）＊＋，－．／
+
+日本語の文章は、upLaTeXでフツウに書けます。
+
+(You can write Japanese sentences as usual with upLaTeX.)
+
+\section{LLSI}
+
+Example: 10 KB, $3.5\mathrm{MiB}$, \SI{500}{\giga\byte}.
+
+\newcommand{\EB}{Some Awesome Command.This is not ExaByte.}
+
+\EB.
+
+This 1EB is one ExaByte.
+
+\section{LLT}
+
+\begin{equation*}
+    X^T \quad X^\top \quad X^{\mathsf{T}}
+\end{equation*}
+
+\section{LLTitle}
+
+\subsection{non title case words}
+
+\subsubsection{
+    This Is a Correct Title
+}
+
+\subparagraph{SubParagraph: Test With Ref~\ref{thm:sample}}
+
+\section{LLUserDefined}
+
+I want to use $\mathrm{a}$ instead of $a$ for superscript.
+
+\begin{equation*}
+    f^a(X) \quad f^{\mathrm{a}}(X)
+\end{equation*}
+
+\end{document}
+

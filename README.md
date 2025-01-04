@@ -10,13 +10,13 @@
 
 ## Features
 
-This extension provides a LaTeX Linter for `.tex` and `.md` files with commands renaming feature.
+This extension provides a LaTeX Linter for `.tex` and `.md` files with the commands renaming feature.
 
 ![lint](doc/lint.gif)
 
 ![rename](doc/rename.gif)
 
-Our extension resembles a LaTeX package [chktex](https://ctan.org/pkg/chktex) and a VSCode Extension [LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename) in some aspects.
+In some aspects, our extension resembles a LaTeX package [chktex](https://ctan.org/pkg/chktex) and a VSCode Extension [LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename).
 We sincerely appreciate the developers of these extensions.
 
 ## Rules
@@ -33,13 +33,13 @@ Here is the list of rules we detect.
 * [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
 * [LLT](#llt) (detect `^T`)
 * [LLTitle](#lltitle) (detect wrong title case in `\title{}`, `\section{}`, etc.)
-* [LLUserDefine](#lluserdefine) (detect user-defined regular expressions)
+* [LLUserDefine](#lluserdefine) (detect Regexes in `latexlint.userDefinedRules`)
 
 ### LLAlignAnd
 
 Detect `=&` in `.tex` or `.md` files.
-It is likely that you should write as `={}&`.
-This pattern should be appeared only in math mode.
+You should likely write as `={}&`.
+This pattern should appear only in math mode.
 
 We use the following regex to detect this pattern with some spaces.
 
@@ -65,7 +65,7 @@ The colon is slightly too low in `:=`, but vertically centered in `\coloneqq` ac
 TODO
 
 Detect ":" in math mode.
-It is likely that you want to use `\colon` instead.
+You likely want to use `\colon` instead.
 
 ![doc/LLColonInMath](doc/LLColonInMath.png)
 
@@ -81,7 +81,7 @@ We use the following regex to detect this pattern.
 \\ref(?=\{)
 ```
 
-I prefer this package because it can automatically add prefix like "Sec." or "Fig.". We can keep the consistency of the reference format.
+I prefer this package because it can automatically add prefixes like "Sec." or "Fig.". We can keep the consistency of the reference format.
 
 For cleveref package, you can also refer to [this page by opt-cp](https://web.archive.org/web/20220616140841/https://opt-cp.com/latex-packages/).
 
@@ -98,7 +98,7 @@ For cleveref package, you can also refer to [this page by opt-cp](https://web.ar
 
 ### LLDoubleQuotation
 
-Detect `“`, `”` and `"`  in `.tex` or `.md` files.
+Detect `“`, `”` and `"` in `.tex` or `.md` files.
 These might be used as "XXX" or “XXX”.
 
 Use ``XXX'' instead for double quotation.
@@ -120,7 +120,7 @@ We use the following regex to detect this pattern.
 [A-Z][a-zA-Z]*[a-z](-[A-Z][a-zA-Z]*[a-z])+
 ```
 
-Here `[A-Z][a-zA-Z]*[a-z]` is a word with a capital letter, zero or more letters, and a small letter, assuming that this represents a name of a person.
+Here, `[A-Z][a-zA-Z]*[a-z]` is a word with a capital letter, zero or more letters, and a small letter, assuming that this represents the name of a person.
 
 For example, we detect the following.
 
@@ -136,14 +136,14 @@ However, we do not detect the following as an exception.
 * `Fritz-John` (optimization, name of a person)
 * (ToDo: add more examples)
 
-We might have false positives something like `Wrong-Example`, which are not the name of a person.
+We might have false positives, such as `Wrong-Example`, which is not a person's name.
 
 As a side note, we should use `--` instead of `-` to indicate a range of pages, e.g., `123--456` instead of `123-456`.
 We do not detect this because it might be just a subtraction.
 
 ### LLNonASCII
 
-Detect all full-width ASCII characters in `.tex` or `.md` files.
+Detect all fullwidth ASCII characters in `.tex` or `.md` files.
 
 ```txt
 [\u3000\uFF01-\uFF5E]
@@ -155,7 +155,10 @@ Detect all full-width ASCII characters in `.tex` or `.md` files.
 We detect the following characters.
 
 ```txt
-　！＂＃＄％＆＇（）＊＋，－．／０１２３４５６７８９：；＜＝＞？＠ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ［＼］＾＿｀ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ｛｜｝～
+ ！＂＃＄％＆＇（）＊＋，－．／０１２３４５６７
+８９：；＜＝＞？＠ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯ
+ＰＱＲＳＴＵＶＷＸＹＺ［＼］＾＿｀ａｂｃｄｅｆｇ
+ｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ｛｜｝～
 ```
 
 If you want to detect all non-ASCII characters, use the following regex.
@@ -164,7 +167,7 @@ If you want to detect all non-ASCII characters, use the following regex.
 [^\x00-\x7F]
 ```
 
-Here, `\x00` to `\x7F` are ASCII characters.
+`\x00` to `\x7F` are ASCII characters.
 
 For example, you can detect the following Japanese characters.
 
@@ -190,27 +193,16 @@ Use `\SI` instead for units, like `\SI{1}{\kilo\byte}`(10^3byte) or `\SI{1}{\kib
 
 ![doc/LLSI](doc/LLSI.png)
 
-| Prefix  | Command  | Symbol  | Power |
-|:-------:|:--------:|:-------:|:-----:|
-|  kilo   |  \kilo   |    k    |   3   |
-|  mega   |  \mega   |    M    |   6   |
-|  giga   |  \giga   |    G    |   9   |
-|  tera   |  \tera   |    T    |  12   |
-|  peta   |  \peta   |    P    |  15   |
-|  exa    |  \exa    |    E    |  18   |
-|  zetta  |  \zetta  |    Z    |  21   |
-|  yotta  |  \yotta  |    Y    |  24   |
-
-| Prefix  | Command  | Symbol  | Power|
-|:-------:|:--------:|:-------:|:----:|
-|  kibi   |  \kibi   |   Ki    |  10  |
-|  mebi   |  \mebi   |   Mi    |  20  |
-|  gibi   |  \gibi   |   Gi    |  30  |
-|  tebi   |  \tebi   |   Ti    |  40  |
-|  pebi   |  \pebi   |   Pi    |  50  |
-|  exbi   |  \exbi   |   Ei    |  60  |
-|  zebi   |  \zebi   |   Zi    |  70  |
-|  yobi   |  \yobi   |   Yi    |  80  |
+| Prefix  | Command  | Symbol  | Power | Prefix  | Command  | Symbol  | Power|
+|:-------:|:--------:|:-------:|:-----:|:-------:|:--------:|:-------:|:----:|
+|  kilo   |  \kilo   |    k    |   3   |  kibi   |  \kibi   |   Ki    |  10  |
+|  mega   |  \mega   |    M    |   6   |  mebi   |  \mebi   |   Mi    |  20  |
+|  giga   |  \giga   |    G    |   9   |  gibi   |  \gibi   |   Gi    |  30  |
+|  tera   |  \tera   |    T    |  12   |  tebi   |  \tebi   |   Ti    |  40  |
+|  peta   |  \peta   |    P    |  15   |  pebi   |  \pebi   |   Pi    |  50  |
+|  exa    |  \exa    |    E    |  18   |  exbi   |  \exbi   |   Ei    |  60  |
+|  zetta  |  \zetta  |    Z    |  21   |  zebi   |  \zebi   |   Zi    |  70  |
+|  yotta  |  \yotta  |    Y    |  24   |  yobi   |  \yobi   |   Yi    |  80  |
 
 It would be better to use `\SI` for units such as `m`, `s`, `kg`, `A`, `K`, `mol`, and `rad`.
 
@@ -219,8 +211,8 @@ It would be better to use `\SI` for units such as `m`, `s`, `kg`, `A`, `K`, `mol
 ### LLT
 
 Detect `^T` in `.tex` or `.md` files.
-It is likely that you want to use `^\top` or `^\mathsf{T}` instead to represent the transpose of a matrix or a vector. Otherwise, we cannot distinguish between the transpose and the power by a variable `T`.
-This pattern should be appeared only in math mode.
+You likely want to use `^\top` or `^\mathsf{T}` instead to represent the transpose of a matrix or a vector. Otherwise, we cannot distinguish between the transpose and the power by a variable `T`.
+This pattern should appear only in math mode.
 
 [Ref by BrownieAlice](https://blog.browniealice.net/post/latex_transpose/).
 
@@ -228,8 +220,8 @@ This pattern should be appeared only in math mode.
 
 Title name in `\title{}`, `\section{}`, `\subsection{}`, `\subsubsection{}`, `\paragraph{}`, and `\subparagraph{}` should be in title case in `.tex` files.
 
-It is very difficult to detect all non title cases because of a lot of exceptions and styles.
-We highly recommend to use [Title Case Converter](https://titlecaseconverter.com/) or [Capitalize My Title](https://capitalizemytitle.com/) to convert the title in your preferred style.
+It is very difficult to detect all non-title cases because of the many exceptions and styles.
+We highly recommend using [Title Case Converter](https://titlecaseconverter.com/) or [Capitalize My Title](https://capitalizemytitle.com/) to convert the title in your preferred style.
 
 We test the string inside the `{}` is invariant by the function `toTitleCase` implemented based on [to-title-case](https://github.com/gouch/to-title-case/tree/master), JavaScript library. There might be some false positives and negatives.
 
@@ -239,9 +231,20 @@ We test the string inside the `{}` is invariant by the function `toTitleCase` im
 
 ### LLUserDefine
 
-When you use English letters in math mode for explanation, you should use `\mathrm`.
+You can define your own regular expressions to detect in `.tex` or `.md` files.
 
-For example, $f^a(x),$ $f^b(x)$ should be written as $f^{\mathrm{a}}(x),$ $f^{\mathrm{b}}(x)$, if $\mathrm{a}$ and $\mathrm{b}$ are not variables.
+In `latexlint.userDefinedRules` in `settings.json`, you can define your own regular expressions.
+
+For example, when you use English letters in math mode for an explanation, you should use `\mathrm`.
+If $\mathrm{a}$ is not variables and represents something like **a**tractive force, $f^a(x)$ should be written as $f^{\mathrm{a}}(x)$.
+
+However, it is difficult to detect without context. You can define the following regular expression to detect this pattern.
+
+```txt
+f\^a
+```
+
+You can easily add your rules by using the `latexlint.addRule` command in the command palette (`Ctrl`+`Shift`+`P`).
 
 <!--
 
@@ -267,7 +270,7 @@ In most cases, you can use `\citep` instead.
 
 ## Rename
 
-By pressing `F2` on the command in `\begin{}` and `\end{}` in `.tex` or `.md` files, you can rename the command.
+You can rename the command by pressing `F2` on the command in `\begin{}` and `\end{}` in `.tex` or `.md` files.
 
 Refer to the GIF animation at [Features](#features).
 

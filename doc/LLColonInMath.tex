@@ -1,0 +1,30 @@
+\documentclass[preview]{standalone}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{siunitx}
+\usepackage{geometry}
+\geometry{paperwidth=12cm, margin=0cm}
+
+\usepackage{xcolor}
+\definecolor{cA}{HTML}{0072BD}
+\definecolor{cB}{HTML}{EDB120}
+\definecolor{cC}{HTML}{77AC30}
+\definecolor{cD}{HTML}{D95319}
+
+\newcommand{\tA}[1]{\textcolor{cA}{#1}}
+\newcommand{\tB}[1]{\textcolor{cB}{#1}}
+\newcommand{\tC}[1]{\textcolor{cC}{#1}}
+\newcommand{\tD}[1]{\textcolor{cD}{#1}}
+
+\begin{document}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lll}
+        \text{A :                 B}                                                               & $A : B$                                 & \tA{ok} \\
+        \text{A $\backslash$colon B}                                                               & $A\colon B$                             & \tD{ng} \\
+        \text{f(x) :                 $\backslash$mathbb\{R\}$\backslash$to$\backslash$mathbb\{R\}} & $f(x) : \mathbb{R} \to \mathbb{R}$      & \tD{ng} \\
+        \text{f(x) $\backslash$colon $\backslash$mathbb\{R\}$\backslash$to$\backslash$mathbb\{R\}} & $f(x) \colon \mathbb{R} \to \mathbb{R}$ & \tA{ok}
+    \end{tabular}
+\end{table}
+\end{document}

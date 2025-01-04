@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
-import renameCommand from './commands/renameCommand';
 import diagnose from './commands/diagnose';
+import addRule from './commands/addRule';
+import renameCommand from './commands/renameCommand';
 import { extensionDisplayName } from './util/constants';
 
 export function activate(context: vscode.ExtensionContext) {
@@ -8,6 +9,9 @@ export function activate(context: vscode.ExtensionContext) {
 
 	const disposableRenameCommand = vscode.commands.registerCommand('latexlint.renameCommand', renameCommand);
 	context.subscriptions.push(disposableRenameCommand);
+
+	const disposableAddLLRule = vscode.commands.registerCommand('latexlint.addRule', addRule);
+	context.subscriptions.push(disposableAddLLRule);
 
 	const diagnosticsCollection = vscode.languages.createDiagnosticCollection(extensionDisplayName);
 	context.subscriptions.push(diagnosticsCollection);

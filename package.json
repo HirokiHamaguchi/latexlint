@@ -32,16 +32,22 @@
     "commands": [
       {
         "category": "LaTeX Lint",
-        "command": "latexlint.renameCommand",
-        "title": "Rename Command"
-      },
-      {
         "command": "latexlint.lintLaTeX",
         "title": "Lint LaTeX for Academic Writing",
         "icon": {
           "dark": "images/lintIconDark.svg",
           "light": "images/lintIconLight.svg"
         }
+      },
+      {
+        "category": "LaTeX Lint",
+        "command": "latexlint.addRule",
+        "title": "Add Rule for LaTeX Lint"
+      },
+      {
+        "category": "LaTeX Lint",
+        "command": "latexlint.renameCommand",
+        "title": "Rename Command in \\begin{} or \\end{}"
       }
     ],
     "menus": {
@@ -59,7 +65,17 @@
         "key": "f2",
         "when": "editorLangId == latex || editorLangId == markdown"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "LaTeX Lint",
+      "properties": {
+        "latexlint.userDefinedRules": {
+          "type": "array",
+          "default": [],
+          "description": "User defined Regex rules for LaTeX Lint"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",

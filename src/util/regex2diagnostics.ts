@@ -1,8 +1,8 @@
 import * as vscode from 'vscode';
-import { LLCode } from './constants';
+import { LLCode, messages } from './constants';
 import ranges2diagnostics from './ranges2diagnostics';
 
-export default function regex2ranges(doc: vscode.TextDocument, code: LLCode, pattern: RegExp): vscode.Diagnostic[] {
+export default function regex2diagnostics(doc: vscode.TextDocument, code: LLCode, pattern: RegExp): vscode.Diagnostic[] {
     const text = doc.getText();
     const ranges: vscode.Range[] = [];
     let match;
@@ -12,5 +12,7 @@ export default function regex2ranges(doc: vscode.TextDocument, code: LLCode, pat
         const range = new vscode.Range(startPos, endPos);
         ranges.push(range);
     }
-    return ranges2diagnostics(code, ranges);
+    const message = messages[code];
+    if (code === 'LLUserDefined') message.replace('{RULE}', pattern.source);
+    return ranges2diagnostics(code, message, ranges);
 }

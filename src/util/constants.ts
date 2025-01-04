@@ -12,7 +12,7 @@ export type LLCode =
     'LLUserDefined';
 
 export const messages = {
-    LLAlignAnd: '=& might be better written as ={}& to avoid spacing issues.',
+    LLAlignAnd: '=& might be better written as ={}& to avoid spacing issues if it is in an align environment.',
     LLColonEqq: 'You might better to use \\coloneqq, \\eqqcolon, \\Coloneqq and \\Eqqcolon.',
     LLCref: 'You might better to use \\cref instead of \\ref.',
     LLDoubleQuotation: 'If you meant to use a double quotation mark, use `` and \'\' instead of ".',
@@ -21,6 +21,5 @@ export const messages = {
     LLSI: 'You might better to use \\si for units.',
     LLT: '^T might be better written as ^\\top or ^\\mathsf{T}.',
     LLTitle: 'This might violate the title capitalization rule, expected {EXPECTED}', // replace {EXPECTED}
-    LLUserDefined: 'This violates your defiend rule',
+    LLUserDefined: 'This violates your defined rule {RULE}', // replace {RULE}
 };
-

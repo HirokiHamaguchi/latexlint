@@ -12,5 +12,80 @@
 	"typescript.tsc.autoDetect": "off",
 	"cSpell.words": [
 		"latexlint"
-	]
+	],
+	"latex-workshop.latex.recipes": [
+		{
+			"name": "uplatex",
+			"tools": [
+				"ptex2pdf (uplatex)",
+				"ptex2pdf (uplatex)",
+			]
+		},
+		{
+			"name": "uplatex&pbibtex",
+			"tools": [
+				"ptex2pdf (uplatex)",
+				"pbibtex (uplatex)",
+				"ptex2pdf (uplatex)",
+				"ptex2pdf (uplatex)"
+			]
+		},
+		{
+			"name": "ptex2pdf*2",
+			"tools": [
+				"ptex2pdf",
+				"ptex2pdf",
+			]
+		},
+		{
+			"name": "ptex2pdf&pbibtex",
+			"tools": [
+				"ptex2pdf",
+				"pbibtex",
+				"ptex2pdf",
+				"ptex2pdf"
+			]
+		}
+	],
+	"latex-workshop.latex.tools": [
+		{
+			"name": "ptex2pdf",
+			"command": "ptex2pdf",
+			"args": [
+				"-l",
+				"-ot",
+				"--interaction=nonstopmode",
+				"--synctex=1",
+				"--shell-escape",
+				"%DOC%"
+			]
+		},
+		{
+			"name": "ptex2pdf (uplatex)",
+			"command": "ptex2pdf",
+			"args": [
+				"-l",
+				"-u",
+				"-ot",
+				"--interaction=nonstopmode",
+				"--synctex=1",
+				"--shell-escape",
+				"%DOC%"
+			]
+		},
+		{
+			"name": "pbibtex",
+			"command": "pbibtex",
+			"args": [
+				"%DOCFILE%"
+			]
+		},
+		{
+			"name": "pbibtex (uplatex)",
+			"command": "pbibtex",
+			"args": [
+				"%DOCFILE%"
+			]
+		}
+	],
 }

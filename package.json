@@ -1,11 +1,23 @@
 {
   "name": "latexlint",
-  "displayName": "latexLint",
-  "description": "Linter for LaTeX",
+  "displayName": "LaTeX Lint",
+  "description": "Linter for LaTeX with commands renaming feature",
   "version": "0.0.1",
+  "icon": "images/mainIcon128.png",
+  "author": {
+    "name": "hari64boli64",
+    "email": "hari64boli64@gmail.com"
+  },
   "engines": {
     "vscode": "^1.96.0"
   },
+  "keywords": [
+    "Markdown",
+    "LaTeX",
+    "Linter",
+    "Rename",
+    "Academic Writing"
+  ],
   "categories": [
     "Other"
   ],
@@ -17,14 +29,28 @@
   "contributes": {
     "commands": [
       {
+        "category": "LaTeX Lint",
         "command": "latexlint.renameCommand",
         "title": "Rename Command"
       },
       {
         "command": "latexlint.lintLaTeX",
-        "title": "Lint LaTeX for academic writing"
+        "title": "Lint LaTeX for Academic Writing",
+        "icon": {
+          "dark": "images/lintIconDark.svg",
+          "light": "images/lintIconLight.svg"
+        }
       }
     ],
+    "menus": {
+      "editor/title": [
+        {
+          "when": "editorLangId == latex || editorLangId == markdown",
+          "command": "latexlint.lintLaTeX",
+          "group": "navigation"
+        }
+      ]
+    },
     "keybindings": [
       {
         "command": "latexlint.renameCommand",

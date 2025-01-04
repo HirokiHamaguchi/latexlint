@@ -3,6 +3,6 @@ import { defineConfig } from '@vscode/test-cli';
 export default defineConfig({
 	files: 'out/test/**/*.test.js',
 	mocha: {
-		timeout: 60000
+		timeout: 60000 // 1 minute
 	}
 });

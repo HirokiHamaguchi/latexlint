@@ -1,71 +1,266 @@
-# latexlint README
-
-This is the README for your extension "latexlint". After writing up a brief description, we recommend including the following sections.
+# LaTeX Lint
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
+This extension provides a LaTeX Linter for `.tex` and `.md` files.
 
 \!\[feature X\]\(images/feature-x.png\)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Our extension resembles [chktex](https://ctan.org/pkg/chktex) and [LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename) in some aspects.
+We sincerely appreciate the developers of these extensions.
 
-## Requirements
+## Rules
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+Here is the list of rules we detect.
 
-## Extension Settings
+* [LLAlignAnd](#llalignand) (detect `=&`)
+* [LLColonEqq](#llcoloneqq) (detect `:=`, `=:`,`::=`, and `=::`)
+* [LLColonInMath](#llcoloninmath) (detect `:` in math mode)
+* [LLCref](#llcref) (detect `\ref`)
+* [LLDoubleQuotation](#lldoublequotation) (detect `“`, `”` and `"` )
+* [LLENDash](#llendash) (detect the dubious use of hyphens)
+* [LLNonASCII](#llnonascii) (detect all non-ASCII characters)
+* [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
+* [LLT](#llt) (detect `^T`)
+* [LLTitle](#lltitle) (detect wrong title case in `\title{}`, `\section{}`, etc.)
+* [LLUserDefine](#lluserdefine) (detect user-defined regular expressions)
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+### LLAlignAnd
 
-For example:
+Detect `=&` in `.tex` or `.md` files.
+It is likely that you should write as `={}&`.
+This pattern should be appeared only in math mode.
 
-This extension contributes the following settings:
+We use the following regex to detect this pattern with some spaces.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+```txt
+=[\t ]*&
+```
 
-## Known Issues
+![doc/LLAlignAnd](doc/LLAlignAnd.png)
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+[Ref by Stack Exchange](https://tex.stackexchange.com/questions/41074/relation-spacing-error-using-in-aligned-equations)
+
+### LLColonEqq
+
+Detect `:=`, `=:`,`::=`, and `=::` in `.tex` files.
+Use `\coloneqq`, `\eqqcolon`, `\Coloneqq` and `\Eqqcolon` in [mathtools](https://ctan.org/pkg/mathtools) package instead.
+
+The colon is slightly too low in `:=`, but vertically centered in `\coloneqq` according to [this](https://tex.stackexchange.com/questions/4216/how-to-typeset-correctly).
+
+[Ref by Stack Exchange](https://tex.stackexchange.com/questions/121363/what-is-the-latex-code-for-the-symbol-two-colons-and-equals-sign).
+
+### LLColonInMath
+
+TODO
+
+Detect ":" in math mode.
+It is likely that you want to use `\colon` instead.
+
+![doc/LLColonInMath](doc/LLColonInMath.png)
+
+### LLCref
+
+Detect `\ref` in `.tex` files.
+
+Use `\cref` or `\Cref` in [cleveref](https://ctan.org/pkg/cleveref) package instead.
+
+We use the following regex to detect this pattern.
+
+```txt
+\\ref(?=\{)
+```
+
+I prefer this package because it can automatically add prefix like "Sec." or "Fig.". We can keep the consistency of the reference format.
+
+For cleveref package, you can also refer to [this page by opt-cp](https://web.archive.org/web/20220616140841/https://opt-cp.com/latex-packages/).
+
+```latex
+\usepackage{amsmath,mathtools}
+\usepackage{amsthm,thmtools}
+\declaretheorem{theorem}
+\usepackage{cleveref}
+\newcommand{\crefrangeconjunction}{--}
+\crefname{equation}{}{}
+\Crefname{equation}{Eq.}{Eqs.}
+\crefname{theorem}{Theorem}{Theorems}
+```
+
+### LLDoubleQuotation
+
+Detect `“`, `”` and `"`  in `.tex` or `.md` files.
+These might be used as "XXX" or “XXX”.
+
+Use ``XXX'' instead for double quotation.
+
+As for “XXX”, there is no problem in most cases.
+However, I prefer to use ``XXX'' for consistency.
+
+You can also use `\enquote{XXX}` with [csquotes](https://ctan.org/pkg/csquotes) package.
+
+[Ref by Stack Exchange](https://tex.stackexchange.com/questions/531/what-is-the-best-way-to-use-quotation-mark-glyphs).
+
+### LLENDash
+
+Detect the dubious use of hyphens in `.tex` or `.md` files.
+
+We use the following regex to detect this pattern.
+
+```txt
+[A-Z][a-zA-Z]*[a-z](-[A-Z][a-zA-Z]*[a-z])+
+```
+
+Here `[A-Z][a-zA-Z]*[a-z]` is a word with a capital letter, zero or more letters, and a small letter, assuming that this represents a name of a person.
+
+For example, we detect the following.
+
+* `Erdos-Renyi` (random graph, `Erd\H{o}s--R\'enyi`)
+* `Einstein-Podolsky-Rosen` (quantum mechanics, `Einstein--Podolsky--Rosen`)
+* `Fruchterman-Reingold` (graph drawing, `Fruchterman--Reingold`)
+* `Gauss-Legendre` (numerical integration, `Gauss--Legendre`)
+* `Gibbs-Helmholtz` (thermodynamics, `Gibbs--Helmholtz`)
+* `Karush-Kuhn-Tucker` (optimization, `Karush--Kuhn--Tucker`)
+
+However, we do not detect the following as an exception.
+
+* `Fritz-John` (optimization, name of a person)
+* (ToDo: add more examples)
+
+We might have false postives something like `Wrong-Example`, which are not the name of a person.
+
+As a side note, we should use `--` instead of `-` to indicate a range of pages, e.g., `123--456` instead of `123-456`.
+We do not detect this because it might be just a subtraction.
+
+### LLNonASCII
+
+Detect all full-width ASCII characters in `.tex` or `.md` files.
+
+```txt
+[\u3000\uFF01-\uFF5E]
+```
+
+> Range U+FF01–FF5E reproduces the characters of ASCII 21 to 7E as fullwidth forms. U+FF00 does not correspond to a fullwidth ASCII 20 (space character), since that role is already fulfilled by U+3000 "ideographic space".
+[WikiPedia](https://en.wikipedia.org/wiki/Halfwidth_and_Fullwidth_Forms_(Unicode_block))
+
+We detect the following characters.
+
+```txt
+　！＂＃＄％＆＇（）＊＋，－．／０１２３４５６７８９：；＜＝＞？＠ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ［＼］＾＿｀ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ｛｜｝～
+```
+
+If you want to detect all non-ASCII characters, use the following regex.
+
+```txt
+[^\x00-\x7F]
+```
+
+Here, `\x00` to `\x7F` are ASCII characters.
+
+For example, you can detect the following Japanese characters.
+
+```txt
+あア亜、。
+```
+
+### LLSI
+
+Detect `KB`, `MB`, `GB`, `TB`, `PB`, `EB`, `ZB`, `YB`, `KiB`, `MiB`, `GiB`, `TiB`, `PiB`, `EiB`, `ZiB`, and `YiB` without `\SI` in `.tex` files.
+
+We use the following regex to detect this pattern.
+
+```txt
+(?<![a-zA-Z])(?i:KB|MB|GB|TB|PB|EB|ZB|YB|KiB|MiB|GiB|TiB|PiB|EiB|ZiB|YiB)(?![a-zA-Z])
+```
+
+Here (?<!...) and (?!...) are negative lookbehind and negative lookahead assertions, respectively.
+Before the unit, there should not be any alphabet.
+After the unit, there should not be any alphabet.
+
+Use `\SI` instead for units, like `\SI{1}{\kilo\byte}`(10^3byte) or `\SI{1}{\kibi\byte}`(2^10byte).
+
+![doc/LLSI](doc/LLSI.png)
+
+| Prefix  | Command  | Symbol  | Power |
+|:-------:|:--------:|:-------:|:-----:|
+|  kilo   |  \kilo   |    k    |   3   |
+|  mega   |  \mega   |    M    |   6   |
+|  giga   |  \giga   |    G    |   9   |
+|  tera   |  \tera   |    T    |  12   |
+|  peta   |  \peta   |    P    |  15   |
+|  exa    |  \exa    |    E    |  18   |
+|  zetta  |  \zetta  |    Z    |  21   |
+|  yotta  |  \yotta  |    Y    |  24   |
+
+| Prefix  | Command  | Symbol  | Power|
+|:-------:|:--------:|:-------:|:----:|
+|  kibi   |  \kibi   |   Ki    |  10  |
+|  mebi   |  \mebi   |   Mi    |  20  |
+|  gibi   |  \gibi   |   Gi    |  30  |
+|  tebi   |  \tebi   |   Ti    |  40  |
+|  pebi   |  \pebi   |   Pi    |  50  |
+|  exbi   |  \exbi   |   Ei    |  60  |
+|  zebi   |  \zebi   |   Zi    |  70  |
+|  yobi   |  \yobi   |   Yi    |  80  |
+
+It would be better to use `\SI` for units such as `m`, `s`, `kg`, `A`, `K`, `mol`, and `rad`.
+
+[CTAN: siunitx](https://ctan.org/pkg/siunitx)
+
+### LLT
+
+Detect `^T` in `.tex` or `.md` files.
+It is likely that you want to use `^\top` or `^\mathsf{T}` instead to represent the transpose of a matrix or a vector. Otherwise, we cannot distinguish between the transpose and the power by a variable `T`.
+This pattern should be appeared only in math mode.
+
+[Ref by BrownieAlice](https://blog.browniealice.net/post/latex_transpose/).
+
+### LLTitle
+
+Title name in `\title{}`, `\section{}`, `\subsection{}`, `\subsubsection{}`, `\paragraph{}`, and `\subparagraph{}` should be in title case in `.tex` files.
+
+It is very difficult to detect all non title cases because of a lot of exceptions and styles.
+We highly recommend to use [Title Case Converter](https://titlecaseconverter.com/) or [Captilize My Title](https://capitalizemytitle.com/) to convert the title in your preferred style.
+
+We test the string inside the `{}` is invariant by the function `toTitleCase` implemented based on [to-title-case](https://github.com/gouch/to-title-case/tree/master), JavaScript library. There might be some false positives and negatives.
+
+[APA Style](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case).
+
+[Ref by WORDVICE](https://blog.wordvice.jp/title-capitalization-rules-for-research-papers/).
+
+### LLUserDefine
+
+When you use English letters in math mode for explanation, you should use `\mathrm`.
+
+For example, $f^a(x),$ $f^b(x)$ should be written as $f^{\mathrm{a}}(x),$ $f^{\mathrm{b}}(x)$, if $\mathrm{a}$ and $\mathrm{b}$ are not variables.
+
+<!--
+
+### LLMathSpace
+
+Detect spaces in math mode.
+
+### LLTilde
+
+A tilde should be placed before a `\cite`,`\citet` command.
+
+### LLArrow
+
+Detect `->` and `<-` in `tikzpicture` environment.
+It might be better to use `-Latex` and `Latex-` instead.
+
+### LLEtAl
+
+Detect `et al.`.
+In most cases, you can use `\citep` instead.
+
+-->
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+Refer to [CHANGELOG.md](CHANGELOG.md).
 
-### 1.0.0
+## License
 
-Initial release of ...
+We use [MIT License](LICENSE).
 
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+(The libray [to-title-case](https://github.com/gouch/to-title-case/tree/master) is also under MIT License.)

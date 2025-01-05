@@ -21,7 +21,7 @@ By this extension, you can
 
 ![feature](https://github.com/hari64boli64/latexlint/blob/master/images/feature.gif?raw=true)
 
-In some aspects, our extension resembles a LaTeX package [chktex](https://ctan.org/pkg/chktex) and a VSCode Extension [LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename).
+In some aspects, our extension resembles a LaTeX package [chktex](https://ctan.org/pkg/chktex) and a VS Code Extension [LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename).
 We sincerely appreciate the developers of these.
 
 ## Rules
@@ -198,7 +198,7 @@ You should likely use `\ll` and `\gg` instead.
 
 We do not detect `<<` like this one.
 
-```txt
+```md
 I like human $<<<$ cat $<<<<<<<<<<<<<<<<$ dog.
 ```
 
@@ -291,6 +291,12 @@ Otherwise, we cannot distinguish between the transpose and the power by a variab
 ### LLTitle
 
 Detect dubious title cases in `\title{}`, `\section{}`, `\subsection{}`, `\subsubsection{}`, `\paragraph{}`, and `\subparagraph{}` in `.tex` files.
+
+For example,
+`The quick brown fox jumps over the lazy dog`
+should be
+`The Quick Brown Fox Jumps Over the Lazy Dog`
+in the title case. We detect such cases.
 
 It is very difficult to detect all non-title cases because of the many exceptions and styles.
 We highly recommend using [Title Case Converter](https://titlecaseconverter.com/) or [Capitalize My Title](https://capitalizemytitle.com/) to convert the title in your preferred style.

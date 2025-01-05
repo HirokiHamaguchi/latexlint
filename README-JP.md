@@ -1,13 +1,14 @@
-<!-- markdownlint-disable heading-start-left first-line-h1 -->
+# LaTeX Linter
 
-<div align="center">
+LaTeXのよくあるミスを検出できるVS Code拡張機能 "LaTeX Linter"を作成しました。
+本記事はその紹介となります。
+LaTeXユーザーの皆様のお役に立てば幸いです。
 
-<img src="https://github.com/hari64boli64/latexlint/blob/master/images/mainIcon512.png?raw=true"
- alt="logo" width="150">
+https://marketplace.visualstudio.com/items?itemName=hari64boli64.latexlint
 
-# LaTeX Lint
+GitHub レポジトリはこちらです。
 
-</div>
+https://github.com/hari64boli64/latexlint
 
 ## 機能概要
 
@@ -21,7 +22,7 @@
 
 ![feature](https://github.com/hari64boli64/latexlint/blob/master/images/feature.gif?raw=true)
 
-一部の点で、我々の拡張機能はLaTeXパッケージ[chktex](https://ctan.org/pkg/chktex)およびVSCode拡張[LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename)に類似しています。これら開発者に深く感謝します。
+一部の点で、我々の拡張機能はLaTeXパッケージ[chktex](https://ctan.org/pkg/chktex)およびVS Code拡張[LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename)に類似しています。これら開発者に深く感謝します。
 
 ## ルール
 
@@ -193,7 +194,7 @@ cleverefパッケージについては、[opt-cpさんによるこちら](https:
 
 次のようなものは検出しません。
 
-```txt
+```md
 I like human $<<<$ cat $<<<<<<<<<<<<<<<<$ dog.
 ```
 
@@ -287,6 +288,12 @@ I like human $<<<$ cat $<<<<<<<<<<<<<<<<$ dog.
 
 `.tex`ファイル内の、`\title{}`, `\section{}`, `\subsection{}`, `\subsubsection{}`, `\paragraph{}`, `\subparagraph{}`内で、疑わしいタイトルケースを検出します。
 
+例えば、
+`The quick brown fox jumps over the lazy dog`
+は、
+`The Quick Brown Fox Jumps Over the Lazy Dog`
+のようにタイトルケースにするのが望ましく、そのような場合に検出します。
+
 すべての非タイトルケースを検出するのは非常に困難です。多くの例外やスタイルがあるためです。  
 好みのスタイルに合わせてタイトルを変換するには、[Title Case Converter](https://titlecaseconverter.com/)または[Capitalize My Title](https://capitalizemytitle.com/)の使用を強く推奨します。
 
@@ -313,7 +320,7 @@ $\mathrm{a}$が変数ではなく、**a**tractive forceのような意味を表�
 f\^a
 ```
 
-コマンドパレット（`Ctrl`+`Shift`+`P`）で`latexlint.addRule`コマンドを使用して、簡単にルールを追加できます。
+コマンドパレット(`Ctrl`+`Shift`+`P`)で`latexlint.addRule`コマンドを使用して、簡単にルールを追加できます。
 
 ## Release Notes
 

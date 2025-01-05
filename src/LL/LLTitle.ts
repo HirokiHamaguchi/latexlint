@@ -38,11 +38,11 @@ export default function LLTitle(doc: vscode.TextDocument): vscode.Diagnostic[] {
     for (const range of sectionRanges) {
         const sectionText = doc.getText(range);
         const titleCaseText = toTitleCase(sectionText);
-        console.log(`original: ${sectionText} / title case: ${titleCaseText}`);
+        // console.log(`original: ${sectionText} / title case: ${titleCaseText}`);
         if (sectionText !== titleCaseText)
             diagnostics.push({
                 code: code,
-                message: messages[code].replace('{EXPECTED}', titleCaseText),
+                message: messages[code].replace('{EXPECTED}', `"${titleCaseText}"`),
                 range: range,
                 severity: vscode.DiagnosticSeverity.Warning,
                 source: extensionDisplayName,

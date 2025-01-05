@@ -3,7 +3,7 @@
 <div align="center">
 
 <img src="https://github.com/hari64boli64/latexlint/blob/master/images/mainIcon512.png?raw=true"
- alt="logo" width="150">
+ alt="mainIcon" width="150">
 
 # LaTeX Lint
 
@@ -19,7 +19,7 @@ By this extension, you can
 * **Rename the commands** by pressing `F2` on the `\begin{name}` or `\end{name}`.
 * Define **your own Regex rules** through `lintLatex.userDefinedRules` in `settings.json`.
 
-![feature](https://github.com/hari64boli64/latexlint/blob/master/images/feature.mp4?raw=true)
+https://github.com/user-attachments/assets/35eddda0-c1fd-4a65-b7b4-636d56b2ea1a
 
 In some aspects, our extension resembles a LaTeX package [chktex](https://ctan.org/pkg/chktex) and a VS Code Extension [LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename).
 We sincerely appreciate the developers of these.
@@ -78,14 +78,15 @@ You should likely use the `equation` environment.
 
 The spacing of the `align` environment is [different](https://tex.stackexchange.com/questions/239550/what-is-the-difference-between-align-and-equation-environment-when-i-only-want-t) from the `equation` environment with only one equation.
 
-It is up to you which one to use, but we recommend using the `equation` environment with only one equation, as `amsmath` package documentation suggests.
+It is up to you which one to use, but `amsmath` official documentation suggests using the `equation` environment for only one equation.
+
 > The equation environment is for a single equation with an automatically generated number.
 > ......
 > The align environment is used for two or more equations when vertical alignment is desired;
 
-by [amsmath](https://ctan.org/pkg/amsmath) documentation.
+By [amsmath](https://ctan.org/pkg/amsmath) official document.
 
-You can rename the command by pressing `F2` on the `align` in `\begin{align}` or `\end{align}`. Refer to the GIF animation at [Features](#features).
+You can rename the command by pressing `F2` on the `align` in `\begin{align}` or `\end{align}`. Refer to the animation at [Features](#features).
 
 ### LLColonEqq
 
@@ -147,6 +148,12 @@ You can also use `\enquote{XXX}` with [csquotes](https://ctan.org/pkg/csquotes) 
 Detect the dubious use of hyphens in `.tex` or `.md` files.
 You should likely use `--` for en-dash and `---` for em-dash.
 
+[Wikipedia](https://en.wikipedia.org/wiki/Dash#En_dash) says,
+> Preference for an en dash instead of a hyphen in these coordinate/relationship/connection types of terms is a matter of style, not inherent orthographic "correctness";
+Therefore, it is not mandatory to follow this rules.
+
+Still, in a lot of cases, use of en dash is preferred, including [Wikipedia:Manual of Style](https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style#Dashes).
+
 For example, we detect the following.
 
 * `Erdos-Renyi` (random graph, `Erd\H{o}s--R\'enyi`)
@@ -163,7 +170,7 @@ However, we do not detect the following as an exception.
 
 We might have false positives, such as `Wrong-Example`, which is not a person's name.
 
-As a side note, we should use `--` instead of `-` to indicate a range of pages, e.g., `123--456` instead of `123-456`. We do not detect this because it might be just a subtraction.
+We also should use `--` instead of `-` to indicate a range of pages, e.g., `123--456` instead of `123-456`. A lot of bibtex files follow this rule. We do not detect this because it might be just a subtraction.
 
 We use the following Regex.
 
@@ -177,10 +184,6 @@ Here, `[A-Z][a-zA-Z]*[a-z]` is a word with a capital letter, zero or more letter
 
 Detect `eqnarray` environment in `.tex` or `.md` files.
 You should likely use `align` environment instead.
-
-```txt
-\\begin\{eqnarray\}
-```
 
 It is known that `eqnarray` environment is [not recommended](https://texfaq.org/FAQ-eqnarray) because it has some spacing issues.
 
@@ -209,13 +212,9 @@ This commands automatically adds parentheses around the reference.
 Detect `\sharp` in `.tex` or `.md` files.
 You should likely use `\#` instead for [number sign](https://en.wikipedia.org/wiki/Number_sign).
 
-`\sharp` is used for the musical symbol.
-
-```txt
-\\sharp
-```
-
 ![doc/LLSharp](https://github.com/hari64boli64/latexlint/blob/master/doc/LLSharp.png?raw=true)
+
+`\sharp` is used for the musical symbol.
 
 ### LLNonASCII
 
@@ -237,7 +236,7 @@ We use the following Regex.
 ```
 
 > Range U+FF01–FF5E reproduces the characters of ASCII 21 to 7E as fullwidth forms. U+FF00 does not correspond to a fullwidth ASCII 20 (space character), since that role is already fulfilled by U+3000 "ideographic space".
-[WikiPedia](https://en.wikipedia.org/wiki/Halfwidth_and_Fullwidth_Forms_(Unicode_block))
+[Wikipedia](https://en.wikipedia.org/wiki/Halfwidth_and_Fullwidth_Forms_(Unicode_block))
 
 If you want to detect all non-ASCII characters, use the following Regex.
 
@@ -333,6 +332,14 @@ Detect `et al.`.
 In most cases, you can use `\citep` instead.
 
  -->
+
+## Note  
+
+As stated in the [Rules](#rules), false positives and false negatives may occur. We apologize for inconvenience. If you find any errors, please report them via [GitHub Issues](https://github.com/hari64boli64/latexlint/issues).  
+
+When writing papers, please ensure you follow the style specified by the academic society or publisher.
+
+We wish our extension will help you write papers.
 
 ## Release Notes
 

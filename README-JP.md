@@ -1,8 +1,10 @@
-# LaTeX Linter
+# LaTeX Lint
 
-LaTeXのよくあるミスを検出できるVS Code拡張機能 "LaTeX Linter"を作成しました。
+LaTeXのよくあるミスを検出できるVS Code拡張機能 "LaTeX Lint"を作成しました。
 本記事はその紹介となります。
 LaTeXユーザーの皆様のお役に立てば幸いです。
+
+<img width="25%" alt=""><img width="50%" src="https://github.com/hari64boli64/latexlint/blob/master/images/mainIcon512.png?raw=true" alt="mainIcon" />
 
 https://marketplace.visualstudio.com/items?itemName=hari64boli64.latexlint
 
@@ -20,7 +22,7 @@ https://github.com/hari64boli64/latexlint
 * `\begin{name}`または`\end{name}`上で`F2`を押すことで、コマンドを**リネーム**できます。
 * `settings.json`の`lintLatex.userDefinedRules`を通じて、**独自の正規表現ルール**を定義できます。
 
-![feature](https://github.com/hari64boli64/latexlint/blob/master/images/feature.gif?raw=true)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NaQs6he0s4g?si=5NyTcysLdxsMhQJ-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 一部の点で、我々の拡張機能はLaTeXパッケージ[chktex](https://ctan.org/pkg/chktex)およびVS Code拡張[LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename)に類似しています。これら開発者に深く感謝します。
 
@@ -78,14 +80,15 @@ Cite some references.
 
 `align`環境のspacingは`equation`環境とそれと、1つの数式の場合に[異なります](https://tex.stackexchange.com/questions/239550/what-is-the-difference-between-align-and-equation-environment-when-i-only-want-t)。
 
-どちらを使うかは使用者次第ですが、`amsmath`パッケージのドキュメントによると、1つの方程式には`equation`環境を使うことを推奨します。
+どちらを使うかは使用者次第ですが、`amsmath`の公式ドキュメントによると、1つの方程式には`equation`環境を使うことが想定されています。
+
 > The equation environment is for a single equation with an automatically generated number.
 > ......
 > The align environment is used for two or more equations when vertical alignment is desired;
 
-[amsmath](https://ctan.org/pkg/amsmath)ドキュメントより。
+[amsmath](https://ctan.org/pkg/amsmath)公式ドキュメントより。
 
-`\begin{align}`または`\end{align}`内の`align`上で`F2`を押すと、コマンドのリネームが出来ます。 [機能概要](#機能概要)でのGIFアニメーションを参照してください。
+`\begin{align}`または`\end{align}`内の`align`上で`F2`を押すと、コマンドのリネームが出来ます。 [機能概要](#機能概要)でのアニメーションを参照してください。
 
 ### LLColonEqq
 
@@ -94,7 +97,7 @@ Cite some references.
 
 ![doc/LLColonEqq](https://github.com/hari64boli64/latexlint/blob/master/doc/LLColonEqq.png?raw=true)
 
-`:=`のコロンは少し低いですが、`\coloneqq`のコロンは垂直に中央に配置されることが[知られています](https://tex.stackexchange.com/questions/4216/how-to-typeset-correctly)。
+`:=`のコロンは少し低いですが、`\coloneqq`のコロンは[中央に配置されることが知られています](https://tex.stackexchange.com/questions/4216/how-to-typeset-correctly)。
 
 [参考 Stack Exchange](https://tex.stackexchange.com/questions/121363/what-is-the-latex-code-for-the-symbol-two-colons-and-equals-sign)
 
@@ -147,6 +150,12 @@ cleverefパッケージについては、[opt-cpさんによるこちら](https:
 `.tex`または`.md`ファイル内の、疑わしいハイフンの使用を検出します。
 `--`をenダッシュ、`---`をemダッシュとして使うべきです。
 
+前提として、[Wikipedia](https://en.wikipedia.org/wiki/Dash#En_dash)は以下のように述べています。
+> Preference for an en dash instead of a hyphen in these coordinate/relationship/connection types of terms is a matter of style, not inherent orthographic "correctness";
+その為、必ずしもこのルールに従う必要はありません。
+
+しかし、多くの場合、enダッシュの使用が推奨されています。[Wikipedia:Manual of Style](https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style#Dashes)も参照してください。
+
 例えば、以下のようなものを検出します。
 
 * `Erdos-Renyi`（ランダムグラフ、`Erd\H{o}s--R\'enyi`）
@@ -162,7 +171,7 @@ cleverefパッケージについては、[opt-cpさんによるこちら](https:
 
 偽陽性が発生する場合もあります（例えば`Wrong-Example`など、人名でない場合）。
 
-補足として、範囲を示すためにページ番号では`--`を`-`の代わりに使うべきです。例えば、`123-456`の代わりに`123--456`を使うのが正しいです。この場合、単に引き算である可能性があるため、私たちは検出しません。
+補足として、範囲を示すためにページ番号では`--`を`-`の代わりに使うべきです。例えば、`123-456`の代わりに`123--456`を使うのが正しいです。多くのbibtexファイルはこの形式で書かれています。この場合、単に引き算である可能性があるため、私たちは検出しません。
 
 使用している正規表現は次の通りです。
 
@@ -176,10 +185,6 @@ cleverefパッケージについては、[opt-cpさんによるこちら](https:
 
 `.tex`または`.md`ファイル内の、`eqnarray`環境を検出します。
 代わりに`align`環境を使うべきです。
-
-```txt
-\\begin\{eqnarray\}
-```
 
 `eqnarray`環境はspacingに問題がある為[推奨されていません](https://texfaq.org/FAQ-eqnarray)。
 
@@ -208,13 +213,9 @@ I like human $<<<$ cat $<<<<<<<<<<<<<<<<$ dog.
 `.tex`または`.md`ファイル内の、`\sharp`を検出します。
 代わりに[number sign](https://en.wikipedia.org/wiki/Number_sign)を示す`\#`を使うべきです。
 
-`\sharp`は音楽記号として使われます。
-
-```txt
-\\sharp
-```
-
 ![doc/LLSharp](https://github.com/hari64boli64/latexlint/blob/master/doc/LLSharp.png?raw=true)
+
+`\sharp`は音楽記号として使われます。
 
 ### LLNonASCII
 
@@ -236,7 +237,7 @@ I like human $<<<$ cat $<<<<<<<<<<<<<<<<$ dog.
 ```
 
 > Range U+FF01–FF5E reproduces the characters of ASCII 21 to 7E as fullwidth forms. U+FF00 does not correspond to a fullwidth ASCII 20 (space character), since that role is already fulfilled by U+3000 "ideographic space".
-[WikiPedia](https://en.wikipedia.org/wiki/Halfwidth_and_Fullwidth_Forms_(Unicode_block))
+[Wikipedia](https://en.wikipedia.org/wiki/Halfwidth_and_Fullwidth_Forms_(Unicode_block))
 
 すべての非ASCII文字を検出したい場合は、以下の正規表現を使用します。
 
@@ -255,7 +256,7 @@ I like human $<<<$ cat $<<<<<<<<<<<<<<<<$ dog.
 ### LLSI
 
 `.tex`ファイル内で、`\SI`なしで使われている`KB`, `MB`, `GB`, `TB`, `PB`, `EB`, `ZB`, `YB`, `KiB`, `MiB`, `GiB`, `TiB`, `PiB`, `EiB`, `ZiB`, `YiB`を検出します。
-代わりに`\SI`を使用するのが望ましいです。例えば、`\SI{1}{\kilo\byte}`（10^3バイト）や`\SI{1}{\kibi\byte}`（2^10バイト）です。
+代わりに`\SI`を使用するのが望ましいです。例えば、`\SI{1}{\kilo\byte}`（10^3バイト）や`\SI{1}{\kibi\byte}`（2^10バイト）など。
 
 ![doc/LLSI](https://github.com/hari64boli64/latexlint/blob/master/doc/LLSI.png?raw=true)
 
@@ -317,6 +318,14 @@ f\^a
 ```
 
 コマンドパレット(`Ctrl`+`Shift`+`P`)で`latexlint.addRule`コマンドを使用して、簡単にルールを追加できます。
+
+## 注意
+
+[ルール](#ルール)でも述べた通り、偽陽性や偽陰性が発生する可能性があります。申し訳ありません。誤りがあった場合は[GitHub Issues](https://github.com/hari64boli64/latexlint/issues)でお知らせ下さい。
+
+また、論文執筆に際して学会や出版社側から指定されたスタイルに従うようにしてください。
+
+この拡張機能がお役に立てば幸いです。
 
 ## Release Notes
 

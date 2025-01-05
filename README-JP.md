@@ -18,9 +18,9 @@ https://github.com/hari64boli64/latexlint
 
 この拡張機能により、
 
-* LaTeXの**よくある間違い**を検出します。
-* `\begin{name}`または`\end{name}`上で`F2`を押すことで、コマンドを**リネーム**できます。
-* `settings.json`の`lintLatex.userDefinedRules`を通じて、**独自の正規表現ルール**を定義できます。
+* LaTeXの**よくある間違い**を検出します
+* `\begin{name}`または`\end{name}`上で`F2`を押すことで、コマンドを**リネーム**できます
+* `settings.json`の`lintLatex.userDefinedRules`を通じて、**独自の正規表現ルール**を定義できます
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NaQs6he0s4g?si=5NyTcysLdxsMhQJ-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -46,6 +46,8 @@ https://github.com/hari64boli64/latexlint
 14. [LLT](#llt) (`^T`を検出)
 15. [LLTitle](#lltitle) (`\title{}`, `\section{}`などでの怪しいタイトルケースを検出)
 16. [LLUserDefine](#lluserdefine) (`latexlint.userDefinedRules`で定義された正規表現を検出)
+
+[sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf)も必要であれば参照して下さい。
 
 <!--
 
@@ -88,7 +90,7 @@ Cite some references.
 
 [amsmath](https://ctan.org/pkg/amsmath)公式ドキュメントより。
 
-`\begin{align}`または`\end{align}`内の`align`上で`F2`を押すと、コマンドのリネームが出来ます。 [機能概要](#機能概要)でのアニメーションを参照してください。
+`\begin{align}`または`\end{align}`内の`align`上で`F2`を押すと、コマンドのリネームが出来ます。 [機能概要](#機能概要)でのアニメーションを参照して下さい。
 
 ### LLColonEqq
 
@@ -154,7 +156,7 @@ cleverefパッケージについては、[opt-cpさんによるこちら](https:
 > Preference for an en dash instead of a hyphen in these coordinate/relationship/connection types of terms is a matter of style, not inherent orthographic "correctness";
 その為、必ずしもこのルールに従う必要はありません。
 
-しかし、多くの場合、enダッシュの使用が推奨されています。[Wikipedia:Manual of Style](https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style#Dashes)も参照してください。
+しかし、多くの場合、enダッシュの使用が推奨されています。[Wikipedia:Manual of Style](https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style#Dashes)も参照して下さい。
 
 例えば、以下のようなものを検出します。
 
@@ -323,7 +325,7 @@ f\^a
 
 [ルール](#ルール)でも述べた通り、偽陽性や偽陰性が発生する可能性があります。申し訳ありません。誤りがあった場合は[GitHub Issues](https://github.com/hari64boli64/latexlint/issues)でお知らせ下さい。
 
-また、論文執筆に際して学会や出版社側から指定されたスタイルに従うようにしてください。
+また、論文執筆に際して学会や出版社側から指定されたスタイルに従うようにして下さい。
 
 この拡張機能がお役に立てば幸いです。
 

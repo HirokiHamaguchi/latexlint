@@ -19,6 +19,8 @@ By this extension, you can
 * **Rename the commands** by pressing `F2` on the `\begin{name}` or `\end{name}`.
 * Define **your own Regex rules** through `lintLatex.userDefinedRules` in `settings.json`.
 
+Demo movie:
+
 https://github.com/user-attachments/assets/35eddda0-c1fd-4a65-b7b4-636d56b2ea1a
 
 In some aspects, our extension resembles a LaTeX package [chktex](https://ctan.org/pkg/chktex) and a VS Code Extension [LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename).
@@ -44,6 +46,8 @@ Here is the list of rules we detect.
 14. [LLT](#llt) (detect `^T`)
 15. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
 16. [LLUserDefine](#lluserdefine) (detect Regexes in `latexlint.userDefinedRules`)
+
+Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanse articl (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
 <!--
 

@@ -114,7 +114,4 @@
 			]
 		}
 	],
-	"latexlint.userDefinedRules": [
-		"f\\^a"
-	],
 }

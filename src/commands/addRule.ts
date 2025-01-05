@@ -45,7 +45,7 @@ export default async function addRule() {
         return false;
     }
     config.push(regexRule);
-    vscode.workspace.getConfiguration('latexlint').update('userDefinedRules', config, vscode.ConfigurationTarget.Workspace);
+    await vscode.workspace.getConfiguration('latexlint').update('userDefinedRules', config, vscode.ConfigurationTarget.Workspace);
     vscode.window.showInformationMessage(`Your rule '${regexRule}' has been added.`);
     return true;
 }

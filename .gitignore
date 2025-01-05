@@ -4,5 +4,6 @@ node_modules
 .vscode-test/
 *.vsix
 other
+images/*.stg
 doc/*.synctex.gz
 sample/*.synctex.gz

@@ -1,5 +1,3 @@
 {
-    "latexlint.userDefinedRules": [
-        "f\\^a",
-    ]
+    "latexlint.userDefinedRules": []
 }

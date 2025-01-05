@@ -13,9 +13,7 @@
 
 この拡張機能は、`.tex`および`.md`ファイル用のLaTeX Linterを提供します。コマンドのリネーム機能もあります。
 
-![lint](https://github.com/hari64boli64/latexlint/blob/master/doc/lint.gif?raw=true)
-
-![rename](https://github.com/hari64boli64/latexlint/blob/master/doc/rename.gif?raw=true)
+![feature](https://github.com/hari64boli64/latexlint/blob/master/doc/feature.gif?raw=true)
 
 一部の点で、我々の拡張機能はLaTeXパッケージ[chktex](https://ctan.org/pkg/chktex)およびVSCode拡張[LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename)に類似しています。これら開発者に深く感謝します。
 

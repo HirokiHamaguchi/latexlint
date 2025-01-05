@@ -4,6 +4,11 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 ## [Unreleased]
 
+## 0.0.4 - 2025-01-05
+
+- Add `feature.gif` for README.md.
+- Fix bug in `addRule.ts`.
+
 ## 0.0.3 - 2025-01-05
 
 - Fix bug in `addRule.ts`.

@@ -2,7 +2,7 @@
   "name": "latexlint",
   "displayName": "LaTeX Lint",
   "description": "Linter for LaTeX with the commands renaming feature",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "icon": "images/mainIcon128.png",
   "author": {
     "name": "hari64boli64",

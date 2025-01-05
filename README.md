@@ -13,7 +13,13 @@
 
 This extension provides a LaTeX Linter for `.tex` and `.md` files with the commands renaming feature.
 
-![feature](https://github.com/hari64boli64/latexlint/blob/master/doc/feature.gif?raw=true)
+By this extension, you can
+
+* Detect **some common mistakes** in LaTeX.
+* **Rename the commands** by pressing `F2` on the `\begin{name}` or `\end{name}`.
+* Define **your own Regex rules** through `lintLatex.userDefinedRules` in `settings.json`.
+
+![feature](https://github.com/hari64boli64/latexlint/blob/master/images/feature.gif?raw=true)
 
 In some aspects, our extension resembles a LaTeX package [chktex](https://ctan.org/pkg/chktex) and a VSCode Extension [LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename).
 We sincerely appreciate the developers of these.

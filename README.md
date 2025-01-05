@@ -24,17 +24,22 @@ We sincerely appreciate the developers of these extensions.
 
 Here is the list of rules we detect.
 
-* [LLAlignAnd](#llalignand) (detect `=&`)
-* [LLColonEqq](#llcoloneqq) (detect `:=`, `=:`,`::=`, and `=::`)
-* [LLColonForMapping](#llcolonformapping) (detect `:` for mapping)
-* [LLCref](#llcref) (detect `\ref`)
-* [LLDoubleQuotation](#lldoublequotation) (detect `“`, `”` and `"` )
-* [LLENDash](#llendash) (detect the dubious use of hyphens)
-* [LLNonASCII](#llnonascii) (detect all non-ASCII characters)
-* [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
-* [LLT](#llt) (detect `^T`)
-* [LLTitle](#lltitle) (detect wrong title case in `\title{}`, `\section{}`, etc.)
-* [LLUserDefine](#lluserdefine) (detect Regexes in `latexlint.userDefinedRules`)
+01. [LLAlignAnd](#llalignand) (detect `=&`)
+02. [LLAlignWithoutAnd](#llalignwithoutand) (detect `align` environment without `&`)
+03. [LLColonEqq](#llcoloneqq) (detect `:=`, `=:`,`::=`, and `=::`)
+04. [LLColonForMapping](#llcolonformapping) (detect `:` for mapping)
+05. [LLCref](#llcref) (detect `\ref`)
+06. [LLDoubleQuotation](#lldoublequotation) (detect `“`, `”` and `"` )
+07. [LLENDash](#llendash) (detect the dubious use of `--`)
+08. [LLEqnarray](#lleqnarray) (detect `eqnarray` environment)
+09. [LLNonASCII](#llnonascii) (detect all non-ASCII characters)
+10. [LLLlGg](#llllgg) (detect `<<` and `>>`)
+11. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
+12. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
+13. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
+14. [LLT](#llt) (detect `^T`)
+15. [LLTitle](#lltitle) (detect wrong title case in `\title{}`, `\section{}`, etc.)
+16. [LLUserDefine](#lluserdefine) (detect Regexes in `latexlint.userDefinedRules`)
 
 ### LLAlignAnd
 
@@ -51,6 +56,14 @@ We use the following regex to detect this pattern with some spaces.
 ![doc/LLAlignAnd](https://github.com/hari64boli64/latexlint/blob/master/doc/LLAlignAnd.png?raw=true)
 
 [Ref by Stack Exchange](https://tex.stackexchange.com/questions/41074/relation-spacing-error-using-in-aligned-equations)
+
+### LLAlignWithoutAnd
+
+Detect `align` environment without `&` in `.tex` or `.md` files.
+
+You can rename the command by pressing `F2` on the command in `\begin{}` and `\end{}` in `.tex` or `.md` files.
+
+Refer to the GIF animation at [Features](#features).
 
 ### LLColonEqq
 
@@ -175,6 +188,59 @@ We might have false positives, such as `Wrong-Example`, which is not a person's 
 As a side note, we should use `--` instead of `-` to indicate a range of pages, e.g., `123--456` instead of `123-456`.
 We do not detect this because it might be just a subtraction.
 
+### LLEqnarray
+
+Detect `eqnarray` environment in `.tex` or `.md` files.
+
+```txt
+\\begin\{eqnarray\}
+```
+
+It is known that `eqnarray` environment is [not recommended](https://texfaq.org/FAQ-eqnarray) because it has some spacing issues.
+Use `align` environment instead.
+
+### LLLlGg
+
+Detect `<<` and `>>` in `.tex` or `.md` files.
+
+Use `\ll` and `\gg` instead.
+
+We use the following regex to detect this pattern.
+
+```txt
+(?<!<)<{2}(?!<)|(?<!>)>{2}(?!>)
+```
+
+This regex detects `<<` and `>>`, exactly two `<` and `>`.
+Thus, we do not detect the following.
+
+```txt
+I like dog>>>cat>>>>>>>>>human.
+```
+
+### LLRefEq
+
+Detect `\ref{eq:` in `.tex` files.
+
+```txt
+\\ref\{eq:
+```
+
+Use `\eqref{eq:` instead. This commands automatically adds parentheses around the reference.
+
+### LLSharp
+
+Detect `\sharp` in `.tex` or `.md` files.
+
+You should likely use `\#` instead for [number sign](https://github.com/hari64boli64/latexlint/blob/master/doc/LLColonForMapping.png?raw=true).
+`\sharp` is used for the musical symbol.
+
+```txt
+\\sharp
+```
+
+![doc/LLSharp](https://github.com/hari64boli64/latexlint/blob/master/doc/LLSharp.png?raw=true)
+
 ### LLNonASCII
 
 Detect all fullwidth ASCII characters in `.tex` or `.md` files.
@@ -280,15 +346,9 @@ f\^a
 
 You can easily add your rules by using the `latexlint.addRule` command in the command palette (`Ctrl`+`Shift`+`P`).
 
-<!--
+<!-- 
 
-### LLMathSpace
-
-Detect spaces in math mode.
-
-### LLTilde
-
-A tilde should be placed before a `\cite`,`\citet` command.
+Maybe we should add the following rules.
 
 ### LLArrow
 
@@ -300,13 +360,7 @@ It might be better to use `-Latex` and `Latex-` instead.
 Detect `et al.`.
 In most cases, you can use `\citep` instead.
 
--->
-
-## Rename
-
-You can rename the command by pressing `F2` on the command in `\begin{}` and `\end{}` in `.tex` or `.md` files.
-
-Refer to the GIF animation at [Features](#features).
+ -->
 
 ## Release Notes
 

@@ -3,6 +3,7 @@ import * as vscode from 'vscode';
 import * as path from 'path';
 
 import findModifyTargets from '../commands/findModifyTargets';
+import enumerateDiagnostics from '../commands/enumerateDiagnostics';
 
 async function testFindModifyTargetsTex() {
 	const uri = vscode.Uri.file(path.resolve(__dirname, '../../sample/rename.tex'));
@@ -56,7 +57,25 @@ async function testFindModifyTargetsMd() {
 	}
 }
 
+async function testEnumerateDiagnosticsTex() {
+	const uri = vscode.Uri.file(path.resolve(__dirname, '../../sample/lint.tex'));
+	if (!await vscode.workspace.fs.stat(uri)) throw new Error('File not found');
+	const document = await vscode.workspace.openTextDocument(uri);
+	const diagnostics = enumerateDiagnostics(document);
+	assert.strictEqual(diagnostics.length, 58);
+}
+
+async function testEnumerateDiagnosticsMd() {
+	const uri = vscode.Uri.file(path.resolve(__dirname, '../../sample/lint.md'));
+	if (!await vscode.workspace.fs.stat(uri)) throw new Error('File not found');
+	const document = await vscode.workspace.openTextDocument(uri);
+	const diagnostics = enumerateDiagnostics(document);
+	assert.strictEqual(diagnostics.length, 44);
+}
+
 suite('Extension Test Suite', () => {
 	test('Test findModifyTargetsTex', testFindModifyTargetsTex);
 	test('Test findModifyTargetsMd', testFindModifyTargetsMd);
+	test('Test enumerateDiagnosticsTex', testEnumerateDiagnosticsTex);
+	test('Test enumerateDiagnosticsMd', testEnumerateDiagnosticsMd);
 });

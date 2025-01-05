@@ -4,7 +4,11 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 ## [Unreleased]
 
-## 0.0.6 - 2025-01-05
+## 1.0.0 - 2025-01-06
+
+- First stable release.
+
+## 0.0.6 - 2025-01-06
 
 - Update README.md.
 - Change feature.gif to feature.mp4

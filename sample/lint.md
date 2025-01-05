@@ -30,7 +30,7 @@ Use `“XXX”` instead of “XXX” or "XXX".
 ## LLENDash
 
 - Erdos-Renyi (random graph, Erdős–Rényi)
-- Einstein-Podolsky-Rosen (quantum mechanics, Einstein–Podolsky–Rosen)
+- Einstein-Podolsky-Rosen (quantum physics, Einstein–Podolsky–Rosen)
 - Fruchterman-Reingold (graph drawing, Fruchterman–Reingold)
 - Gauss-Legendre (numerical integration, Gauss–Legendre)
 - Gibbs-Helmholtz (thermodynamics, Gibbs–Helmholtz)

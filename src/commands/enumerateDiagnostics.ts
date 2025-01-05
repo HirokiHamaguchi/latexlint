@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import LLAlignAnd from '../LL/LLAlignAnd';
 import LLColonEqq from '../LL/LLColonEqq';
+import LLColonForMapping from '../LL/LLColonForMapping';
 import LLCref from '../LL/LLCref';
 import LLDoubleQuotation from '../LL/LLDoubleQuotation';
 import LLENDash from '../LL/LLENDash';
@@ -17,6 +18,8 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
     diagnostics.push(...LLAlignAnd(doc));
     console.log('Enum: LLColonEqq');
     diagnostics.push(...LLColonEqq(doc));
+    console.log('Enum: LLColonForMapping');
+    diagnostics.push(...LLColonForMapping(doc));
     console.log('Enum: LLCref');
     diagnostics.push(...LLCref(doc));
     console.log('Enum: LLDoubleQuotation');

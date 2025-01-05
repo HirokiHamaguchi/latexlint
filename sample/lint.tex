@@ -2,6 +2,8 @@
 
 \usepackage{amsmath}
 \usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{ascmac}
 \usepackage{siunitx}
 \usepackage{cleveref}
 \usepackage{mathtools}
@@ -66,6 +68,44 @@
     \end{tabular}
 \end{table}
 
+\section{LLColonForMapping}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lll}
+        \text{A :                 B}                                                               & $A : B$                                 & \tA{ok} \\
+        \text{A $\backslash$colon B}                                                               & $A\colon B$                             & \tD{ng} \\
+        \text{f(x) :                 $\backslash$mathbb\{R\}$\backslash$to$\backslash$mathbb\{R\}} & $f(x) : \mathbb{R} \to \mathbb{R}$      & \tD{ng} \\
+        \text{f(x) $\backslash$colon $\backslash$mathbb\{R\}$\backslash$to$\backslash$mathbb\{R\}} & $f(x) \colon \mathbb{R} \to \mathbb{R}$ & \tA{ok}
+    \end{tabular}
+\end{table}
+
+\begin{itembox}{We detect all of : in the following.}
+    Here is the example of colon we detect.
+    \begin{itemize}
+        \item $X:Y \to Z$,
+        \item \( X: Y \mapsto Z. \),
+        \item $X : \mathbb{R}^{n^2 + 2n + 1}  \rightarrow \mathbb{R}$
+    \end{itemize}
+    and
+    \begin{equation*}
+        X:
+        (Y \text{ at new line in tex file})
+        \to
+        (Z \text{ at new line in tex file}).
+    \end{equation*}
+\end{itembox}
+
+\begin{itembox}{We do NOT detect any of : in the following.}
+    Here is the example of `:' undetected:
+    \begin{itemize}
+        \item $X\colon Y \to Z$, the correct use of colon.
+        \item $A:B:C = 1:2:3$, the colon for ratio.
+        \item $A:B = 1:2$ and $\alpha \to \beta$, separated by dollar sign.
+        \item $f: (\text{some very very very very very long long long long words}) \to \mathbb{R}$, the false negative.
+    \end{itemize}
+\end{itembox}
+
 \section{LLCref}
 
 \begin{theorem}
@@ -73,7 +113,7 @@
     This is a sample theorem.
 \end{theorem}
 
-Use \cref{thm:sample} instead of Theorem~\ref{thm:sample}.
+Use \cref{thm:sample} with cref instead of Theorem~\ref{thm:sample} with ref.
 
 \section{LLDoubleQuotation}
 
@@ -83,7 +123,7 @@ Use ``XXX'' instead of “XXX” or "XXX".
 
 \begin{itemize}
     \item Erdos-Renyi (random graph, Erd\H{o}s--R\'enyi)
-    \item Einstein-Podolsky-Rosen (quantum mechanics, Einstein--Podolsky--Rosen)
+    \item Einstein-Podolsky-Rosen (quantum physics, Einstein--Podolsky--Rosen)
     \item Fruchterman-Reingold (graph drawing, Fruchterman--Reingold)
     \item Gauss-Legendre (numerical integration, Gauss--Legendre)
     \item Gibbs-Helmholtz (thermodynamics, Gibbs--Helmholtz)
@@ -137,4 +177,3 @@ I want to use $\mathrm{a}$ instead of $a$ for superscript.
 \end{equation*}
 
 \end{document}
-

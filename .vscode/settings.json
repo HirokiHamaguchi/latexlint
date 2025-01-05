@@ -12,6 +12,7 @@
 	"typescript.tsc.autoDetect": "off",
 	"cSpell.words": [
 		"'enyi",
+		"alignat",
 		"amsmath",
 		"amsthm",
 		"chktex",

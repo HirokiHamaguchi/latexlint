@@ -8,6 +8,7 @@
     "name": "hari64boli64",
     "email": "hari64boli64@gmail.com"
   },
+  "publisher": "hari64boli64",
   "license": "MIT",
   "engines": {
     "vscode": "^1.96.0"

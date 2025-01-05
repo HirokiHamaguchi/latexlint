@@ -104,10 +104,6 @@ Here are examples of `:` we do not detect:
 * $A:B = 1:2$ and $\alpha \to \beta$, separated by dollar sign.
 * $f: (\text{some very very very very very long long long long words}) \to \mathbb{R}$, the false negative.
 
-## LLDoubleQuotation
-
-Use `“XXX”` instead of “XXX” or "XXX".
-
 ## LLENDash
 
 * Erdos-Renyi (random graph, Erdős–Rényi)

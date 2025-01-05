@@ -13,9 +13,9 @@
 
 This extension provides a LaTeX Linter for `.tex` and `.md` files with the commands renaming feature.
 
-![lint](doc/lint.gif)
+![lint](https://github.com/hari64boli64/latexlint/blob/master/doc/lint.gif?raw=true)
 
-![rename](doc/rename.gif)
+![rename](https://github.com/hari64boli64/latexlint/blob/master/doc/rename.gif?raw=true)
 
 In some aspects, our extension resembles a LaTeX package [chktex](https://ctan.org/pkg/chktex) and a VSCode Extension [LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename).
 We sincerely appreciate the developers of these.
@@ -25,20 +25,20 @@ We sincerely appreciate the developers of these.
 Here is the list of rules we detect.
 
 01. [LLAlignAnd](#llalignand) (detect `=&`)
-02. [LLAlignSingleLine](#llalignsingleline) (detect `align` environment without `&`)
+02. [LLAlignSingleLine](#llalignsingleline) (detect `align` environment without `\\`)
 03. [LLColonEqq](#llcoloneqq) (detect `:=`, `=:`,`::=`, and `=::`)
 04. [LLColonForMapping](#llcolonformapping) (detect `:` for mapping)
 05. [LLCref](#llcref) (detect `\ref`)
 06. [LLDoubleQuotation](#lldoublequotation) (detect `“`, `”` and `"` )
 07. [LLENDash](#llendash) (detect the dubious use of `--`)
 08. [LLEqnarray](#lleqnarray) (detect `eqnarray` environment)
-09. [LLNonASCII](#llnonascii) (detect all non-ASCII characters)
+09. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters)
 10. [LLLlGg](#llllgg) (detect `<<` and `>>`)
 11. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
 12. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
 13. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
 14. [LLT](#llt) (detect `^T`)
-15. [LLTitle](#lltitle) (detect wrong title case in `\title{}`, `\section{}`, etc.)
+15. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
 16. [LLUserDefine](#lluserdefine) (detect Regexes in `latexlint.userDefinedRules`)
 
 <!--
@@ -51,6 +51,7 @@ Show Image.
 Explain the problem detail.
 Explain the regex.
 Cite some references.
+
 -->
 
 ### LLAlignAnd
@@ -60,9 +61,9 @@ You should likely write as `={}&` in the `align` environment.
 
 ![doc/LLAlignAnd](https://github.com/hari64boli64/latexlint/blob/master/doc/LLAlignAnd.png?raw=true)
 
-As a limitation, there are some false positives, such as `&=` in the 'table' environment.
+As a limitation of this extension, there are some false positives, such as `&=` in the 'table' environment.
 
-[Ref by Stack Exchange](https://tex.stackexchange.com/questions/41074/relation-spacing-error-using-in-aligned-equations)
+[Ref by Stack Exchange](https://tex.stackexchange.com/questions/41074/relation-spacing-error-using-in-aligned-equations).
 
 ### LLAlignSingleLine
 
@@ -80,7 +81,7 @@ It is up to you which one to use, but we recommend using the `equation` environm
 
 by [amsmath](https://ctan.org/pkg/amsmath) documentation.
 
-You can rename the command by pressing `F2` on the command in `\begin{align}` or `\end{align}`.
+You can rename the command by pressing `F2` on the `align` in `\begin{align}` or `\end{align}`.
 Refer to the GIF animation at [Features](#features).
 
 ### LLColonEqq
@@ -129,7 +130,7 @@ For cleveref package, you can also refer to [this page by opt-cp](https://web.ar
 
 ### LLDoubleQuotation
 
-Detect `“`, `”` and `"` in `.tex` or `.md` files.
+Detect `“`, `”` and `"` in `.tex` files.
 These might be used as "XXX" or “XXX”.
 
 Use ``XXX'' instead for double quotation.
@@ -207,7 +208,7 @@ This commands automatically adds parentheses around the reference.
 ### LLSharp
 
 Detect `\sharp` in `.tex` or `.md` files.
-You should likely use `\#` instead for [number sign](https://github.com/hari64boli64/latexlint/blob/master/doc/LLColonForMapping.png?raw=true).
+You should likely use `\#` instead for [number sign](https://en.wikipedia.org/wiki/Number_sign).
 `\sharp` is used for the musical symbol.
 
 ```txt
@@ -223,7 +224,7 @@ Detect all fullwidth ASCII characters in `.tex` or `.md` files.
 We detect the following characters.
 
 ```txt
- ！＂＃＄％＆＇（）＊＋，－．／０１２３４５６７
+　！＂＃＄％＆＇（）＊＋，－．／０１２３４５６７
 ８９：；＜＝＞？＠ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯ
 ＰＱＲＳＴＵＶＷＸＹＺ［＼］＾＿｀ａｂｃｄｅｆｇ
 ｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ｛｜｝～
@@ -257,7 +258,7 @@ For example, you can detect the following Japanese characters.
 Detect `KB`, `MB`, `GB`, `TB`, `PB`, `EB`, `ZB`, `YB`, `KiB`, `MiB`, `GiB`, `TiB`, `PiB`, `EiB`, `ZiB`, and `YiB` without `\SI` in `.tex` files.
 You should likely use `\SI` instead, like `\SI{1}{\kilo\byte}`(10^3byte) and `\SI{1}{\kibi\byte}`(2^10byte).
 
-![doc/LLSI](doc/LLSI.png)
+![doc/LLSI](https://github.com/hari64boli64/latexlint/blob/master/doc/LLSI.png?raw=true)
 
 | Prefix  | Command  | Symbol  | Power | Prefix  | Command  | Symbol  | Power|
 |:-------:|:--------:|:-------:|:-----:|:-------:|:--------:|:-------:|:----:|

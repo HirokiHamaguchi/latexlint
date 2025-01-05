@@ -70,7 +70,7 @@ async function testEnumerateDiagnosticsMd() {
 	if (!await vscode.workspace.fs.stat(uri)) throw new Error('File not found');
 	const document = await vscode.workspace.openTextDocument(uri);
 	const diagnostics = enumerateDiagnostics(document);
-	assert.strictEqual(diagnostics.length, 44);
+	assert.strictEqual(diagnostics.length, 38);
 }
 
 suite('Extension Test Suite', () => {

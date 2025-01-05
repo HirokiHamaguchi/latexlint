@@ -12,7 +12,7 @@ export default function regex2diagnostics(doc: vscode.TextDocument, code: LLCode
         const range = new vscode.Range(startPos, endPos);
         ranges.push(range);
     }
-    const message = messages[code];
-    if (code === 'LLUserDefined') message.replace('{RULE}', pattern.source);
+    let message = messages[code];
+    if (code === 'LLUserDefined') message = message.replace('{RULE}', pattern.source);
     return ranges2diagnostics(code, message, ranges);
 }

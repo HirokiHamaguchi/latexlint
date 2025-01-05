@@ -36,76 +36,76 @@
 \section{LLAlignAnd}
 
 \begin{table}[H]
-    \centering
-    \begin{tabular}{lll}
-        \&=              &
-        $\begin{aligned}
-                 a & = b \\
-                 c & = d
-             \end{aligned}$ &
-        \tA{ok}            \\[0.3cm]
-        =\&              &
-        $\begin{aligned}
-                 a = & b \\
-                 c = & d
-             \end{aligned}$ &
-        \tD{ng}            \\[0.3cm]
-        =\{\}\&          &
-        $\begin{aligned}
-                 a = {} & b \\
-                 c = {} & d
-             \end{aligned}$ &
-        \tA{ok}
-    \end{tabular}
+	\centering
+	\begin{tabular}{lll}
+		\&=              &
+		$\begin{aligned}
+				 a & = b \\
+				 c & = d
+			 \end{aligned}$ &
+		\tA{ok}            \\[0.3cm]
+		=\&              &
+		$\begin{aligned}
+				 a = & b \\
+				 c = & d
+			 \end{aligned}$ &
+		\tD{ng}            \\[0.3cm]
+		=\{\}\&          &
+		$\begin{aligned}
+				 a = {} & b \\
+				 c = {} & d
+			 \end{aligned}$ &
+		\tA{ok}
+	\end{tabular}
 \end{table}
 
 \section{LLAlignSingleLine}
 
 \begin{itembox}{\large Long line before display (same result)}
-    \begin{minipage}[t]{.5\columnwidth}
-        Lorem ipsum.
-        \begin{equation*}
-            f(x) = ax^2 + bx + c
-        \end{equation*}
-        This is an \tA{equation} environment.
-    \end{minipage}%
-    \begin{minipage}[t]{.5\columnwidth}
-        Lorem ipsum.
-        \begin{align*}
-            f(x) & = ax^2 + bx + c
-        \end{align*}
-        This is an \tD{align} environment.
-    \end{minipage}
+	\begin{minipage}[t]{.5\columnwidth}
+		Lorem ipsum.
+		\begin{equation*}
+			f(x) = ax^2 + bx + c
+		\end{equation*}
+		This is an \tA{equation} environment.
+	\end{minipage}%
+	\begin{minipage}[t]{.5\columnwidth}
+		Lorem ipsum.
+		\begin{align*}
+			f(x) & = ax^2 + bx + c
+		\end{align*}
+		This is an \tD{align} environment.
+	\end{minipage}
 \end{itembox}
 
 \vskip\baselineskip
 
 \begin{itembox}{\large Short line before display (different result)}
-    \begin{minipage}[t]{.5\columnwidth}
-        Lrm:
-        \begin{equation*}
-            f(x) = ax^2 + bx + c
-        \end{equation*}
-        This is an \tA{equation} environment.
-    \end{minipage}%
-    \begin{minipage}[t]{.5\columnwidth}
-        Lrm:
-        \begin{align*}
-            f(x) & = ax^2 + bx + c
-        \end{align*}
-        This is an \tD{align} environment.
-    \end{minipage}
+	\begin{minipage}[t]{.5\columnwidth}
+		Lrm:
+		\begin{equation*}
+			f(x) = ax^2 + bx + c
+		\end{equation*}
+		This is an \tA{equation} environment.
+	\end{minipage}%
+	\begin{minipage}[t]{.5\columnwidth}
+		Lrm:
+		\begin{align*}
+			f(x) & = ax^2 + bx + c
+		\end{align*}
+		This is an \tD{align} environment.
+	\end{minipage}
 \end{itembox}
 
 Single-line alignat environment is also detected.
 \begin{alignat*}{1}
-    f(x) & = ax^2 + bx + c
+	f(x) & = ax^2 + bx + c
 \end{alignat*}
 
 Multi-line alignat environment is not detected.
 \begin{alignat*}{2}
-    f(x) & = ax^2 + bx + c \\
-    g(x) & = dx^2 + ex + f
+	f(x) & = ax^2 + bx + c \\
+	g(x) & = dx^2 + ex + f
 \end{alignat*}
 
 % Comment in the following lines should be ignored.
@@ -116,60 +116,60 @@ Multi-line alignat environment is not detected.
 \section{LLColonEqq}
 
 \begin{table}[H]
-    \centering
-    \begin{tabular}{lll}
-        x := y                   & $x := y$        & \tD{ng} \\
-        x $\backslash$coloneqq y & $x \coloneqq y$ & \tA{ok} \\
-        x ::= y                  & $x ::= y$       & \tD{ng} \\
-        x $\backslash$Coloneqq y & $x \Coloneqq y$ & \tA{ok}
-    \end{tabular}
+	\centering
+	\begin{tabular}{lll}
+		x := y                   & $x := y$        & \tD{ng} \\
+		x $\backslash$coloneqq y & $x \coloneqq y$ & \tA{ok} \\
+		x ::= y                  & $x ::= y$       & \tD{ng} \\
+		x $\backslash$Coloneqq y & $x \Coloneqq y$ & \tA{ok}
+	\end{tabular}
 \end{table}
 
 \section{LLColonForMapping}
 
 \begin{table}[H]
-    \centering
-    \begin{tabular}{lll}
-        \text{A :                 B}                                                               & $A : B$                                 & \tA{ok} \\
-        \text{A $\backslash$colon B}                                                               & $A\colon B$                             & \tD{ng} \\
-        \text{f(x) :                 $\backslash$mathbb\{R\}$\backslash$to$\backslash$mathbb\{R\}} & $f(x) : \mathbb{R} \to \mathbb{R}$      & \tD{ng} \\
-        \text{f(x) $\backslash$colon $\backslash$mathbb\{R\}$\backslash$to$\backslash$mathbb\{R\}} & $f(x) \colon \mathbb{R} \to \mathbb{R}$ & \tA{ok}
-    \end{tabular}
+	\centering
+	\begin{tabular}{lll}
+		\text{A :                 B}                                                               & $A : B$                                 & \tA{ok} \\
+		\text{A $\backslash$colon B}                                                               & $A\colon B$                             & \tD{ng} \\
+		\text{f(x) :                 $\backslash$mathbb\{R\}$\backslash$to$\backslash$mathbb\{R\}} & $f(x) : \mathbb{R} \to \mathbb{R}$      & \tD{ng} \\
+		\text{f(x) $\backslash$colon $\backslash$mathbb\{R\}$\backslash$to$\backslash$mathbb\{R\}} & $f(x) \colon \mathbb{R} \to \mathbb{R}$ & \tA{ok}
+	\end{tabular}
 \end{table}
 
 \begin{itembox}{We detect all of : in the following}
-    Here are examples of colons we detect.
-    \begin{itemize}
-        \item $X:Y \to Z$,
-        \item \( X: Y \mapsto Z. \),
-        \item $X : \mathbb{R}^{n^2 + 2n + 1}  \rightarrow \mathbb{R}$
-    \end{itemize}
-    and
-    \begin{equation} \label{eq:sample}
-        X:
-        (Y \text{ at new line in tex file})
-        \to
-        (Z \text{ at new line in tex file}).
-    \end{equation}
+	Here are examples of colons we detect.
+	\begin{itemize}
+		\item $X:Y \to Z$,
+		\item \( X: Y \mapsto Z. \),
+		\item $X : \mathbb{R}^{n^2 + 2n + 1}  \rightarrow \mathbb{R}$
+	\end{itemize}
+	and
+	\begin{equation} \label{eq:sample}
+		X:
+		(Y \text{ at new line in tex file})
+		\to
+		(Z \text{ at new line in tex file}).
+	\end{equation}
 \end{itembox}
 
 \vskip\baselineskip
 
 \begin{itembox}{We do NOT detect any of : in the following}
-    Here are examples of `:' we do not detect.
-    \begin{itemize}
-        \item $X\colon Y \to Z$, the correct use of colon.
-        \item $A:B:C = 1:2:3$, the colon for ratio.
-        \item $A:B = 1:2$ and $\alpha \to \beta$, separated by dollar sign.
-        \item $f: (\text{some very very very very very long long long long words}) \to \mathbb{R}$, the false negative.
-    \end{itemize}
+	Here are examples of `:' we do not detect.
+	\begin{itemize}
+		\item $X\colon Y \to Z$, the correct use of colon.
+		\item $A:B:C = 1:2:3$, the colon for ratio.
+		\item $A:B = 1:2$ and $\alpha \to \beta$, separated by dollar sign.
+		\item $f: (\text{some very very very very very long long long long words}) \to \mathbb{R}$, the false negative.
+	\end{itemize}
 \end{itembox}
 
 \section{LLCref}
 
 \begin{theorem}
-    \label{thm:sample}
-    This is a sample theorem.
+	\label{thm:sample}
+	This is a sample theorem.
 \end{theorem}
 
 Use \cref{thm:sample} with cref instead of Theorem~\ref{thm:sample} with ref to avoid mistakes.
@@ -181,12 +181,12 @@ Use ``XXX'' instead of “XXX” or "XXX".
 \section{LLENDash}
 
 \begin{itemize}
-    \item Erdos-Renyi (random graph, Erd\H{o}s--R\'enyi)
-    \item Einstein-Podolsky-Rosen (quantum physics, Einstein--Podolsky--Rosen)
-    \item Fruchterman-Reingold (graph drawing, Fruchterman--Reingold)
-    \item Gauss-Legendre (numerical integration, Gauss--Legendre)
-    \item Gibbs-Helmholtz (thermodynamics, Gibbs--Helmholtz)
-    \item Karush-Kuhn-Tucker (optimization, Karush--Kuhn--Tucker)
+	\item Erdos-Renyi (random graph, Erd\H{o}s--R\'enyi)
+	\item Einstein-Podolsky-Rosen (quantum physics, Einstein--Podolsky--Rosen)
+	\item Fruchterman-Reingold (graph drawing, Fruchterman--Reingold)
+	\item Gauss-Legendre (numerical integration, Gauss--Legendre)
+	\item Gibbs-Helmholtz (thermodynamics, Gibbs--Helmholtz)
+	\item Karush-Kuhn-Tucker (optimization, Karush--Kuhn--Tucker)
 \end{itemize}
 
 Exception: Fritz-John (optimization, name of a person)
@@ -198,18 +198,18 @@ False Positive: Wrong-Example
 We should not use eqnarray. It has some spacing issues.
 
 \begin{eqnarray}
-    x & = & y \\
-    a & = & b
+	x & = & y \\
+	a & = & b
 \end{eqnarray}
 
 \section{LLLlGg}
 
 \begin{table}[h]
-    \centering
-    \begin{tabular}{lll}
-        n $\backslash$ll m & $n \ll m$ & \tA{ok} \\
-        n $<<$ m           & $n<<m$    & \tD{ng} \\
-    \end{tabular}
+	\centering
+	\begin{tabular}{lll}
+		n $\backslash$ll m & $n \ll m$ & \tA{ok} \\
+		n $<<$ m           & $n<<m$    & \tD{ng} \\
+	\end{tabular}
 \end{table}
 
 I like human $<<<$ cat $<<<<<<<<<<<<<<<<$ dog.
@@ -223,18 +223,18 @@ You can avoid the mistakes of forgetting to add parentheses.
 \section{LLSharp}
 
 \begin{table}[H]
-    \centering
-    \begin{tabular}{lll}
-        $\backslash\#$    & $\#A$      & \tA{ok} \\
-        $\backslash$sharp & $\sharp A$ & \tD{ng}
-    \end{tabular}
+	\centering
+	\begin{tabular}{lll}
+		$\backslash\#$    & $\#A$      & \tA{ok} \\
+		$\backslash$sharp & $\sharp A$ & \tD{ng}
+	\end{tabular}
 \end{table}
 
 \section{LLNonASCII}
 
 The following line contains non-ASCII characters.
 
-    {　}！＂＃＄％＆＇（）＊＋，－．／
+	{　}！＂＃＄％＆＇（）＊＋，－．／
 
 \vskip\baselineskip
 
@@ -255,7 +255,7 @@ This 1EB is one ExaByte.
 \section{LLT}
 
 \begin{equation*}
-    X^T \quad X^\top \quad X^{\mathsf{T}}
+	X^T \quad X^\top \quad X^{\mathsf{T}}
 \end{equation*}
 
 \section{LLTitle}
@@ -263,7 +263,7 @@ This 1EB is one ExaByte.
 \subsection{non title case words}
 
 \subsubsection{
-    This Is a Correct Title
+	This Is a Correct Title
 }
 
 \subparagraph{SubParagraph: Test With Ref~\ref{thm:sample}}
@@ -273,7 +273,7 @@ This 1EB is one ExaByte.
 You can define your own rule, such as prohibiting the use of a f\^{}a.
 
 \begin{equation*}
-    f^a(X) \quad f^{\mathrm{a}}(X)
+	f^a(X) \quad f^{\mathrm{a}}(X)
 \end{equation*}
 
 \end{document}

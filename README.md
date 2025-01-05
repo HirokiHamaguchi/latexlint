@@ -85,8 +85,7 @@ It is up to you which one to use, but we recommend using the `equation` environm
 
 by [amsmath](https://ctan.org/pkg/amsmath) documentation.
 
-You can rename the command by pressing `F2` on the `align` in `\begin{align}` or `\end{align}`.
-Refer to the GIF animation at [Features](#features).
+You can rename the command by pressing `F2` on the `align` in `\begin{align}` or `\end{align}`. Refer to the GIF animation at [Features](#features).
 
 ### LLColonEqq
 
@@ -108,16 +107,14 @@ You likely want to use `\colon` instead.
 
 `\colon` is [recommended](https://tex.stackexchange.com/questions/37789/using-colon-or-in-formulas) for the mapping symbol. `:` is used for ratio, such as `1:2`.
 
-In order to detect this pattern, we seek `\to`,`\mapsto` and `\rightarrow` after the `:`.
-If there is any of these commands within 10 words after the `:` and before `$` without escaping, we regard the `:` as a mapping symbol.
+In order to detect this pattern, we seek `\to`,`\mapsto` and `\rightarrow` after the `:`. If there is any of these commands within 10 words after the `:` and before `$` without escaping, we regard the `:` as a mapping symbol.
 
 ### LLCref
 
 Detect `\ref` in `.tex` files.
 You should likely use `\cref` or `\Cref` in [cleveref](https://ctan.org/pkg/cleveref) package instead.
 
-We prefer this package because it can automatically add prefixes like "Sec." or "Fig.".
-We can keep the consistency of the reference format.
+We prefer this package because it can automatically add prefixes like "Sec." or "Fig.". We can keep the consistency of the reference format.
 
 For cleveref package, you can also refer to [this page by opt-cp](https://web.archive.org/web/20220616140841/https://opt-cp.com/latex-packages/).
 
@@ -139,8 +136,7 @@ These might be used as "XXX" or “XXX”.
 
 Use ``XXX'' instead for double quotation.
 
-As for “XXX”, there is no problem in most cases.
-However, I prefer to use ``XXX'' for consistency.
+As for “XXX”, there is no problem in most cases. However, I prefer to use ``XXX'' for consistency.
 
 You can also use `\enquote{XXX}` with [csquotes](https://ctan.org/pkg/csquotes) package.
 
@@ -167,8 +163,7 @@ However, we do not detect the following as an exception.
 
 We might have false positives, such as `Wrong-Example`, which is not a person's name.
 
-As a side note, we should use `--` instead of `-` to indicate a range of pages, e.g., `123--456` instead of `123-456`.
-We do not detect this because it might be just a subtraction.
+As a side note, we should use `--` instead of `-` to indicate a range of pages, e.g., `123--456` instead of `123-456`. We do not detect this because it might be just a subtraction.
 
 We use the following Regex.
 
@@ -213,6 +208,7 @@ This commands automatically adds parentheses around the reference.
 
 Detect `\sharp` in `.tex` or `.md` files.
 You should likely use `\#` instead for [number sign](https://en.wikipedia.org/wiki/Number_sign).
+
 `\sharp` is used for the musical symbol.
 
 ```txt
@@ -298,11 +294,9 @@ should be
 `The Quick Brown Fox Jumps Over the Lazy Dog`
 in the title case. We detect such cases.
 
-It is very difficult to detect all non-title cases because of the many exceptions and styles.
-We highly recommend using [Title Case Converter](https://titlecaseconverter.com/) or [Capitalize My Title](https://capitalizemytitle.com/) to convert the title in your preferred style.
+It is very difficult to detect all non-title cases because of the many exceptions and styles. We highly recommend using [Title Case Converter](https://titlecaseconverter.com/) or [Capitalize My Title](https://capitalizemytitle.com/) to convert the title in your preferred style.
 
-We test the string inside the `{}` is invariant by the function `toTitleCase` implemented based on [to-title-case](https://github.com/gouch/to-title-case/tree/master), JavaScript library.
-There might be some false positives and negatives.
+We test the string inside the `{}` is invariant by the function `toTitleCase` implemented based on [to-title-case](https://github.com/gouch/to-title-case/tree/master), JavaScript library. There might be some false positives and negatives.
 
 [APA Style](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case).
 
@@ -314,8 +308,7 @@ You can define your own regular expressions to detect in `.tex` or `.md` files.
 
 In `latexlint.userDefinedRules` in `settings.json`, you can define your own regular expressions.
 
-For example, when you use English letters in math mode for an explanation, you should use `\mathrm`.
-If $\mathrm{a}$ is not variables and represents something like **a**tractive force, $f^a(x)$ should be written as $f^{\mathrm{a}}(x)$.
+For example, when you use English letters in math mode for an explanation, you should use `\mathrm`. If $\mathrm{a}$ is not variables and represents something like **a**tractive force, $f^a(x)$ should be written as $f^{\mathrm{a}}(x)$.
 
 However, it is difficult to detect without context. You can define the following regular expression to detect this pattern.
 

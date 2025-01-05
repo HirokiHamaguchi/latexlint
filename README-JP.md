@@ -85,8 +85,7 @@ Cite some references.
 
 [amsmath](https://ctan.org/pkg/amsmath)ドキュメントより。
 
-`\begin{align}`または`\end{align}`内の`align`上で`F2`を押すと、コマンドのリネームが出来ます。
-[機能概要](#機能概要)でのGIFアニメーションを参照してください。
+`\begin{align}`または`\end{align}`内の`align`上で`F2`を押すと、コマンドのリネームが出来ます。 [機能概要](#機能概要)でのGIFアニメーションを参照してください。
 
 ### LLColonEqq
 
@@ -102,14 +101,13 @@ Cite some references.
 ### LLColonForMapping
 
 `.tex`または`.md`ファイル内の、写像に使われていると思わしき`:`を検出します。
-`\colon`を使うのが望ましいです。
+`\colon`を使用するのが望ましいです。
 
 ![doc/LLColonForMapping](https://github.com/hari64boli64/latexlint/blob/master/doc/LLColonForMapping.png?raw=true)
 
 `\colon`が写像においては[推奨されています](https://tex.stackexchange.com/questions/37789/using-colon-or-in-formulas)。`:`は比率（例えば`1:2`）に使われます。
 
-このパターンを検出するために、`:`の後に`\to`、`\mapsto`、`\rightarrow`があるかどうかを確認します。
-`:`の後10語以内でこれらのコマンドがあり、かつエスケープされていない`$`の前の場合、`:`は写像用の記号として認識されます。
+このパターンを検出するために、`:`の後に`\to`、`\mapsto`、`\rightarrow`があるかどうかを確認します。`:`の後10語以内でこれらのコマンドがあり、かつエスケープされていない`$`の前の場合、`:`は写像用の記号として認識されます。
 
 ### LLCref
 
@@ -209,6 +207,7 @@ I like human $<<<$ cat $<<<<<<<<<<<<<<<<$ dog.
 
 `.tex`または`.md`ファイル内の、`\sharp`を検出します。
 代わりに[number sign](https://en.wikipedia.org/wiki/Number_sign)を示す`\#`を使うべきです。
+
 `\sharp`は音楽記号として使われます。
 
 ```txt
@@ -255,7 +254,7 @@ I like human $<<<$ cat $<<<<<<<<<<<<<<<<$ dog.
 
 ### LLSI
 
-`.tex`ファイル内で、`\SI`なしで使われている`KB`, `MB`, `GB`, `TB`, `PB`, `EB`, `ZB`, `YB`, `KiB`, `MiB`, `GiB`, `TiB`, `PiB`, `EiB`, `ZiB`, `YiB`を検出します。  
+`.tex`ファイル内で、`\SI`なしで使われている`KB`, `MB`, `GB`, `TB`, `PB`, `EB`, `ZB`, `YB`, `KiB`, `MiB`, `GiB`, `TiB`, `PiB`, `EiB`, `ZiB`, `YiB`を検出します。
 代わりに`\SI`を使用するのが望ましいです。例えば、`\SI{1}{\kilo\byte}`（10^3バイト）や`\SI{1}{\kibi\byte}`（2^10バイト）です。
 
 ![doc/LLSI](https://github.com/hari64boli64/latexlint/blob/master/doc/LLSI.png?raw=true)
@@ -277,7 +276,7 @@ I like human $<<<$ cat $<<<<<<<<<<<<<<<<$ dog.
 
 ### LLT
 
-`.tex`または`.md`ファイル内の、`^T`を検出します。  
+`.tex`または`.md`ファイル内の、`^T`を検出します。
 行列やベクトルの転置を表す場合は、`^\top`や`^\mathsf{T}`を使用するのが望ましいです。
 
 そうでない場合、変数`T`の冪乗との区別がつきません。
@@ -294,11 +293,9 @@ I like human $<<<$ cat $<<<<<<<<<<<<<<<<$ dog.
 `The Quick Brown Fox Jumps Over the Lazy Dog`
 のようにタイトルケースにするのが望ましく、そのような場合に検出します。
 
-すべての非タイトルケースを検出するのは非常に困難です。多くの例外やスタイルがあるためです。  
-好みのスタイルに合わせてタイトルを変換するには、[Title Case Converter](https://titlecaseconverter.com/)または[Capitalize My Title](https://capitalizemytitle.com/)の使用を強く推奨します。
+すべての非タイトルケースを検出するのは非常に困難です。多くの例外やスタイルがあるためです。好みのスタイルに合わせてタイトルを変換するには、[Title Case Converter](https://titlecaseconverter.com/)または[Capitalize My Title](https://capitalizemytitle.com/)の使用を強く推奨します。
 
-`{}`内の文字列は、[to-title-case](https://github.com/gouch/to-title-case/tree/master)というJavaScriptライブラリをベースにした`toTitleCase`関数によって不変であるかどうかがテストされます。
-ただし、偽陽性や偽陰性が発生する可能性があります。
+`{}`内の文字列は、[to-title-case](https://github.com/gouch/to-title-case/tree/master)というJavaScriptライブラリをベースにした`toTitleCase`関数によって不変であるかどうかがテストされます。ただし、偽陽性や偽陰性が発生する可能性があります。
 
 [APA Style](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case)
 
@@ -310,11 +307,10 @@ I like human $<<<$ cat $<<<<<<<<<<<<<<<<$ dog.
 
 `settings.json`の`latexlint.userDefinedRules`で独自の正規表現を定義します。
 
-例えば、数式モードで説明のために英文字を使う場合、`\mathrm`を使うべきです。  
+例えば、数式モードで説明のために英文字を使う場合、`\mathrm`を使うべきです。
 $\mathrm{a}$が変数ではなく、**a**tractive forceのような意味を表す場合、$f^a(x)$は$f^{\mathrm{a}}(x)$と記述するべきです。
 
-ただし、文脈無しでは検出が難しいです。
-そこで、以下の正規表現を定義してこのパターンを検出できます。
+ただし、文脈無しでは検出が難しいです。そこで、以下の正規表現を定義してこのパターンを検出できます。
 
 ```txt
 f\^a

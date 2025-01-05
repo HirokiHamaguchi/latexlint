@@ -12,3 +12,9 @@ vsc-extension-quickstart.md
 **/*.map
 **/*.ts
 **/.vscode-test.*
+
+doc
+other
+images/*.stg
+doc/*.synctex.gz
+sample/*.synctex.gz

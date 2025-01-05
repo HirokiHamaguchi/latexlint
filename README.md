@@ -19,7 +19,7 @@ By this extension, you can
 * **Rename the commands** by pressing `F2` on the `\begin{name}` or `\end{name}`.
 * Define **your own Regex rules** through `lintLatex.userDefinedRules` in `settings.json`.
 
-![feature](https://github.com/hari64boli64/latexlint/blob/master/images/feature.gif?raw=true)
+![feature](https://github.com/hari64boli64/latexlint/blob/master/images/feature.mp4?raw=true)
 
 In some aspects, our extension resembles a LaTeX package [chktex](https://ctan.org/pkg/chktex) and a VS Code Extension [LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename).
 We sincerely appreciate the developers of these.

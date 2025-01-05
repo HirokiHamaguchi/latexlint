@@ -2,6 +2,7 @@ export const extensionDisplayName = 'LaTeX Lint';
 
 export type LLCode =
     'LLAlignAnd' |
+    'LLAlignSingleLine' |
     'LLColonEqq' |
     'LLColonForMapping' |
     'LLCref' |
@@ -19,6 +20,7 @@ export type LLCode =
 
 export const messages: Record<LLCode, string> = {
     LLAlignAnd: '=& might be better written as ={}& to avoid spacing issues if it is in an align environment.',
+    LLAlignSingleLine: 'Use equation environment instead of align for single-line equation.',
     LLColonEqq: 'You might better to use \\coloneqq, \\eqqcolon, \\Coloneqq and \\Eqqcolon.',
     LLColonForMapping: 'You might better to use \\colon instead of : for mapping.',
     LLCref: 'You might better to use \\cref instead of \\ref.',

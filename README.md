@@ -2,7 +2,8 @@
 
 <div align="center">
 
-<img src="images/mainIcon512.png" alt="logo" width="150">
+<img src="https://github.com/hari64boli64/latexlint/blob/master/images/mainIcon512.png?raw=true"
+ alt="logo" width="150">
 
 # LaTeX Lint
 
@@ -25,7 +26,7 @@ Here is the list of rules we detect.
 
 * [LLAlignAnd](#llalignand) (detect `=&`)
 * [LLColonEqq](#llcoloneqq) (detect `:=`, `=:`,`::=`, and `=::`)
-* [LLColonInMath](#llcoloninmath) (detect `:` in math mode)
+* [LLColonForMapping](#llcolonformapping) (detect `:` for mapping)
 * [LLCref](#llcref) (detect `\ref`)
 * [LLDoubleQuotation](#lldoublequotation) (detect `“`, `”` and `"` )
 * [LLENDash](#llendash) (detect the dubious use of hyphens)
@@ -47,7 +48,7 @@ We use the following regex to detect this pattern with some spaces.
 =[\t ]*&
 ```
 
-![doc/LLAlignAnd](doc/LLAlignAnd.png)
+![doc/LLAlignAnd](https://github.com/hari64boli64/latexlint/blob/master/doc/LLAlignAnd.png?raw=true)
 
 [Ref by Stack Exchange](https://tex.stackexchange.com/questions/41074/relation-spacing-error-using-in-aligned-equations)
 
@@ -58,16 +59,49 @@ Use `\coloneqq`, `\eqqcolon`, `\Coloneqq` and `\Eqqcolon` in [mathtools](https:/
 
 The colon is slightly too low in `:=`, but vertically centered in `\coloneqq` according to [this](https://tex.stackexchange.com/questions/4216/how-to-typeset-correctly).
 
+![doc/LLColonEqq](https://github.com/hari64boli64/latexlint/blob/master/doc/LLColonEqq.png?raw=true)
+
 [Ref by Stack Exchange](https://tex.stackexchange.com/questions/121363/what-is-the-latex-code-for-the-symbol-two-colons-and-equals-sign).
 
-### LLColonInMath
+### LLColonForMapping
 
-TODO
-
-Detect ":" in math mode.
+Detect `:` which seems to be used for mapping in `.tex` or `.md` files.
 You likely want to use `\colon` instead.
 
-![doc/LLColonInMath](doc/LLColonInMath.png)
+![doc/LLColonForMapping](https://github.com/hari64boli64/latexlint/blob/master/doc/LLColonForMapping.png?raw=true)
+
+In order to detect this pattern, we seek `\to`,`\mapsto` and `\rightarrow` after the `:`.
+If there is any of these commands within 10 words after the `:` and before `$` without escaping, we regard the `:` as a mapping symbol.
+
+We detect all of `:` in the following.
+
+```tex
+Here is the example of colon we detect.
+\begin{itemize}
+    \item $X:Y \to Z$,
+    \item \( X: Y \mapsto Z. \),
+    \item $X : \mathbb{R}^{n^2 + 2n + 1}  \rightarrow \mathbb{R}$
+\end{itemize}
+and
+\begin{equation*}
+    X:
+    (Y \text{ at new line in tex file})
+    \to
+    (Z \text{ at new line in tex file}).
+\end{equation*}
+```
+
+We do NOT detect any of `:` in the following.
+
+```tex
+Here is the example of `:' undetected:
+\begin{itemize}
+    \item $X\colon Y \to Z$, the correct use of colon.
+    \item $A:B:C = 1:2:3$, the colon for ratio.
+    \item $A:B = 1:2$ and $\alpha \to \beta$, separated by dollar sign.
+    \item $f: (\text{some very very very very very long long long long words}) \to \mathbb{R}$, the false negative.
+\end{itemize}
+```
 
 ### LLCref
 
@@ -81,7 +115,7 @@ We use the following regex to detect this pattern.
 \\ref(?=\{)
 ```
 
-I prefer this package because it can automatically add prefixes like "Sec." or "Fig.". We can keep the consistency of the reference format.
+We prefer this package because it can automatically add prefixes like "Sec." or "Fig.". We can keep the consistency of the reference format.
 
 For cleveref package, you can also refer to [this page by opt-cp](https://web.archive.org/web/20220616140841/https://opt-cp.com/latex-packages/).
 
@@ -125,7 +159,7 @@ Here, `[A-Z][a-zA-Z]*[a-z]` is a word with a capital letter, zero or more letter
 For example, we detect the following.
 
 * `Erdos-Renyi` (random graph, `Erd\H{o}s--R\'enyi`)
-* `Einstein-Podolsky-Rosen` (quantum mechanics, `Einstein--Podolsky--Rosen`)
+* `Einstein-Podolsky-Rosen` (quantum physics, `Einstein--Podolsky--Rosen`)
 * `Fruchterman-Reingold` (graph drawing, `Fruchterman--Reingold`)
 * `Gauss-Legendre` (numerical integration, `Gauss--Legendre`)
 * `Gibbs-Helmholtz` (thermodynamics, `Gibbs--Helmholtz`)
@@ -185,7 +219,7 @@ We use the following regex to detect this pattern.
 (?<![a-zA-Z])(?i:KB|MB|GB|TB|PB|EB|ZB|YB|KiB|MiB|GiB|TiB|PiB|EiB|ZiB|YiB)(?![a-zA-Z])
 ```
 
-Here (?<!...) and (?!...) are negative lookbehind and negative lookahead assertions, respectively.
+Here `(?<!...)` and `(?!...)` are negative lookbehind and negative lookahead assertions, respectively.
 Before the unit, there should not be any alphabet.
 After the unit, there should not be any alphabet.
 

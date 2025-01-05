@@ -11,6 +11,7 @@
 	// Turn off tsc task auto detection since we have the necessary tasks as npm scripts
 	"typescript.tsc.autoDetect": "off",
 	"cSpell.words": [
+		"'enyi",
 		"amsmath",
 		"amsthm",
 		"chktex",
@@ -18,6 +19,7 @@
 		"citet",
 		"cleveref",
 		"coloneqq",
+		"cref",
 		"crefrangeconjunction",
 		"csquotes",
 		"CTAN",
@@ -25,7 +27,9 @@
 		"enquote",
 		"eqqcolon",
 		"Erdos",
+		"Erdős",
 		"exbi",
+		"fitz",
 		"Fruchterman",
 		"fullwidth",
 		"gibi",
@@ -36,6 +40,8 @@
 		"latexlint",
 		"LLENDash",
 		"LLSI",
+		"mapsto",
+		"mathbb",
 		"mathrm",
 		"mathsf",
 		"mathtools",
@@ -44,8 +50,11 @@
 		"pebi",
 		"peta",
 		"Podolsky",
+		"R",
 		"Reingold",
 		"Renyi",
+		"Rényi",
+		"rightarrow",
 		"Rosen",
 		"siunitx",
 		"subsubsection",
@@ -69,44 +78,14 @@
 			]
 		},
 		{
-			"name": "uplatex&pbibtex",
+			"name": "pdflatex*2",
 			"tools": [
-				"ptex2pdf (uplatex)",
-				"pbibtex (uplatex)",
-				"ptex2pdf (uplatex)",
-				"ptex2pdf (uplatex)"
+				"pdflatex",
+				"pdflatex"
 			]
 		},
-		{
-			"name": "ptex2pdf*2",
-			"tools": [
-				"ptex2pdf",
-				"ptex2pdf",
-			]
-		},
-		{
-			"name": "ptex2pdf&pbibtex",
-			"tools": [
-				"ptex2pdf",
-				"pbibtex",
-				"ptex2pdf",
-				"ptex2pdf"
-			]
-		}
 	],
 	"latex-workshop.latex.tools": [
-		{
-			"name": "ptex2pdf",
-			"command": "ptex2pdf",
-			"args": [
-				"-l",
-				"-ot",
-				"--interaction=nonstopmode",
-				"--synctex=1",
-				"--shell-escape",
-				"%DOC%"
-			]
-		},
 		{
 			"name": "ptex2pdf (uplatex)",
 			"command": "ptex2pdf",
@@ -121,17 +100,14 @@
 			]
 		},
 		{
-			"name": "pbibtex",
-			"command": "pbibtex",
+			"name": "pdflatex",
+			"command": "pdflatex",
 			"args": [
-				"%DOCFILE%"
-			]
-		},
-		{
-			"name": "pbibtex (uplatex)",
-			"command": "pbibtex",
-			"args": [
-				"%DOCFILE%"
+				"--shell-escape",
+				"--synctex=1",
+				"--interaction=nonstopmode",
+				"-file-line-error",
+				"%DOC%"
 			]
 		}
 	],

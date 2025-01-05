@@ -1,7 +1,7 @@
 {
   "name": "latexlint",
   "displayName": "LaTeX Lint",
-  "description": "Linter for LaTeX with commands renaming feature",
+  "description": "Linter for LaTeX with the commands renaming feature",
   "version": "0.0.1",
   "icon": "images/mainIcon128.png",
   "author": {

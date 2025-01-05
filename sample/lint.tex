@@ -88,12 +88,12 @@
         \item $X : \mathbb{R}^{n^2 + 2n + 1}  \rightarrow \mathbb{R}$
     \end{itemize}
     and
-    \begin{equation*}
+    \begin{equation} \label{eq:sample}
         X:
         (Y \text{ at new line in tex file})
         \to
         (Z \text{ at new line in tex file}).
-    \end{equation*}
+    \end{equation}
 \end{itembox}
 
 \begin{itembox}{We do NOT detect any of : in the following.}
@@ -113,7 +113,7 @@
     This is a sample theorem.
 \end{theorem}
 
-Use \cref{thm:sample} with cref instead of Theorem~\ref{thm:sample} with ref.
+Use \cref{thm:sample} with cref instead of Theorem~\ref{thm:sample} with ref to avoid mistakes.
 
 \section{LLDoubleQuotation}
 
@@ -133,6 +133,33 @@ Use ``XXX'' instead of “XXX” or "XXX".
 Exception: Fritz-John (optimization, name of a person)
 
 False Positive: Wrong-Example
+
+\section{LLEqnarray}
+
+\begin{eqnarray}
+    x & = & y \\
+    a & = & b
+\end{eqnarray}
+
+\section{LLLlGg}
+
+$n << m$ and $m >> n$ should be $n \ll m$ and $m \gg n$.
+
+I like human $<<<$ cat $<<<<<<<<<<<<<<<<$ dog.
+
+\section{LLRefEq}
+
+To refer to the equation, use \eqref{eq:sample} instead of (\ref{eq:sample}) to avoid mistakes forgetting to add parentheses.
+
+\section{LLSharp}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lll}
+        $\backslash\#$    & $\#A$      & \tA{ok} \\
+        $\backslash$sharp & $\sharp A$ & \tD{ng}
+    \end{tabular}
+\end{table}
 
 \section{LLNonASCII}
 
@@ -170,7 +197,7 @@ This 1EB is one ExaByte.
 
 \section{LLUserDefined}
 
-I want to use $\mathrm{a}$ instead of $a$ for superscript.
+You can define your own rule, such as prohibiting the use of a f\^{}a.
 
 \begin{equation*}
     f^a(X) \quad f^{\mathrm{a}}(X)

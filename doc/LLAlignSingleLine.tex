@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{geometry}
+
+\geometry{
+    margin=0.1in,
+    paperwidth=6in,
+    paperheight=2.8in,
+}
+
+\usepackage{xcolor}
+\definecolor{cA}{HTML}{0072BD}
+\definecolor{cB}{HTML}{EDB120}
+\definecolor{cC}{HTML}{77AC30}
+\definecolor{cD}{HTML}{D95319}
+
+\newcommand{\tA}[1]{\textcolor{cA}{#1}}
+\newcommand{\tB}[1]{\textcolor{cB}{#1}}
+\newcommand{\tC}[1]{\textcolor{cC}{#1}}
+\newcommand{\tD}[1]{\textcolor{cD}{#1}}
+
+\begin{document}
+
+\begin{itembox}{\large Long line before display (same result)}
+    \begin{minipage}[t]{.5\columnwidth}
+        Lorem ipsum.
+        \begin{equation*}
+            f(x) = ax^2 + bx + c
+        \end{equation*}
+        This is an \tA{equation} environment.
+    \end{minipage}%
+    \begin{minipage}[t]{.5\columnwidth}
+        Lorem ipsum.
+        \begin{align*}
+            f(x) & = ax^2 + bx + c
+        \end{align*}
+        This is an \tD{align} environment.
+    \end{minipage}
+\end{itembox}
+
+\vskip\baselineskip
+
+\begin{itembox}{\large Short line before display (different result)}
+    \begin{minipage}[t]{.5\columnwidth}
+        Lrm:
+        \begin{equation*}
+            f(x) = ax^2 + bx + c
+        \end{equation*}
+        This is an \tA{equation} environment.
+    \end{minipage}%
+    \begin{minipage}[t]{.5\columnwidth}
+        Lrm:
+        \begin{align*}
+            f(x) & = ax^2 + bx + c
+        \end{align*}
+        This is an \tD{align} environment.
+    \end{minipage}
+\end{itembox}
+
+\end{document}

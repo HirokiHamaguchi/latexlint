@@ -1,15 +1,16 @@
 \documentclass[a4paper, 10pt]{article}
 
+\usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{amsthm}
-\usepackage{amsfonts}
 \usepackage{ascmac}
-\usepackage{siunitx}
 \usepackage{cleveref}
-\usepackage{mathtools}
+\usepackage{float}
 \usepackage{graphicx}
-
+\usepackage{mathtools}
+\usepackage{siunitx}
 \usepackage{xcolor}
+
 \definecolor{cA}{HTML}{0072BD}
 \definecolor{cB}{HTML}{EDB120}
 \definecolor{cC}{HTML}{77AC30}
@@ -23,6 +24,8 @@
 \newtheorem{theorem}{Theorem}
 \crefname{theorem}{Thm.}{Thms.}
 
+\setlength{\parindent}{0pt}
+
 \begin{document}
 
 \title{Sample document}
@@ -32,7 +35,7 @@
 
 \section{LLAlignAnd}
 
-\begin{table}[h]
+\begin{table}[H]
     \centering
     \begin{tabular}{lll}
         \&=              &
@@ -56,9 +59,63 @@
     \end{tabular}
 \end{table}
 
+\section{LLAlignSingleLine}
+
+\begin{itembox}{\large Long line before display (same result)}
+    \begin{minipage}[t]{.5\columnwidth}
+        Lorem ipsum.
+        \begin{equation*}
+            f(x) = ax^2 + bx + c
+        \end{equation*}
+        This is an \tA{equation} environment.
+    \end{minipage}%
+    \begin{minipage}[t]{.5\columnwidth}
+        Lorem ipsum.
+        \begin{align*}
+            f(x) & = ax^2 + bx + c
+        \end{align*}
+        This is an \tD{align} environment.
+    \end{minipage}
+\end{itembox}
+
+\vskip\baselineskip
+
+\begin{itembox}{\large Short line before display (different result)}
+    \begin{minipage}[t]{.5\columnwidth}
+        Lrm:
+        \begin{equation*}
+            f(x) = ax^2 + bx + c
+        \end{equation*}
+        This is an \tA{equation} environment.
+    \end{minipage}%
+    \begin{minipage}[t]{.5\columnwidth}
+        Lrm:
+        \begin{align*}
+            f(x) & = ax^2 + bx + c
+        \end{align*}
+        This is an \tD{align} environment.
+    \end{minipage}
+\end{itembox}
+
+Single-line alignat environment is also detected.
+\begin{alignat*}{1}
+    f(x) & = ax^2 + bx + c
+\end{alignat*}
+
+Multi-line alignat environment is not detected.
+\begin{alignat*}{2}
+    f(x) & = ax^2 + bx + c \\
+    g(x) & = dx^2 + ex + f
+\end{alignat*}
+
+% Comment in the following lines should be ignored.
+% \begin{align}
+% \begin{align}
+% \begin{align}
+
 \section{LLColonEqq}
 
-\begin{table}[h]
+\begin{table}[H]
     \centering
     \begin{tabular}{lll}
         x := y                   & $x := y$        & \tD{ng} \\
@@ -70,7 +127,7 @@
 
 \section{LLColonForMapping}
 
-\begin{table}[h]
+\begin{table}[H]
     \centering
     \begin{tabular}{lll}
         \text{A :                 B}                                                               & $A : B$                                 & \tA{ok} \\
@@ -80,8 +137,8 @@
     \end{tabular}
 \end{table}
 
-\begin{itembox}{We detect all of : in the following.}
-    Here is the example of colon we detect.
+\begin{itembox}{We detect all of : in the following}
+    Here are examples of colons we detect.
     \begin{itemize}
         \item $X:Y \to Z$,
         \item \( X: Y \mapsto Z. \),
@@ -96,8 +153,10 @@
     \end{equation}
 \end{itembox}
 
-\begin{itembox}{We do NOT detect any of : in the following.}
-    Here is the example of `:' undetected:
+\vskip\baselineskip
+
+\begin{itembox}{We do NOT detect any of : in the following}
+    Here are examples of `:' we do not detect.
     \begin{itemize}
         \item $X\colon Y \to Z$, the correct use of colon.
         \item $A:B:C = 1:2:3$, the colon for ratio.
@@ -136,6 +195,8 @@ False Positive: Wrong-Example
 
 \section{LLEqnarray}
 
+We should not use eqnarray. It has some spacing issues.
+
 \begin{eqnarray}
     x & = & y \\
     a & = & b
@@ -143,17 +204,25 @@ False Positive: Wrong-Example
 
 \section{LLLlGg}
 
-$n << m$ and $m >> n$ should be $n \ll m$ and $m \gg n$.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lll}
+        n $\backslash$ll m & $n \ll m$ & \tA{ok} \\
+        n $<<$ m           & $n<<m$    & \tD{ng} \\
+    \end{tabular}
+\end{table}
 
 I like human $<<<$ cat $<<<<<<<<<<<<<<<<$ dog.
 
 \section{LLRefEq}
 
-To refer to the equation, use \eqref{eq:sample} instead of (\ref{eq:sample}) to avoid mistakes forgetting to add parentheses.
+To refer to the equation, use \eqref{eq:sample} with eqref instead of (\ref{eq:sample}) with ref.
+
+You can avoid the mistakes of forgetting to add parentheses.
 
 \section{LLSharp}
 
-\begin{table}[h]
+\begin{table}[H]
     \centering
     \begin{tabular}{lll}
         $\backslash\#$    & $\#A$      & \tA{ok} \\
@@ -163,7 +232,11 @@ To refer to the equation, use \eqref{eq:sample} instead of (\ref{eq:sample}) to 
 
 \section{LLNonASCII}
 
- {　}！＂＃＄％＆＇（）＊＋，－．／
+The following line contains non-ASCII characters.
+
+    {　}！＂＃＄％＆＇（）＊＋，－．／
+
+\vskip\baselineskip
 
 日本語の文章は、upLaTeXでフツウに書けます。
 

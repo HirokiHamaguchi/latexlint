@@ -130,10 +130,10 @@ Multi-line alignat environment is not detected.
 \begin{table}[H]
 	\centering
 	\begin{tabular}{lll}
-		\text{A :                 B}                                                               & $A : B$                                 & \tA{ok} \\
-		\text{A $\backslash$colon B}                                                               & $A\colon B$                             & \tD{ng} \\
-		\text{f(x) :                 $\backslash$mathbb\{R\}$\backslash$to$\backslash$mathbb\{R\}} & $f(x) : \mathbb{R} \to \mathbb{R}$      & \tD{ng} \\
-		\text{f(x) $\backslash$colon $\backslash$mathbb\{R\}$\backslash$to$\backslash$mathbb\{R\}} & $f(x) \colon \mathbb{R} \to \mathbb{R}$ & \tA{ok}
+		\text{A :                 B}                                                            & $A : B$                              & \tA{ok} \\
+		\text{A $\backslash$colon B}                                                            & $A\colon B$                          & \tD{ng} \\
+		\text{f :                 $\backslash$mathbb\{R\}$\backslash$to$\backslash$mathbb\{R\}} & $f : \mathbb{R} \to \mathbb{R}$      & \tD{ng} \\
+		\text{f $\backslash$colon $\backslash$mathbb\{R\}$\backslash$to$\backslash$mathbb\{R\}} & $f \colon \mathbb{R} \to \mathbb{R}$ & \tA{ok}
 	\end{tabular}
 \end{table}
 
@@ -212,7 +212,7 @@ We should not use eqnarray. It has some spacing issues.
 	\end{tabular}
 \end{table}
 
-I like human $<<<$ cat $<<<<<<<<<<<<<<<<$ dog.
+I like human $<<<$ cat $<<<<<<<$ dog.
 
 \section{LLRefEq}
 

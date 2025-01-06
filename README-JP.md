@@ -1,10 +1,9 @@
 # LaTeX Lint
 
 LaTeXのよくあるミスを検出できるVS Code拡張機能 "LaTeX Lint"を作成しました。
-本記事はその紹介となります。
-LaTeXユーザーの皆様のお役に立てば幸いです。
+本記事はその紹介となります。LaTeXユーザーの皆様のお役に立てば幸いです。
 
-<img width="25%" alt=""><img width="50%" src="https://github.com/hari64boli64/latexlint/blob/master/images/mainIcon512.png?raw=true" alt="mainIcon" />
+<img width="25%" alt=""><img width="50%" src="https://github.com/hari64boli64/latexlint/blob/master/images/mainIcon512.png?raw=true" alt="mainIcon"/><img width="25%" alt="">
 
 https://marketplace.visualstudio.com/items?itemName=hari64boli64.latexlint
 
@@ -19,8 +18,8 @@ https://github.com/hari64boli64/latexlint
 この拡張機能により、
 
 * LaTeXの**よくある間違い**を検出します
-* `\begin{name}`または`\end{name}`上で`F2`を押すことで、コマンドを**リネーム**できます
-* `settings.json`の`lintLatex.userDefinedRules`を通じて、**独自の正規表現ルール**を定義できます
+* `\begin{name}`または`\end{name}`の`name`にて`F2`を押すと、コマンドを**リネーム**出来ます
+* `settings.json`の`lintLatex.userDefinedRules`を通じて、**独自の正規表現ルール**を適用できます
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NaQs6he0s4g?si=5NyTcysLdxsMhQJ-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -36,7 +35,7 @@ https://github.com/hari64boli64/latexlint
 04. [LLColonForMapping](#llcolonformapping) (写像に使われる`:`を検出)
 05. [LLCref](#llcref) (`\ref`を検出)
 06. [LLDoubleQuotation](#lldoublequotation) (`“`, `”`, `"` を検出)
-07. [LLENDash](#llendash) (`--`の疑わしい使用を検出)
+07. [LLENDash](#llendash) (`-`の疑わしい使用を検出)
 08. [LLEqnarray](#lleqnarray) (`eqnarray`環境を検出)
 09. [LLNonASCII](#llnonascii) (全角のASCII文字を検出)
 10. [LLLlGg](#llllgg) (`<<`と`>>`を検出)
@@ -80,9 +79,9 @@ Cite some references.
 
 ![doc/LLAlignSingleLine](https://github.com/hari64boli64/latexlint/blob/master/doc/LLAlignSingleLine.png?raw=true)
 
-`align`環境のspacingは`equation`環境とそれと、1つの数式の場合に[異なります](https://tex.stackexchange.com/questions/239550/what-is-the-difference-between-align-and-equation-environment-when-i-only-want-t)。
+`align`環境のspacingは`equation`環境とそれと、[1つの数式の場合に異なります](https://tex.stackexchange.com/questions/239550/what-is-the-difference-between-align-and-equation-environment-when-i-only-want-t)。
 
-どちらを使うかは使用者次第ですが、`amsmath`の公式ドキュメントによると、1つの方程式には`equation`環境を使うことが想定されています。
+どちらを使うかは使用者次第ですが、`amsmath`公式ドキュメントによると、1つの数式には`equation`環境を使うことが想定されています。
 
 > The equation environment is for a single equation with an automatically generated number.
 > ......
@@ -112,7 +111,7 @@ Cite some references.
 
 `\colon`が写像においては[推奨されています](https://tex.stackexchange.com/questions/37789/using-colon-or-in-formulas)。`:`は比率（例えば`1:2`）に使われます。
 
-このパターンを検出するために、`:`の後に`\to`、`\mapsto`、`\rightarrow`があるかどうかを確認します。`:`の後10語以内でこれらのコマンドがあり、かつエスケープされていない`$`の前の場合、`:`は写像用の記号として認識されます。
+このパターンを検出するために、`:`の後に`\to`、`\mapsto`、`\rightarrow`があるかどうかを確認します。`:`の後10語以内でこれらのコマンドがあり、かつエスケープされていない`$`の前の場合、`:`は写像用の記号として認識されます。いくつかの偽陽性と偽陰性があります。
 
 ### LLCref
 
@@ -121,7 +120,7 @@ Cite some references.
 
 このパッケージは、"Sec."や"Fig."のような接頭辞を自動的に追加することができ、参照フォーマットの一貫性を保つのに役立ちます。
 
-cleverefパッケージについては、[opt-cpさんによるこちら](https://web.archive.org/web/20220616140841/https://opt-cp.com/latex-packages/)のページも参照出来ます。
+cleverefパッケージについては、[opt-cpさんによるこちら(https://web.archive.org/web/20220616140841/https://opt-cp.com/latex-packages/)のページ]も参照下さい。
 
 ```latex
 \usepackage{amsmath,mathtools}
@@ -188,7 +187,7 @@ cleverefパッケージについては、[opt-cpさんによるこちら](https:
 `.tex`または`.md`ファイル内の、`eqnarray`環境を検出します。
 代わりに`align`環境を使うべきです。
 
-`eqnarray`環境はspacingに問題がある為[推奨されていません](https://texfaq.org/FAQ-eqnarray)。
+`eqnarray`環境はspacingに問題がある為、[非推奨です](https://texfaq.org/FAQ-eqnarray)。
 
 ### LLLlGg
 
@@ -200,7 +199,7 @@ cleverefパッケージについては、[opt-cpさんによるこちら](https:
 次のようなものは検出しません。
 
 ```md
-I like human $<<<$ cat $<<<<<<<<<<<<<<<<$ dog.
+I like human $<<<$ cat $<<<<<<<$ dog.
 ```
 
 ### LLRefEq
@@ -291,9 +290,13 @@ I like human $<<<$ cat $<<<<<<<<<<<<<<<<$ dog.
 `.tex`ファイル内の、`\title{}`, `\section{}`, `\subsection{}`, `\subsubsection{}`, `\paragraph{}`, `\subparagraph{}`内で、疑わしいタイトルケースを検出します。
 
 例えば、
+
 `The quick brown fox jumps over the lazy dog`
+
 は、
+
 `The Quick Brown Fox Jumps Over the Lazy Dog`
+
 のようにタイトルケースにするのが望ましく、そのような場合に検出します。
 
 すべての非タイトルケースを検出するのは非常に困難です。多くの例外やスタイルがあるためです。好みのスタイルに合わせてタイトルを変換するには、[Title Case Converter](https://titlecaseconverter.com/)または[Capitalize My Title](https://capitalizemytitle.com/)の使用を強く推奨します。

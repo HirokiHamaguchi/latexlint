@@ -4,6 +4,10 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 ## [Unreleased]
 
+## 1.0.1 - 2025-01-06
+
+- Update README.md.
+
 ## 1.0.0 - 2025-01-06
 
 - First stable release.

@@ -25,7 +25,7 @@ export const messages: Record<LLCode, string> = {
     LLColonForMapping: 'You might better to use \\colon instead of : for mapping.',
     LLCref: 'You might better to use \\cref instead of \\ref.',
     LLDoubleQuotation: 'If you meant to use a double quotation mark, use `` and \'\' instead of ".',
-    LLENDash: 'This might be better to use an en-dash (--) instead of a hyphen (-).',
+    LLENDash: 'This might be en-dash (--) instead of a hyphen (-), if this is names of people.',
     LLEqnarray: 'You might better to use align environment instead of eqnarray.',
     LLNonASCII: 'Is this non-ASCII character intentional or a mistake?',
     LLLlGg: 'You might better to use \\ll and \\gg instead of << and >>.',

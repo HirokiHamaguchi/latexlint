@@ -15,8 +15,8 @@ This extension provides a LaTeX Linter for `.tex` and `.md` files with the comma
 
 By this extension, you can
 
-* Detect **some common mistakes** in LaTeX.
-* **Rename the commands** by pressing `F2` on the `\begin{name}` or `\end{name}`.
+* Detect **common mistakes** in LaTeX.
+* **Rename the commands** by pressing `F2` on the `name` of `\begin{name}` or `\end{name}`.
 * Define **your own Regex rules** through `lintLatex.userDefinedRules` in `settings.json`.
 
 Demo movie:
@@ -36,7 +36,7 @@ Here is the list of rules we detect.
 04. [LLColonForMapping](#llcolonformapping) (detect `:` for mapping)
 05. [LLCref](#llcref) (detect `\ref`)
 06. [LLDoubleQuotation](#lldoublequotation) (detect `“`, `”` and `"` )
-07. [LLENDash](#llendash) (detect the dubious use of `--`)
+07. [LLENDash](#llendash) (detect the dubious use of `-`)
 08. [LLEqnarray](#lleqnarray) (detect `eqnarray` environment)
 09. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters)
 10. [LLLlGg](#llllgg) (detect `<<` and `>>`)
@@ -69,7 +69,7 @@ You should likely write as `={}&` in the `align` environment.
 
 ![doc/LLAlignAnd](https://github.com/hari64boli64/latexlint/blob/master/doc/LLAlignAnd.png?raw=true)
 
-As a limitation of this extension, there are some false positives, such as `&=` in the 'table' environment.
+As a limitation of this extension, there are some false positives, such as `&=` in the `table` environment.
 
 [Ref by Stack Exchange](https://tex.stackexchange.com/questions/41074/relation-spacing-error-using-in-aligned-equations).
 
@@ -112,7 +112,7 @@ You likely want to use `\colon` instead.
 
 `\colon` is [recommended](https://tex.stackexchange.com/questions/37789/using-colon-or-in-formulas) for the mapping symbol. `:` is used for ratio, such as `1:2`.
 
-In order to detect this pattern, we seek `\to`,`\mapsto` and `\rightarrow` after the `:`. If there is any of these commands within 10 words after the `:` and before `$` without escaping, we regard the `:` as a mapping symbol.
+In order to detect this pattern, we seek `\to`,`\mapsto` and `\rightarrow` after the `:`. If there is any of these commands within 10 words after the `:` and before `$` without escaping, we regard the `:` as a mapping symbol. There are some false positives and negatives.
 
 ### LLCref
 
@@ -201,7 +201,7 @@ You should likely use `\ll` and `\gg` instead.
 We do not detect `<<` like this one.
 
 ```md
-I like human $<<<$ cat $<<<<<<<<<<<<<<<<$ dog.
+I like human $<<<$ cat $<<<<<<<$ dog.
 ```
 
 ### LLRefEq
@@ -292,9 +292,13 @@ Otherwise, we cannot distinguish between the transpose and the power by a variab
 Detect dubious title cases in `\title{}`, `\section{}`, `\subsection{}`, `\subsubsection{}`, `\paragraph{}`, and `\subparagraph{}` in `.tex` files.
 
 For example,
+
 `The quick brown fox jumps over the lazy dog`
+
 should be
+
 `The Quick Brown Fox Jumps Over the Lazy Dog`
+
 in the title case. We detect such cases.
 
 It is very difficult to detect all non-title cases because of the many exceptions and styles. We highly recommend using [Title Case Converter](https://titlecaseconverter.com/) or [Capitalize My Title](https://capitalizemytitle.com/) to convert the title in your preferred style.

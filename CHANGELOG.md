@@ -4,6 +4,10 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 ## [Unreleased]
 
+## 1.1.1 - 2025-01-07
+
+- Change some rules from warning to info.
+
 ## 1.1.0 - 2025-01-06
 
 - Add toggle feature.

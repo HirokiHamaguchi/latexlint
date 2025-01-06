@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { LLCode, extensionDisplayName } from '../util/constants';
+import { LLCode, extensionDisplayName, severity } from '../util/constants';
 
 export default function ranges2diagnostics(
     code: LLCode,
@@ -10,7 +10,7 @@ export default function ranges2diagnostics(
         code: code,
         message: message,
         range: range,
-        severity: vscode.DiagnosticSeverity.Warning,
+        severity: severity[code],
         source: extensionDisplayName,
     }));
 }

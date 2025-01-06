@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 import toTitleCase from '../util/toTitleCase';
-import { extensionDisplayName, messages } from '../util/constants';
+import { extensionDisplayName, severity, messages } from '../util/constants';
 
 export default function LLTitle(doc: vscode.TextDocument): vscode.Diagnostic[] {
     if (doc.languageId !== "latex") return [];
@@ -44,7 +44,7 @@ export default function LLTitle(doc: vscode.TextDocument): vscode.Diagnostic[] {
                 code: code,
                 message: messages[code].replace('{EXPECTED}', `"${titleCaseText}"`),
                 range: range,
-                severity: vscode.DiagnosticSeverity.Warning,
+                severity: severity[code],
                 source: extensionDisplayName,
             });
     }

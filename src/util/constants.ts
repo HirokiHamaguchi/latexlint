@@ -1,3 +1,5 @@
+import * as vscode from 'vscode';
+
 export const extensionDisplayName = 'LaTeX Lint';
 
 export type LLCode =
@@ -35,4 +37,25 @@ export const messages: Record<LLCode, string> = {
     LLT: '^T might be better written as ^\\top or ^\\mathsf{T}.',
     LLTitle: 'Maybe this should be {EXPECTED}, but follow the style guide you prefer.', // replace {EXPECTED}
     LLUserDefined: 'This violates your defined rule {RULE}', // replace {RULE}
+};
+
+const INFO = vscode.DiagnosticSeverity.Information;
+const WARN = vscode.DiagnosticSeverity.Warning;
+export const severity: Record<LLCode, vscode.DiagnosticSeverity> = {
+    LLAlignAnd: WARN,
+    LLAlignSingleLine: WARN,
+    LLColonEqq: WARN,
+    LLColonForMapping: WARN,
+    LLCref: WARN,
+    LLDoubleQuotation: WARN,
+    LLENDash: WARN,
+    LLEqnarray: WARN,
+    LLNonASCII: INFO,
+    LLLlGg: WARN,
+    LLRefEq: WARN,
+    LLSharp: WARN,
+    LLSI: WARN,
+    LLT: WARN,
+    LLTitle: INFO,
+    LLUserDefined: WARN,
 };

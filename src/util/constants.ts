@@ -33,6 +33,6 @@ export const messages: Record<LLCode, string> = {
     LLSharp: 'You might better to use \\# instead of \\sharp.',
     LLSI: 'You might better to use \\SI for units.',
     LLT: '^T might be better written as ^\\top or ^\\mathsf{T}.',
-    LLTitle: 'This might violate the title capitalization rule, expected {EXPECTED}', // replace {EXPECTED}
+    LLTitle: 'Maybe this should be {EXPECTED}, but follow the style guide you prefer.', // replace {EXPECTED}
     LLUserDefined: 'This violates your defined rule {RULE}', // replace {RULE}
 };

@@ -23,6 +23,8 @@ https://github.com/hari64boli64/latexlint
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NaQs6he0s4g?si=5NyTcysLdxsMhQJ-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+動画の通り、アイコンをクリックすると問題を検出します。問題がある状態でクリックすると、問題を非表示にします。
+
 一部の点で、我々の拡張機能はLaTeXパッケージ[chktex](https://ctan.org/pkg/chktex)およびVS Code拡張[LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename)に類似しています。これら開発者に深く感謝します。
 
 ## ルール
@@ -152,7 +154,9 @@ cleverefパッケージについては、[opt-cpさんによるこちらのペ�
 `--`をenダッシュ、`---`をemダッシュとして使うべきです。
 
 前提として、[Wikipedia](https://en.wikipedia.org/wiki/Dash#En_dash)は以下のように述べています。
+
 > Preference for an en dash instead of a hyphen in these coordinate/relationship/connection types of terms is a matter of style, not inherent orthographic "correctness";
+
 その為、必ずしもこのルールに従う必要はありません。
 
 しかし、多くの場合、enダッシュの使用が推奨されています。[Wikipedia:Manual of Style](https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style#Dashes)も参照して下さい。

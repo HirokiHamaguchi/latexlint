@@ -23,6 +23,8 @@ Demo movie:
 
 https://github.com/user-attachments/assets/35eddda0-c1fd-4a65-b7b4-636d56b2ea1a
 
+As shown in the video, clicking the icon detects the problems. When there are problems, cliking the icon hide them.
+
 In some aspects, our extension resembles a LaTeX package [chktex](https://ctan.org/pkg/chktex) and a VS Code Extension [LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename).
 We sincerely appreciate the developers of these.
 

@@ -33,12 +33,22 @@
     "commands": [
       {
         "category": "LaTeX Lint",
-        "command": "latexlint.lintLaTeX",
-        "title": "Lint LaTeX for Academic Writing",
+        "command": "latexlint.toggleLinting",
+        "title": "toggle LaTeX Linting",
         "icon": {
           "dark": "images/lintIconDark.svg",
           "light": "images/lintIconLight.svg"
         }
+      },
+      {
+        "category": "LaTeX Lint",
+        "command": "latexlint.diagnose",
+        "title": "Get Diagnostics by LaTeX Lint"
+      },
+      {
+        "category": "LaTeX Lint",
+        "command": "latexlint.hide",
+        "title": "Hide Diagnostics by LaTeX Lint"
       },
       {
         "category": "LaTeX Lint",
@@ -48,14 +58,14 @@
       {
         "category": "LaTeX Lint",
         "command": "latexlint.renameCommand",
-        "title": "Rename Command in \\begin{} or \\end{}"
+        "title": "Rename Command for \\begin{} or \\end{}"
       }
     ],
     "menus": {
       "editor/title": [
         {
           "when": "editorLangId == latex || editorLangId == markdown",
-          "command": "latexlint.lintLaTeX",
+          "command": "latexlint.toggleLinting",
           "group": "navigation"
         }
       ]

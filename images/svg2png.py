@@ -11,7 +11,3 @@ cairosvg.svg2png(
     output_height=512,
     background_color="white",
 )
-
-img = Image.open("mainIcon512.png")
-img.thumbnail((128, 128))
-img.save("mainIcon128.png")

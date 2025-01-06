@@ -4,6 +4,10 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 ## [Unreleased]
 
+## 1.1.2 - 2025-01-07
+
+- Change icon pixel size.
+
 ## 1.1.1 - 2025-01-07
 
 - Change some rules from warning to info.

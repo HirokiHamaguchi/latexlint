@@ -141,7 +141,7 @@ These might be used as "XXX" or “XXX”.
 
 Use ``XXX'' instead for double quotation.
 
-As for “XXX”, there is no problem in most cases. However, I prefer to use ``XXX'' for consistency.
+As for “XXX”, there is no problem in most cases. We prefer to use ``XXX'' for consistency.
 
 You can also use `\enquote{XXX}` with [csquotes](https://ctan.org/pkg/csquotes) package.
 
@@ -176,13 +176,8 @@ We might have false positives, such as `Wrong-Example`, which is not a person's 
 
 We also should use `--` instead of `-` to indicate a range of pages, e.g., `123--456` instead of `123-456`. A lot of bibtex files follow this rule. We do not detect this because it might be just a subtraction.
 
-We use the following Regex.
-
-```txt
-[A-Z][a-zA-Z]*[a-z](-[A-Z][a-zA-Z]*[a-z])+
-```
-
-Here, `[A-Z][a-zA-Z]*[a-z]` is a word with a capital letter, zero or more letters, and a small letter, assuming that this represents the name of a person.
+We use the Regex `[A-Z][a-zA-Z]*[a-z]`, consisting of a uppercase letter, zero or more letters, and a lowercase letter.
+We assume that this represents a name of person.
 
 ### LLEqnarray
 
@@ -315,7 +310,7 @@ You can define your own regular expressions to detect in `.tex` or `.md` files.
 
 In `latexlint.userDefinedRules` in `settings.json`, you can define your own regular expressions.
 
-For example, when you use English letters in math mode for an explanation, you should use `\mathrm`. If $\mathrm{a}$ is not variables and represents something like **a**tractive force, $f^a(x)$ should be written as $f^{\mathrm{a}}(x)$.
+For example, when you use English letters in math mode for an explanation, you should use `\mathrm`. If the character `a` is not a variable and represents something like **a**tractive force, $f^a(x)$ should be written as $f^{\mathrm{a}}(x)$.
 
 However, it is difficult to detect without context. You can define the following regular expression to detect this pattern.
 

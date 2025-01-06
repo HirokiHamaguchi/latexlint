@@ -120,7 +120,7 @@ Cite some references.
 
 このパッケージは、"Sec."や"Fig."のような接頭辞を自動的に追加することができ、参照フォーマットの一貫性を保つのに役立ちます。
 
-cleverefパッケージについては、[opt-cpさんによるこちら(https://web.archive.org/web/20220616140841/https://opt-cp.com/latex-packages/)のページ]も参照下さい。
+cleverefパッケージについては、[opt-cpさんによるこちらのページ](https://web.archive.org/web/20220616140841/https://opt-cp.com/latex-packages/)も参照下さい。
 
 ```latex
 \usepackage{amsmath,mathtools}

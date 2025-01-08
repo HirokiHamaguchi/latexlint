@@ -6,7 +6,7 @@ function testCurrentWord(
     doc: vscode.TextDocument, idx: number, currentWord: string, ranges: vscode.Range[]
 ): boolean {
     if (['\\to', '\\mapsto', '\\rightarrow'].some(
-        substring => currentWord.includes(substring))
+        substring => RegExp(`${substring}(?![a-zA-Z])`).test(currentWord))
     ) {
         const startPos = doc.positionAt(idx);
         const endPos = startPos.translate(0, 1);

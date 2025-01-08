@@ -18,38 +18,30 @@ import LLUserDefined from '../LL/LLUserDefined';
 
 export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.Diagnostic[] {
     console.log(`Enumerating diagnostics for ${doc.uri}`);
+    const config = vscode.workspace.getConfiguration('latexlint').get('config') as string[];
     const diagnostics: vscode.Diagnostic[] = [];
-    console.log('Check: LLAlignAnd');
-    diagnostics.push(...LLAlignAnd(doc));
-    console.log('Check: LLAlignSingleLine');
-    diagnostics.push(...LLAlignSingleLine(doc));
-    console.log('Check: LLColonEqq');
-    diagnostics.push(...LLColonEqq(doc));
-    console.log('Check: LLColonForMapping');
-    diagnostics.push(...LLColonForMapping(doc));
-    console.log('Check: LLCref');
-    diagnostics.push(...LLCref(doc));
-    console.log('Check: LLDoubleQuotation');
-    diagnostics.push(...LLDoubleQuotation(doc));
-    console.log('Check: LLENDash');
-    diagnostics.push(...LLENDash(doc));
-    console.log('Check: LLEqnarray');
-    diagnostics.push(...LLEqnarray(doc));
-    console.log('Check: LLNonASCII');
-    diagnostics.push(...LLNonASCII(doc));
-    console.log('Check: LLLlGg');
-    diagnostics.push(...LLLlGg(doc));
-    console.log('Check: LLRefEq');
-    diagnostics.push(...LLRefEq(doc));
-    console.log('Check: LLSharp');
-    diagnostics.push(...LLSharp(doc));
-    console.log('Check: LLSI');
-    diagnostics.push(...LLSI(doc));
-    console.log('Check: LLT');
-    diagnostics.push(...LLT(doc));
-    console.log('Check: LLTitle');
-    diagnostics.push(...LLTitle(doc));
-    console.log('Check: LLUserDefined');
-    diagnostics.push(...LLUserDefined(doc));
+    for (const [ruleName, rule] of Object.entries({
+        LLAlignAnd,
+        LLAlignSingleLine,
+        LLColonEqq,
+        LLColonForMapping,
+        LLCref,
+        LLDoubleQuotation,
+        LLENDash,
+        LLEqnarray,
+        LLNonASCII,
+        LLLlGg,
+        LLRefEq,
+        LLSharp,
+        LLSI,
+        LLT,
+        LLTitle,
+        LLUserDefined,
+    })) {
+        if (config.includes(ruleName)) continue;
+        console.log(`Check: ${ruleName}`);
+        diagnostics.push(...rule(doc));
+    }
+
     return diagnostics;
 }

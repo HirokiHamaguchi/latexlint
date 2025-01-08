@@ -23,7 +23,7 @@ Demo movie:
 
 https://github.com/user-attachments/assets/35eddda0-c1fd-4a65-b7b4-636d56b2ea1a
 
-As shown in the video, clicking the icon detects the problems. When there are problems, cliking the icon hide them.
+As shown in the video, clicking the icon detects the problems. When there are problems, clicking the icon hide them.
 
 In some aspects, our extension resembles a LaTeX package [chktex](https://ctan.org/pkg/chktex) and a VS Code Extension [LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename).
 We sincerely appreciate the developers of these.
@@ -32,7 +32,7 @@ We sincerely appreciate the developers of these.
 
 Here is the list of rules we detect.
 
-01. [LLAlignAnd](#llalignand) (detect `=&`)
+01. [LLAlignAnd](#llalignand) (detect `=&`, `\leq&`, `\geq&`, etc.)
 02. [LLAlignSingleLine](#llalignsingleline) (detect `align` environment without `\\`)
 03. [LLColonEqq](#llcoloneqq) (detect `:=`, `=:`,`::=`, and `=::`)
 04. [LLColonForMapping](#llcolonformapping) (detect `:` for mapping)
@@ -49,7 +49,7 @@ Here is the list of rules we detect.
 15. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
 16. [LLUserDefine](#lluserdefine) (detect Regexes in `latexlint.userDefinedRules`)
 
-Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanse articl (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
+Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
 <!--
 
@@ -70,6 +70,8 @@ Detect `=&` in `.tex` or `.md` files.
 You should likely write as `={}&` in the `align` environment.
 
 ![doc/LLAlignAnd](https://github.com/hari64boli64/latexlint/blob/master/doc/LLAlignAnd.png?raw=true)
+
+We also detect `\neq&`, `\leq&`, `\geq&`, `\le&`, `\ge&`, `<&`, and `>&`.
 
 As a limitation of this extension, there are some false positives, such as `&=` in the `table` environment.
 
@@ -120,6 +122,7 @@ In order to detect this pattern, we seek `\to`,`\mapsto` and `\rightarrow` after
 
 Detect `\ref` in `.tex` files.
 You should likely use `\cref` or `\Cref` in [cleveref](https://ctan.org/pkg/cleveref) package instead.
+By default, this rules is disabled by `latexlint.config` in `settings.json`.
 
 We prefer this package because it can automatically add prefixes like "Sec." or "Fig.". We can keep the consistency of the reference format.
 

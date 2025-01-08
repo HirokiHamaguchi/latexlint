@@ -31,7 +31,7 @@ https://github.com/hari64boli64/latexlint
 
 以下は我々が検出するルールのリストです。
 
-01. [LLAlignAnd](#llalignand) (`=&`を検出)
+01. [LLAlignAnd](#llalignand) (`=&`, `\leq&`, `\geq&`などを検出)
 02. [LLAlignSingleLine](#llalignsingleline) (`\\`なしの`align`環境を検出)
 03. [LLColonEqq](#llcoloneqq) (`:=`, `=:`, `::=`, `=::`を検出)
 04. [LLColonForMapping](#llcolonformapping) (写像に使われる`:`を検出)
@@ -69,6 +69,8 @@ Cite some references.
 `align`環境では`={}&`と書くのが望ましいです。
 
 ![doc/LLAlignAnd](https://github.com/hari64boli64/latexlint/blob/master/doc/LLAlignAnd.png?raw=true)
+
+また、`\neq&`, `\leq&`, `\geq&`, `\le&`, `\ge&`, `<&`, `>&` なども検出します。
 
 本拡張機能の制限として、`table`環境内の`&=`などの偽陽性がいくつかあります。
 
@@ -119,6 +121,7 @@ Cite some references.
 
 `.tex`ファイル内の、`\ref`を検出します。
 代わりに、[cleveref](https://ctan.org/pkg/cleveref)パッケージの`\cref`や`\Cref`を使用するのが望ましいです。
+デフォルトでこのルールは`settings.json`の`latexlint.config`にて無効化されています。
 
 このパッケージは、"Sec."や"Fig."のような接頭辞を自動的に追加することができ、参照フォーマットの一貫性を保つのに役立ちます。
 

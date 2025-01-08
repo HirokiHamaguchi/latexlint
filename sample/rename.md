@@ -24,7 +24,7 @@ $$
 \end{align}
 $$
 
-![Sample Figure](../../../images/sample.png)
+![Sample Figure](../images/sample.png)
 **Figure 1:** Sample Figure
 
 Sample Text.

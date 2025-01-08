@@ -12,6 +12,7 @@
 			"args": [
 				"--extensionDevelopmentPath=${workspaceFolder}",
 				"${workspaceFolder}/sample"
+				// "${workspaceFolder}/other"
 			],
 			"outFiles": [
 				"${workspaceFolder}/dist/**/*.js"

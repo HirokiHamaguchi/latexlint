@@ -15,6 +15,7 @@
 		"alignat",
 		"amsmath",
 		"amsthm",
+		"bibtex",
 		"chktex",
 		"citep",
 		"citet",

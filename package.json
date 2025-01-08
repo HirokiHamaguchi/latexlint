@@ -34,7 +34,7 @@
       {
         "category": "LaTeX Lint",
         "command": "latexlint.toggleLinting",
-        "title": "toggle LaTeX Linting",
+        "title": "Update or Hide Diagnostics",
         "icon": {
           "dark": "images/lintIconDark.svg",
           "light": "images/lintIconLight.svg"
@@ -58,7 +58,7 @@
       {
         "category": "LaTeX Lint",
         "command": "latexlint.renameCommand",
-        "title": "Rename Command for \\begin{} or \\end{}"
+        "title": "Rename of \\begin{} or \\end{}"
       }
     ],
     "menus": {
@@ -84,6 +84,34 @@
           "type": "array",
           "default": [],
           "description": "User defined Regex rules for LaTeX Lint"
+        },
+        "latexlint.config": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "LLAlignAnd",
+              "LLAlignSingleLine",
+              "LLColonEqq",
+              "LLColonForMapping",
+              "LLCref",
+              "LLDoubleQuotation",
+              "LLENDash",
+              "LLEqnarray",
+              "LLNonASCII",
+              "LLLlGg",
+              "LLRefEq",
+              "LLSharp",
+              "LLSI",
+              "LLT",
+              "LLTitle"
+            ],
+            "uniqueItems": true
+          },
+          "default": [
+            "LLCref"
+          ],
+          "description": "Rules excluded from LaTeX Lint"
         }
       }
     }

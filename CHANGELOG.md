@@ -4,6 +4,12 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 ## [Unreleased]
 
+## 1.2.0 - 2025-01-08
+
+- Add `latexlint.config` for `package.json`.
+- Fix bug in LLColonForMapping.
+- Add `\leq&`, `\geq&`, etc. to `LLAlignAnd`.
+
 ## 1.1.2 - 2025-01-07
 
 - Change icon pixel size.

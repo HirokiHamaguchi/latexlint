@@ -5,7 +5,8 @@ import ranges2diagnostics from '../util/ranges2diagnostics';
 function testCurrentWord(
     doc: vscode.TextDocument, idx: number, currentWord: string, ranges: vscode.Range[]
 ): boolean {
-    if (['\\to', '\\mapsto', '\\rightarrow'].some(
+    if (['\\\\to', '\\\\mapsto', '\\\\rightarrow'].some(
+        // Equivalent to /\\to(...)/
         substring => RegExp(`${substring}(?![a-zA-Z])`).test(currentWord))
     ) {
         const startPos = doc.positionAt(idx);

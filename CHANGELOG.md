@@ -4,6 +4,13 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 ## [Unreleased]
 
+<!-- - For `LLENDash` and `LLTitle`, allow exceptions via `latexlint.exceptions` in `settings.json`. -->
+
+## 1.2.1 - 2025-01-09
+
+- Add link to diagnostics.
+- Fix bug of `LLColonForMapping`.
+
 ## 1.2.0 - 2025-01-08
 
 - Add `latexlint.config` for `package.json`.

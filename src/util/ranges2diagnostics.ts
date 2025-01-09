@@ -7,7 +7,10 @@ export default function ranges2diagnostics(
     ranges: vscode.Range[]
 ): vscode.Diagnostic[] {
     return ranges.map(range => ({
-        code: code,
+        code: {
+            value: code,
+            target: vscode.Uri.parse(`https://github.com/hari64boli64/latexlint?tab=readme-ov-file#${code.toLowerCase()}`),
+        },
         message: message,
         range: range,
         severity: severity[code],

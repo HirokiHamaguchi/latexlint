@@ -11,6 +11,10 @@ All notable changes to the "latexlint" extension will be documented in this file
 - Allow exceptions for `LLAlignEnd` and `LLTitle` via `latexlint.exceptions` in `settings.json`.
 - Add Quick Fix to disable some rule.
 
+## 1.3.1 - 2025-01-10
+
+- Speed up the extension.
+
 ## 1.3.0 - 2025-01-10
 
 - Trigger on save.

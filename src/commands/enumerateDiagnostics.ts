@@ -18,7 +18,6 @@ import LLTitle from '../LL/LLTitle';
 import LLUserDefined from '../LL/LLUserDefined';
 
 export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.Diagnostic[] {
-    console.log(`Enumerating diagnostics for ${doc.uri}`);
     const config = vscode.workspace.getConfiguration('latexlint').get('config') as string[];
     const diagnostics: vscode.Diagnostic[] = [];
     for (const [ruleName, rule] of Object.entries({
@@ -41,9 +40,7 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
         LLUserDefined,
     })) {
         if (config.includes(ruleName)) continue;
-        console.log(`Check: ${ruleName}`);
         diagnostics.push(...rule(doc));
     }
-
     return diagnostics;
 }

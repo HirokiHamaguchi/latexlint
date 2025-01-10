@@ -6,39 +6,33 @@ export default function LLTitle(doc: vscode.TextDocument): vscode.Diagnostic[] {
     if (doc.languageId !== "latex") return [];
 
     const text = doc.getText();
+    const backslashPositions: number[] = Array.from(text.matchAll(/\\/g), match => match.index);
 
-    const backslashPositions: number[] = [];
-    const backslashRegex = /\\/g;
-    let match;
-    while (match = backslashRegex.exec(text))
-        backslashPositions.push(match.index);
+    const code = 'LLTitle';
+    const diagnostics: vscode.Diagnostic[] = [];
 
-    const sectionRanges: vscode.Range[] = [];
     for (const backslashIndex of backslashPositions)
         for (const commands of [
             "title",
             "section", "subsection", "subsubsection",
             "paragraph", "subparagraph"
-        ])
-            if (text.startsWith(`\\${commands}{`, backslashIndex)) {
-                let index = backslashIndex + `\\${commands}{`.length;
-                const L = doc.positionAt(index);
-                let braceCount = 1;
-                while (braceCount > 0 && index < text.length) {
-                    if (text[index] === '{') braceCount++;
-                    else if (text[index] === '}') braceCount--;
-                    index++;
-                }
-                const R = doc.positionAt(index - 1);
-                sectionRanges.push(new vscode.Range(L, R));
+        ]) {
+            if (!text.startsWith(`\\${commands}{`, backslashIndex)) continue;
+            let index = backslashIndex + `\\${commands}{`.length;
+            const beginIndex = index;
+            let braceCount = 1;
+            while (braceCount > 0 && index < text.length) {
+                if (text[index] === '{') braceCount++;
+                else if (text[index] === '}') braceCount--;
+                index++;
             }
-
-    const code = 'LLTitle';
-    const diagnostics: vscode.Diagnostic[] = [];
-    for (const range of sectionRanges) {
-        const sectionText = doc.getText(range);
-        const titleCaseText = toTitleCase(sectionText);
-        if (sectionText !== titleCaseText)
+            const endIndex = index - 1;
+            const sectionText = text.slice(beginIndex, endIndex);
+            const titleCaseText = toTitleCase(sectionText);
+            if (sectionText === titleCaseText) continue;
+            const L = doc.positionAt(beginIndex);
+            const R = doc.positionAt(endIndex);
+            const range = new vscode.Range(L, R);
             diagnostics.push({
                 code: code,
                 message: messages[code].replace('{EXPECTED}', `"${titleCaseText}"`),
@@ -46,6 +40,6 @@ export default function LLTitle(doc: vscode.TextDocument): vscode.Diagnostic[] {
                 severity: severity[code],
                 source: extensionDisplayName,
             });
-    }
+        }
     return diagnostics;
 }

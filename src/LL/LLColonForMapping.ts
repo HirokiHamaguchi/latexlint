@@ -22,8 +22,7 @@ export default function LLColonForMapping(doc: vscode.TextDocument): vscode.Diag
     const ranges: vscode.Range[] = [];
 
     const regex = /:/g;
-    let match;
-    while ((match = regex.exec(text)) !== null) {
+    for (const match of text.matchAll(regex)) {
         let i = match.index + 1;
         let currentWord = '';
         let wordCount = 0;

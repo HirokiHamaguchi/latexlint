@@ -78,7 +78,7 @@ As a limitation of this extension, there are some false positives, such as `&=` 
 
 [Ref by Stack Exchange](https://tex.stackexchange.com/questions/41074/relation-spacing-error-using-in-aligned-equations).
 
-## LLAlignEnd
+### LLAlignEnd
 
 Detect `align`, `gather` etc. environment ends with `\\` in `.tex` or `.md` files.
 This `\\` can be unnecessary.

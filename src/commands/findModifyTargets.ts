@@ -124,7 +124,10 @@ function findCorrespondingCommand(text: string, command: Command): Command {
     return otherCommand.parseFromIndex(text, cmdPairs[targetIndex].delta, cmdPairs[targetIndex].index);
 }
 
-export default function findModifyTargets(editor: vscode.TextEditor): {
+export default function findModifyTargets(
+    selection: vscode.Selection,
+    document: vscode.TextDocument,
+): {
     originalText: string,
     cursorPos: number,
     newTextCountForCursor: number,
@@ -132,15 +135,6 @@ export default function findModifyTargets(editor: vscode.TextEditor): {
     s2: string,
     s3: string,
 } | undefined {
-    const selection = editor.selection;
-    if (editor.selections.length !== 1 || selection.start.line !== selection.end.line) {
-        vscode.window.showErrorMessage(
-            'Only select the content in \\begin{...} or \\end{...} to rename.'
-        );
-        return undefined;
-    }
-
-    const document = editor.document;
     const activePosition = selection.active;
 
     if (document.lineAt(activePosition).text.trim().startsWith('%')) {

@@ -6,20 +6,20 @@ import findModifyTargets from '../commands/findModifyTargets';
 import enumerateDiagnostics from '../commands/enumerateDiagnostics';
 
 async function testFindModifyTargetsTex() {
-	const uri = vscode.Uri.file(path.resolve(__dirname, '../../sample/rename.tex'));
+	const uri = vscode.Uri.file(path.resolve(__dirname, '../../sample/otherFeature.tex'));
 	if (!await vscode.workspace.fs.stat(uri)) throw new Error('File not found');
 	const document = await vscode.workspace.openTextDocument(uri);
 	const editor = await vscode.window.showTextDocument(document);
 
 	for (let [ln, col] of [
-		[18, 8],
-		[18, 12],
-		[18, 16],
-		[20, 14],
-		[22, 17],
-		[27, 24],
-		[30, 16],
-		[39, 13],
+		[19, 8],
+		[19, 12],
+		[19, 16],
+		[21, 14],
+		[23, 17],
+		[28, 24],
+		[31, 16],
+		[40, 13],
 	]) {
 		ln--; col--; // from 1-indexed to 0-indexed
 		const start = new vscode.Position(ln, col);
@@ -27,12 +27,12 @@ async function testFindModifyTargetsTex() {
 		editor.selection = new vscode.Selection(start, end);
 		editor.revealRange(editor.selection);
 		await new Promise(resolve => setTimeout(resolve, 100));
-		assert.notStrictEqual(findModifyTargets(editor), undefined);
+		assert.notStrictEqual(findModifyTargets(editor.selection, editor.document), undefined);
 	}
 }
 
 async function testFindModifyTargetsMd() {
-	const uri = vscode.Uri.file(path.resolve(__dirname, '../../sample/rename.md'));
+	const uri = vscode.Uri.file(path.resolve(__dirname, '../../sample/otherFeature.md'));
 	if (!await vscode.workspace.fs.stat(uri)) throw new Error('File not found');
 	const document = await vscode.workspace.openTextDocument(uri);
 	const editor = await vscode.window.showTextDocument(document);
@@ -53,7 +53,7 @@ async function testFindModifyTargetsMd() {
 		editor.selection = new vscode.Selection(start, end);
 		editor.revealRange(editor.selection);
 		await new Promise(resolve => setTimeout(resolve, 100));
-		assert.notStrictEqual(findModifyTargets(editor), undefined);
+		assert.notStrictEqual(findModifyTargets(editor.selection, editor.document), undefined);
 	}
 }
 
@@ -63,7 +63,7 @@ async function testEnumerateDiagnosticsTex() {
 	await vscode.workspace.getConfiguration('latexlint').update('config', [], vscode.ConfigurationTarget.Global);
 	const document = await vscode.workspace.openTextDocument(uri);
 	const diagnostics = enumerateDiagnostics(document);
-	assert.strictEqual(diagnostics.length, 58);
+	assert.strictEqual(diagnostics.length, 59);
 }
 
 async function testEnumerateDiagnosticsMd() {
@@ -72,7 +72,7 @@ async function testEnumerateDiagnosticsMd() {
 	await vscode.workspace.getConfiguration('latexlint').update('config', [], vscode.ConfigurationTarget.Global);
 	const document = await vscode.workspace.openTextDocument(uri);
 	const diagnostics = enumerateDiagnostics(document);
-	assert.strictEqual(diagnostics.length, 38);
+	assert.strictEqual(diagnostics.length, 39);
 }
 
 suite('Extension Test Suite', () => {

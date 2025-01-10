@@ -5,6 +5,7 @@
 \usepackage{amssymb}
 \usepackage{mathtools}
 \usepackage{graphicx}
+\usepackage{physics}
 
 \begin{document}
 
@@ -13,7 +14,7 @@
 \date{\today}
 \maketitle
 
-\section{Sample Section}
+\section{Rename Command}
 
 \begin{equation}\label{eq:1}
     a = b
@@ -38,6 +39,23 @@
     \label{fig:1}
 \end{figure*}
 
-Sample Text.
+Sample figure is shown in Figure~\ref{fig:1}.
+
+\section{Ask Wolfram Alpha}
+
+Select a line. Then, press \texttt{Ctrl + Shift + P} and type \texttt{askWolframAlpha}.
+\begin{gather*}
+    \sum_{n=1}^{\infty} \frac{1}{n^2} \\
+    \int_{-\infty}^{\infty} e^{-x^2} \dd x \\
+    \left(1+\left(1+\left(1+x\right)^2\right)^2\right) \\
+\end{gather*}
+
+The Wolfram Alpha page with adjusted expressions will open as in Figure~\ref{fig:2}.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\columnwidth]{../images/WolframAlpha.png}
+    \caption{Wolfram Alpha}
+    \label{fig:2}
+\end{figure}
 
 \end{document}

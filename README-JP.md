@@ -32,21 +32,22 @@ https://github.com/hari64boli64/latexlint
 以下は我々が検出するルールのリストです。
 
 01. [LLAlignAnd](#llalignand) (`=&`, `\leq&`, `\geq&`などを検出)
-02. [LLAlignSingleLine](#llalignsingleline) (`\\`なしの`align`環境を検出)
-03. [LLColonEqq](#llcoloneqq) (`:=`, `=:`, `::=`, `=::`を検出)
-04. [LLColonForMapping](#llcolonformapping) (写像に使われる`:`を検出)
-05. [LLCref](#llcref) (`\ref`を検出)
-06. [LLDoubleQuotation](#lldoublequotation) (`“`, `”`, `"` を検出)
-07. [LLENDash](#llendash) (`-`の疑わしい使用を検出)
-08. [LLEqnarray](#lleqnarray) (`eqnarray`環境を検出)
-09. [LLNonASCII](#llnonascii) (全角のASCII文字を検出)
-10. [LLLlGg](#llllgg) (`<<`と`>>`を検出)
-11. [LLRefEq](#llrefeq) (`\ref{eq:`を検出)
-12. [LLSharp](#llsharp) (`\sharp`を検出)
-13. [LLSI](#llsi) (`\SI`なしの`KB`, `MB`, `GB`などを検出)
-14. [LLT](#llt) (`^T`を検出)
-15. [LLTitle](#lltitle) (`\title{}`, `\section{}`などでの怪しいタイトルケースを検出)
-16. [LLUserDefine](#lluserdefine) (`latexlint.userDefinedRules`で定義された正規表現を検出)
+02. [LLAlignEnd](#llalignend) (`\\`で終わる`align`環境を検出)
+03. [LLAlignSingleLine](#llalignsingleline) (`\\`なしの`align`環境を検出)
+04. [LLColonEqq](#llcoloneqq) (`:=`, `=:`, `::=`, `=::`を検出)
+05. [LLColonForMapping](#llcolonformapping) (写像に使われる`:`を検出)
+06. [LLCref](#llcref) (`\ref`を検出)
+07. [LLDoubleQuotes](#lldoublequotes) (`“`, `”`, `"` を検出)
+08. [LLENDash](#llendash) (`-`の疑わしい使用を検出)
+09. [LLEqnarray](#lleqnarray) (`eqnarray`環境を検出)
+10. [LLNonASCII](#llnonascii) (全角のASCII文字を検出)
+11. [LLLlGg](#llllgg) (`<<`と`>>`を検出)
+12. [LLRefEq](#llrefeq) (`\ref{eq:`を検出)
+13. [LLSharp](#llsharp) (`\sharp`を検出)
+14. [LLSI](#llsi) (`\SI`なしの`KB`, `MB`, `GB`などを検出)
+15. [LLT](#llt) (`^T`を検出)
+16. [LLTitle](#lltitle) (`\title{}`, `\section{}`などでの怪しいタイトルケースを検出)
+17. [LLUserDefine](#lluserdefine) (`latexlint.userDefinedRules`で定義された正規表現を検出)
 
 [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf)も必要であれば参照して下さい。
 
@@ -75,6 +76,11 @@ Cite some references.
 本拡張機能の制限として、`table`環境内の`&=`などの偽陽性がいくつかあります。
 
 [参考 Stack Exchange](https://tex.stackexchange.com/questions/41074/relation-spacing-error-using-in-aligned-equations)
+
+### LLAlignEnd
+
+`.tex`または`.md`ファイル内の、`\\`で終わる`align`環境や`gather`環境を検出します。
+この改行は不要であると考えられます。
 
 ### LLAlignSingleLine
 
@@ -138,7 +144,7 @@ cleverefパッケージについては、[opt-cpさんによるこちらのペ�
 \crefname{theorem}{Theorem}{Theorems}
 ```
 
-### LLDoubleQuotation
+### LLDoubleQuotes
 
 `.tex`ファイル内で`“`, `”`, `"`を検出します。
 これらは"XXX"や“XXX”のように使われていることがあります。

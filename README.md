@@ -33,21 +33,22 @@ We sincerely appreciate the developers of these.
 Here is the list of rules we detect.
 
 01. [LLAlignAnd](#llalignand) (detect `=&`, `\leq&`, `\geq&`, etc.)
-02. [LLAlignSingleLine](#llalignsingleline) (detect `align` environment without `\\`)
-03. [LLColonEqq](#llcoloneqq) (detect `:=`, `=:`,`::=`, and `=::`)
-04. [LLColonForMapping](#llcolonformapping) (detect `:` for mapping)
-05. [LLCref](#llcref) (detect `\ref`)
-06. [LLDoubleQuotation](#lldoublequotation) (detect `“`, `”` and `"` )
-07. [LLENDash](#llendash) (detect the dubious use of `-`)
-08. [LLEqnarray](#lleqnarray) (detect `eqnarray` environment)
-09. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters)
-10. [LLLlGg](#llllgg) (detect `<<` and `>>`)
-11. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
-12. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
-13. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
-14. [LLT](#llt) (detect `^T`)
-15. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
-16. [LLUserDefine](#lluserdefine) (detect Regexes in `latexlint.userDefinedRules`)
+02. [LLAlignEnd](#llalignend) (detect `align` environment ends with `\\`)
+03. [LLAlignSingleLine](#llalignsingleline) (detect `align` environment without `\\`)
+04. [LLColonEqq](#llcoloneqq) (detect `:=`, `=:`,`::=`, and `=::`)
+05. [LLColonForMapping](#llcolonformapping) (detect `:` for mapping)
+06. [LLCref](#llcref) (detect `\ref`)
+07. [LLDoubleQuotes](#lldoublequotes) (detect `“`, `”` and `"` )
+08. [LLENDash](#llendash) (detect the dubious use of `-`)
+09. [LLEqnarray](#lleqnarray) (detect `eqnarray` environment)
+10. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters)
+11. [LLLlGg](#llllgg) (detect `<<` and `>>`)
+12. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
+13. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
+14. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
+15. [LLT](#llt) (detect `^T`)
+16. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
+17. [LLUserDefine](#lluserdefine) (detect Regexes in `latexlint.userDefinedRules`)
 
 Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
@@ -76,6 +77,11 @@ We also detect `\neq&`, `\leq&`, `\geq&`, `\le&`, `\ge&`, `<&`, and `>&`.
 As a limitation of this extension, there are some false positives, such as `&=` in the `table` environment.
 
 [Ref by Stack Exchange](https://tex.stackexchange.com/questions/41074/relation-spacing-error-using-in-aligned-equations).
+
+## LLAlignEnd
+
+Detect `align`, `gather` etc. environment ends with `\\` in `.tex` or `.md` files.
+This `\\` can be unnecessary.
 
 ### LLAlignSingleLine
 
@@ -139,7 +145,7 @@ For cleveref package, you can also refer to [this page by opt-cp](https://web.ar
 \crefname{theorem}{Theorem}{Theorems}
 ```
 
-### LLDoubleQuotation
+### LLDoubleQuotes
 
 Detect `“`, `”` and `"` in `.tex` files.
 These might be used as "XXX" or “XXX”.

@@ -5,6 +5,6 @@ export default function LLAlignAnd(doc: vscode.TextDocument): vscode.Diagnostic[
     return regex2diagnostics(
         doc,
         "LLAlignAnd",
-        /(=|\\neq|\\leq|\\geq|\\le|\\ge|<|>)[\s ]*&/g
+        /(=|\\neq|\\leq|\\geq|\\le|\\ge|<|>)\s*&/g
     );
 }

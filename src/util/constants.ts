@@ -4,11 +4,12 @@ export const extensionDisplayName = 'LaTeX Lint';
 
 export type LLCode =
     'LLAlignAnd' |
+    'LLAlignEnd' |
     'LLAlignSingleLine' |
     'LLColonEqq' |
     'LLColonForMapping' |
     'LLCref' |
-    'LLDoubleQuotation' |
+    'LLDoubleQuotes' |
     'LLENDash' |
     'LLEqnarray' |
     'LLNonASCII' |
@@ -22,11 +23,12 @@ export type LLCode =
 
 export const messages: Record<LLCode, string> = {
     LLAlignAnd: '=& might be better written as ={}& to avoid spacing issues if it is in an align environment.',
+    LLAlignEnd: 'The align like environment ends with \\\\, which can be unnecessary.',
     LLAlignSingleLine: 'Use equation environment instead of align for single-line equation.',
     LLColonEqq: 'You might better to use \\coloneqq, \\eqqcolon, \\Coloneqq and \\Eqqcolon.',
     LLColonForMapping: 'You might better to use \\colon instead of : for mapping.',
     LLCref: 'You might better to use \\cref instead of \\ref.',
-    LLDoubleQuotation: 'If you meant to use a double quotation mark, use `` and \'\' instead of ".',
+    LLDoubleQuotes: 'If you meant to use a double quotation mark, use `` and \'\' instead of ".',
     LLENDash: 'This might be en-dash (--) instead of a hyphen (-), if this is names of people.',
     LLEqnarray: 'You might better to use align environment instead of eqnarray.',
     LLNonASCII: 'Is this non-ASCII character intentional or a mistake?',
@@ -43,11 +45,12 @@ const INFO = vscode.DiagnosticSeverity.Information;
 const WARN = vscode.DiagnosticSeverity.Warning;
 export const severity: Record<LLCode, vscode.DiagnosticSeverity> = {
     LLAlignAnd: WARN,
+    LLAlignEnd: WARN,
     LLAlignSingleLine: WARN,
     LLColonEqq: WARN,
     LLColonForMapping: WARN,
     LLCref: WARN,
-    LLDoubleQuotation: WARN,
+    LLDoubleQuotes: WARN,
     LLENDash: WARN,
     LLEqnarray: WARN,
     LLNonASCII: INFO,

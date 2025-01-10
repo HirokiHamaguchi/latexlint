@@ -1,3 +1,19 @@
 {
-    "latexlint.userDefinedRules": []
+    "latexlint.userDefinedRules": [],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "uplatex",
+            "tools": [
+                "ptex2pdf (uplatex)",
+                "ptex2pdf (uplatex)",
+            ]
+        },
+        {
+            "name": "pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+    ]
 }

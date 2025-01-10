@@ -23,6 +23,24 @@ $$
 \end{aligned}
 $$
 
+## LLAlignEnd
+
+The following ends with a line break.
+$$
+\begin{align*}
+  f(x) & = ax^2 + bx + c \\
+  g(x) & = dx^2 + ex + f \\
+\end{align*}
+$$
+The following does not end with a line break.
+$$
+\begin{align*}
+  f(x) & = ax^2 + bx + c \\
+  g(x) & = dx^2 + ex + f
+\end{align*}
+$$
+Here is the next line after the align environment.
+
 ## LLAlignSingleLine
 
 ### Long line before display (same result)

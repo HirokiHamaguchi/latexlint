@@ -8,7 +8,7 @@ export default function toggleLinting(
 ) {
     if (!isEnabled) {
         diagnosticCollection.clear();
-        vscode.window.showInformationMessage('Disable linting for ' + vscode.workspace.asRelativePath(doc.uri));
+        vscode.window.showInformationMessage('Disable LaTeX Lint');
         return;
     }
     diagnose(doc, diagnosticCollection, true);

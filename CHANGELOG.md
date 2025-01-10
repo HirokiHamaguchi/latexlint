@@ -4,7 +4,19 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 ## [Unreleased]
 
-<!-- - For `LLENDash` and `LLTitle`, allow exceptions via `latexlint.exceptions` in `settings.json`. -->
+- Detect `dx` after `\int`. It should be `\ddx`.
+- Detect something like `\sqrt(`.
+- Detect non-referenced figures.
+- Expand rename targets from `name` to `\begin{name}`.
+- Allow exceptions for `LLAlignEnd` and `LLTitle` via `latexlint.exceptions` in `settings.json`.
+- Add Quick Fix to disable some rule.
+
+## 1.3.0 - 2025-01-10
+
+- Trigger on save.
+- Add `LLAlignEnd` rule.
+- Add `askWolframAlpha` feature.
+- Change `LLDoubleQuotation` to `LLDoubleQuotes`.
 
 ## 1.2.1 - 2025-01-09
 

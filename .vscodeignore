@@ -15,6 +15,9 @@ vsc-extension-quickstart.md
 
 doc
 other
-images/*.stg
+images/**
+!images/lintIconDark.svg
+!images/lintIconLight.svg
+!images/mainIcon512.png
 doc/*.synctex.gz
 sample/*.synctex.gz

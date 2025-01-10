@@ -90,32 +90,6 @@
 			]
 		},
 	],
-	"latex-workshop.latex.tools": [
-		{
-			"name": "ptex2pdf (uplatex)",
-			"command": "ptex2pdf",
-			"args": [
-				"-l",
-				"-u",
-				"-ot",
-				"--interaction=nonstopmode",
-				"--synctex=1",
-				"--shell-escape",
-				"%DOC%"
-			]
-		},
-		{
-			"name": "pdflatex",
-			"command": "pdflatex",
-			"args": [
-				"--shell-escape",
-				"--synctex=1",
-				"--interaction=nonstopmode",
-				"-file-line-error",
-				"%DOC%"
-			]
-		}
-	],
 	"latexlint.userDefinedRules": [
 		"f\\^a"
 	],

@@ -34,7 +34,7 @@
       {
         "category": "LaTeX Lint",
         "command": "latexlint.toggleLinting",
-        "title": "Update or Hide Diagnostics",
+        "title": "Enable/Disable LaTeX Linting",
         "icon": {
           "dark": "images/lintIconDark.svg",
           "light": "images/lintIconLight.svg"
@@ -47,18 +47,18 @@
       },
       {
         "category": "LaTeX Lint",
-        "command": "latexlint.hide",
-        "title": "Hide Diagnostics by LaTeX Lint"
-      },
-      {
-        "category": "LaTeX Lint",
         "command": "latexlint.addRule",
         "title": "Add Rule for LaTeX Lint"
       },
       {
         "category": "LaTeX Lint",
         "command": "latexlint.renameCommand",
-        "title": "Rename of \\begin{} or \\end{}"
+        "title": "Rename \\begin{} or \\end{}"
+      },
+      {
+        "category": "LaTeX Lint",
+        "command": "latexlint.askWolframAlpha",
+        "title": "Ask Wolfram Alpha"
       }
     ],
     "menus": {
@@ -91,11 +91,12 @@
             "type": "string",
             "enum": [
               "LLAlignAnd",
+              "LLAlignEnd",
               "LLAlignSingleLine",
               "LLColonEqq",
               "LLColonForMapping",
               "LLCref",
-              "LLDoubleQuotation",
+              "LLDoubleQuotes",
               "LLENDash",
               "LLEqnarray",
               "LLNonASCII",

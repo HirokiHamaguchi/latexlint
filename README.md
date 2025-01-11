@@ -13,7 +13,7 @@
 
 This extension provides a LaTeX Linter for `.tex` and `.md` files with the commands renaming feature.
 
-![abstract](images/abstract.png)
+![abstract](https://github.com/hari64boli64/latexlint/blob/master/images/abstract.png?raw=true)
 
 You can
 
@@ -25,14 +25,14 @@ dy this extension.
 
 ## Features
 
-By opening the command palette (`Ctrl`+`Shift`+`P`), you can use the following commands.
+By opening the command palette (`Ctrl`+`Shift`+`P`) and type commands, you can use the following features.
 
 ### LaTeX Lint: Diagnose
 
 Diagnose the current LaTeX or Markdown file.
-This command runs when saving the file.
+This command automatically runs when saving the file.
 
-Here is the list of rules we detect.
+Here is the list of rules we detect, detailed in [Rules](#rules).
 
 01. [LLAlignAnd](#llalignand) (detect `=&`, `\leq&`, `\geq&`, etc.)
 02. [LLAlignEnd](#llalignend) (detect `align` environment ends with `\\`)
@@ -52,8 +52,6 @@ Here is the list of rules we detect.
 16. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
 17. [LLUserDefine](#lluserdefine) (detect Regexes in `latexlint.userDefinedRules`)
 
-Details are explained in [Rules](#rules).
-
 Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
 ### LaTeX Lint: Enable/Disable LaTeX Lint
@@ -61,27 +59,27 @@ Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint
 Enable or disable LaTeX Lint.
 This command runs when clicking the icon on the editor toolbar.
 
-![enableDisableButton](images/enableDisableButton.png)
+![enableDisableButton](https://github.com/hari64boli64/latexlint/blob/master/images/enableDisableButton.png?raw=true)
 
 ### LaTeX Lint: Add Rule to Detect
 
 Add your own rule to detect.
-
 For example, we can detect $f^a$ by the following steps.
 
 #### 1. Select the string you want to detect (optional)
 
-![addRule1](images/addRule1.png)
+![addRule1](https://github.com/hari64boli64/latexlint/blob/master/images/addRule1.png?raw=true)
 
 #### 2. Run the command (Add Rule to Detect)
 
 Open the command palette (`Ctrl`+`Shift`+`P`) and type `LaTeX Lint: Add Rule to Detect`.
 
-![addRule2](images/addRule2.png)
+![addRule2](https://github.com/hari64boli64/latexlint/blob/master/images/addRule2.png?raw=true)
 
 #### 3. Follow the instructions
 
-If you choose `string`, we detect input itself. If you choose `Regex`, we detect the pattern using Regex.
+If you choose `string`, we detect input itself.
+If you choose `Regex`, we detect the pattern using Regex.
 
 Then, you can define your own rule.
 
@@ -90,7 +88,7 @@ Then, you can define your own rule.
 This is an additional feature.
 Rename the command by pressing `F2` on the `\begin{name}` or `\end{name}`.
 
-![renameCommand](images/renameCommand.png)
+![renameCommand](https://github.com/hari64boli64/latexlint/blob/master/images/renameCommand.png?raw=true)
 
 ### LaTeX Lint: Ask Wolfram Alpha
 
@@ -99,17 +97,17 @@ Ask Wolfram Alpha to solve the equation.
 
 #### 1. Select the equation you want to solve
 
-![askWolframAlpha1](images/askWolframAlpha1.png)
+![askWolframAlpha1](https://github.com/hari64boli64/latexlint/blob/master/images/askWolframAlpha1.png?raw=true)
 
 #### 2. Run the command (Ask Wolfram Alpha)
 
 Open the command palette (`Ctrl`+`Shift`+`P`) and type `LaTeX Lint: Ask Wolfram Alpha`.
 
-![askWolframAlpha2](images/askWolframAlpha2.png)
+![askWolframAlpha2](https://github.com/hari64boli64/latexlint/blob/master/images/askWolframAlpha2.png?raw=true)
 
 #### 3. Check the Wolfram Alpha page
 
-![askWolframAlpha3](images/askWolframAlpha3.png)
+![askWolframAlpha3](https://github.com/hari64boli64/latexlint/blob/master/images/askWolframAlpha3.png?raw=true)
 
 We remove some unnecessary commands when sending the equation to Wolfram Alpha.
 
@@ -311,7 +309,7 @@ We use the following Regex.
 > Range U+FF01–FF5E reproduces the characters of ASCII 21 to 7E as fullwidth forms. U+FF00 does not correspond to a fullwidth ASCII 20 (space character), since that role is already fulfilled by U+3000 "ideographic space".
 [Wikipedia](https://en.wikipedia.org/wiki/Halfwidth_and_Fullwidth_Forms_(Unicode_block))
 
-If you want to detect all non-ASCII characters, use the following Regex.
+If you want to detect all non-ASCII characters, use the following Regex with [LaTeX Lint: Add Rule to Detect](#latex-lint-add-rule-to-detect).
 
 ```txt
 [^\x00-\x7F]

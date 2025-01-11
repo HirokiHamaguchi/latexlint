@@ -21,3 +21,4 @@ images/**
 !images/mainIcon512.png
 doc/*.synctex.gz
 sample/*.synctex.gz
+sample/*.pdf

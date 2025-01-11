@@ -33,8 +33,13 @@
     "commands": [
       {
         "category": "LaTeX Lint",
+        "command": "latexlint.diagnose",
+        "title": "Diagnose"
+      },
+      {
+        "category": "LaTeX Lint",
         "command": "latexlint.toggleLinting",
-        "title": "Enable/Disable LaTeX Linting",
+        "title": "Enable/Disable LaTeX Lint",
         "icon": {
           "dark": "images/lintIconDark.svg",
           "light": "images/lintIconLight.svg"
@@ -42,13 +47,8 @@
       },
       {
         "category": "LaTeX Lint",
-        "command": "latexlint.diagnose",
-        "title": "Get Diagnostics by LaTeX Lint"
-      },
-      {
-        "category": "LaTeX Lint",
         "command": "latexlint.addRule",
-        "title": "Add Rule for LaTeX Lint"
+        "title": "Add Rule to Detect"
       },
       {
         "category": "LaTeX Lint",

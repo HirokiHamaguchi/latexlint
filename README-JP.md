@@ -19,7 +19,7 @@ https://github.com/hari64boli64/latexlint
 
 * LaTeXの**よくある間違い**を検出します
 * `\begin{name}`または`\end{name}`の`name`にて`F2`を押すと、コマンドを**リネーム**出来ます
-* `settings.json`の`lintLatex.userDefinedRules`を通じて、**独自の正規表現ルール**を適用できます
+* `settings.json`の`latexlint.userDefinedRules`を通じて、**独自の正規表現ルール**を適用できます
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NaQs6he0s4g?si=5NyTcysLdxsMhQJ-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

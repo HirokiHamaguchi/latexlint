@@ -9,26 +9,28 @@
 
 </div>
 
-## Features
+## Abstract
 
 This extension provides a LaTeX Linter for `.tex` and `.md` files with the commands renaming feature.
 
-By this extension, you can
+![abstract](images/abstract.png)
 
-* Detect **common mistakes** in LaTeX.
-* **Rename the commands** by pressing `F2` on the `name` of `\begin{name}` or `\end{name}`.
-* Define **your own Regex rules** through `lintLatex.userDefinedRules` in `settings.json`.
+You can
 
-Demo movie:
+* Detect **common mistakes** in LaTeX
+* Define **your own Regex rules** to detect
+* **Rename the commands** with `F2` on `\begin{name}` or `\end{name}`
 
-https://github.com/user-attachments/assets/35eddda0-c1fd-4a65-b7b4-636d56b2ea1a
+dy this extension.
 
-As shown in the video, clicking the icon detects the problems. When there are problems, clicking the icon hide them.
+## Features
 
-In some aspects, our extension resembles a LaTeX package [chktex](https://ctan.org/pkg/chktex) and a VS Code Extension [LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename).
-We sincerely appreciate the developers of these.
+By opening the command palette (`Ctrl`+`Shift`+`P`), you can use the following commands.
 
-## Rules
+### LaTeX Lint: Diagnose
+
+Diagnose the current LaTeX or Markdown file.
+This command runs when saving the file.
 
 Here is the list of rules we detect.
 
@@ -37,7 +39,7 @@ Here is the list of rules we detect.
 03. [LLAlignSingleLine](#llalignsingleline) (detect `align` environment without `\\`)
 04. [LLColonEqq](#llcoloneqq) (detect `:=`, `=:`,`::=`, and `=::`)
 05. [LLColonForMapping](#llcolonformapping) (detect `:` for mapping)
-06. [LLCref](#llcref) (detect `\ref`)
+06. [LLCref](#llcref) (detect `\ref`, disabled by default)
 07. [LLDoubleQuotes](#lldoublequotes) (detect `“`, `”` and `"` )
 08. [LLENDash](#llendash) (detect the dubious use of `-`)
 09. [LLEqnarray](#lleqnarray) (detect `eqnarray` environment)
@@ -50,7 +52,68 @@ Here is the list of rules we detect.
 16. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
 17. [LLUserDefine](#lluserdefine) (detect Regexes in `latexlint.userDefinedRules`)
 
+Details are explained in [Rules](#rules).
+
 Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
+
+### LaTeX Lint: Enable/Disable LaTeX Lint
+
+Enable or disable LaTeX Lint.
+This command runs when clicking the icon on the editor toolbar.
+
+![enableDisableButton](images/enableDisableButton.png)
+
+### LaTeX Lint: Add Rule to Detect
+
+Add your own rule to detect.
+
+For example, we can detect $f^a$ by the following steps.
+
+#### 1. Select the string you want to detect (optional)
+
+![addRule1](images/addRule1.png)
+
+#### 2. Run the command (Add Rule to Detect)
+
+Open the command palette (`Ctrl`+`Shift`+`P`) and type `LaTeX Lint: Add Rule to Detect`.
+
+![addRule2](images/addRule2.png)
+
+#### 3. Follow the instructions
+
+If you choose `string`, we detect input itself. If you choose `Regex`, we detect the pattern using Regex.
+
+Then, you can define your own rule.
+
+### LaTeX Lint: Rename \begin{} or \end{}
+
+This is an additional feature.
+Rename the command by pressing `F2` on the `\begin{name}` or `\end{name}`.
+
+![renameCommand](images/renameCommand.png)
+
+### LaTeX Lint: Ask Wolfram Alpha
+
+This is an additional feature.
+Ask Wolfram Alpha to solve the equation.
+
+#### 1. Select the equation you want to solve
+
+![askWolframAlpha1](images/askWolframAlpha1.png)
+
+#### 2. Run the command (Ask Wolfram Alpha)
+
+Open the command palette (`Ctrl`+`Shift`+`P`) and type `LaTeX Lint: Ask Wolfram Alpha`.
+
+![askWolframAlpha2](images/askWolframAlpha2.png)
+
+#### 3. Check the Wolfram Alpha page
+
+![askWolframAlpha3](images/askWolframAlpha3.png)
+
+We remove some unnecessary commands when sending the equation to Wolfram Alpha.
+
+## Rules
 
 <!--
 
@@ -100,7 +163,7 @@ It is up to you which one to use, but `amsmath` official documentation suggests 
 
 By [amsmath](https://ctan.org/pkg/amsmath) official document.
 
-You can rename the command by pressing `F2` on the `align` in `\begin{align}` or `\end{align}`. Refer to the animation at [Features](#features).
+You can rename the command by [LaTeX Lint: Rename \begin{} or \end{}](#latex-lint-rename-begin-or-end).
 
 ### LLColonEqq
 
@@ -319,8 +382,6 @@ We test the string inside the `{}` is invariant by the function `toTitleCase` im
 
 You can define your own regular expressions to detect in `.tex` or `.md` files.
 
-In `latexlint.userDefinedRules` in `settings.json`, you can define your own regular expressions.
-
 For example, when you use English letters in math mode for an explanation, you should use `\mathrm`. If the character `a` is not a variable and represents something like **a**tractive force, $f^a(x)$ should be written as $f^{\mathrm{a}}(x)$.
 
 However, it is difficult to detect without context. You can define the following regular expression to detect this pattern.
@@ -329,7 +390,7 @@ However, it is difficult to detect without context. You can define the following
 f\^a
 ```
 
-You can easily add your rules by using the `latexlint.addRule` command in the command palette (`Ctrl`+`Shift`+`P`).
+Check [LaTex Lint: Add Rule to Detect](#latex-lint-add-rule-to-detect) for more details.
 
 <!-- 
 
@@ -355,7 +416,7 @@ When writing papers, please ensure you follow the style specified by the academi
 
 We wish our extension will help you write papers.
 
-## Release Notes
+## Change Log
 
 Refer to [CHANGELOG.md](CHANGELOG.md).
 
@@ -364,3 +425,13 @@ Refer to [CHANGELOG.md](CHANGELOG.md).
 We use [MIT License](LICENSE).
 
 (The library [to-title-case](https://github.com/gouch/to-title-case/tree/master) is also under MIT License.)
+
+## Acknowledgement
+
+In some aspects, our extension resembles
+
+* LaTeX package [chktex](https://ctan.org/pkg/chktex)
+* VS Code Extension [Markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint).
+* VS Code Extension [LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename).
+
+We sincerely appreciate the developers of these tools.

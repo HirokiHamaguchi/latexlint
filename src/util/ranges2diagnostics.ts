@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import { LLCode, extensionDisplayName, severity } from '../util/constants';
+import { getCodeWithURI } from './getCodeWithURI';
 
 export default function ranges2diagnostics(
     code: LLCode,
@@ -7,10 +8,7 @@ export default function ranges2diagnostics(
     ranges: vscode.Range[]
 ): vscode.Diagnostic[] {
     return ranges.map(range => ({
-        code: {
-            value: code,
-            target: vscode.Uri.parse(`https://github.com/hari64boli64/latexlint?tab=readme-ov-file#${code.toLowerCase()}`),
-        },
+        code: getCodeWithURI(code),
         message: message,
         range: range,
         severity: severity[code],

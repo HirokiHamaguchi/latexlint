@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import toTitleCase from '../util/toTitleCase';
 import { extensionDisplayName, severity, messages } from '../util/constants';
+import { getCodeWithURI } from '../util/getCodeWithURI';
 
 export default function LLTitle(doc: vscode.TextDocument): vscode.Diagnostic[] {
     if (doc.languageId !== "latex") return [];
@@ -34,7 +35,7 @@ export default function LLTitle(doc: vscode.TextDocument): vscode.Diagnostic[] {
             const R = doc.positionAt(endIndex);
             const range = new vscode.Range(L, R);
             diagnostics.push({
-                code: code,
+                code: getCodeWithURI(code),
                 message: messages[code].replace('{EXPECTED}', `"${titleCaseText}"`),
                 range: range,
                 severity: severity[code],

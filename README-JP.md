@@ -47,7 +47,7 @@ https://github.com/hari64boli64/latexlint
 14. [LLSI](#llsi) (`\SI`なしの`KB`, `MB`, `GB`などを検出)
 15. [LLT](#llt) (`^T`を検出)
 16. [LLTitle](#lltitle) (`\title{}`, `\section{}`などでの怪しいタイトルケースを検出)
-17. [LLUserDefine](#lluserdefine) (`latexlint.userDefinedRules`で定義された正規表現を検出)
+17. [LLUserDefined](#lluserdefined) (`latexlint.userDefinedRules`で定義された正規表現を検出)
 
 [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf)も必要であれば参照して下さい。
 
@@ -320,7 +320,7 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 
 [参考 WORDVICE](https://blog.wordvice.jp/title-capitalization-rules-for-research-papers/)
 
-### LLUserDefine
+### LLUserDefined
 
 `.tex`または`.md`ファイル内の、独自に定義された正規表現を検出します。
 

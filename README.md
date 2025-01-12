@@ -50,7 +50,7 @@ Here is the list of rules we detect, detailed in [Rules](#rules).
 14. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
 15. [LLT](#llt) (detect `^T`)
 16. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
-17. [LLUserDefine](#lluserdefine) (detect Regexes in `latexlint.userDefinedRules`)
+17. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
 
 Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
@@ -376,7 +376,7 @@ We test the string inside the `{}` is invariant by the function `toTitleCase` im
 
 [Ref by WORDVICE](https://blog.wordvice.jp/title-capitalization-rules-for-research-papers/).
 
-### LLUserDefine
+### LLUserDefined
 
 You can define your own regular expressions to detect in `.tex` or `.md` files.
 
@@ -389,22 +389,6 @@ f\^a
 ```
 
 Check [LaTex Lint: Add Rule to Detect](#latex-lint-add-rule-to-detect) for more details.
-
-<!-- 
-
-Maybe we should add the following rules.
-
-### LLArrow
-
-Detect `->` and `<-` in `tikzpicture` environment.
-It might be better to use `-Latex` and `Latex-` instead.
-
-### LLEtAl
-
-Detect `et al.`.
-In most cases, you can use `\citep` instead.
-
- -->
 
 ## Note  
 

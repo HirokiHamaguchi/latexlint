@@ -100,4 +100,13 @@ suite('Extension Test Suite', () => {
         test(`Test toTitleCase: ${inputs[i]}`, () => {
             assert.strictEqual(toTitleCase(inputs[i]), excepts[i]);
         });
+
+    test('Test rules.test.py', () => {
+        const { spawnSync } = require('child_process');
+        const pathToTestFile = require('path').dirname(__dirname);
+        const result = spawnSync('python', [
+            pathToTestFile.replace("out", "src") + '\\test\\rules.test.py'
+        ]);
+        assert.strictEqual(result.status, 0);
+    });
 });

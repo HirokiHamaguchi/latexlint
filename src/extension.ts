@@ -66,10 +66,14 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 	context.subscriptions.push(disposableAskWolframAlpha);
 
+	let debounceTimeout: NodeJS.Timeout | undefined = undefined;
 	vscode.workspace.onDidSaveTextDocument(() => {
-		const editor = getEditor(false, isEnabled);
-		if (!editor) return;
-		diagnose(editor.document, diagnosticsCollection, false);
+		clearTimeout(debounceTimeout);
+		debounceTimeout = setTimeout(() => {
+			const editor = getEditor(false, isEnabled);
+			if (!editor) return;
+			diagnose(editor.document, diagnosticsCollection, false);
+		}, 300);
 	});
 }
 

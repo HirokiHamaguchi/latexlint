@@ -64,7 +64,7 @@ async function testEnumerateDiagnosticsTex() {
 	await vscode.workspace.getConfiguration('latexlint').update('userDefinedRules', ["f\\^a"], vscode.ConfigurationTarget.Global);
 	const document = await vscode.workspace.openTextDocument(uri);
 	const diagnostics = enumerateDiagnostics(document);
-	assert.strictEqual(diagnostics.length, 59);
+	assert.strictEqual(diagnostics.length, 74);
 }
 
 async function testEnumerateDiagnosticsMd() {
@@ -74,7 +74,7 @@ async function testEnumerateDiagnosticsMd() {
 	await vscode.workspace.getConfiguration('latexlint').update('userDefinedRules', ["f\\^a"], vscode.ConfigurationTarget.Global);
 	const document = await vscode.workspace.openTextDocument(uri);
 	const diagnostics = enumerateDiagnostics(document);
-	assert.strictEqual(diagnostics.length, 41);
+	assert.strictEqual(diagnostics.length, 56);
 }
 
 suite('Extension Test Suite', () => {

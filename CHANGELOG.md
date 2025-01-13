@@ -6,15 +6,13 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 - Allow exceptions for `LLAlignEnd` and `LLTitle` via `latexlint.exceptions` in `settings.json`.
 - `LLNonRef`: Detect non-referenced figures.
-- `LLParens`: Detect `\sqrt(`,`^(`,`_(`.
-- `LLBraces`: Detect `\min{`,`\max{`.
 - `LLArrow`: Detect `->` in TikZ.
 - `LLEtAl`: Detect `et al.`.
 - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`.
 
 ## 1.4.0 - 2025-01-13
 
-- Add `LLBig`.
+- Add `LLBig`, `LLBracketRound`, `LLBracketCurly` rules.
 
 ## 1.3.6 - 2025-01-13
 

@@ -168,6 +168,34 @@ This is a sample text.
 	\bigwedge_{i=1}^{\infty} X_i
 \end{gather*}
 
+\section{LLBracketCurly}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{lll}
+		$\backslash$max(a,b)    & $\max(a,b)$  & \tA{ok}  \\
+		$\backslash$max\{a,b\}  & $\max{a,b}$  & \tD{ng}  \\
+		$\backslash$max \{a,b\} & $\max {a,b}$ & \tC{ok?}
+	\end{tabular}
+\end{table}
+
+We cannot fully determine whether the use of curly brackets is wrong or not.
+It is not detected if some spaces are inserted between the command name and the curly brackets.
+
+$\min(a,b)$ and $\min{a,b}$ are also checked.
+
+\section{LLBracketRound}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{lll}
+		$\backslash$sqrt\{a\} & $\sqrt{a}$ & \tA{ok} \\
+		$\backslash$sqrt(a)   & $\sqrt(a)$ & \tD{ng} \\
+	\end{tabular}
+\end{table}
+
+$a^(1)$ and $a_(1)$ are also checked.
+
 \section{LLColonEqq}
 
 \begin{table}[H]
@@ -275,7 +303,7 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 
 To refer to the equation, use \eqref{eq:sample} with eqref instead of (\ref{eq:sample}) with ref.
 
-You can avoid the mistakes of forgetting to add parentheses.
+You can avoid the mistake of forgetting to add parentheses.
 
 \section{LLSharp}
 

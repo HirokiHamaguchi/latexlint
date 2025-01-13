@@ -11,48 +11,49 @@
 
 ## Abstract
 
-This extension provides a LaTeX Linter for `.tex` and `.md` files with the commands renaming feature.
+This extension provides a LaTeX Linter for `.tex` and `.md` files with useful commands for academic writing.
 
 ![abstract](https://github.com/hari64boli64/latexlint/blob/master/images/abstract.png?raw=true)
 
-You can
+By this extension, you can **detect common mistakes** and **define your own Regex rules** to detect.
 
-* Detect **common mistakes** in LaTeX
-* Define **your own Regex rules** to detect
-* **Rename the commands** with `F2` on `\begin{name}` or `\end{name}`
-
-dy this extension.
+You can also **rename the commands** with `F2` on `\begin{name}` or `\end{name}`, and **ask Wolfram Alpha** to solve the selected equation.
 
 ## Features
 
-By opening the command palette (`Ctrl`+`Shift`+`P`) and type commands, you can use the following features.
+By opening the command palette (`Ctrl`+`Shift`+`P`) and typing commands, you can use the following features.
 
-### LaTeX Lint: Diagnose
+### LaTeX Lint: Diagnose Current File
 
 Diagnose the current LaTeX or Markdown file.
 This command automatically runs when saving the file.
 
 Here is the list of rules we detect, detailed in [Rules](#rules).
 
-01. [LLAlignAnd](#llalignand) (detect `=&`, `\leq&`, `\geq&`, etc.)
-02. [LLAlignEnd](#llalignend) (detect `align` environment ends with `\\`)
-03. [LLAlignSingleLine](#llalignsingleline) (detect `align` environment without `\\`)
-04. [LLColonEqq](#llcoloneqq) (detect `:=`, `=:`,`::=`, and `=::`)
-05. [LLColonForMapping](#llcolonformapping) (detect `:` for mapping)
-06. [LLCref](#llcref) (detect `\ref`, disabled by default)
-07. [LLDoubleQuotes](#lldoublequotes) (detect `“`, `”` and `"` )
-08. [LLENDash](#llendash) (detect the dubious use of `-`)
-09. [LLEqnarray](#lleqnarray) (detect `eqnarray` environment)
-10. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters)
-11. [LLLlGg](#llllgg) (detect `<<` and `>>`)
-12. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
-13. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
-14. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
-15. [LLT](#llt) (detect `^T`)
-16. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
-17. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
+1. [LLAlignAnd](#llalignand) (detect `=&`, `\leq&`, `\geq&`, etc.)
+2. [LLAlignEnd](#llalignend) (detect `align` environment ends with `\\`)
+3. [LLAlignSingleLine](#llalignsingleline) (detect `align` environment without `\\`)
+4. [LLBig](#llbig) (detect `\cap_`, `\cup_`, etc.)
+5. [LLBracketCurly](#llbracketcurly) (detect `\max{`, `\min{`, etc.)
+6. [LLBracketRound](#llbracketround) (detect `\sqrt()`, `^()` and `_()`)
+7. [LLColonEqq](#llcoloneqq) (detect `:=`, `=:`,`::=`, and `=::`)
+8. [LLColonForMapping](#llcolonformapping) (detect `:` for mapping)
+9. [LLCref](#llcref) (detect `\ref`, disabled by default)
+10. [LLDoubleQuotes](#lldoublequotes) (detect `“`, `”` and `"` )
+11. [LLENDash](#llendash) (detect the dubious use of `-`)
+12. [LLEqnarray](#lleqnarray) (detect `eqnarray` environment)
+13. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters)
+14. [LLLlGg](#llllgg) (detect `<<` and `>>`)
+15. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
+16. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
+17. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
+18. [LLT](#llt) (detect `^T`)
+19. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
+20. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
 
 Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
+
+You can easily select which rules to detect by the command `LaTeX Lint: Select Rule to Detect`.
 
 ### LaTeX Lint: Enable/Disable LaTeX Lint
 
@@ -65,6 +66,8 @@ This command runs when clicking the icon on the editor toolbar.
 
 Add your own rule to detect.
 For example, we can detect $f^a$ by the following steps.
+
+<details><summary>Click here to see the steps</summary>
 
 #### 1. Select the string you want to detect (optional)
 
@@ -83,6 +86,15 @@ If you choose `Regex`, we detect the pattern using Regex.
 
 Then, you can define your own rule.
 
+</details>
+
+### LaTeX Lint: Select Rule to Detect
+
+Select which rules to detect.
+Only check the rules you want to detect.
+
+![selectRule](https://github.com/hari64boli64/latexlint/blob/master/images/selectRuleToDetect.png?raw=true)
+
 ### LaTeX Lint: Rename \begin{} or \end{}
 
 This is an additional feature.
@@ -94,6 +106,10 @@ Rename the command by pressing `F2` on the `\begin{name}` or `\end{name}`.
 
 This is an additional feature.
 Ask Wolfram Alpha to solve the equation.
+
+![askWolframAlpha3](https://github.com/hari64boli64/latexlint/blob/master/images/askWolframAlpha3.png?raw=true)
+
+<details><summary>Click here to see the steps</summary>
 
 #### 1. Select the equation you want to solve
 
@@ -107,9 +123,10 @@ Open the command palette (`Ctrl`+`Shift`+`P`) and type `LaTeX Lint: Ask Wolfram 
 
 #### 3. Check the Wolfram Alpha page
 
-![askWolframAlpha3](https://github.com/hari64boli64/latexlint/blob/master/images/askWolframAlpha3.png?raw=true)
+You can see the result on the Wolfram Alpha page.
+We remove some unnecessary commands when sending the equation.
 
-We remove some unnecessary commands when sending the equation to Wolfram Alpha.
+</details>
 
 ## Rules
 
@@ -162,6 +179,29 @@ It is up to you which one to use, but `amsmath` official documentation suggests 
 By [amsmath](https://ctan.org/pkg/amsmath) official document.
 
 You can rename the command by [LaTeX Lint: Rename \begin{} or \end{}](#latex-lint-rename-begin-or-end).
+
+### LLBig
+
+Detect `\cap_`, `\cup_`, `\odot_`, `\oplus_`, `\otimes_`, `\sqcup_`, `uplus_`, `\vee_` and `\wedge_` in `.tex` or `.md` files.
+You should likely use `\bigcap`, `\bigcup`, `\bigodot`, `\bigoplus`, `\bigotimes`, `\bigsqcup`, `\biguplus`, `\bigvee` and `\bigwedge` instead.
+
+![doc/LLBig](https://github.com/hari64boli64/latexlint/blob/master/doc/LLBig.png?raw=true)
+
+[Ref by Stack Exchange](https://tex.stackexchange.com/questions/205125/formatting-the-union-of-sets).
+
+### LLBracketCurly
+
+Detect `\max{` and `\min{` in `.tex` files.
+You should likely use `\max(` and `\min(` instead, or add a space after `\max` or `\min` to clarify.
+
+![doc/LLBracketCurly](https://github.com/hari64boli64/latexlint/blob/master/doc/LLBracketCurly.png?raw=true)
+
+### LLBracketRound
+
+Detect `\sqrt()`, `^()` and `_()` in `.tex` or `.md` files.
+You should likely use `\sqrt{}`, `^{}` and `_{}` instead.
+
+![doc/LLBracketRound](https://github.com/hari64boli64/latexlint/blob/master/doc/LLBracketRound.png?raw=true)
 
 ### LLColonEqq
 
@@ -223,6 +263,8 @@ You can also use `\enquote{XXX}` with [csquotes](https://ctan.org/pkg/csquotes) 
 
 Detect the dubious use of hyphens in `.tex` or `.md` files.
 You should likely use `--` for en-dash and `---` for em-dash.
+
+![doc/LLENDash](https://github.com/hari64boli64/latexlint/blob/master/doc/LLEnDash.png?raw=true)
 
 [Wikipedia](https://en.wikipedia.org/wiki/Dash#En_dash) says,
 > Preference for an en dash instead of a hyphen in these coordinate/relationship/connection types of terms is a matter of style, not inherent orthographic "correctness";

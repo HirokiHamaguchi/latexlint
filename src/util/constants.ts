@@ -7,6 +7,8 @@ export const LLCodeStrings = [
     'LLAlignEnd',
     'LLAlignSingleLine',
     'LLBig',
+    `LLBracketCurly`,
+    `LLBracketRound`,
     'LLColonEqq',
     'LLColonForMapping',
     'LLCref',
@@ -26,24 +28,26 @@ export const LLCodeStrings = [
 export type LLCode = typeof LLCodeStrings[number];
 
 export const messages: Record<LLCode, string> = {
-    LLAlignAnd: '=& might be better written as ={}& to avoid spacing issues if it is in an align environment.',
-    LLAlignEnd: 'The align like environment ends with \\\\, which can be unnecessary.',
-    LLAlignSingleLine: 'Use equation environment instead of align for single-line equation.',
-    LLBig: 'You might better to use \\big... version for subscripts and superscripts.',
-    LLColonEqq: 'You might better to use \\coloneqq, \\eqqcolon, \\Coloneqq and \\Eqqcolon.',
-    LLColonForMapping: 'You might better to use \\colon instead of : for mapping.',
-    LLCref: 'You might better to use \\cref instead of \\ref.',
-    LLDoubleQuotes: 'If you meant to use a double quotation mark, use `` and \'\' instead of ".',
-    LLENDash: 'This might be en-dash (--) instead of a hyphen (-), if this is names of people.',
-    LLEqnarray: 'You might better to use align environment instead of eqnarray.',
-    LLNonASCII: 'Is this non-ASCII character intentional or a mistake?',
-    LLLlGg: 'You might better to use \\ll and \\gg instead of << and >>.',
-    LLRefEq: 'You might better to use \\eqref instead of \\ref.',
-    LLSharp: 'You might better to use \\# instead of \\sharp.',
-    LLSI: 'You might better to use \\SI for units.',
-    LLT: '^T might be better written as ^\\top or ^\\mathsf{T}.',
-    LLTitle: 'Maybe this should be {EXPECTED}, but follow the style guide you prefer.', // replace {EXPECTED}
-    LLUserDefined: 'This violates your defined rule {RULE}', // replace {RULE}
+    LLAlignAnd: 'Use ={}& instead of =& to avoid spacing issues in align environments.',
+    LLAlignEnd: 'Ending \\\\ in align-like environments might be unnecessary.',
+    LLAlignSingleLine: 'For single-line equations, use the equation environment instead of align-like environments.',
+    LLBig: 'Consider using \\big... versions for subscripts and superscripts.',
+    LLBracketCurly: 'Did you mean "(...)"? Add a space after \\min or \\max if intentional.',
+    LLBracketRound: 'Did you mean "{...}"?',
+    LLColonEqq: 'Consider using \\coloneqq, \\eqqcolon, \\Coloneqq, or \\Eqqcolon.',
+    LLColonForMapping: 'If this colon (:) is for a mapping, consider using \\colon.',
+    LLCref: 'Consider using \\cref instead of \\ref.',
+    LLDoubleQuotes: 'For double quotes, use ``...\'\'.',
+    LLENDash: 'If these are names, consider using en-dash (--)',
+    LLEqnarray: 'Eqnarray is not recommended. Use align or gather instead.',
+    LLNonASCII: 'This is a non-ASCII character. Is this intentional?',
+    LLLlGg: 'Consider using \\ll and \\gg instead of << and >>.',
+    LLRefEq: 'Consider using \\eqref instead of \\ref for equations.',
+    LLSharp: 'If this sharp is for a number sign, consider using \\#.',
+    LLSI: 'If this is a unit, consider using the siunitx package \\SI{number}{unit}.',
+    LLT: 'Write ^\\top or ^\\mathsf{T} instead of ^T.',
+    LLTitle: 'Should this be {EXPECTED}? Follow your preferred style guide.', // replace {EXPECTED}
+    LLUserDefined: 'This violates your defined rule: {RULE}', // replace {RULE}
 };
 
 const INFO = vscode.DiagnosticSeverity.Information;
@@ -53,6 +57,8 @@ export const severity: Record<LLCode, vscode.DiagnosticSeverity> = {
     LLAlignEnd: WARN,
     LLAlignSingleLine: WARN,
     LLBig: WARN,
+    LLBracketCurly: WARN,
+    LLBracketRound: WARN,
     LLColonEqq: WARN,
     LLColonForMapping: WARN,
     LLCref: WARN,

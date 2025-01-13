@@ -94,6 +94,69 @@ $$
 \end{alignat*}
 $$
 
+## LLBig
+
+This is a sample text.
+This is a sample text.
+This is a sample text.\\
+Both
+bigcup $\bigcup_{x \in B} O_x$ and
+cup $\cup_{x \in B} O_x$ do not spoil the line spacing.\\
+This is a sample text.
+This is a sample text.
+This is a sample text.
+
+$$
+\begin{gather*}
+  X_1 \cap X_2 \,
+  X_1 \cup X_2 \,
+  X_1 \odot X_2 \,
+  X_1 \oplus X_2 \,
+  X_1 \otimes X_2 \\
+  X_1 \sqcup X_2\,
+  X_1 \uplus X_2 \,
+  X_1 \vee X_2 \,
+  X_1 \wedge X_2 \\
+  \cap_{i=1}^{\infty} X_i \,
+  \cup_{i=1}^{\infty} X_i \,
+  \odot_{i=1}^{\infty} X_i \,
+  \oplus_{i=1}^{\infty} X_i \,
+  \otimes_{i=1}^{\infty} X_i \\
+  \sqcup_{i=1}^{\infty} X_i \,
+  \uplus_{i=1}^{\infty} X_i \,
+  \vee_{i=1}^{\infty} X_i \,
+  \wedge_{i=1}^{\infty} X_i \\
+  \bigcap_{i=1}^{\infty} X_i \,
+  \bigcup_{i=1}^{\infty} X_i \,
+  \bigodot_{i=1}^{\infty} X_i \,
+  \bigoplus_{i=1}^{\infty} X_i \,
+  \bigotimes_{i=1}^{\infty} X_i \,
+  \bigsqcup_{i=1}^{\infty} X_i \,
+  \biguplus_{i=1}^{\infty} X_i \,
+  \bigvee_{i=1}^{\infty} X_i \,
+  \bigwedge_{i=1}^{\infty} X_i
+\end{gather*}
+$$
+
+## LLBracketCurly
+
+$\max(a,b)$ ok
+
+$\max{a,b}$ ng
+
+$\max {a,b}$ ok?
+
+We cannot fully determine whether the use of curly brackets is wrong or not.
+It is not detected if some spaces are inserted between the command name and the curly brackets.
+
+$\min(a,b)$ and $\min{a,b}$ are also checked.
+
+## LLBracketRound
+
+$\sqrt{a}$ and $\sqrt(a)$.
+
+$a^(1)$ and $a_(1)$ are also checked.
+
 ## LLColonForMapping
 
 We detect all of `:` in the following.

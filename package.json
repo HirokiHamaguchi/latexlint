@@ -99,6 +99,8 @@
               "LLAlignEnd",
               "LLAlignSingleLine",
               "LLBig",
+              "LLBracketCurly",
+              "LLBracketRound",
               "LLColonEqq",
               "LLColonForMapping",
               "LLCref",

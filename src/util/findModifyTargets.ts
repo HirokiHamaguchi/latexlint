@@ -16,38 +16,54 @@ class Command {
     constructor(text: string | undefined, cursorOffset: number | undefined) {
         if (text === undefined || cursorOffset === undefined) return;
 
-        // Check if the cursor is inside the braces
-        this.braceStart = cursorOffset - Number(text[cursorOffset] === '}');
-        while (this.braceStart > 0 && text[this.braceStart] !== '{' && text[this.braceStart] !== '}')
-            this.braceStart--;
-        this.braceEnd = cursorOffset;
-        while (this.braceEnd < text.length && text[this.braceEnd] !== '{' && text[this.braceEnd] !== '}')
-            this.braceEnd++;
-        this.braceEnd++;
-        if (text[this.braceStart] !== '{' || text[this.braceEnd - 1] !== '}') {
-            vscode.window.showErrorMessage('Cursor is not inside the braces.');
+        // Find the backslash before the cursor
+        let index = cursorOffset;
+        while (index > 0 && text[index - 1] !== '\n' && text[index] !== '\\') index--;
+        if (text[index] !== '\\') {
+            vscode.window.showErrorMessage('Failed to find the backslash before the cursor.');
             return;
         }
+        this.commandStart = index;
 
         // Check if the cursor is inside \begin{...} or \end{...}
-        this.commandStart = this.braceStart;
-        while (this.commandStart > Math.max(0, this.braceStart - 6) && text[this.commandStart] !== '\\')
-            this.commandStart--;
-        const command = text.substring(this.commandStart, this.braceStart);
-        if (command === '\\begin') this.isBegin = true;
-        else if (command === '\\end') this.isBegin = false;
-        else {
+        if (text.slice(index, index + 6) === '\\begin') {
+            this.isBegin = true;
+            this.braceStart = index + 6;
+        } else if (text.slice(index, index + 4) === '\\end') {
+            this.isBegin = false;
+            this.braceStart = index + 4;
+        } else {
             vscode.window.showErrorMessage('The cursor is not inside \\begin{...} or \\end{...}');
             return;
         }
+        this.wordStart = this.braceStart + 1;
+
+        // Find the closing brace
+        let wordEnd = this.wordStart;
+        let braceDepth = 1;
+        while (wordEnd < text.length && text[wordEnd] !== '\n') {
+            if (text[wordEnd] === '{') braceDepth++;
+            if (text[wordEnd] === '}') braceDepth--;
+            if (braceDepth === 0) break;
+            wordEnd++;
+        }
+        if (braceDepth !== 0 || text[wordEnd] !== '}') {
+            vscode.window.showErrorMessage('Failed to find the command to rename.');
+            return;
+        }
+        this.wordEnd = wordEnd;
+        this.braceEnd = wordEnd + 1;
 
         // Check if the content inside the braces is a single word
-        this.wordStart = this.braceStart + 1;
-        this.wordEnd = this.braceEnd - 1;
         const content = text.substring(this.wordStart, this.wordEnd);
-        if (!content.match(/^\w+\*?$/)) {
-            // This matches [1+ word characters][optional *]
-            vscode.window.showErrorMessage('The content inside the braces is invalid.');
+        if (!content.match(/^\w+\*?$/)) { // This matches [1+ word characters][optional *]
+            vscode.window.showErrorMessage('The content inside the braces is not a single word.');
+            return;
+        }
+
+        // Check if the cursor is inside the command
+        if (cursorOffset < this.commandStart || cursorOffset > this.braceEnd) {
+            vscode.window.showErrorMessage('The cursor is not inside the command.');
             return;
         }
 

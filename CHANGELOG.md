@@ -4,7 +4,6 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 ## [Unreleased]
 
-- Expand rename targets from `name` to `\begin{name}`.
 - Allow exceptions for `LLAlignEnd` and `LLTitle` via `latexlint.exceptions` in `settings.json`.
 - `LLNonRef`: Detect non-referenced figures.
 - `LLBig`: Detect `\vee_`,`\wedge_`.`uplus_`,`\cap_`,`\cup_`,`\otimes_`,`\oplus_`,`\odot_`,`\sqcup_`.
@@ -16,6 +15,7 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 ## 1.3.6 - 2025-01-14
 
+- Expand rename targets from `name` to `\begin{name}`.
 - Refactor to speed up.
 - Add `gather` to `LLAlignSingleLine`.
 - Add `onDidOpenTextDocument` to `activate`.

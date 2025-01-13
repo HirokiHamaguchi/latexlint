@@ -11,7 +11,6 @@ export default async function renameCommand(editor: vscode.TextEditor) {
     const res = findModifyTargets(editor.selection, doc);
     if (res === undefined) return;
 
-
     const newText = await vscode.window.showInputBox({
         title: 'Enter the new argument for the command.',
         value: res.originalText,

@@ -6,14 +6,17 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 - Allow exceptions for `LLAlignEnd` and `LLTitle` via `latexlint.exceptions` in `settings.json`.
 - `LLNonRef`: Detect non-referenced figures.
-- `LLBig`: Detect `\vee_`,`\wedge_`.`uplus_`,`\cap_`,`\cup_`,`\otimes_`,`\oplus_`,`\odot_`,`\sqcup_`.
 - `LLParens`: Detect `\sqrt(`,`^(`,`_(`.
 - `LLBraces`: Detect `\min{`,`\max{`.
 - `LLArrow`: Detect `->` in TikZ.
 - `LLEtAl`: Detect `et al.`.
 - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`.
 
-## 1.3.6 - 2025-01-14
+## 1.4.0 - 2025-01-13
+
+- Add `LLBig`.
+
+## 1.3.6 - 2025-01-13
 
 - Expand rename targets from `name` to `\begin{name}`.
 - Refactor to speed up.

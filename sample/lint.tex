@@ -127,6 +127,47 @@ Multi-line alignat environment is not detected.
 % \begin{align}
 % \begin{align}
 
+\section{LLBig}
+
+This is a sample text.
+This is a sample text.
+This is a sample text.\\
+Both
+bigcup $\bigcup_{x \in B} O_x$ and
+cup $\cup_{x \in B} O_x$ do not spoil the line spacing.\\
+This is a sample text.
+This is a sample text.
+This is a sample text.
+\begin{gather*}
+	X_1 \cap X_2 \,
+	X_1 \cup X_2 \,
+	X_1 \odot X_2 \,
+	X_1 \oplus X_2 \,
+	X_1 \otimes X_2 \\
+	X_1 \sqcup X_2\,
+	X_1 \uplus X_2 \,
+	X_1 \vee X_2 \,
+	X_1 \wedge X_2 \\
+	\cap_{i=1}^{\infty} X_i \,
+	\cup_{i=1}^{\infty} X_i \,
+	\odot_{i=1}^{\infty} X_i \,
+	\oplus_{i=1}^{\infty} X_i \,
+	\otimes_{i=1}^{\infty} X_i \\
+	\sqcup_{i=1}^{\infty} X_i \,
+	\uplus_{i=1}^{\infty} X_i \,
+	\vee_{i=1}^{\infty} X_i \,
+	\wedge_{i=1}^{\infty} X_i \\
+	\bigcap_{i=1}^{\infty} X_i \,
+	\bigcup_{i=1}^{\infty} X_i \,
+	\bigodot_{i=1}^{\infty} X_i \,
+	\bigoplus_{i=1}^{\infty} X_i \,
+	\bigotimes_{i=1}^{\infty} X_i \,
+	\bigsqcup_{i=1}^{\infty} X_i \,
+	\biguplus_{i=1}^{\infty} X_i \,
+	\bigvee_{i=1}^{\infty} X_i \,
+	\bigwedge_{i=1}^{\infty} X_i
+\end{gather*}
+
 \section{LLColonEqq}
 
 \begin{table}[H]
@@ -193,6 +234,8 @@ Use \cref{thm:sample} with cref instead of Theorem~\ref{thm:sample} with ref to 
 Use ``XXX'' instead of “XXX” or "XXX".
 
 \section{LLENDash}
+
+Example: hyphen(-) A-B, en-dash(-{}-) A--B, em-dash(-{}-{}-) A---B.
 
 \begin{itemize}
 	\item Erdos-Renyi (random graph, Erd\H{o}s--R\'enyi)

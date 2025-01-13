@@ -2,6 +2,7 @@ import * as vscode from 'vscode';
 import LLAlignAnd from '../LL/LLAlignAnd';
 import LLAlignEnd from '../LL/LLAlignEnd';
 import LLAlignSingleLine from '../LL/LLAlignSingleLine';
+import LLBig from '../LL/LLBig';
 import LLColonEqq from '../LL/LLColonEqq';
 import LLColonForMapping from '../LL/LLColonForMapping';
 import LLCref from '../LL/LLCref';
@@ -25,6 +26,7 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
         LLAlignAnd,
         LLAlignEnd,
         LLAlignSingleLine,
+        LLBig,
         LLColonEqq,
         LLColonForMapping,
         LLCref,

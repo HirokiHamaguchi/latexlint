@@ -170,13 +170,7 @@ You should likely use the `equation` environment.
 
 The spacing of the `align` environment is [different](https://tex.stackexchange.com/questions/239550/what-is-the-difference-between-align-and-equation-environment-when-i-only-want-t) from the `equation` environment with only one equation.
 
-It is up to you which one to use, but `amsmath` official documentation suggests using the `equation` environment for only one equation.
-
-> The equation environment is for a single equation with an automatically generated number.
-> ......
-> The align environment is used for two or more equations when vertical alignment is desired;
-
-By [amsmath](https://ctan.org/pkg/amsmath) official document.
+It is up to you which one to use, but `amsmath` [official documentation](https://ctan.org/pkg/amsmath) suggests using the `equation` environment for only one equation.
 
 You can rename the command by [LaTeX Lint: Rename \begin{} or \end{}](#latex-lint-rename-begin-or-end).
 
@@ -266,11 +260,7 @@ You should likely use `--` for en-dash and `---` for em-dash.
 
 ![doc/LLENDash](https://github.com/hari64boli64/latexlint/blob/master/doc/LLEnDash.png?raw=true)
 
-[Wikipedia](https://en.wikipedia.org/wiki/Dash#En_dash) says,
-> Preference for an en dash instead of a hyphen in these coordinate/relationship/connection types of terms is a matter of style, not inherent orthographic "correctness";
-Therefore, it is not mandatory to follow this rules.
-
-Still, in a lot of cases, use of en dash is preferred, including [Wikipedia:Manual of Style](https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style#Dashes).
+Although this rule is [not inherent orthographic "correctness"](https://en.wikipedia.org/wiki/Dash#En_dash), in a lot of cases, use of en dash is [preferred](https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style#Dashes).
 
 For example, we detect the following.
 
@@ -372,16 +362,16 @@ You should likely use `\SI` instead, like `\SI{1}{\kilo\byte}`(10^3byte) and `\S
 
 ![doc/LLSI](https://github.com/hari64boli64/latexlint/blob/master/doc/LLSI.png?raw=true)
 
-| Prefix  | Command  | Symbol  | Power | Prefix  | Command  | Symbol  | Power|
-|:-------:|:--------:|:-------:|:-----:|:-------:|:--------:|:-------:|:----:|
-|  kilo   |  \kilo   |    k    |   3   |  kibi   |  \kibi   |   Ki    |  10  |
-|  mega   |  \mega   |    M    |   6   |  mebi   |  \mebi   |   Mi    |  20  |
-|  giga   |  \giga   |    G    |   9   |  gibi   |  \gibi   |   Gi    |  30  |
-|  tera   |  \tera   |    T    |  12   |  tebi   |  \tebi   |   Ti    |  40  |
-|  peta   |  \peta   |    P    |  15   |  pebi   |  \pebi   |   Pi    |  50  |
-|  exa    |  \exa    |    E    |  18   |  exbi   |  \exbi   |   Ei    |  60  |
-|  zetta  |  \zetta  |    Z    |  21   |  zebi   |  \zebi   |   Zi    |  70  |
-|  yotta  |  \yotta  |    Y    |  24   |  yobi   |  \yobi   |   Yi    |  80  |
+| Prefix  | Command  | Symbol  | Power |
+|:-------:|:--------:|:-------:|:-----:|
+|  kilo   |  \kilo   |    k    |   3   |
+|  mega   |  \mega   |    M    |   6   |
+|  giga   |  \giga   |    G    |   9   |
+|  tera   |  \tera   |    T    |  12   |
+|  peta   |  \peta   |    P    |  15   |
+|  exa    |  \exa    |    E    |  18   |
+|  zetta  |  \zetta  |    Z    |  21   |
+|  yotta  |  \yotta  |    Y    |  24   |
 
 It would be better to use `\SI` for units such as `m`, `s`, `kg`, `A`, `K`, `mol`, and `rad`.
 

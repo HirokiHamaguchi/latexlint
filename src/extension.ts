@@ -64,34 +64,6 @@ export function activate(context: vscode.ExtensionContext) {
 			diagnose(editor.document, diagnosticsCollection, false);
 		}, 300);
 	});
-
-	// context.subscriptions.push(
-	// 	vscode.languages.registerCodeActionsProvider(
-	// 		{ scheme: 'file', language: 'latex' },
-	// 		{
-	// 			provideCodeActions: (document, range, context, token) => {
-	// 				const editor = getEditor(true, isEnabled);
-	// 				if (!editor) return [];
-	// 				const actions = [];
-	// 				const diagnostics = diagnosticsCollection.get(editor.document.uri);
-	// 				if (!diagnostics) return [];
-	// 				for (const diagnostic of diagnostics)
-	// 					if (diagnostic.range.intersection(range)) {
-	// 						const action = new vscode.CodeAction(
-	// 							`Suppress "${diagnostic.message}"`,
-	// 							vscode.CodeActionKind.QuickFix,
-	// 						);
-	// 						action.command = {
-	// 							command: 'latexlint.addToConfig',
-	// 							title: 'Suppress',
-	// 							arguments: [editor, diagnostic.range, diagnostic.message],
-	// 						};
-	// 						actions.push(action);
-	// 					}
-	// 				return actions;
-	// 			},
-	// 		},
-	// 	));
 }
 
 export function deactivate() {

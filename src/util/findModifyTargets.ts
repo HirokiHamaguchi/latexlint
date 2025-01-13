@@ -167,9 +167,6 @@ export default function findModifyTargets(
         : s1 + s2 - e1; // + 2 * newText.length
     const newTextCountForCursor = 2 - Number(command.wordStart === s1);
 
-    const gray = '\x1b[90m', green = '\x1b[32m', reset = '\x1b[0m';
-    console.log(`${gray}renameCommand:${reset} Rename from ${green}${originalText}${reset}.`);
-
     return {
         originalText,
         cursorPos,

@@ -80,13 +80,11 @@ function findCorrespondingCommand(text: string, command: Command): Command {
     for (const { regex, delta } of [
         { regex: /\\begin\{.*\}/g, delta: +1 },
         { regex: /\\end\{.*\}/g, delta: -1 }
-    ]) {
-        let match;
-        while ((match = regex.exec(text)) !== null) {
+    ])
+        for (const match of text.matchAll(regex)) {
             if (isInComment(text, match.index)) continue;
             cmdPairs.push({ index: match.index, delta, depth: 0 });
         }
-    }
     cmdPairs.sort((a, b) => a.index - b.index);
 
     // Check if the commands are properly nested

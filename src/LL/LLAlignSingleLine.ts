@@ -3,27 +3,27 @@ import isInComment from '../util/isInComment';
 import ranges2diagnostics from '../util/ranges2diagnostics';
 import { messages } from '../util/constants';
 
-export default function LLAlignSingleLine(doc: vscode.TextDocument): vscode.Diagnostic[] {
-    const text = doc.getText();
-
+export default function LLAlignSingleLine(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
     // Extract all \begin{align} and \end{align} commands
     let cmdPairs = [];
     for (const { regex, delta } of [
-        { regex: /\\begin\{alignat\*\}/g, delta: +1000 },
-        { regex: /\\begin\{alignat\}/g, delta: +100 },
-        { regex: /\\begin\{align\*\}/g, delta: +10 },
-        { regex: /\\begin\{align\}/g, delta: +1 },
-        { regex: /\\end\{align\}/g, delta: -1 },
-        { regex: /\\end\{align\*\}/g, delta: -10 },
-        { regex: /\\end\{alignat\}/g, delta: -100 },
-        { regex: /\\end\{alignat\*\}/g, delta: -1000 },
-    ]) {
-        let match;
-        while ((match = regex.exec(text)) !== null) {
-            if (isInComment(text, match.index)) continue;
+        { regex: /\\begin\{alignat\*\}/g, delta: +1e5 },
+        { regex: /\\begin\{alignat\}/g, delta: +1e4 },
+        { regex: /\\begin\{gather\*\}/g, delta: +1e3 },
+        { regex: /\\begin\{gather\}/g, delta: +1e2 },
+        { regex: /\\begin\{align\*\}/g, delta: +1e1 },
+        { regex: /\\begin\{align\}/g, delta: +1e0 },
+        { regex: /\\end\{align\}/g, delta: -1e0 },
+        { regex: /\\end\{align\*\}/g, delta: -1e1 },
+        { regex: /\\end\{gather\}/g, delta: -1e2 },
+        { regex: /\\end\{gather\*\}/g, delta: -1e3 },
+        { regex: /\\end\{alignat\}/g, delta: -1e4 },
+        { regex: /\\end\{alignat\*\}/g, delta: -1e5 },
+    ])
+        for (const match of txt.matchAll(regex)) {
+            if (isInComment(txt, match.index)) continue;
             cmdPairs.push({ index: match.index, delta, depth: 0 });
         }
-    }
     cmdPairs.sort((a, b) => a.index - b.index);
 
     // Check if the commands are properly coupled
@@ -46,11 +46,12 @@ export default function LLAlignSingleLine(doc: vscode.TextDocument): vscode.Diag
     const ranges = [];
 
     for (let i = 0; i < cmdPairs.length; i += 2) {
+        const textInRange = txt.slice(cmdPairs[i].index, cmdPairs[i + 1].index);
+        if (/\\\\/.test(textInRange)) continue;
         const startPos = doc.positionAt(cmdPairs[i].index);
         const endPos = doc.positionAt(cmdPairs[i + 1].index);
         const range = new vscode.Range(startPos, endPos);
-        const textInRange = doc.getText(new vscode.Range(startPos, endPos));
-        if (!/\\\\/.test(textInRange)) ranges.push(range);
+        ranges.push(range);
     }
 
     const code = 'LLAlignSingleLine';

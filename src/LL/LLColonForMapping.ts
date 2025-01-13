@@ -2,13 +2,16 @@ import * as vscode from 'vscode';
 import { messages } from '../util/constants';
 import ranges2diagnostics from '../util/ranges2diagnostics';
 
+const REGEXPS = [
+    /\\to(?![a-zA-Z])/,
+    /\\mapsto(?![a-zA-Z])/,
+    /\\rightarrow(?![a-zA-Z])/
+];
+
 function testCurrentWord(
     doc: vscode.TextDocument, idx: number, currentWord: string, ranges: vscode.Range[]
 ): boolean {
-    if (['\\\\to', '\\\\mapsto', '\\\\rightarrow'].some(
-        // Equivalent to /\\to(...)/
-        substring => RegExp(`${substring}(?![a-zA-Z])`).test(currentWord))
-    ) {
+    if (REGEXPS.some(regexp => regexp.test(currentWord))) {
         const startPos = doc.positionAt(idx);
         const endPos = startPos.translate(0, 1);
         ranges.push(new vscode.Range(startPos, endPos));
@@ -17,24 +20,22 @@ function testCurrentWord(
     return false;
 }
 
-export default function LLColonForMapping(doc: vscode.TextDocument): vscode.Diagnostic[] {
-    const text = doc.getText();
+export default function LLColonForMapping(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
     const ranges: vscode.Range[] = [];
 
-    const regex = /:/g;
-    for (const match of text.matchAll(regex)) {
+    for (const match of txt.matchAll(/:/g)) {
         let i = match.index + 1;
         let currentWord = '';
         let wordCount = 0;
-        while (i < text.length && wordCount < 10) {
-            const char = text[i];
+        while (i < txt.length && wordCount < 10) {
+            const char = txt[i];
             if (/\s/.test(char)) {
                 if (currentWord) {
                     wordCount++;
                     if (testCurrentWord(doc, match.index, currentWord, ranges)) break;
                     currentWord = '';
                 }
-                while (i < text.length && /\s/.test(text[i])) i++;
+                while (i < txt.length && /\s/.test(txt[i])) i++;
             } else {
                 if (char === '$') {
                     testCurrentWord(doc, match.index, currentWord, ranges);

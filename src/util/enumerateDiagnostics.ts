@@ -20,6 +20,7 @@ import LLUserDefined from '../LL/LLUserDefined';
 export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.Diagnostic[] {
     const config = vscode.workspace.getConfiguration('latexlint').get<string[]>('config') || [];
     const diagnostics: vscode.Diagnostic[] = [];
+    const txt = doc.getText();
     for (const [ruleName, rule] of Object.entries({
         LLAlignAnd,
         LLAlignEnd,
@@ -40,7 +41,7 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
         LLUserDefined,
     })) {
         if (config.includes(ruleName)) continue;
-        diagnostics.push(...rule(doc));
+        diagnostics.push(...rule(doc, txt));
     }
     return diagnostics;
 }

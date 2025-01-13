@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import regex2diagnostics from '../util/regex2diagnostics';
 
-export default function LLUserDefined(doc: vscode.TextDocument): vscode.Diagnostic[] {
+export default function LLUserDefined(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
     let userDefinedRules = vscode.workspace.getConfiguration('latexlint').get<string[]>('userDefinedRules') || [];
     if (!userDefinedRules) return [];
 
@@ -14,7 +14,7 @@ export default function LLUserDefined(doc: vscode.TextDocument): vscode.Diagnost
             vscode.window.showErrorMessage(`'${rule}' in userDefinedRules is invalid. Please check the regex in the settings.json.`);
             continue;
         }
-        diagnostics.push(...regex2diagnostics(doc, "LLUserDefined", regex));
+        diagnostics.push(...regex2diagnostics(doc, txt, "LLUserDefined", regex));
     }
     return diagnostics;
 }

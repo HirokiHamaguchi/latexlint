@@ -26,7 +26,7 @@ async function testFindModifyTargetsTex() {
 		const end = new vscode.Position(ln, col);
 		editor.selection = new vscode.Selection(start, end);
 		editor.revealRange(editor.selection);
-		await new Promise(resolve => setTimeout(resolve, 100));
+		await new Promise(resolve => setTimeout(resolve, 50));
 		assert.notStrictEqual(findModifyTargets(editor.selection, editor.document), undefined);
 	}
 }
@@ -52,7 +52,7 @@ async function testFindModifyTargetsMd() {
 		const end = new vscode.Position(ln, col);
 		editor.selection = new vscode.Selection(start, end);
 		editor.revealRange(editor.selection);
-		await new Promise(resolve => setTimeout(resolve, 100));
+		await new Promise(resolve => setTimeout(resolve, 50));
 		assert.notStrictEqual(findModifyTargets(editor.selection, editor.document), undefined);
 	}
 }

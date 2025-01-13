@@ -14,6 +14,12 @@ All notable changes to the "latexlint" extension will be documented in this file
 - `LLEtAl`: Detect `et al.`.
 - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`.
 
+## 1.3.6 - 2025-01-14
+
+- Refactor to speed up.
+- Add `gather` to `LLAlignSingleLine`.
+- Add `onDidOpenTextDocument` to `activate`.
+
 ## 1.3.5 - 2025-01-13
 
 - Add selectRule as a new command.

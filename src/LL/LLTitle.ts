@@ -3,32 +3,26 @@ import toTitleCase from '../util/toTitleCase';
 import { extensionDisplayName, severity, messages } from '../util/constants';
 import { getCodeWithURI } from '../util/getCodeWithURI';
 
-export default function LLTitle(doc: vscode.TextDocument): vscode.Diagnostic[] {
+export default function LLTitle(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
     if (doc.languageId !== "latex") return [];
-
-    const text = doc.getText();
-    const backslashPositions: number[] = Array.from(text.matchAll(/\\/g), match => match.index);
 
     const code = 'LLTitle';
     const diagnostics: vscode.Diagnostic[] = [];
 
-    for (const backslashIndex of backslashPositions)
-        for (const commands of [
-            "title",
-            "section", "subsection", "subsubsection",
-            "paragraph", "subparagraph"
-        ]) {
-            if (!text.startsWith(`\\${commands}{`, backslashIndex)) continue;
-            let index = backslashIndex + `\\${commands}{`.length;
+    for (const commands of [
+        "title", "section", "subsection", "subsubsection", "paragraph", "subparagraph"
+    ])
+        for (const match of txt.matchAll(new RegExp(`\\\\${commands}{`, 'g'))) {
+            let index = match.index + `\\${commands}{`.length;
             const beginIndex = index;
             let braceCount = 1;
-            while (braceCount > 0 && index < text.length) {
-                if (text[index] === '{') braceCount++;
-                else if (text[index] === '}') braceCount--;
+            while (braceCount > 0 && index < txt.length) {
+                if (txt[index] === '{') braceCount++;
+                else if (txt[index] === '}') braceCount--;
                 index++;
             }
             const endIndex = index - 1;
-            const sectionText = text.slice(beginIndex, endIndex);
+            const sectionText = txt.slice(beginIndex, endIndex);
             const titleCaseText = toTitleCase(sectionText);
             if (sectionText === titleCaseText) continue;
             const L = doc.positionAt(beginIndex);

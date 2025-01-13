@@ -10,6 +10,10 @@ All notable changes to the "latexlint" extension will be documented in this file
 - `LLEtAl`: Detect `et al.`.
 - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`.
 
+## 1.4.1 - 2025-01-13
+
+- Slight change of doc and README.md.
+
 ## 1.4.0 - 2025-01-13
 
 - Add `LLBig`, `LLBracketRound`, `LLBracketCurly` rules.

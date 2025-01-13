@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import findModifyTargets from './findModifyTargets';
+import findModifyTargets from '../util/findModifyTargets';
 
 export default async function renameCommand(editor: vscode.TextEditor) {
     if (editor.selections.length !== 1 || editor.selection.start.line !== editor.selection.end.line) {

@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 import regex2diagnostics from '../util/regex2diagnostics';
 
 export default function LLUserDefined(doc: vscode.TextDocument): vscode.Diagnostic[] {
-    let userDefinedRules = vscode.workspace.getConfiguration('latexlint').get('userDefinedRules') as string[];
+    let userDefinedRules = vscode.workspace.getConfiguration('latexlint').get<string[]>('userDefinedRules') || [];
     if (!userDefinedRules) return [];
 
     const diagnostics: vscode.Diagnostic[] = [];

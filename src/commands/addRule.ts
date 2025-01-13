@@ -28,11 +28,7 @@ export default async function addRule(editor: vscode.TextEditor, diagnosticsColl
     } else  // https://stackoverflow.com/questions/3446170/escape-string-for-use-in-javascript-regex
         regexRule = rule.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
-    const config = vscode.workspace.getConfiguration('latexlint').get('userDefinedRules') as string[];
-    if (config === undefined) {
-        vscode.window.showErrorMessage('Bug: Could not find userDefinedRules in the configuration.');
-        return;
-    }
+    const config = vscode.workspace.getConfiguration('latexlint').get<string[]>('userDefinedRules') || [];
     config.push(regexRule);
     await vscode.workspace.getConfiguration('latexlint').update('userDefinedRules', config, vscode.ConfigurationTarget.Workspace);
     vscode.window.showInformationMessage(`Your rule '${regexRule}' has been added.`);

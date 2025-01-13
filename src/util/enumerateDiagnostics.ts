@@ -18,7 +18,7 @@ import LLTitle from '../LL/LLTitle';
 import LLUserDefined from '../LL/LLUserDefined';
 
 export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.Diagnostic[] {
-    const config = vscode.workspace.getConfiguration('latexlint').get('config') as string[];
+    const config = vscode.workspace.getConfiguration('latexlint').get<string[]>('config') || [];
     const diagnostics: vscode.Diagnostic[] = [];
     for (const [ruleName, rule] of Object.entries({
         LLAlignAnd,

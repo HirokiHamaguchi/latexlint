@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 
 export const extensionDisplayName = 'LaTeX Lint';
 
-const LLCodeStrings = [
+export const LLCodeStrings = [
     'LLAlignAnd',
     'LLAlignEnd',
     'LLAlignSingleLine',

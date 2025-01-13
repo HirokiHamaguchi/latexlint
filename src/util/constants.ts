@@ -2,24 +2,27 @@ import * as vscode from 'vscode';
 
 export const extensionDisplayName = 'LaTeX Lint';
 
-export type LLCode =
-    'LLAlignAnd' |
-    'LLAlignEnd' |
-    'LLAlignSingleLine' |
-    'LLColonEqq' |
-    'LLColonForMapping' |
-    'LLCref' |
-    'LLDoubleQuotes' |
-    'LLENDash' |
-    'LLEqnarray' |
-    'LLNonASCII' |
-    'LLLlGg' |
-    'LLRefEq' |
-    'LLSharp' |
-    'LLSI' |
-    'LLT' |
-    'LLTitle' |
-    'LLUserDefined';
+const LLCodeStrings = [
+    'LLAlignAnd',
+    'LLAlignEnd',
+    'LLAlignSingleLine',
+    'LLColonEqq',
+    'LLColonForMapping',
+    'LLCref',
+    'LLDoubleQuotes',
+    'LLENDash',
+    'LLEqnarray',
+    'LLNonASCII',
+    'LLLlGg',
+    'LLRefEq',
+    'LLSharp',
+    'LLSI',
+    'LLT',
+    'LLTitle',
+    'LLUserDefined',
+];
+
+export type LLCode = typeof LLCodeStrings[number];
 
 export const messages: Record<LLCode, string> = {
     LLAlignAnd: '=& might be better written as ={}& to avoid spacing issues if it is in an align environment.',

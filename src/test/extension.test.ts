@@ -2,8 +2,8 @@ import * as assert from 'assert';
 import * as vscode from 'vscode';
 import * as path from 'path';
 
-import findModifyTargets from '../commands/findModifyTargets';
-import enumerateDiagnostics from '../commands/enumerateDiagnostics';
+import findModifyTargets from '../util/findModifyTargets';
+import enumerateDiagnostics from '../util/enumerateDiagnostics';
 
 async function testFindModifyTargetsTex() {
 	const uri = vscode.Uri.file(path.resolve(__dirname, '../../sample/otherFeature.tex'));

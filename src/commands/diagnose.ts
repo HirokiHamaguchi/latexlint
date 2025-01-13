@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import enumerateDiagnostics from './enumerateDiagnostics';
+import enumerateDiagnostics from '../util/enumerateDiagnostics';
 
 export default function diagnose(
     doc: vscode.TextDocument,

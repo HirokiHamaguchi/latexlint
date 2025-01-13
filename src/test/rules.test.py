@@ -15,7 +15,7 @@ def getPackageJson():
 
 
 def getEnumerateDiagnostics():
-    with open(curPath + "/../../src/commands/enumerateDiagnostics.ts") as f:
+    with open(curPath + "/../../src/util/enumerateDiagnostics.ts") as f:
         lines = f.readlines()
         for i, line in enumerate(lines):
             if "Object.entries" in line:

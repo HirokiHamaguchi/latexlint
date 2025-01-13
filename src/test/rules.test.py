@@ -1,5 +1,6 @@
 import json
 import os
+from glob import glob
 
 curPath = os.path.dirname(os.path.abspath(__file__))
 
@@ -39,12 +40,21 @@ def getMarkDown():
     return set(LLs)
 
 
+def getFileNames():
+    files = glob(curPath + "/../../src/LL/*.ts")
+    fileNames = set()
+    for file in files:
+        fileNames.add(os.path.basename(file)[:-3])
+    return fileNames
+
+
 def main():
     packageJsonSet = getPackageJson()
     enumerateDiagnosticsSet = getEnumerateDiagnostics()
     markdownSet = getMarkDown()
+    fileNames = getFileNames()
 
-    assert enumerateDiagnosticsSet == markdownSet == packageJsonSet
+    assert enumerateDiagnosticsSet == markdownSet == packageJsonSet == fileNames
 
     print("rules.test.py ok!")
 

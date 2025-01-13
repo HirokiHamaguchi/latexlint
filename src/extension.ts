@@ -6,7 +6,7 @@ import renameCommand from './commands/renameCommand';
 import toggleLinting from './commands/toggleLinting';
 import { extensionDisplayName } from './util/constants';
 import getEditor from './util/getEditor';
-import removeRule from './commands/removeRule';
+import selectRule from './commands/selectRule';
 
 export function activate(context: vscode.ExtensionContext) {
 	console.log('"latexlint" is now activated.');
@@ -36,9 +36,8 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 	context.subscriptions.push(disposableDiagnose);
 
-	// Not shown in the command palette
-	const disposableRemoveRule = vscode.commands.registerCommand('latexlint.removeRule', removeRule);
-	context.subscriptions.push(disposableRemoveRule);
+	const disposableSelectRule = vscode.commands.registerCommand('latexlint.selectRule', selectRule);
+	context.subscriptions.push(disposableSelectRule);
 
 	const disposableRenameCommand = vscode.commands.registerCommand('latexlint.renameCommand', () => {
 		const editor = getEditor(true, true);
@@ -62,7 +61,7 @@ export function activate(context: vscode.ExtensionContext) {
 			const editor = getEditor(false, isEnabled);
 			if (!editor) return;
 			diagnose(editor.document, diagnosticsCollection, false);
-		}, 300);
+		}, 500);
 	});
 }
 

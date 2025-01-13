@@ -44,9 +44,7 @@ def main():
     enumerateDiagnosticsSet = getEnumerateDiagnostics()
     markdownSet = getMarkDown()
 
-    assert enumerateDiagnosticsSet == markdownSet
-    assert len(enumerateDiagnosticsSet) == len(packageJsonSet) + 1
-    assert enumerateDiagnosticsSet == packageJsonSet | {"LLUserDefined"}
+    assert enumerateDiagnosticsSet == markdownSet == packageJsonSet
 
     print("rules.test.py ok!")
 

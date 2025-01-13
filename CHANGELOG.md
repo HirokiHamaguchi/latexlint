@@ -4,16 +4,19 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 ## [Unreleased]
 
-- Detect `dx` after `\int`. It should be `\ddx`.
 - Expand rename targets from `name` to `\begin{name}`.
 - Allow exceptions for `LLAlignEnd` and `LLTitle` via `latexlint.exceptions` in `settings.json`.
-- Add Quick Fix to disable some rule.
 - `LLNonRef`: Detect non-referenced figures.
 - `LLBig`: Detect `\vee_`,`\wedge_`.`uplus_`,`\cap_`,`\cup_`,`\otimes_`,`\oplus_`,`\odot_`,`\sqcup_`.
 - `LLParens`: Detect `\sqrt(`,`^(`,`_(`.
 - `LLBraces`: Detect `\min{`,`\max{`.
 - `LLArrow`: Detect `->` in TikZ.
 - `LLEtAl`: Detect `et al.`.
+- `LLDx`: Detect `dx` after `\int`. It should be `\ddx`.
+
+## 1.3.5 - 2025-01-13
+
+- Add selectRule as a new command.
 
 ## 1.3.4 - 2025-01-13
 

@@ -53,6 +53,11 @@
       },
       {
         "category": "LaTeX Lint",
+        "command": "latexlint.selectRule",
+        "title": "Select Rule to Detect"
+      },
+      {
+        "category": "LaTeX Lint",
         "command": "latexlint.toggleLinting",
         "title": "Enable/Disable LaTeX Lint",
         "icon": {
@@ -105,7 +110,8 @@
               "LLSharp",
               "LLSI",
               "LLT",
-              "LLTitle"
+              "LLTitle",
+              "LLUserDefined"
             ],
             "uniqueItems": true
           },

@@ -43,5 +43,5 @@ $$
 
 The Wolfram Alpha page with adjusted expressions will open as in Figure 2.
 
-![Wolfram Alpha](../images/WolframAlpha.png)
+![Wolfram Alpha](../images/askWolframAlpha3.png)
 **Figure 2:** Wolfram Alpha

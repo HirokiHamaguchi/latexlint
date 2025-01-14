@@ -223,7 +223,7 @@ In order to detect this pattern, we seek `\to`,`\mapsto` and `\rightarrow` after
 
 Detect `\ref` in `.tex` files.
 You should likely use `\cref` or `\Cref` in [cleveref](https://ctan.org/pkg/cleveref) package instead.
-By default, this rules is disabled by `latexlint.config` in `settings.json`.
+By default, this rules is disabled by `latexlint.disabledRules` in `settings.json`.
 
 We prefer this package because it can automatically add prefixes like "Sec." or "Fig.". We can keep the consistency of the reference format.
 

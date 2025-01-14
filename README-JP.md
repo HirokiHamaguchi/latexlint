@@ -127,7 +127,7 @@ Cite some references.
 
 `.tex`ファイル内の、`\ref`を検出します。
 代わりに、[cleveref](https://ctan.org/pkg/cleveref)パッケージの`\cref`や`\Cref`を使用するのが望ましいです。
-デフォルトでこのルールは`settings.json`の`latexlint.config`にて無効化されています。
+デフォルトでこのルールは`settings.json`の`latexlint.disabledRules`にて無効化されています。
 
 このパッケージは、"Sec."や"Fig."のような接頭辞を自動的に追加することができ、参照フォーマットの一貫性を保つのに役立ちます。
 

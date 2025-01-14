@@ -21,7 +21,8 @@ import LLTitle from '../LL/LLTitle';
 import LLUserDefined from '../LL/LLUserDefined';
 
 export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.Diagnostic[] {
-    const config = vscode.workspace.getConfiguration('latexlint').get<string[]>('config') || [];
+    const disabledRules = vscode.workspace.getConfiguration('latexlint').get<string[]>('disabledRules') || [];
+    const exceptions = vscode.workspace.getConfiguration('latexlint').get<string[]>('exceptions') || [];
     const diagnostics: vscode.Diagnostic[] = [];
     const txt = doc.getText();
     for (const [ruleName, rule] of Object.entries({
@@ -46,8 +47,10 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
         LLTitle,
         LLUserDefined,
     })) {
-        if (config.includes(ruleName)) continue;
-        diagnostics.push(...rule(doc, txt));
+        if (disabledRules.includes(ruleName)) continue;
+        for (const diagnostic of rule(doc, txt))
+            if (!exceptions.includes(doc.getText(diagnostic.range)))
+                diagnostics.push(diagnostic);
     }
     return diagnostics;
 }

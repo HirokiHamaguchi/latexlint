@@ -7,6 +7,7 @@ import toggleLinting from './commands/toggleLinting';
 import { extensionDisplayName } from './util/constants';
 import getEditor from './util/getEditor';
 import selectRule from './commands/selectRule';
+import registerException from './commands/registerException';
 
 export function activate(context: vscode.ExtensionContext) {
 	console.log('"latexlint" is now activated.');
@@ -35,6 +36,13 @@ export function activate(context: vscode.ExtensionContext) {
 		diagnose(editor.document, diagnosticsCollection, true);
 	});
 	context.subscriptions.push(disposableDiagnose);
+
+	const disposableRegisterException = vscode.commands.registerCommand('latexlint.registerException', () => {
+		const editor = getEditor(true, isEnabled);
+		if (!editor) return;
+		registerException(editor, diagnosticsCollection);
+	});
+	context.subscriptions.push(disposableRegisterException);
 
 	const disposableSelectRule = vscode.commands.registerCommand('latexlint.selectRule', selectRule);
 	context.subscriptions.push(disposableSelectRule);

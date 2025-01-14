@@ -48,6 +48,11 @@
       },
       {
         "category": "LaTeX Lint",
+        "command": "latexlint.registerException",
+        "title": "Register Exception"
+      },
+      {
+        "category": "LaTeX Lint",
         "command": "latexlint.renameCommand",
         "title": "Rename \\begin{} or \\end{}"
       },
@@ -88,9 +93,14 @@
         "latexlint.userDefinedRules": {
           "type": "array",
           "default": [],
-          "description": "User defined Regex rules for LaTeX Lint"
+          "description": "User defined Regex rules"
         },
-        "latexlint.config": {
+        "latexlint.exceptions": {
+          "type": "array",
+          "default": [],
+          "description": "Exception words"
+        },
+        "latexlint.disabledRules": {
           "type": "array",
           "items": {
             "type": "string",
@@ -121,7 +131,7 @@
           "default": [
             "LLCref"
           ],
-          "description": "Rules excluded from LaTeX Lint"
+          "description": "Disabled rules"
         }
       }
     }

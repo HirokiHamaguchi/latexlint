@@ -185,7 +185,7 @@ You should likely use `\bigcap`, `\bigcup`, `\bigodot`, `\bigoplus`, `\bigotimes
 
 ### LLBracketCurly
 
-Detect `\max{` and `\min{` in `.tex` files.
+Detect `\max{` and `\min{` in `.tex` or `.md` files.
 You should likely use `\max(` and `\min(` instead, or add a space after `\max` or `\min` to clarify.
 
 ![doc/LLBracketCurly](https://github.com/hari64boli64/latexlint/blob/master/doc/LLBracketCurly.png?raw=true)

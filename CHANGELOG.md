@@ -6,9 +6,14 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 - Allow exceptions for `LLAlignEnd` and `LLTitle` via `latexlint.exceptions` in `settings.json`.
 - `LLNonRef`: Detect non-referenced figures.
-- `LLArrow`: Detect `->` in TikZ.
-- `LLEtAl`: Detect `et al.`.
-- `LLDx`: Detect `dx` after `\int`. It should be `\ddx`.
+- `LLMid`: Detect `mid` in `\left` and `\right`.
+- `LLEgIe`: Detect `i.e.`. H.H.
+<!-- - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. -->
+
+## 1.4.2 - 2025-01-13
+
+- Ignore "" in comments.
+- Fix bug.
 
 ## 1.4.1 - 2025-01-13
 

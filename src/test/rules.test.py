@@ -9,7 +9,7 @@ def getPackageJson():
     with open(curPath + "/../../package.json") as f:
         package = json.load(f)
         configs = package["contributes"]["configuration"]["properties"][
-            "latexlint.config"
+            "latexlint.disabledRules"
         ]
         enum = configs["items"]["enum"]
     return set(enum)

@@ -29,6 +29,11 @@ export default async function addRule(editor: vscode.TextEditor, diagnosticsColl
         regexRule = rule.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
     const config = vscode.workspace.getConfiguration('latexlint').get<string[]>('userDefinedRules') || [];
+    if (config.includes(regexRule)) {
+        vscode.window.showErrorMessage(`The rule '${regexRule}' already exists.`);
+        return;
+    }
+
     config.push(regexRule);
     await vscode.workspace.getConfiguration('latexlint').update('userDefinedRules', config, vscode.ConfigurationTarget.Workspace);
     vscode.window.showInformationMessage(`Your rule '${regexRule}' has been added.`);

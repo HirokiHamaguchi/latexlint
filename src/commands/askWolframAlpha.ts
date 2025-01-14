@@ -1,13 +1,18 @@
 import * as vscode from 'vscode';
 
+export function askWolframAlphaLogic(selection: string) {
+    for (const [command, replaced] of [["qty", ""], ["left", ""], ["right", ""], ["dd", "d"]])
+        selection = selection.replace(new RegExp(`\\\\${command}(?![a-zA-Z])`, 'g'), replaced);
+    return selection;
+}
+
 export default function askWolframAlpha(editor: vscode.TextEditor) {
     let selection = editor.document.getText(editor.selection);
     if (!selection) {
         vscode.window.showErrorMessage('No text selected');
         return;
     }
-    for (const [command, replaced] of [["qty", ""], ["left", ""], ["right", ""], ["dd", "d"]])
-        selection = selection.replace(new RegExp(`\\\\${command}(?![a-zA-Z])`, 'g'), replaced);
+    selection = askWolframAlphaLogic(selection);
     // https://github.com/microsoft/vscode/issues/85930#issuecomment-1364571443
     // @ts-ignore
     vscode.env.openExternal("https://www.wolframalpha.com/input/?i=" + encodeURIComponent(selection));

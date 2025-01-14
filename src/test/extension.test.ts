@@ -60,7 +60,7 @@ async function testFindModifyTargetsMd() {
 async function testEnumerateDiagnosticsTex() {
 	const uri = vscode.Uri.file(path.resolve(__dirname, '../../sample/lint.tex'));
 	if (!await vscode.workspace.fs.stat(uri)) throw new Error('File not found');
-	await vscode.workspace.getConfiguration('latexlint').update('config', [], vscode.ConfigurationTarget.Global);
+	await vscode.workspace.getConfiguration('latexlint').update('disabledRules', [], vscode.ConfigurationTarget.Global);
 	await vscode.workspace.getConfiguration('latexlint').update('userDefinedRules', ["f\\^a"], vscode.ConfigurationTarget.Global);
 	const document = await vscode.workspace.openTextDocument(uri);
 	const diagnostics = enumerateDiagnostics(document);
@@ -70,7 +70,7 @@ async function testEnumerateDiagnosticsTex() {
 async function testEnumerateDiagnosticsMd() {
 	const uri = vscode.Uri.file(path.resolve(__dirname, '../../sample/lint.md'));
 	if (!await vscode.workspace.fs.stat(uri)) throw new Error('File not found');
-	await vscode.workspace.getConfiguration('latexlint').update('config', [], vscode.ConfigurationTarget.Global);
+	await vscode.workspace.getConfiguration('latexlint').update('disabledRules', [], vscode.ConfigurationTarget.Global);
 	await vscode.workspace.getConfiguration('latexlint').update('userDefinedRules', ["f\\^a"], vscode.ConfigurationTarget.Global);
 	const document = await vscode.workspace.openTextDocument(uri);
 	const diagnostics = enumerateDiagnostics(document);

@@ -95,7 +95,6 @@
 			]
 		},
 	],
-	"latexlint.config": [],
 	"latexlint.userDefinedRules": [
 		"f\\^a"
 	],

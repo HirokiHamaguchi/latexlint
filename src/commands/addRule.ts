@@ -1,7 +1,11 @@
 import * as vscode from 'vscode';
 import diagnose from './diagnose';
+import getEditor from '../util/getEditor';
 
-export default async function addRule(editor: vscode.TextEditor, diagnosticsCollection: vscode.DiagnosticCollection) {
+export default async function addRule(isEnabled: boolean, diagnosticsCollection: vscode.DiagnosticCollection) {
+    const editor = getEditor(true, isEnabled);
+    if (!editor) return;
+
     const selected = editor.document.getText(editor.selection);
 
     const selection = await vscode.window.showQuickPick(

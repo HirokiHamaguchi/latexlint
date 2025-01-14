@@ -1,10 +1,15 @@
 import * as vscode from 'vscode';
 import findModifyTargets from '../util/findModifyTargets';
+import getEditor from '../util/getEditor';
 
-export default async function renameCommand(editor: vscode.TextEditor) {
+
+export default async function renameCommand() {
+    const editor = getEditor(true, true);
+    if (!editor) return;
+
     if (editor.selections.length !== 1 || editor.selection.start.line !== editor.selection.end.line) {
         vscode.window.showErrorMessage('Only select the content in \\begin{...} or \\end{...} to rename.');
-        return undefined;
+        return;
     }
 
     const doc = editor.document;

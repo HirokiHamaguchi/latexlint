@@ -2,32 +2,27 @@ import * as vscode from 'vscode';
 import addRule from './commands/addRule';
 import askWolframAlpha from './commands/askWolframAlpha';
 import diagnose from './commands/diagnose';
+import registerException from './commands/registerException';
 import renameCommand from './commands/renameCommand';
+import selectRule from './commands/selectRule';
 import toggleLinting from './commands/toggleLinting';
 import { extensionDisplayName } from './util/constants';
 import getEditor from './util/getEditor';
-import selectRule from './commands/selectRule';
-import registerException from './commands/registerException';
 
 export function activate(context: vscode.ExtensionContext) {
 	console.log('"latexlint" is now activated.');
 
-	const diagnosticsCollection = vscode.languages.createDiagnosticCollection(extensionDisplayName);
-	context.subscriptions.push(diagnosticsCollection);
 	let isEnabled = true;
 
+	const diagnosticsCollection = vscode.languages.createDiagnosticCollection(extensionDisplayName);
+	context.subscriptions.push(diagnosticsCollection);
+
 	const disposableAddLLRule = vscode.commands.registerCommand('latexlint.addRule', () => {
-		const editor = getEditor(true, isEnabled);
-		if (!editor) return;
-		addRule(editor, diagnosticsCollection);
+		addRule(isEnabled, diagnosticsCollection);
 	});
 	context.subscriptions.push(disposableAddLLRule);
 
-	const disposableAskWolframAlpha = vscode.commands.registerCommand('latexlint.askWolframAlpha', () => {
-		const editor = getEditor(true, true);
-		if (!editor) return;
-		askWolframAlpha(editor);
-	});
+	const disposableAskWolframAlpha = vscode.commands.registerCommand('latexlint.askWolframAlpha', askWolframAlpha);
 	context.subscriptions.push(disposableAskWolframAlpha);
 
 	const disposableDiagnose = vscode.commands.registerCommand('latexlint.diagnose', () => {
@@ -38,27 +33,18 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(disposableDiagnose);
 
 	const disposableRegisterException = vscode.commands.registerCommand('latexlint.registerException', () => {
-		const editor = getEditor(true, isEnabled);
-		if (!editor) return;
-		registerException(editor, diagnosticsCollection);
+		registerException(isEnabled, diagnosticsCollection);
 	});
 	context.subscriptions.push(disposableRegisterException);
 
 	const disposableSelectRule = vscode.commands.registerCommand('latexlint.selectRule', selectRule);
 	context.subscriptions.push(disposableSelectRule);
 
-	const disposableRenameCommand = vscode.commands.registerCommand('latexlint.renameCommand', () => {
-		const editor = getEditor(true, true);
-		if (!editor) return;
-		renameCommand(editor);
-	});
+	const disposableRenameCommand = vscode.commands.registerCommand('latexlint.renameCommand', renameCommand);
 	context.subscriptions.push(disposableRenameCommand);
 
 	const disposableToggleLinting = vscode.commands.registerCommand('latexlint.toggleLinting', () => {
-		const editor = getEditor(true, true);
-		if (!editor) return;
-		isEnabled = !isEnabled;
-		toggleLinting(editor.document, diagnosticsCollection, isEnabled);
+		isEnabled = toggleLinting(diagnosticsCollection, isEnabled);
 	});
 	context.subscriptions.push(disposableToggleLinting);
 

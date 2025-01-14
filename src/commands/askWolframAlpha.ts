@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import getEditor from '../util/getEditor';
 
 export function askWolframAlphaLogic(selection: string) {
     for (const [command, replaced] of [["qty", ""], ["left", ""], ["right", ""], ["dd", "d"]])
@@ -6,7 +7,10 @@ export function askWolframAlphaLogic(selection: string) {
     return selection;
 }
 
-export default function askWolframAlpha(editor: vscode.TextEditor) {
+export default function askWolframAlpha() {
+    const editor = getEditor(true, true);
+    if (!editor) return;
+
     let selection = editor.document.getText(editor.selection);
     if (!selection) {
         vscode.window.showErrorMessage('No text selected');

@@ -10,6 +10,11 @@ All notable changes to the "latexlint" extension will be documented in this file
 - `LLEgIe`: Detect `i.e.`. H.H.
 <!-- - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. -->
 
+## 1.4.3 - 2025-01-15
+
+- Add `registerException` command.
+- Fix `toggleLinting` command.
+
 ## 1.4.2 - 2025-01-13
 
 - Ignore "" in comments.

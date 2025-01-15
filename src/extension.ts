@@ -61,12 +61,12 @@ export function activate(context: vscode.ExtensionContext) {
 	// Only once on activation. Diagnose all open documents.
 	vscode.workspace.textDocuments.forEach((document) => {
 		if (document.languageId !== 'latex' && document.languageId !== 'markdown') return;
-		diagnose(document, diagnosticsCollection, false);
+		if (isEnabled) diagnose(document, diagnosticsCollection, false);
 	});
 
 	vscode.workspace.onDidOpenTextDocument((document) => {
 		if (document.languageId !== 'latex' && document.languageId !== 'markdown') return;
-		diagnose(document, diagnosticsCollection, false);
+		if (isEnabled) diagnose(document, diagnosticsCollection, false);
 	});
 }
 

@@ -3,7 +3,7 @@ import * as vscode from 'vscode';
 export default function getEditor(showMessage: boolean, isEnabled: boolean): vscode.TextEditor | null {
     const editor = vscode.window.activeTextEditor;
     if (!editor) {
-        if (showMessage) vscode.window.showErrorMessage('No active editor.');
+        if (showMessage) vscode.window.showErrorMessage('No active editor. Open a LaTeX or Markdown file and try again.');
         return null;
     }
     if (editor.document.languageId !== 'latex' && editor.document.languageId !== 'markdown') {

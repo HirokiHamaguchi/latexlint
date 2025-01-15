@@ -15,5 +15,9 @@
                 "pdflatex"
             ]
         },
+    ],
+    "latexlint.exceptions": [
+        "Exception handling",
+        "Second-Order"
     ]
 }

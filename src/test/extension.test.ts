@@ -57,24 +57,27 @@ async function testFindModifyTargetsMd() {
 	}
 }
 
-async function testEnumerateDiagnosticsTex() {
-	const uri = vscode.Uri.file(path.resolve(__dirname, '../../sample/lint.tex'));
+async function testEnumerateDiagnostics(fileName: string, expected: number) {
+	const uri = vscode.Uri.file(path.resolve(__dirname, `../../${fileName}`));
 	if (!await vscode.workspace.fs.stat(uri)) throw new Error('File not found');
 	await vscode.workspace.getConfiguration('latexlint').update('disabledRules', [], vscode.ConfigurationTarget.Global);
 	await vscode.workspace.getConfiguration('latexlint').update('userDefinedRules', ["f\\^a"], vscode.ConfigurationTarget.Global);
 	const document = await vscode.workspace.openTextDocument(uri);
 	const diagnostics = enumerateDiagnostics(document);
-	assert.strictEqual(diagnostics.length, 74);
+	assert.strictEqual(diagnostics.length, expected);
+}
+
+async function testEnumerateDiagnosticsTex() {
+	await testEnumerateDiagnostics("sample/lint.tex", 74);
 }
 
 async function testEnumerateDiagnosticsMd() {
-	const uri = vscode.Uri.file(path.resolve(__dirname, '../../sample/lint.md'));
-	if (!await vscode.workspace.fs.stat(uri)) throw new Error('File not found');
-	await vscode.workspace.getConfiguration('latexlint').update('disabledRules', [], vscode.ConfigurationTarget.Global);
-	await vscode.workspace.getConfiguration('latexlint').update('userDefinedRules', ["f\\^a"], vscode.ConfigurationTarget.Global);
-	const document = await vscode.workspace.openTextDocument(uri);
-	const diagnostics = enumerateDiagnostics(document);
-	assert.strictEqual(diagnostics.length, 56);
+	await testEnumerateDiagnostics("sample/lint.md", 56);
+}
+
+async function testEnumerateDiagnosticsOther() {
+	await vscode.workspace.getConfiguration('latexlint').update('exceptions', ["Exception handling", "Second-Order"], vscode.ConfigurationTarget.Global);
+	await testEnumerateDiagnostics("sample/otherFeature.tex", 2);
 }
 
 suite('Extension Test Suite', () => {
@@ -82,4 +85,5 @@ suite('Extension Test Suite', () => {
 	test('Test findModifyTargetsMd', testFindModifyTargetsMd);
 	test('Test enumerateDiagnosticsTex', testEnumerateDiagnosticsTex);
 	test('Test enumerateDiagnosticsMd', testEnumerateDiagnosticsMd);
+	test('Test enumerateDiagnosticsOther', testEnumerateDiagnosticsOther);
 });

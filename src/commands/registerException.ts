@@ -1,18 +1,21 @@
 import * as vscode from 'vscode';
 import diagnose from './diagnose';
 import getEditor from '../util/getEditor';
+import formatException from '../util/formatException';
 
 export default async function registerException(isEnabled: boolean, diagnosticsCollection: vscode.DiagnosticCollection) {
     const editor = getEditor(true, isEnabled);
     if (!editor) return;
 
-    const selected = editor.document.getText(editor.selection);
+    let selected = editor.document.getText(editor.selection);
+    selected = formatException(selected);
 
-    const exception = await vscode.window.showInputBox({
+    let exception = await vscode.window.showInputBox({
         title: "Enter the exception you want to add",
         value: selected ?? '',
     });
     if (!exception) return;
+    exception = formatException(exception);
 
     const exceptions = vscode.workspace.getConfiguration('latexlint').get<string[]>('exceptions') || [];
     if (exceptions.includes(exception)) {

@@ -19,6 +19,7 @@ import LLSI from '../LL/LLSI';
 import LLT from '../LL/LLT';
 import LLTitle from '../LL/LLTitle';
 import LLUserDefined from '../LL/LLUserDefined';
+import formatException from './formatException';
 
 export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.Diagnostic[] {
     const disabledRules = vscode.workspace.getConfiguration('latexlint').get<string[]>('disabledRules') || [];
@@ -49,7 +50,7 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
     })) {
         if (disabledRules.includes(ruleName)) continue;
         for (const diagnostic of rule(doc, txt))
-            if (!exceptions.includes(doc.getText(diagnostic.range)))
+            if (!exceptions.includes(formatException(doc.getText(diagnostic.range))))
                 diagnostics.push(diagnostic);
     }
     return diagnostics;

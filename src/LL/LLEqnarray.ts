@@ -5,6 +5,6 @@ export default function LLEqnarray(doc: vscode.TextDocument, txt: string): vscod
     return regex2diagnostics(
         doc, txt,
         "LLEqnarray",
-        /\\begin\{eqnarray\}/g,
+        /\\begin\{eqnarray\*?\}/g,
     );
 }

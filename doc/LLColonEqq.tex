@@ -3,7 +3,7 @@
 \usepackage{mathtools}
 \usepackage{siunitx}
 \usepackage{geometry}
-\geometry{paperwidth=6cm, margin=0cm}
+\geometry{paperwidth=5cm, margin=0cm}
 
 \usepackage{xcolor}
 \definecolor{cA}{HTML}{0072BD}
@@ -20,10 +20,10 @@
 \begin{table}[h]
     \centering
     \begin{tabular}{lll}
-        x $\backslash$coloneqq y & $x \coloneqq y$ & \tA{ok} \\
-        x := y                   & $x := y$        & \tD{ng} \\
-        x $\backslash$Coloneqq y & $x \Coloneqq y$ & \tA{ok} \\
-        x ::= y                  & $x ::= y$       & \tD{ng}
+        \verb|\coloneqq| & $x\coloneqq y$ & \tA{ok} \\
+        \verb|\Coloneqq| & $x\Coloneqq y$ & \tA{ok} \\
+        \verb|:=|        & $x:= y$        & \tD{ng} \\
+        \verb|::=|       & $x::= y$       & \tD{ng}
     \end{tabular}
 \end{table}
 \end{document}

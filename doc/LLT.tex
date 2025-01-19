@@ -1,8 +1,10 @@
 \documentclass[preview]{standalone}
 \usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
 \usepackage{siunitx}
 \usepackage{geometry}
-\geometry{paperwidth=6cm, margin=0cm}
+\geometry{paperwidth=5cm, margin=0cm}
 
 \usepackage{xcolor}
 \definecolor{cA}{HTML}{0072BD}
@@ -16,11 +18,12 @@
 \newcommand{\tD}[1]{\textcolor{cD}{#1}}
 
 \begin{document}
-\begin{table}[h]
+\begin{table}[H]
     \centering
     \begin{tabular}{lll}
-        \verb|\SI{1}{\kilo\byte}| & \SI{1}{\kilo\byte} & \tA{ok} \\
-        \verb|1kB|                & 1kB                & \tD{ng}
+        \verb|^\top|         & $X^\top$         & \tA{ok} \\
+        \verb|^{\mathsf{T}}| & $X^{\mathsf{T}}$ & \tA{ok} \\
+        \verb|^T|            & $X^T$            & \tD{ng}
     \end{tabular}
 \end{table}
 \end{document}

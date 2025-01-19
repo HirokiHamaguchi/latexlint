@@ -5,8 +5,15 @@
 \usepackage{siunitx}
 \usepackage[T1]{fontenc}
 \usepackage{geometry}
-\geometry{paperwidth=10cm, margin=0cm}
+\geometry{paperwidth=5cm, margin=0cm}
 
 \begin{document}
-hyphen(-) A-B, en-dash(-{}-) A--B, em-dash(-{}-{}-) A---B
+\begin{table}[h]
+    \centering
+    \begin{tabular}{ll}
+        \verb|hyphen (-)|    & A-B   \\
+        \verb|en-dash (--)|  & A--B  \\
+        \verb|em-dash (---)| & A---B
+    \end{tabular}
+\end{table}
 \end{document}

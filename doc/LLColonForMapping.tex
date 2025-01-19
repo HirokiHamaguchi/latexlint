@@ -4,7 +4,7 @@
 \usepackage{amssymb}
 \usepackage{siunitx}
 \usepackage{geometry}
-\geometry{paperwidth=12cm, margin=0cm}
+\geometry{paperwidth=5cm, margin=0cm}
 
 \usepackage{xcolor}
 \definecolor{cA}{HTML}{0072BD}
@@ -21,10 +21,10 @@
 \begin{table}[h]
     \centering
     \begin{tabular}{lll}
-        \text{A :                 B}                                                            & $A : B$                              & \tA{ok} \\
-        \text{A $\backslash$colon B}                                                            & $A\colon B$                          & \tD{ng} \\
-        \text{f :                 $\backslash$mathbb\{R\}$\backslash$to$\backslash$mathbb\{R\}} & $f : \mathbb{R} \to \mathbb{R}$      & \tD{ng} \\
-        \text{f $\backslash$colon $\backslash$mathbb\{R\}$\backslash$to$\backslash$mathbb\{R\}} & $f \colon \mathbb{R} \to \mathbb{R}$ & \tA{ok}
+        \verb|A:B|       & $A:B$                               & \tA{ok} \\
+        \verb|A\colon B| & $A\colon B$                         & \tD{ng} \\
+        \verb|f:|        & $f:\mathbb{R} \to \mathbb{R}$       & \tD{ng} \\
+        \verb|f\colon|   & $f\colon \mathbb{R} \to \mathbb{R}$ & \tA{ok}
     \end{tabular}
 \end{table}
 \end{document}

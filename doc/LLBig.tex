@@ -3,7 +3,7 @@
 \usepackage{mathtools}
 \usepackage{siunitx}
 \usepackage{geometry}
-\geometry{paperwidth=6cm, margin=0cm}
+\geometry{paperwidth=5cm, margin=0cm}
 
 \usepackage{xcolor}
 \definecolor{cA}{HTML}{0072BD}
@@ -20,9 +20,9 @@
 \begin{table}[h]
     \centering
     \begin{tabular}{lll}
-        $\backslash$cap      & $X_1 \cap X_2$               & \tA{ok} \\
-        $\backslash$cap\_    & $\cap_{i=1}^{\infty} X_i$    & \tD{ng} \\
-        $\backslash$bigcap\_ & $\bigcap_{i=1}^{\infty} X_i$ & \tA{ok} \\
+        \verb|\cap|     & $X_1 \cap X_2$               & \tA{ok} \\
+        \verb|\cap_|    & $\cap_{i=1}^{\infty} X_i$    & \tD{ng} \\
+        \verb|\bigcap_| & $\bigcap_{i=1}^{\infty} X_i$ & \tA{ok} \\
     \end{tabular}
 \end{table}
 \end{document}

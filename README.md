@@ -25,7 +25,7 @@ By opening the command palette (`Ctrl`+`Shift`+`P`) and typing commands, you can
 
 ### LaTeX Lint: Diagnose Current File
 
-Diagnose the current LaTeX or Markdown file.
+Diagnose the current editing LaTeX or Markdown file.
 This command automatically runs when saving the file.
 
 Here is the list of rules we detect, detailed in [Rules](#rules).
@@ -34,8 +34,8 @@ Here is the list of rules we detect, detailed in [Rules](#rules).
 2. [LLAlignEnd](#llalignend) (detect `align` environment ends with `\\`)
 3. [LLAlignSingleLine](#llalignsingleline) (detect `align` environment without `\\`)
 4. [LLBig](#llbig) (detect `\cap_`, `\cup_`, etc.)
-5. [LLBracketCurly](#llbracketcurly) (detect `\max{`, `\min{`, etc.)
-6. [LLBracketRound](#llbracketround) (detect `\sqrt()`, `^()` and `_()`)
+5. [LLBracketCurly](#llbracketcurly) (detect `\max{` and `\min{`.)
+6. [LLBracketRound](#llbracketround) (detect `\sqrt(`, `^(` and `_(`)
 7. [LLColonEqq](#llcoloneqq) (detect `:=`, `=:`,`::=`, and `=::`)
 8. [LLColonForMapping](#llcolonformapping) (detect `:` for mapping)
 9. [LLCref](#llcref) (detect `\ref`, disabled by default)
@@ -150,7 +150,7 @@ You should likely write as `={}&` in the `align` environment.
 
 ![doc/LLAlignAnd](https://github.com/hari64boli64/latexlint/blob/master/doc/LLAlignAnd.png?raw=true)
 
-We also detect `\neq&`, `\leq&`, `\geq&`, `\le&`, `\ge&`, `<&`, and `>&`.
+We also detect `\neq&`, `\leq&`, `\geq&`, `\le&`, `\ge&`, `<&` and `>&`.
 
 As a limitation of this extension, there are some false positives, such as `&=` in the `table` environment.
 
@@ -192,8 +192,8 @@ You should likely use `\max(` and `\min(` instead, or add a space after `\max` o
 
 ### LLBracketRound
 
-Detect `\sqrt()`, `^()` and `_()` in `.tex` or `.md` files.
-You should likely use `\sqrt{}`, `^{}` and `_{}` instead.
+Detect `\sqrt(`, `^(` and `_(` in `.tex` or `.md` files.
+You should likely use `\sqrt{`, `^{` and `_{` instead.
 
 ![doc/LLBracketRound](https://github.com/hari64boli64/latexlint/blob/master/doc/LLBracketRound.png?raw=true)
 
@@ -382,6 +382,8 @@ It would be better to use `\SI` for units such as `m`, `s`, `kg`, `A`, `K`, `mol
 Detect `^T` in `.tex` or `.md` files.
 You likely want to use `^\top` or `^\mathsf{T}` instead to represent the transpose of a matrix or a vector.
 
+![doc/LLT](https://github.com/hari64boli64/latexlint/blob/master/doc/LLT.png?raw=true)
+
 Otherwise, we cannot distinguish between the transpose and the power by a variable `T`.
 
 [Ref by BrownieAlice](https://blog.browniealice.net/post/latex_transpose/).
@@ -445,7 +447,7 @@ We use [MIT License](LICENSE).
 In some aspects, our extension resembles
 
 * LaTeX package [chktex](https://ctan.org/pkg/chktex)
-* VS Code Extension [Markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint).
-* VS Code Extension [LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename).
+* VS Code Extension [Markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
+* VS Code Extension [LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename)
 
 We sincerely appreciate the developers of these tools.

@@ -3,7 +3,7 @@
 \usepackage{mathtools}
 \usepackage{siunitx}
 \usepackage{geometry}
-\geometry{paperwidth=6cm, margin=0cm}
+\geometry{paperwidth=5cm, margin=0cm}
 
 \usepackage{xcolor}
 \definecolor{cA}{HTML}{0072BD}
@@ -20,8 +20,8 @@
 \begin{table}[h]
     \centering
     \begin{tabular}{lll}
-        $\backslash$sqrt\{a\} & $\sqrt{a}$ & \tA{ok} \\
-        $\backslash$sqrt(a)   & $\sqrt(a)$ & \tD{ng} \\
+        \verb|\sqrt{a}| & $\sqrt{a}$ & \tA{ok} \\
+        \verb|\sqrt(a)| & $\sqrt(a)$ & \tD{ng} \\
     \end{tabular}
 \end{table}
 \end{document}

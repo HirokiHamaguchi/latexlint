@@ -3,7 +3,7 @@
 \usepackage{mathtools}
 \usepackage{siunitx}
 \usepackage{geometry}
-\geometry{paperwidth=6cm, margin=0cm}
+\geometry{paperwidth=5cm, margin=0cm}
 
 \usepackage{xcolor}
 \definecolor{cA}{HTML}{0072BD}
@@ -20,9 +20,9 @@
 \begin{table}[h]
     \centering
     \begin{tabular}{lll}
-        $\backslash$max(a,b)    & $\max(a,b)$  & \tA{ok}  \\
-        $\backslash$max\{a,b\}  & $\max{a,b}$  & \tD{ng}  \\
-        $\backslash$max \{a,b\} & $\max {a,b}$ & \tC{ok?}
+        \verb|\max(a,b)|  & $\max(a,b)$  & \tA{ok}  \\
+        \verb|\max{a,b}|  & $\max{a,b}$  & \tD{ng}  \\
+        \verb|\max {a,b}| & $\max {a,b}$ & \tC{ok?}
     \end{tabular}
 \end{table}
 \end{document}

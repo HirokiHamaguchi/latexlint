@@ -1,0 +1,18 @@
+{
+	"latex-workshop.latex.recipes": [
+		{
+			"name": "pdflatex*2",
+			"tools": [
+				"pdflatex",
+				"pdflatex"
+			]
+		},
+		{
+			"name": "uplatex",
+			"tools": [
+				"ptex2pdf (uplatex)",
+				"ptex2pdf (uplatex)",
+			]
+		},
+	],
+}

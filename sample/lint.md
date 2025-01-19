@@ -108,33 +108,33 @@ This is a sample text.
 
 $$
 \begin{gather*}
-  X_1 \cap X_2 \,
-  X_1 \cup X_2 \,
-  X_1 \odot X_2 \,
-  X_1 \oplus X_2 \,
-  X_1 \otimes X_2 \\
-  X_1 \sqcup X_2\,
-  X_1 \uplus X_2 \,
-  X_1 \vee X_2 \,
-  X_1 \wedge X_2 \\
-  \cap_{i=1}^{\infty} X_i \,
-  \cup_{i=1}^{\infty} X_i \,
-  \odot_{i=1}^{\infty} X_i \,
-  \oplus_{i=1}^{\infty} X_i \,
-  \otimes_{i=1}^{\infty} X_i \\
-  \sqcup_{i=1}^{\infty} X_i \,
-  \uplus_{i=1}^{\infty} X_i \,
-  \vee_{i=1}^{\infty} X_i \,
-  \wedge_{i=1}^{\infty} X_i \\
-  \bigcap_{i=1}^{\infty} X_i \,
-  \bigcup_{i=1}^{\infty} X_i \,
-  \bigodot_{i=1}^{\infty} X_i \,
-  \bigoplus_{i=1}^{\infty} X_i \,
-  \bigotimes_{i=1}^{\infty} X_i \,
-  \bigsqcup_{i=1}^{\infty} X_i \,
-  \biguplus_{i=1}^{\infty} X_i \,
-  \bigvee_{i=1}^{\infty} X_i \,
-  \bigwedge_{i=1}^{\infty} X_i
+ X_1 \cap X_2 \quad
+ X_1 \cup X_2 \quad
+ X_1 \odot X_2 \quad
+ X_1 \oplus X_2 \quad
+ X_1 \otimes X_2 \\
+ X_1 \sqcup X_2\quad
+ X_1 \uplus X_2 \quad
+ X_1 \vee X_2 \quad
+ X_1 \wedge X_2 \quad \\
+ \bigcap_{i=1}^{\infty} X_i \quad
+ \bigcup_{i=1}^{\infty} X_i \quad
+ \bigodot_{i=1}^{\infty} X_i \quad
+ \bigoplus_{i=1}^{\infty} X_i \quad
+ \bigotimes_{i=1}^{\infty} X_i \quad
+ \bigsqcup_{i=1}^{\infty} X_i \quad
+ \biguplus_{i=1}^{\infty} X_i \quad
+ \bigvee_{i=1}^{\infty} X_i \quad
+ \bigwedge_{i=1}^{\infty} X_i \\
+ \cap_{i=1}^{\infty} X_i \quad
+ \cup_{i=1}^{\infty} X_i \quad
+ \odot_{i=1}^{\infty} X_i \quad
+ \oplus_{i=1}^{\infty} X_i \quad
+ \otimes_{i=1}^{\infty} X_i \\
+ \sqcup_{i=1}^{\infty} X_i \quad
+ \uplus_{i=1}^{\infty} X_i \quad
+ \vee_{i=1}^{\infty} X_i \quad
+ \wedge_{i=1}^{\infty} X_i
 \end{gather*}
 $$
 
@@ -163,27 +163,27 @@ We detect all of `:` in the following.
 
 Here are examples of colons we detect:
 
-* $X:Y \to Z$,
-* \( X: Y \mapsto Z \),
-* $X : \mathbb{R}^{n^2 + 2n + 1}  \rightarrow \mathbb{R}$.
+* $f:X \to Y$
+* \( g: X \mapsto Y \)
+* $h : \mathbb{R}^{n^2 + 2n + 1} \rightarrow \mathbb{R}$
 
-And the following equation:
+and
 
 $$
-X:
-(Y \text{ at new line in tex file})
+f:
+(X \text{ at new line in tex file})
 \to
-(Z \text{ at new line in tex file}).
+(Y \text{ at new line in tex file}).
 $$
 
 We do NOT detect any of `:` in the following.
 
 Here are examples of `:` we do not detect:
 
-* $X\colon Y \to Z$, the correct use of colon.
+* $f\colon X \to Y$, the correct use of $\backslash$colon.
 * $A:B:C = 1:2:3$, the colon for ratio.
-* $A:B = 1:2$ and $\alpha \to \beta$, separated by dollar sign.
-* $f: (\text{some very very very very very long long long long words}) \to \mathbb{R}$, the false negative.
+* $A:B = 1:2$ and $X \to Y$, separated by dollar sign.
+* $g: (\text{some very very very very very long long long long words}) \to \mathbb{R}$, the false negative.
 
 ## LLENDash
 
@@ -203,10 +203,10 @@ False Positive: Wrong-Example
 We should not use eqnarray. It has some spacing issues.
 
 $$
-\begin{eqnarray}
+\begin{eqnarray*}
     x & = & y \\
     a & = & b
-\end{eqnarray}
+\end{eqnarray*}
 $$
 
 ## LLLlGg

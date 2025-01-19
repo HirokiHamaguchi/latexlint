@@ -4,11 +4,16 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 ## [Unreleased]
 
-- Allow exceptions for `LLAlignEnd` and `LLTitle` via `latexlint.exceptions` in `settings.json`.
 - `LLNonRef`: Detect non-referenced figures.
 - `LLMid`: Detect `mid` in `\left` and `\right`.
 - `LLEgIe`: Detect `i.e.`. H.H.
 <!-- - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. -->
+
+## 1.4.4 - 2025-01-19
+
+- Fix `LLLlGg` bug.
+- Fix `LLEqnarray` bug.
+- Update documents.
 
 ## 1.4.3 - 2025-01-15
 

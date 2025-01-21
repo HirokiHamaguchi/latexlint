@@ -95,7 +95,7 @@ Here is the next line after the align environment.
 	\end{minipage}
 \end{itembox}
 
-\vskip\baselineskip
+\vspace{\baselineskip}
 
 \begin{itembox}{\large Short line before display (different result)}
 	\begin{minipage}[t]{.5\columnwidth}
@@ -114,7 +114,7 @@ Here is the next line after the align environment.
 	\end{minipage}
 \end{itembox}
 
-\vskip\baselineskip
+\vspace{\baselineskip}
 
 Single-line alignat environment is also detected.
 \begin{alignat*}{1}
@@ -246,7 +246,7 @@ The differecen is quite subtle, but the vertical position of the colon is differ
 	\end{equation}
 \end{itembox}
 
-\vskip\baselineskip
+\vspace{\baselineskip}
 
 \begin{itembox}{We do NOT detect any of : in the following}
 	Here are examples of `:' we do not detect.
@@ -260,8 +260,7 @@ The differecen is quite subtle, but the vertical position of the colon is differ
 
 \section{LLCref}
 
-\begin{theorem}
-	\label{thm:sample}
+\begin{theorem}\label{thm:sample}
 	This is a sample theorem.
 \end{theorem}
 
@@ -319,7 +318,7 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 
 \section{LLRefEq}
 
-To refer to the equation, use \eqref{eq:sample} with eqref instead of (\ref{eq:sample}) with ref.
+To refer to the equation, use~\eqref{eq:sample} with eqref instead of (\ref{eq:sample}) with ref.
 
 You can avoid the mistake of forgetting to add parentheses.
 
@@ -341,7 +340,7 @@ The following line contains non-ASCII characters.
 
 	{　}！＂＃＄％＆＇（）＊＋，－．／
 
-\vskip\baselineskip
+\vspace{\baselineskip}
 
 日本語の文章は、upLaTeXでフツウに書けます。
 
@@ -359,9 +358,9 @@ The following line contains non-ASCII characters.
 
 Example: 10 KB, $3.5\mathrm{MiB}$, \SI{500}{\giga\byte}.
 
-\newcommand{\EB}{Some Awesome Command. This is not ExaByte.}
+\newcommand{\EB}{Some Awesome Command}
 
-\EB
+\EB. This is not ExaByte.
 
 This 1EB is one ExaByte.
 

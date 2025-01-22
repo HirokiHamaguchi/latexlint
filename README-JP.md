@@ -36,21 +36,22 @@ https://github.com/hari64boli64/latexlint
 3. [LLAlignSingleLine](#llalignsingleline) (`\\`なしの`align`環境を検出)
 4. [LLBig](#llbig) (`\cap_`, `\cup_` などを検出)
 5. [LLBracketCurly](#llbracketcurly) (`\max{`, `\min{` を検出)
-6. [LLBracketRound](#llbracketround) (`\sqrt(`, `^(`, `_(` を検出)
-7. [LLColonEqq](#llcoloneqq) (`:=`, `=:` ,`::=`, `=::` を検出)
-8. [LLColonForMapping](#llcolonformapping) (写像で使われる `:` を検出)
-9. [LLCref](#llcref) (`\ref` を検出、デフォルトで無効)
-10. [LLDoubleQuotes](#lldoublequotes) (`“`, `”`, `"` を検出)
-11. [LLENDash](#llendash) (疑わしい `-` の使用を検出)
-12. [LLEqnarray](#lleqnarray) (`eqnarray`環境を検出)
-13. [LLNonASCII](#llnonascii) (全角のASCII文字を検出)
-14. [LLLlGg](#llllgg) (`<<` と `>>` を検出)
-15. [LLRefEq](#llrefeq) (`\ref{eq:` を検出)
-16. [LLSharp](#llsharp) (`\sharp` を検出)
-17. [LLSI](#llsi) (`\SI` なしの`KB`, `MB`, `GB` などを検出)
-18. [LLT](#llt) (`^T` を検出)
-19. [LLTitle](#lltitle) (`\title{}`, `\section{}` などでの疑わしいタイトルケースを検出)
-20. [LLUserDefined](#lluserdefined) (`latexlint.userDefinedRules` で定義された正規表現を検出)
+6. [LLBracketMissing](#llbracketmissing) (`x^23` などを検出)
+7. [LLBracketRound](#llbracketround) (`\sqrt(`, `^(`, `_(` を検出)
+8. [LLColonEqq](#llcoloneqq) (`:=`, `=:` ,`::=`, `=::` を検出)
+9. [LLColonForMapping](#llcolonformapping) (写像で使われる `:` を検出)
+10. [LLCref](#llcref) (`\ref` を検出、デフォルトで無効)
+11. [LLDoubleQuotes](#lldoublequotes) (`“`, `”`, `"` を検出)
+12. [LLENDash](#llendash) (疑わしい `-` の使用を検出)
+13. [LLEqnarray](#lleqnarray) (`eqnarray`環境を検出)
+14. [LLNonASCII](#llnonascii) (全角のASCII文字を検出)
+15. [LLLlGg](#llllgg) (`<<` と `>>` を検出)
+16. [LLRefEq](#llrefeq) (`\ref{eq:` を検出)
+17. [LLSharp](#llsharp) (`\sharp` を検出)
+18. [LLSI](#llsi) (`\SI` なしの`KB`, `MB`, `GB` などを検出)
+19. [LLT](#llt) (`^T` を検出)
+20. [LLTitle](#lltitle) (`\title{}`, `\section{}` などでの疑わしいタイトルケースを検出)
+21. [LLUserDefined](#lluserdefined) (`latexlint.userDefinedRules` で定義された正規表現を検出)
 
 必要であれば[sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) と [日本語解説記事](https://qiita.com/hari64/items/3f973625551fbce3a08a) もご参照ください。
 
@@ -187,6 +188,13 @@ Cite some references.
 あるいは、`\max`, `\min` の後に明示的にスペースを追加して下さい。
 
 ![doc/LLBracketCurly](https://github.com/hari64boli64/latexlint/blob/master/doc/LLBracketCurly.png?raw=true)
+
+### LLBracketMissing
+
+`.tex` または `.md` ファイル内の、`^23`, `_23`, `^ab`, `_ab` などを検出します。
+スコープを明確にするために `{}` またはスペースを追加してください。
+
+![doc/LLBracketMissing](https://github.com/hari64boli64/latexlint/blob/master/doc/LLBracketMissing.png?raw=true)
 
 ### LLBracketRound
 

@@ -34,22 +34,23 @@ Here is the list of rules we detect, detailed in [Rules](#rules).
 2. [LLAlignEnd](#llalignend) (detect `align` environment ends with `\\`)
 3. [LLAlignSingleLine](#llalignsingleline) (detect `align` environment without `\\`)
 4. [LLBig](#llbig) (detect `\cap_`, `\cup_`, etc.)
-5. [LLBracketCurly](#llbracketcurly) (detect `\max{` and `\min{`.)
-6. [LLBracketRound](#llbracketround) (detect `\sqrt(`, `^(` and `_(`)
-7. [LLColonEqq](#llcoloneqq) (detect `:=`, `=:`,`::=`, and `=::`)
-8. [LLColonForMapping](#llcolonformapping) (detect `:` for mapping)
-9. [LLCref](#llcref) (detect `\ref`, disabled by default)
-10. [LLDoubleQuotes](#lldoublequotes) (detect `“`, `”` and `"` )
-11. [LLENDash](#llendash) (detect the dubious use of `-`)
-12. [LLEqnarray](#lleqnarray) (detect `eqnarray` environment)
-13. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters)
-14. [LLLlGg](#llllgg) (detect `<<` and `>>`)
-15. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
-16. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
-17. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
-18. [LLT](#llt) (detect `^T`)
-19. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
-20. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
+5. [LLBracketCurly](#llbracketcurly) (detect `\max{` and `\min{`)
+6. [LLBracketMissing](#llbracketmissing) (detect `^23`, `_23`, etc.)
+7. [LLBracketRound](#llbracketround) (detect `\sqrt(`, `^(` and `_(`)
+8. [LLColonEqq](#llcoloneqq) (detect `:=`, `=:`,`::=`, and `=::`)
+9. [LLColonForMapping](#llcolonformapping) (detect `:` for mapping)
+10. [LLCref](#llcref) (detect `\ref`, disabled by default)
+11. [LLDoubleQuotes](#lldoublequotes) (detect `“`, `”` and `"` )
+12. [LLENDash](#llendash) (detect the dubious use of `-`)
+13. [LLEqnarray](#lleqnarray) (detect `eqnarray` environment)
+14. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters)
+15. [LLLlGg](#llllgg) (detect `<<` and `>>`)
+16. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
+17. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
+18. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
+19. [LLT](#llt) (detect `^T`)
+20. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
+21. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
 
 Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
@@ -189,6 +190,13 @@ Detect `\max{` and `\min{` in `.tex` or `.md` files.
 You should likely use `\max(` and `\min(` instead, or add a space after `\max` or `\min` to clarify.
 
 ![doc/LLBracketCurly](https://github.com/hari64boli64/latexlint/blob/master/doc/LLBracketCurly.png?raw=true)
+
+### LLBracketMissing
+
+Detect cases such as `^23`, `_23`, `^ab` and `_ab` in `.tex` or `.md` files.
+Clarify the scope of the superscript and subscript by adding `{}` or space.
+
+![doc/LLBracketMissing](https://github.com/hari64boli64/latexlint/blob/master/doc/LLBracketMissing.png?raw=true)
 
 ### LLBracketRound
 

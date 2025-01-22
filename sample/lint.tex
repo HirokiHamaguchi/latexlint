@@ -149,7 +149,7 @@ This is a sample text.
 	X_1 \odot X_2 \quad
 	X_1 \oplus X_2 \quad
 	X_1 \otimes X_2 \\
-	X_1 \sqcup X_2\quad
+	X_1 \sqcup X_2 \quad
 	X_1 \uplus X_2 \quad
 	X_1 \vee X_2 \quad
 	X_1 \wedge X_2 \quad
@@ -191,6 +191,20 @@ We cannot fully determine whether the use of curly brackets is wrong or not.
 It is not detected if some spaces are inserted between the command name and the curly brackets.
 
 $\min(a,b)$ and $\min{a,b}$ are also checked.
+
+\section{LLBracketMissing}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		\verb|x^{23}| & $x^{23}$ & \tA{ok} \\
+		\verb|x^2 3|  & $x^2 3$  & \tA{ok} \\
+		\verb|x^23|   & $x^23$   & \tD{ng} \\
+	\end{tabular}
+\end{table}
+
+$x_23$, $x^ab$ and $x_ab$ are also checked.
+Cases like $x^a b$, $x^2\;$ and $e^i\pi$ are not detected.
 
 \section{LLBracketRound}
 

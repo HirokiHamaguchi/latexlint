@@ -68,11 +68,11 @@ async function testEnumerateDiagnostics(fileName: string, expected: number) {
 }
 
 async function testEnumerateDiagnosticsTex() {
-	await testEnumerateDiagnostics("sample/lint.tex", 83);
+	await testEnumerateDiagnostics("sample/lint.tex", 88);
 }
 
 async function testEnumerateDiagnosticsMd() {
-	await testEnumerateDiagnostics("sample/lint.md", 56);
+	await testEnumerateDiagnostics("sample/lint.md", 60);
 }
 
 async function testEnumerateDiagnosticsOther() {

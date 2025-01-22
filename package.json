@@ -110,6 +110,7 @@
               "LLAlignSingleLine",
               "LLBig",
               "LLBracketCurly",
+              "LLBracketMissing",
               "LLBracketRound",
               "LLColonEqq",
               "LLColonForMapping",

@@ -4,6 +4,7 @@ import LLAlignEnd from '../LL/LLAlignEnd';
 import LLAlignSingleLine from '../LL/LLAlignSingleLine';
 import LLBig from '../LL/LLBig';
 import LLBracketCurly from '../LL/LLBracketCurly';
+import LLBracketMissing from '../LL/LLBracketMissing';
 import LLBracketRound from '../LL/LLBracketRound';
 import LLColonEqq from '../LL/LLColonEqq';
 import LLColonForMapping from '../LL/LLColonForMapping';
@@ -32,6 +33,7 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
         LLAlignSingleLine,
         LLBig,
         LLBracketCurly,
+        LLBracketMissing,
         LLBracketRound,
         LLColonEqq,
         LLColonForMapping,

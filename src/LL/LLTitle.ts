@@ -23,6 +23,11 @@ export default function LLTitle(doc: vscode.TextDocument, txt: string): vscode.D
             }
             const endIndex = index - 1;
             const sectionText = txt.slice(beginIndex, endIndex);
+
+            // TODO: elaborate on this
+            if (sectionText === sectionText.toUpperCase()) continue;
+            if (sectionText.includes("\\") || sectionText.includes("$")) continue;
+
             const titleCaseText = toTitleCase(sectionText);
             if (sectionText === titleCaseText) continue;
             const L = doc.positionAt(beginIndex);

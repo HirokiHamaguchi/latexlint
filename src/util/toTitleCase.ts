@@ -7,7 +7,7 @@
 export default function toTitleCase(input: string): string {
     const smallWords = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|v.?|vs.?|via)$/i;
     const alphanumericPattern = /([A-Za-z0-9\\])/;
-    const wordSeparators = /([ ~-])/;
+    const wordSeparators = /([ :-])/;
 
     return input
         .split(wordSeparators)

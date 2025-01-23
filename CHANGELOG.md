@@ -4,12 +4,15 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 ## [Unreleased]
 
-- `LLNonRef`: Detect non-referenced figures.
-- `LLMid`: Detect `mid` in `\left` and `\right`.
-- `LLEgIe`: Detect `i.e.`. H.H.
+- `LLNonRef`: Detect non-referenced figures with caption.
+- `LLSetBar`: Detect `mid` in `\left` and `\right`.
+- `LLPeriod`: Detect `i.e.`. H.H.
+- `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. Disabled by default.
 - Replace Dollars (at Other folder).
-- chktex Warning 12: Interword spacing (‘\ ’) should perhaps be used.
-<!-- - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. -->
+
+## 1.4.6 - 2025-01-23
+
+- Fix `LLTitle` bug. We need further updates.
 
 ## 1.4.5 - 2025-01-22
 

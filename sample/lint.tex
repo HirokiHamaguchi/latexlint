@@ -4,6 +4,7 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{ascmac}
+\usepackage{CJKutf8}
 \usepackage{cleveref}
 \usepackage{float}
 \usepackage{geometry}
@@ -28,6 +29,8 @@
 \crefname{theorem}{Thm.}{Thms.}
 
 \setlength{\parindent}{0pt}
+
+\DeclareMathOperator{\infConv}{\Box}
 
 \begin{document}
 
@@ -352,11 +355,11 @@ If you really want to use $\sharp$, you can disable this rule.
 
 The following line contains non-ASCII characters.
 
-	{　}！＂＃＄％＆＇（）＊＋，－．／
+\begin{CJK}{UTF8}{ipxm}{　}！＂＃＄％＆＇（）＊＋，－．／\end{CJK}
 
 \vspace{\baselineskip}
 
-日本語の文章は、upLaTeXでフツウに書けます。
+\begin{CJK}{UTF8}{ipxm}日本語の文章は、upLaTeXでフツウに書けます。\end{CJK}
 
 (You can write Japanese sentences as usual with upLaTeX.)
 
@@ -407,11 +410,23 @@ The following line contains non-ASCII characters.
 
 \section{LLUserDefined}
 
-You can define your own rule, such as prohibiting the use of a f\^{}a.
+You can define your own rule.
 
-\begin{equation*}
-	f^a(X) \quad f^{\mathrm{a}}(X)
-\end{equation*}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		\verb|f^\mathrm{a}(x)| & $f^{\mathrm{a}}(x)$ & \tA{ok} \\
+		\verb|f^a(x)|          & $f^a(x)$            & \tD{ng} \\
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		\verb|f \infConv g| & $f \infConv g$ & \tA{ok} \\
+		\verb|f \Box g|     & $f \Box g$     & \tD{ng} \\
+	\end{tabular}
+\end{table}
 
 \newpage
 \appendix

@@ -261,3 +261,9 @@ $$
     f^a(X) \quad f^{\mathrm{a}}(X)
 \end{equation*}
 $$
+
+$$
+\begin{equation*}
+    f \Box g \quad f \mathrel{\Box} g
+\end{equation*}
+$$

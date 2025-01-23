@@ -237,17 +237,6 @@ We prefer this package because it can automatically add prefixes like "Sec." or 
 
 For cleveref package, you can also refer to [this page by opt-cp](https://web.archive.org/web/20220616140841/https://opt-cp.com/latex-packages/).
 
-```latex
-\usepackage{amsmath,mathtools}
-\usepackage{amsthm,thmtools}
-\declaretheorem{theorem}
-\usepackage{cleveref}
-\newcommand{\crefrangeconjunction}{--}
-\crefname{equation}{}{}
-\Crefname{equation}{Eq.}{Eqs.}
-\crefname{theorem}{Theorem}{Theorems}
-```
-
 ### LLDoubleQuotes
 
 Detect `“`, `”` and `"` in `.tex` files.
@@ -366,7 +355,7 @@ For example, you can detect the following Japanese characters.
 ### LLSI
 
 Detect `KB`, `MB`, `GB`, `TB`, `PB`, `EB`, `ZB`, `YB`, `KiB`, `MiB`, `GiB`, `TiB`, `PiB`, `EiB`, `ZiB`, and `YiB` without `\SI` in `.tex` files.
-You should likely use `\SI` instead, like `\SI{1}{\kilo\byte}`(10^3byte) and `\SI{1}{\kibi\byte}`(2^10byte).
+You should likely use `\SI` instead, like `\SI{1}{\kilo\byte}`($10^3$ byte) and `\SI{1}{\kibi\byte}`($2^{10}$ byte).
 
 ![doc/LLSI](https://github.com/hari64boli64/latexlint/blob/master/doc/LLSI.png?raw=true)
 
@@ -422,15 +411,33 @@ We test the string inside the `{}` is invariant by the function `toTitleCase` im
 
 You can define your own regular expressions to detect in `.tex` or `.md` files.
 
-For example, when you use English letters in math mode for an explanation, you should use `\mathrm`. If the character `a` is not a variable and represents something like **a**tractive force, $f^a(x)$ should be written as $f^{\mathrm{a}}(x)$.
+Check [LaTex Lint: Add Rule to Detect](#latex-lint-add-rule-to-detect) for more details.
 
-However, it is difficult to detect without context. You can define the following regular expression to detect this pattern.
+We listed some examples in the following.
 
-```txt
-f\^a
+#### Example 1: Use mathrm for English letters
+
+When you use English letters in math mode for an explanation, you should use `\mathrm`.
+
+For example, If the character `a` is not a variable and represents something like **a**tractive force, $f^a(x)$ should be written as $f^{\mathrm{a}}(x)$.
+
+![doc/LLUserDefined1](https://github.com/hari64boli64/latexlint/blob/master/doc/LLUserDefined1.png?raw=true)
+
+However, it is difficult to detect without context. You can define the rule `f\^a` to detect this pattern.
+
+#### Example 2: Use appropriately defined operators
+
+When you use operators, you should use `\DeclareMathOperator`.
+
+For example, If you use $\Box$ as a [infimal convolution](https://en.wikipedia.org/wiki/Convex_conjugate#Infimal_convolution), you should define it as an operator.
+
+```tex
+\DeclareMathOperator{\infConv}{\Box}
 ```
 
-Check [LaTex Lint: Add Rule to Detect](#latex-lint-add-rule-to-detect) for more details.
+![doc/LLUserDefined2](https://github.com/hari64boli64/latexlint/blob/master/doc/LLUserDefined2.png?raw=true)
+
+Then, you can use `\infConv` instead of `\Box`.
 
 ## Note  
 

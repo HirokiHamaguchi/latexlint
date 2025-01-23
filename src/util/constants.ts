@@ -46,7 +46,7 @@ export const messages: Record<LLCode, string> = {
     LLLlGg: 'Consider using \\ll and \\gg instead of << and >>.',
     LLRefEq: 'Consider using \\eqref instead of \\ref for equations.',
     LLSharp: 'If this sharp is for a number sign, consider using \\#.',
-    LLSI: 'If this is a unit, consider using the siunitx package \\SI{number}{unit}.',
+    LLSI: 'If this is a unit, consider using the siunitx(\\SI{number}{unit}). Otherwise, register as an exception.',
     LLT: 'Write ^\\top or ^\\mathsf{T} instead of ^T.',
     LLTitle: 'Should this be {EXPECTED}? Follow your preferred style guide.', // replace {EXPECTED}
     LLUserDefined: 'This violates your defined rule: {RULE}', // replace {RULE}

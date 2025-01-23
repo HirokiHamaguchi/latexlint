@@ -6,6 +6,6 @@ export default function LLSI(doc: vscode.TextDocument, txt: string): vscode.Diag
     return regex2diagnostics(
         doc, txt,
         "LLSI",
-        /(?<![a-zA-Z\\])(kB|KB|MB|GB|TB|PB|EB|ZB|YB|KiB|MiB|GiB|TiB|PiB|EiB|ZiB|YiB)(?![a-zA-Z])/g
+        /\d[^,\s]*\s*(kB|KB|MB|GB|TB|PB|EB|ZB|YB|KiB|MiB|GiB|TiB|PiB|EiB|ZiB|YiB)(?![a-zA-Z])/g
     );
 }

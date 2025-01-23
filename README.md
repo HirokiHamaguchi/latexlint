@@ -392,7 +392,7 @@ You likely want to use `^\top` or `^\mathsf{T}` instead to represent the transpo
 
 ![doc/LLT](https://github.com/hari64boli64/latexlint/blob/master/doc/LLT.png?raw=true)
 
-Otherwise, we cannot distinguish between the transpose and the power by a variable `T`.
+Otherwise, we cannot distinguish between the transpose and the power by a variable `T` (you can use `^{T}` for the power).
 
 [Ref by BrownieAlice](https://blog.browniealice.net/post/latex_transpose/).
 

@@ -6,7 +6,7 @@ links = {
     "enableDisableButton": "https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/905155/576811b7-524e-84b2-2da3-2b25f820bc56.png",
     "addRule1": "https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/905155/bedd16b9-9851-7a0a-f85d-27c36a810666.png",
     "addRule2": "https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/905155/885eee63-7ae3-7b0e-db84-ec7eed1dd269.png",
-    "selectRule": "https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/905155/c123f814-17f7-7f9e-8b14-6bf6a17b4974.png",
+    "selectRules": "https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/905155/c123f814-17f7-7f9e-8b14-6bf6a17b4974.png",
     "renameCommand": "https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/905155/10c085a0-589a-8ce7-4f27-99e66360cda6.png",
     "askWolframAlpha3": "https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/905155/c62e9e63-4341-d06c-b500-1501ad45b0b9.png",
     "askWolframAlpha1": "https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/905155/c5e32ecd-65b0-8f81-2796-e31b1851156f.png",

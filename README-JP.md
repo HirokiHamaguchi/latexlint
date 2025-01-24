@@ -55,7 +55,7 @@ https://github.com/hari64boli64/latexlint
 
 必要であれば[sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) と [日本語解説記事](https://qiita.com/hari64/items/3f973625551fbce3a08a) もご参照ください。
 
-検出するルールは、コマンド `LaTeX Lint: Select Rule to Detect` で簡単に選択できます。
+検出するルールは、コマンド `LaTeX Lint: Select Rules to Detect` で簡単に選択できます。
 
 ### LaTeX Lint: Enable/Disable LaTeX Lint
 
@@ -89,11 +89,11 @@ LaTeX Lintを有効化または無効化します。このコマンドは、エ�
 
 </details>
 
-### LaTeX Lint: Select Rule to Detect
+### LaTeX Lint: Select Rules to Detect
 
 検出するルールを選択します。検出したいルールのみをチェックできます。
 
-![selectRule](https://github.com/hari64boli64/latexlint/blob/master/images/selectRuleToDetect.png?raw=true)
+![selectRules](https://github.com/hari64boli64/latexlint/blob/master/images/selectRulesToDetect.png?raw=true)
 
 ### LaTeX Lint: Rename \begin{} or \end{}
 

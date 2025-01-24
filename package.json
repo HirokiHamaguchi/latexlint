@@ -58,8 +58,8 @@
       },
       {
         "category": "LaTeX Lint",
-        "command": "latexlint.selectRule",
-        "title": "Select Rule to Detect"
+        "command": "latexlint.selectRules",
+        "title": "Select Rules to Detect"
       },
       {
         "category": "LaTeX Lint",

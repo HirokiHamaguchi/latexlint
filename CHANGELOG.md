@@ -80,7 +80,7 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 ## 1.3.5 - 2025-01-13
 
-- Add selectRule as a new command.
+- Add selectRules as a new command.
 
 ## 1.3.4 - 2025-01-13
 

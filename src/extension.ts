@@ -4,7 +4,7 @@ import askWolframAlpha from './commands/askWolframAlpha';
 import diagnose from './commands/diagnose';
 import registerException from './commands/registerException';
 import renameCommand from './commands/renameCommand';
-import selectRule from './commands/selectRule';
+import selectRules from './commands/selectRules';
 import toggleLinting from './commands/toggleLinting';
 import { extensionDisplayName } from './util/constants';
 import getEditor from './util/getEditor';
@@ -37,8 +37,8 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 	context.subscriptions.push(disposableRegisterException);
 
-	const disposableSelectRule = vscode.commands.registerCommand('latexlint.selectRule', selectRule);
-	context.subscriptions.push(disposableSelectRule);
+	const disposableSelectRules = vscode.commands.registerCommand('latexlint.selectRules', selectRules);
+	context.subscriptions.push(disposableSelectRules);
 
 	const disposableRenameCommand = vscode.commands.registerCommand('latexlint.renameCommand', renameCommand);
 	context.subscriptions.push(disposableRenameCommand);

@@ -54,7 +54,7 @@ Here is the list of rules we detect, detailed in [Rules](#rules).
 
 Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
-You can easily select which rules to detect by the command `LaTeX Lint: Select Rule to Detect`.
+You can easily select which rules to detect by the command `LaTeX Lint: Select Rules to Detect`.
 
 ### LaTeX Lint: Enable/Disable LaTeX Lint
 
@@ -89,12 +89,12 @@ Then, you can define your own rule.
 
 </details>
 
-### LaTeX Lint: Select Rule to Detect
+### LaTeX Lint: Select Rules to Detect
 
 Select which rules to detect.
 Only check the rules you want to detect.
 
-![selectRule](https://github.com/hari64boli64/latexlint/blob/master/images/selectRuleToDetect.png?raw=true)
+![selectRules](https://github.com/hari64boli64/latexlint/blob/master/images/selectRulesToDetect.png?raw=true)
 
 ### LaTeX Lint: Rename \begin{} or \end{}
 

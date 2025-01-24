@@ -68,6 +68,10 @@ export function activate(context: vscode.ExtensionContext) {
 		if (document.languageId !== 'latex' && document.languageId !== 'markdown') return;
 		if (isEnabled) diagnose(document, diagnosticsCollection, false);
 	});
+
+	vscode.workspace.onDidCloseTextDocument((document) => {
+		diagnosticsCollection.delete(document.uri);
+	});
 }
 
 export function deactivate() {

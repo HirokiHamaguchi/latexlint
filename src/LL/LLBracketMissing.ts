@@ -5,7 +5,12 @@ import ranges2diagnostics from '../util/ranges2diagnostics';
 export default function LLBracketMissing(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
     const ranges: vscode.Range[] = [];
 
-    // In Markdown, `[^abc]` is a link to the anchor `abc`.
+    // In Markdown, _ can be used for various purposes, unlike in LaTeX.
+    // e.g. _italic_, ![test_image](test.png), [^test_link] etc.
+    // We skip the check for markdown files, quite regretfully.
+    // Can you think of a way to check even in markdown files?
+    if (doc.languageId !== "latex") return [];
+
     for (const match of txt.matchAll(/(?<![\\\[])[\^_][0-9A-Za-z]{2}/g)) {
         let i = match.index;
         // Test if the word is a url

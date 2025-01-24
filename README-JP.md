@@ -191,7 +191,7 @@ Cite some references.
 
 ### LLBracketMissing
 
-`.tex` または `.md` ファイル内の、`^23`, `_23`, `^ab`, `_ab` などを検出します。
+`.tex` ファイル内の、`^23`, `_23`, `^ab`, `_ab` などを検出します。
 スコープを明確にするために `{}` またはスペースを追加してください。
 
 ![doc/LLBracketMissing](https://github.com/hari64boli64/latexlint/blob/master/doc/LLBracketMissing.png?raw=true)

@@ -151,17 +151,6 @@ It is not detected if some spaces are inserted between the command name and the 
 
 $\min(a,b)$ and $\min{a,b}$ are also checked.
 
-## LLBracketMissing
-
-$x^{23}$ ok
-
-$x^2 3$ ok
-
-$x^23$ ng
-
-$x_23$, $x^ab$ and $x_ab$ are also checked.
-Cases like $x^a b$, $x^2\;$ and $e^i\pi$ are not detected.
-
 ## LLBracketRound
 
 $\sqrt{a}$ and $\sqrt(a)$.

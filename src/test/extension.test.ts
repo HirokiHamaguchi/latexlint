@@ -72,7 +72,7 @@ async function testEnumerateDiagnosticsTex() {
 }
 
 async function testEnumerateDiagnosticsMd() {
-	await testEnumerateDiagnostics("sample/lint.md", 60);
+	await testEnumerateDiagnostics("sample/lint.md", 56);
 }
 
 async function testEnumerateDiagnosticsOther() {

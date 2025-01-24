@@ -193,7 +193,7 @@ You should likely use `\max(` and `\min(` instead, or add a space after `\max` o
 
 ### LLBracketMissing
 
-Detect cases such as `^23`, `_23`, `^ab` and `_ab` in `.tex` or `.md` files.
+Detect cases such as `^23`, `_23`, `^ab` and `_ab` in `.tex` files.
 Clarify the scope of the superscript and subscript by adding `{}` or space.
 
 ![doc/LLBracketMissing](https://github.com/hari64boli64/latexlint/blob/master/doc/LLBracketMissing.png?raw=true)

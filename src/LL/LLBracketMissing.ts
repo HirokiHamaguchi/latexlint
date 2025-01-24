@@ -23,12 +23,13 @@ export default function LLBracketMissing(doc: vscode.TextDocument, txt: string):
         while (i > 1 && !/\s/.test(txt[i - 1])) i--;
         while (j < txt.length - 1 && !/\s/.test(txt[j])) j++;
         const word = txt.slice(i, j);
+        console.log(word);
 
         // Test if the word is a url
         if (word.includes("http")) continue;
 
         // Test if the word is a link to a png, pdf, gif, etc.
-        if (/\.(png|pdf|jpg|jpeg|gif|bmp|eps|svg|tiff)$/.test(word)) continue;
+        if (/\.(png|pdf|jpg|jpeg|gif|bmp|eps|svg|tiff)/.test(word)) continue;
 
         ranges.push(new vscode.Range(doc.positionAt(match.index), doc.positionAt(match.index + 3)));
     }

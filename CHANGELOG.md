@@ -11,6 +11,10 @@ All notable changes to the "latexlint" extension will be documented in this file
 - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. Disabled by default.
 - Replace Dollars (at Other folder).
 
+## 1.4.11 - 2025-01-24
+
+- Fix bug of `LLBracketMissing` and `LLBracketRound`.
+
 ## 1.4.10 - 2025-01-24
 
 - Fix bug of `LLBracketMissing`.

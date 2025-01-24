@@ -7,7 +7,7 @@ export default function LLBracketRound(doc: vscode.TextDocument, txt: string): v
     const ranges: vscode.Range[] = [];
 
     for (const match of txt.matchAll(/(\\sqrt|\^|_)\(/g)) {
-        if (match[0] === "\\") {
+        if (match[0][0] === "\\") {
             ranges.push(new vscode.Range(doc.positionAt(match.index), doc.positionAt(match.index + 1)));
             continue;
         }

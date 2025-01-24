@@ -4,12 +4,15 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 ## [Unreleased]
 
-- Fix LLColonForMapping bug. (`as follows: \begin{equation} f: X \to Y \end{equation}`)
 - `LLNonRef`: Detect non-referenced figures with caption.
 - `LLSetBar`: Detect `mid` in `\left` and `\right`.
 - `LLPeriod`: Detect `i.e.`. H.H. [Ref by Stack Exchange](https://tex.stackexchange.com/questions/2229/is-a-period-after-an-abbreviation-the-same-as-an-end-of-sentence-period).
 - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. Disabled by default.
 - Replace Dollars (at Other folder).
+
+## 1.4.12 - 2025-01-24
+
+- Fix several bugs.
 
 ## 1.4.11 - 2025-01-24
 

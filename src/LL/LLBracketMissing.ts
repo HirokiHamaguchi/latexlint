@@ -27,6 +27,14 @@ export default function LLBracketMissing(doc: vscode.TextDocument, txt: string):
         // Test if the word is a url
         if (word.includes("http")) continue;
 
+        // Test if the word is for labeling
+        if (word.includes("\\label") ||
+            word.includes("\\ref") ||
+            word.includes("\\cref") ||
+            word.includes("\\eqref") ||
+            word.includes("\\cite")
+        ) continue;
+
         // Test if the word is a link to a png, pdf, gif, etc.
         if (/\.(png|pdf|jpg|jpeg|gif|bmp|eps|svg|tiff)/.test(word)) continue;
 

@@ -215,6 +215,11 @@ Cases like $x^a b$, $x^2\;$ and $e^i\pi$ are not detected.
 % https://sample_url.com
 % \includegraphics{sample_link.png}
 % \includegraphics{sample_link.pdf}
+% \label{sample_label}
+% \ref{sample_label}
+% \cref{sample_label}
+% \eqref{sample_label}
+% \cite{sample_label}
 
 \section{LLBracketRound}
 
@@ -284,6 +289,13 @@ The differecen is quite subtle, but the vertical position of the colon is differ
 	\end{itemize}
 \end{itembox}
 
+% The following contains colon:
+% $f: X \to Y$
+% The following contains colon:
+% \( f: X \to Y \)
+% The following contains colon:
+% \begin{equation} f: X \to Y \end{equation}
+
 \section{LLCref}
 
 \begin{theorem}\label{thm:sample}
@@ -295,7 +307,9 @@ Use \cref{thm:sample} with cref instead of Theorem~\ref{thm:sample} with ref to 
 \section{LLDoubleQuotes}
 
 Use ``XXX'' instead of “XXX” or "XXX".
-% You can use "XXX" in the comment.
+You can use double quotation marks for \verb|H\"older|.
+
+% You can also use “XXX” and "XXX" in the comment.
 
 \section{LLENDash}
 
@@ -317,53 +331,16 @@ Use ``XXX'' instead of “XXX” or "XXX".
 	\item Karush-Kuhn-Tucker (optimization, Karush--Kuhn--Tucker)
 \end{itemize}
 
-Exception: Fritz-John (optimization, name of a person)
-% Award-Winning
-% Best-In-Class
-% Bottom-Up
-% Cutting-Edge
-% Data-Driven
-% Deep-Learning
-% Feature-Based
-% Feature-Selection
-% First-Order
-% Fritz-John
-% Full-Time
-% High-Class
-% High-Dimensional
-% High-End
-% High-Quality
-% Higher-Order
-% Ill-Defined
-% Ill-Posed
-% Long-Term
-% Low-Dimensional
-% Machine-Learning
-% Non-Convex
-% Non-Empty
-% Non-Empty
-% Non-Linear
-% Non-Negative
-% Non-Positive
-% Non-Zero
-% Open-Source
-% Part-Time
-% Pop-Culture
-% Real-Time
-% Reinforcement-Learning
-% Second-Order
-% Short-Term
-% State-Of-The-Art
-% Third-Order
-% Top-Down
-% Top-Rated
-% User-Friendly
-% Well-Being
-% Well-Defined
-% Well-Documented
-% Well-Known
-% Well-Posed
-% Zero-Sum
+Exceptions: Award-Winning, Best-In-Class, Bottom-Up, Cutting-Edge, Data-Driven,\\
+Deep-Learning, Feature-Based, Feature-Selection, First-Order, Fritz-John, Full-Time,\\
+High-Class, High-Dimensional, High-End, High-Quality, Higher-Order, Ill-Defined,\\
+Ill-Posed, Long-Term, Low-Dimensional, Machine-Learning, Non-Convex, Non-Empty,\\
+Non-Linear, Non-Negative, Non-Positive, Non-Zero, Open-Source, Part-Time, Pop-Culture,\\
+Real-Time, Reinforcement-Learning, Second-Order, Short-Term, State-Of-The-Art,\\
+Third-Order, Top-Down, Top-Rated, User-Friendly, Well-Being, Well-Defined,\\
+Well-Documented, Well-Known, Well-Posed, Zero-Sum
+
+\vspace{\baselineskip}
 
 False Positive: Wrong-Example
 
@@ -431,9 +408,10 @@ The following line contains non-ASCII characters.
 
 \newcommand{\EB}{Some command named as EB}
 
-10KB, $3.5$ MiB, $500\mathrm{GB}$ are detected. 123 noNumWord GB will not be detected.
+10KB, $3.5$ MiB, $500 \mathrm{GB}$ are detected. 123 noNumWord GB will not be detected.
 
 \EB. This is not ExaByte. This 1EB is one ExaByte.
+% We also must not detect this: 1\EB 1\testEB 1 \testEB 1 AEB
 
 \section{LLT}
 

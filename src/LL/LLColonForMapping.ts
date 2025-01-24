@@ -32,15 +32,12 @@ export default function LLColonForMapping(doc: vscode.TextDocument, txt: string)
             if (/\s/.test(char)) {
                 if (currentWord) {
                     wordCount++;
+                    if (currentWord.includes('$') || currentWord.includes('\\(') || currentWord.includes('\\begin{')) break;
                     if (testCurrentWord(doc, match.index, currentWord, ranges)) break;
                     currentWord = '';
                 }
                 while (i < txt.length && /\s/.test(txt[i])) i++;
             } else {
-                if (char === '$') {
-                    testCurrentWord(doc, match.index, currentWord, ranges);
-                    break;
-                }
                 currentWord += char;
                 i++;
             }

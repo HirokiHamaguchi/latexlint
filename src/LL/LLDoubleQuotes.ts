@@ -12,7 +12,7 @@ export default function LLDoubleQuotes(doc: vscode.TextDocument, txt: string): v
     return regex2diagnostics(
         doc, txt,
         "LLDoubleQuotes",
-        /[“”"]/g,
+        /(?<!\\)[“”"]/g,
         callback
     );
 }

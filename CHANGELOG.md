@@ -14,6 +14,7 @@ All notable changes to the "latexlint" extension will be documented in this file
 ## 1.4.11 - 2025-01-24
 
 - Fix bug of `LLBracketMissing` and `LLBracketRound`.
+- Add okWords to `LLENDash`.
 
 ## 1.4.10 - 2025-01-24
 

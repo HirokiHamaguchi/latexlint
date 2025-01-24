@@ -23,7 +23,6 @@ export default function LLBracketMissing(doc: vscode.TextDocument, txt: string):
         while (i > 1 && !/\s/.test(txt[i - 1])) i--;
         while (j < txt.length - 1 && !/\s/.test(txt[j])) j++;
         const word = txt.slice(i, j);
-        console.log(word);
 
         // Test if the word is a url
         if (word.includes("http")) continue;

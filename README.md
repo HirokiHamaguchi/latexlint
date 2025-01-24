@@ -271,7 +271,7 @@ For example, we detect the following.
 However, we do not detect the following as an exception.
 
 * `Fritz-John` (optimization, name of a person)
-* (ToDo: add more examples)
+* (We also add a lot of exceptions, such as `First-Order`, `State-Of-The-Art`, `Non-Linear`, `Non-Convex`, etc.)
 
 We might have false positives, such as `Wrong-Example`, which is not a person's name.
 

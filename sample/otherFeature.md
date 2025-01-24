@@ -37,7 +37,7 @@ $$
 \begin{gather*}
     \sum_{n=1}^{\infty} \frac{1}{n^2} \\
     \int_{-\infty}^{\infty} e^{-x^2} \mathrm{d} x \\
-    \left(1+\left(1+\left(1+x\right)^2\right)^2\right) \\
+    \left(1+\left(1+\left(1+x\right)^2\right)^2\right)
 \end{gather*}
 $$
 

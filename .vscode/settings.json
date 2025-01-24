@@ -21,6 +21,7 @@
 		"citet",
 		"cleveref",
 		"coloneqq",
+		"Conv",
 		"cref",
 		"crefrangeconjunction",
 		"csquotes",
@@ -39,6 +40,7 @@
 		"gibi",
 		"giga",
 		"hari64boli64",
+		"infimal",
 		"Karush",
 		"kibi",
 		"latexlint",
@@ -46,6 +48,7 @@
 		"LLSI",
 		"mapsto",
 		"mathbb",
+		"mathrel",
 		"mathrm",
 		"mathsf",
 		"mathtools",
@@ -81,18 +84,24 @@
 	],
 	"latex-workshop.latex.recipes": [
 		{
-			"name": "uplatex",
-			"tools": [
-				"ptex2pdf (uplatex)",
-				"ptex2pdf (uplatex)",
-			]
-		},
-		{
 			"name": "pdflatex*2",
 			"tools": [
 				"pdflatex",
 				"pdflatex"
 			]
+		},
+	],
+	"latex-workshop.latex.tools": [
+		{
+			"args": [
+				"-interaction=nonstopmode",
+				"-synctex=1",
+				"-file-line-error",
+				"--shell-escape",
+				"%DOC%"
+			],
+			"command": "pdflatex",
+			"name": "pdflatex"
 		},
 	],
 	"latexlint.userDefinedRules": [

@@ -130,7 +130,8 @@
             "uniqueItems": true
           },
           "default": [
-            "LLCref"
+            "LLCref",
+            "LLNonASCII"
           ],
           "description": "Disabled rules"
         }

@@ -43,7 +43,7 @@ Here is the list of rules we detect, detailed in [Rules](#rules).
 11. [LLDoubleQuotes](#lldoublequotes) (detect `“`, `”` and `"` )
 12. [LLENDash](#llendash) (detect the dubious use of `-`)
 13. [LLEqnarray](#lleqnarray) (detect `eqnarray` environment)
-14. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters)
+14. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters, disabled by default)
 15. [LLLlGg](#llllgg) (detect `<<` and `>>`)
 16. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
 17. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
@@ -319,6 +319,7 @@ You should likely use `\#` instead for [number sign](https://en.wikipedia.org/wi
 ### LLNonASCII
 
 Detect all fullwidth ASCII characters in `.tex` or `.md` files.
+By default, this rules is disabled by `latexlint.disabledRules` in `settings.json`.
 
 We detect the following characters.
 

@@ -8,18 +8,6 @@ const REGEXPS = [
     /\\rightarrow(?![a-zA-Z])/
 ];
 
-function testCurrentWord(
-    doc: vscode.TextDocument, idx: number, currentWord: string, ranges: vscode.Range[]
-): boolean {
-    if (REGEXPS.some(regexp => regexp.test(currentWord))) {
-        const startPos = doc.positionAt(idx);
-        const endPos = startPos.translate(0, 1);
-        ranges.push(new vscode.Range(startPos, endPos));
-        return true;
-    }
-    return false;
-}
-
 export default function LLColonForMapping(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
     const ranges: vscode.Range[] = [];
 
@@ -27,21 +15,31 @@ export default function LLColonForMapping(doc: vscode.TextDocument, txt: string)
         let i = match.index + 1;
         let currentWord = '';
         let wordCount = 0;
-        while (i < txt.length && wordCount < 10) {
-            const char = txt[i];
-            if (/\s/.test(char)) {
+        while (i < txt.length && wordCount < 10)
+            if (!/\s/.test(txt[i]))
+                currentWord += txt[i++];
+            else {
                 if (currentWord) {
                     wordCount++;
-                    if (currentWord.includes('$') || currentWord.includes('\\(') || currentWord.includes('\\begin{')) break;
-                    if (testCurrentWord(doc, match.index, currentWord, ranges)) break;
+                    if (REGEXPS.some(regexp => {
+                        const arrowIdx = currentWord.search(regexp);
+                        if (arrowIdx === -1) return false;
+                        const strFromColon2Arrow = txt.slice(match.index + 1, i - currentWord.length + arrowIdx);
+                        if (!strFromColon2Arrow.includes('$') &&
+                            !strFromColon2Arrow.includes('\\(') &&
+                            !strFromColon2Arrow.includes('\\begin{') &&
+                            (strFromColon2Arrow.match(/{/g) || []).length ===
+                            (strFromColon2Arrow.match(/}/g) || []).length) {
+                            const startPos = doc.positionAt(match.index);
+                            const endPos = startPos.translate(0, 1);
+                            ranges.push(new vscode.Range(startPos, endPos));
+                        }
+                        return true;
+                    })) break;
                     currentWord = '';
                 }
                 while (i < txt.length && /\s/.test(txt[i])) i++;
-            } else {
-                currentWord += char;
-                i++;
             }
-        }
     }
 
     const code = 'LLColonForMapping';

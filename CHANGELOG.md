@@ -10,6 +10,12 @@ All notable changes to the "latexlint" extension will be documented in this file
 - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. Disabled by default.
 - Replace Dollars (at Other folder).
 
+## 1.4.13 - 2025-01-25
+
+- Rename selectRule to selectRules.
+- Fix bug of `LLColonForMapping`.
+- Update error messages.
+
 ## 1.4.12 - 2025-01-24
 
 - Fix several bugs.

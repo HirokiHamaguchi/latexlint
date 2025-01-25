@@ -1,5 +1,8 @@
 {
-    "latexlint.userDefinedRules": [],
+    "latexlint.userDefinedRules": [
+        "f\\^a"
+    ],
+    "latexlint.disabledRules": [],
     "latex-workshop.latex.recipes": [
         {
             "name": "uplatex",

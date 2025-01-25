@@ -3,16 +3,17 @@ import { messages } from '../util/constants';
 import ranges2diagnostics from '../util/ranges2diagnostics';
 
 export default function LLBracketMissing(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
-    const ranges: vscode.Range[] = [];
-
     // In Markdown, _ can be used for various purposes, unlike in LaTeX.
     // e.g. _italic_, ![test_image](test.png), [^test_link] etc.
     // We skip the check for markdown files, quite regretfully.
     // Can you think of a way to check even in markdown files?
     if (doc.languageId !== "latex") return [];
 
-    const idxOfBegin = txt.indexOf("\\begin{document}");
+    const code = "LLBracketMissing";
+    const message: string[] = [];
+    const ranges: vscode.Range[] = [];
 
+    const idxOfBegin = txt.indexOf("\\begin{document}");
     for (const match of txt.matchAll(/(?<![\\\[])[\^_][0-9A-Za-z]{2}/g)) {
         // Skip if the match is inside the document environment
         // ??? Can the commands with underscores be used inside the document environment ???
@@ -38,9 +39,8 @@ export default function LLBracketMissing(doc: vscode.TextDocument, txt: string):
         // Test if the word is a link to a png, pdf, gif, etc.
         if (/\.(png|pdf|jpg|jpeg|gif|bmp|eps|svg|tiff)/.test(word)) continue;
 
+        message.push(messages[code].replace(/%1/g, match[0][0]));
         ranges.push(new vscode.Range(doc.positionAt(match.index), doc.positionAt(match.index + 3)));
     }
-    const code = "LLBracketMissing";
-    const message = messages[code];
     return ranges2diagnostics(code, message, ranges);
 }

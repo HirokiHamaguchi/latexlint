@@ -4,11 +4,14 @@ import ranges2diagnostics from '../util/ranges2diagnostics';
 
 
 export default function LLBracketRound(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
+    const code = "LLBracketRound";
+    const message: string[] = [];
     const ranges: vscode.Range[] = [];
 
     for (const match of txt.matchAll(/(\\sqrt|\^|_)\(/g)) {
-        if (match[0][0] === "\\") {
-            ranges.push(new vscode.Range(doc.positionAt(match.index), doc.positionAt(match.index + 1)));
+        if (match[0] === "\\sqrt(") {
+            message.push(messages[code].replace(/%1/g, "\\sqrt"));
+            ranges.push(new vscode.Range(doc.positionAt(match.index), doc.positionAt(match.index + 6)));
             continue;
         }
 
@@ -20,9 +23,9 @@ export default function LLBracketRound(doc: vscode.TextDocument, txt: string): v
         // Test if the word is a link to a png, pdf, gif, etc.
         if (/\.(png|pdf|jpg|jpeg|gif|bmp|eps|svg|tiff)/.test(word)) continue;
 
-        ranges.push(new vscode.Range(doc.positionAt(match.index), doc.positionAt(match.index + 1)));
+        message.push(messages[code].replace(/%1/g, txt[match.index]));
+        ranges.push(new vscode.Range(doc.positionAt(match.index), doc.positionAt(match.index + 2)));
     }
-    const code = "LLBracketRound";
-    const message = messages[code];
+
     return ranges2diagnostics(code, message, ranges);
 }

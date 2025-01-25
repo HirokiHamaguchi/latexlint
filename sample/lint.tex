@@ -67,6 +67,33 @@
 	\end{tabular}
 \end{table}
 
+\begin{center}
+	\begin{minipage}{.1\columnwidth}
+		\begin{align*}
+			x =    & y \\
+			x \neq & y
+		\end{align*}
+	\end{minipage}%
+	\begin{minipage}{.1\columnwidth}
+		\begin{align*}
+			x \leq & y \\
+			x \geq & y
+		\end{align*}
+	\end{minipage}%
+	\begin{minipage}{.1\columnwidth}
+		\begin{align*}
+			x \le & y \\
+			x \ge & y
+		\end{align*}
+	\end{minipage}%
+	\begin{minipage}{.1\columnwidth}
+		\begin{align*}
+			x < & y \\
+			x > & y
+		\end{align*}
+	\end{minipage}
+\end{center}
+
 \section{LLAlignEnd}
 
 The following ends with a line break.
@@ -247,7 +274,8 @@ $a^(1)$ and $a_(1)$ are also checked.
 	\end{tabular}
 \end{table}
 
-The differecen is quite subtle, but the vertical position of the colon is different.
+The difference is quite subtle, but the vertical position of the colon is different.
+% $\Coloneqq, \Eqqcolon, \coloneqq, \eqqcolon$
 
 \section{LLColonForMapping}
 
@@ -295,6 +323,7 @@ The differecen is quite subtle, but the vertical position of the colon is differ
 % \( f: X \to Y \)
 % The following contains colon:
 % \begin{equation} f: X \to Y \end{equation}
+% \label{eq:test} f: X_{\test{}} \to Y
 
 \section{LLCref}
 

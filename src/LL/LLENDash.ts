@@ -1,6 +1,8 @@
 import * as vscode from 'vscode';
 import { messages } from '../util/constants';
 import ranges2diagnostics from '../util/ranges2diagnostics';
+import isLabelOrURL from '../util/isLabelOrURL';
+import match2range from '../util/match2range';
 
 const okWords = [
     'Award-Winning',
@@ -33,6 +35,7 @@ const okWords = [
     'Non-Zero',
     'Open-Source',
     'Part-Time',
+    'Pre-Processing',
     'Pop-Culture',
     'Real-Time',
     'Reinforcement-Learning',
@@ -67,12 +70,10 @@ export default function LLENDash(doc: vscode.TextDocument, txt: string): vscode.
     const ranges: vscode.Range[] = [];
 
     for (const match of txt.matchAll(/[A-Z][a-zA-Z]*[a-z](-[A-Z][a-zA-Z]*[a-z])+/g)) {
-        const word = match[0];
-
         // Compared to the binary search, this is faster for small arrays.
-        if (okWords.includes(word)) continue;
-
-        ranges.push(new vscode.Range(doc.positionAt(match.index), doc.positionAt(match.index + word.length)));
+        if (okWords.includes(match[0])) continue;
+        if (isLabelOrURL(txt, match)) continue;
+        ranges.push(match2range(doc, match));
     }
 
     const code = "LLENDash";

@@ -1,6 +1,17 @@
 import * as vscode from 'vscode';
 import { messages } from '../util/constants';
 import ranges2diagnostics from '../util/ranges2diagnostics';
+import match2range from '../util/match2range';
+
+function isCorrectBraces(str: string): boolean {
+    let count = 0;
+    for (const c of str) {
+        if (c === '{') count++;
+        else if (c === '}') count--;
+        if (count < 0) return false;
+    }
+    return count === 0;
+}
 
 const REGEXPS = [
     /\\to(?![a-zA-Z])/,
@@ -28,12 +39,9 @@ export default function LLColonForMapping(doc: vscode.TextDocument, txt: string)
                         if (!strFromColon2Arrow.includes('$') &&
                             !strFromColon2Arrow.includes('\\(') &&
                             !strFromColon2Arrow.includes('\\begin{') &&
-                            (strFromColon2Arrow.match(/{/g) || []).length ===
-                            (strFromColon2Arrow.match(/}/g) || []).length) {
-                            const startPos = doc.positionAt(match.index);
-                            const endPos = startPos.translate(0, 1);
-                            ranges.push(new vscode.Range(startPos, endPos));
-                        }
+                            isCorrectBraces(strFromColon2Arrow)
+                        )
+                            ranges.push(match2range(doc, match));
                         return true;
                     })) break;
                     currentWord = '';

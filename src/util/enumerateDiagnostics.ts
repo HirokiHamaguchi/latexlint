@@ -27,6 +27,7 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
     const exceptions = vscode.workspace.getConfiguration('latexlint').get<string[]>('exceptions') || [];
     const diagnostics: vscode.Diagnostic[] = [];
     const txt = doc.getText();
+    const t0 = performance.now();
     for (const [ruleName, rule] of Object.entries({
         LLAlignAnd,
         LLAlignEnd,
@@ -55,5 +56,7 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
             if (!exceptions.includes(formatException(doc.getText(diagnostic.range))))
                 diagnostics.push(diagnostic);
     }
+    const t1 = performance.now();
+    console.log(`enum took ${(t1 - t0).toFixed(2)} ms`);
     return diagnostics;
 }

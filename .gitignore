@@ -1,9 +1,7 @@
-out
+.vscode-test/
 dist
 node_modules
-.vscode-test/
-*.vsix
+out
 other
-images/*.stg
-doc/*.synctex.gz
-sample/*.synctex.gz
+sample/localTest.tex
+*/*.synctex.gz

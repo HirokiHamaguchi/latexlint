@@ -12,8 +12,9 @@ import LLCref from '../LL/LLCref';
 import LLDoubleQuotes from '../LL/LLDoubleQuotes';
 import LLENDash from '../LL/LLENDash';
 import LLEqnarray from '../LL/LLEqnarray';
-import LLNonASCII from '../LL/LLNonASCII';
+import LLJapaneseSpace from '../LL/LLJapaneseSpace';
 import LLLlGg from '../LL/LLLlGg';
+import LLNonASCII from '../LL/LLNonASCII';
 import LLRefEq from '../LL/LLRefEq';
 import LLSharp from '../LL/LLSharp';
 import LLSI from '../LL/LLSI';
@@ -42,8 +43,9 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
         LLDoubleQuotes,
         LLENDash,
         LLEqnarray,
-        LLNonASCII,
+        LLJapaneseSpace,
         LLLlGg,
+        LLNonASCII,
         LLRefEq,
         LLSharp,
         LLSI,

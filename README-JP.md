@@ -235,17 +235,6 @@ Cite some references.
 
 cleverefパッケージについては、[opt-cpさんによるこちらのページ](https://web.archive.org/web/20220616140841/https://opt-cp.com/latex-packages/)も参照下さい。
 
-```latex
-\usepackage{amsmath,mathtools}
-\usepackage{amsthm,thmtools}
-\declaretheorem{theorem}
-\usepackage{cleveref}
-\newcommand{\crefrangeconjunction}{--}
-\crefname{equation}{}{}
-\Crefname{equation}{Eq.}{Eqs.}
-\crefname{theorem}{Theorem}{Theorems}
-```
-
 ### LLDoubleQuotes
 
 `.tex` ファイル内で`“`, `”`, `"`を検出します。
@@ -295,6 +284,11 @@ cleverefパッケージについては、[opt-cpさんによるこちらのペ�
 
 `eqnarray`環境はspacingに問題がある為、[非推奨です](https://texfaq.org/FAQ-eqnarray)。
 
+### LLJapaneseSpace
+
+`.tex` または `.md` ファイル内の、日本語文字と数式の間にスペースがない箇所を検出します。
+デフォルトでこのルールは `settings.json` の `latexlint.disabledRules` にて無効化されています。
+
 ### LLLlGg
 
 `.tex` または `.md` ファイル内の、`<<` と `>>` を検出します。
@@ -308,25 +302,10 @@ cleverefパッケージについては、[opt-cpさんによるこちらのペ�
 I like human $<<<$ cat $<<<<<<<$ dog.
 ```
 
-### LLRefEq
-
-`.tex` ファイル内の、`\ref{eq:` を検出します。
-代わりに `\eqref{eq:` を使うべきです。
-
-このコマンドは参照に括弧を自動的に追加します。
-
-### LLSharp
-
-`.tex` または `.md` ファイル内の、`\sharp`を検出します。
-代わりに[number sign](https://en.wikipedia.org/wiki/Number_sign)を示す `\#` を使うべきです。
-
-![doc/LLSharp](https://github.com/hari64boli64/latexlint/blob/master/doc/LLSharp.png?raw=true)
-
-`\sharp` は音楽記号として使われます。
-
 ### LLNonASCII
 
 `.tex` または `.md` ファイル内の、全角ASCII文字を検出します。
+デフォルトでこのルールは `settings.json` の `latexlint.disabledRules` にて無効化されています。
 
 以下の文字を検出します。
 
@@ -359,6 +338,22 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 ```txt
 あア亜、。
 ```
+
+### LLRefEq
+
+`.tex` ファイル内の、`\ref{eq:` を検出します。
+代わりに `\eqref{eq:` を使うべきです。
+
+このコマンドは参照に括弧を自動的に追加します。
+
+### LLSharp
+
+`.tex` または `.md` ファイル内の、`\sharp`を検出します。
+代わりに[number sign](https://en.wikipedia.org/wiki/Number_sign)を示す `\#` を使うべきです。
+
+![doc/LLSharp](https://github.com/hari64boli64/latexlint/blob/master/doc/LLSharp.png?raw=true)
+
+`\sharp` は音楽記号として使われます。
 
 ### LLSI
 

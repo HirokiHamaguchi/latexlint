@@ -118,8 +118,9 @@
               "LLDoubleQuotes",
               "LLENDash",
               "LLEqnarray",
-              "LLNonASCII",
+              "LLJapaneseSpace",
               "LLLlGg",
+              "LLNonASCII",
               "LLRefEq",
               "LLSharp",
               "LLSI",
@@ -131,6 +132,7 @@
           },
           "default": [
             "LLCref",
+            "LLJapaneseSpace",
             "LLNonASCII"
           ],
           "description": "Disabled rules"

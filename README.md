@@ -43,14 +43,15 @@ Here is the list of rules we detect, detailed in [Rules](#rules).
 11. [LLDoubleQuotes](#lldoublequotes) (detect `“`, `”` and `"` )
 12. [LLENDash](#llendash) (detect the dubious use of `-`)
 13. [LLEqnarray](#lleqnarray) (detect `eqnarray` environment)
-14. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters, disabled by default)
+14. [LLJapaneseSpace](#lljapanesespace) (detect the lack of space, disabled by default)
 15. [LLLlGg](#llllgg) (detect `<<` and `>>`)
-16. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
-17. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
-18. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
-19. [LLT](#llt) (detect `^T`)
-20. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
-21. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
+16. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters, disabled by default)
+17. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
+18. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
+19. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
+20. [LLT](#llt) (detect `^T`)
+21. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
+22. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
 
 Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
@@ -287,6 +288,11 @@ You should likely use `align` environment instead.
 
 It is known that `eqnarray` environment is [not recommended](https://texfaq.org/FAQ-eqnarray) because it has some spacing issues.
 
+### LLJapaneseSpace
+
+Detect the lack of space between Japanese characters and math equation in `.tex` or `.md` files.
+By default, this rules is disabled by `latexlint.disabledRules` in `settings.json`.
+
 ### LLLlGg
 
 Detect `<<` and `>>` in `.tex` or `.md` files.
@@ -299,22 +305,6 @@ We do not detect `<<` like this one.
 ```md
 I like human $<<<$ cat $<<<<<<<$ dog.
 ```
-
-### LLRefEq
-
-Detect `\ref{eq:` in `.tex` files.
-You should likely use `\eqref{eq:` instead.
-
-This commands automatically adds parentheses around the reference.
-
-### LLSharp
-
-Detect `\sharp` in `.tex` or `.md` files.
-You should likely use `\#` instead for [number sign](https://en.wikipedia.org/wiki/Number_sign).
-
-![doc/LLSharp](https://github.com/hari64boli64/latexlint/blob/master/doc/LLSharp.png?raw=true)
-
-`\sharp` is used for the musical symbol.
 
 ### LLNonASCII
 
@@ -352,6 +342,22 @@ For example, you can detect the following Japanese characters.
 ```txt
 あア亜、。
 ```
+
+### LLRefEq
+
+Detect `\ref{eq:` in `.tex` files.
+You should likely use `\eqref{eq:` instead.
+
+This commands automatically adds parentheses around the reference.
+
+### LLSharp
+
+Detect `\sharp` in `.tex` or `.md` files.
+You should likely use `\#` instead for [number sign](https://en.wikipedia.org/wiki/Number_sign).
+
+![doc/LLSharp](https://github.com/hari64boli64/latexlint/blob/master/doc/LLSharp.png?raw=true)
+
+`\sharp` is used for the musical symbol.
 
 ### LLSI
 

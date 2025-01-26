@@ -209,6 +209,14 @@ $$
 \end{eqnarray*}
 $$
 
+## LLJapaneseSpace
+
+日本語の文章で$x=1$と数式を書くと、スペースが欠如します。
+
+日本語の文章で $x=1$ と数式を書くと、スペースが生まれます。
+
+ただし、フォーマルな文章では非推奨な場合も多く、その為デフォルトでは非検出です。
+
 ## LLLlGg
 
 $n \ll m$ ok.
@@ -216,12 +224,6 @@ $n \ll m$ ok.
 $n << m$ ng.
 
 I like human <<< cat <<<<<<<<<<<<<<<< dog.
-
-## LLSharp
-
-$\#$ ok.
-
-$\sharp$ ng.
 
 ## LLNonASCII
 
@@ -232,6 +234,12 @@ The following line contains non-ASCII characters.
 日本語の文章は、upLaTeXでフツウに書けます。
 
 (You can write Japanese sentences as usual with upLaTeX.)
+
+## LLSharp
+
+$\#$ ok.
+
+$\sharp$ ng.
 
 ## LLT
 

@@ -397,6 +397,16 @@ We should not use eqnarray. It has some spacing issues.
 	a & = & b
 \end{eqnarray*}
 
+\section{LLJapanese}
+
+\begin{CJK}{UTF8}{ipxm}
+	日本語の文章で$x=1$と数式を書くと、スペースが欠如します。
+
+	日本語の文章で $x=1$ と数式を書くと、スペースが生まれます。
+
+	尤も、フォーマルな文章では非推奨な場合も多く、その為デフォルトでは非検出です。
+\end{CJK}
+
 \section{LLLlGg}
 
 \begin{table}[H]
@@ -408,6 +418,18 @@ We should not use eqnarray. It has some spacing issues.
 \end{table}
 
 I like human $<<<$ cat $<<<<<<<$ dog.
+
+\section{LLNonASCII}
+
+The following line contains non-ASCII characters.
+
+\begin{CJK}{UTF8}{ipxm}{　}！＂＃＄％＆＇（）＊＋，－．／\end{CJK}
+
+\vspace{\baselineskip}
+
+\begin{CJK}{UTF8}{ipxm}日本語の文章は、upLaTeXでフツウに書けます。\end{CJK}
+
+(You can write Japanese sentences as usual with upLaTeX.)
 
 \section{LLPeriod}
 
@@ -437,18 +459,6 @@ You can avoid the mistake of forgetting to add parentheses.
 \end{table}
 
 If you really want to use $\sharp$, you can disable this rule.
-
-\section{LLNonASCII}
-
-The following line contains non-ASCII characters.
-
-\begin{CJK}{UTF8}{ipxm}{　}！＂＃＄％＆＇（）＊＋，－．／\end{CJK}
-
-\vspace{\baselineskip}
-
-\begin{CJK}{UTF8}{ipxm}日本語の文章は、upLaTeXでフツウに書けます。\end{CJK}
-
-(You can write Japanese sentences as usual with upLaTeX.)
 
 \section{LLSI}
 

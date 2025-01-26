@@ -310,20 +310,24 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 以下の文字を検出します。
 
 ```txt
-　！＂＃＄％＆＇（）＊＋，－．／０１２３４５６７
-８９：；＜＝＞？＠ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯ
-ＰＱＲＳＴＵＶＷＸＹＺ［＼］＾＿｀ａｂｃｄｅｆｇ
-ｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ｛｜｝～
+　！＂＃＄％＆＇＊＋，－．／０１２３４５６７８９
+：；＜＝＞？＠ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱ
+ＲＳＴＵＶＷＸＹＺ［＼］＾＿｀ａｂｃｄｅｆｇｈｉ
+ｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ｛｜｝～
 ```
 
 我々は以下の正規表現を使用します。
 
 ```txt
-[\u3000\uFF01-\uFF5E]
+[\u3000\uFF01-\uFF07\uFF0A-\uFF5E]
 ```
 
 > Range U+FF01–FF5E reproduces the characters of ASCII 21 to 7E as fullwidth forms. U+FF00 does not correspond to a fullwidth ASCII 20 (space character), since that role is already fulfilled by U+3000 "ideographic space".
 [Wikipedia](https://en.wikipedia.org/wiki/Halfwidth_and_Fullwidth_Forms_(Unicode_block))
+
+また、U+3000は全角スペースとして使われます。
+
+U+FF08とU+FF09はそれぞれ`（`と`）`に使われます。これらの文字は日本語文書でよく使われるため、検出しません。
 
 すべての非ASCII文字を検出したい場合は、以下の正規表現を使用します。
 

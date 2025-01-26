@@ -3,5 +3,5 @@ dist
 node_modules
 out
 other
-sample/localTest.tex
+sample/localTest.*
 */*.synctex.gz

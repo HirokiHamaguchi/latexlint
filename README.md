@@ -314,20 +314,24 @@ By default, this rules is disabled by `latexlint.disabledRules` in `settings.jso
 We detect the following characters.
 
 ```txt
-　！＂＃＄％＆＇（）＊＋，－．／０１２３４５６７
-８９：；＜＝＞？＠ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯ
-ＰＱＲＳＴＵＶＷＸＹＺ［＼］＾＿｀ａｂｃｄｅｆｇ
-ｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ｛｜｝～
+　！＂＃＄％＆＇＊＋，－．／０１２３４５６７８９
+：；＜＝＞？＠ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱ
+ＲＳＴＵＶＷＸＹＺ［＼］＾＿｀ａｂｃｄｅｆｇｈｉ
+ｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ｛｜｝～
 ```
 
 We use the following Regex.
 
 ```txt
-[\u3000\uFF01-\uFF5E]
+[\u3000\uFF01-\uFF07\uFF0A-\uFF5E]
 ```
 
 > Range U+FF01–FF5E reproduces the characters of ASCII 21 to 7E as fullwidth forms. U+FF00 does not correspond to a fullwidth ASCII 20 (space character), since that role is already fulfilled by U+3000 "ideographic space".
 [Wikipedia](https://en.wikipedia.org/wiki/Halfwidth_and_Fullwidth_Forms_(Unicode_block))
+
+Plus, U+3000 is used for a fullwidth space.
+
+U+FF08 and U+FF09 are used for `（` and `）`, respectively. We do not detect these characters because they are often used in Japanese documents.
 
 If you want to detect all non-ASCII characters, use the following Regex with [LaTeX Lint: Add Rule to Detect](#latex-lint-add-rule-to-detect).
 

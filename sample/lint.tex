@@ -82,10 +82,12 @@
 		\end{align*}
 	\end{minipage}%
 	\begin{minipage}{.1\columnwidth}
-		\begin{align*}
-			x \leq & y \\
-			x \geq & y
-		\end{align*}
+		\begin{equation*}
+			\begin{split}
+				x \leq & y \\
+				x \geq & y
+			\end{split}
+		\end{equation*}
 	\end{minipage}%
 	\begin{minipage}{.1\columnwidth}
 		\begin{align*}
@@ -341,12 +343,12 @@ The difference is quite subtle, but the vertical position of the colon is differ
 	This is a sample theorem.
 \end{theorem}
 
-Use \cref{thm:sample} with cref instead of Theorem~\ref{thm:sample} with ref to avoid mistakes.
+Use \cref{thm:sample} with cref instead of Thm. \ref{thm:sample} with ref to avoid mistakes.
 
 \section{LLDoubleQuotes}
 
 Use ``XXX'' instead of “XXX” or "XXX".
-You can use double quotation marks for \verb|H\"older| and \verb"\verb".
+You can use them for \verb|H\"older| and \verb"\verb".
 
 % You can also use “XXX” and "XXX" in the comment.
 
@@ -406,6 +408,17 @@ We should not use eqnarray. It has some spacing issues.
 \end{table}
 
 I like human $<<<$ cat $<<<<<<<$ dog.
+
+\section{LLPeriod}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		\verb|e.g., test.| & e.g., test. & \tA{ok} \\
+		\verb|e.g.\ test.| & e.g.\ test. & \tA{ok} \\
+		\verb|e.g. test.|  & e.g. test.  & \tD{ng} \\
+	\end{tabular}
+\end{table}
 
 \section{LLRefEq}
 

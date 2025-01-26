@@ -3,17 +3,24 @@ import toTitleCase from '../util/toTitleCase';
 import { extensionDisplayName, severity, messages } from '../util/constants';
 import { getCodeWithURI } from '../util/getCodeWithURI';
 
+const REGEXPS = [
+    /\\title{/g,
+    /\\section{/g,
+    /\\subsection{/g,
+    /\\subsubsection{/g,
+    /\\paragraph{/g,
+    /\\subparagraph{/g
+];
+
 export default function LLTitle(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
     if (doc.languageId !== "latex") return [];
 
     const code = 'LLTitle';
     const diagnostics: vscode.Diagnostic[] = [];
 
-    for (const commands of [
-        "title", "section", "subsection", "subsubsection", "paragraph", "subparagraph"
-    ])
-        for (const match of txt.matchAll(new RegExp(`\\\\${commands}{`, 'g'))) {
-            let index = match.index + `\\${commands}{`.length;
+    for (const regexp of REGEXPS)
+        for (const match of txt.matchAll(regexp)) {
+            let index = match.index + match[0].length;
             const beginIndex = index;
             let braceCount = 1;
             while (braceCount > 0 && index < txt.length) {
@@ -41,5 +48,6 @@ export default function LLTitle(doc: vscode.TextDocument, txt: string): vscode.D
                 source: extensionDisplayName,
             });
         }
+
     return diagnostics;
 }

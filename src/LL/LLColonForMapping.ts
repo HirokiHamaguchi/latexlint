@@ -1,7 +1,6 @@
 import * as vscode from 'vscode';
 import { messages } from '../util/constants';
 import ranges2diagnostics from '../util/ranges2diagnostics';
-import match2range from '../util/match2range';
 
 function isCorrectBraces(str: string): boolean {
     let count = 0;
@@ -14,41 +13,37 @@ function isCorrectBraces(str: string): boolean {
 }
 
 const REGEXPS = [
-    /\\to(?![a-zA-Z])/,
-    /\\mapsto(?![a-zA-Z])/,
-    /\\rightarrow(?![a-zA-Z])/
+    /\\to(?![a-zA-Z])/g,
+    /\\mapsto(?![a-zA-Z])/g,
+    /\\rightarrow(?![a-zA-Z])/g
 ];
 
 export default function LLColonForMapping(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
     const ranges: vscode.Range[] = [];
 
-    for (const match of txt.matchAll(/:/g)) {
-        let i = match.index + 1;
-        let currentWord = '';
-        let wordCount = 0;
-        while (i < txt.length && wordCount < 10)
-            if (!/\s/.test(txt[i]))
-                currentWord += txt[i++];
-            else {
-                if (currentWord) {
-                    wordCount++;
-                    if (REGEXPS.some(regexp => {
-                        const arrowIdx = currentWord.search(regexp);
-                        if (arrowIdx === -1) return false;
-                        const strFromColon2Arrow = txt.slice(match.index + 1, i - currentWord.length + arrowIdx);
-                        if (!strFromColon2Arrow.includes('$') &&
-                            !strFromColon2Arrow.includes('\\(') &&
-                            !strFromColon2Arrow.includes('\\begin{') &&
-                            isCorrectBraces(strFromColon2Arrow)
-                        )
-                            ranges.push(match2range(doc, match));
-                        return true;
-                    })) break;
-                    currentWord = '';
+    for (const regexp of REGEXPS)
+        for (const match of txt.matchAll(regexp)) {
+            let i = match.index - 1;
+            for (let wordCount = 0; wordCount < 10; wordCount++) {
+                while (i >= 0 && /\s/.test(txt[i])) i--;
+                if (i < 0) break;
+                while (i >= 0 && txt[i] !== ':' && txt[i] !== '$' && /\S/.test(txt[i])) i--;
+                if (i < 0) break;
+                if (txt[i] === '$') break;
+                if (txt[i] === ':') {
+                    const strColon2Arrow = txt.slice(i + 1, match.index);
+                    if (!strColon2Arrow.includes('\\(') &&
+                        !strColon2Arrow.includes('\\begin{') &&
+                        isCorrectBraces(strColon2Arrow)
+                    ) {
+                        const startPos = doc.positionAt(i);
+                        const endPos = startPos.translate(0, 1);
+                        ranges.push(new vscode.Range(startPos, endPos));
+                    }
+                    break;
                 }
-                while (i < txt.length && /\s/.test(txt[i])) i++;
             }
-    }
+        }
 
     const code = 'LLColonForMapping';
     const message = messages[code];

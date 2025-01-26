@@ -5,6 +5,6 @@ export default function LLBig(doc: vscode.TextDocument, txt: string): vscode.Dia
     return regex2diagnostics(
         doc, txt,
         "LLBig",
-        /\\(cap|cup|odot|oplus|otimes|sqcup|uplus|vee|wedge)_/g,
+        /\\(cap|cup|odot|oplus|otimes|sqcup|uplus|vee|wedge)_/g, // capture needed
     );
 }

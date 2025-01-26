@@ -69,7 +69,7 @@ const okWords = [
 export default function LLENDash(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
     const ranges: vscode.Range[] = [];
 
-    for (const match of txt.matchAll(/[A-Z][a-zA-Z]*[a-z](-[A-Z][a-zA-Z]*[a-z])+/g)) {
+    for (const match of txt.matchAll(/[A-Z][a-zA-Z]*[a-z](?:-[A-Z][a-zA-Z]*[a-z])+/g)) {
         // Compared to the binary search, this is faster for small arrays.
         if (okWords.includes(match[0])) continue;
         if (isLabelOrURL(txt, match)) continue;

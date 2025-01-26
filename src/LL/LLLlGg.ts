@@ -5,6 +5,6 @@ export default function LLLlGg(doc: vscode.TextDocument, txt: string): vscode.Di
     return regex2diagnostics(
         doc, txt,
         "LLLlGg",
-        /(?<!<)<{2}(?!<)|(?<!>)>{2}(?!>)/g,
+        /(?<!<)<<(?!<)|(?<!>)>>(?!>)/g, // no capture needed
     );
 }

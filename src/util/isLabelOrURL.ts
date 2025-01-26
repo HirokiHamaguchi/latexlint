@@ -9,10 +9,10 @@ export default function isLabelOrURL(txt: string, match: RegExpExecArray) {
     if (word.includes("http")) return true;
 
     // Test if the word is for labeling
-    if (/(fig|tab|label|ref|cref|Cref|eqref|cite)/.test(word)) return true;
+    if (/(?:fig|tab|label|ref|cref|Cref|eqref|cite)/.test(word)) return true;
 
     // Test if the word is a link to a png, pdf, gif, etc.
-    if (/\.(png|pdf|jpg|jpeg|gif|bmp|eps|svg|tiff|tex|py|cpp|ts|js)/.test(word)) return true;
+    if (/\.(?:png|pdf|jpg|jpeg|gif|bmp|eps|svg|tiff|tex|py|cpp|ts|js)/.test(word)) return true;
 
     return false;
 }

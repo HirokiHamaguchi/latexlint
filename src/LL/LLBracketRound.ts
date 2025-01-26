@@ -10,12 +10,12 @@ export default function LLBracketRound(doc: vscode.TextDocument, txt: string): v
     const message: string[] = [];
     const ranges: vscode.Range[] = [];
 
-    for (const match of txt.matchAll(/(\\sqrt|\^|_)\(/g)) {
+    for (const match of txt.matchAll(/(?:\\sqrt|\^|_)\(/g)) {
         if (match[0] === "\\sqrt(")
-            message.push(messages[code].replace(/%1/g, "\\sqrt"));
+            message.push(messages[code].replaceAll("%1", "\\sqrt"));
         else {
             if (isLabelOrURL(txt, match)) continue;
-            message.push(messages[code].replace(/%1/g, txt[match.index]));
+            message.push(messages[code].replaceAll("%1", txt[match.index]));
         }
         ranges.push(match2range(doc, match));
     }

@@ -35,7 +35,7 @@ export default function LLTitle(doc: vscode.TextDocument, txt: string): vscode.D
             const range = new vscode.Range(L, R);
             diagnostics.push({
                 code: getCodeWithURI(code),
-                message: messages[code].replace('%1', titleCaseText),
+                message: messages[code].replaceAll("%1", titleCaseText),
                 range: range,
                 severity: severity[code],
                 source: extensionDisplayName,

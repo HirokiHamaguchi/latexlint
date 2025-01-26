@@ -5,6 +5,6 @@ export default function LLAlignEnd(doc: vscode.TextDocument, txt: string): vscod
     return regex2diagnostics(
         doc, txt,
         "LLAlignEnd",
-        /\\\\\s*\\end{(align\*?|alignat\*?|\gather\*?)}/g,
+        /\\\\\s*\\end{(?:align\*?|alignat\*?|\gather\*?)}/g,
     );
 }

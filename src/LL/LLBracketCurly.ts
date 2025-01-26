@@ -5,6 +5,6 @@ export default function LLBracketCurly(doc: vscode.TextDocument, txt: string): v
     return regex2diagnostics(
         doc, txt,
         "LLBracketCurly",
-        /(\\min|\\max)\{/g,
+        /(\\min|\\max)\{/g, // capture needed
     );
 }

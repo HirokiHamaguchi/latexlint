@@ -8,7 +8,7 @@ export default function LLSI(doc: vscode.TextDocument, txt: string): vscode.Diag
     const ranges: vscode.Range[] = [];
 
     // // This code is slow.
-    // for (const match of txt.matchAll(/\d\S* ?\S*(kB|KB|MB|GB|TB|PB|EB|ZB|YB|KiB|MiB|GiB|TiB|PiB|EiB|ZiB|YiB)(?![a-zA-Z])/g)) {
+    // for (const match of txt.matchAll(/\d\S* ?\S*(?:kB|KB|MB|GB|TB|PB|EB|ZB|YB|KiB|MiB|GiB|TiB|PiB|EiB|ZiB|YiB)(?![a-zA-Z])/g)) {
     //     let i = match.index + match[0].length - 2;
     //     if (txt[i] === 'i') i--;
     //     if (/[a-zA-Z\\]/.test(txt[i - 1])) continue;
@@ -18,7 +18,7 @@ export default function LLSI(doc: vscode.TextDocument, txt: string): vscode.Diag
     // This code is faster.
     for (const match of txt.matchAll(/B(?![a-zA-Z])/g)) {
         let i = match.index;
-        if (!/(k|K|M|G|T|P|E|Z|Y|Ki|Mi|Gi|Ti|Pi|Ei|Zi|Yi)$/.test(txt.slice(Math.max(0, i - 2), i))) continue;
+        if (!/(?:k|K|M|G|T|P|E|Z|Y|Ki|Mi|Gi|Ti|Pi|Ei|Zi|Yi)$/.test(txt.slice(Math.max(0, i - 2), i))) continue;
 
         while (i > 0 && !/\d/.test(txt[i])) i--;
         while (i > 0 && /\d/.test(txt[i - 1])) i--;

@@ -16,11 +16,22 @@ export default async function renameCommand() {
     const res = findModifyTargets(editor.selection, doc);
     if (res === undefined) return;
 
+    let candidate = res.originalText;
+    console.log(candidate);
+    if (candidate === "equation") candidate = "align";
+    else if (candidate === "equation*") candidate = "align*";
+    else if (candidate === "align") candidate = "equation";
+    else if (candidate === "align*") candidate = "equation*";
+
     const newText = await vscode.window.showInputBox({
         title: 'Enter the new argument for the command.',
-        value: res.originalText,
+        value: candidate,
     });
     if (newText === undefined) return;
+
+    if ((res.originalText === "align" && newText === "equation") ||
+        (res.originalText === "align*" && newText === "equation*"))
+        res.s2 = res.s2.replace(/&/g, ' ').replace(/\\\\/g, '  ');
 
     const updatedText = res.s1 + newText + res.s2 + newText + res.s3;
     await editor.edit((editBuilder) => {

@@ -10,6 +10,10 @@ All notable changes to the "latexlint" extension will be documented in this file
 - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. Disabled by default.
 - Replace Dollars (at Other folder).
 
+## 1.4.18 - 2025-01-28
+
+- Add `detailsFold` feature.
+
 ## 1.4.17 - 2025-01-28
 
 - Update `RenameCommand` feature.

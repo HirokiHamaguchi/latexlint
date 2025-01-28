@@ -8,6 +8,7 @@ import selectRules from './commands/selectRules';
 import toggleLinting from './commands/toggleLinting';
 import { extensionDisplayName } from './util/constants';
 import getEditor from './util/getEditor';
+import detailsFoldingRangeProvider from './util/detailsFoldingRangeProvider';
 
 export function activate(context: vscode.ExtensionContext) {
 	console.log('"latexlint" is now activated.');
@@ -47,6 +48,8 @@ export function activate(context: vscode.ExtensionContext) {
 		isEnabled = toggleLinting(diagnosticsCollection, isEnabled);
 	});
 	context.subscriptions.push(disposableToggleLinting);
+
+	context.subscriptions.push(vscode.languages.registerFoldingRangeProvider("markdown", new detailsFoldingRangeProvider()));
 
 	let debounceTimeout: NodeJS.Timeout | undefined = undefined;
 	vscode.workspace.onDidSaveTextDocument(() => {

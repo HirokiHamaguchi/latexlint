@@ -26,8 +26,7 @@ export default function regex2diagnostics(
     for (const match of txt.matchAll(pattern)) {
         const range = match2range(doc, match);
         let mes = messages[code];
-        if (code === "LLAlignAnd") mes = mes.replaceAll("%1", match[1]);
-        else if (code === "LLBig") mes = mes.replaceAll("%1", match[1]);
+        if (code === "LLBig") mes = mes.replaceAll("%1", match[1]);
         else if (code === "LLBracketCurly") mes = mes.replaceAll("%1", match[1]);
         else if (code === "LLColonEqq") mes = mes.replaceAll("%1", correctCommandsColonEqq[match[0]]).replaceAll("%2", match[0]);
         else if (code === "LLLlGg") mes = mes.replaceAll("%1", correctCommandsLlGg[match[0]]).replaceAll("%2", match[0]);

@@ -27,10 +27,10 @@ $$
 
 The following ends with a line break.
 $$
-\begin{align*}
-  f(x) & = ax^2 + bx + c \\
-  g(x) & = dx^2 + ex + f \\
-\end{align*}
+\begin{gather*}
+  f(x) = ax^2 + bx + c \\
+  g(x) = dx^2 + ex + f \\
+\end{gather*}
 $$
 The following does not end with a line break.
 $$

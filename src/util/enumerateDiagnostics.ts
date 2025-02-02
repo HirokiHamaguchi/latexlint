@@ -22,17 +22,29 @@ import LLT from '../LL/LLT';
 import LLTitle from '../LL/LLTitle';
 import LLUserDefined from '../LL/LLUserDefined';
 import formatException from './formatException';
+import enumAlignEnvs from './enumAlignEnvs';
 
 export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.Diagnostic[] {
     const disabledRules = vscode.workspace.getConfiguration('latexlint').get<string[]>('disabledRules') || [];
     const exceptions = vscode.workspace.getConfiguration('latexlint').get<string[]>('exceptions') || [];
-    const diagnostics: vscode.Diagnostic[] = [];
     const txt = doc.getText();
+    const alignLikeEnvs = enumAlignEnvs(doc, txt);
+
+    let diagnostics: vscode.Diagnostic[] = [];
+
     const t0 = performance.now();
+
     for (const [ruleName, rule] of Object.entries({
         LLAlignAnd,
         LLAlignEnd,
         LLAlignSingleLine,
+    })) {
+        if (disabledRules.includes(ruleName)) continue;
+        const diags = rule(doc, txt, alignLikeEnvs);
+        diagnostics.push(...diags);
+    }
+
+    for (const [ruleName, rule] of Object.entries({
         LLBig,
         LLBracketCurly,
         LLBracketMissing,
@@ -54,11 +66,14 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
         LLUserDefined,
     })) {
         if (disabledRules.includes(ruleName)) continue;
-        for (const diagnostic of rule(doc, txt))
-            if (!exceptions.includes(formatException(doc.getText(diagnostic.range))))
-                diagnostics.push(diagnostic);
+        const diags = rule(doc, txt);
+        diagnostics.push(...diags);
     }
+
+    diagnostics = diagnostics.filter(diag => !exceptions.includes(formatException(doc.getText(diag.range))));
+
     const t1 = performance.now();
+
     console.log(`enum took ${(t1 - t0).toFixed(2)} ms`);
     return diagnostics;
 }

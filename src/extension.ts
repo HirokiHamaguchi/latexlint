@@ -60,6 +60,14 @@ export function activate(context: vscode.ExtensionContext) {
 			diagnose(editor.document, diagnosticsCollection, false);
 		}, 500);
 	});
+	vscode.workspace.onDidSaveNotebookDocument((notebook) => {
+		clearTimeout(debounceTimeout);
+		debounceTimeout = setTimeout(() => {
+			if (notebook.cellCount === 0) return;
+			const cellDoc = notebook.cellAt(0).document;
+			diagnose(cellDoc, diagnosticsCollection, false);
+		}, 500);
+	});
 
 	// Only once on activation. Diagnose all open documents.
 	vscode.workspace.textDocuments.forEach((document) => {
@@ -74,6 +82,24 @@ export function activate(context: vscode.ExtensionContext) {
 
 	vscode.workspace.onDidCloseTextDocument((document) => {
 		diagnosticsCollection.delete(document.uri);
+	});
+
+	// For notebooks.
+	vscode.window.onDidChangeVisibleNotebookEditors(() => {
+		// vscode.workspace.onDidCloseNotebookDocument is not available in this situation.
+		const validCellURIs = [];
+		for (const editor of vscode.window.visibleNotebookEditors)
+			for (const cell of editor.notebook.getCells())
+				if (cell.document.languageId === 'markdown') validCellURIs.push(cell.document.uri);
+		for (const [uri, _] of diagnosticsCollection) {
+			if (uri.scheme !== 'vscode-notebook-cell') continue;
+			if (!validCellURIs.includes(uri)) diagnosticsCollection.delete(uri);
+		}
+		for (const editor of vscode.window.visibleNotebookEditors) {
+			if (editor.notebook.cellCount === 0) continue;
+			const cellDoc = editor.notebook.cellAt(0).document;
+			diagnose(cellDoc, diagnosticsCollection, false);
+		}
 	});
 }
 

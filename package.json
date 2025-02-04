@@ -26,7 +26,8 @@
   ],
   "activationEvents": [
     "onLanguage:latex",
-    "onLanguage:markdown"
+    "onLanguage:markdown",
+    "onNotebook:jupyter-notebook"
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -74,7 +75,7 @@
     "menus": {
       "editor/title": [
         {
-          "when": "editorLangId == latex || editorLangId == markdown",
+          "when": "editorLangId == latex || editorLangId == markdown || notebookType == jupyter-notebook",
           "command": "latexlint.toggleLinting",
           "group": "navigation"
         }

@@ -94,6 +94,10 @@ $$
 \end{alignat*}
 $$
 
+## LLArticle
+
+A $n$-dimensional space. An $n$-dimensional space.
+
 ## LLBig
 
 This is a sample text.

@@ -2,6 +2,7 @@ import * as vscode from 'vscode';
 import LLAlignAnd from '../LL/LLAlignAnd';
 import LLAlignEnd from '../LL/LLAlignEnd';
 import LLAlignSingleLine from '../LL/LLAlignSingleLine';
+import LLArticle from '../LL/LLArticle';
 import LLBig from '../LL/LLBig';
 import LLBracketCurly from '../LL/LLBracketCurly';
 import LLBracketMissing from '../LL/LLBracketMissing';
@@ -45,6 +46,7 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
     }
 
     for (const [ruleName, rule] of Object.entries({
+        LLArticle,
         LLBig,
         LLBracketCurly,
         LLBracketMissing,

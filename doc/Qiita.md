@@ -34,23 +34,25 @@ https://github.com/hari64boli64/latexlint
 1. [LLAlignAnd](#llalignand) (`=&`, `\leq&`, `\geq&` などを検出)
 2. [LLAlignEnd](#llalignend) (`\\`で終わる`align`環境を検出)
 3. [LLAlignSingleLine](#llalignsingleline) (`\\`なしの`align`環境を検出)
-4. [LLBig](#llbig) (`\cap_`, `\cup_` などを検出)
-5. [LLBracketCurly](#llbracketcurly) (`\max{`, `\min{` を検出)
-6. [LLBracketRound](#llbracketround) (`\sqrt(`, `^(`, `_(` を検出)
-7. [LLColonEqq](#llcoloneqq) (`:=`, `=:` ,`::=`, `=::` を検出)
-8. [LLColonForMapping](#llcolonformapping) (写像で使われる `:` を検出)
-9. [LLCref](#llcref) (`\ref` を検出、デフォルトで無効)
-10. [LLDoubleQuotes](#lldoublequotes) (`“`, `”`, `"` を検出)
-11. [LLENDash](#llendash) (疑わしい `-` の使用を検出)
-12. [LLEqnarray](#lleqnarray) (`eqnarray`環境を検出)
-13. [LLNonASCII](#llnonascii) (全角のASCII文字を検出)
-14. [LLLlGg](#llllgg) (`<<` と `>>` を検出)
-15. [LLRefEq](#llrefeq) (`\ref{eq:` を検出)
-16. [LLSharp](#llsharp) (`\sharp` を検出)
-17. [LLSI](#llsi) (`\SI` なしの`KB`, `MB`, `GB` などを検出)
-18. [LLT](#llt) (`^T` を検出)
-19. [LLTitle](#lltitle) (`\title{}`, `\section{}` などでの疑わしいタイトルケースを検出)
-20. [LLUserDefined](#lluserdefined) (`latexlint.userDefinedRules` で定義された正規表現を検出)
+4. [LLArticle](#llarticle) (誤った冠詞を検出)
+5. [LLBig](#llbig) (`\cap_`, `\cup_` などを検出)
+6. [LLBracketCurly](#llbracketcurly) (`\max{`, `\min{` を検出)
+7. [LLBracketMissing](#llbracketmissing) (`x^23` などを検出)
+8. [LLBracketRound](#llbracketround) (`\sqrt(`, `^(`, `_(` を検出)
+9. [LLColonEqq](#llcoloneqq) (`:=`, `=:` ,`::=`, `=::` を検出)
+10. [LLColonForMapping](#llcolonformapping) (写像で使われる `:` を検出)
+11. [LLCref](#llcref) (`\ref` を検出、デフォルトで無効)
+12. [LLDoubleQuotes](#lldoublequotes) (`“`, `”`, `"` を検出)
+13. [LLENDash](#llendash) (疑わしい `-` の使用を検出)
+14. [LLEqnarray](#lleqnarray) (`eqnarray`環境を検出)
+15. [LLNonASCII](#llnonascii) (全角のASCII文字を検出)
+16. [LLLlGg](#llllgg) (`<<` と `>>` を検出)
+17. [LLRefEq](#llrefeq) (`\ref{eq:` を検出)
+18. [LLSharp](#llsharp) (`\sharp` を検出)
+19. [LLSI](#llsi) (`\SI` なしの`KB`, `MB`, `GB` などを検出)
+20. [LLT](#llt) (`^T` を検出)
+21. [LLTitle](#lltitle) (`\title{}`, `\section{}` などでの疑わしいタイトルケースを検出)
+22. [LLUserDefined](#lluserdefined) (`latexlint.userDefinedRules` で定義された正規表現を検出)
 
 必要であれば[sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) と [日本語解説記事](https://qiita.com/hari64/items/3f973625551fbce3a08a) もご参照ください。
 
@@ -171,6 +173,13 @@ Cite some references.
 
 [LaTeX Lint: Rename \begin{} or \end{}](#latex-lint-rename-begin-or-end)でコマンド名を変更できます。
 
+### LLArticle
+
+`.tex` または `.md` ファイル内の、誤った冠詞を検出します。
+例えば、`A $n$-dimensional` は `An $n$-dimensional` であるべきです(今後、他のパターンを追加するかもしれません)。
+
+このようなエラーは、数式が含まれている為、Grammarlyなどの文法チェッカーでは検出できません。
+
 ### LLBig
 
 `.tex` または `.md` ファイル内の、`\cap_`, `\cup_`, `\odot_`, `\oplus_`, `\otimes_`, `\sqcup_`, `uplus_`, `\vee_`, `\wedge_` を検出します。
@@ -187,6 +196,13 @@ Cite some references.
 あるいは、`\max`, `\min` の後に明示的にスペースを追加して下さい。
 
 ![doc/LLBracketCurly](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/905155/9e186124-0ee2-31f8-6cb5-68cd0823a576.png)
+
+### LLBracketMissing
+
+`.tex` ファイル内の、`^23`, `_23`, `^ab`, `_ab` などを検出します。
+スコープを明確にするために `{}` またはスペースを追加してください。
+
+![doc/LLBracketMissing](NO URL!!!)
 
 ### LLBracketRound
 
@@ -226,17 +242,6 @@ Cite some references.
 このパッケージは、"Sec."や"Fig."のような接頭辞を自動的に追加することができ、参照フォーマットの一貫性を保つのに役立ちます。
 
 cleverefパッケージについては、[opt-cpさんによるこちらのページ](https://web.archive.org/web/20220616140841/https://opt-cp.com/latex-packages/)も参照下さい。
-
-```latex
-\usepackage{amsmath,mathtools}
-\usepackage{amsthm,thmtools}
-\declaretheorem{theorem}
-\usepackage{cleveref}
-\newcommand{\crefrangeconjunction}{--}
-\crefname{equation}{}{}
-\Crefname{equation}{Eq.}{Eqs.}
-\crefname{theorem}{Theorem}{Theorems}
-```
 
 ### LLDoubleQuotes
 
@@ -287,6 +292,11 @@ cleverefパッケージについては、[opt-cpさんによるこちらのペ�
 
 `eqnarray`環境はspacingに問題がある為、[非推奨です](https://texfaq.org/FAQ-eqnarray)。
 
+### LLJapaneseSpace
+
+`.tex` または `.md` ファイル内の、日本語文字と数式の間にスペースがない箇所を検出します。
+デフォルトでこのルールは `settings.json` の `latexlint.disabledRules` にて無効化されています。
+
 ### LLLlGg
 
 `.tex` または `.md` ファイル内の、`<<` と `>>` を検出します。
@@ -298,6 +308,47 @@ cleverefパッケージについては、[opt-cpさんによるこちらのペ�
 
 ```md
 I like human $<<<$ cat $<<<<<<<$ dog.
+```
+
+### LLNonASCII
+
+`.tex` または `.md` ファイル内の、全角ASCII文字を検出します。
+デフォルトでこのルールは `settings.json` の `latexlint.disabledRules` にて無効化されています。
+
+以下の文字を検出します。
+
+```txt
+　！＂＃＄％＆＇＊＋，－．／０１２３４５６７８９
+：；＜＝＞？＠ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱ
+ＲＳＴＵＶＷＸＹＺ［＼］＾＿｀ａｂｃｄｅｆｇｈｉ
+ｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ｛｜｝～
+```
+
+我々は以下の正規表現を使用します。
+
+```txt
+[\u3000\uFF01-\uFF07\uFF0A-\uFF5E]
+```
+
+> Range U+FF01–FF5E reproduces the characters of ASCII 21 to 7E as fullwidth forms. U+FF00 does not correspond to a fullwidth ASCII 20 (space character), since that role is already fulfilled by U+3000 "ideographic space".
+[Wikipedia](https://en.wikipedia.org/wiki/Halfwidth_and_Fullwidth_Forms_(Unicode_block))
+
+また、U+3000は全角スペースとして使われます。
+
+U+FF08とU+FF09はそれぞれ`（`と`）`に使われます。これらの文字は日本語文書でよく使われるため、検出しません。
+
+すべての非ASCII文字を検出したい場合は、以下の正規表現を使用します。
+
+```txt
+[^\x00-\x7F]
+```
+
+`\x00` から `\x7F` はASCII文字です。
+
+例えば、以下の日本語の文字を検出できます。
+
+```txt
+あア亜、。
 ```
 
 ### LLRefEq
@@ -315,42 +366,6 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 ![doc/LLSharp](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/905155/ed5c4a02-a016-cfeb-0398-ff995cc6a10a.png)
 
 `\sharp` は音楽記号として使われます。
-
-### LLNonASCII
-
-`.tex` または `.md` ファイル内の、全角ASCII文字を検出します。
-
-以下の文字を検出します。
-
-```txt
-　！＂＃＄％＆＇（）＊＋，－．／０１２３４５６７
-８９：；＜＝＞？＠ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯ
-ＰＱＲＳＴＵＶＷＸＹＺ［＼］＾＿｀ａｂｃｄｅｆｇ
-ｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ｛｜｝～
-```
-
-我々は以下の正規表現を使用します。
-
-```txt
-[\u3000\uFF01-\uFF5E]
-```
-
-> Range U+FF01–FF5E reproduces the characters of ASCII 21 to 7E as fullwidth forms. U+FF00 does not correspond to a fullwidth ASCII 20 (space character), since that role is already fulfilled by U+3000 "ideographic space".
-[Wikipedia](https://en.wikipedia.org/wiki/Halfwidth_and_Fullwidth_Forms_(Unicode_block))
-
-すべての非ASCII文字を検出したい場合は、以下の正規表現を使用します。
-
-```txt
-[^\x00-\x7F]
-```
-
-`\x00` から `\x7F` はASCII文字です。
-
-例えば、以下の日本語の文字を検出できます。
-
-```txt
-あア亜、。
-```
 
 ### LLSI
 

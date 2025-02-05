@@ -34,24 +34,25 @@ https://github.com/hari64boli64/latexlint
 1. [LLAlignAnd](#llalignand) (`=&`, `\leq&`, `\geq&` などを検出)
 2. [LLAlignEnd](#llalignend) (`\\`で終わる`align`環境を検出)
 3. [LLAlignSingleLine](#llalignsingleline) (`\\`なしの`align`環境を検出)
-4. [LLBig](#llbig) (`\cap_`, `\cup_` などを検出)
-5. [LLBracketCurly](#llbracketcurly) (`\max{`, `\min{` を検出)
-6. [LLBracketMissing](#llbracketmissing) (`x^23` などを検出)
-7. [LLBracketRound](#llbracketround) (`\sqrt(`, `^(`, `_(` を検出)
-8. [LLColonEqq](#llcoloneqq) (`:=`, `=:` ,`::=`, `=::` を検出)
-9. [LLColonForMapping](#llcolonformapping) (写像で使われる `:` を検出)
-10. [LLCref](#llcref) (`\ref` を検出、デフォルトで無効)
-11. [LLDoubleQuotes](#lldoublequotes) (`“`, `”`, `"` を検出)
-12. [LLENDash](#llendash) (疑わしい `-` の使用を検出)
-13. [LLEqnarray](#lleqnarray) (`eqnarray`環境を検出)
-14. [LLNonASCII](#llnonascii) (全角のASCII文字を検出)
-15. [LLLlGg](#llllgg) (`<<` と `>>` を検出)
-16. [LLRefEq](#llrefeq) (`\ref{eq:` を検出)
-17. [LLSharp](#llsharp) (`\sharp` を検出)
-18. [LLSI](#llsi) (`\SI` なしの`KB`, `MB`, `GB` などを検出)
-19. [LLT](#llt) (`^T` を検出)
-20. [LLTitle](#lltitle) (`\title{}`, `\section{}` などでの疑わしいタイトルケースを検出)
-21. [LLUserDefined](#lluserdefined) (`latexlint.userDefinedRules` で定義された正規表現を検出)
+4. [LLArticle](#llarticle) (誤った冠詞を検出)
+5. [LLBig](#llbig) (`\cap_`, `\cup_` などを検出)
+6. [LLBracketCurly](#llbracketcurly) (`\max{`, `\min{` を検出)
+7. [LLBracketMissing](#llbracketmissing) (`x^23` などを検出)
+8. [LLBracketRound](#llbracketround) (`\sqrt(`, `^(`, `_(` を検出)
+9. [LLColonEqq](#llcoloneqq) (`:=`, `=:` ,`::=`, `=::` を検出)
+10. [LLColonForMapping](#llcolonformapping) (写像で使われる `:` を検出)
+11. [LLCref](#llcref) (`\ref` を検出、デフォルトで無効)
+12. [LLDoubleQuotes](#lldoublequotes) (`“`, `”`, `"` を検出)
+13. [LLENDash](#llendash) (疑わしい `-` の使用を検出)
+14. [LLEqnarray](#lleqnarray) (`eqnarray`環境を検出)
+15. [LLNonASCII](#llnonascii) (全角のASCII文字を検出)
+16. [LLLlGg](#llllgg) (`<<` と `>>` を検出)
+17. [LLRefEq](#llrefeq) (`\ref{eq:` を検出)
+18. [LLSharp](#llsharp) (`\sharp` を検出)
+19. [LLSI](#llsi) (`\SI` なしの`KB`, `MB`, `GB` などを検出)
+20. [LLT](#llt) (`^T` を検出)
+21. [LLTitle](#lltitle) (`\title{}`, `\section{}` などでの疑わしいタイトルケースを検出)
+22. [LLUserDefined](#lluserdefined) (`latexlint.userDefinedRules` で定義された正規表現を検出)
 
 必要であれば[sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) と [日本語解説記事](https://qiita.com/hari64/items/3f973625551fbce3a08a) もご参照ください。
 
@@ -171,6 +172,13 @@ Cite some references.
 どちらを使うかは使用者次第ですが、`amsmath` [公式ドキュメント](https://ctan.org/pkg/amsmath)では、1つの数式には`equation`環境を使うことが想定されています。
 
 [LaTeX Lint: Rename \begin{} or \end{}](#latex-lint-rename-begin-or-end)でコマンド名を変更できます。
+
+### LLArticle
+
+`.tex` または `.md` ファイル内の、誤った冠詞を検出します。
+例えば、`A $n$-dimensional` は `An $n$-dimensional` であるべきです(今後、他のパターンを追加するかもしれません)。
+
+このようなエラーは、数式が含まれている為、Grammarlyなどの文法チェッカーでは検出できません。
 
 ### LLBig
 

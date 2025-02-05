@@ -109,6 +109,7 @@
               "LLAlignAnd",
               "LLAlignEnd",
               "LLAlignSingleLine",
+              "LLArticle",
               "LLBig",
               "LLBracketCurly",
               "LLBracketMissing",

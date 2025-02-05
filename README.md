@@ -51,8 +51,9 @@ Here is the list of rules we detect, detailed in [Rules](#rules).
 19. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
 20. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
 21. [LLT](#llt) (detect `^T`)
-22. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
-23. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
+22. [LLThousands](#llthousands) (detect `1,000` etc.)
+23. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
+24. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
 
 Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
@@ -403,6 +404,15 @@ You likely want to use `^\top` or `^\mathsf{T}` instead to represent the transpo
 Otherwise, we cannot distinguish between the transpose and the power by a variable `T` (you can use `^{T}` for the power).
 
 [Ref by BrownieAlice](https://blog.browniealice.net/post/latex_transpose/).
+
+### LLThousands
+
+Detect wrongly used commas as thousands separators such as `1,000` in `.tex` files.
+You should likely use `1{,}000` or use the package [icomma](https://ctan.org/pkg/icomma?lang=en).
+
+![doc/LLThousands](https://github.com/hari64boli64/latexlint/blob/master/doc/LLThousands.png?raw=true)
+
+[Ref by Stack Exchange](https://tex.stackexchange.com/questions/303110/avoid-space-after-commas-used-as-thousands-separator-in-math-mode).
 
 ### LLTitle
 

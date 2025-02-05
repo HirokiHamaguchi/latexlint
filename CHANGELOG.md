@@ -9,11 +9,11 @@ All notable changes to the "latexlint" extension will be documented in this file
 - `LLPeriod`: Detect `i.e.`. H.H. [Ref by Stack Exchange](https://tex.stackexchange.com/questions/2229/is-a-period-after-an-abbreviation-the-same-as-an-end-of-sentence-period).
 - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. Disabled by default.
 - Replace Dollars (at Other folder).
-- 100,000
 
 ## 1.4.21 - 2025-02-04
 
 - Add `LLArticle` rule.
+- Add `LLThousands` rule.
 
 ## 1.4.20 - 2025-02-04
 

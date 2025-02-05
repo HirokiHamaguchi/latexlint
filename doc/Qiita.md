@@ -51,8 +51,9 @@ https://github.com/hari64boli64/latexlint
 18. [LLSharp](#llsharp) (`\sharp` を検出)
 19. [LLSI](#llsi) (`\SI` なしの`KB`, `MB`, `GB` などを検出)
 20. [LLT](#llt) (`^T` を検出)
-21. [LLTitle](#lltitle) (`\title{}`, `\section{}` などでの疑わしいタイトルケースを検出)
-22. [LLUserDefined](#lluserdefined) (`latexlint.userDefinedRules` で定義された正規表現を検出)
+21. [LLThousands](#llthousands) (`1,000` などを検出)
+22. [LLTitle](#lltitle) (`\title{}`, `\section{}` などでの疑わしいタイトルケースを検出)
+23. [LLUserDefined](#lluserdefined) (`latexlint.userDefinedRules` で定義された正規表現を検出)
 
 必要であれば[sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) と [日本語解説記事](https://qiita.com/hari64/items/3f973625551fbce3a08a) もご参照ください。
 
@@ -399,6 +400,15 @@ U+FF08とU+FF09はそれぞれ`（`と`）`に使われます。これらの文�
 そうでない場合、変数 `T` の冪乗との区別がつきません。
 
 [参考 BrownieAlice](https://blog.browniealice.net/post/latex_transpose/)
+
+### LLThousands
+
+`.tex` ファイル内の、誤った数値のカンマ区切り（例:`1,000`）を検出します。
+代わりに `1{,}000` を使うか、[icomma](https://ctan.org/pkg/icomma?lang=en)パッケージを使うのが望ましいです。
+
+![doc/LLThousands](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/905155/ccbfe64e-612f-aa37-cc53-011270da876d.png)
+
+[参考 Stack Exchange](https://tex.stackexchange.com/questions/303110/avoid-space-after-commas-used-as-thousands-separator-in-math-mode)
 
 ### LLTitle
 

@@ -20,6 +20,7 @@ import LLRefEq from '../LL/LLRefEq';
 import LLSharp from '../LL/LLSharp';
 import LLSI from '../LL/LLSI';
 import LLT from '../LL/LLT';
+import LLThousands from '../LL/LLThousands';
 import LLTitle from '../LL/LLTitle';
 import LLUserDefined from '../LL/LLUserDefined';
 import formatException from './formatException';
@@ -64,6 +65,7 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
         LLSharp,
         LLSI,
         LLT,
+        LLThousands,
         LLTitle,
         LLUserDefined,
     })) {

@@ -25,6 +25,7 @@ export const LLCodeStrings = [
     'LLSI',
     'LLT',
     'LLTitle',
+    'LLThousands',
     'LLUserDefined',
 ];
 
@@ -53,6 +54,7 @@ export const messages: Record<LLCode, string> = {
     LLSI: 'If this is a unit, consider using the siunitx(\\SI{number}{unit}). Otherwise, register as an exception.',
     LLT: 'Write ^\\top or ^\\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.',
     LLTitle: 'Should this be "%1"? Follow your preferred style guide and register as an exception if necessary.',
+    LLThousands: 'Consider using "%1{,}%2" instead of "%1,%2".',
     LLUserDefined: 'This violates your defined rule: %1',
 };
 
@@ -81,5 +83,6 @@ export const severity: Record<LLCode, vscode.DiagnosticSeverity> = {
     LLSI: WARN,
     LLT: WARN,
     LLTitle: INFO,
+    LLThousands: WARN,
     LLUserDefined: WARN,
 };

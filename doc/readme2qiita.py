@@ -24,6 +24,7 @@ links = {
     "doc/LLSharp": "https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/905155/ed5c4a02-a016-cfeb-0398-ff995cc6a10a.png",
     "doc/LLSI": "https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/905155/c07de18d-a326-14cf-9a4a-9f91d94ba6ba.png",
     "doc/LLT": "https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/905155/fd0d1a3d-8f5c-c8df-af25-bdc4dff78ba5.png",
+    "doc/LLThousands": "https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/905155/ccbfe64e-612f-aa37-cc53-011270da876d.png",
 }
 
 

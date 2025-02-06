@@ -6,6 +6,7 @@ import registerException from './commands/registerException';
 import renameCommand from './commands/renameCommand';
 import selectRules from './commands/selectRules';
 import toggleLinting from './commands/toggleLinting';
+import showCommands from './commands/showCommands';
 import { extensionDisplayName } from './util/constants';
 import getEditor from './util/getEditor';
 import detailsFoldingRangeProvider from './util/detailsFoldingRangeProvider';
@@ -49,8 +50,19 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 	context.subscriptions.push(disposableToggleLinting);
 
+	const disposableShowCommands = vscode.commands.registerCommand('latexlint.showCommands', showCommands);
+	context.subscriptions.push(disposableShowCommands);
+
+	// For md files. Folding ranges for details.
 	context.subscriptions.push(vscode.languages.registerFoldingRangeProvider("markdown", new detailsFoldingRangeProvider()));
 
+	// Only once on activation. Diagnose all open documents.
+	vscode.workspace.textDocuments.forEach((document) => {
+		if (document.languageId !== 'latex' && document.languageId !== 'markdown') return;
+		if (isEnabled) diagnose(document, diagnosticsCollection, false);
+	});
+
+	// Register events.
 	let debounceTimeout: NodeJS.Timeout | undefined = undefined;
 	vscode.workspace.onDidSaveTextDocument(() => {
 		clearTimeout(debounceTimeout);
@@ -67,12 +79,6 @@ export function activate(context: vscode.ExtensionContext) {
 			const cellDoc = notebook.cellAt(0).document;
 			diagnose(cellDoc, diagnosticsCollection, false);
 		}, 500);
-	});
-
-	// Only once on activation. Diagnose all open documents.
-	vscode.workspace.textDocuments.forEach((document) => {
-		if (document.languageId !== 'latex' && document.languageId !== 'markdown') return;
-		if (isEnabled) diagnose(document, diagnosticsCollection, false);
 	});
 
 	vscode.workspace.onDidOpenTextDocument((document) => {

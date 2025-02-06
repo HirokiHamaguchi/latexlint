@@ -25,6 +25,8 @@ links = {
     "doc/LLSI": "https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/905155/c07de18d-a326-14cf-9a4a-9f91d94ba6ba.png",
     "doc/LLT": "https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/905155/fd0d1a3d-8f5c-c8df-af25-bdc4dff78ba5.png",
     "doc/LLThousands": "https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/905155/ccbfe64e-612f-aa37-cc53-011270da876d.png",
+    "doc/LLUserDefined1": "https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/905155/6da96ac9-5052-7ba0-813f-a8c56765b507.png",
+    "doc/LLUserDefined2": "https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/905155/d655b0c7-695b-3b4f-020c-07d37047dcb5.png",
 }
 
 
@@ -40,7 +42,7 @@ def main():
         m = re.search(r"!\[.*\]\((.*)\)", line)
         if m:
             name = line.split("[")[1].split("]")[0]
-            assert name in links
+            assert name in links, f"Name {name} not found in links"
             res.append(f"![{name}]({links[name]})\n")
         else:
             res.append(line)

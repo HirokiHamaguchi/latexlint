@@ -15,20 +15,9 @@ This extension provides a LaTeX Linter for `.tex` and `.md` files with useful co
 
 ![abstract](https://github.com/hari64boli64/latexlint/blob/master/images/abstract.png?raw=true)
 
-By this extension, you can **detect common mistakes** and **define your own Regex rules** to detect.
+## Rules
 
-You can also **rename the commands** with `F2` on `\begin{name}` or `\end{name}`, and **ask Wolfram Alpha** to solve the selected equation.
-
-## Features
-
-By opening the command palette (`Ctrl`+`Shift`+`P`) and typing commands, you can use the following features.
-
-### LaTeX Lint: Diagnose Current File
-
-Diagnose the current editing LaTeX or Markdown file.
-This command automatically runs when saving the file.
-
-Here is the list of rules we detect, detailed in [Rules](#rules).
+Here is the list of rules we detect.
 
 1. [LLAlignAnd](#llalignand) (detect `=&`, `\leq&`, `\geq&`, etc.)
 2. [LLAlignEnd](#llalignend) (detect `align` environment ends with `\\`)
@@ -57,83 +46,6 @@ Here is the list of rules we detect, detailed in [Rules](#rules).
 
 Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
-You can easily select which rules to detect by the command `LaTeX Lint: Select Rules to Detect`.
-
-### LaTeX Lint: Enable/Disable LaTeX Lint
-
-Enable or disable LaTeX Lint.
-This command runs when clicking the icon on the editor toolbar.
-
-![enableDisableButton](https://github.com/hari64boli64/latexlint/blob/master/images/enableDisableButton.png?raw=true)
-
-### LaTeX Lint: Add Rule to Detect
-
-Add your own rule to detect.
-For example, we can detect $f^a$ by the following steps.
-
-<details><summary>Click here to see the steps</summary>
-
-#### 1. Select the string you want to detect (optional)
-
-![addRule1](https://github.com/hari64boli64/latexlint/blob/master/images/addRule1.png?raw=true)
-
-#### 2. Run the command (Add Rule to Detect)
-
-Open the command palette (`Ctrl`+`Shift`+`P`) and type `LaTeX Lint: Add Rule to Detect`.
-
-![addRule2](https://github.com/hari64boli64/latexlint/blob/master/images/addRule2.png?raw=true)
-
-#### 3. Follow the instructions
-
-If you choose `string`, we detect input itself.
-If you choose `Regex`, we detect the pattern using Regex.
-
-Then, you can define your own rule.
-
-</details>
-
-### LaTeX Lint: Select Rules to Detect
-
-Select which rules to detect.
-Only check the rules you want to detect.
-
-![selectRules](https://github.com/hari64boli64/latexlint/blob/master/images/selectRulesToDetect.png?raw=true)
-
-### LaTeX Lint: Rename \begin{} or \end{}
-
-This is an additional feature.
-Rename the command by pressing `F2` on the `\begin{name}` or `\end{name}`.
-
-![renameCommand](https://github.com/hari64boli64/latexlint/blob/master/images/renameCommand.png?raw=true)
-
-### LaTeX Lint: Ask Wolfram Alpha
-
-This is an additional feature.
-Ask Wolfram Alpha to solve the equation.
-
-![askWolframAlpha3](https://github.com/hari64boli64/latexlint/blob/master/images/askWolframAlpha3.png?raw=true)
-
-<details><summary>Click here to see the steps</summary>
-
-#### 1. Select the equation you want to solve
-
-![askWolframAlpha1](https://github.com/hari64boli64/latexlint/blob/master/images/askWolframAlpha1.png?raw=true)
-
-#### 2. Run the command (Ask Wolfram Alpha)
-
-Open the command palette (`Ctrl`+`Shift`+`P`) and type `LaTeX Lint: Ask Wolfram Alpha`.
-
-![askWolframAlpha2](https://github.com/hari64boli64/latexlint/blob/master/images/askWolframAlpha2.png?raw=true)
-
-#### 3. Check the Wolfram Alpha page
-
-You can see the result on the Wolfram Alpha page.
-We remove some unnecessary commands when sending the equation.
-
-</details>
-
-## Rules
-
 <!--
 
 The format of the rules is as follows.
@@ -150,7 +62,7 @@ Cite some references.
 ### LLAlignAnd
 
 Detect `=&` in `.tex` or `.md` files.
-You should likely write as `={}&` in the `align` environment.
+You should likely write it as `={}&` in the `align` environment.
 
 ![doc/LLAlignAnd](https://github.com/hari64boli64/latexlint/blob/master/doc/LLAlignAnd.png?raw=true)
 
@@ -176,14 +88,14 @@ The spacing of the `align` environment is [different](https://tex.stackexchange.
 
 It is up to you which one to use, but `amsmath` [official documentation](https://ctan.org/pkg/amsmath) suggests using the `equation` environment for only one equation.
 
-You can rename the command by [LaTeX Lint: Rename \begin{} or \end{}](#latex-lint-rename-begin-or-end).
+You can rename the command by [LaTeX Lint: Rename \begin or \end Commands](#latex-lint-rename-begin-or-end-commands).
 
 ### LLArticle
 
 Detect wrong article usage in `.tex` or `.md` files.
 For example, `A $n$-dimensional` should be `An $n$-dimensional` (We might add more patterns in the future).
 
-Such error cannot be detected by the grammar checker such as Grammarly, since it contains a math equation.
+Such errors cannot be detected by grammar checkers such as Grammarly, since it contains a math equation.
 
 ### LLBig
 
@@ -218,7 +130,7 @@ You should likely use `\sqrt{`, `^{` and `_{` instead.
 ### LLColonEqq
 
 Detect `:=`, `=:`, `::=` and `=::` in `.tex` files.
-You should likely use `\coloneqq`, `\eqqcolon`, `\Coloneqq` and `\Eqqcolon` in [mathtools](https://ctan.org/pkg/mathtools) package instead.
+You should likely use `\coloneqq`, `\eqqcolon`, `\Coloneqq` and `\Eqqcolon` in the [mathtools](https://ctan.org/pkg/mathtools) package instead.
 
 ![doc/LLColonEqq](https://github.com/hari64boli64/latexlint/blob/master/doc/LLColonEqq.png?raw=true)
 
@@ -240,12 +152,12 @@ In order to detect this pattern, we seek `\to`,`\mapsto` and `\rightarrow` after
 ### LLCref
 
 Detect `\ref` in `.tex` files.
-You should likely use `\cref` or `\Cref` in [cleveref](https://ctan.org/pkg/cleveref) package instead.
-By default, this rules is disabled by `latexlint.disabledRules` in `settings.json`.
+You should likely use `\cref` or `\Cref` in the [cleveref](https://ctan.org/pkg/cleveref) package instead.
+By default, this rule is disabled by `latexlint.disabledRules` in `settings.json`.
 
 We prefer this package because it can automatically add prefixes like "Sec." or "Fig.". We can keep the consistency of the reference format.
 
-For cleveref package, you can also refer to [this page by opt-cp](https://web.archive.org/web/20220616140841/https://opt-cp.com/latex-packages/).
+For the cleveref package, you can also refer to [this page by opt-cp](https://web.archive.org/web/20220616140841/https://opt-cp.com/latex-packages/).
 
 ### LLDoubleQuotes
 
@@ -256,7 +168,7 @@ Use ``XXX'' instead for double quotation.
 
 As for “XXX”, there is no problem in most cases. We prefer to use ``XXX'' for consistency.
 
-You can also use `\enquote{XXX}` with [csquotes](https://ctan.org/pkg/csquotes) package.
+You can also use `\enquote{XXX}` with the [csquotes](https://ctan.org/pkg/csquotes) package.
 
 [Ref by Stack Exchange](https://tex.stackexchange.com/questions/531/what-is-the-best-way-to-use-quotation-mark-glyphs).
 
@@ -267,7 +179,7 @@ You should likely use `--` for en-dash and `---` for em-dash.
 
 ![doc/LLENDash](https://github.com/hari64boli64/latexlint/blob/master/doc/LLEnDash.png?raw=true)
 
-Although this rule is [not inherent orthographic "correctness"](https://en.wikipedia.org/wiki/Dash#En_dash), in a lot of cases, use of en dash is [preferred](https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style#Dashes).
+Although this rule is [not inherent orthographic "correctness"](https://en.wikipedia.org/wiki/Dash#En_dash), in a lot of cases, the use of en dash is [preferred](https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style#Dashes).
 
 For example, we detect the following.
 
@@ -287,20 +199,20 @@ We might have false positives, such as `Wrong-Example`, which is not a person's 
 
 We also should use `--` instead of `-` to indicate a range of pages, e.g., `123--456` instead of `123-456`. A lot of bibtex files follow this rule. We do not detect this because it might be just a subtraction.
 
-We use the Regex `[A-Z][a-zA-Z]*[a-z]`, consisting of a uppercase letter, zero or more letters, and a lowercase letter.
-We assume that this represents a name of person.
+We use the Regex `[A-Z][a-zA-Z]*[a-z]`, consisting of an uppercase letter, zero or more letters, and a lowercase letter.
+We assume that this represents a name of a person.
 
 ### LLEqnarray
 
 Detect `eqnarray` environment in `.tex` or `.md` files.
-You should likely use `align` environment instead.
+You should likely use the `align` environment instead.
 
-It is known that `eqnarray` environment is [not recommended](https://texfaq.org/FAQ-eqnarray) because it has some spacing issues.
+It is known that the `eqnarray` environment is [not recommended](https://texfaq.org/FAQ-eqnarray) because it has some spacing issues.
 
 ### LLJapaneseSpace
 
-Detect the lack of space between Japanese characters and math equation in `.tex` or `.md` files.
-By default, this rules is disabled by `latexlint.disabledRules` in `settings.json`.
+Detect the lack of space between Japanese characters and math equations in `.tex` or `.md` files.
+By default, this rule is disabled by `latexlint.disabledRules` in `settings.json`.
 
 ### LLLlGg
 
@@ -318,7 +230,7 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 ### LLNonASCII
 
 Detect all fullwidth ASCII characters in `.tex` or `.md` files.
-By default, this rules is disabled by `latexlint.disabledRules` in `settings.json`.
+By default, this rule is disabled by `latexlint.disabledRules` in `settings.json`.
 
 We detect the following characters.
 
@@ -342,7 +254,7 @@ Plus, U+3000 is used for a fullwidth space.
 
 U+FF08 and U+FF09 are used for `（` and `）`, respectively. We do not detect these characters because they are often used in Japanese documents.
 
-If you want to detect all non-ASCII characters, use the following Regex with [LaTeX Lint: Add Rule to Detect](#latex-lint-add-rule-to-detect).
+If you want to detect all non-ASCII characters, use the following Regex with [LaTeX Lint: Add Custom Detection Rule](#latex-lint-add-custom-detection-rule).
 
 ```txt
 [^\x00-\x7F]
@@ -361,12 +273,12 @@ For example, you can detect the following Japanese characters.
 Detect `\ref{eq:` in `.tex` files.
 You should likely use `\eqref{eq:` instead.
 
-This commands automatically adds parentheses around the reference.
+This command automatically adds parentheses around the reference.
 
 ### LLSharp
 
 Detect `\sharp` in `.tex` or `.md` files.
-You should likely use `\#` instead for [number sign](https://en.wikipedia.org/wiki/Number_sign).
+You should likely use `\#` instead for the [number sign](https://en.wikipedia.org/wiki/Number_sign).
 
 ![doc/LLSharp](https://github.com/hari64boli64/latexlint/blob/master/doc/LLSharp.png?raw=true)
 
@@ -375,7 +287,7 @@ You should likely use `\#` instead for [number sign](https://en.wikipedia.org/wi
 ### LLSI
 
 Detect `KB`, `MB`, `GB`, `TB`, `PB`, `EB`, `ZB`, `YB`, `KiB`, `MiB`, `GiB`, `TiB`, `PiB`, `EiB`, `ZiB`, and `YiB` without `\SI` in `.tex` files.
-You should likely use `\SI` instead, like `\SI{1}{\kilo\byte}`($10^3$ byte) and `\SI{1}{\kibi\byte}`($2^{10}$ byte).
+You should likely use `\SI` instead, like `\SI{1}{\kilo\byte}`(10^3 byte) and `\SI{1}{\kibi\byte}`(2^{10} byte).
 
 ![doc/LLSI](https://github.com/hari64boli64/latexlint/blob/master/doc/LLSI.png?raw=true)
 
@@ -440,7 +352,7 @@ We test the string inside the `{}` is invariant by the function `toTitleCase` im
 
 You can define your own regular expressions to detect in `.tex` or `.md` files.
 
-Check [LaTex Lint: Add Rule to Detect](#latex-lint-add-rule-to-detect) for more details.
+Check [LaTex Lint: Add Custom Detection Rule](#latex-lint-add-custom-detection-rule) for more details.
 
 We listed some examples in the following.
 
@@ -448,7 +360,7 @@ We listed some examples in the following.
 
 When you use English letters in math mode for an explanation, you should use `\mathrm`.
 
-For example, If the character `a` is not a variable and represents something like **a**tractive force, $f^a(x)$ should be written as $f^{\mathrm{a}}(x)$.
+For example, If the character `a` is not a variable and represents something like **a**tractive force, `f^a(x)` should be written as `f^{\mathrm{a}}(x)`.
 
 ![doc/LLUserDefined1](https://github.com/hari64boli64/latexlint/blob/master/doc/LLUserDefined1.png?raw=true)
 
@@ -458,7 +370,7 @@ However, it is difficult to detect without context. You can define the rule `f\^
 
 When you use operators, you should use `\DeclareMathOperator`.
 
-For example, If you use $\Box$ as a [infimal convolution](https://en.wikipedia.org/wiki/Convex_conjugate#Infimal_convolution), you should define it as an operator.
+For example, If you use `\Box` as a [infimal convolution](https://en.wikipedia.org/wiki/Convex_conjugate#Infimal_convolution), you should define it as an operator.
 
 ```tex
 \DeclareMathOperator{\infConv}{\Box}
@@ -468,9 +380,71 @@ For example, If you use $\Box$ as a [infimal convolution](https://en.wikipedia.o
 
 Then, you can use `\infConv` instead of `\Box`.
 
+## Other Features
+
+You can also use the following features. These commands are available by clicking the icon on the editor toolbar.
+
+![enableDisableButton](https://github.com/hari64boli64/latexlint/blob/master/images/enableDisableButton.png?raw=true)
+
+### LaTeX Lint: Add Custom Detection Rule
+
+Add your own rule to detect.
+For example, we can detect `f^a` by the following steps.
+
+#### 1. Select the string you want to detect (optional)
+
+![addRule1](https://github.com/hari64boli64/latexlint/blob/master/images/addRule1.png?raw=true)
+
+#### 2. Run the command (Add Custom Detection Rule)
+
+Run the commands by clicking the icon or opening the command palette (`Ctrl`+`Shift`+`P`) and type `LaTeX Lint: Add Custom Detection Rule`.
+
+![addRule2](https://github.com/hari64boli64/latexlint/blob/master/images/addRule2.png?raw=true)
+
+#### 3. Follow the instructions
+
+If you choose `string`, we detect input itself.
+If you choose `Regex`, we detect the pattern using Regex.
+
+Then, you can define your own rule.
+
+### LaTeX Lint: Choose Detection Rules
+
+Select which rules to detect. Check the rules you want to detect.
+
+![selectRules](https://github.com/hari64boli64/latexlint/blob/master/images/selectRulesToDetect.png?raw=true)
+
+### LaTeX Lint: Rename \begin or \end Commands
+
+Rename the command by pressing `F2` on the `\begin{name}` or `\end{name}`.
+
+![renameCommand](https://github.com/hari64boli64/latexlint/blob/master/images/renameCommand.png?raw=true)
+
+### LaTeX Lint: Query Wolfram Alpha
+
+Query Wolfram Alpha to solve the equation.
+
+#### 1. Select the equation you want to solve
+
+![askWolframAlpha1](https://github.com/hari64boli64/latexlint/blob/master/images/askWolframAlpha1.png?raw=true)
+
+#### 2. Run the command (Query Wolfram Alpha)
+
+Run the commands by clicking the icon or opening the command palette (`Ctrl`+`Shift`+`P`) and type `LaTeX Lint: Query Wolfram Alpha`.
+
+![askWolframAlpha2](https://github.com/hari64boli64/latexlint/blob/master/images/askWolframAlpha2.png?raw=true)
+
+#### 3. Check the Wolfram Alpha page
+
+You can see the result on the Wolfram Alpha page. We remove some unnecessary commands when sending the equation.
+
+![askWolframAlpha3](https://github.com/hari64boli64/latexlint/blob/master/images/askWolframAlpha3.png?raw=true)
+
 ## Note  
 
 As stated in the [Rules](#rules), false positives and false negatives may occur. We apologize for inconvenience. If you find any errors, please report them via [GitHub Issues](https://github.com/hari64boli64/latexlint/issues).  
+
+**We are always welcome any kind of feedback, suggestions, and pull requests!**
 
 When writing papers, please ensure you follow the style specified by the academic society or publisher.
 

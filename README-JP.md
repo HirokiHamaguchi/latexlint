@@ -17,19 +17,9 @@ https://github.com/hari64boli64/latexlint
 
 ![abstract](https://github.com/hari64boli64/latexlint/blob/master/images/abstract.png?raw=true)
 
-この拡張機能によって、**一般的なミスを検出**し、さらに**独自の正規表現ルールを定義**して検出出来ます。
+## Rules
 
-また、`\begin{name}` や `\end{name}` 上で `F2` を押して**コマンド名を変更**したり、選択した数式を**Wolfram Alpha**に解かせたり出来ます。
-
-## Features
-
-コマンドパレット(`Ctrl`+`Shift`+`P`)を開き、コマンドを入力することで、以下の機能を使用できます。
-
-### LaTeX Lint: Diagnose Current File
-
-現在編集しているLaTeXまたはMarkdownファイルを診断します。このコマンドは、ファイル保存時に自動的に実行されます。
-
-検出ルールは以下の通りで、詳細は [Rules](#rules) に記載されています。
+検出ルールは以下の通りです。
 
 1. [LLAlignAnd](#llalignand) (`=&`, `\leq&`, `\geq&` などを検出)
 2. [LLAlignEnd](#llalignend) (`\\`で終わる`align`環境を検出)
@@ -56,79 +46,6 @@ https://github.com/hari64boli64/latexlint
 23. [LLUserDefined](#lluserdefined) (`latexlint.userDefinedRules` で定義された正規表現を検出)
 
 必要であれば[sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) と [日本語解説記事](https://qiita.com/hari64/items/3f973625551fbce3a08a) もご参照ください。
-
-検出するルールは、コマンド `LaTeX Lint: Select Rules to Detect` で簡単に選択できます。
-
-### LaTeX Lint: Enable/Disable LaTeX Lint
-
-LaTeX Lintを有効化または無効化します。このコマンドは、エディターのツールバーのアイコンをクリックして実行できます。
-
-![enableDisableButton](https://github.com/hari64boli64/latexlint/blob/master/images/enableDisableButton.png?raw=true)
-
-### LaTeX Lint: Add Rule to Detect
-
-独自のルールを追加します。
-例えば、以下の手順で `$f^a$` を検出できます。
-
-<details><summary>手順を表示</summary>
-
-#### 1. 検出したい文字列を選択(オプション)
-
-![addRule1](https://github.com/hari64boli64/latexlint/blob/master/images/addRule1.png?raw=true)
-
-#### 2. コマンドを実行 (Add Rule to Detect)
-
-コマンドパレット(`Ctrl`+`Shift`+`P`)を開き、`LaTeX Lint: Add Rule to Detect` と入力します。
-
-![addRule2](https://github.com/hari64boli64/latexlint/blob/master/images/addRule2.png?raw=true)
-
-#### 3. 指示に従う
-
-`string` を選択すると入力そのものを検出します。
-`Regex` を選択すると正規表現パターンを使用して検出します。
-
-これで独自のルールを定義できます。
-
-</details>
-
-### LaTeX Lint: Select Rules to Detect
-
-検出するルールを選択します。検出したいルールのみをチェックできます。
-
-![selectRules](https://github.com/hari64boli64/latexlint/blob/master/images/selectRulesToDetect.png?raw=true)
-
-### LaTeX Lint: Rename \begin{} or \end{}
-
-追加機能として、`\begin{name}` または `\end{name}` 上で `F2` を押してコマンドをリネームできます。
-
-![renameCommand](https://github.com/hari64boli64/latexlint/blob/master/images/renameCommand.png?raw=true)
-
-### LaTeX Lint: Ask Wolfram Alpha
-
-追加機能として、選択した数式をWolfram Alphaに解かせることができます。
-
-![askWolframAlpha3](https://github.com/hari64boli64/latexlint/blob/master/images/askWolframAlpha3.png?raw=true)
-
-<details><summary>手順を表示</summary>
-
-#### 1. 解きたい数式を選択
-
-![askWolframAlpha1](https://github.com/hari64boli64/latexlint/blob/master/images/askWolframAlpha1.png?raw=true)
-
-#### 2. コマンドを実行 (Ask Wolfram Alpha)
-
-コマンドパレット(`Ctrl`+`Shift`+`P`)を開き、`LaTeX Lint: Ask Wolfram Alpha` と入力します。
-
-![askWolframAlpha2](https://github.com/hari64boli64/latexlint/blob/master/images/askWolframAlpha2.png?raw=true)
-
-#### 3. Wolfram Alphaのページで確認
-
-Wolfram Alphaページで結果を確認できます。
-送信時に不要なコマンドは自動的に削除されます。
-
-</details>
-
-## Rules
 
 <!--
 
@@ -172,7 +89,7 @@ Cite some references.
 
 どちらを使うかは使用者次第ですが、`amsmath` [公式ドキュメント](https://ctan.org/pkg/amsmath)では、1つの数式には`equation`環境を使うことが想定されています。
 
-[LaTeX Lint: Rename \begin{} or \end{}](#latex-lint-rename-begin-or-end)でコマンド名を変更できます。
+[LaTeX Lint: Rename \begin or end Commands](#latex-lint-rename-begin-or-end-commands)でコマンド名を変更できます。
 
 ### LLArticle
 
@@ -214,7 +131,7 @@ Cite some references.
 
 ### LLColonEqq
 
-`.tex`ファイル内の、`:=`, `=:`, `::=`, `=::`を検出します。
+`.tex` ファイル内の、`:=`, `=:`, `::=`, `=::`を検出します。
 [mathtools](https://ctan.org/pkg/mathtools)パッケージの`\coloneqq`, `\eqqcolon`, `\Coloneqq`, `\Eqqcolon`を使用するのが望ましいです。
 
 ![doc/LLColonEqq](https://github.com/hari64boli64/latexlint/blob/master/doc/LLColonEqq.png?raw=true)
@@ -412,7 +329,7 @@ U+FF08とU+FF09はそれぞれ`（`と`）`に使われます。これらの文�
 
 ### LLTitle
 
-`.tex`ファイル内の、`\title{}`, `\section{}`, `\subsection{}`, `\subsubsection{}`, `\paragraph{}`, `\subparagraph{}` 内で、疑わしいタイトルケースを検出します。
+`.tex` ファイル内の、`\title{}`, `\section{}`, `\subsection{}`, `\subsubsection{}`, `\paragraph{}`, `\subparagraph{}` 内で、疑わしいタイトルケースを検出します。
 
 例えば、
 
@@ -436,8 +353,17 @@ U+FF08とU+FF09はそれぞれ`（`と`）`に使われます。これらの文�
 
 `.tex` または `.md` ファイル内の、独自に定義された正規表現を検出します。
 
-例えば、数式モードで説明のために英文字を使う場合、 `\mathrm` を使うべきです。
-$\mathrm{a}$ が変数ではなく、**a**tractive forceのような意味を表す場合、$f^a(x)$ は $f^{\mathrm{a}}(x)$ と記述するべきです。
+詳細は[LaTex Lint: Add Custom Detection Rule](#latex-lint-add-custom-detection-rule)を参照して下さい。
+
+以下にいくつかの例を示します。
+
+#### 例1: 英文字にmathrmを使用する
+
+数式モードで説明のために英文字を使う場合、 `\mathrm` を使うべきです。
+
+例えば、`a` が変数ではなく、**a**tractive forceのような意味を表す場合、`f^a(x)` は `f^{\mathrm{a}}(x)` と記述するべきです。
+
+![doc/LLUserDefined1](https://github.com/hari64boli64/latexlint/blob/master/doc/LLUserDefined1.png?raw=true)
 
 ただし、文脈無しでは検出が難しいです。そこで、以下の正規表現を定義してこのパターンを検出できます。
 
@@ -445,13 +371,87 @@ $\mathrm{a}$ が変数ではなく、**a**tractive forceのような意味を表
 f\^a
 ```
 
-詳細は[LaTex Lint: Add Rule to Detect](#latex-lint-add-rule-to-detect)を参照して下さい。
+#### 例2: 適切に定義された演算子を使用する
 
-## Note
+演算子を使用する場合、`\DeclareMathOperator` を使用するべきです。
 
-[Rules](#rules)でも述べた通り、偽陽性や偽陰性が発生する可能性があります。申し訳ありません。誤りがあった場合は[GitHub Issues](https://github.com/hari64boli64/latexlint/issues)でお知らせ下さい。
+例えば、`\Box` を[infimal convolution](https://en.wikipedia.org/wiki/Convex_conjugate#Infimal_convolution)として使用する場合、演算子として定義するべきです。
 
-また、論文執筆に際して学会や出版社側から指定されたスタイルに従うようにして下さい。
+```tex
+\DeclareMathOperator{\infConv}{\Box}
+```
+
+![doc/LLUserDefined2](https://github.com/hari64boli64/latexlint/blob/master/doc/LLUserDefined2.png?raw=true)
+
+その後、`\Box` の代わりに `\infConv` を使用できます。
+
+## その他の機能
+
+以下の機能も使用できます。これらのコマンドはエディターツールバーのアイコンをクリックすることで利用可能です。
+
+![enableDisableButton](https://github.com/hari64boli64/latexlint/blob/master/images/enableDisableButton.png?raw=true)
+
+### LaTeX Lint: Add Custom Detection Rule
+
+独自の検出ルールを追加します。
+例えば、以下の手順で `f^a` を検出できます。
+
+#### 1. 検出したい文字列を選択する（オプション）
+
+![addRule1](https://github.com/hari64boli64/latexlint/blob/master/images/addRule1.png?raw=true)
+
+#### 2. コマンドを実行する（Add Custom Detection Rule）
+
+アイコンをクリックするか、コマンドパレット（`Ctrl`+`Shift`+`P`）を開いて `LaTeX Lint: Add Custom Detection Rule` と入力してコマンドを実行します。
+
+![addRule2](https://github.com/hari64boli64/latexlint/blob/master/images/addRule2.png?raw=true)
+
+#### 3. 指示に従う
+
+`string` を選択すると、入力自体を検出します。
+`Regex` を選択すると、正規表現を使用してパターンを検出します。
+
+その後、独自のルールを定義できます。
+
+### LaTeX Lint: Choose Detection Rules
+
+検出するルールを選択します。検出したいルールにチェックを入れます。
+
+![selectRules](https://github.com/hari64boli64/latexlint/blob/master/images/selectRulesToDetect.png?raw=true)
+
+### LaTeX Lint: Rename \begin or \end Commands
+
+`\begin{name}` または `\end{name}` 上で `F2` を押してコマンドをリネームします。
+
+![renameCommand](https://github.com/hari64boli64/latexlint/blob/master/images/renameCommand.png?raw=true)
+
+### LaTeX Lint: Query Wolfram Alpha
+
+Wolfram Alpha に方程式を解かせます。
+
+#### 1. 解きたい方程式を選択する
+
+![askWolframAlpha1](https://github.com/hari64boli64/latexlint/blob/master/images/askWolframAlpha1.png?raw=true)
+
+#### 2. コマンドを実行する（Query Wolfram Alpha）
+
+アイコンをクリックするか、コマンドパレット（`Ctrl`+`Shift`+`P`）を開いて `LaTeX Lint: Query Wolfram Alpha` と入力してコマンドを実行します。
+
+![askWolframAlpha2](https://github.com/hari64boli64/latexlint/blob/master/images/askWolframAlpha2.png?raw=true)
+
+#### 3. Wolfram Alpha ページを確認する
+
+Wolfram Alpha ページで結果を確認できます。方程式を送信する際に不要なコマンドを削除します。
+
+![askWolframAlpha3](https://github.com/hari64boli64/latexlint/blob/master/images/askWolframAlpha3.png?raw=true)
+
+## 注意  
+
+[Rules](#rules)でも述べた通り、偽陽性や偽陰性が発生する可能性があります。申し訳ありません。誤りがあった場合は[GitHub Issues](https://github.com/hari64boli64/latexlint/issues)でお知らせ下さい。  
+
+**いかなるフィードバック、提案、プルリクエストも常に歓迎しています!**
+
+論文執筆に際しては、学会や出版社側から指定されたスタイルに従うようにして下さい。
 
 この拡張機能がお役に立てば幸いです。
 

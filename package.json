@@ -35,12 +35,12 @@
       {
         "category": "LaTeX Lint",
         "command": "latexlint.addRule",
-        "title": "Add Rule to Detect"
+        "title": "Add Custom Detection Rule"
       },
       {
         "category": "LaTeX Lint",
         "command": "latexlint.askWolframAlpha",
-        "title": "Ask Wolfram Alpha"
+        "title": "Query Wolfram Alpha"
       },
       {
         "category": "LaTeX Lint",
@@ -50,22 +50,27 @@
       {
         "category": "LaTeX Lint",
         "command": "latexlint.registerException",
-        "title": "Register Exception"
+        "title": "Add Exception Word"
       },
       {
         "category": "LaTeX Lint",
         "command": "latexlint.renameCommand",
-        "title": "Rename \\begin{} or \\end{}"
+        "title": "Rename \\begin or \\end Commands"
       },
       {
         "category": "LaTeX Lint",
         "command": "latexlint.selectRules",
-        "title": "Select Rules to Detect"
+        "title": "Choose Detection Rules"
       },
       {
         "category": "LaTeX Lint",
         "command": "latexlint.toggleLinting",
-        "title": "Enable/Disable LaTeX Lint",
+        "title": "Toggle LaTeX Lint"
+      },
+      {
+        "category": "LaTeX Lint",
+        "command": "latexlint.showCommands",
+        "title": "Display Available Commands",
         "icon": {
           "dark": "images/lintIconDark.svg",
           "light": "images/lintIconLight.svg"
@@ -76,7 +81,7 @@
       "editor/title": [
         {
           "when": "editorLangId == latex || editorLangId == markdown || notebookType == jupyter-notebook",
-          "command": "latexlint.toggleLinting",
+          "command": "latexlint.showCommands",
           "group": "navigation"
         }
       ]

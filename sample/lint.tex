@@ -9,6 +9,7 @@
 \usepackage{float}
 \usepackage{geometry}
 \usepackage{graphicx}
+\usepackage{listings}
 \usepackage{mathtools}
 \usepackage{MnSymbol}
 \usepackage{physics}
@@ -549,6 +550,19 @@ You can define your own rule.
 \appendix
 
 \renewcommand\thesection{Appendix \Alph{section}}
+
+\section{Bugs}
+
+ToDo: Fix This.
+
+\begin{verbatim}
+	"double quotes in verbatim"
+\end{verbatim}
+
+\begin{lstlisting}
+def test():
+	S = "double quotes in listing"
+\end{lstlisting}
 
 \section{LLSetBar}
 

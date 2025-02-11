@@ -81,18 +81,22 @@ export function activate(context: vscode.ExtensionContext) {
 		}, 500);
 	});
 
-	vscode.workspace.onDidOpenTextDocument((document) => {
-		if (document.languageId !== 'latex' && document.languageId !== 'markdown') return;
-		if (isEnabled) diagnose(document, diagnosticsCollection, false);
+	// vscode.workspace.onDidCloseTextDocument and
+	// vscode.workspace.onDidCloseNotebookDocument
+	// will not work as expected. Thus, we use the following event.
+	vscode.window.onDidChangeVisibleTextEditors(() => {
+		const validURIs = [];
+		for (const editor of vscode.window.visibleTextEditors)
+			if (editor.document.languageId === 'latex' || editor.document.languageId === 'markdown') validURIs.push(editor.document.uri);
+		for (const [uri, _] of diagnosticsCollection) {
+			if (uri.scheme !== 'file') continue;
+			if (!validURIs.includes(uri)) diagnosticsCollection.delete(uri);
+		}
+		for (const editor of vscode.window.visibleTextEditors)
+			diagnose(editor.document, diagnosticsCollection, false);
 	});
 
-	vscode.workspace.onDidCloseTextDocument((document) => {
-		diagnosticsCollection.delete(document.uri);
-	});
-
-	// For notebooks.
 	vscode.window.onDidChangeVisibleNotebookEditors(() => {
-		// vscode.workspace.onDidCloseNotebookDocument is not available in this situation.
 		const validCellURIs = [];
 		for (const editor of vscode.window.visibleNotebookEditors)
 			for (const cell of editor.notebook.getCells())

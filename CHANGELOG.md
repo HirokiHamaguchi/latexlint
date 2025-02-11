@@ -10,9 +10,18 @@ All notable changes to the "latexlint" extension will be documented in this file
 - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. Disabled by default.
 - Replace Dollars (at Other folder).
 
-## 1.4.22 - 2025-02-06
+## 1.4.24 - 2025-02-11
+
+- Add `Bug` in the sample tex file.
+- Update `extension.ts` so that it works with split editors.
+
+## 1.4.23 - 2025-02-06
 
 - Add `showCommands` feature.
+
+## 1.4.22 - 2025-02-06
+
+- No notable changes.
 
 ## 1.4.21 - 2025-02-05
 

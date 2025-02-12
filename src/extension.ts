@@ -92,8 +92,10 @@ export function activate(context: vscode.ExtensionContext) {
 			if (uri.scheme !== 'file') continue;
 			if (!validURIs.includes(uri)) diagnosticsCollection.delete(uri);
 		}
-		for (const editor of vscode.window.visibleTextEditors)
+		for (const editor of vscode.window.visibleTextEditors) {
+			if (editor.document.languageId !== 'latex' && editor.document.languageId !== 'markdown') continue;
 			diagnose(editor.document, diagnosticsCollection, false);
+		}
 	});
 
 	vscode.window.onDidChangeVisibleNotebookEditors(() => {

@@ -2,7 +2,7 @@
   "name": "latexlint",
   "displayName": "LaTeX Lint",
   "description": "Linter for LaTeX with useful commands for academic writing",
-  "version": "1.4.26",
+  "version": "1.4.27",
   "icon": "images/mainIcon512.png",
   "author": {
     "name": "hari64boli64",

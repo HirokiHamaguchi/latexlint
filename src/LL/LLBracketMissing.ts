@@ -3,6 +3,7 @@ import { messages } from '../util/constants';
 import ranges2diagnostics from '../util/ranges2diagnostics';
 import isLabelOrURL from '../util/isLabelOrURL';
 import match2range from '../util/match2range';
+import isInComment from '../util/isInComment';
 
 export default function LLBracketMissing(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
     // In Markdown, _ can be used for various purposes, unlike in LaTeX.
@@ -22,6 +23,11 @@ export default function LLBracketMissing(doc: vscode.TextDocument, txt: string):
         if (idxOfBegin !== -1 && match.index < idxOfBegin) continue;
 
         if (isLabelOrURL(txt, match)) continue;
+
+        const pos = doc.positionAt(match.index);
+        const line = doc.lineAt(pos.line);
+        const idx = match.index - doc.offsetAt(line.range.start);
+        if (isInComment(line.text, idx)) continue;
 
         message.push(messages[code].replaceAll("%1", match[0][0]));
         ranges.push(match2range(doc, match));

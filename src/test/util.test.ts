@@ -105,9 +105,10 @@ suite('Extension Test Suite', () => {
         test(`Test ${pythonFile}`, () => {
             const { spawnSync } = require('child_process');
             const pathToTestFile = require('path').dirname(__dirname);
-            const result = spawnSync('python', [
+            const result = spawnSync('py', [
                 pathToTestFile.replace("out", "src") + '\\test\\' + pythonFile
             ]);
+            console.log(result);
             assert.strictEqual(result.status, 0);
         });
 });

@@ -213,7 +213,7 @@ cleverefパッケージについては、[opt-cpさんによるこちらのペ�
 
 ### LLJapaneseSpace
 
-`.md` ファイル内の、日本語文字と数式の間にスペースがない箇所を検出します。
+`.tex` または `.md` ファイル内の、日本語文字と数式の間にスペースがない箇所を検出します。
 デフォルトでこのルールは `settings.json` の `latexlint.disabledRules` にて無効化されています。
 
 ### LLLlGg

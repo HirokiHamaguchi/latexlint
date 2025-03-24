@@ -211,7 +211,7 @@ It is known that the `eqnarray` environment is [not recommended](https://texfaq.
 
 ### LLJapaneseSpace
 
-Detect the lack of space between Japanese characters and math equations in `.md` files.
+Detect the lack of space between Japanese characters and math equations in `.tex` or `.md` files.
 By default, this rule is disabled by `latexlint.disabledRules` in `settings.json`.
 
 ### LLLlGg

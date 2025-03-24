@@ -8,7 +8,7 @@ const okWords = [
     'Fritz-John',
 ];
 
-const okPrefixes = ['Anti', 'Auto', 'Award', 'Best', 'Bi', 'Bottom', 'Co', 'Cross', 'Cutting', 'Data', 'De', 'Deep', 'Dis', 'En', 'Ex', 'Feature', 'First', 'Full', 'High', 'Higher', 'Hyper', 'Ill', 'Infra', 'Inter', 'Intra', 'Long', 'Low', 'Machine', 'Macro', 'Micro', 'Multi', 'Neo', 'Non', 'Open', 'Out', 'Over', 'Pan', 'Part', 'Pop', 'Post', 'Post', 'Post', 'Pre', 'Pre', 'Pre', 'Pro', 'Re', 'Real', 'Reinforcement', 'Retro', 'Semi', 'Short', 'State', 'Sub', 'Super', 'Third', 'Top', 'Trans', 'Tri', 'Ultra', 'Ultra', 'Un', 'Under', 'Uni', 'User', 'Well', 'Zero'];
+const okPrefixes = ['Anti', 'Auto', 'Award', 'Best', 'Bi', 'Bottom', 'Co', 'Cross', 'Cutting', 'Data', 'De', 'Deep', 'Dis', 'En', 'Ex', 'Feature', 'First', 'Full', 'High', 'Higher', 'Hyper', 'Ill', 'Infra', 'Inter', 'Intra', 'Long', 'Low', 'Machine', 'Macro', 'Micro', 'Multi', 'Neo', 'Non', 'Open', 'Out', 'Over', 'Pan', 'Part', 'Pop', 'Post', 'Post', 'Post', 'Pre', 'Pre', 'Pre', 'Pro', 'Prox', 'Proximal', 'Re', 'Real', 'Reinforcement', 'Retro', 'Semi', 'Short', 'State', 'Sub', 'Super', 'Third', 'Top', 'Trans', 'Tri', 'Ultra', 'Ultra', 'Un', 'Under', 'Uni', 'User', 'Well', 'Zero'];
 
 export default function LLENDash(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
     const ranges: vscode.Range[] = [];

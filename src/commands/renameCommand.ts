@@ -33,6 +33,7 @@ export default async function renameCommand() {
         (res.originalText === "align*" && newText === "equation*"))
         res.s2 = res.s2.replace(/&/g, ' ').replace(/\\\\/g, '  ');
 
+    // todo in-place edition
     const updatedText = res.s1 + newText + res.s2 + newText + res.s3;
     await editor.edit((editBuilder) => {
         editBuilder.replace(

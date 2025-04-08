@@ -15,6 +15,8 @@ This extension provides a LaTeX Linter for `.tex` and `.md` files with useful co
 
 ![abstract](https://github.com/hari64boli64/latexlint/blob/master/images/abstract.png?raw=true)
 
+We welcome any kind of feedback, suggestions, and pull requests!
+
 ## Rules
 
 Here is the list of rules we detect.

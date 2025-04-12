@@ -76,8 +76,10 @@ export function activate(context: vscode.ExtensionContext) {
 		clearTimeout(debounceTimeout);
 		debounceTimeout = setTimeout(() => {
 			if (notebook.cellCount === 0) return;
-			const cellDoc = notebook.cellAt(0).document;
-			diagnose(cellDoc, diagnosticsCollection, false);
+			for (const cell of notebook.getCells()) {
+				if (cell.document.languageId !== 'markdown') continue;
+				diagnose(cell.document, diagnosticsCollection, false);
+			}
 		}, 500);
 	});
 
@@ -102,15 +104,13 @@ export function activate(context: vscode.ExtensionContext) {
 		const validCellURIs = [];
 		for (const editor of vscode.window.visibleNotebookEditors)
 			for (const cell of editor.notebook.getCells())
-				if (cell.document.languageId === 'markdown') validCellURIs.push(cell.document.uri);
+				if (cell.document.languageId === 'markdown') {
+					validCellURIs.push(cell.document.uri);
+					diagnose(cell.document, diagnosticsCollection, false);
+				}
 		for (const [uri, _] of diagnosticsCollection) {
 			if (uri.scheme !== 'vscode-notebook-cell') continue;
 			if (!validCellURIs.includes(uri)) diagnosticsCollection.delete(uri);
-		}
-		for (const editor of vscode.window.visibleNotebookEditors) {
-			if (editor.notebook.cellCount === 0) continue;
-			const cellDoc = editor.notebook.cellAt(0).document;
-			diagnose(cellDoc, diagnosticsCollection, false);
 		}
 	});
 }

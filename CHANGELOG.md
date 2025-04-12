@@ -10,6 +10,14 @@ All notable changes to the "latexlint" extension will be documented in this file
 - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. Disabled by default.
 - Replace Dollars (at Other folder).
 
+## 1.4.30 - 2025-04-12
+
+- Fix bug for ipynb files.
+
+## 1.4.29 - 2025-04-08
+
+- Add more exceptions for the `LLENDash`.
+
 ## 1.4.28 - 2025-03-24
 
 - Add more exceptions for the `LLENDash`.

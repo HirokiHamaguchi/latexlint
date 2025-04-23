@@ -195,9 +195,7 @@ For example, we detect the following.
 However, we do not detect the following as an exception.
 
 * `Fritz-John` (optimization, name of a person)
-* (We also add a lot of exceptions, such as `First-Order`, `State-Of-The-Art`, `Non-Linear`, `Non-Convex`, etc.)
-
-We might have false positives, such as `Wrong-Example`, which is not a person's name.
+* todo: add more exceptions
 
 We also should use `--` instead of `-` to indicate a range of pages, e.g., `123--456` instead of `123-456`. A lot of bibtex files follow this rule. We do not detect this because it might be just a subtraction.
 

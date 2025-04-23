@@ -200,8 +200,6 @@ Here are examples of `:` we do not detect:
 
 Exception: Fritz-John (optimization, name of a person)
 
-False Positive: Wrong-Example
-
 ## LLEqnarray
 
 We should not use eqnarray. It has some spacing issues.

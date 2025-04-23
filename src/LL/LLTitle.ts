@@ -3,13 +3,14 @@ import toTitleCase from '../util/toTitleCase';
 import { extensionDisplayName, severity, messages } from '../util/constants';
 import { getCodeWithURI } from '../util/getCodeWithURI';
 
+
 const REGEXPS = [
     /\\title{/g,
-    /\\section{/g,
-    /\\subsection{/g,
-    /\\subsubsection{/g,
-    /\\paragraph{/g,
-    /\\subparagraph{/g
+    /\\section\*?{/g,
+    /\\subsection\*?{/g,
+    /\\subsubsection\*?{/g,
+    /\\paragraph\*?{/g,
+    /\\subparagraph\*?{/g
 ];
 
 export default function LLTitle(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {

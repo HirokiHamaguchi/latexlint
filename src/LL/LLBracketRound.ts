@@ -20,5 +20,5 @@ export default function LLBracketRound(doc: vscode.TextDocument, txt: string): v
         ranges.push(match2range(doc, match));
     }
 
-    return ranges2diagnostics(code, message, ranges);
+    return ranges2diagnostics(doc, code, message, ranges);
 }

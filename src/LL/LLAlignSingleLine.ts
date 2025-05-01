@@ -12,5 +12,5 @@ export default function LLAlignSingleLine(doc: vscode.TextDocument, txt: string,
             const endPos = doc.positionAt(t);
             ranges.push(new vscode.Range(startPos, endPos));
         }
-    return ranges2diagnostics(code, message, ranges);
+    return ranges2diagnostics(doc, code, message, ranges);
 }

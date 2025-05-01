@@ -17,5 +17,5 @@ export default function LLAlignEnd(doc: vscode.TextDocument, txt: string, alignL
             ranges.push(new vscode.Range(startPos, endPos));
         }
     }
-    return ranges2diagnostics(code, message, ranges);
+    return ranges2diagnostics(doc, code, message, ranges);
 }

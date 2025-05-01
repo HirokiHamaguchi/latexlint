@@ -22,5 +22,5 @@ export default function LLENDash(doc: vscode.TextDocument, txt: string): vscode.
 
     const code = "LLENDash";
     const message = messages[code];
-    return ranges2diagnostics(code, message, ranges);
+    return ranges2diagnostics(doc, code, message, ranges);
 }

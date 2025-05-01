@@ -35,5 +35,5 @@ export default function regex2diagnostics(
         message.push(mes);
         ranges.push(range);
     }
-    return ranges2diagnostics(code, message, ranges);
+    return ranges2diagnostics(doc, code, message, ranges);
 }

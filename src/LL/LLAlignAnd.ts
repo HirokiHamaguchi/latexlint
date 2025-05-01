@@ -15,5 +15,5 @@ export default function LLAlignAnd(doc: vscode.TextDocument, txt: string, alignL
             replacedMessages.push(message.replaceAll("%1", m[1]));
         }
     }
-    return ranges2diagnostics(code, replacedMessages, ranges);
+    return ranges2diagnostics(doc, code, replacedMessages, ranges);
 }

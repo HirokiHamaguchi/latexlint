@@ -47,5 +47,5 @@ export default function LLColonForMapping(doc: vscode.TextDocument, txt: string)
 
     const code = 'LLColonForMapping';
     const message = messages[code];
-    return ranges2diagnostics(code, message, ranges);
+    return ranges2diagnostics(doc, code, message, ranges);
 }

@@ -32,5 +32,5 @@ export default function LLBracketMissing(doc: vscode.TextDocument, txt: string):
         message.push(messages[code].replaceAll("%1", match[0][0]));
         ranges.push(match2range(doc, match));
     }
-    return ranges2diagnostics(code, message, ranges);
+    return ranges2diagnostics(doc, code, message, ranges);
 }

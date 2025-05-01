@@ -27,6 +27,6 @@ export default function LLDoubleQuotes(doc: vscode.TextDocument, txt: string): v
         ranges.push(range);
     }
 
-    return ranges2diagnostics(code, messages[code], ranges);
+    return ranges2diagnostics(doc, code, messages[code], ranges);
 
 }

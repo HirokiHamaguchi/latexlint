@@ -37,5 +37,5 @@ export default function LLSI(doc: vscode.TextDocument, txt: string): vscode.Diag
 
     const code = "LLSI";
     const message = messages[code];
-    return ranges2diagnostics(code, message, ranges);
+    return ranges2diagnostics(doc, code, message, ranges);
 }

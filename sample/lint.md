@@ -161,6 +161,12 @@ $\sqrt{a}$ and $\sqrt(a)$.
 
 $a^(1)$ and $a_(1)$ are also checked.
 
+```python
+def __init__(self, a, b):
+    self.a = a
+    self.b = b
+```
+
 ## LLColonForMapping
 
 We detect all of `:` in the following.
@@ -226,6 +232,11 @@ $n \ll m$ ok.
 $n << m$ ng.
 
 I like human <<< cat <<<<<<<<<<<<<<<< dog.
+
+```python
+def f(x):
+    return x << 1
+```
 
 ## LLNonASCII
 

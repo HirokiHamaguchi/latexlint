@@ -2,8 +2,7 @@
 
 <div align="center">
 
-<img src="https://github.com/hari64boli64/latexlint/blob/master/images/mainIcon512.png?raw=true"
- alt="mainIcon" width="150">
+<img src="images/mainIcon512.png" alt="mainIcon" width="150">
 
 # LaTeX Lint
 
@@ -13,7 +12,7 @@
 
 This extension provides a LaTeX Linter for `.tex` and `.md` files with useful commands for academic writing.
 
-![abstract](https://github.com/hari64boli64/latexlint/blob/master/images/abstract.png?raw=true)
+![abstract](images/abstract.png)
 
 We welcome any kind of feedback, suggestions, and pull requests!
 
@@ -66,7 +65,7 @@ Cite some references.
 Detect `=&` in `.tex` or `.md` files.
 You should likely write it as `={}&` in the `align` environment.
 
-![doc/LLAlignAnd](https://github.com/hari64boli64/latexlint/blob/master/doc/LLAlignAnd.png?raw=true)
+![doc/LLAlignAnd](doc/LLAlignAnd.png)
 
 We also detect `\neq&`, `\leq&`, `\geq&`, `\le&`, `\ge&`, `<&` and `>&`.
 
@@ -84,7 +83,7 @@ This `\\` can be unnecessary.
 Detect `align` environment without `\\` in `.tex` or `.md` files.
 You should likely use the `equation` environment.
 
-![doc/LLAlignSingleLine](https://github.com/hari64boli64/latexlint/blob/master/doc/LLAlignSingleLine.png?raw=true)
+![doc/LLAlignSingleLine](doc/LLAlignSingleLine.png)
 
 The spacing of the `align` environment is [different](https://tex.stackexchange.com/questions/239550/what-is-the-difference-between-align-and-equation-environment-when-i-only-want-t) from the `equation` environment with only one equation.
 
@@ -104,7 +103,7 @@ Such errors cannot be detected by grammar checkers such as Grammarly, since it c
 Detect `\cap_`, `\cup_`, `\odot_`, `\oplus_`, `\otimes_`, `\sqcup_`, `uplus_`, `\vee_` and `\wedge_` in `.tex` or `.md` files.
 You should likely use `\bigcap`, `\bigcup`, `\bigodot`, `\bigoplus`, `\bigotimes`, `\bigsqcup`, `\biguplus`, `\bigvee` and `\bigwedge` instead.
 
-![doc/LLBig](https://github.com/hari64boli64/latexlint/blob/master/doc/LLBig.png?raw=true)
+![doc/LLBig](doc/LLBig.png)
 
 [Ref by Stack Exchange](https://tex.stackexchange.com/questions/205125/formatting-the-union-of-sets).
 
@@ -113,28 +112,28 @@ You should likely use `\bigcap`, `\bigcup`, `\bigodot`, `\bigoplus`, `\bigotimes
 Detect `\max{` and `\min{` in `.tex` or `.md` files.
 You should likely use `\max(` and `\min(` instead, or add a space after `\max` or `\min` to clarify.
 
-![doc/LLBracketCurly](https://github.com/hari64boli64/latexlint/blob/master/doc/LLBracketCurly.png?raw=true)
+![doc/LLBracketCurly](doc/LLBracketCurly.png)
 
 ### LLBracketMissing
 
 Detect cases such as `^23`, `_23`, `^ab` and `_ab` in `.tex` files.
 Clarify the scope of the superscript and subscript by adding `{}` or space.
 
-![doc/LLBracketMissing](https://github.com/hari64boli64/latexlint/blob/master/doc/LLBracketMissing.png?raw=true)
+![doc/LLBracketMissing](doc/LLBracketMissing.png)
 
 ### LLBracketRound
 
 Detect `\sqrt(`, `^(` and `_(` in `.tex` or `.md` files.
 You should likely use `\sqrt{`, `^{` and `_{` instead.
 
-![doc/LLBracketRound](https://github.com/hari64boli64/latexlint/blob/master/doc/LLBracketRound.png?raw=true)
+![doc/LLBracketRound](doc/LLBracketRound.png)
 
 ### LLColonEqq
 
 Detect `:=`, `=:`, `::=` and `=::` in `.tex` files.
 You should likely use `\coloneqq`, `\eqqcolon`, `\Coloneqq` and `\Eqqcolon` in the [mathtools](https://ctan.org/pkg/mathtools) package instead.
 
-![doc/LLColonEqq](https://github.com/hari64boli64/latexlint/blob/master/doc/LLColonEqq.png?raw=true)
+![doc/LLColonEqq](doc/LLColonEqq.png)
 
 The colon is slightly too low in `:=`, but vertically centered in `\coloneqq` according to [this](https://tex.stackexchange.com/questions/4216/how-to-typeset-correctly).
 
@@ -145,7 +144,7 @@ The colon is slightly too low in `:=`, but vertically centered in `\coloneqq` ac
 Detect `:` which seems to be used for mapping in `.tex` or `.md` files.
 You likely want to use `\colon` instead.
 
-![doc/LLColonForMapping](https://github.com/hari64boli64/latexlint/blob/master/doc/LLColonForMapping.png?raw=true)
+![doc/LLColonForMapping](doc/LLColonForMapping.png)
 
 `\colon` is [recommended](https://tex.stackexchange.com/questions/37789/using-colon-or-in-formulas) for the mapping symbol. `:` is used for ratio, such as `1:2`.
 
@@ -179,7 +178,7 @@ You can also use `\enquote{XXX}` with the [csquotes](https://ctan.org/pkg/csquot
 Detect the dubious use of hyphens in `.tex` or `.md` files.
 You should likely use `--` for en-dash and `---` for em-dash.
 
-![doc/LLENDash](https://github.com/hari64boli64/latexlint/blob/master/doc/LLEnDash.png?raw=true)
+![doc/LLENDash](doc/LLEnDash.png)
 
 Although this rule is [not inherent orthographic "correctness"](https://en.wikipedia.org/wiki/Dash#En_dash), in a lot of cases, the use of en dash is [preferred](https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style#Dashes).
 
@@ -219,7 +218,7 @@ By default, this rule is disabled by `latexlint.disabledRules` in `settings.json
 Detect `<<` and `>>` in `.tex` or `.md` files.
 You should likely use `\ll` and `\gg` instead.
 
-![doc/LLLlGg](https://github.com/hari64boli64/latexlint/blob/master/doc/LLLlGg.png?raw=true)
+![doc/LLLlGg](doc/LLLlGg.png)
 
 We do not detect `<<` like this one.
 
@@ -285,7 +284,7 @@ This command automatically adds parentheses around the reference.
 Detect `\sharp` in `.tex` or `.md` files.
 You should likely use `\#` instead for the [number sign](https://en.wikipedia.org/wiki/Number_sign).
 
-![doc/LLSharp](https://github.com/hari64boli64/latexlint/blob/master/doc/LLSharp.png?raw=true)
+![doc/LLSharp](doc/LLSharp.png)
 
 `\sharp` is used for the musical symbol.
 
@@ -294,7 +293,7 @@ You should likely use `\#` instead for the [number sign](https://en.wikipedia.or
 Detect `KB`, `MB`, `GB`, `TB`, `PB`, `EB`, `ZB`, `YB`, `KiB`, `MiB`, `GiB`, `TiB`, `PiB`, `EiB`, `ZiB`, and `YiB` without `\SI` in `.tex` files.
 You should likely use `\SI` instead, like `\SI{1}{\kilo\byte}`(10^3 byte) and `\SI{1}{\kibi\byte}`(2^{10} byte).
 
-![doc/LLSI](https://github.com/hari64boli64/latexlint/blob/master/doc/LLSI.png?raw=true)
+![doc/LLSI](doc/LLSI.png)
 
 | Prefix  | Command  | Symbol  | Power |
 |:-------:|:--------:|:-------:|:-----:|
@@ -316,7 +315,7 @@ It would be better to use `\SI` for units such as `m`, `s`, `kg`, `A`, `K`, `mol
 Detect `^T` in `.tex` or `.md` files.
 You likely want to use `^\top` or `^\mathsf{T}` instead to represent the transpose of a matrix or a vector.
 
-![doc/LLT](https://github.com/hari64boli64/latexlint/blob/master/doc/LLT.png?raw=true)
+![doc/LLT](doc/LLT.png)
 
 Otherwise, we cannot distinguish between the transpose and the power by a variable `T` (you can use `^{T}` for the power).
 
@@ -327,7 +326,7 @@ Otherwise, we cannot distinguish between the transpose and the power by a variab
 Detect wrongly used commas as thousands separators such as `1,000` in `.tex` files.
 You should likely use `1{,}000` or use the package [icomma](https://ctan.org/pkg/icomma?lang=en).
 
-![doc/LLThousands](https://github.com/hari64boli64/latexlint/blob/master/doc/LLThousands.png?raw=true)
+![doc/LLThousands](doc/LLThousands.png)
 
 [Ref by Stack Exchange](https://tex.stackexchange.com/questions/303110/avoid-space-after-commas-used-as-thousands-separator-in-math-mode).
 
@@ -367,7 +366,7 @@ When you use English letters in math mode for an explanation, you should use `\m
 
 For example, If the character `a` is not a variable and represents something like **a**tractive force, `f^a(x)` should be written as `f^{\mathrm{a}}(x)`.
 
-![doc/LLUserDefined1](https://github.com/hari64boli64/latexlint/blob/master/doc/LLUserDefined1.png?raw=true)
+![doc/LLUserDefined1](doc/LLUserDefined1.png)
 
 However, it is difficult to detect without context. You can define the rule `f\^a` to detect this pattern.
 
@@ -381,7 +380,7 @@ For example, If you use `\Box` as a [infimal convolution](https://en.wikipedia.o
 \DeclareMathOperator{\infConv}{\Box}
 ```
 
-![doc/LLUserDefined2](https://github.com/hari64boli64/latexlint/blob/master/doc/LLUserDefined2.png?raw=true)
+![doc/LLUserDefined2](doc/LLUserDefined2.png)
 
 Then, you can use `\infConv` instead of `\Box`.
 
@@ -389,7 +388,7 @@ Then, you can use `\infConv` instead of `\Box`.
 
 You can also use the following features. These commands are available by clicking the icon on the editor toolbar.
 
-![enableDisableButton](https://github.com/hari64boli64/latexlint/blob/master/images/enableDisableButton.png?raw=true)
+![enableDisableButton](images/enableDisableButton.png)
 
 ### LaTeX Lint: Add Custom Detection Rule
 
@@ -398,13 +397,13 @@ For example, we can detect `f^a` by the following steps.
 
 #### 1. Select the string you want to detect (optional)
 
-![addRule1](https://github.com/hari64boli64/latexlint/blob/master/images/addRule1.png?raw=true)
+![addRule1](images/addRule1.png)
 
 #### 2. Run the command (Add Custom Detection Rule)
 
 Run the commands by clicking the icon or opening the command palette (`Ctrl`+`Shift`+`P`) and type `LaTeX Lint: Add Custom Detection Rule`.
 
-![addRule2](https://github.com/hari64boli64/latexlint/blob/master/images/addRule2.png?raw=true)
+![addRule2](images/addRule2.png)
 
 #### 3. Follow the instructions
 
@@ -417,13 +416,13 @@ Then, you can define your own rule.
 
 Select which rules to detect. Check the rules you want to detect.
 
-![selectRules](https://github.com/hari64boli64/latexlint/blob/master/images/selectRulesToDetect.png?raw=true)
+![selectRules](images/selectRulesToDetect.png)
 
 ### LaTeX Lint: Rename \begin or \end Commands
 
 Rename the command by pressing `F2` on the `\begin{name}` or `\end{name}`.
 
-![renameCommand](https://github.com/hari64boli64/latexlint/blob/master/images/renameCommand.png?raw=true)
+![renameCommand](images/renameCommand.png)
 
 ### LaTeX Lint: Query Wolfram Alpha
 
@@ -431,19 +430,19 @@ Query Wolfram Alpha to solve the equation.
 
 #### 1. Select the equation you want to solve
 
-![askWolframAlpha1](https://github.com/hari64boli64/latexlint/blob/master/images/askWolframAlpha1.png?raw=true)
+![askWolframAlpha1](images/askWolframAlpha1.png)
 
 #### 2. Run the command (Query Wolfram Alpha)
 
 Run the commands by clicking the icon or opening the command palette (`Ctrl`+`Shift`+`P`) and type `LaTeX Lint: Query Wolfram Alpha`.
 
-![askWolframAlpha2](https://github.com/hari64boli64/latexlint/blob/master/images/askWolframAlpha2.png?raw=true)
+![askWolframAlpha2](images/askWolframAlpha2.png)
 
 #### 3. Check the Wolfram Alpha page
 
 You can see the result on the Wolfram Alpha page. We remove some unnecessary commands when sending the equation.
 
-![askWolframAlpha3](https://github.com/hari64boli64/latexlint/blob/master/images/askWolframAlpha3.png?raw=true)
+![askWolframAlpha3](images/askWolframAlpha3.png)
 
 ## Note
 

@@ -242,7 +242,7 @@ def f(x):
 
 The following line contains non-ASCII characters.
 
-    {　}！＂＃＄％＆＇（）＊＋，－．／
+    {　}！＂＃＄％＆＇（）＊＋－／
 
 日本語の文章は、upLaTeXでフツウに書けます。
 

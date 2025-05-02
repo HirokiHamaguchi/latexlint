@@ -235,16 +235,16 @@ By default, this rule is disabled by `latexlint.disabledRules` in `settings.json
 We detect the following characters.
 
 ```txt
-　！＂＃＄％＆＇＊＋，－．／０１２３４５６７８９
-：；＜＝＞？＠ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱ
-ＲＳＴＵＶＷＸＹＺ［＼］＾＿｀ａｂｃｄｅｆｇｈｉ
-ｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ｛｜｝～
+　！＂＃＄％＆＇＊＋－／０１２３４５６７８９：；
+＜＝＞？＠ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳ
+ＴＵＶＷＸＹＺ［＼］＾＿｀ａｂｃｄｅｆｇｈｉｊｋ
+ｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ｛｜｝～
 ```
 
 We use the following Regex.
 
 ```txt
-[\u3000\uFF01-\uFF07\uFF0A-\uFF5E]
+[\u3000\uFF01-\uFF07\uFF0A-\uFF0B\uFF0D\uFF0F-\uFF5E]
 ```
 
 > Range U+FF01–FF5E reproduces the characters of ASCII 21 to 7E as fullwidth forms. U+FF00 does not correspond to a fullwidth ASCII 20 (space character), since that role is already fulfilled by U+3000 "ideographic space".
@@ -252,7 +252,12 @@ We use the following Regex.
 
 Plus, U+3000 is used for a fullwidth space.
 
-U+FF08 and U+FF09 are used for `（` and `）`, respectively. We do not detect these characters because they are often used in Japanese documents.
+We do not detect the following characters because they are often used in Japanese documents.
+
+* U+FF08 `（`
+* U+FF09 `）`
+* U+FF0C `，`
+* U+FF0E `．`
 
 If you want to detect all non-ASCII characters, use the following Regex with [LaTeX Lint: Add Custom Detection Rule](#latex-lint-add-custom-detection-rule).
 
@@ -440,9 +445,9 @@ You can see the result on the Wolfram Alpha page. We remove some unnecessary com
 
 ![askWolframAlpha3](https://github.com/hari64boli64/latexlint/blob/master/images/askWolframAlpha3.png?raw=true)
 
-## Note  
+## Note
 
-As stated in the [Rules](#rules), false positives and false negatives may occur. We apologize for inconvenience. If you find any errors, please report them via [GitHub Issues](https://github.com/hari64boli64/latexlint/issues).  
+As stated in the [Rules](#rules), false positives and false negatives may occur. We apologize for inconvenience. If you find any errors, please report them via [GitHub Issues](https://github.com/hari64boli64/latexlint/issues).
 
 **We are always welcome any kind of feedback, suggestions, and pull requests!**
 

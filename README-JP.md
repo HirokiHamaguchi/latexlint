@@ -235,16 +235,16 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 以下の文字を検出します。
 
 ```txt
-　！＂＃＄％＆＇＊＋，－．／０１２３４５６７８９
-：；＜＝＞？＠ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱ
-ＲＳＴＵＶＷＸＹＺ［＼］＾＿｀ａｂｃｄｅｆｇｈｉ
-ｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ｛｜｝～
+　！＂＃＄％＆＇＊＋－／０１２３４５６７８９：；
+＜＝＞？＠ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳ
+ＴＵＶＷＸＹＺ［＼］＾＿｀ａｂｃｄｅｆｇｈｉｊｋ
+ｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ｛｜｝～
 ```
 
 我々は以下の正規表現を使用します。
 
 ```txt
-[\u3000\uFF01-\uFF07\uFF0A-\uFF5E]
+[\u3000\uFF01-\uFF07\uFF0A-\uFF0B\uFF0D\uFF0F-\uFF5E]
 ```
 
 > Range U+FF01–FF5E reproduces the characters of ASCII 21 to 7E as fullwidth forms. U+FF00 does not correspond to a fullwidth ASCII 20 (space character), since that role is already fulfilled by U+3000 "ideographic space".
@@ -252,7 +252,12 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 
 また、U+3000は全角スペースとして使われます。
 
-U+FF08とU+FF09はそれぞれ`（`と`）`に使われます。これらの文字は日本語文書でよく使われるため、検出しません。
+以下の文字は日本語文書でよく使われるため、検出しません。
+
+* U+FF08 `（`
+* U+FF09 `）`
+* U+FF0C `，`
+* U+FF0E `．`
 
 すべての非ASCII文字を検出したい場合は、以下の正規表現を使用します。
 
@@ -444,9 +449,9 @@ Wolfram Alpha ページで結果を確認できます。方程式を送信する
 
 ![askWolframAlpha3](https://github.com/hari64boli64/latexlint/blob/master/images/askWolframAlpha3.png?raw=true)
 
-## 注意  
+## 注意
 
-[Rules](#rules)でも述べた通り、偽陽性や偽陰性が発生する可能性があります。申し訳ありません。誤りがあった場合は[GitHub Issues](https://github.com/hari64boli64/latexlint/issues)でお知らせ下さい。  
+[Rules](#rules)でも述べた通り、偽陽性や偽陰性が発生する可能性があります。申し訳ありません。誤りがあった場合は[GitHub Issues](https://github.com/hari64boli64/latexlint/issues)でお知らせ下さい。
 
 **いかなるフィードバック、提案、プルリクエストも常に歓迎しています!**
 

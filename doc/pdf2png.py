@@ -1,12 +1,13 @@
 import glob
 import os
-import fitz
+
+import fitz  # type:ignore[import]
 
 
 def pdf2png(pdf_file):
     doc = fitz.open(pdf_file)
     page = doc.load_page(0)
-    pixmap = page.get_pixmap(dpi=600)
+    pixmap = page.get_pixmap(dpi=600)  # type:ignore
     pixmap.save(pdf_file.replace(".pdf", ".png"), "png")
 
 

@@ -34,16 +34,17 @@ Here is the list of rules we detect.
 12. [LLDoubleQuotes](#lldoublequotes) (detect `“`, `”` and `"` )
 13. [LLENDash](#llendash) (detect the dubious use of `-`)
 14. [LLEqnarray](#lleqnarray) (detect `eqnarray` environment)
-15. [LLJapaneseSpace](#lljapanesespace) (detect the lack of space, disabled by default)
-16. [LLLlGg](#llllgg) (detect `<<` and `>>`)
-17. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters, disabled by default)
-18. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
-19. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
-20. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
-21. [LLT](#llt) (detect `^T`)
-22. [LLThousands](#llthousands) (detect `1,000` etc.)
-23. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
-24. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
+15. [LLFootnote](#llfootnote) (detect `.` + newline + `\footnote`)
+16. [LLJapaneseSpace](#lljapanesespace) (detect the lack of space, disabled by default)
+17. [LLLlGg](#llllgg) (detect `<<` and `>>`)
+18. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters, disabled by default)
+19. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
+20. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
+21. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
+22. [LLT](#llt) (detect `^T`)
+23. [LLThousands](#llthousands) (detect `1,000` etc.)
+24. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
+25. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
 
 Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
@@ -207,6 +208,13 @@ Detect `eqnarray` environment in `.tex` or `.md` files.
 You should likely use the `align` environment instead.
 
 It is known that the `eqnarray` environment is [not recommended](https://texfaq.org/FAQ-eqnarray) because it has some spacing issues.
+
+### LLFootnote
+
+Detect `.` + newline + `\footnote` in `.tex` files.
+You should likely add `%` after `.` to avoid spacing issues.
+
+![doc/LLFootnote](doc/LLFootnote.png)
 
 ### LLJapaneseSpace
 

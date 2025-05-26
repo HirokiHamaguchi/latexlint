@@ -35,16 +35,17 @@ https://github.com/hari64boli64/latexlint
 12. [LLDoubleQuotes](#lldoublequotes) (`“`, `”`, `"` を検出)
 13. [LLENDash](#llendash) (疑わしい `-` の使用を検出)
 14. [LLEqnarray](#lleqnarray) (`eqnarray`環境を検出)
-15. [LLJapaneseSpace](#lljapanesespace)(日本語と数式間のスペース欠落を指摘、デフォルトで無効)
-16. [LLLlGg](#llllgg) (`<<` と `>>` を検出)
-17. [LLNonASCII](#llnonascii) (全角のASCII文字を検出)
-18. [LLRefEq](#llrefeq) (`\ref{eq:` を検出)
-19. [LLSharp](#llsharp) (`\sharp` を検出)
-20. [LLSI](#llsi) (`\SI` なしの`KB`, `MB`, `GB` などを検出)
-21. [LLT](#llt) (`^T` を検出)
-22. [LLThousands](#llthousands) (`1,000` などを検出)
-23. [LLTitle](#lltitle) (`\title{}`, `\section{}` などでの疑わしいタイトルケースを検出)
-24. [LLUserDefined](#lluserdefined) (`latexlint.userDefinedRules` で定義された正規表現を検出)
+15. [LLFootnote](#llfootnote) (`.` + 改行 + `\footnote` を検出)
+16. [LLJapaneseSpace](#lljapanesespace)(日本語と数式間のスペース欠落を指摘、デフォルトで無効)
+17. [LLLlGg](#llllgg) (`<<` と `>>` を検出)
+18. [LLNonASCII](#llnonascii) (全角のASCII文字を検出)
+19. [LLRefEq](#llrefeq) (`\ref{eq:` を検出)
+20. [LLSharp](#llsharp) (`\sharp` を検出)
+21. [LLSI](#llsi) (`\SI` なしの`KB`, `MB`, `GB` などを検出)
+22. [LLT](#llt) (`^T` を検出)
+23. [LLThousands](#llthousands) (`1,000` などを検出)
+24. [LLTitle](#lltitle) (`\title{}`, `\section{}` などでの疑わしいタイトルケースを検出)
+25. [LLUserDefined](#lluserdefined) (`latexlint.userDefinedRules` で定義された正規表現を検出)
 
 必要であれば[sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) と [日本語解説記事](https://qiita.com/hari64/items/3f973625551fbce3a08a) もご参照ください。
 
@@ -208,6 +209,13 @@ cleverefパッケージについては、[opt-cpさんによるこちらのペ�
 代わりに`align`環境を使うべきです。
 
 `eqnarray`環境はspacingに問題がある為、[非推奨です](https://texfaq.org/FAQ-eqnarray)。
+
+### LLFootnote
+
+`.tex` ファイル内の、`.` + 改行 + `\footnote` となる箇所を検出します。
+`.` の後に `%`　を追加して空白の問題を回避することが望ましいです。
+
+![doc/LLFootnote](https://github.com/hari64boli64/latexlint/blob/master/doc/LLFootnote.png?raw=true)
 
 ### LLJapaneseSpace
 

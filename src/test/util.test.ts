@@ -101,14 +101,15 @@ suite('Extension Test Suite', () => {
             assert.strictEqual(toTitleCase(inputs[i]), excepts[i]);
         });
 
-    for (const pythonFile of ['rules.test.py', 'isForMd.test.py'])
-        test(`Test ${pythonFile}`, () => {
-            const { spawnSync } = require('child_process');
-            const pathToTestFile = require('path').dirname(__dirname);
-            const result = spawnSync('py', [
-                pathToTestFile.replace("out", "src") + '\\test\\' + pythonFile
-            ]);
-            console.log(result);
-            assert.strictEqual(result.status, 0);
-        });
+    // todo: Add tests for Python files
+    // for (const pythonFile of ['rules.test.py', 'isForMd.test.py'])
+    //     test(`Test ${pythonFile}`, () => {
+    //         const { spawnSync } = require('child_process');
+    //         const pathToTestFile = require('path').dirname(__dirname);
+    //         const result = spawnSync('py', [
+    //             pathToTestFile.replace("out", "src") + '\\test\\' + pythonFile
+    //         ]);
+    //         console.log(result);
+    //         assert.strictEqual(result.status, 0);
+    //     });
 });

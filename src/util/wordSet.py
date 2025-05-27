@@ -1,9 +1,7 @@
 # https://github.com/first20hours/google-10000-english/blob/master/20k.txt
 
 with open("other/20k.txt", "r") as f:
-    whole_words = f.read().splitlines()
-
-words = whole_words[:10000]
+    words = f.read().splitlines()
 
 ts_file = "src/util/wordSet.ts"
 with open(ts_file, "w") as f:
@@ -17,4 +15,4 @@ with open(ts_file, "w") as f:
             f.write(" ")
     f.write("]);\n")
 
-print(f"Generated {ts_file} with {len(words[:100])} words.")
+print(f"Generated {ts_file} with {len(words)} words.")

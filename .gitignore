@@ -1,7 +1,10 @@
 .vscode-test/
+
+out
 dist
 node_modules
-out
-other
+
+other/azurePersonalAccessToken.txt
+
 sample/localTest.*
 */*.synctex.gz

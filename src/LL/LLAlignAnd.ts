@@ -9,7 +9,7 @@ export default function LLAlignAnd(doc: vscode.TextDocument, txt: string, alignL
     const replacedMessages = [];
     const ranges = [];
     for (const [s, t] of alignLikeEnvs) {
-        const match = txt.slice(s, t).matchAll(/(=|\\neq|\\leq|\\geq|\\le|\\ge|<|>)\s*&/g);
+        const match = txt.slice(s, t).matchAll(/(=|<|>|\\neq|\\leq|\\geq|\\le|\\ge|\\succ|\\prec|\\succeq|\\preceq|\\approx|\\asymp)\s*&/g);
         for (const m of match) {
             ranges.push(match2range(doc, m, s));
             replacedMessages.push(message.replaceAll("%1", m[1]));

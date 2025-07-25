@@ -10,9 +10,15 @@ All notable changes to the "latexlint" extension will be documented in this file
 - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. Disabled by default.
 - Replace Dollars (at Other folder).
 
-## 1.4.43 - 2025-07-25
+## 1.4.45 - 2025-07-25
+
+- Improve `LLBracketMissing` to detect patterns like `^+5`, `_-3` (sign + single digit).
+
+## 1.4.44 - 2025-07-25
 
 - Improve rename feature.
+
+<!-- 1.4.43 is a missed release. -->
 
 ## 1.4.42 - 2025-06-11
 

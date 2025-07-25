@@ -17,7 +17,7 @@ export default function LLBracketMissing(doc: vscode.TextDocument, txt: string):
     const ranges: vscode.Range[] = [];
 
     const idxOfBegin = txt.indexOf("\\begin{document}");
-    for (const match of txt.matchAll(/(?<![\\\[])[\^_](?:[0-9]{2}|[a-zA-Z]{2})/g)) {
+    for (const match of txt.matchAll(/(?<![\\\[])[\^_](?:[0-9]{2}|[a-zA-Z]{2}|[+\-][0-9])/g)) {
         // Skip if the match is inside the document environment
         // ??? Can the commands with underscores be used inside the document environment ???
         if (idxOfBegin !== -1 && match.index < idxOfBegin) continue;

@@ -29,20 +29,38 @@ export default async function renameCommand() {
     });
     if (newText === undefined) return;
 
-    if ((res.originalText === "align" && newText === "equation") ||
-        (res.originalText === "align*" && newText === "equation*"))
-        res.s2 = res.s2.replace(/&/g, ' ').replace(/\\\\/g, '  ');
+    // Store whether we need to handle align to equation conversion
+    const needsAlignConversion = (res.originalText === "align" && newText === "equation") ||
+        (res.originalText === "align*" && newText === "equation*");
 
-    // todo in-place edition
-    const updatedText = res.s1 + newText + res.s2 + newText + res.s3;
+    // In-place edition: replace only the specific command names
     await editor.edit((editBuilder) => {
-        editBuilder.replace(
-            new vscode.Range(
-                new vscode.Position(0, 0),
-                doc.lineAt(doc.lineCount - 1).range.end
-            ),
-            updatedText
-        );
+        // Find positions of the original text occurrences
+        const firstOccurrenceStart = res.s1.length;
+        const firstOccurrenceEnd = firstOccurrenceStart + res.originalText.length;
+
+        const secondOccurrenceStart = res.s1.length + res.originalText.length + res.s2.length;
+        const secondOccurrenceEnd = secondOccurrenceStart + res.originalText.length;
+
+        // Replace the second occurrence first (to avoid offset issues)
+        const pos2Start = doc.positionAt(secondOccurrenceStart);
+        const pos2End = doc.positionAt(secondOccurrenceEnd);
+        editBuilder.replace(new vscode.Range(pos2Start, pos2End), newText);
+
+        // Replace the first occurrence
+        const pos1Start = doc.positionAt(firstOccurrenceStart);
+        const pos1End = doc.positionAt(firstOccurrenceEnd);
+        editBuilder.replace(new vscode.Range(pos1Start, pos1End), newText);
+
+        // Handle align to equation conversion (replace & and \\ in the content between begin and end)
+        if (needsAlignConversion) {
+            const contentStart = doc.positionAt(firstOccurrenceEnd);
+            const contentEnd = doc.positionAt(secondOccurrenceStart);
+            const originalContent = doc.getText(new vscode.Range(contentStart, contentEnd));
+            const modifiedContent = originalContent.replace(/&/g, ' ').replace(/\\\\/g, '  ');
+            if (originalContent !== modifiedContent)
+                editBuilder.replace(new vscode.Range(contentStart, contentEnd), modifiedContent);
+        }
     });
 
     let cursorPos = res.cursorPos + res.newTextCountForCursor * newText.length;

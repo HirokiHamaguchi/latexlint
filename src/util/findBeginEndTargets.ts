@@ -1,6 +1,16 @@
 import * as vscode from 'vscode';
 import isInComment from '../util/isInComment';
 
+export type BeginEndResult = {
+    originalText: string;
+    cursorPos: number;
+    newTextCountForCursor: number;
+    firstWordStart: number;
+    firstWordEnd: number;
+    secondWordStart: number;
+    secondWordEnd: number;
+};
+
 class Command {
     success: boolean = false;
     isBegin: boolean = false;
@@ -138,27 +148,10 @@ function findCorrespondingCommand(text: string, command: Command): Command {
     return otherCommand.parseFromIndex(text, cmdPairs[targetIndex].delta, cmdPairs[targetIndex].index);
 }
 
-export default function findModifyTargets(
-    selection: vscode.Selection,
-    document: vscode.TextDocument,
-): {
-    originalText: string,
-    cursorPos: number,
-    newTextCountForCursor: number,
-    s1: string,
-    s2: string,
-    s3: string,
-} | undefined {
-    const activePosition = selection.active;
-
-    if (document.lineAt(activePosition).text.trim().startsWith('%')) {
-        vscode.window.showErrorMessage('The cursor line is commented out.');
-        return undefined;
-    }
-
-    const text = document.getText();
-    const cursorOffset = document.offsetAt(activePosition);
-
+export default function findBeginEndTargets(
+    text: string,
+    cursorOffset: number,
+): BeginEndResult | undefined {
     let command = new Command(text, cursorOffset);
     if (!command.success) return undefined;
 
@@ -185,8 +178,9 @@ export default function findModifyTargets(
         originalText,
         cursorPos,
         newTextCountForCursor,
-        s1: text.substring(0, s1),
-        s2: text.substring(e1, s2),
-        s3: text.substring(e2),
+        firstWordStart: s1,
+        firstWordEnd: e1,
+        secondWordStart: s2,
+        secondWordEnd: e2,
     };
 }

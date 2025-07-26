@@ -91,7 +91,7 @@ Cite some references.
 
 どちらを使うかは使用者次第ですが、`amsmath` [公式ドキュメント](https://ctan.org/pkg/amsmath)では、1つの数式には`equation`環境を使うことが想定されています。
 
-[LaTeX Lint: Rename \begin or end Commands](#latex-lint-rename-begin-or-end-commands)でコマンド名を変更できます。
+[LaTeX Lint: Rename Command or Label](#latex-lint-rename-command-or-label)でコマンド名を変更できます。
 
 ### LLArticle
 
@@ -431,9 +431,9 @@ f\^a
 
 ![selectRules](https://github.com/hari64boli64/latexlint/blob/master/images/selectRulesToDetect.png?raw=true)
 
-### LaTeX Lint: Rename \begin or \end Commands
+### LaTeX Lint: Rename Command or Label
 
-`\begin{name}` または `\end{name}` 上で `F2` を押してコマンドをリネームします。
+`\begin{name}` または `\end{name}` または `\label{name}` 上で `F2` を押してリネームします。
 
 ![renameCommand](https://github.com/hari64boli64/latexlint/blob/master/images/renameCommand.png?raw=true)
 

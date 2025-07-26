@@ -55,7 +55,7 @@
       {
         "category": "LaTeX Lint",
         "command": "latexlint.renameCommand",
-        "title": "Rename \\begin or \\end Commands"
+        "title": "Rename Command or Label"
       },
       {
         "category": "LaTeX Lint",

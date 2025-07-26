@@ -2,7 +2,7 @@ import * as assert from 'assert';
 import * as vscode from 'vscode';
 import * as path from 'path';
 
-import findModifyTargets from '../util/findModifyTargets';
+import findModifyTargets from '../util/findBeginEndTargets';
 import enumerateDiagnostics from '../util/enumerateDiagnostics';
 
 async function testFindModifyTargetsTex() {
@@ -10,6 +10,7 @@ async function testFindModifyTargetsTex() {
 	if (!await vscode.workspace.fs.stat(uri)) throw new Error('File not found');
 	const document = await vscode.workspace.openTextDocument(uri);
 	const editor = await vscode.window.showTextDocument(document);
+	const text = document.getText();
 
 	for (let [ln, col] of [
 		[19, 8],
@@ -27,7 +28,8 @@ async function testFindModifyTargetsTex() {
 		editor.selection = new vscode.Selection(start, end);
 		editor.revealRange(editor.selection);
 		await new Promise(resolve => setTimeout(resolve, 50));
-		assert.notStrictEqual(findModifyTargets(editor.selection, editor.document), undefined);
+		const cursorOffset = document.offsetAt(editor.selection.active);
+		assert.notStrictEqual(findModifyTargets(text, cursorOffset), undefined);
 	}
 }
 
@@ -36,6 +38,7 @@ async function testFindModifyTargetsMd() {
 	if (!await vscode.workspace.fs.stat(uri)) throw new Error('File not found');
 	const document = await vscode.workspace.openTextDocument(uri);
 	const editor = await vscode.window.showTextDocument(document);
+	const text = document.getText();
 
 	for (let [ln, col] of [
 		[6, 8],
@@ -53,7 +56,8 @@ async function testFindModifyTargetsMd() {
 		editor.selection = new vscode.Selection(start, end);
 		editor.revealRange(editor.selection);
 		await new Promise(resolve => setTimeout(resolve, 50));
-		assert.notStrictEqual(findModifyTargets(editor.selection, editor.document), undefined);
+		const cursorOffset = document.offsetAt(editor.selection.active);
+		assert.notStrictEqual(findModifyTargets(text, cursorOffset), undefined);
 	}
 }
 

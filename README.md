@@ -90,7 +90,7 @@ The spacing of the `align` environment is [different](https://tex.stackexchange.
 
 It is up to you which one to use, but `amsmath` [official documentation](https://ctan.org/pkg/amsmath) suggests using the `equation` environment for only one equation.
 
-You can rename the command by [LaTeX Lint: Rename \begin or \end Commands](#latex-lint-rename-begin-or-end-commands).
+You can rename the command by [LaTeX Lint: Rename Command or Label](#latex-lint-rename-command-or-label).
 
 ### LLArticle
 
@@ -426,9 +426,9 @@ Select which rules to detect. Check the rules you want to detect.
 
 ![selectRules](images/selectRulesToDetect.png)
 
-### LaTeX Lint: Rename \begin or \end Commands
+### LaTeX Lint: Rename Command or Label
 
-Rename the command by pressing `F2` on the `\begin{name}` or `\end{name}`.
+Rename by pressing `F2` on the `\begin{name}`, `\end{name}` or `\label{name}`.
 
 ![renameCommand](images/renameCommand.png)
 

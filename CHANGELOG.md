@@ -10,6 +10,11 @@ All notable changes to the "latexlint" extension will be documented in this file
 - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. Disabled by default.
 - Replace Dollars (at Other folder).
 
+## 1.4.47 - 2025-07-29
+
+- Add `\iff` and so on to `LLAlignAnd`.
+- extend timeout to 1000ms.
+
 ## 1.4.46 - 2025-07-26
 
 - Improve `RenameCommand` feature to support `\label{name}`.

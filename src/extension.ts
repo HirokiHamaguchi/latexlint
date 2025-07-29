@@ -70,7 +70,7 @@ export function activate(context: vscode.ExtensionContext) {
 			const editor = getEditor(false, isEnabled);
 			if (!editor) return;
 			diagnose(editor.document, diagnosticsCollection, false);
-		}, 500);
+		}, 1000);
 	});
 	vscode.workspace.onDidSaveNotebookDocument((notebook) => {
 		clearTimeout(debounceTimeout);
@@ -80,7 +80,7 @@ export function activate(context: vscode.ExtensionContext) {
 				if (cell.document.languageId !== 'markdown') continue;
 				diagnose(cell.document, diagnosticsCollection, false);
 			}
-		}, 500);
+		}, 1000);
 	});
 
 	// vscode.workspace.onDidCloseTextDocument and

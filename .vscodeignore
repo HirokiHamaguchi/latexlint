@@ -23,3 +23,4 @@ images/**
 !images/mainIcon512.png
 doc/*.synctex.gz
 sample/**
+uv.lock

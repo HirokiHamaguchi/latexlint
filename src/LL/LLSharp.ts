@@ -5,6 +5,6 @@ export default function LLSharp(doc: vscode.TextDocument, txt: string): vscode.D
     return regex2diagnostics(
         doc, txt,
         "LLSharp",
-        /\\sharp/g,
+        /(?<!\^)(?<![A-Za-z])\\sharp(?=\s*(?:[A-Z]|\\\{))/g,
     );
 }

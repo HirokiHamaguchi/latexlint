@@ -10,12 +10,16 @@ F5 to compile.
 npm run test
 ```
 
+## write changelog
+
+Write your changes in CHANGELOG.md
+
 ## publish
 
 You can auto-increment its version number by specifying the SemVer-compatible number or version (major, minor, or patch) to increment.
 
 ```bash
-vsce publish major|minor|patch
+vsce publish patch |minor|major
 ```
 
 Extension URL: https://marketplace.visualstudio.com/items?itemName=hari64boli64.latexlint

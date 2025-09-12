@@ -6,6 +6,7 @@
 \usepackage{ascmac}
 \usepackage{CJKutf8}
 \usepackage{cleveref}
+\usepackage{enumitem}
 \usepackage{float}
 \usepackage{geometry}
 \usepackage{graphicx}
@@ -122,9 +123,7 @@
 	\end{minipage}
 \end{center}
 
-\begin{verbatim}
-	a =& b
-\end{verbatim}
+verbatim does not care about this rule: \verb| a =& b |
 
 \section{LLAlignEnd}
 
@@ -274,6 +273,7 @@ $\min(a,b)$ and $\min{a,b}$ are also checked.
 $x_23$, $x^ab$ and $x_ab$ are also checked.
 Cases like $x^a b$, $x^2\;$ and $e^i\pi$ are not detected.
 
+Following examples are ignored.
 \begin{verbatim}
 escaped underscore: \_123
 https://sample_url.com
@@ -283,10 +283,9 @@ https://sample_url.com
 \cref{sample_label}
 \eqref{sample_label}
 \cite{sample_label}
-\Cref{sec:FR_ForceModel}
-% _12 comment
+\Cref{sample_Label}
+% x^23 comment
 \end{verbatim}
-
 
 \section{LLBracketRound}
 
@@ -300,8 +299,11 @@ https://sample_url.com
 
 $a^(1)$ and $a_(1)$ are also checked.
 
-% \includegraphics{sample_(1).png}
-% \label{eq:f(x_(k+1))<=m(x_(k+1))<=m(x_k)=f(x_k)}
+Following examples are ignored.
+\begin{verbatim}
+\includegraphics{sample_(1).png}
+\label{eq:f(x_(k+1))<=m(x_(k+1))<=m(x_k)=f(x_k)}
+\end{verbatim}
 
 \section{LLColonEqq}
 
@@ -324,7 +326,7 @@ The difference is quite subtle, but the vertical position of the colon is differ
 	\centering
 	\begin{tabular}{lll}
 		\verb|A:B|       & $A:B$                               & \tA{ok} \\
-		\verb|A\colon B| & $A\colon B$                         & \tD{ng} \\
+		\verb|A\colon B| & $A\colon B$                         & \tC{ok?} \\
 		\verb|f:|        & $f:\mathbb{R} \to \mathbb{R}$       & \tD{ng} \\
 		\verb|f\colon|   & $f\colon \mathbb{R} \to \mathbb{R}$ & \tA{ok}
 	\end{tabular}
@@ -374,6 +376,7 @@ The difference is quite subtle, but the vertical position of the colon is differ
 \end{theorem}
 
 Use \cref{thm:sample} with cref instead of Thm. \ref{thm:sample} with ref to avoid mistakes.
+Disabled by default.
 
 \section{LLDoubleQuotes}
 
@@ -393,6 +396,7 @@ You can use them for \verb|H\"older| and \verb"\verb".
 	\end{tabular}
 \end{table}
 
+Examples:
 \begin{itemize}
 	\item Erdos-Renyi (random graph, Erd\H{o}s--R\'enyi)
 	\item Einstein-Podolsky-Rosen (quantum physics, Einstein--Podolsky--Rosen)
@@ -433,7 +437,7 @@ The footnote marker position is correct.
 
 	日本語の文章で $x=1$ と数式を書くと、スペースが生まれます。
 
-	尤も、フォーマルな文章では非推奨な場合も多く、その為デフォルトでは非検出です。
+	尤も、フォーマルな文章では非推奨な場合もあり、その為デフォルトでは非検出です。
 \end{CJK}
 
 \section{LLLlGg}
@@ -486,6 +490,11 @@ You can avoid the mistake of forgetting to add parentheses.
 		\verb|\sharp| & $\sharp A$ & \tD{ng}
 	\end{tabular}
 \end{table}
+
+\begin{enumerate}[label=\textbullet]
+	\item matching examples: $\sharp A$, $\sharp \{1,2,3\}$, $\sharp X_{0}$
+	\item non-matching examples: ${\sharp}$, $f^\sharp$, $\alpha^\sharp$, $C\sharp$
+\end{enumerate}
 
 If you really want to use $\sharp$, you can disable this rule.
 

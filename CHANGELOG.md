@@ -10,6 +10,10 @@ All notable changes to the "latexlint" extension will be documented in this file
 - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. Disabled by default.
 - Replace Dollars (at Other folder).
 
+## 1.4.48 - 2025-09-13
+
+- Improve `LLSharp` detection
+
 ## 1.4.47 - 2025-07-29
 
 - Add `\iff` and so on to `LLAlignAnd`.

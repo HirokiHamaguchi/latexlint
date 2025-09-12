@@ -129,6 +129,7 @@
               "LLJapaneseSpace",
               "LLLlGg",
               "LLNonASCII",
+              "LLPeriod",
               "LLRefEq",
               "LLSharp",
               "LLSI",
@@ -141,6 +142,7 @@
           },
           "default": [
             "LLCref",
+            "LLDoubleQuotes",
             "LLJapaneseSpace",
             "LLNonASCII"
           ],

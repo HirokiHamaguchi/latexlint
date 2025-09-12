@@ -17,6 +17,7 @@ import LLFootnote from '../LL/LLFootnote';
 import LLJapaneseSpace from '../LL/LLJapaneseSpace';
 import LLLlGg from '../LL/LLLlGg';
 import LLNonASCII from '../LL/LLNonASCII';
+import LLPeriod from '../LL/LLPeriod';
 import LLRefEq from '../LL/LLRefEq';
 import LLSharp from '../LL/LLSharp';
 import LLSI from '../LL/LLSI';
@@ -63,6 +64,7 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
         LLJapaneseSpace,
         LLLlGg,
         LLNonASCII,
+        LLPeriod,
         LLRefEq,
         LLSharp,
         LLSI,

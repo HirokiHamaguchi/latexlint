@@ -12,6 +12,7 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 ## 1.4.48 - 2025-09-13
 
+- Add implementation of `LLPeriod`.
 - Improve `LLSharp` detection
 
 ## 1.4.47 - 2025-07-29

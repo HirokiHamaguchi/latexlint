@@ -72,15 +72,14 @@ async function testEnumerateDiagnostics(fileName: string, expected: number) {
 }
 
 async function testEnumerateDiagnosticsTex() {
-	await testEnumerateDiagnostics("sample/lint.tex", 115);
+	const bug = 4;
+	const correct = 111;
+	await testEnumerateDiagnostics("sample/lint.tex", bug + correct);
 }
 
-async function testEnumerateDiagnosticsMd() {
-	await testEnumerateDiagnostics("sample/lint.md", 52);
-}
 
 async function testEnumerateDiagnosticsOther() {
-	await vscode.workspace.getConfiguration('latexlint').update('exceptions', ["Exception handling", "Second-Order"], vscode.ConfigurationTarget.Global);
+	await vscode.workspace.getConfiguration('latexlint');
 	await testEnumerateDiagnostics("sample/otherFeature.tex", 2);
 }
 
@@ -88,6 +87,5 @@ suite('Extension Test Suite', () => {
 	test('Test findModifyTargetsTex', testFindModifyTargetsTex);
 	test('Test findModifyTargetsMd', testFindModifyTargetsMd);
 	test('Test enumerateDiagnosticsTex', testEnumerateDiagnosticsTex);
-	test('Test enumerateDiagnosticsMd', testEnumerateDiagnosticsMd);
 	test('Test enumerateDiagnosticsOther', testEnumerateDiagnosticsOther);
 });

@@ -38,13 +38,14 @@ Here is the list of rules we detect.
 16. [LLJapaneseSpace](#lljapanesespace) (detect the lack of space, disabled by default)
 17. [LLLlGg](#llllgg) (detect `<<` and `>>`)
 18. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters, disabled by default)
-19. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
-20. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
-21. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
-22. [LLT](#llt) (detect `^T`)
-23. [LLThousands](#llthousands) (detect `1,000` etc.)
-24. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
-25. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
+19. [LLPeriod](#llperiod) (detect `e.g.`)
+20. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
+21. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
+22. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
+23. [LLT](#llt) (detect `^T`)
+24. [LLThousands](#llthousands) (detect `1,000` etc.)
+25. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
+26. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
 
 Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
@@ -174,6 +175,8 @@ You can also use `\enquote{XXX}` with the [csquotes](https://ctan.org/pkg/csquot
 
 [Ref by Stack Exchange](https://tex.stackexchange.com/questions/531/what-is-the-best-way-to-use-quotation-mark-glyphs).
 
+By default, this rule is disabled by `latexlint.disabledRules` in `settings.json`.
+
 ### LLENDash
 
 Detect the dubious use of hyphens in `.tex` or `.md` files.
@@ -279,6 +282,13 @@ For example, you can detect the following Japanese characters.
 ```txt
 あア亜、。
 ```
+
+### LLPeriod
+
+Detect `e.g.` in `.tex` or `.md` files.
+You should likely add a comma like `e.g.,` or use `e.g.\` to avoid spacing issues.
+
+![doc/LLPeriod](doc/LLPeriod.png)
 
 ### LLRefEq
 

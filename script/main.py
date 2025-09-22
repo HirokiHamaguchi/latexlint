@@ -10,6 +10,7 @@ from test_file_content import test_file_content
 from test_is_for_md import test_is_for_md
 from test_mark_down_png import test_mark_down_png
 from test_rule_names import test_rule_names
+from test_rule_ts_file import test_rule_ts_file
 
 if __name__ == "__main__":
     make_readme_md()
@@ -23,6 +24,7 @@ if __name__ == "__main__":
     test_mark_down_png()
     test_rule_names()
     test_file_content()
+    test_rule_ts_file()
 
     files = os.listdir(os.path.dirname(__file__))
     functions = []

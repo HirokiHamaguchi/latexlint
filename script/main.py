@@ -6,9 +6,11 @@ from make_lint_tex import make_lint_tex
 from make_package_json import make_package_json
 from make_png_files import make_png_files
 from make_readme_md import make_readme_md
+from test_diagnostics_count import test_diagnostics_count
 from test_file_content import test_file_content
 from test_is_for_md import test_is_for_md
 from test_mark_down_png import test_mark_down_png
+from test_npm_run import test_npm_run
 from test_rule_names import test_rule_names
 from test_rule_ts_file import test_rule_ts_file
 
@@ -25,6 +27,8 @@ if __name__ == "__main__":
     test_rule_names()
     test_file_content()
     test_rule_ts_file()
+    test_diagnostics_count()
+    test_npm_run()
 
     files = os.listdir(os.path.dirname(__file__))
     functions = []

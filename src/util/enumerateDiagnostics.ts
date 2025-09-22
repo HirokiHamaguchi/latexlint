@@ -19,8 +19,8 @@ import LLLlGg from '../LL/LLLlGg';
 import LLNonASCII from '../LL/LLNonASCII';
 import LLPeriod from '../LL/LLPeriod';
 import LLRefEq from '../LL/LLRefEq';
-import LLSharp from '../LL/LLSharp';
 import LLSI from '../LL/LLSI';
+import LLSharp from '../LL/LLSharp';
 import LLT from '../LL/LLT';
 import LLThousands from '../LL/LLThousands';
 import LLTitle from '../LL/LLTitle';
@@ -66,8 +66,8 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
         LLNonASCII,
         LLPeriod,
         LLRefEq,
-        LLSharp,
         LLSI,
+        LLSharp,
         LLT,
         LLThousands,
         LLTitle,
@@ -85,3 +85,4 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
     console.log(`enum took ${(t1 - t0).toFixed(2)} ms`);
     return diagnostics;
 }
+

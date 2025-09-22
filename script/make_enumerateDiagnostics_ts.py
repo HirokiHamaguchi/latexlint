@@ -1,9 +1,10 @@
 from pathlib import Path
 
+from get_rule_names import get_rule_names
+
 
 def make_enumerateDiagnostics_ts():
-    rules_dir = Path(__file__).parent.parent / "rules"
-    rule_names = sorted([p.name for p in rules_dir.iterdir() if p.is_dir()])
+    _rule_dir, rule_names = get_rule_names()
 
     CONTENTS = (
         [

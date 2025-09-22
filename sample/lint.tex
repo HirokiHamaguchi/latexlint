@@ -481,6 +481,23 @@ To refer to the equation, use~\eqref{eq:sample} with eqref instead of (\ref{eq:s
 
 You can avoid the mistake of forgetting to add parentheses.
 
+\section{LLSharp}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		\verb|\#|     & $\#A$      & \tA{ok} \\
+		\verb|\sharp| & $\sharp A$ & \tD{ng}
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}[label=\textbullet]
+	\item matching examples: $\sharp A$, $\sharp \{1,2,3\}$, $\sharp X_{0}$
+	\item non-matching examples: ${\sharp}$, $f^\sharp$, $\alpha^\sharp$, $C\sharp$
+\end{enumerate}
+
+If you really want to use $\sharp$, you can disable this rule.
+
 \section{LLSI}
 
 \begin{table}[H]
@@ -498,23 +515,6 @@ You can avoid the mistake of forgetting to add parentheses.
 
 \EB. This is not ExaByte. This 1EB is one ExaByte.
 % We also must not detect this: 1\EB 1\testEB 1 \testEB 1 AEB
-
-\section{LLSharp}
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{lll}
-		\verb|\#|     & $\#A$      & \tA{ok} \\
-		\verb|\sharp| & $\sharp A$ & \tD{ng}
-	\end{tabular}
-\end{table}
-
-\begin{enumerate}[label=\textbullet]
-	\item matching examples: $\sharp A$, $\sharp \{1,2,3\}$, $\sharp X_{0}$
-	\item non-matching examples: ${\sharp}$, $f^\sharp$, $\alpha^\sharp$, $C\sharp$
-\end{enumerate}
-
-If you really want to use $\sharp$, you can disable this rule.
 
 \section{LLT}
 

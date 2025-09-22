@@ -40,8 +40,8 @@ Here is the list of rules we detect.
 18. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters, disabled by default)
 19. [LLPeriod](#llperiod) (detect `e.g.`)
 20. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
-21. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
-22. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
+21. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
+22. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
 23. [LLT](#llt) (detect `^T`)
 24. [LLThousands](#llthousands) (detect `1,000` etc.)
 25. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
@@ -162,8 +162,6 @@ You can also use `\enquote{XXX}` with the [csquotes](https://ctan.org/pkg/csquot
 
 [Ref by Stack Exchange](https://tex.stackexchange.com/questions/531/what-is-the-best-way-to-use-quotation-mark-glyphs).
 
-By default, this rule is disabled by `latexlint.disabledRules` in `settings.json`.
-
 ### LLENDash
 
 Detect the dubious use of hyphens in `.tex` or `.md` files.
@@ -227,7 +225,6 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 ### LLNonASCII
 
 Detect all fullwidth ASCII characters in `.tex` or `.md` files.
-By default, this rule is disabled by `latexlint.disabledRules` in `settings.json`.
 
 We detect the following characters.
 
@@ -284,6 +281,15 @@ You should likely use `\eqref{eq:` instead.
 
 This command automatically adds parentheses around the reference.
 
+### LLSharp
+
+Detect `\sharp` in `.tex` or `.md` files.
+You should likely use `\#` instead for the [number sign](https://en.wikipedia.org/wiki/Number_sign).
+
+![doc/LLSharp](doc/LLSharp.png)
+
+`\sharp` is used for the musical symbol.
+
 ### LLSI
 
 Detect `KB`, `MB`, `GB`, `TB`, `PB`, `EB`, `ZB`, `YB`, `KiB`, `MiB`, `GiB`, `TiB`, `PiB`, `EiB`, `ZiB`, and `YiB` without `\SI` in `.tex` files.
@@ -305,15 +311,6 @@ You should likely use `\SI` instead, like `\SI{1}{\kilo\byte}`(10^3 byte) and `\
 It would be better to use `\SI` for units such as `m`, `s`, `kg`, `A`, `K`, `mol`, and `rad`.
 
 [CTAN: siunitx](https://ctan.org/pkg/siunitx)
-
-### LLSharp
-
-Detect `\sharp` in `.tex` or `.md` files.
-You should likely use `\#` instead for the [number sign](https://en.wikipedia.org/wiki/Number_sign).
-
-![doc/LLSharp](doc/LLSharp.png)
-
-`\sharp` is used for the musical symbol.
 
 ### LLT
 

@@ -29,6 +29,7 @@ export const LLCodeStrings = [
     'LLT',
     'LLThousands',
     'LLTitle',
+    'LLURL',
     'LLUserDefined',
 ];
 
@@ -60,6 +61,7 @@ export const messages: Record<LLCode, string> = {
     LLT: 'Write ^\\top or ^\\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.',
     LLThousands: 'Consider using "%1{,}%2" instead of "%1,%2".',
     LLTitle: 'Should this be "%1"? Follow your preferred style guide and register as an exception if necessary.',
+    LLURL: 'UTM parameters (?utm_*) might be unnecessary and could be removed for cleaner URLs.',
     LLUserDefined: 'This violates your defined rule: %1',
 };
 
@@ -91,5 +93,6 @@ export const severity: Record<LLCode, vscode.DiagnosticSeverity> = {
     LLT: WARN,
     LLThousands: WARN,
     LLTitle: INFO,
+    LLURL: WARN,
     LLUserDefined: WARN,
 };

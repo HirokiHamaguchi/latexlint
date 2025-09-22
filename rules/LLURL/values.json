@@ -1,0 +1,5 @@
+{
+    "message": "UTM parameters (?utm_*) might be unnecessary and could be removed for cleaner URLs.",
+    "severity": "WARN",
+    "lint_test_count": 4
+}

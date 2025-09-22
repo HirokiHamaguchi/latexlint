@@ -10,7 +10,10 @@ All notable changes to the "latexlint" extension will be documented in this file
 - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. Disabled by default.
 - Replace Dollars (at Other folder).
 - et. al. is incorrect. Use `\emph{et al.}` instead.
-- `?utm_`
+
+## 1.5.1 - 2025-09-22
+
+- Add `LLURL` to detect UTM parameters in URLs.
 
 ## 1.5.0 - 2025-09-22
 

@@ -30,7 +30,7 @@ def test_diagnostics_count():
         total_count += count
 
     assert bug + correct == total_count, (
-        f"Expected {bug + correct}, but got {total_count}"
+        f"Expected {bug + correct}, but got {total_count}. Check src/test/extension.test.ts and rules/*/values.json"
     )
 
     print(f"test_diagnostics_count ok! ({bug} + {correct} = {total_count})")

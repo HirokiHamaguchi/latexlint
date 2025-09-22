@@ -1,0 +1,21 @@
+\section{LLURL}
+
+The following URLs contain unnecessary query strings (should be detected):
+\begin{itemize}
+    \item \url{https://example.com/page?utm_source=newsletter&utm_medium=email}
+    \item \url{https://example.com/page?sessionid=123456}
+    \item \url{https://example.com/page?user=alice}
+    \item \url{https://example.com/page?email=alice@example.com}
+\end{itemize}
+
+The following URLs contain only allowed query strings (should not be detected):
+\begin{itemize}
+    \item \url{https://example.com/search?q=latex}
+    \item \url{https://example.com/list?page=2}
+    \item \url{https://example.com/view?lang=ja}
+\end{itemize}
+
+Examples of URLs without query strings:
+\begin{itemize}
+    \item \url{https://example.com/clean-page}
+\end{itemize}

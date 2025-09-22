@@ -46,7 +46,8 @@ Here is the list of rules we detect.
 23. [LLT](#llt) (detect `^T`)
 24. [LLThousands](#llthousands) (detect `1,000` etc.)
 25. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
-26. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
+26. [LLURL](#llurl) (detect unnecessary info in URLs)
+27. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
 
 Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
@@ -354,6 +355,23 @@ We test the string inside the `{}` is invariant by the function `toTitleCase` im
 [APA Style](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case).
 
 [Ref by WORDVICE](https://blog.wordvice.jp/title-capitalization-rules-for-research-papers/).
+
+### LLURL
+
+Detect URLs containing query strings in `.tex` or `.md` files.
+
+The following query strings are considered unnecessary:
+
+* ?utm_... (see [Wikipedia](https://en.wikipedia.org/wiki/UTM_parameters))
+* ?sessionid=...
+* ?user=...
+* ?email=...
+
+The other query strings are allowed:
+
+* ?q=...
+* ?page=...
+* ?lang=...
 
 ### LLUserDefined
 

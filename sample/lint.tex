@@ -6,17 +6,19 @@
 \usepackage{amsthm}
 \usepackage{ascmac}
 \usepackage{CJKutf8}
-\usepackage{cleveref}
 \usepackage{enumitem}
 \usepackage{float}
 \usepackage{geometry}
 \usepackage{graphicx}
+\usepackage{hyperref}
 \usepackage{listings}
 \usepackage{mathtools}
 \usepackage{MnSymbol}
 \usepackage{physics}
 \usepackage{siunitx}
 \usepackage{xcolor}
+
+\usepackage{cleveref}
 
 \definecolor{cA}{HTML}{0072BD}
 \definecolor{cB}{HTML}{EDB120}
@@ -555,6 +557,28 @@ If you really want to use $\sharp$, you can disable this rule.
 \subsection{IGNORE IF ALL UPPERCASE}
 
 \subsection{Math Contains version $x$}
+
+\section{LLURL}
+
+The following URLs contain unnecessary query strings (should be detected):
+\begin{itemize}
+    \item \url{https://example.com/page?utm_source=newsletter&utm_medium=email}
+    \item \url{https://example.com/page?sessionid=123456}
+    \item \url{https://example.com/page?user=alice}
+    \item \url{https://example.com/page?email=alice@example.com}
+\end{itemize}
+
+The following URLs contain only allowed query strings (should not be detected):
+\begin{itemize}
+    \item \url{https://example.com/search?q=latex}
+    \item \url{https://example.com/list?page=2}
+    \item \url{https://example.com/view?lang=ja}
+\end{itemize}
+
+Examples of URLs without query strings:
+\begin{itemize}
+    \item \url{https://example.com/clean-page}
+\end{itemize}
 
 \section{LLUserDefined}
 

@@ -1,0 +1,19 @@
+<!-- markdownlint-disable MD041 -->
+<!-- detect unnecessary info in URLs -->
+
+### LLURL
+
+Detect URLs containing query strings in `.tex` or `.md` files.
+
+The following query strings are considered unnecessary:
+
+* ?utm_... (see [Wikipedia](https://en.wikipedia.org/wiki/UTM_parameters))
+* ?sessionid=...
+* ?user=...
+* ?email=...
+
+The other query strings are allowed:
+
+* ?q=...
+* ?page=...
+* ?lang=...

@@ -25,6 +25,7 @@ import LLSI from '../LL/LLSI';
 import LLT from '../LL/LLT';
 import LLThousands from '../LL/LLThousands';
 import LLTitle from '../LL/LLTitle';
+import LLURL from '../LL/LLURL';
 import LLUserDefined from '../LL/LLUserDefined';
 import formatException from './formatException';
 import enumAlignEnvs from './enumAlignEnvs';
@@ -72,6 +73,7 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
         LLT,
         LLThousands,
         LLTitle,
+        LLURL,
         LLUserDefined,
     })) {
         if (disabledRules.includes(ruleName)) continue;

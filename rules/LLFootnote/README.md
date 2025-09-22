@@ -6,4 +6,4 @@
 Detect `.` + newline + `\footnote` in `.tex` files.
 You should likely add `%` after `.` to avoid spacing issues.
 
-![doc/LLFootnote](doc/LLFootnote.png)
+![rules/LLFootnote](rules/LLFootnote/LLFootnote.png)

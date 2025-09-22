@@ -6,6 +6,6 @@
 Detect `\sharp` in `.tex` or `.md` files.
 You should likely use `\#` instead for the [number sign](https://en.wikipedia.org/wiki/Number_sign).
 
-![doc/LLSharp](doc/LLSharp.png)
+![rules/LLSharp](rules/LLSharp/LLSharp.png)
 
 `\sharp` is used for the musical symbol.

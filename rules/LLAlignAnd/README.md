@@ -6,7 +6,7 @@
 Detect `=&` in `.tex` or `.md` files.
 You should likely write it as `={}&` in the `align` environment.
 
-![doc/LLAlignAnd](doc/LLAlignAnd.png)
+![rules/LLAlignAnd](rules/LLAlignAnd/LLAlignAnd.png)
 
 We also detect `\neq&`, `\leq&`, `\geq&`, `\le&`, `\ge&`, `<&` and `>&`.
 

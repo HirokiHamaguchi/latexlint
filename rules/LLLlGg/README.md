@@ -6,7 +6,7 @@
 Detect `<<` and `>>` in `.tex` or `.md` files.
 You should likely use `\ll` and `\gg` instead.
 
-![doc/LLLlGg](doc/LLLlGg.png)
+![rules/LLLlGg](rules/LLLlGg/LLLlGg.png)
 
 We do not detect `<<` like this one.
 

@@ -1,3 +1,4 @@
+// !! AUTO_GENERATED !!
 import * as vscode from 'vscode';
 import LLAlignAnd from '../LL/LLAlignAnd';
 import LLAlignEnd from '../LL/LLAlignEnd';

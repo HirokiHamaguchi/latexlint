@@ -1,4 +1,5 @@
 {
   "message": "Consider adding a comma \"e.g.,\" or using \"e.g.\\\\ \" to avoid spacing issues.",
-  "severity": "WARN"
+  "severity": "WARN",
+  "lint_test_count": 2
 }

@@ -1,4 +1,5 @@
 {
   "message": "Consider adding \\% after the period for the \\\\footnote command.",
-  "severity": "WARN"
+  "severity": "WARN",
+  "lint_test_count": 1
 }

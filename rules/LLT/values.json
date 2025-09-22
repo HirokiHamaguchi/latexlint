@@ -1,4 +1,5 @@
 {
   "message": "Write ^\\\\top or ^\\\\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.",
-  "severity": "WARN"
+  "severity": "WARN",
+  "lint_test_count": 2
 }

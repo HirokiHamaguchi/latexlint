@@ -1,4 +1,5 @@
 {
   "message": "If this is a unit, consider using the siunitx(\\\\SI{number}{unit}). Otherwise, register as an exception.",
-  "severity": "WARN"
+  "severity": "WARN",
+  "lint_test_count": 8
 }

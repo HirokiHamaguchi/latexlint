@@ -1,4 +1,5 @@
 {
   "message": "Use %1{}& instead of %1& to avoid spacing issues in align environments.",
-  "severity": "WARN"
+  "severity": "WARN",
+  "lint_test_count": 16
 }

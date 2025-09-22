@@ -1,4 +1,5 @@
 {
   "message": "This is a non-ASCII character. Is this intentional?",
-  "severity": "INFO"
+  "severity": "INFO",
+  "lint_test_count": 12
 }

@@ -1,4 +1,5 @@
 {
   "message": "This violates your defined rule: %1",
-  "severity": "WARN"
+  "severity": "WARN",
+  "lint_test_count": 2
 }

@@ -1,4 +1,5 @@
 {
   "message": "Did you mean \"an\" instead of \"a\"?",
-  "severity": "WARN"
+  "severity": "WARN",
+  "lint_test_count": 1
 }

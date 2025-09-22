@@ -1,4 +1,5 @@
 {
   "message": "Consider adding a space at here.",
-  "severity": "INFO"
+  "severity": "INFO",
+  "lint_test_count": 2
 }

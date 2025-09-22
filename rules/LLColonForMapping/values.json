@@ -1,4 +1,5 @@
 {
   "message": "If this : is for a mapping, consider using \\\\colon.",
-  "severity": "WARN"
+  "severity": "WARN",
+  "lint_test_count": 9
 }

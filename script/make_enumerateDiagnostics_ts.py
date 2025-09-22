@@ -56,7 +56,7 @@ def make_enumerateDiagnostics_ts():
         ]
     )
 
-    gen_contents = "\n".join(CONTENTS)
+    gen_contents = "// !! AUTO_GENERATED !!\n" + "\n".join(CONTENTS)
     with open(
         Path(__file__).parent.parent / "src" / "util" / "enumerateDiagnostics.ts",
         "w",

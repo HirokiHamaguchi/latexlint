@@ -1,3 +1,4 @@
+<!-- !! AUTO_GENERATED !! -->
 <!-- markdownlint-disable heading-start-left first-line-h1 -->
 
 <div align="center">
@@ -54,7 +55,7 @@ Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint
 Detect `=&` in `.tex` or `.md` files.
 You should likely write it as `={}&` in the `align` environment.
 
-![doc/LLAlignAnd](doc/LLAlignAnd.png)
+![rules/LLAlignAnd](rules/LLAlignAnd/LLAlignAnd.png)
 
 We also detect `\neq&`, `\leq&`, `\geq&`, `\le&`, `\ge&`, `<&` and `>&`.
 
@@ -72,7 +73,7 @@ This `\\` can be unnecessary.
 Detect `align` environment without `\\` in `.tex` or `.md` files.
 You should likely use the `equation` environment.
 
-![doc/LLAlignSingleLine](doc/LLAlignSingleLine.png)
+![rules/LLAlignSingleLine](rules/LLAlignSingleLine/LLAlignSingleLine.png)
 
 The spacing of the `align` environment is [different](https://tex.stackexchange.com/questions/239550/what-is-the-difference-between-align-and-equation-environment-when-i-only-want-t) from the `equation` environment with only one equation.
 
@@ -92,7 +93,7 @@ Such errors cannot be detected by grammar checkers such as Grammarly, since it c
 Detect `\cap_`, `\cup_`, `\odot_`, `\oplus_`, `\otimes_`, `\sqcup_`, `uplus_`, `\vee_` and `\wedge_` in `.tex` or `.md` files.
 You should likely use `\bigcap`, `\bigcup`, `\bigodot`, `\bigoplus`, `\bigotimes`, `\bigsqcup`, `\biguplus`, `\bigvee` and `\bigwedge` instead.
 
-![doc/LLBig](doc/LLBig.png)
+![rules/LLBig](rules/LLBig/LLBig.png)
 
 [Ref by Stack Exchange](https://tex.stackexchange.com/questions/205125/formatting-the-union-of-sets).
 
@@ -101,28 +102,28 @@ You should likely use `\bigcap`, `\bigcup`, `\bigodot`, `\bigoplus`, `\bigotimes
 Detect `\max{` and `\min{` in `.tex` or `.md` files.
 You should likely use `\max(` and `\min(` instead, or add a space after `\max` or `\min` to clarify.
 
-![doc/LLBracketCurly](doc/LLBracketCurly.png)
+![rules/LLBracketCurly](rules/LLBracketCurly/LLBracketCurly.png)
 
 ### LLBracketMissing
 
 Detect cases such as `^23`, `_23`, `^ab` and `_ab` in `.tex` files.
 Clarify the scope of the superscript and subscript by adding `{}` or space.
 
-![doc/LLBracketMissing](doc/LLBracketMissing.png)
+![rules/LLBracketMissing](rules/LLBracketMissing/LLBracketMissing.png)
 
 ### LLBracketRound
 
 Detect `\sqrt(`, `^(` and `_(` in `.tex` or `.md` files.
 You should likely use `\sqrt{`, `^{` and `_{` instead.
 
-![doc/LLBracketRound](doc/LLBracketRound.png)
+![rules/LLBracketRound](rules/LLBracketRound/LLBracketRound.png)
 
 ### LLColonEqq
 
 Detect `:=`, `=:`, `::=` and `=::` in `.tex` files.
 You should likely use `\coloneqq`, `\eqqcolon`, `\Coloneqq` and `\Eqqcolon` in the [mathtools](https://ctan.org/pkg/mathtools) package instead.
 
-![doc/LLColonEqq](doc/LLColonEqq.png)
+![rules/LLColonEqq](rules/LLColonEqq/LLColonEqq.png)
 
 The colon is slightly too low in `:=`, but vertically centered in `\coloneqq` according to [this](https://tex.stackexchange.com/questions/4216/how-to-typeset-correctly).
 
@@ -133,7 +134,7 @@ The colon is slightly too low in `:=`, but vertically centered in `\coloneqq` ac
 Detect `:` which seems to be used for mapping in `.tex` or `.md` files.
 You likely want to use `\colon` instead.
 
-![doc/LLColonForMapping](doc/LLColonForMapping.png)
+![rules/LLColonForMapping](rules/LLColonForMapping/LLColonForMapping.png)
 
 `\colon` is [recommended](https://tex.stackexchange.com/questions/37789/using-colon-or-in-formulas) for the mapping symbol. `:` is used for ratio, such as `1:2`.
 
@@ -167,7 +168,7 @@ You can also use `\enquote{XXX}` with the [csquotes](https://ctan.org/pkg/csquot
 Detect the dubious use of hyphens in `.tex` or `.md` files.
 You should likely use `--` for en-dash and `---` for em-dash.
 
-![doc/LLENDash](doc/LLEnDash.png)
+![rules/LLENDash](rules/LLENDash/LLENDash.png)
 
 Although this rule is [not inherent orthographic "correctness"](https://en.wikipedia.org/wiki/Dash#En_dash), in a lot of cases, the use of en dash is [preferred](https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style#Dashes).
 
@@ -202,7 +203,7 @@ It is known that the `eqnarray` environment is [not recommended](https://texfaq.
 Detect `.` + newline + `\footnote` in `.tex` files.
 You should likely add `%` after `.` to avoid spacing issues.
 
-![doc/LLFootnote](doc/LLFootnote.png)
+![rules/LLFootnote](rules/LLFootnote/LLFootnote.png)
 
 ### LLJapaneseSpace
 
@@ -214,7 +215,7 @@ By default, this rule is disabled by `latexlint.disabledRules` in `settings.json
 Detect `<<` and `>>` in `.tex` or `.md` files.
 You should likely use `\ll` and `\gg` instead.
 
-![doc/LLLlGg](doc/LLLlGg.png)
+![rules/LLLlGg](rules/LLLlGg/LLLlGg.png)
 
 We do not detect `<<` like this one.
 
@@ -272,7 +273,7 @@ For example, you can detect the following Japanese characters.
 Detect `e.g.` in `.tex` or `.md` files.
 You should likely add a comma like `e.g.,` or use `e.g.\` to avoid spacing issues.
 
-![doc/LLPeriod](doc/LLPeriod.png)
+![rules/LLPeriod](rules/LLPeriod/LLPeriod.png)
 
 ### LLRefEq
 
@@ -286,7 +287,7 @@ This command automatically adds parentheses around the reference.
 Detect `\sharp` in `.tex` or `.md` files.
 You should likely use `\#` instead for the [number sign](https://en.wikipedia.org/wiki/Number_sign).
 
-![doc/LLSharp](doc/LLSharp.png)
+![rules/LLSharp](rules/LLSharp/LLSharp.png)
 
 `\sharp` is used for the musical symbol.
 
@@ -295,7 +296,7 @@ You should likely use `\#` instead for the [number sign](https://en.wikipedia.or
 Detect `KB`, `MB`, `GB`, `TB`, `PB`, `EB`, `ZB`, `YB`, `KiB`, `MiB`, `GiB`, `TiB`, `PiB`, `EiB`, `ZiB`, and `YiB` without `\SI` in `.tex` files.
 You should likely use `\SI` instead, like `\SI{1}{\kilo\byte}`(10^3 byte) and `\SI{1}{\kibi\byte}`(2^{10} byte).
 
-![doc/LLSI](doc/LLSI.png)
+![rules/LLSI](rules/LLSI/LLSI.png)
 
 | Prefix  | Command  | Symbol  | Power |
 |:-------:|:--------:|:-------:|:-----:|
@@ -317,7 +318,7 @@ It would be better to use `\SI` for units such as `m`, `s`, `kg`, `A`, `K`, `mol
 Detect `^T` in `.tex` or `.md` files.
 You likely want to use `^\top` or `^\mathsf{T}` instead to represent the transpose of a matrix or a vector.
 
-![doc/LLT](doc/LLT.png)
+![rules/LLT](rules/LLT/LLT.png)
 
 Otherwise, we cannot distinguish between the transpose and the power by a variable `T` (you can use `^{T}` for the power).
 
@@ -328,7 +329,7 @@ Otherwise, we cannot distinguish between the transpose and the power by a variab
 Detect wrongly used commas as thousands separators such as `1,000` in `.tex` files.
 You should likely use `1{,}000` or use the package [icomma](https://ctan.org/pkg/icomma?lang=en).
 
-![doc/LLThousands](doc/LLThousands.png)
+![rules/LLThousands](rules/LLThousands/LLThousands.png)
 
 [Ref by Stack Exchange](https://tex.stackexchange.com/questions/303110/avoid-space-after-commas-used-as-thousands-separator-in-math-mode).
 
@@ -368,7 +369,7 @@ When you use English letters in math mode for an explanation, you should use `\m
 
 For example, If the character `a` is not a variable and represents something like **a**tractive force, `f^a(x)` should be written as `f^{\mathrm{a}}(x)`.
 
-![doc/LLUserDefined1](doc/LLUserDefined1.png)
+![rules/LLUserDefined](rules/LLUserDefined/LLUserDefined1.png)
 
 However, it is difficult to detect without context. You can define the rule `f\^a` to detect this pattern.
 
@@ -382,7 +383,7 @@ For example, If you use `\Box` as a [infimal convolution](https://en.wikipedia.o
 \DeclareMathOperator{\infConv}{\Box}
 ```
 
-![doc/LLUserDefined2](doc/LLUserDefined2.png)
+![rules/LLUserDefined](rules/LLUserDefined/LLUserDefined2.png)
 
 Then, you can use `\infConv` instead of `\Box`.
 

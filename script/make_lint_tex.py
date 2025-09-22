@@ -27,6 +27,7 @@ def make_lint_tex():
     assert gen_contents[-1] == "\n"
     gen_contents = gen_contents[:-1]
     basis = re.sub(r"% AUTO_GENERATED_CONTENT", lambda m: gen_contents, basis)
+    basis = "% !! AUTO_GENERATED !!\n" + basis
 
     with open(
         Path(__file__).parent.parent / "sample" / "lint.tex", "w", encoding="utf-8"

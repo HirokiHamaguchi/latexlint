@@ -1,3 +1,4 @@
+// !! AUTO_GENERATED !!
 import * as vscode from 'vscode';
 
 export const extensionDisplayName = 'LaTeX Lint';

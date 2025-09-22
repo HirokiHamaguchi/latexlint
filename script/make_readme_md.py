@@ -40,6 +40,7 @@ def make_readme_md():
     gen_rules = "\n".join(RULES)
     basis = re.sub(r"<!-- AUTO_GENERATED_LIST -->", lambda m: gen_list, basis)
     basis = re.sub(r"<!-- AUTO_GENERATED_RULES -->\n", lambda m: gen_rules, basis)
+    basis = "<!-- !! AUTO_GENERATED !! -->\n" + basis
 
     with open(Path(__file__).parent.parent / "README.md", "w", encoding="utf-8") as f:
         print(basis, file=f, end="")

@@ -2,10 +2,7 @@
     "latexlint.userDefinedRules": [
         "f\\^a"
     ],
-    "latexlint.disabledRules": [
-        // "LLCref",
-        // "LLNonASCII"
-    ],
+    "latexlint.disabledRules": [],
     "latex-workshop.latex.recipes": [
         {
             "name": "uplatex",

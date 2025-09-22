@@ -1,7 +1,29 @@
 import re
+import subprocess
+import time
 from pathlib import Path
 
 from get_rule_names import get_rule_names
+
+
+def compile_lint_tex():
+    cmd = [
+        "pdflatex",
+        "-interaction=nonstopmode",
+        "-synctex=1",
+        "-file-line-error",
+        "--shell-escape",
+        "-output-directory=sample",
+        "sample/lint.tex",
+    ]
+    for i in range(2):
+        print(f"Running pdflatex pass {i + 1}...")
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        print(result.stdout)
+        if result.returncode != 0:
+            raise RuntimeError(f"pdflatex failed (return code {result.returncode})")
+
+    print("pdflatex succeeded")
 
 
 def make_lint_tex():
@@ -33,6 +55,10 @@ def make_lint_tex():
         Path(__file__).parent.parent / "sample" / "lint.tex", "w", encoding="utf-8"
     ) as f:
         print(basis, file=f, end="")
+
+    time.sleep(1)
+
+    compile_lint_tex()
 
 
 if __name__ == "__main__":

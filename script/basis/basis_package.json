@@ -1,0 +1,160 @@
+{
+  "name": "latexlint",
+  "displayName": "LaTeX Lint",
+  "description": "Linter for LaTeX with useful commands for academic writing",
+  "version": "1.4.48",
+  "icon": "images/mainIcon512.png",
+  "author": {
+    "name": "hari64boli64",
+    "email": "hari64boli64@gmail.com"
+  },
+  "publisher": "hari64boli64",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "keywords": [
+    "Markdown",
+    "LaTeX",
+    "Linter",
+    "Rename",
+    "Academic Writing"
+  ],
+  "categories": [
+    "Linters",
+    "Education"
+  ],
+  "activationEvents": [
+    "onLanguage:latex",
+    "onLanguage:markdown",
+    "onNotebook:jupyter-notebook"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "category": "LaTeX Lint",
+        "command": "latexlint.addRule",
+        "title": "Add Custom Detection Rule"
+      },
+      {
+        "category": "LaTeX Lint",
+        "command": "latexlint.askWolframAlpha",
+        "title": "Query Wolfram Alpha"
+      },
+      {
+        "category": "LaTeX Lint",
+        "command": "latexlint.diagnose",
+        "title": "Diagnose Current File"
+      },
+      {
+        "category": "LaTeX Lint",
+        "command": "latexlint.registerException",
+        "title": "Add Exception Word"
+      },
+      {
+        "category": "LaTeX Lint",
+        "command": "latexlint.renameCommand",
+        "title": "Rename Command or Label"
+      },
+      {
+        "category": "LaTeX Lint",
+        "command": "latexlint.selectRules",
+        "title": "Choose Detection Rules"
+      },
+      {
+        "category": "LaTeX Lint",
+        "command": "latexlint.toggleLinting",
+        "title": "Toggle LaTeX Lint"
+      },
+      {
+        "category": "LaTeX Lint",
+        "command": "latexlint.showCommands",
+        "title": "Display Available Commands",
+        "icon": {
+          "dark": "images/lintIconDark.svg",
+          "light": "images/lintIconLight.svg"
+        }
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "when": "editorLangId == latex || editorLangId == markdown || notebookType == jupyter-notebook",
+          "command": "latexlint.showCommands",
+          "group": "navigation"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "latexlint.renameCommand",
+        "key": "f2",
+        "when": "editorLangId == latex || editorLangId == markdown"
+      }
+    ],
+    "configuration": {
+      "title": "LaTeX Lint",
+      "properties": {
+        "latexlint.userDefinedRules": {
+          "type": "array",
+          "default": [],
+          "description": "User defined Regex rules"
+        },
+        "latexlint.exceptions": {
+          "type": "array",
+          "default": [],
+          "description": "Exception words"
+        },
+        "latexlint.disabledRules": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "AUTO_GENERATED_ITEMS"
+            ],
+            "uniqueItems": true
+          },
+          "default": [
+            "AUTO_GENERATED_DEFAULT"
+          ],
+          "description": "Disabled rules"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.96.0",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "esbuild": "^0.25.4",
+    "eslint": "^9.16.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.7.2",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^5.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hari64boli64/latexlint"
+  },
+  "bugs": {
+    "url": "https://github.com/hari64boli64/latexlint/issues",
+    "email": "hari64boli64@gmail.com"
+  }
+}

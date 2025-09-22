@@ -1,7 +1,7 @@
 import re
 from pathlib import Path
 
-basis_path = Path(__file__).parent / "basis" / "README_basis.md"
+basis_path = Path(__file__).parent / "basis" / "basis_README.md"
 rules_dir = Path(__file__).parent.parent / "rules"
 
 with open(basis_path, encoding="utf-8") as f:
@@ -15,6 +15,7 @@ RULES = []
 for i, rule in enumerate(rule_names, start=1):
     print(rule)
     readme_path = rules_dir / rule / "README.md"
+    assert readme_path.exists(), f"{rule} does not have README.md"
     with open(readme_path, encoding="utf-8") as f:
         lines = f.readlines()
     assert lines[0].startswith("<!--"), f"{rule}/README.md: 1st line must be a comment"

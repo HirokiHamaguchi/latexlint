@@ -4,7 +4,6 @@
 ### LLNonASCII
 
 Detect all fullwidth ASCII characters in `.tex` or `.md` files.
-By default, this rule is disabled by `latexlint.disabledRules` in `settings.json`.
 
 We detect the following characters.
 

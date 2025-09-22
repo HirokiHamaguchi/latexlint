@@ -1,0 +1,4 @@
+{
+  "message": "This violates your defined rule: %1",
+  "severity": "WARN"
+}

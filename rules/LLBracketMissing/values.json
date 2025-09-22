@@ -1,0 +1,4 @@
+{
+  "message": "Did you mean \"%1{...}\"? For example, write \"x%1{23}\" or \"x%12 3\" instead of \"x%123\".",
+  "severity": "WARN"
+}

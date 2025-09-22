@@ -1,0 +1,4 @@
+{
+  "message": "Write ^\\\\top or ^\\\\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.",
+  "severity": "WARN"
+}

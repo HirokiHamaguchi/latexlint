@@ -1,0 +1,4 @@
+{
+  "message": "Consider using \\\\big%1 for subscripts and superscripts.",
+  "severity": "WARN"
+}

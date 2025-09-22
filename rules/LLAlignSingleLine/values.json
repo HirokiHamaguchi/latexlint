@@ -1,0 +1,4 @@
+{
+  "message": "For single-line equations, use the equation environment instead of align-like environments.",
+  "severity": "WARN"
+}

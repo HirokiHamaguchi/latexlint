@@ -1,0 +1,4 @@
+{
+  "message": "If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around \"-\".",
+  "severity": "WARN"
+}

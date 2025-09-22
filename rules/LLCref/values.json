@@ -1,0 +1,4 @@
+{
+  "message": "Consider using \\\\cref instead of \\\\ref.",
+  "severity": "WARN"
+}

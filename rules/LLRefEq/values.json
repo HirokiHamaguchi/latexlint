@@ -1,0 +1,4 @@
+{
+  "message": "Consider using \\\\eqref instead of \\\\ref for equations.",
+  "severity": "WARN"
+}

@@ -1,0 +1,4 @@
+{
+  "message": "Consider using \"%1{,}%2\" instead of \"%1,%2\".",
+  "severity": "WARN"
+}

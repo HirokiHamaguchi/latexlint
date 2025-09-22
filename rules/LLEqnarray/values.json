@@ -1,0 +1,4 @@
+{
+  "message": "Eqnarray is not recommended. Use align or gather instead.",
+  "severity": "WARN"
+}

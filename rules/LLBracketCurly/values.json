@@ -1,0 +1,4 @@
+{
+  "message": "Did you mean \"%1(...)\" instead of \"%1{...}\"? Add a space if intentional.",
+  "severity": "WARN"
+}

@@ -1,5 +1,8 @@
 import * as vscode from 'vscode';
-import regex2diagnostics from '../util/regex2diagnostics';
+import { messages } from '../util/constants';
+import ranges2diagnostics from '../util/ranges2diagnostics';
+import match2range from '../util/match2range';
+
 
 export default function LLUserDefined(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
     let userDefinedRules = vscode.workspace.getConfiguration('latexlint').get<string[]>('userDefinedRules') || [];
@@ -14,7 +17,14 @@ export default function LLUserDefined(doc: vscode.TextDocument, txt: string): vs
             vscode.window.showErrorMessage(`'${rule}' in userDefinedRules is invalid. Please check the regex in the settings.json.`);
             continue;
         }
-        diagnostics.push(...regex2diagnostics(doc, txt, "LLUserDefined", regex));
+        const code = "LLUserDefined";
+        let message: string[] = [];
+        let ranges: vscode.Range[] = [];
+        for (const match of txt.matchAll(regex)) {
+            message.push(messages[code].replaceAll("%1", regex.source));
+            ranges.push(match2range(doc, match));
+        }
+        diagnostics.push(...ranges2diagnostics(doc, code, message, ranges));
     }
     return diagnostics;
 }

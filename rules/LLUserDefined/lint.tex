@@ -1,0 +1,19 @@
+\section{LLUserDefined}
+
+You can define your own rule.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		\verb|f^\mathrm{a}(x)| & $f^{\mathrm{a}}(x)$ & \tA{ok} \\
+		\verb|f^a(x)|          & $f^a(x)$            & \tD{ng} \\
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		\verb|f \infConv g| & $f \infConv g$ & \tA{ok} \\
+		\verb|f \Box g|     & $f \Box g$     & \tD{ng} \\
+	\end{tabular}
+\end{table}

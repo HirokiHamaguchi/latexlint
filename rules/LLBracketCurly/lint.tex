@@ -1,0 +1,15 @@
+\section{LLBracketCurly}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{lll}
+		\verb|\max(a,b)|  & $\max(a,b)$  & \tA{ok}  \\
+		\verb|\max{a,b}|  & $\max{a,b}$  & \tD{ng}  \\
+		\verb|\max {a,b}| & $\max {a,b}$ & \tC{ok?}
+	\end{tabular}
+\end{table}
+
+We cannot fully determine whether the use of curly brackets is wrong or not.
+It is not detected if some spaces are inserted between the command name and the curly brackets.
+
+$\min(a,b)$ and $\min{a,b}$ are also checked.

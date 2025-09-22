@@ -1,0 +1,55 @@
+\section{LLAlignSingleLine}
+
+\begin{itembox}{\large Long line before display (same result)}
+	\begin{minipage}[t]{.5\columnwidth}
+		Lorem ipsum.
+		\begin{equation*}
+			f(x) = ax^2 + bx + c
+		\end{equation*}
+		This is an \tA{equation} environment.
+	\end{minipage}%
+	\begin{minipage}[t]{.5\columnwidth}
+		Lorem ipsum.
+		\begin{align*}
+			f(x) & = ax^2 + bx + c
+		\end{align*}
+		This is an \tD{align} environment.
+	\end{minipage}
+\end{itembox}
+
+\vspace{\baselineskip}
+
+\begin{itembox}{\large Short line before display (different result)}
+	\begin{minipage}[t]{.5\columnwidth}
+		Lrm:
+		\begin{equation*}
+			f(x) = ax^2 + bx + c
+		\end{equation*}
+		This is an \tA{equation} environment.
+	\end{minipage}%
+	\begin{minipage}[t]{.5\columnwidth}
+		Lrm:
+		\begin{align*}
+			f(x) & = ax^2 + bx + c
+		\end{align*}
+		This is an \tD{align} environment.
+	\end{minipage}
+\end{itembox}
+
+\vspace{\baselineskip}
+
+Single-line alignat environment is also detected.
+\begin{alignat*}{1}
+	f(x) & = ax^2 + bx + c
+\end{alignat*}
+
+Multi-line alignat environment is not detected.
+\begin{alignat*}{2}
+	f(x) & = ax^2 + bx + c \\
+	g(x) & = dx^2 + ex + f
+\end{alignat*}
+
+% Comment in the following lines should be ignored.
+% \begin{align}
+% \begin{align}
+% \begin{align}

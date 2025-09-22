@@ -1,0 +1,81 @@
+\section{LLAlignAnd}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		\verb|&=|        &
+		$\begin{aligned}
+				 a & = b \\
+				 c & = d
+			 \end{aligned}$ &
+		\tA{ok}            \\[0.3cm]
+		\verb|=&|        &
+		$\begin{aligned}
+				 a = & b \\
+				 c = & d
+			 \end{aligned}$ &
+		\tD{ng}            \\[0.3cm]
+		\verb|={}&|      &
+		$\begin{aligned}
+				 a = {} & b \\
+				 c = {} & d
+			 \end{aligned}$ &
+		\tA{ok}
+	\end{tabular}
+\end{table}
+
+\begin{center}
+	\begin{minipage}{.1\columnwidth}
+		\begin{align*}
+			x
+			=
+			 &
+			y
+			\\
+			x
+			\neq
+			 &
+			y
+		\end{align*}
+	\end{minipage}%
+	\begin{minipage}{.1\columnwidth}
+		\begin{equation*}
+			\begin{split}
+				x \leq & y \\
+				x \geq & y
+			\end{split}
+		\end{equation*}
+	\end{minipage}%
+	\begin{minipage}{.1\columnwidth}
+		\begin{align*}
+			x \le & y \\
+			x \ge & y
+		\end{align*}
+	\end{minipage}%
+	\begin{minipage}{.1\columnwidth}
+		\begin{align*}
+			x < & y \\
+			x > & y
+		\end{align*}
+	\end{minipage}
+	\begin{minipage}{.1\columnwidth}
+		\begin{align*}
+			x \succ & y \\
+			x \prec & y
+		\end{align*}
+	\end{minipage}
+	\begin{minipage}{.1\columnwidth}
+		\begin{align*}
+			x \succeq & y \\
+			x \preceq & y
+		\end{align*}
+	\end{minipage}
+	\begin{minipage}{.1\columnwidth}
+		\begin{align*}
+			x \approx & y \\
+			x \asymp  & y
+		\end{align*}
+	\end{minipage}
+\end{center}
+
+verbatim does not care about this rule: \verb| a =& b |

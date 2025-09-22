@@ -1,0 +1,17 @@
+\section{LLSI}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		\verb|\SI{1}{\kilo\byte}| & \SI{1}{\kilo\byte} & \tA{ok} \\
+		\verb|1 kB|               & 1 kB               & \tD{ng} \\
+		\verb|1kB|                & 1kB                & \tD{ng} \\
+	\end{tabular}
+\end{table}
+
+\newcommand{\EB}{Some command named as EB}
+
+10KB, $3.5$ MiB, $500 \mathrm{GB}$ are detected. 123 noNumWord GB will not be detected.
+
+\EB. This is not ExaByte. This 1EB is one ExaByte.
+% We also must not detect this: 1\EB 1\testEB 1 \testEB 1 AEB

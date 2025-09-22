@@ -1,0 +1,127 @@
+\documentclass[a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{ascmac}
+\usepackage{CJKutf8}
+\usepackage{cleveref}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{mathtools}
+\usepackage{MnSymbol}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{xcolor}
+
+\definecolor{cA}{HTML}{0072BD}
+\definecolor{cB}{HTML}{EDB120}
+\definecolor{cC}{HTML}{77AC30}
+\definecolor{cD}{HTML}{D95319}
+
+\newcommand{\tA}[1]{\textcolor{cA}{#1}}
+\newcommand{\tB}[1]{\textcolor{cB}{#1}}
+\newcommand{\tC}[1]{\textcolor{cC}{#1}}
+\newcommand{\tD}[1]{\textcolor{cD}{#1}}
+
+\newtheorem{theorem}{Theorem}
+\crefname{theorem}{Thm.}{Thms.}
+
+\setlength{\parindent}{0pt}
+
+\DeclareMathOperator{\infConv}{\Box}
+
+% \sample_command for LLBracketMissing
+
+\begin{document}
+
+\title{Sample document}
+\author{hari64boli64}
+\date{\today}
+\maketitle
+
+% AUTO_GENERATED_CONTENT
+
+\newpage
+\appendix
+
+\renewcommand\thesection{Appendix \Alph{section}}
+
+\section{Bugs}
+
+ToDo: Fix This.
+
+\begin{verbatim}
+	"double quotes in verbatim"
+\end{verbatim}
+
+\begin{lstlisting}
+def test():
+	S = "double quotes in listing"
+\end{lstlisting}
+
+\section{LLSetBar}
+
+Detecting inappropriate use of the vertical bar $|$ is very difficult.
+We are currently trying to detect the following, although not implemented yet.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		\verb#\lvert -1 \rvert# & $\lvert -1 \rvert$ & \tA{ok} \\
+		\verb#\abs{-1}#         & $\abs{-1}$         & \tA{ok} \\
+		\verb#\vert -1 \vert#   & $\vert -1 \vert$   & \tD{ng} \\
+		\verb#|-1|#             & $|-1|$             & \tD{ng} \\
+	\end{tabular}
+\end{table}
+
+% https://tex.stackexchange.com/questions/510751/use-big-vert-fx-big-vert-or-big-lvert-fx-big-rvert-or-bigl-lvert-f
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		\verb#\lVert -x \rVert# & $\lVert -x \rVert$ & \tA{ok} \\
+		\verb#\norm{-x}#        & $\norm{-x}$        & \tA{ok} \\
+		\verb#\Vert -x \Vert#   & $\Vert -x \Vert$   & \tD{ng} \\
+		\verb#||-x||#           & $||-x||$           & \tD{ng} \\
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		\verb#\relmiddle|# (macro) & $\displaystyle{\left\{ a \mathrel{}\middle|\mathrel{} a>\frac{1}{2} \right\}}$ & \tA{ok}  \\
+		\verb#\mid#                & $\displaystyle{\{ a \mid a>\frac{1}{2} \}}$                                    & \tC{ok?} \\
+		\verb#|#                   & $\displaystyle{\{ a | a>\frac{1}{2} \}}$                                       & \tD{ng}
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		\verb#\divides# (MnSymbol) & $+2 \divides +4$  & \tA{ok}  \\
+		\verb#\mid#                & $+2 \mid +4$      & \tC{ok?} \\
+		\verb#\mathrel|#           & $+2 \mathrel| +4$ & \tC{ok?} \\
+		\verb#\vert#               & $+2 \vert +4$     & \tD{ng}  \\
+		\verb#|#                   & $+2 | +4$         & \tD{ng}  \\
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		\verb#f(y|x)#                           & $f(y|x)$                           & \tC{ok?} \\
+		\verb#f(y \mid x)#                      & $f(y \mid x)$                      & \tC{ok?} \\
+		\verb#f(\,y\mid x\,)#                   & $f(\,y\mid x\,)$                   & \tC{ok?} \\
+		\verb#\left. \dv{t} \right|_{t=0} f(t)# & $\left. \dv{t} \right|_{t=0} f(t)$ & \tC{ok?} \\
+	\end{tabular}
+\end{table}
+
+% https://www.physicsforums.com/threads/how-i-can-use-a-vertical-bar-to-represent-evaluation-in-latex.229408/
+% https://tex.stackexchange.com/questions/5502/how-to-get-a-mid-binary-relation-that-grows
+% https://tex.stackexchange.com/questions/498/mid-vertical-bar-vert-lvert-rvert-divides
+
+\end{document}

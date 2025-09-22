@@ -1,0 +1,27 @@
+\section{LLBracketMissing}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		\verb|x^{23}| & $x^{23}$ & \tA{ok} \\
+		\verb|x^2 3|  & $x^2 3$  & \tA{ok} \\
+		\verb|x^23|   & $x^23$   & \tD{ng} \\
+	\end{tabular}
+\end{table}
+
+$x_23$, $x^ab$ and $x_ab$ are also checked.
+Cases like $x^a b$, $x^2\;$ and $e^i\pi$ are not detected.
+
+Following examples are ignored.
+\begin{verbatim}
+escaped underscore: \_123
+https://sample_url.com
+\includegraphics{sample_link.png}
+\includegraphics{sample_link.pdf}
+\label{sample_label}
+\cref{sample_label}
+\eqref{sample_label}
+\cite{sample_label}
+\Cref{sample_Label}
+% x^23 comment
+\end{verbatim}

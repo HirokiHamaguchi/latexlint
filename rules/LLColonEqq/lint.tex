@@ -1,0 +1,14 @@
+\section{LLColonEqq}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		\verb|\coloneqq| & $x\coloneqq y$ & \tA{ok} \\
+		\verb|\Coloneqq| & $x\Coloneqq y$ & \tA{ok} \\
+		\verb|:=|        & $x:= y$        & \tD{ng} \\
+		\verb|::=|       & $x::= y$       & \tD{ng}
+	\end{tabular}
+\end{table}
+
+The difference is quite subtle, but the vertical position of the colon is different.
+% $\Coloneqq, \Eqqcolon, \coloneqq, \eqqcolon$

@@ -1,0 +1,48 @@
+\section{LLColonForMapping}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		\verb|A:B|       & $A:B$                               & \tA{ok} \\
+		\verb|A\colon B| & $A\colon B$                         & \tC{ok?} \\
+		\verb|f:|        & $f:\mathbb{R} \to \mathbb{R}$       & \tD{ng} \\
+		\verb|f\colon|   & $f\colon \mathbb{R} \to \mathbb{R}$ & \tA{ok}
+	\end{tabular}
+\end{table}
+
+\begin{itembox}{We detect all of : in the following}
+	Here are examples of colons we detect.
+	\begin{itemize}
+		\item $f:X \to Y$
+		\item \( g: X \mapsto Y \)
+		\item $h : \mathbb{R}^{n^2 + 2n + 1} \rightarrow \mathbb{R}$
+	\end{itemize}
+	and
+	\begin{equation} \label{eq:sample}
+		f:
+		(X \text{ at new line in tex file})
+		\to
+		(Y \text{ at new line in tex file}).
+	\end{equation}
+\end{itembox}
+
+\vspace{\baselineskip}
+
+\begin{itembox}{We do NOT detect any of : in the following}
+	Here are examples of `:' we do not detect.
+	\begin{itemize}
+		\item $f\colon X \to Y$, the correct use of $\backslash$colon.
+		\item $A:B:C = 1:2:3$, the colon for ratio.
+		\item $A:B = 1:2$ and $X \to Y$, separated by dollar sign.
+		\item $g: (\text{some very very very very very long long long long words}) \to \mathbb{R}$, the false negative.
+	\end{itemize}
+\end{itembox}
+
+% The following contains colon:
+% $f: X \to Y$
+% The following contains colon:
+% \( f: X \to Y \)
+% The following contains colon:
+% \begin{equation} f: X \to Y \end{equation}
+% \label{eq:test} f: X_{\test{}} \to Y
+% \label{eq:test} \lim_{k \to \infty}

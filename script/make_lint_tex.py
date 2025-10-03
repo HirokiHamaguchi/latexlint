@@ -7,7 +7,7 @@ from get_rule_names import get_rule_names
 
 
 def compile_lint_tex():
-    cmd = [
+    pdflatex_cmd = [
         "pdflatex",
         "-interaction=nonstopmode",
         "-synctex=1",
@@ -16,14 +16,34 @@ def compile_lint_tex():
         "-output-directory=sample",
         "sample/lint.tex",
     ]
+
+    pbibtex_cmd = [
+        "pbibtex",
+        "-kanji=utf8",
+        "sample/lint",
+    ]
+
+    print("Running first pdflatex pass...")
+    result = subprocess.run(pdflatex_cmd, capture_output=True, text=True)
+    print(result.stdout)
+    if result.returncode != 0:
+        raise RuntimeError(f"pdflatex failed (return code {result.returncode})")
+
+    print("Running pbibtex...")
+    result = subprocess.run(pbibtex_cmd, capture_output=True, text=True)
+    print(result.stdout)
+    if result.returncode != 0:
+        print(f"Warning: pbibtex failed (return code {result.returncode})")
+
+    # Second and third pdflatex passes
     for i in range(2):
-        print(f"Running pdflatex pass {i + 1}...")
-        result = subprocess.run(cmd, capture_output=True, text=True)
+        print(f"Running pdflatex pass {i + 2}...")
+        result = subprocess.run(pdflatex_cmd, capture_output=True, text=True)
         print(result.stdout)
         if result.returncode != 0:
             raise RuntimeError(f"pdflatex failed (return code {result.returncode})")
 
-    print("pdflatex succeeded")
+    print("LaTeX compilation succeeded")
 
 
 def make_lint_tex():

@@ -22,6 +22,7 @@ import LLPeriod from '../LL/LLPeriod';
 import LLRefEq from '../LL/LLRefEq';
 import LLSharp from '../LL/LLSharp';
 import LLSI from '../LL/LLSI';
+import LLSortedCites from '../LL/LLSortedCites';
 import LLT from '../LL/LLT';
 import LLThousands from '../LL/LLThousands';
 import LLTitle from '../LL/LLTitle';
@@ -70,6 +71,7 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
         LLRefEq,
         LLSharp,
         LLSI,
+        LLSortedCites,
         LLT,
         LLThousands,
         LLTitle,

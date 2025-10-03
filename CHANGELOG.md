@@ -11,6 +11,10 @@ All notable changes to the "latexlint" extension will be documented in this file
 - Replace Dollars (at Other folder).
 - et. al. is incorrect. Use `\emph{et al.}` instead.
 
+## 1.5.2 - 2025-10-03
+
+- Add `LLSortedCites` rule.
+
 ## 1.5.1 - 2025-09-22
 
 - Add `LLURL` to detect UTM parameters in URLs.

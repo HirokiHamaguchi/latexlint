@@ -43,11 +43,12 @@ Here is the list of rules we detect.
 20. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
 21. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
 22. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
-23. [LLT](#llt) (detect `^T`)
-24. [LLThousands](#llthousands) (detect `1,000` etc.)
-25. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
-26. [LLURL](#llurl) (detect unnecessary info in URLs)
-27. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
+23. [LLSortedCites](#llsortedcites) (detect unsorted cites)
+24. [LLT](#llt) (detect `^T`)
+25. [LLThousands](#llthousands) (detect `1,000` etc.)
+26. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
+27. [LLURL](#llurl) (detect unnecessary info in URLs)
+28. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
 
 Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
@@ -313,6 +314,19 @@ You should likely use `\SI` instead, like `\SI{1}{\kilo\byte}`(10^3 byte) and `\
 It would be better to use `\SI` for units such as `m`, `s`, `kg`, `A`, `K`, `mol`, and `rad`.
 
 [CTAN: siunitx](https://ctan.org/pkg/siunitx)
+
+### LLSortedCites
+
+Detect unsorted multiple citations in `.tex` files.
+
+Multiple citations like `\cite{b,a}` will be displayed as `[2,1]` instead of the sorted order `[1,2]`. This rule detects such cases and suggests adding the `sort` option to natbib or use `\usepackage{cite}`.
+
+This rule only applies when:
+
+1. The document uses `\usepackage[numbers]{natbib}` without `sort` option, and
+2. The document does NOT use `\usepackage{cite}` or `\usepackage{biblatex}`
+
+(This rule might not be accurate.)
 
 ### LLT
 

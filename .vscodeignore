@@ -16,11 +16,13 @@ vsc-extension-quickstart.md
 **/.vscode-test.*
 
 doc
+rules
 other
-images/**
+images
+sample
 !images/lintIconDark.svg
 !images/lintIconLight.svg
 !images/mainIcon512.png
+
 doc/*.synctex.gz
-sample/**
 uv.lock

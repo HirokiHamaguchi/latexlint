@@ -1,5 +1,5 @@
 {
-  "message": "Consider adding a comma \"e.g.,\" or using \"e.g.\\\\ \" to avoid spacing issues.",
+  "message": "Consider adding a comma \"e.g.,\" or using \"e.g.\\\\ \" to avoid spacing issues. ([Ref](https://tex.stackexchange.com/questions/2229/is-a-period-after-an-abbreviation-the-same-as-an-end-of-sentence-period))",
   "severity": "WARN",
   "lint_test_count": 2
 }

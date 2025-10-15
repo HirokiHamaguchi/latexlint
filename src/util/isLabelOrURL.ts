@@ -12,7 +12,7 @@ export default function isLabelOrURL(txt: string, match: RegExpExecArray) {
     if (/(?:fig|tab|label|ref|cref|Cref|eqref|cite|input)/.test(word)) return true;
 
     // Test if the word is a link to a png, pdf, gif, etc.
-    if (/\.(?:png|pdf|jpg|jpeg|gif|bmp|eps|svg|tiff|tex|py|cpp|ts|js)/.test(word)) return true;
+    if (/\.(?:png|pdf|jpg|jpeg|gif|bmp|eps|svg|tiff|tex|py|cpp|ts|js|bib)/.test(word)) return true;
 
     return false;
 }

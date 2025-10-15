@@ -6,10 +6,13 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 - `LLNonRef`: Detect non-referenced figures with caption.
 - `LLSetBar`: Detect `mid` in `\left` and `\right`.
-- `LLPeriod`: Detect `i.e.`. H.H. [Ref by Stack Exchange](https://tex.stackexchange.com/questions/2229/is-a-period-after-an-abbreviation-the-same-as-an-end-of-sentence-period).
 - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. Disabled by default.
 - Replace Dollars (at Other folder).
 - et. al. is incorrect. Use `\emph{et al.}` instead.
+
+## 1.5.3 - 2025-10-03
+
+- Add bib file in `isLabelOrURL.ts`.
 
 ## 1.5.2 - 2025-10-03
 

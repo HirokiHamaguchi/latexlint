@@ -3,10 +3,8 @@
 
 out
 dist
+docs
 node_modules
-
-docs/*
-!docs/index.html
 
 other/azurePersonalAccessToken.txt
 

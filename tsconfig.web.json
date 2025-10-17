@@ -5,6 +5,7 @@
     },
     "include": [
         "src/web.ts",
+        "src/web/**/*",
         "src/LL/**/*",
         "src/util/**/*"
     ],

@@ -3,6 +3,7 @@
 'use strict';
 
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 //@ts-check
 /** @typedef {import('webpack').Configuration} WebpackConfig **/
@@ -12,14 +13,17 @@ const webConfig = {
     target: 'web', // Target web environment for browser
     mode: 'production',
 
-    entry: './src/web.ts', // Web entry point
+    entry: {
+        main: './src/web.ts', // Main TypeScript entry point
+        styles: './src/web/styles.css' // CSS entry point
+    },
     output: {
         path: path.resolve(__dirname, 'docs'),
-        filename: 'bundle.js',
+        filename: '[name].js',
         clean: true
     },
     resolve: {
-        extensions: ['.ts', '.js'],
+        extensions: ['.ts', '.js', '.css'],
         alias: {
             "vscode": path.resolve(__dirname, 'src/vscode-shim.ts')
         },
@@ -37,12 +41,22 @@ const webConfig = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader'
+                ]
             }
         ]
     },
     plugins: [
+        new MiniCssExtractPlugin({
+            filename: 'styles.css'
+        }),
         new (require('html-webpack-plugin'))({
-            template: './index.html',
+            template: './src/web/template.html',
             filename: 'index.html'
         })
     ],

@@ -1,4 +1,5 @@
 // Web version entry point for LaTeX Lint
+import './web/styles.css';
 import LLAlignAnd from './LL/LLAlignAnd';
 import LLAlignEnd from './LL/LLAlignEnd';
 import LLAlignSingleLine from './LL/LLAlignSingleLine';
@@ -27,15 +28,7 @@ import LLThousands from './LL/LLThousands';
 import LLTitle from './LL/LLTitle';
 import LLURL from './LL/LLURL';
 import LLUserDefined from './LL/LLUserDefined';
-
-
-// Allow using 'document' without requiring the DOM lib in tsconfig
-declare const document: any;
-
-// Minimal DOM type aliases for environments without lib.dom
-declare type HTMLButtonElement = any;
-declare type HTMLTextAreaElement = any;
-declare type HTMLDivElement = any;
+import { initializeApp } from './web/ui';
 
 // Simplified diagnostic interface for web version
 interface WebDiagnostic {
@@ -250,80 +243,8 @@ function lintLatex(text: string, disabledRules: string[] = [], _exceptions: stri
     return diagnostics.map(convertDiagnostic);
 }
 
-// Web UI functionality
-function initializeWebUI() {
-    const lintButton = document.getElementById('lintButton') as HTMLButtonElement;
-    const clearButton = document.getElementById('clearButton') as HTMLButtonElement;
-    const latexInput = document.getElementById('latexInput') as HTMLTextAreaElement;
-    const output = document.getElementById('output') as HTMLDivElement;
-
-    function updateOutput(diagnostics: WebDiagnostic[]) {
-        if (diagnostics.length === 0) {
-            output.innerHTML = '<div class="no-issues">✅ No issues found!</div>';
-            return;
-        }
-
-        const diagnosticHTML = diagnostics.map(diag => {
-            const severityClass = diag.severity;
-            const severityIcon = diag.severity === 'error' ? '❌' :
-                diag.severity === 'warning' ? '⚠️' : 'ℹ️';
-
-            return `
-        <div class="diagnostic ${severityClass}">
-          <div class="diagnostic-header">
-            ${severityIcon} ${diag.message}
-          </div>
-          <div class="diagnostic-location">
-            Line ${diag.range.start.line + 1}, Column ${diag.range.start.character + 1}
-            ${diag.code ? ` (${diag.code})` : ''}
-          </div>
-        </div>
-      `;
-        }).join('');
-
-        output.innerHTML = diagnosticHTML;
-    }
-
-    lintButton.addEventListener('click', () => {
-        const text = latexInput.value;
-        if (!text.trim()) {
-            output.innerHTML = '<div class="no-issues">Please enter some LaTeX code to lint.</div>';
-            return;
-        }
-
-        lintButton.disabled = true;
-        lintButton.textContent = 'Linting...';
-
-        try {
-            // Add a small delay to show loading state
-            setTimeout(() => {
-                const diagnostics = lintLatex(text);
-                updateOutput(diagnostics);
-
-                lintButton.disabled = false;
-                lintButton.textContent = 'Lint LaTeX';
-            }, 100);
-        } catch (error) {
-            console.error('Linting error:', error);
-            output.innerHTML = '<div class="diagnostic error"><div class="diagnostic-header">❌ Linting failed</div><div>An error occurred while linting your LaTeX code.</div></div>';
-
-            lintButton.disabled = false;
-            lintButton.textContent = 'Lint LaTeX';
-        }
-    });
-
-    clearButton.addEventListener('click', () => {
-        latexInput.value = '';
-        output.innerHTML = '<div class="no-issues">Click "Lint LaTeX" to check for issues</div>';
-    });
-}
-
-// Initialize when DOM is loaded
-if (typeof document !== 'undefined')
-    if (document.readyState === 'loading')
-        document.addEventListener('DOMContentLoaded', initializeWebUI);
-    else
-        initializeWebUI();
+// Initialize the web application
+initializeApp();
 
 // Export for potential use as library
 export { lintLatex, WebDiagnostic };

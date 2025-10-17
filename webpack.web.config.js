@@ -23,16 +23,6 @@ const webConfig = {
         alias: {
             "vscode": path.resolve(__dirname, 'src/vscode-shim.ts')
         },
-        fallback: {
-            // Provide polyfills for Node.js modules used in the code
-            "path": require.resolve("path-browserify"),
-            "fs": false,
-            "os": false,
-            "crypto": false,
-            "stream": false,
-            "buffer": require.resolve("buffer"),
-            "process": require.resolve("process/browser")
-        }
     },
     module: {
         rules: [
@@ -51,12 +41,14 @@ const webConfig = {
         ]
     },
     plugins: [
-        new (require('webpack')).ProvidePlugin({
-            process: 'process/browser',
-            Buffer: ['buffer', 'Buffer']
+        new (require('html-webpack-plugin'))({
+            template: './index.html',
+            filename: 'index.html'
         })
     ],
-    devtool: 'source-map'
+    devtool: 'nosources-source-map',
+    infrastructureLogging: {
+        level: "log", // enables logging required for problem matchers
+    },
 };
-
-module.exports = webConfig;
+module.exports = [webConfig];

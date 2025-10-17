@@ -113,18 +113,76 @@ function convertDiagnostic(diag: any): WebDiagnostic {
     };
 }
 
-// Mock enumAlignEnvs function for web version
-function enumAlignEnvs(_doc: WebTextDocument, _txt: string): any[] {
-    // Simplified implementation for web version
-    // This would need to be implemented based on the actual enumAlignEnvs function
-    return [];
+// Web-compatible version of enumAlignEnvs
+function enumAlignEnvsWeb(txt: string): [number, number][] {
+    const alignLikeEnvs = [
+        'align',
+        'alignat',
+        'aligned',
+        'split',
+        'gather',
+    ];
+
+    // Extract all \begin{align} and \end{align} commands
+    const regexAndDeltas = [];
+    for (let i = 0; i < alignLikeEnvs.length; i++) {
+        const env = alignLikeEnvs[i];
+        regexAndDeltas.push({ regex: new RegExp(`\\\\begin\\{${env}\\}`, 'g'), delta: +(2 * i + 1) });
+        regexAndDeltas.push({ regex: new RegExp(`\\\\begin\\{${env}\\*\\}`, 'g'), delta: +(2 * i + 2) });
+        regexAndDeltas.push({ regex: new RegExp(`\\\\end\\{${env}\\}`, 'g'), delta: -(2 * i + 1) });
+        regexAndDeltas.push({ regex: new RegExp(`\\\\end\\{${env}\\*\\}`, 'g'), delta: -(2 * i + 2) });
+    }
+
+    let cmdPairs = [];
+    for (const { regex, delta } of regexAndDeltas)
+        for (const match of txt.matchAll(regex)) {
+            if (isInCommentWeb(txt, match.index)) continue;
+            cmdPairs.push({ index: match.index, delta, depth: 0 });
+        }
+    cmdPairs.sort((a, b) => a.index - b.index);
+
+    // Check if the commands are properly coupled
+    const STs: [number, number][] = [];
+    const stack = [];
+    let isMatched = -1;
+    for (const pair of cmdPairs)
+        if (pair.delta > 0)
+            stack.push(pair);
+        else {
+            const top = stack.pop();
+            if (top === undefined || top.delta + pair.delta !== 0) {
+                isMatched = pair.index;
+                break;
+            } else
+                STs.push([top.index, pair.index]);
+        }
+
+    if (isMatched !== -1 || stack.length !== 0) {
+        console.warn("Unmatched \\begin{align} and \\end{align} commands");
+        return [];
+    }
+    return STs;
+}
+
+// Web-compatible version of isInComment
+function isInCommentWeb(txt: string, index: number): boolean {
+    // Find the start of the line containing the index
+    let lineStart = index;
+    while (lineStart > 0 && txt[lineStart - 1] !== '\n')
+        lineStart--;
+
+    // Check if there's a % before the index on the same line
+    for (let i = lineStart; i < index; i++)
+        if (txt[i] === '%')
+            return true;
+    return false;
 }
 
 // Main lint function for web version
 function lintLatex(text: string, disabledRules: string[] = [], _exceptions: string[] = []): WebDiagnostic[] {
     const doc = createMockDocument(text);
     const txt = text;
-    const alignLikeEnvs = enumAlignEnvs(doc, txt);
+    const alignLikeEnvs = enumAlignEnvsWeb(txt);
 
     let diagnostics: any[] = [];
 

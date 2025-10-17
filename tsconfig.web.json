@@ -1,16 +1,7 @@
 {
     "extends": "./tsconfig.json",
     "compilerOptions": {
-        "target": "ES2021",
-        "module": "ES2020",
-        "moduleResolution": "node",
-        "lib": [
-            "ES2021",
-            "DOM",
-            "DOM.Iterable"
-        ],
         "outDir": "./out/web",
-        "skipLibCheck": true
     },
     "include": [
         "src/web.ts",

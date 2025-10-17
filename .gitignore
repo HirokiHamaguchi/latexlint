@@ -3,6 +3,7 @@
 
 out
 dist
+docs
 node_modules
 
 other/azurePersonalAccessToken.txt

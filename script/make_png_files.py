@@ -17,7 +17,7 @@ def make_png_files():
         print(f"Converting {pdf_file} to PNG...")
         pdf2png(pdf_file)
 
-    web_sample_files = glob.glob("latexlint-web/sample/**/*.pdf", recursive=True)
+    web_sample_files = glob.glob("web/sample/**/*.pdf", recursive=True)
     for pdf_file in web_sample_files:
         print(f"Converting {pdf_file} to PNG...")
         pdf2png(pdf_file)

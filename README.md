@@ -5,9 +5,9 @@
 
 <img src="images/mainIcon512.png" alt="mainIcon" width="150">
 
-# LaTeX Lint
-
 </div>
+
+# LaTeX Lint
 
 ## Abstract
 
@@ -15,6 +15,7 @@ This extension provides a LaTeX Linter for `.tex` and `.md` files with useful co
 
 ![abstract](images/abstract.png)
 
+[Web Version](https://hirokihamaguchi.github.io/latexlint/) is also available.
 We welcome any kind of feedback, suggestions, and pull requests!
 
 ## Rules

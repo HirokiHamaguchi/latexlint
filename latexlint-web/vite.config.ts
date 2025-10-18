@@ -20,5 +20,7 @@ export default defineConfig({
   define: {
     // Node.js環境変数をブラウザ用に
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
-  }
+  },
+  // GitHub Pages用の設定
+  base: '/latexlint/'
 })

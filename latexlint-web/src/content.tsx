@@ -143,9 +143,9 @@ export function Content() {
     };
 
     return (
-        <Container maxW="container.xl" py={8}>
+        <Container maxW="container.xl" py={8} as="main">
             <VStack gap={8} align="stretch">
-                <Box textAlign="center">
+                <Box textAlign="center" as="header">
                     <HStack justify="center" align="center" mb={4}>
                         <Image
                             src="https://github.com/HirokiHamaguchi/latexlint/blob/master/images/lintIconLight.svg?raw=true"
@@ -160,7 +160,7 @@ export function Content() {
                     <Text fontSize="lg" color="gray.600" mb={4}>
                         Check your LaTeX code for common issues and style problems
                     </Text>
-                    <HStack justify="center" gap={6} flexWrap="wrap" fontSize="sm" color="blue.600">
+                    <HStack justify="center" gap={6} flexWrap="wrap" fontSize="sm" color="blue.600" as="nav" aria-label="External links">
                         <Link href="https://github.com/HirokiHamaguchi/latexlint/tree/master" target="_blank" rel="noopener noreferrer">
                             <HStack align="center" gap={1}>
                                 <Image
@@ -196,9 +196,10 @@ export function Content() {
                     </HStack>
                 </Box>
 
-                <Grid templateColumns={gridColumns} gap={6} minH="500px">
+                <Grid templateColumns={gridColumns} gap={6} minH="500px" as="section" aria-label="LaTeX Linting Interface">
                     <GridItem>
                         <VStack align="stretch" h="full">
+                            <Heading as="h2" size="md" mb={2} color="gray.700">LaTeX Input</Heading>
                             <Textarea
                                 id="latex-input"
                                 value={text}
@@ -211,6 +212,7 @@ export function Content() {
                                 flex="1"
                                 borderColor="gray.300"
                                 spellCheck={false}
+                                aria-label="LaTeX code input"
                                 _focus={{
                                     borderColor: "blue.400",
                                     boxShadow: "0 0 0 2px rgba(66, 153, 225, 0.2)"
@@ -221,7 +223,8 @@ export function Content() {
 
                     <GridItem>
                         <VStack align="stretch" h="full">
-                            <Box flex="1" p={4} borderWidth="1px" borderColor="gray.300" borderRadius="md" bg="gray.50" overflowY="auto" minH="400px">
+                            <Heading as="h2" size="md" mb={2} color="gray.700">Lint Results</Heading>
+                            <Box flex="1" p={4} borderWidth="1px" borderColor="gray.300" borderRadius="md" bg="gray.50" overflowY="auto" minH="400px" role="log" aria-live="polite" aria-label="Linting results">
                                 {renderDiagnostics()}
                             </Box>
                         </VStack>

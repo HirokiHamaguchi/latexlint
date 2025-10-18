@@ -1,7 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import {
     Box,
-    Button,
     Container,
     Grid,
     GridItem,
@@ -15,6 +14,8 @@ import {
     Alert,
     Link,
     Image,
+    Button,
+    Dialog,
 } from '@chakra-ui/react';
 import { lintLatex } from './latex-linter';
 import type { WebDiagnostic } from './latex-linter';
@@ -24,12 +25,15 @@ export function Content() {
     const [text, setText] = useState(sampleText);
     const [diagnostics, setDiagnostics] = useState<WebDiagnostic[]>([]);
     const [isLinting, setIsLinting] = useState(false);
+    const [isDialogOpen, setIsDialogOpen] = useState(false);
+    const timeoutRef = useRef<number | null>(null);
 
     const gridColumns = useBreakpointValue({ base: '1fr', md: '1fr 1fr' });
 
-    const handleLint = () => {
-        if (!text.trim()) {
+    const runLint = (inputText: string) => {
+        if (!inputText.trim()) {
             setDiagnostics([]);
+            setIsLinting(false);
             return;
         }
 
@@ -37,7 +41,7 @@ export function Content() {
 
         setTimeout(() => {
             try {
-                const results = lintLatex(text);
+                const results = lintLatex(inputText);
                 setDiagnostics(results);
             } catch (error) {
                 console.error('Linting error:', error);
@@ -48,10 +52,31 @@ export function Content() {
         }, 100);
     };
 
-    const handleClear = () => {
-        setText('');
-        setDiagnostics([]);
+    const handleTextChange = (newText: string) => {
+        setText(newText);
+
+        // Clear existing timeout
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+        }
+
+        // Set new timeout for linting
+        timeoutRef.current = setTimeout(() => {
+            runLint(newText);
+        }, 500); // 500ms delay
     };
+
+    // Run lint on initial load
+    useEffect(() => {
+        runLint(sampleText);
+
+        // Cleanup timeout on unmount
+        return () => {
+            if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+            }
+        };
+    }, []); // Run once on mount with sampleText
 
     const getAlertStatus = (severity: string) => {
         switch (severity) {
@@ -92,7 +117,7 @@ export function Content() {
             if (text.trim()) {
                 return createAlert('success', 'No issues found!');
             }
-            return createAlert('info', 'Click "Lint LaTeX" to check for issues');
+            return createAlert('info', 'Enter LaTeX code to check for issues');
         }
 
         return (
@@ -125,7 +150,7 @@ export function Content() {
                         <Image
                             src="https://github.com/HirokiHamaguchi/latexlint/blob/master/images/lintIconLight.svg?raw=true"
                             alt="LaTeX Lint Icon"
-                            boxSize="1.2em"
+                            boxSize="1.8em"
                             mr={2}
                         />
                         <Heading as="h1" size="2xl" color="gray.700">
@@ -137,35 +162,39 @@ export function Content() {
                     </Text>
                     <HStack justify="center" gap={6} flexWrap="wrap" fontSize="sm" color="blue.600">
                         <Link href="https://github.com/HirokiHamaguchi/latexlint/tree/master" target="_blank" rel="noopener noreferrer">
-                            GitHub
+                            <HStack align="center" gap={1}>
+                                <Image
+                                    src="/mark-github-24.svg"
+                                    alt="GitHub"
+                                    boxSize="1.5em"
+                                />
+                                <Text>GitHub</Text>
+                            </HStack>
                         </Link>
                         <Link href="https://marketplace.visualstudio.com/items?itemName=hari64boli64.latexlint" target="_blank" rel="noopener noreferrer">
-                            VSCode Extension
+                            <HStack align="center" gap={1}>
+                                <Image
+                                    src="/Visual_Studio_Code_1.35_icon.svg"
+                                    alt="VSCode"
+                                    boxSize="1.5em"
+                                />
+                                <Text>VSCode Extension</Text>
+                            </HStack>
                         </Link>
+                        <Button
+                            variant="ghost"
+                            size="sm"
+                            onClick={() => setIsDialogOpen(true)}
+                            p={1}
+                            minW="auto"
+                        >
+                            <HStack align="center" gap={1}>
+                                <Text fontSize="1.5em">📄</Text>
+                                <Text>Sample</Text>
+                            </HStack>
+                        </Button>
                     </HStack>
                 </Box>
-
-                <HStack gap={4} justify="center" flexWrap="wrap">
-                    <Button
-                        colorScheme="blue"
-                        size="lg"
-                        onClick={handleLint}
-                        loading={isLinting}
-                        loadingText="Linting..."
-                        px={8}
-                    >
-                        Lint LaTeX
-                    </Button>
-                    <Button
-                        colorScheme="red"
-                        variant="outline"
-                        size="lg"
-                        onClick={handleClear}
-                        px={8}
-                    >
-                        Clear
-                    </Button>
-                </HStack>
 
                 <Grid templateColumns={gridColumns} gap={6} minH="500px">
                     <GridItem>
@@ -173,7 +202,7 @@ export function Content() {
                             <Textarea
                                 id="latex-input"
                                 value={text}
-                                onChange={(e) => setText(e.target.value)}
+                                onChange={(e) => handleTextChange(e.target.value)}
                                 placeholder="Enter your LaTeX code here..."
                                 fontFamily="mono"
                                 fontSize="sm"
@@ -181,6 +210,7 @@ export function Content() {
                                 minH="400px"
                                 flex="1"
                                 borderColor="gray.300"
+                                spellCheck={false}
                                 _focus={{
                                     borderColor: "blue.400",
                                     boxShadow: "0 0 0 2px rgba(66, 153, 225, 0.2)"
@@ -198,6 +228,58 @@ export function Content() {
                     </GridItem>
                 </Grid>
             </VStack>
+
+            <Dialog.Root open={isDialogOpen} onOpenChange={(e) => setIsDialogOpen(e.open)}>
+                <Dialog.Backdrop />
+                <Dialog.Positioner>
+                    <Dialog.Content maxW="4xl" p={6}>
+                        <Dialog.Header>
+                            <Dialog.Title fontSize="xl" fontWeight="bold">
+                                Sample - Before and After
+                            </Dialog.Title>
+                            <Dialog.CloseTrigger />
+                        </Dialog.Header>
+                        <Dialog.Body>
+                            <VStack gap={4} align="stretch">
+                                <Text fontSize="md" color="gray.600" textAlign="center">
+                                    See how LaTeX Lint improves your code
+                                </Text>
+                                <Grid templateColumns={{ base: '1fr', md: '1fr 1fr' }} gap={6}>
+                                    <VStack gap={3}>
+                                        <Heading size="md" color="red.600">Before</Heading>
+                                        <Image
+                                            src="/sample_before.png"
+                                            alt="Sample Before"
+                                            borderRadius="md"
+                                            border="1px solid"
+                                            borderColor="gray.300"
+                                            maxW="100%"
+                                            h="auto"
+                                        />
+                                    </VStack>
+                                    <VStack gap={3}>
+                                        <Heading size="md" color="green.600">After</Heading>
+                                        <Image
+                                            src="/sample_after.png"
+                                            alt="Sample After"
+                                            borderRadius="md"
+                                            border="1px solid"
+                                            borderColor="gray.300"
+                                            maxW="100%"
+                                            h="auto"
+                                        />
+                                    </VStack>
+                                </Grid>
+                            </VStack>
+                        </Dialog.Body>
+                        <Dialog.Footer>
+                            <Button onClick={() => setIsDialogOpen(false)} colorScheme="blue">
+                                Close
+                            </Button>
+                        </Dialog.Footer>
+                    </Dialog.Content>
+                </Dialog.Positioner>
+            </Dialog.Root>
         </Container>
     );
 }

@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { LatexLinter } from './components/LatexLinter'
+import { LatexLinter } from './LatexLinter'
 import './index.css'
 
 createRoot(document.getElementById('root')!).render(

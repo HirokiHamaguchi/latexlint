@@ -1,70 +1,15 @@
 import { useState } from 'react';
-import { lintLatex } from '../latex-linter';
-import type { WebDiagnostic } from '../latex-linter';
-import './LatexLinter.css';
+import { lintLatex } from './latex-linter';
+import type { WebDiagnostic } from './latex-linter';
 
-// Sample LaTeX code templates
-const samples = {
-    basic: `\\documentclass{article}
-\\usepackage{amsmath}
-\\title{Sample Document}
-\\author{Author Name}
-\\date{\\today}
-
+const sample = `\\documentclass{article}
 \\begin{document}
-\\maketitle
-
-\\section{Introduction}
-This is a sample LaTeX document with some common issues.
-
-\\section{Content}
-Here is some text with double  spaces and trailing spaces.
-
-\\end{document}`,
-
-    math: `\\begin{align}
-x + y &= z\\\\
-a + b &= c
-\\end{align}
-
-\\begin{equation}
-E = mc^2.
-\\end{equation}
-
-Inline math: $x + y = z$.`,
-
-    citations: `\\section{References}
-See \\cite{paper1} and \\cite{paper2}.
-
-\\bibliography{references}
-\\bibliographystyle{plain}`,
-
-    errors: `\\documentclass{article}
-
-\\begin{document}
-
-% Common issues that the linter will catch:
-
-% 1. Double spaces
-This  has  double  spaces.
-
-% 2. Inconsistent quotes
-"Wrong quotes" versus \`\`correct quotes''.
-
-% 3. Missing periods
-The equation is
-\\begin{equation}
-E = mc^2
-\\end{equation}
-
-% 4. Wrong dash usage
-Pages 1-10 should be 1--10.
-
-\\end{document}`
-};
+Hello, world!
+\\end{document}
+`;
 
 export function LatexLinter() {
-    const [text, setText] = useState(samples.basic);
+    const [text, setText] = useState(sample);
     const [diagnostics, setDiagnostics] = useState<WebDiagnostic[]>([]);
     const [isLinting, setIsLinting] = useState(false);
 
@@ -95,23 +40,14 @@ export function LatexLinter() {
         setDiagnostics([]);
     };
 
-    const loadSample = (type: keyof typeof samples) => {
-        setText(samples[type] || '');
-        setDiagnostics([]);
-    };
 
     const renderDiagnostics = () => {
-        if (isLinting) {
+        if (isLinting)
             return <div className="status linting">🔄 Linting...</div>;
-        }
-
-        if (diagnostics.length === 0 && text.trim()) {
+        if (diagnostics.length === 0 && text.trim())
             return <div className="status no-issues">✅ No issues found!</div>;
-        }
-
-        if (diagnostics.length === 0) {
+        if (diagnostics.length === 0)
             return <div className="status no-issues">Click "Lint LaTeX" to check for issues</div>;
-        }
 
         return (
             <div className="diagnostics">
@@ -142,25 +78,16 @@ export function LatexLinter() {
                 <p>Check your LaTeX code for common issues and style problems</p>
             </header>
 
-            <div className="controls">
-                <div className="sample-buttons">
-                    <span>Load sample:</span>
-                    <button onClick={() => loadSample('basic')} className="sample-btn">Basic</button>
-                    <button onClick={() => loadSample('math')} className="sample-btn">Math</button>
-                    <button onClick={() => loadSample('citations')} className="sample-btn">Citations</button>
-                    <button onClick={() => loadSample('errors')} className="sample-btn">Errors</button>
-                </div>
 
-                <div className="action-buttons">
-                    <button
-                        onClick={handleLint}
-                        disabled={isLinting}
-                        className="lint-btn"
-                    >
-                        {isLinting ? 'Linting...' : 'Lint LaTeX'}
-                    </button>
-                    <button onClick={handleClear} className="clear-btn">Clear</button>
-                </div>
+            <div className="action-buttons">
+                <button
+                    onClick={handleLint}
+                    disabled={isLinting}
+                    className="lint-btn"
+                >
+                    {isLinting ? 'Linting...' : 'Lint LaTeX'}
+                </button>
+                <button onClick={handleClear} className="clear-btn">Clear</button>
             </div>
 
             <div className="main-content">

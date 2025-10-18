@@ -160,9 +160,7 @@
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
     "lint": "eslint src",
-    "test": "vscode-test",
-    "build:web": "webpack --config webpack.web.config.js --mode production",
-    "dev:web": "webpack --config webpack.web.config.js --mode development --watch"
+    "test": "vscode-test"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
@@ -172,14 +170,8 @@
     "@typescript-eslint/parser": "^8.17.0",
     "@vscode/test-cli": "^0.0.10",
     "@vscode/test-electron": "^2.4.1",
-    "buffer": "^6.0.3",
-    "css-loader": "^7.1.2",
     "esbuild": "^0.25.4",
     "eslint": "^9.16.0",
-    "html-webpack-plugin": "^5.6.4",
-    "mini-css-extract-plugin": "^2.9.4",
-    "path-browserify": "^1.0.1",
-    "process": "^0.11.10",
     "ts-loader": "^9.5.2",
     "typescript": "^5.7.2",
     "webpack": "^5.99.9",

@@ -164,7 +164,7 @@ export function Content() {
                         <Link href="https://github.com/HirokiHamaguchi/latexlint/tree/master" target="_blank" rel="noopener noreferrer">
                             <HStack align="center" gap={1}>
                                 <Image
-                                    src="/mark-github-24.svg"
+                                    src={`${import.meta.env.BASE_URL}mark-github-24.svg`}
                                     alt="GitHub"
                                     boxSize="1.5em"
                                 />
@@ -174,7 +174,7 @@ export function Content() {
                         <Link href="https://marketplace.visualstudio.com/items?itemName=hari64boli64.latexlint" target="_blank" rel="noopener noreferrer">
                             <HStack align="center" gap={1}>
                                 <Image
-                                    src="/Visual_Studio_Code_1.35_icon.svg"
+                                    src={`${import.meta.env.BASE_URL}Visual_Studio_Code_1.35_icon.svg`}
                                     alt="VSCode"
                                     boxSize="1.5em"
                                 />
@@ -248,7 +248,7 @@ export function Content() {
                                     <VStack gap={3}>
                                         <Heading size="md" color="red.600">Before</Heading>
                                         <Image
-                                            src="/sample_before.png"
+                                            src={`${import.meta.env.BASE_URL}sample_before.png`}
                                             alt="Sample Before"
                                             borderRadius="md"
                                             border="1px solid"
@@ -260,7 +260,7 @@ export function Content() {
                                     <VStack gap={3}>
                                         <Heading size="md" color="green.600">After</Heading>
                                         <Image
-                                            src="/sample_after.png"
+                                            src={`${import.meta.env.BASE_URL}sample_after.png`}
                                             alt="Sample After"
                                             borderRadius="md"
                                             border="1px solid"

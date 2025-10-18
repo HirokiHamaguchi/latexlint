@@ -197,6 +197,7 @@ export class Uri {
 
     toString(skipEncoding?: boolean): string {
         // Note: skipEncoding parameter is part of VS Code API but not implemented here
+        void skipEncoding; // Explicitly mark as intentionally unused
         let result = this.scheme + ':';
         if (this.authority) {
             result += '//' + this.authority;
@@ -278,6 +279,7 @@ export enum EndOfLine {
 export const workspace = {
     getConfiguration: (section?: string, resource?: Uri) => {
         // Note: resource parameter is part of VS Code API but not used in this mock
+        void resource; // Explicitly mark as intentionally unused
         // Return a configuration object that works for web
         return {
             get: <T>(key: string, defaultValue?: T): T => {

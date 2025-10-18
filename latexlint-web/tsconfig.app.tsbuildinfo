@@ -1,1 +1,1 @@
-{"root":["./src/latex-linter.ts","./src/main.tsx","./src/vscode-shim.ts","./src/components/latexlinter.tsx"],"version":"5.9.3"}
+{"root":["./src/content.tsx","./src/latex-linter.ts","./src/main.tsx","./src/vite-env.d.ts","./src/vscode-mock.ts"],"version":"5.9.3"}

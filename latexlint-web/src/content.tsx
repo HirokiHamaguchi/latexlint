@@ -175,10 +175,10 @@ export function Content() {
                             <HStack align="center" gap={1}>
                                 <Image
                                     src={`${import.meta.env.BASE_URL}Visual_Studio_Code_1.35_icon.svg`}
-                                    alt="VSCode"
+                                    alt="VS Code"
                                     boxSize="1.5em"
                                 />
-                                <Text>VSCode Extension</Text>
+                                <Text>VS Code Extension</Text>
                             </HStack>
                         </Link>
                         <Button

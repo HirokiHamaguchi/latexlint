@@ -1,4 +1,4 @@
-import * as vscode from 'vscode';
+import * as vscode from './vscode-mock';
 import LLAlignAnd from '@latexlint/LL/LLAlignAnd';
 import LLAlignEnd from '@latexlint/LL/LLAlignEnd';
 import LLAlignSingleLine from '@latexlint/LL/LLAlignSingleLine';
@@ -40,141 +40,31 @@ export interface WebDiagnostic {
     code?: string;
 }
 
-// Create a proper TextDocument implementation using VS Code API
-class WebTextDocument implements vscode.TextDocument {
-    private lines: string[];
-
-    constructor(private text: string, public uri: vscode.Uri = vscode.Uri.file('untitled.tex')) {
-        this.lines = text.split('\n');
-    }
-
-    get fileName(): string {
-        return this.uri.fsPath;
-    }
-
-    get isUntitled(): boolean {
-        return true;
-    }
-
-    get languageId(): string {
-        return 'latex';
-    }
-
-    get version(): number {
-        return 1;
-    }
-
-    get isDirty(): boolean {
-        return false;
-    }
-
-    get isClosed(): boolean {
-        return false;
-    }
-
-    save(): Thenable<boolean> {
-        return Promise.resolve(true);
-    }
-
-    get eol(): vscode.EndOfLine {
-        return vscode.EndOfLine.LF;
-    }
-
-    get lineCount(): number {
-        return this.lines.length;
-    }
-
-    get encoding(): string {
-        return 'utf8';
-    }
-
-    lineAt(line: number): vscode.TextLine;
-    lineAt(position: vscode.Position): vscode.TextLine;
-    lineAt(lineOrPosition: number | vscode.Position): vscode.TextLine {
-        const lineNumber = typeof lineOrPosition === 'number' ? lineOrPosition : lineOrPosition.line;
-        const lineText = this.lines[lineNumber] || '';
-
-        return {
-            lineNumber,
-            text: lineText,
-            range: new vscode.Range(lineNumber, 0, lineNumber, lineText.length),
-            rangeIncludingLineBreak: new vscode.Range(lineNumber, 0, lineNumber + 1, 0),
-            firstNonWhitespaceCharacterIndex: lineText.search(/\S/),
-            isEmptyOrWhitespace: lineText.trim().length === 0
-        };
-    }
-
-    offsetAt(position: vscode.Position): number {
-        let offset = 0;
-        for (let i = 0; i < position.line && i < this.lines.length; i++) {
-            offset += this.lines[i].length + 1; // +1 for newline
-        }
-        offset += Math.min(position.character, this.lines[position.line]?.length || 0);
-        return offset;
-    }
-
-    positionAt(offset: number): vscode.Position {
-        let line = 0;
-        let character = 0;
-        for (let i = 0; i < offset && i < this.text.length; i++) {
-            if (this.text[i] === '\n') {
-                line++;
-                character = 0;
-            } else {
-                character++;
-            }
-        }
-        return new vscode.Position(line, character);
-    }
-
-    getText(range?: vscode.Range): string {
-        if (!range) return this.text;
-
-        const start = this.offsetAt(range.start);
-        const end = this.offsetAt(range.end);
-        return this.text.slice(start, end);
-    }
-
-    getWordRangeAtPosition(position: vscode.Position, regex?: RegExp): vscode.Range | undefined {
-        const line = this.lineAt(position);
-        const text = line.text;
-
-        if (regex) {
-            const match = text.match(regex);
-            if (match && match.index !== undefined) {
-                return new vscode.Range(
-                    position.line, match.index,
-                    position.line, match.index + match[0].length
-                );
-            }
-        }
-
-        return undefined;
-    }
-
-    validateRange(range: vscode.Range): vscode.Range {
-        return range;
-    }
-
-    validatePosition(position: vscode.Position): vscode.Position {
-        return position;
-    }
-}
-
 function createDocument(text: string): vscode.TextDocument {
-    return new WebTextDocument(text);
+    // Use the existing createMockTextDocument from vscode-mock
+    const uri = vscode.Uri.file('untitled.tex');
+    return vscode.createMockTextDocument(text, uri);
 }
 
-function convertDiagnostic(diag: vscode.Diagnostic): WebDiagnostic {
+function convertDiagnostic(diag: import('vscode').Diagnostic): WebDiagnostic {
+    let severity: 'error' | 'warning' | 'info' = 'info';
+    switch (diag.severity) {
+        case 0: severity = 'error'; break;
+        case 1: severity = 'warning'; break;
+        case 2:
+        case 3:
+        default: severity = 'info'; break;
+    }
+
     return {
         range: {
             start: { line: diag.range.start.line, character: diag.range.start.character },
             end: { line: diag.range.end.line, character: diag.range.end.character }
         },
         message: diag.message,
-        severity: diag.severity === 0 ? 'error' : diag.severity === 1 ? 'warning' : 'info',
+        severity: severity,
         source: diag.source || 'latexlint',
-        code: typeof diag.code === 'string' ? diag.code : diag.code?.toString()
+        code: typeof diag.code === 'string' || typeof diag.code === 'number' ? diag.code.toString() : undefined
     };
 }
 
@@ -249,7 +139,9 @@ export function lintLatex(text: string, disabledRules: string[] = []): WebDiagno
     const txt = text;
     const alignLikeEnvs = enumAlignEnvsWeb(txt);
 
-    const diagnostics: vscode.Diagnostic[] = [];
+    // Note: Using type assertion to bridge mock types with real VS Code types for web compatibility
+    const vscodeDoc = doc as unknown as import('vscode').TextDocument;
+    const diagnostics: import('vscode').Diagnostic[] = [];
 
     const t0 = performance.now();
 
@@ -261,7 +153,7 @@ export function lintLatex(text: string, disabledRules: string[] = []): WebDiagno
     })) {
         if (disabledRules.includes(ruleName)) continue;
         try {
-            const diags = rule(doc, txt, alignLikeEnvs);
+            const diags = rule(vscodeDoc, txt, alignLikeEnvs);
             diagnostics.push(...diags);
         } catch (error) {
             console.warn(`Rule ${ruleName} failed:`, error);
@@ -298,18 +190,12 @@ export function lintLatex(text: string, disabledRules: string[] = []): WebDiagno
     })) {
         if (disabledRules.includes(ruleName)) continue;
         try {
-            console.log(txt);
-            const diags = rule(doc, txt);
-            console.log(diags);
-
+            const diags = rule(vscodeDoc, txt);
             diagnostics.push(...diags);
         } catch (error) {
             console.warn(`Rule ${ruleName} failed:`, error);
         }
     }
-
-    // Filter exceptions (simplified)
-    // diagnostics = diagnostics.filter(diag => !exceptions.includes(formatException(doc.getText(diag.range))));
 
     const t1 = performance.now();
 

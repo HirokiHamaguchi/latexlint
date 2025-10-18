@@ -9,7 +9,6 @@ export default function LLSortedCites(doc: vscode.TextDocument, txt: string): vs
     const bibtexIterator = txt.matchAll(/\\bibliography\{/g);
     const firstMatchResult = bibtexIterator.next();
     const firstMatch = firstMatchResult.value;
-    console.log(firstMatch);
     if (!firstMatch) return [];
 
     const natbibPattern = /\\usepackage(\[[^\]]*\])?\{natbib\}/g;
@@ -19,7 +18,6 @@ export default function LLSortedCites(doc: vscode.TextDocument, txt: string): vs
         const options = match[1];
         if (options.includes('sort')) hasNatbibSort = true;
     }
-    console.log(hasNatbibSort);
     if (hasNatbibSort) return [];
 
     const citePackagePattern = /\\usepackage(\[[^\]]*\])?\{cite\}/g;

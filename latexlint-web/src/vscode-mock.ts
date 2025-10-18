@@ -390,7 +390,7 @@ export interface TextDocumentContentProvider {
 export type ProviderResult<T> = T | undefined | null | Thenable<T | undefined | null>;
 
 // Helper function to create mock TextDocument
-function createMockTextDocument(content: string, uri: Uri): TextDocument {
+export function createMockTextDocument(content: string, uri: Uri): TextDocument {
     const lines = content.split('\n');
 
     const offsetAt = (position: Position): number => {
@@ -424,6 +424,7 @@ function createMockTextDocument(content: string, uri: Uri): TextDocument {
         save: (): Thenable<boolean> => Promise.resolve(true),
         eol: EndOfLine.LF,
         lineCount: lines.length,
+        encoding: 'utf8',
 
         lineAt: (lineOrPosition: number | Position): TextLine => {
             const lineNumber = typeof lineOrPosition === 'number' ? lineOrPosition : lineOrPosition.line;
@@ -841,6 +842,7 @@ export interface TextDocument {
     save(): Thenable<boolean>;
     eol: EndOfLine;
     lineCount: number;
+    encoding: string;
     lineAt(line: number): TextLine;
     lineAt(position: Position): TextLine;
     offsetAt(position: Position): number;

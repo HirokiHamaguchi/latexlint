@@ -1,11 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { LatexLinter } from './LatexLinter'
-import './index.css'
+import { ChakraProvider, defaultSystem } from '@chakra-ui/react'
+import { Content } from './content'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <LatexLinter />
+    <ChakraProvider value={defaultSystem}>
+      <Content />
+    </ChakraProvider>
   </StrictMode>,
 )
 

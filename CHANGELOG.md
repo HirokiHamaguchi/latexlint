@@ -10,6 +10,10 @@ All notable changes to the "latexlint" extension will be documented in this file
 - Replace Dollars (at Other folder).
 - et. al. is incorrect. Use `\emph{et al.}` instead.
 
+## [Next Release]
+
+- Fix `LLBracketMissing` false positive detection for bibliography commands (`\bibliography{abc_def}`, `\bibliographystyle{my_style}`, `\addbibresource{ref_file.bib}`) containing underscores in filenames.
+
 ## 1.5.3 - 2025-10-03
 
 - Add bib file in `isLabelOrURL.ts`.

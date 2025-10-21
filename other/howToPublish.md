@@ -1,16 +1,33 @@
 # How to Publish
 
+## hack
+
+Make your changes.
+
+In most of cases, you only need to edit files in the `rules` and `src` folders.
+
+Never edit the following folders: images, other, out, sample, script.
+
+If you are doing a bug fix, add test cases to `rules/LLRuleName/lint.tex` as a comment and update `rules/LLRuleName/README.md` and `rules/LLRuleName/values.json` if necessary.
+
 ## prepare
 
 run `uv run script/main.py`.
+This command will auto-generate README.md and some ts files.
+
+If any error occurs, fix it first.
 
 ## compile
 
 F5 to compile.
 
+If you are an AI, please skip this step.
+
 ## write changelog
 
 Write your changes in CHANGELOG.md
+
+If you are an AI, please end your response here.
 
 ## publish
 

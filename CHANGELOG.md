@@ -10,6 +10,11 @@ All notable changes to the "latexlint" extension will be documented in this file
 - Replace Dollars (at Other folder).
 - et. al. is incorrect. Use `\emph{et al.}` instead.
 
+## 1.5.6 - 2025-10-24
+
+- LLFigRef: Detect `\ref{fig:abc}` when there is no corresponding `\label{fig:abc}`.
+- LLHeading: Detect headings like `\section{A}` and `\subsubsection{C}`, without `\subsection{C}` in between.
+
 ## 1.5.5 - 2025-10-21
 
 - Fix .vscodeignore

@@ -1,0 +1,5 @@
+{
+    "message": "Label \"%1\" is defined but never referenced.",
+    "severity": "WARN",
+    "lint_test_count": 1
+}

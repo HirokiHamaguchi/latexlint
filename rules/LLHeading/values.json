@@ -1,0 +1,5 @@
+{
+    "message": "Found \\\\%1 without a preceding \\\\%2.",
+    "severity": "WARN",
+    "lint_test_count": 1
+}

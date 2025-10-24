@@ -10,9 +10,13 @@ All notable changes to the "latexlint" extension will be documented in this file
 - Replace Dollars (at Other folder).
 - et. al. is incorrect. Use `\emph{et al.}` instead.
 
+## 1.5.8- 2025-10-25
+
+- Fix Grammar issues.
+
 ## 1.5.7 - 2025-10-24
 
-- LLUnref: Renamed from LLFigRef and extended to detect unreferenced labels in both figure and table environments.
+- LLUnRef: Renamed from LLFigRef and extended to detect unreferenced labels in both figure and table environments.
 
 ## 1.5.6 - 2025-10-24
 

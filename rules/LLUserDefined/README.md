@@ -13,7 +13,7 @@ We listed some examples in the following.
 
 When you use English letters in math mode for an explanation, you should use `\mathrm`.
 
-For example, If the character `a` is not a variable and represents something like **a**tractive force, `f^a(x)` should be written as `f^{\mathrm{a}}(x)`.
+For example, if the character `a` is not a variable and represents something like **a**tractive force, `f^a(x)` should be written as `f^{\mathrm{a}}(x)`.
 
 ![rules/LLUserDefined](rules/LLUserDefined/LLUserDefined1.png)
 
@@ -23,7 +23,7 @@ However, it is difficult to detect without context. You can define the rule `f\^
 
 When you use operators, you should use `\DeclareMathOperator`.
 
-For example, If you use `\Box` as a [infimal convolution](https://en.wikipedia.org/wiki/Convex_conjugate#Infimal_convolution), you should define it as an operator.
+For example, if you use `\Box` as a [infimal convolution](https://en.wikipedia.org/wiki/Convex_conjugate#Infimal_convolution), you should define it as an operator.
 
 ```tex
 \DeclareMathOperator{\infConv}{\Box}

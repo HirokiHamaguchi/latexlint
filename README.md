@@ -29,7 +29,7 @@ Here is the list of rules we detect.
 5. [LLBig](#llbig) (detect `\cap_`, `\cup_`, etc.)
 6. [LLBracketCurly](#llbracketcurly) (detect `\max{` and `\min{`)
 7. [LLBracketMissing](#llbracketmissing) (detect `^23`, `_23`, etc.)
-8. [LLBracketRound](#llbracketround) (detect `\sqrt(`, `^(` and `_(`)
+8. [LLBracketRound](#llbracketround) (detect `\sqrt(`, `^(`, and `_(`)
 9. [LLColonEqq](#llcoloneqq) (detect `:=`, `=:`,`::=`, and `=::`)
 10. [LLColonForMapping](#llcolonformapping) (detect `:` for mapping)
 11. [LLCref](#llcref) (detect `\ref`, disabled by default)
@@ -62,7 +62,7 @@ You should likely write it as `={}&` in the `align` environment.
 
 ![rules/LLAlignAnd](rules/LLAlignAnd/LLAlignAnd.png)
 
-We also detect `\neq&`, `\leq&`, `\geq&`, `\le&`, `\ge&`, `<&` and `>&`.
+We also detect `\neq&`, `\leq&`, `\geq&`, `\le&`, `\ge&`, `<&`, and `>&`.
 
 As a limitation of this extension, there are some false positives, such as `&=` in the `table` environment.
 
@@ -70,7 +70,7 @@ As a limitation of this extension, there are some false positives, such as `&=` 
 
 ### LLAlignEnd
 
-Detect `align`, `gather` etc. environment ends with `\\` in `.tex` or `.md` files.
+Detect `align`, `gather`, and other environments end with `\\` in `.tex` or `.md` files.
 This `\\` can be unnecessary.
 
 ### LLAlignSingleLine
@@ -91,12 +91,13 @@ You can rename the command by [LaTeX Lint: Rename Command or Label](#latex-lint-
 Detect wrong article usage in `.tex` or `.md` files.
 For example, `A $n$-dimensional` should be `An $n$-dimensional` (We might add more patterns in the future).
 
-Such errors cannot be detected by grammar checkers such as Grammarly, since it contains a math equation.
+Such error cannot be detected by grammar checkers such as Grammarly, since it contains a math equation.
 
 ### LLBig
 
-Detect `\cap_`, `\cup_`, `\odot_`, `\oplus_`, `\otimes_`, `\sqcup_`, `uplus_`, `\vee_` and `\wedge_` in `.tex` or `.md` files.
-You should likely use `\bigcap`, `\bigcup`, `\bigodot`, `\bigoplus`, `\bigotimes`, `\bigsqcup`, `\biguplus`, `\bigvee` and `\bigwedge` instead.
+Detect `\cap_`, `\cup_`, `\odot_`, `\oplus_`, `\otimes_`, `\sqcup_`, `uplus_`, `\vee_`, and `\wedge_` in `.tex` or `.md` files.
+
+You should likely use `\bigcap`, `\bigcup`, `\bigodot`, `\bigoplus`, `\bigotimes`, `\bigsqcup`, `\biguplus`, `\bigvee`, and `\bigwedge` instead.
 
 ![rules/LLBig](rules/LLBig/LLBig.png)
 
@@ -111,22 +112,22 @@ You should likely use `\max(` and `\min(` instead, or add a space after `\max` o
 
 ### LLBracketMissing
 
-Detect cases such as `^23`, `_23`, `^ab` and `_ab` in `.tex` files.
-Clarify the scope of the superscript and subscript by adding `{}` or space.
+Detect cases such as `^23`, `_23`, `^ab`, and `_ab` in `.tex` files.
+Clarify the scope of the superscript and subscript by adding `{}` or a space.
 
 ![rules/LLBracketMissing](rules/LLBracketMissing/LLBracketMissing.png)
 
 ### LLBracketRound
 
-Detect `\sqrt(`, `^(` and `_(` in `.tex` or `.md` files.
-You should likely use `\sqrt{`, `^{` and `_{` instead.
+Detect `\sqrt(`, `^(`, and `_(` in `.tex` or `.md` files.
+You should likely use `\sqrt{`, `^{`, and `_{` instead.
 
 ![rules/LLBracketRound](rules/LLBracketRound/LLBracketRound.png)
 
 ### LLColonEqq
 
-Detect `:=`, `=:`, `::=` and `=::` in `.tex` files.
-You should likely use `\coloneqq`, `\eqqcolon`, `\Coloneqq` and `\Eqqcolon` in the [mathtools](https://ctan.org/pkg/mathtools) package instead.
+Detect `:=`, `=:`, `::=`, and `=::` in `.tex` files.
+You should likely use `\coloneqq`, `\eqqcolon`, `\Coloneqq`, and `\Eqqcolon` in the [mathtools](https://ctan.org/pkg/mathtools) package instead.
 
 ![rules/LLColonEqq](rules/LLColonEqq/LLColonEqq.png)
 
@@ -141,9 +142,9 @@ You likely want to use `\colon` instead.
 
 ![rules/LLColonForMapping](rules/LLColonForMapping/LLColonForMapping.png)
 
-`\colon` is [recommended](https://tex.stackexchange.com/questions/37789/using-colon-or-in-formulas) for the mapping symbol. `:` is used for ratio, such as `1:2`.
+`\colon` is [recommended](https://tex.stackexchange.com/questions/37789/using-colon-or-in-formulas) for the mapping symbol. `:` is used for ratios, such as `1:2`.
 
-In order to detect this pattern, we seek `\to`,`\mapsto` and `\rightarrow` after the `:`. If there is any of these commands within 10 words after the `:` and before `$` without escaping, we regard the `:` as a mapping symbol. There are some false positives and negatives.
+In order to detect this pattern, we seek `\to`,`\mapsto` and `\rightarrow` after the `:`. If there are any of these commands within 10 words after the `:` and before `$` without escaping, we regard the `:` as a mapping symbol. There are some false positives and negatives.
 
 ### LLCref
 
@@ -175,7 +176,7 @@ You should likely use `--` for en-dash and `---` for em-dash.
 
 ![rules/LLENDash](rules/LLENDash/LLENDash.png)
 
-Although this rule is [not inherent orthographic "correctness"](https://en.wikipedia.org/wiki/Dash#En_dash), in a lot of cases, the use of en dash is [preferred](https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style#Dashes).
+Although this rule is [not inherent orthographic "correctness"](https://en.wikipedia.org/wiki/Dash#En_dash), in a lot of cases, the use of an en dash is [preferred](https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style#Dashes).
 
 For example, we detect the following.
 
@@ -191,10 +192,10 @@ However, we do not detect the following as an exception.
 * `Fritz-John` (optimization, name of a person)
 * todo: add more exceptions
 
-We also should use `--` instead of `-` to indicate a range of pages, e.g., `123--456` instead of `123-456`. A lot of bibtex files follow this rule. We do not detect this because it might be just a subtraction.
+We also should use `--` instead of `-` to indicate a range of pages, e.g., `123--456` instead of `123-456`. A lot of BibTeX files follow this rule. We do not detect this because it might be just a subtraction.
 
 We use the Regex `[A-Z][a-zA-Z]*[a-z]`, consisting of an uppercase letter, zero or more letters, and a lowercase letter.
-We assume that this represents a name of a person.
+We assume that this represents someone's name.
 
 ### LLEqnarray
 
@@ -336,7 +337,7 @@ It would be better to use `\SI` for units such as `m`, `s`, `kg`, `A`, `K`, `mol
 
 Detect unsorted multiple citations in `.tex` files.
 
-Multiple citations like `\cite{b,a}` will be displayed as `[2,1]` instead of the sorted order `[1,2]`. This rule detects such cases and suggests adding the `sort` option to natbib or use `\usepackage{cite}`.
+Multiple citations like `\cite{b,a}` will be displayed as `[2,1]` instead of the sorted order `[1,2]`. This rule detects such cases and suggests adding the `sort` option to natbib or using `\usepackage{cite}`.
 
 This rule only applies when:
 
@@ -358,7 +359,7 @@ Otherwise, we cannot distinguish between the transpose and the power by a variab
 
 ### LLThousands
 
-Detect wrongly used commas as thousands separators such as `1,000` in `.tex` files.
+Detect wrongly used commas as thousands separators, such as `1,000` in `.tex` files.
 You should likely use `1{,}000` or use the package [icomma](https://ctan.org/pkg/icomma?lang=en).
 
 ![rules/LLThousands](rules/LLThousands/LLThousands.png)
@@ -422,7 +423,7 @@ We listed some examples in the following.
 
 When you use English letters in math mode for an explanation, you should use `\mathrm`.
 
-For example, If the character `a` is not a variable and represents something like **a**tractive force, `f^a(x)` should be written as `f^{\mathrm{a}}(x)`.
+For example, if the character `a` is not a variable and represents something like **a**tractive force, `f^a(x)` should be written as `f^{\mathrm{a}}(x)`.
 
 ![rules/LLUserDefined](rules/LLUserDefined/LLUserDefined1.png)
 
@@ -432,7 +433,7 @@ However, it is difficult to detect without context. You can define the rule `f\^
 
 When you use operators, you should use `\DeclareMathOperator`.
 
-For example, If you use `\Box` as a [infimal convolution](https://en.wikipedia.org/wiki/Convex_conjugate#Infimal_convolution), you should define it as an operator.
+For example, if you use `\Box` as a [infimal convolution](https://en.wikipedia.org/wiki/Convex_conjugate#Infimal_convolution), you should define it as an operator.
 
 ```tex
 \DeclareMathOperator{\infConv}{\Box}
@@ -465,7 +466,7 @@ Run the commands by clicking the icon or opening the command palette (`Ctrl`+`Sh
 
 #### 3. Follow the instructions
 
-If you choose `string`, we detect input itself.
+If you choose `string`, we detect the input itself.
 If you choose `Regex`, we detect the pattern using Regex.
 
 Then, you can define your own rule.
@@ -504,13 +505,13 @@ You can see the result on the Wolfram Alpha page. We remove some unnecessary com
 
 ## Note
 
-As stated in the [Rules](#rules), false positives and false negatives may occur. We apologize for inconvenience. If you find any errors, please report them via [GitHub Issues](https://github.com/hari64boli64/latexlint/issues).
+As stated in the [Rules](#rules), false positives and false negatives may occur. We apologize for the inconvenience. If you find any errors, please report them via [GitHub Issues](https://github.com/hari64boli64/latexlint/issues).
 
-**We are always welcome any kind of feedback, suggestions, and pull requests!**
+**We always welcome any kind of feedback, suggestions, and pull requests!**
 
 When writing papers, please ensure you follow the style specified by the academic society or publisher.
 
-We wish our extension will help you write papers.
+We hope our extension will help you write papers.
 
 ## Change Log
 

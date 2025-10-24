@@ -3,8 +3,8 @@
 
 ### LLColonEqq
 
-Detect `:=`, `=:`, `::=` and `=::` in `.tex` files.
-You should likely use `\coloneqq`, `\eqqcolon`, `\Coloneqq` and `\Eqqcolon` in the [mathtools](https://ctan.org/pkg/mathtools) package instead.
+Detect `:=`, `=:`, `::=`, and `=::` in `.tex` files.
+You should likely use `\coloneqq`, `\eqqcolon`, `\Coloneqq`, and `\Eqqcolon` in the [mathtools](https://ctan.org/pkg/mathtools) package instead.
 
 ![rules/LLColonEqq](rules/LLColonEqq/LLColonEqq.png)
 

@@ -50,7 +50,7 @@ Run the commands by clicking the icon or opening the command palette (`Ctrl`+`Sh
 
 #### 3. Follow the instructions
 
-If you choose `string`, we detect input itself.
+If you choose `string`, we detect the input itself.
 If you choose `Regex`, we detect the pattern using Regex.
 
 Then, you can define your own rule.
@@ -89,13 +89,13 @@ You can see the result on the Wolfram Alpha page. We remove some unnecessary com
 
 ## Note
 
-As stated in the [Rules](#rules), false positives and false negatives may occur. We apologize for inconvenience. If you find any errors, please report them via [GitHub Issues](https://github.com/hari64boli64/latexlint/issues).
+As stated in the [Rules](#rules), false positives and false negatives may occur. We apologize for the inconvenience. If you find any errors, please report them via [GitHub Issues](https://github.com/hari64boli64/latexlint/issues).
 
-**We are always welcome any kind of feedback, suggestions, and pull requests!**
+**We always welcome any kind of feedback, suggestions, and pull requests!**
 
 When writing papers, please ensure you follow the style specified by the academic society or publisher.
 
-We wish our extension will help you write papers.
+We hope our extension will help you write papers.
 
 ## Change Log
 

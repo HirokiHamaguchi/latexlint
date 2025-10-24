@@ -3,7 +3,7 @@
 
 ### LLThousands
 
-Detect wrongly used commas as thousands separators such as `1,000` in `.tex` files.
+Detect wrongly used commas as thousands separators, such as `1,000` in `.tex` files.
 You should likely use `1{,}000` or use the package [icomma](https://ctan.org/pkg/icomma?lang=en).
 
 ![rules/LLThousands](rules/LLThousands/LLThousands.png)

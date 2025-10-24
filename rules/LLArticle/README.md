@@ -6,4 +6,4 @@
 Detect wrong article usage in `.tex` or `.md` files.
 For example, `A $n$-dimensional` should be `An $n$-dimensional` (We might add more patterns in the future).
 
-Such errors cannot be detected by grammar checkers such as Grammarly, since it contains a math equation.
+Such error cannot be detected by grammar checkers such as Grammarly, since it contains a math equation.

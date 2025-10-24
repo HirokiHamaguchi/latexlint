@@ -8,7 +8,7 @@ You should likely write it as `={}&` in the `align` environment.
 
 ![rules/LLAlignAnd](rules/LLAlignAnd/LLAlignAnd.png)
 
-We also detect `\neq&`, `\leq&`, `\geq&`, `\le&`, `\ge&`, `<&` and `>&`.
+We also detect `\neq&`, `\leq&`, `\geq&`, `\le&`, `\ge&`, `<&`, and `>&`.
 
 As a limitation of this extension, there are some false positives, such as `&=` in the `table` environment.
 

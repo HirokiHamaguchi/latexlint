@@ -36,20 +36,20 @@ Here is the list of rules we detect.
 12. [LLDoubleQuotes](#lldoublequotes) (detect `“`, `”` and `"` )
 13. [LLENDash](#llendash) (detect the dubious use of `-`)
 14. [LLEqnarray](#lleqnarray) (detect `eqnarray` environment)
-15. [LLFigRef](#llfigref) (detect unreferenced figure labels)
-16. [LLFootnote](#llfootnote) (detect `.` + newline + `\footnote`)
-17. [LLHeading](#llheading) (detect heading level jumps)
-18. [LLJapaneseSpace](#lljapanesespace) (detect the lack of space, disabled by default)
-19. [LLLlGg](#llllgg) (detect `<<` and `>>`)
-20. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters, disabled by default)
-21. [LLPeriod](#llperiod) (detect `e.g.`)
-22. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
-23. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
-24. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
-25. [LLSortedCites](#llsortedcites) (detect unsorted cites)
-26. [LLT](#llt) (detect `^T`)
-27. [LLThousands](#llthousands) (detect `1,000` etc.)
-28. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
+15. [LLFootnote](#llfootnote) (detect `.` + newline + `\footnote`)
+16. [LLHeading](#llheading) (detect heading level jumps)
+17. [LLJapaneseSpace](#lljapanesespace) (detect the lack of space, disabled by default)
+18. [LLLlGg](#llllgg) (detect `<<` and `>>`)
+19. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters, disabled by default)
+20. [LLPeriod](#llperiod) (detect `e.g.`)
+21. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
+22. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
+23. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
+24. [LLSortedCites](#llsortedcites) (detect unsorted cites)
+25. [LLT](#llt) (detect `^T`)
+26. [LLThousands](#llthousands) (detect `1,000` etc.)
+27. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
+28. [LLUnRef](#llunref) (detect unreferenced figure and table labels)
 29. [LLURL](#llurl) (detect unnecessary info in URLs)
 30. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
 
@@ -202,12 +202,6 @@ Detect `eqnarray` environment in `.tex` or `.md` files.
 You should likely use the `align` environment instead.
 
 It is known that the `eqnarray` environment is [not recommended](https://texfaq.org/FAQ-eqnarray) because it has some spacing issues.
-
-### LLFigRef
-
-Detect `\label{...}` that are never referenced by `\ref{...}` or `\cref{...}` in `.tex` files.
-
-Reference all the figures you label to ensure there are no unused labels in your document.
 
 ### LLFootnote
 
@@ -392,6 +386,12 @@ We test the string inside the `{}` is invariant by the function `toTitleCase` im
 [APA Style](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case).
 
 [Ref by WORDVICE](https://blog.wordvice.jp/title-capitalization-rules-for-research-papers/).
+
+### LLUnRef
+
+Detect `\label{...}` in figure and table environments that are never referenced by `\ref{...}` or `\cref{...}` in `.tex` files.
+
+Reference all the figures and tables you label to ensure there are no unused labels in your document.
 
 ### LLURL
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.25)  24 OCT 2025 16:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.25)  24 OCT 2025 22:00
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -877,19 +877,9 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4{c:/texlive/2025/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{c:/texliv
 e/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<example-image.pdf, id=204, 321.2pt x 240.9pt>
-File: example-image.pdf Graphic file (type pdf)
-<use example-image.pdf>
-Package pdftex.def Info: example-image.pdf  used on input line 435.
-(pdftex.def)             Requested size: 167.3021pt x 125.47823pt.
-File: example-image.pdf Graphic file (type pdf)
-<use example-image.pdf>
-Package pdftex.def Info: example-image.pdf  used on input line 441.
-(pdftex.def)             Requested size: 167.3021pt x 125.47823pt.
-
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 461.
+(hyperref)                than one, level fixed on input line 442.
 
 (c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.bdg
 File: UTF8.bdg 2021/10/16 4.8.5
@@ -901,7 +891,7 @@ File: UTF8.enc 2021/10/16 4.8.5
 File: UTF8.chr 2021/10/16 4.8.5
 )
 LaTeX Font Info:    Trying to load font information for C70+ipxm on input line 
-469.
+450.
 
 (c:/texlive/2025/texmf-dist/tex/latex/ipaex-type1/c70ipxm.fd
 File: c70ipxm.fd 2018/05/05 v0.5
@@ -939,21 +929,30 @@ c/dvips/ipaex-type1/ipxt1-u58.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/i
 paex-type1/ipxt1-u54.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type
 1/ipxt1-u70.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u
 69.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u51.enc}{c
-:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-uff.enc} <c:/texliv
-e/2025/texmf-dist/tex/latex/mwe/example-image.pdf>]
+:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-uff.enc}]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 574.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 574.
+
+<example-image.pdf, id=261, 321.2pt x 240.9pt>
+File: example-image.pdf Graphic file (type pdf)
+<use example-image.pdf>
+Package pdftex.def Info: example-image.pdf  used on input line 581.
+(pdftex.def)             Requested size: 167.3021pt x 125.47823pt.
+File: example-image.pdf Graphic file (type pdf)
+<use example-image.pdf>
+Package pdftex.def Info: example-image.pdf  used on input line 587.
+(pdftex.def)             Requested size: 167.3021pt x 125.47823pt.
+
 
 [7]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 593.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 593.
-
-(sample/lint.bbl
-
-[8])
+[8 <c:/texlive/2025/texmf-dist/tex/latex/mwe/example-image.pdf>]
+(sample/lint.bbl)
 
 [9]
 
@@ -963,7 +962,7 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-19>
  ***********
 Package rerunfilecheck Info: File `lint.out' has not changed.
-(rerunfilecheck)             Checksum: EF8DDC668AC7F9CA056DB9ACEB7D6C4D;4199.
+(rerunfilecheck)             Checksum: 4825636038185895F31E57C28684F915;4194.
  ) 
 Here is how much of TeX's memory you used:
  24601 strings out of 467816
@@ -1010,7 +1009,7 @@ f-dist/fonts/type1/public/amsfonts/latxfont/lcirclew.pfb><c:/texlive/2025/texmf
 -dist/fonts/type1/public/lm/lmss17.pfb><c:/texlive/2025/texmf-dist/fonts/type1/
 public/amsfonts/symbols/msbm10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/publ
 ic/cm-super/sfrm1000.pfb>
-Output written on sample/lint.pdf (10 pages, 423317 bytes).
+Output written on sample/lint.pdf (10 pages, 423430 bytes).
 PDF statistics:
  524 PDF objects out of 1000 (max. 8388607)
  402 compressed objects within 5 object streams

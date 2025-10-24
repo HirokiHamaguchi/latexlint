@@ -125,7 +125,6 @@
               "LLDoubleQuotes",
               "LLENDash",
               "LLEqnarray",
-              "LLFigRef",
               "LLFootnote",
               "LLHeading",
               "LLJapaneseSpace",
@@ -139,6 +138,7 @@
               "LLT",
               "LLThousands",
               "LLTitle",
+              "LLUnRef",
               "LLURL",
               "LLUserDefined"
             ],

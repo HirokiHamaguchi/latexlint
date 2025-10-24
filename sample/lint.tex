@@ -427,25 +427,6 @@ We should not use eqnarray. It has some spacing issues.
 	a & = & b
 \end{eqnarray*}
 
-\section{LLFigRef}
-
-\begin{figure}[htbp]
-  \begin{minipage}{0.5\columnwidth}
-    \centering
-    \includegraphics[width=0.8\columnwidth]{example-image}
-    \caption{Referenced Figure}
-    \label{fig:referenced}
-  \end{minipage}%
-  \begin{minipage}{0.5\columnwidth}
-    \centering
-    \includegraphics[width=0.8\columnwidth]{example-image}
-    \caption{Unreferenced Figure}
-    \label{fig:unreferenced}
-  \end{minipage}
-\end{figure}
-
-Fig.~\ref{fig:referenced} is referenced in the text, while the other figure is not.
-
 \section{LLFootnote}
 
 When we use footnotes in a new line.
@@ -591,6 +572,25 @@ Unsorted citations: \cite{hari2000,boli2000}.
 \subsection{IGNORE IF ALL UPPERCASE}
 
 \subsection{Math Contains version $x$}
+
+\section{LLUnRef}
+
+\begin{figure}[htbp]
+  \begin{minipage}{0.5\columnwidth}
+    \centering
+    \includegraphics[width=0.8\columnwidth]{example-image}
+    \caption{Referenced Figure}
+    \label{fig:referenced}
+  \end{minipage}%
+  \begin{minipage}{0.5\columnwidth}
+    \centering
+    \includegraphics[width=0.8\columnwidth]{example-image}
+    \caption{Unreferenced Figure}
+    \label{fig:unreferenced}
+  \end{minipage}
+\end{figure}
+
+Fig.~\ref{fig:referenced} is referenced in the text, while the other figure is not.
 
 \section{LLURL}
 

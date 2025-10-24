@@ -18,7 +18,6 @@ export const LLCodeStrings = [
     'LLDoubleQuotes',
     'LLENDash',
     'LLEqnarray',
-    'LLFigRef',
     'LLFootnote',
     'LLHeading',
     'LLJapaneseSpace',
@@ -32,6 +31,7 @@ export const LLCodeStrings = [
     'LLT',
     'LLThousands',
     'LLTitle',
+    'LLUnRef',
     'LLURL',
     'LLUserDefined',
 ];
@@ -53,7 +53,6 @@ export const messages: Record<LLCode, string> = {
     LLDoubleQuotes: 'For double quotes, use ``...\'\'.',
     LLENDash: 'If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".',
     LLEqnarray: 'Eqnarray is not recommended. Use align or gather instead.',
-    LLFigRef: 'Label "%1" is defined but never referenced.',
     LLFootnote: 'Consider adding \% after the period for the \\footnote command.',
     LLHeading: 'Found \\%1 without a preceding \\%2.',
     LLJapaneseSpace: 'Consider adding a space at here.',
@@ -67,6 +66,7 @@ export const messages: Record<LLCode, string> = {
     LLT: 'Write ^\\top or ^\\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.',
     LLThousands: 'Consider using "%1{,}%2" instead of "%1,%2".',
     LLTitle: 'Should this be "%1"? Follow your preferred style guide and register as an exception if necessary.',
+    LLUnRef: 'Label "%1" is defined but never referenced.',
     LLURL: 'UTM parameters (?utm_*) might be unnecessary and could be removed for cleaner URLs.',
     LLUserDefined: 'This violates your defined rule: %1',
 };
@@ -88,7 +88,6 @@ export const severity: Record<LLCode, vscode.DiagnosticSeverity> = {
     LLDoubleQuotes: WARN,
     LLENDash: WARN,
     LLEqnarray: WARN,
-    LLFigRef: WARN,
     LLFootnote: WARN,
     LLHeading: WARN,
     LLJapaneseSpace: INFO,
@@ -102,6 +101,7 @@ export const severity: Record<LLCode, vscode.DiagnosticSeverity> = {
     LLT: WARN,
     LLThousands: WARN,
     LLTitle: INFO,
+    LLUnRef: WARN,
     LLURL: WARN,
     LLUserDefined: WARN,
 };

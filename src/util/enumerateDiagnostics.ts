@@ -14,7 +14,6 @@ import LLCref from '../LL/LLCref';
 import LLDoubleQuotes from '../LL/LLDoubleQuotes';
 import LLENDash from '../LL/LLENDash';
 import LLEqnarray from '../LL/LLEqnarray';
-import LLFigRef from '../LL/LLFigRef';
 import LLFootnote from '../LL/LLFootnote';
 import LLHeading from '../LL/LLHeading';
 import LLJapaneseSpace from '../LL/LLJapaneseSpace';
@@ -28,6 +27,7 @@ import LLSortedCites from '../LL/LLSortedCites';
 import LLT from '../LL/LLT';
 import LLThousands from '../LL/LLThousands';
 import LLTitle from '../LL/LLTitle';
+import LLUnRef from '../LL/LLUnRef';
 import LLURL from '../LL/LLURL';
 import LLUserDefined from '../LL/LLUserDefined';
 import formatException from './formatException';
@@ -65,7 +65,6 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
         LLDoubleQuotes,
         LLENDash,
         LLEqnarray,
-        LLFigRef,
         LLFootnote,
         LLHeading,
         LLJapaneseSpace,
@@ -79,6 +78,7 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
         LLT,
         LLThousands,
         LLTitle,
+        LLUnRef,
         LLURL,
         LLUserDefined,
     })) {

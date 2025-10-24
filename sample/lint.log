@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.25)  24 OCT 2025 13:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.25)  24 OCT 2025 13:31
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**sample/lint.tex
-(./sample/lint.tex
+**c:/Users/hirok/Documents/Hobby/latexlint/sample/lint
+(c:/Users/hirok/Documents/Hobby/latexlint/sample/lint.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-19>
 (c:/texlive/2025/texmf-dist/tex/latex/base/article.cls
@@ -23,8 +23,7 @@ File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
-)
-(c:/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks17
 \symAMSa=\mathgroup4
@@ -32,25 +31,21 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)
-(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2025/06/16 v2.17y AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
 (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
-
-(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks18
 \ex@=\dimen149
-))
-(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen150
-)
-(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count283
@@ -100,8 +95,7 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2949.
 LaTeX Info: Redefining \] on input line 2950.
-)
-(c:/texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks23
 \thm@bodyfont=\toks24
@@ -112,11 +106,9 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@postskip=\skip55
 \thm@headsep=\skip56
 \dth@everypar=\toks28
-)
-(c:/texlive/2025/texmf-dist/tex/latex/ascmac/ascmac.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/ascmac/ascmac.sty
 Package: ascmac 2020/01/15 v2.1 ascmac wrapper (community edition) 
-
-(c:/texlive/2025/texmf-dist/tex/latex/ascmac/tascmac.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/ascmac/tascmac.sty
 Package: tascmac 2020/01/15 v2.1 ascmac package (community edition) 
 Package tascmac Info: Assuming pdfLaTeX, XeLaTeX or LuaLaTeX on input line 44.
 \scb@x=\box55
@@ -134,28 +126,21 @@ Package tascmac Info: Assuming pdfLaTeX, XeLaTeX or LuaLaTeX on input line 44.
 \@@bwsp=\box63
 \@bcal=\count295
 \shaderule=\dimen161
-))
-(c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/CJKutf8.sty
+)) (c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/CJKutf8.sty
 Package: CJKutf8 2021/10/16 4.8.5
-
-(c:/texlive/2025/texmf-dist/tex/generic/iftex/ifpdf.sty
+ (c:/texlive/2025/texmf-dist/tex/generic/iftex/ifpdf.sty
 Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
-
-(c:/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
+ (c:/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
-))
-(c:/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty
+)) (c:/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks30
 \inpenc@posthook=\toks31
-)
-(c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/CJK.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/CJK.sty
 Package: CJK 2021/10/16 4.8.5
-
-(c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/mule/MULEenc.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/mule/MULEenc.sty
 Package: MULEenc 2021/10/16 4.8.5
-)
-(c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/CJK.enc
+) (c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/CJK.enc
 File: CJK.enc 2021/10/16 4.8.5
 Now handling font encoding C00 ...
 ... no UTF-8 mapping file for font encoding C00
@@ -223,11 +208,9 @@ Now handling font encoding C62 ...
 ... no UTF-8 mapping file for font encoding C62
 )
 \CJK@indent=\box64
-)
-(c:/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
-))
-(c:/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty
+)) (c:/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \enitkv@toks@=\toks32
 \labelindent=\skip57
@@ -236,23 +219,19 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \enit@inbox=\box65
 \enit@count@id=\count296
 \enitdp@description=\count297
-)
-(c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count298
 \float@exts=\toks34
 \float@box=\box66
 \@float@everytoks=\toks35
 \@floatcapt=\box67
-)
-(c:/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
-
-(c:/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks36
-)
-(c:/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
+) (c:/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
 \Gm@cnth=\count299
@@ -267,93 +246,69 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen169
 \Gm@layoutvoffset=\dimen170
 \Gm@dimlist=\toks37
-)
-(c:/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
-
-(c:/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
-
-(c:/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-)
-(c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
-
-(c:/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
+ (c:/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen171
 \Gin@req@width=\dimen172
-)
-(c:/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
-
-(c:/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)
-(c:/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+) (c:/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+) (c:/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-
-(c:/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+ (c:/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-)
-(c:/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(c:/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+) (c:/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (c:/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-))
-(c:/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty
+)) (c:/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(c:/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
-
-(c:/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-)
-(c:/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+) (c:/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
-
-(c:/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count302
-)
-(c:/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count303
-)
-(c:/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
-)
+) (c:/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
 \@linkdim=\dimen173
 \Hy@linkcounter=\count304
 \Hy@pagecounter=\count305
-
-(c:/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
+ (c:/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-)
-(c:/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
+) (c:/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count306
-
-(c:/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
+ (c:/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -366,20 +321,16 @@ Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
 \c@Hy@tempcnt=\count307
-
-(c:/texlive/2025/texmf-dist/tex/latex/url/url.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4801.
 \XeTeXLinkMargin=\dimen174
-
-(c:/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+ (c:/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
-(c:/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
-)
+ (c:/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count308
 \Field@Width=\dimen175
@@ -396,24 +347,19 @@ Package hyperref Info: PDF/A mode OFF on input line 6108.
 \c@Hfootnote=\count311
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-
-(c:/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
+ (c:/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
 \Fld@listcount=\count312
 \c@bookmark@seq@number=\count313
-
-(c:/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
-
-(c:/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+ (c:/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-84.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
 )
 \Hy@SectionHShift=\skip58
-)
-(c:/texlive/2025/texmf-dist/tex/latex/listings/listings.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count314
 \lst@gtempboxa=\box68
 \lst@token=\toks38
@@ -426,25 +372,20 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \lst@newlines=\count318
 \lst@lineno=\count319
 \lst@maxwidth=\dimen180
-
-(c:/texlive/2025/texmf-dist/tex/latex/listings/lstpatch.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
-)
-(c:/texlive/2025/texmf-dist/tex/latex/listings/lstmisc.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 \c@lstnumber=\count320
 \lst@skipnumbers=\count321
 \lst@framebox=\box69
-)
-(c:/texlive/2025/texmf-dist/tex/latex/listings/listings.cfg
+) (c:/texlive/2025/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2024/09/23 1.10c listings configuration
 ))
 Package: listings 2024/09/23 1.10c (Carsten Heinz)
-
-(c:/texlive/2025/texmf-dist/tex/latex/mathtools/mathtools.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
-
-(c:/texlive/2025/texmf-dist/tex/latex/tools/calc.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
 \calc@Acount=\count322
 \calc@Bcount=\count323
@@ -456,8 +397,7 @@ LaTeX Info: Redefining \setlength on input line 86.
 LaTeX Info: Redefining \addtolength on input line 87.
 \calc@Ccount=\count324
 \calc@Cskip=\skip61
-)
-(c:/texlive/2025/texmf-dist/tex/latex/mathtools/mhsetup.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
 \g_MT_multlinerow_int=\count325
@@ -471,11 +411,9 @@ Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 \l_MT_below_shortintertext_sep=\dimen189
 \xmathstrut@box=\box70
 \xmathstrut@dim=\dimen190
-)
-(c:/texlive/2025/texmf-dist/tex/latex/mnsymbol/MnSymbol.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/mnsymbol/MnSymbol.sty
 Package: MnSymbol 2007/01/21 v1.4 support for the MnSymbol font
-
-(c:/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 )
 LaTeX Info: Redefining \dagger on input line 84.
@@ -515,14 +453,12 @@ LaTeX Font Info:    Overwriting symbol font `MnSyC' in version `bold'
 LaTeX Font Info:    Overwriting symbol font `MnSyD' in version `bold'
 (Font)                  U/MnSymbolD/m/n --> U/MnSymbolD/b/n on input line 124.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/MnSymbolE/m/n --> OMX/MnSymbolE/b/n on input line 1
-25.
+(Font)                  OMX/MnSymbolE/m/n --> OMX/MnSymbolE/b/n on input line 125.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  U/MnSymbolF/m/n --> U/MnSymbolF/b/n on input line 126.
 LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 241.
 LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `bold'
-(Font)                  OMS/MnSymbolS/m/n --> OMS/MnSymbolS/b/n on input line 2
-41.
+(Font)                  OMS/MnSymbolS/m/n --> OMS/MnSymbolS/b/n on input line 241.
 LaTeX Info: Redefining \longrightarrow on input line 548.
 LaTeX Info: Redefining \longleftarrow on input line 549.
 LaTeX Info: Redefining \longleftrightarrow on input line 550.
@@ -543,21 +479,16 @@ LaTeX Info: Redefining \surd on input line 1843.
 LaTeX Font Info:    Redeclaring math accent \widehat on input line 1845.
 LaTeX Font Info:    Redeclaring math accent \widetilde on input line 1846.
 LaTeX Font Info:    Redeclaring math accent \vec on input line 1848.
-)
-(c:/texlive/2025/texmf-dist/tex/latex/physics/physics.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/physics/physics.sty
 Package: physics 
-
-(c:/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-(c:/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (c:/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2025-07-19 L3 programming layer (loader) 
-
-(c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+ (c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count326
 ))
 Package: xparse 2024-08-16 L3 Experimental document command parser
-))
-(c:/texlive/2025/texmf-dist/tex/latex/siunitx/siunitx.sty
+)) (c:/texlive/2025/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
 \l__siunitx_number_uncert_offset_int=\count327
 \l__siunitx_number_exponent_fixed_int=\count328
@@ -573,10 +504,8 @@ Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
 \l__siunitx_angle_marker_box=\box71
 \l__siunitx_angle_unit_box=\box72
 \l__siunitx_compound_count_int=\count337
-
-(c:/texlive/2025/texmf-dist/tex/latex/translations/translations.sty
-Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
- (CN)
+ (c:/texlive/2025/texmf-dist/tex/latex/translations/translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
 )
 \l__siunitx_table_tmp_box=\box73
 \l__siunitx_table_tmp_dim=\dimen192
@@ -591,8 +520,7 @@ Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
 \l__siunitx_unit_tmp_int=\count338
 \l__siunitx_unit_position_int=\count339
 \l__siunitx_unit_total_int=\count340
-
-(c:/texlive/2025/texmf-dist/tex/latex/tools/array.sty
+ (c:/texlive/2025/texmf-dist/tex/latex/tools/array.sty
 Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
 \col@sep=\dimen196
 \ar@mcellbox=\box79
@@ -601,16 +529,13 @@ Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
 \extratabsurround=\skip63
 \backup@length=\skip64
 \ar@cellbox=\box80
-))
-(c:/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+)) (c:/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
-
-(c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
+ (c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
-
-(c:/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+ (c:/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
@@ -620,8 +545,7 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-)
-(c:/texlive/2025/texmf-dist/tex/latex/cleveref/cleveref.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2370.
 LaTeX Info: Redefining \cref on input line 2370.
@@ -639,9 +563,8 @@ Package cleveref Info: `listings' support loaded on input line 3131.
 )
 ==> First Aid for cleveref.sty applied!
 \c@theorem=\count341
-Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 42.
-(sample/lint.aux)
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 42.
+(./lint.aux)
 \openout1 = `lint.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
@@ -776,16 +699,12 @@ LaTeX Font Info:    ... okay on input line 42.
 \everyMPtoPDFconversion=\toks41
 ) (c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring OFF on input line 42.
-
-(sample/lint.out) (sample/lint.out)
+ (./lint.out) (./lint.out)
 \@outlinefile=\write3
 \openout3 = `lint.out'.
 
@@ -802,32 +721,22 @@ Package siunitx Warning: Detected the "physics" package:
 (siunitx)                
 (siunitx)                to your preamble.
 
-
-(c:/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionar
-y-english.trsl
-File: translations-basic-dictionary-english.trsl (english translation file `tra
-nslations-basic-dictionary')
+(c:/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 42.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 42.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 48.
-
  (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 48.
-
-
-(c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+ (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 [1
 
-{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/
-texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{c:/texlive/2025/texmf-dist/f
-onts/enc/dvips/mnsymbol/MnSymbolE.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvi
-ps/mnsymbol/MnSymbolC.enc}]
+{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -837,53 +746,27 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [3]
 
-[4{c:/texlive/2025/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{c:/texliv
-e/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-(c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.bdg
+[4{c:/texlive/2025/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] (c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.bdg
 File: UTF8.bdg 2021/10/16 4.8.5
-)
-(c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.enc
+) (c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.enc
 File: UTF8.enc 2021/10/16 4.8.5
-)
-(c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.chr
+) (c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.chr
 File: UTF8.chr 2021/10/16 4.8.5
 )
-LaTeX Font Info:    Trying to load font information for C70+ipxm on input line 
-442.
-
-(c:/texlive/2025/texmf-dist/tex/latex/ipaex-type1/c70ipxm.fd
+LaTeX Font Info:    Trying to load font information for C70+ipxm on input line 442.
+ (c:/texlive/2025/texmf-dist/tex/latex/ipaex-type1/c70ipxm.fd
 File: c70ipxm.fd 2018/05/05 v0.5
-)
-(c:/texlive/2025/texmf-dist/tex/latex/ipaex-type1/c70ipxm.fdx
+) (c:/texlive/2025/texmf-dist/tex/latex/ipaex-type1/c70ipxm.fdx
 File: c70ipxm.fdx 2018/05/05 v0.5
 )
 
-[5{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u65.enc}{c:/tex
-live/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u67.enc}{c:/texlive/2025
-/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u8a.enc}{c:/texlive/2025/texmf-di
-st/fonts/enc/dvips/ipaex-type1/ipxt1-u30.enc}{c:/texlive/2025/texmf-dist/fonts/
-enc/dvips/ipaex-type1/ipxt1-u7a.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips
-/ipaex-type1/ipxt1-u5f.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-ty
-pe1/ipxt1-u66.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1
--u6b.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u59.enc}
-{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u75.enc}{c:/texli
-ve/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u5c.enc}{c:/texlive/2025/t
-exmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u97.enc}{c:/texlive/2025/texmf-dist
-/fonts/enc/dvips/ipaex-type1/ipxt1-u63.enc}{c:/texlive/2025/texmf-dist/fonts/en
-c/dvips/ipaex-type1/ipxt1-u58.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/i
-paex-type1/ipxt1-u54.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type
-1/ipxt1-u70.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u
-69.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u51.enc}]
-(c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.enc
+[5{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u65.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u67.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u8a.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u30.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u7a.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u5f.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u66.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u6b.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u59.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u75.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u5c.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u97.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u63.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u58.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u54.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u70.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u69.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u51.enc}] (c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.enc
 File: UTF8.enc 2021/10/16 4.8.5
-)
-(c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.chr
+) (c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.chr
 File: UTF8.chr 2021/10/16 4.8.5
-)
-(c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.enc
+) (c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.enc
 File: UTF8.enc 2021/10/16 4.8.5
-)
-(c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.chr
+) (c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.chr
 File: UTF8.chr 2021/10/16 4.8.5
 )
 
@@ -898,11 +781,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 
-[7] (sample/lint.bbl)
+[7] (./lint.bbl)
 
 [8]
 
-[9] (sample/lint.aux)
+[9] (./lint.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-19>
@@ -912,49 +795,14 @@ Package rerunfilecheck Info: File `lint.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  23936 strings out of 467816
- 427326 string characters out of 5436431
+ 427373 string characters out of 5436431
  819619 words of memory out of 5000000
  52163 multiletter control sequences out of 15000+600000
  651750 words of font info for 128 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,17n,79p,337b,1149s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol10.pfb><c:/te
-xlive/2025/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol7.pfb><c:/texlive/202
-5/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c
-:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/
-2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2025/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2025/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmss8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.
-pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/t
-exlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u30.pfb><c:/texliv
-e/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u51.pfb><c:/texlive/202
-5/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u54.pfb><c:/texlive/2025/tex
-mf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u58.pfb><c:/texlive/2025/texmf-di
-st/fonts/type1/public/ipaex-type1/ipxm-r-u59.pfb><c:/texlive/2025/texmf-dist/fo
-nts/type1/public/ipaex-type1/ipxm-r-u5c.pfb><c:/texlive/2025/texmf-dist/fonts/t
-ype1/public/ipaex-type1/ipxm-r-u5f.pfb><c:/texlive/2025/texmf-dist/fonts/type1/
-public/ipaex-type1/ipxm-r-u63.pfb><c:/texlive/2025/texmf-dist/fonts/type1/publi
-c/ipaex-type1/ipxm-r-u65.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipa
-ex-type1/ipxm-r-u66.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-ty
-pe1/ipxm-r-u67.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/i
-pxm-r-u69.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r
--u6b.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u70.
-pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u75.pfb><
-c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u7a.pfb><c:/te
-xlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u8a.pfb><c:/texlive
-/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u97.pfb><c:/texlive/2025
-/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-uff.pfb><c:/texlive/2025/texm
-f-dist/fonts/type1/public/amsfonts/latxfont/lcirclew.pfb><c:/texlive/2025/texmf
--dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2025/texmf-dis
-t/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on sample/lint.pdf (9 pages, 404052 bytes).
+ 75i,17n,79p,374b,1149s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u30.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u51.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u54.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u58.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u59.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u5c.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u5f.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u63.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u65.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u66.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u67.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u69.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u6b.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u70.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u75.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u7a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u97.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-uff.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcirclew.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on lint.pdf (9 pages, 404052 bytes).
 PDF statistics:
  487 PDF objects out of 1000 (max. 8388607)
  369 compressed objects within 4 object streams

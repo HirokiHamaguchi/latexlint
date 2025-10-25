@@ -6,7 +6,6 @@ import getEditor from '../util/getEditor';
 
 async function handleBeginEndRename(doc: vscode.TextDocument, editor: vscode.TextEditor, res: BeginEndResult) {
     let candidate = res.originalText;
-    console.log(candidate);
     if (candidate === "equation") candidate = "align";
     else if (candidate === "equation*") candidate = "align*";
     else if (candidate === "align") candidate = "equation";
@@ -18,28 +17,30 @@ async function handleBeginEndRename(doc: vscode.TextDocument, editor: vscode.Tex
     if (newText === undefined) return;
 
     // Store whether we need to handle align to equation conversion
-    const needsAlignConversion = (res.originalText === "align" && newText === "equation") ||
-        (res.originalText === "align*" && newText === "equation*");
+    const needsAlignConversion = (res.originalText === "align" || res.originalText === "align*") &&
+        (newText === "equation" || newText === "equation*");
 
     // In-place edition: replace only the specific command names
     await editor.edit((editBuilder) => {
-        // Find positions of the original text occurrences
         editBuilder.replace(
             new vscode.Range(doc.positionAt(res.secondWordStart), doc.positionAt(res.secondWordEnd)),
             newText
         );
-        editBuilder.replace(
-            new vscode.Range(doc.positionAt(res.firstWordStart), doc.positionAt(res.firstWordEnd)),
-            newText
-        );
+
         if (needsAlignConversion) {
-            const contentStart = doc.positionAt(res.firstWordEnd - res.originalText.length + newText.length);
-            const contentEnd = doc.positionAt(res.secondWordStart - res.originalText.length + newText.length);
+            const contentStart = doc.positionAt(res.firstWordEnd);
+            const contentEnd = doc.positionAt(res.secondWordStart);
             const originalContent = doc.getText(new vscode.Range(contentStart, contentEnd));
             const modifiedContent = originalContent.replace(/&/g, ' ').replace(/\\\\/g, '  ');
             if (originalContent !== modifiedContent)
                 editBuilder.replace(new vscode.Range(contentStart, contentEnd), modifiedContent);
         }
+
+        editBuilder.replace(
+            new vscode.Range(doc.positionAt(res.firstWordStart), doc.positionAt(res.firstWordEnd)),
+            newText
+        );
+
     });
 
     let cursorPos = res.cursorPos + res.newTextCountForCursor * newText.length;

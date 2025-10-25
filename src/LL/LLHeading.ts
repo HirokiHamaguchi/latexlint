@@ -28,7 +28,6 @@ export default function LLHeading(doc: vscode.TextDocument, txt: string): vscode
     const headingRegex = /\\(chapter|section|subsection|subsubsection)\*?\{/g;
 
     for (const headingMatch of txt.matchAll(headingRegex)) {
-        console.log(headingMatch);
         const headingType = headingMatch[1];
         const currentLevel = headingLevels[headingType];
 

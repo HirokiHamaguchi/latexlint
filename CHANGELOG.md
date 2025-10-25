@@ -10,7 +10,11 @@ All notable changes to the "latexlint" extension will be documented in this file
 - Replace Dollars (at Other folder).
 - et. al. is incorrect. Use `\emph{et al.}` instead.
 
-## 1.5.8- 2025-10-25
+## 1.5.9 - 2025-10-25
+
+- Fix bug of renameCommand.ts.
+
+## 1.5.8 - 2025-10-25
 
 - Fix Grammar issues.
 

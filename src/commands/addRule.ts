@@ -25,7 +25,8 @@ export default async function addRule(isEnabled: boolean, diagnosticsCollection:
         try {
             new RegExp(rule);
         } catch (error) {
-            vscode.window.showErrorMessage('Invalid regex rule. Please try again.');
+            const msg = error instanceof Error ? error.message : String(error);
+            vscode.window.showErrorMessage(`Invalid regex rule: ${msg}`);
             return;
         }
         regexRule = rule;

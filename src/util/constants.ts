@@ -39,7 +39,7 @@ export const LLCodeStrings = [
 export type LLCode = typeof LLCodeStrings[number];
 
 export const messages: Record<LLCode, string> = {
-    LLAlignAnd: 'Use %1{}& instead of %1& to avoid spacing issues in align environments.',
+    LLAlignAnd: 'Use &%1 or %1{}& instead of %1& to avoid spacing issues in align environments.',
     LLAlignEnd: '\\\\ at the enf of align-like environments might be unnecessary.',
     LLAlignSingleLine: 'For single-line equations, use the equation environment instead of align-like environments.',
     LLArticle: 'Did you mean "an" instead of "a"?',

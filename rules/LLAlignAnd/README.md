@@ -4,7 +4,7 @@
 ### LLAlignAnd
 
 Detect `=&` in `.tex` or `.md` files.
-You should likely write it as `={}&` in the `align` environment.
+Use `&=` or `={}&` in the `align` environment to avoid relation spacing error.
 
 ![rules/LLAlignAnd](rules/LLAlignAnd/LLAlignAnd.png)
 

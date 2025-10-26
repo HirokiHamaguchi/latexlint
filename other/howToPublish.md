@@ -6,7 +6,7 @@ Make your changes.
 
 In most of cases, you only need to edit files in the `rules` and `src` folders.
 
-Never edit the following folders: images, other, out, sample, README.md and package.json. These files are auto-generated or not related to rules.　If necessary, please edit the template files in the `script/basis` folder.
+Never edit the following folders: images, other, out, sample and README.md. These files are auto-generated or not related to rules.　If necessary, please edit the template files in the `script/basis` folder.
 
 If you are doing a bug fix, add test cases to `rules/LLRuleName/lint.tex` as a comment and update `rules/LLRuleName/README.md` and `rules/LLRuleName/values.json` if necessary.
 

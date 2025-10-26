@@ -9,6 +9,7 @@ export default async function showCommands() {
         { label: "Choose Detection Rules", command: "latexlint.selectRules" },
         { label: "Rename \\begin or \\end Commands", command: "latexlint.renameCommand" },
         { label: "Query Wolfram Alpha", command: "latexlint.askWolframAlpha" },
+        { label: "Fix Japanese Spacing", command: "latexlint.fixJapaneseSpace" },
     ];
 
     const selectedCommand = await vscode.window.showQuickPick(commands, {

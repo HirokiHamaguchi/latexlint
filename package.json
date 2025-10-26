@@ -69,6 +69,11 @@
       },
       {
         "category": "LaTeX Lint",
+        "command": "latexlint.fixJapaneseSpace",
+        "title": "Fix Missing Spaces Around Math Mode Delimiters"
+      },
+      {
+        "category": "LaTeX Lint",
         "command": "latexlint.showCommands",
         "title": "Display Available Commands",
         "icon": {

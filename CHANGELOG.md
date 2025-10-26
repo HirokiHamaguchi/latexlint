@@ -10,6 +10,10 @@ All notable changes to the "latexlint" extension will be documented in this file
 - Replace Dollars (at Other folder).
 - et. al. is incorrect. Use `\emph{et al.}` instead.
 
+## 1.5.11 - 2025-10-26
+
+- Add `fixJapaneseSpace` command to fix missing spaces.
+
 ## 1.5.10 - 2025-10-26
 
 - Update explanation of `LLAlignAnd`.

@@ -2,6 +2,7 @@ import * as vscode from 'vscode';
 import addRule from './commands/addRule';
 import askWolframAlpha from './commands/askWolframAlpha';
 import diagnose from './commands/diagnose';
+import fixJapaneseSpace from './commands/fixJapaneseSpace';
 import registerException from './commands/registerException';
 import renameCommand from './commands/renameCommand';
 import selectRules from './commands/selectRules';
@@ -52,6 +53,9 @@ export function activate(context: vscode.ExtensionContext) {
 
 	const disposableShowCommands = vscode.commands.registerCommand('latexlint.showCommands', showCommands);
 	context.subscriptions.push(disposableShowCommands);
+
+	const disposableFixJapaneseSpace = vscode.commands.registerCommand('latexlint.fixJapaneseSpace', fixJapaneseSpace);
+	context.subscriptions.push(disposableFixJapaneseSpace);
 
 	// For md files. Folding ranges for details.
 	context.subscriptions.push(vscode.languages.registerFoldingRangeProvider("markdown", new detailsFoldingRangeProvider()));

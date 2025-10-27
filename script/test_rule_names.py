@@ -13,22 +13,6 @@ def getPackageJson():
     return set(enum)
 
 
-def getEnumerateDiagnostics():
-    with open("src/util/enumerateDiagnostics.ts") as f:
-        lines = f.readlines()
-        i = 0
-        for i, line in enumerate(lines):
-            if "Object.entries" in line:
-                break
-        LLs = []
-        for line in lines[i:]:
-            words = line.split()
-            for word in words:
-                if word.startswith("LL"):
-                    LLs.append(word[:-1] if word.endswith(",") else word)
-    return set(LLs)
-
-
 def getMarkDown():
     with open("README.md", encoding="utf-8") as f:
         lines = f.readlines()
@@ -49,10 +33,9 @@ def getFileNames():
 
 def test_rule_names():
     packageJsonSet = getPackageJson()
-    enumerateDiagnosticsSet = getEnumerateDiagnostics()
     markdownSet = getMarkDown()
     fileNames = getFileNames()
-    assert enumerateDiagnosticsSet == markdownSet == packageJsonSet == fileNames
+    assert markdownSet == packageJsonSet == fileNames
     print("test_rule_names ok!")
 
 

@@ -1,4 +1,3 @@
-import * as vscode from 'vscode';
 import isInComment from './isInComment';
 
 const alignLikeEnvs = [
@@ -10,7 +9,11 @@ const alignLikeEnvs = [
     // ignore `eqnarray` because we have LLEqnarray
 ];
 
-export default function enumAlignEnvs(doc: vscode.TextDocument, txt: string): [number, number][] {
+export default function enumAlignEnvs(
+    txt: string,
+    computeLinePos: (index: number) => { line: number; character: number },
+    onError: (errorMessage: string) => void
+): [number, number][] {
     // Extract all \begin{align} and \end{align} commands
 
     const regexAndDeltas = [];
@@ -47,10 +50,11 @@ export default function enumAlignEnvs(doc: vscode.TextDocument, txt: string): [n
         }
 
     if (isMatched !== -1 || stack.length !== 0) {
-        const errorPos = isMatched !== -1 ? doc.positionAt(isMatched) : doc.positionAt(stack[0].index);
-        vscode.window.showErrorMessage(
+        const errorIndex = isMatched !== -1 ? isMatched : stack[0].index;
+        const { line, character } = computeLinePos(errorIndex);
+        onError(
             "Unmatched \\begin{align} and \\end{align} commands" +
-            ` at Line ${errorPos.line + 1}, Character ${errorPos.character + 1}. ` +
+            ` at Line ${line + 1}, Character ${character + 1}. ` +
             "Are the commands properly paired?"
         );
         return [];

@@ -10,7 +10,7 @@ import toggleLinting from './commands/toggleLinting';
 import showCommands from './commands/showCommands';
 import { extensionDisplayName } from './util/constants';
 import getEditor from './util/getEditor';
-import detailsFoldingRangeProvider from './util/detailsFoldingRangeProvider';
+import detailsFoldingRangeProvider from './commands/detailsFoldingRangeProvider';
 
 export function activate(context: vscode.ExtensionContext) {
 	console.log('"latexlint" is now activated.');

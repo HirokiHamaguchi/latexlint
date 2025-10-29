@@ -147,15 +147,19 @@ export function Content() {
             <VStack gap={8} align="stretch">
                 <Box textAlign="center" as="header">
                     <HStack justify="center" align="center" mb={4}>
-                        <Image
-                            src="https://github.com/HirokiHamaguchi/latexlint/blob/master/images/lintIconLight.svg?raw=true"
-                            alt="LaTeX Lint Icon"
-                            boxSize="1.8em"
-                            mr={2}
-                        />
-                        <Heading as="h1" size="2xl" color="gray.700">
-                            LaTeX Lint - Online LaTeX Linter
-                        </Heading>
+                        <Link href={import.meta.env.BASE_URL} _hover={{ textDecoration: 'none' }}>
+                            <HStack align="center">
+                                <Image
+                                    src="https://github.com/HirokiHamaguchi/latexlint/blob/master/images/lintIconLight.svg?raw=true"
+                                    alt="LaTeX Lint Icon"
+                                    boxSize="1.8em"
+                                    mr={2}
+                                />
+                                <Heading as="h1" size="2xl" color="gray.700" _hover={{ color: 'blue.600' }} transition="color 0.2s">
+                                    LaTeX Lint - Online LaTeX Linter
+                                </Heading>
+                            </HStack>
+                        </Link>
                     </HStack>
                     <Text fontSize="lg" color="gray.600" mb={4}>
                         Check your LaTeX code for common issues and style problems

@@ -10,6 +10,10 @@ All notable changes to the "latexlint" extension will be documented in this file
 - Replace Dollars (at Other folder).
 - et. al. is incorrect. Use `\emph{et al.}` instead.
 
+## 1.5.14 - 2025-10-??
+
+- Refactor
+
 ## 1.5.13 - 2025-10-26
 
 - Improve `addRule` to show the error message.

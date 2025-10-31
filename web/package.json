@@ -14,8 +14,10 @@
     "@chakra-ui/react": "^3.27.1",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@monaco-editor/react": "^4.7.0",
     "@types/vscode": "^1.105.0",
     "framer-motion": "^12.23.24",
+    "monaco-editor": "^0.54.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },

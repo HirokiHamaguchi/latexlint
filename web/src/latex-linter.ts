@@ -1,18 +1,7 @@
 import * as vscode from './vscode-mock';
 import { alignRules, standardRules } from '@latexlint/util/rules';
 import enumAlignEnvs from '@latexlint/util/enumAlignEnvs';
-
-// Simplified diagnostic interface for web version
-export interface WebDiagnostic {
-    range: {
-        start: { line: number; character: number };
-        end: { line: number; character: number };
-    };
-    message: string;
-    severity: 'error' | 'warning' | 'info';
-    source: string;
-    code?: string;
-}
+import type * as monaco from 'monaco-editor';
 
 function createDocument(text: string): vscode.TextDocument {
     // Use the existing createMockTextDocument from vscode-mock
@@ -20,30 +9,33 @@ function createDocument(text: string): vscode.TextDocument {
     return vscode.createMockTextDocument(text, uri);
 }
 
-function convertDiagnostic(diag: import('vscode').Diagnostic): WebDiagnostic {
-    let severity: 'error' | 'warning' | 'info' = 'info';
+function convertToMonacoMarker(diag: import('vscode').Diagnostic): monaco.editor.IMarkerData {
+    // Convert VS Code DiagnosticSeverity to Monaco MarkerSeverity
+    // VS Code: Error=0, Warning=1, Information=2, Hint=3
+    // Monaco: Hint=1, Info=2, Warning=4, Error=8
+    let severity: monaco.MarkerSeverity;
     switch (diag.severity) {
-        case 0: severity = 'error'; break;
-        case 1: severity = 'warning'; break;
-        case 2:
-        case 3:
-        default: severity = 'info'; break;
+        case 0: severity = 8; break; // Error
+        case 1: severity = 4; break; // Warning
+        case 2: severity = 2; break; // Information
+        case 3: severity = 1; break; // Hint
+        default: severity = 2; break; // Default to Info
     }
 
     return {
-        range: {
-            start: { line: diag.range.start.line, character: diag.range.start.character },
-            end: { line: diag.range.end.line, character: diag.range.end.character }
-        },
+        startLineNumber: diag.range.start.line + 1, // Monaco uses 1-based line numbers
+        startColumn: diag.range.start.character + 1, // Monaco uses 1-based column numbers
+        endLineNumber: diag.range.end.line + 1,
+        endColumn: diag.range.end.character + 1,
         message: diag.message,
         severity: severity,
         source: diag.source || 'latexlint',
-        code: typeof diag.code === 'string' || typeof diag.code === 'number' ? diag.code.toString() : undefined
+        code: (diag.code as { value: string }).value || '',
     };
 }
 
 // Main lint function for web version
-export function lintLatex(text: string, disabledRules: string[] = []): WebDiagnostic[] {
+export function lintLatex(text: string, disabledRules: string[] = []): monaco.editor.IMarkerData[] {
     const doc = createDocument(text);
     const txt = text;
     const alignLikeEnvs = enumAlignEnvs(txt, doc.positionAt, console.warn);
@@ -80,5 +72,5 @@ export function lintLatex(text: string, disabledRules: string[] = []): WebDiagno
 
     console.log(`Linting took ${(t1 - t0).toFixed(2)} ms`);
 
-    return diagnostics.map(convertDiagnostic);
+    return diagnostics.map(convertToMonacoMarker);
 }

@@ -14,19 +14,28 @@ const __dirname = path.dirname(__filename);
 
 const sitemapPath = path.join(__dirname, '../public/sitemap.xml');
 
-// Get current date in ISO format (YYYY-MM-DD)
-const currentDate = new Date().toISOString().split('T')[0];
+try {
+  // Get current date in ISO format (YYYY-MM-DD)
+  const currentDate = new Date().toISOString().split('T')[0];
 
-// Read the sitemap file
-let sitemap = fs.readFileSync(sitemapPath, 'utf8');
+  // Read the sitemap file
+  if (!fs.existsSync(sitemapPath)) {
+    throw new Error(`Sitemap file not found at ${sitemapPath}`);
+  }
 
-// Update the lastmod date
-sitemap = sitemap.replace(
-  /<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/g,
-  `<lastmod>${currentDate}</lastmod>`
-);
+  let sitemap = fs.readFileSync(sitemapPath, 'utf8');
 
-// Write back to file
-fs.writeFileSync(sitemapPath, sitemap, 'utf8');
+  // Update the lastmod date
+  sitemap = sitemap.replace(
+    /<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/g,
+    `<lastmod>${currentDate}</lastmod>`
+  );
 
-console.log(`✓ Updated sitemap.xml lastmod to ${currentDate}`);
+  // Write back to file
+  fs.writeFileSync(sitemapPath, sitemap, 'utf8');
+
+  console.log(`✓ Updated sitemap.xml lastmod to ${currentDate}`);
+} catch (error) {
+  console.error(`✗ Failed to update sitemap.xml: ${error.message}`);
+  process.exit(1);
+}

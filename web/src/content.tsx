@@ -156,7 +156,6 @@ export function Content() {
                             value={text}
                             onChange={handleTextChange}
                             diagnostics={diagnostics}
-                            minHeight="500px"
                         />
                     </VStack>
                 </Box>

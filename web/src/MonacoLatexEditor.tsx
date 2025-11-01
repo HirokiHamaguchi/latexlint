@@ -10,7 +10,7 @@ interface MonacoLatexEditorProps {
     minHeight?: string;
 }
 
-export function MonacoLatexEditor({ value, onChange, diagnostics, minHeight = '400px' }: MonacoLatexEditorProps) {
+export function MonacoLatexEditor({ value, onChange, diagnostics }: MonacoLatexEditorProps) {
     const editorRef = useRef<Monaco.editor.IStandaloneCodeEditor | null>(null);
     const monacoRef = useRef<typeof Monaco | null>(null);
 
@@ -89,34 +89,30 @@ export function MonacoLatexEditor({ value, onChange, diagnostics, minHeight = '4
         };
     }, [diagnostics]);
 
+    const minHeight = "80vh";
+
     return (
         <Box
+            height={minHeight}
             borderWidth="1px"
             borderColor="gray.300"
-            borderRadius="md"
-            overflow="hidden"
-            minH={minHeight}
             _focusWithin={{
                 borderColor: "blue.400",
                 boxShadow: "0 0 0 2px rgba(66, 153, 225, 0.2)"
             }}
         >
             <Editor
-                height={minHeight}
                 language="latex"
                 value={value}
                 onChange={handleEditorChange}
                 onMount={handleEditorDidMount}
-                theme="vs"
                 options={{
                     minimap: { enabled: false },
                     scrollBeyondLastLine: false,
                     fontSize: 14,
                     lineNumbers: 'on',
-                    wordWrap: 'on',
                     automaticLayout: true,
                     tabSize: 2,
-                    insertSpaces: true,
                 }}
             />
         </Box>

@@ -50,7 +50,7 @@ async function getTokenizer(): Promise<Tokenizer> {
         import("../kuromoji/kuromoji.js").then((module) => {
             const kuromoji = (module.default || module) as KuromojiStatic;
             kuromoji.builder({
-                dicPath: "/dict/",
+                dicPath: "../kuromoji/dict/",
             }).build((err: Error | null, tokenizer: Tokenizer) => {
                 if (err) {
                     reject(err);

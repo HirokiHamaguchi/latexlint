@@ -1,0 +1,33 @@
+[submodule "submodules/textlint-rule-ja-overlooked-typo"]
+	path = submodules/textlint-rule-ja-overlooked-typo
+	url = https://github.com/GunseiKPaseri/textlint-rule-ja-overlooked-typo.git
+[submodule "submodules/textlint-rule-perfer-tari-tari"]
+	path = submodules/textlint-rule-perfer-tari-tari
+	url = https://github.com/textlint-ja/textlint-rule-prefer-tari-tari.git
+[submodule "submodules/book-corpus"]
+	path = submodules/book-corpus
+	url = https://github.com/textlint-ja/technological-book-corpus-ja.git
+[submodule "submodules/no-orthographic-variants"]
+	path = submodules/no-orthographic-variants
+	url = https://github.com/textlint-ja/textlint-rule-ja-no-orthographic-variants.git
+[submodule "submodules/no-double-negative"]
+	path = submodules/no-double-negative
+	url = https://github.com/textlint-ja/textlint-rule-no-double-negative-ja.git
+[submodule "submodules/no-doubled-joshi"]
+	path = submodules/no-doubled-joshi
+	url = https://github.com/textlint-ja/textlint-rule-no-doubled-joshi.git
+[submodule "submodules/no-dropping-the-ra"]
+	path = submodules/no-dropping-the-ra
+	url = https://github.com/textlint-ja/textlint-rule-no-dropping-the-ra.git
+[submodule "submodules/no-successive-word"]
+	path = submodules/no-successive-word
+	url = https://github.com/textlint-ja/textlint-rule-ja-no-successive-word.git
+[submodule "submodules/no-abusage"]
+	path = submodules/no-abusage
+	url = https://github.com/textlint-ja/textlint-rule-ja-no-abusage.git
+[submodule "submodules/no-redundant-expression"]
+	path = submodules/no-redundant-expression
+	url = https://github.com/textlint-ja/textlint-rule-ja-no-redundant-expression.git
+[submodule "submodules/sentence-length"]
+	path = submodules/sentence-length
+	url = https://github.com/textlint-rule/textlint-rule-sentence-length.git

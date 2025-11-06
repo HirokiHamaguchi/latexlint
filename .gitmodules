@@ -31,3 +31,6 @@
 [submodule "submodules/sentence-length"]
 	path = submodules/sentence-length
 	url = https://github.com/textlint-rule/textlint-rule-sentence-length.git
+[submodule "submodules/kuromoji.js"]
+	path = submodules/kuromoji.js
+	url = https://github.com/takuyaa/kuromoji.js.git

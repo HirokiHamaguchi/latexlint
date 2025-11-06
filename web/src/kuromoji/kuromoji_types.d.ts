@@ -1,6 +1,4 @@
-// Type definitions for kuromoji.js - export only
-
-export interface KuromojiToken {
+interface KuromojiToken {
     word_id: number;
     word_type: "KNOWN" | "UNKNOWN";
     surface_form: string;
@@ -15,14 +13,12 @@ export interface KuromojiToken {
     pronunciation: string;
 }
 
-export interface Tokenizer {
+interface Tokenizer {
     tokenize(text: string): KuromojiToken[];
 }
 
-export interface Builder {
-    build(callback: (err: Error | null, tokenizer: Tokenizer) => void): void;
-}
-
-export interface KuromojiStatic {
-    builder(options: { dicPath: string }): Builder;
-}
+declare const kuromoji: {
+    builder(options: { dicPath: string }): {
+        build(callback: (err: Error | null, tokenizer: Tokenizer) => void): void;
+    };
+};

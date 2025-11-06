@@ -1,4 +1,4 @@
-import type { Tokenizer, KuromojiStatic } from "../kuromoji/kuromoji.d.ts";
+import "../kuromoji/kuromoji_types.d.ts";
 
 export interface Token {
     word_id: number;                // word_id: 509800,          // 辞書内での単語ID
@@ -13,9 +13,9 @@ export interface Token {
     basic_form: string;             // basic_form: '黒文字',       // 基本形
     reading: string;                // reading: 'クロモジ',        // 読み
     pronunciation: string;          // pronunciation: 'クロモジ'   // 発音
-    word_position: number;          // word_position: 1,         // 単語の開始位置
 
     // extended
+    word_position: number;          // word_position: 1,         // 単語の開始位置
     range: [number, number]; // [開始位置, 終了位置] (終了位置は含まない)
 }
 
@@ -37,29 +37,21 @@ let tokenizerPromise: Promise<Tokenizer> | null = null;
  * kuromojiのtokenizerを取得（初回のみビルド、以降はキャッシュを使用）
  */
 async function getTokenizer(): Promise<Tokenizer> {
-    if (tokenizerCache) {
-        return tokenizerCache;
-    }
-
-    if (tokenizerPromise) {
-        return tokenizerPromise;
-    }
+    if (tokenizerCache) return tokenizerCache;
+    if (tokenizerPromise) return tokenizerPromise;
 
     tokenizerPromise = new Promise((resolve, reject) => {
-        // web/src/kuromojiのkuromoji.jsを使用
-        import("../kuromoji/kuromoji.js").then((module) => {
-            const kuromoji = (module.default || module) as KuromojiStatic;
-            kuromoji.builder({
-                dicPath: "../kuromoji/dict/",
-            }).build((err: Error | null, tokenizer: Tokenizer) => {
-                if (err) {
-                    reject(err);
-                    return;
-                }
-                tokenizerCache = tokenizer;
-                resolve(tokenizer);
-            });
-        }).catch(reject);
+        const dicPath = `/latexlint/dict`;
+        kuromoji.builder({
+            dicPath: dicPath,
+        }).build((err: Error | null, tokenizer: Tokenizer) => {
+            if (err) {
+                reject(err);
+                return;
+            }
+            tokenizerCache = tokenizer;
+            resolve(tokenizer);
+        });
     });
 
     return tokenizerPromise;
@@ -84,22 +76,12 @@ export async function parseSentence(text: string): Promise<Token[][]> {
             const start = position;
             const end = start + kt.surface_form.length;
             position = end;
-            tokens.push({
-                word_id: kt.word_id,
-                word_type: kt.word_type,
-                surface_form: kt.surface_form,
-                pos: kt.pos,
-                pos_detail_1: kt.pos_detail_1,
-                pos_detail_2: kt.pos_detail_2,
-                pos_detail_3: kt.pos_detail_3,
-                conjugated_type: kt.conjugated_type,
-                conjugated_form: kt.conjugated_form,
-                basic_form: kt.basic_form,
-                reading: kt.reading,
-                pronunciation: kt.pronunciation,
+            const token = {
+                ...kt,
                 word_position: start + 1,
                 range: [start, end],
-            });
+            } as Token;
+            tokens.push(token);
         }
         result.push(tokens);
     }

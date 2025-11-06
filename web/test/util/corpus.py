@@ -3,6 +3,10 @@ import os
 import re
 from pathlib import Path
 
+os.chdir(Path(__file__).parent.parent.parent.parent)
+print(f"Current working directory: {os.getcwd()}")
+assert os.getcwd().endswith("latexlint")
+
 
 def read_corpus(corpus_dir):
     assert os.path.isdir(corpus_dir), f"{corpus_dir} is not a valid directory."
@@ -15,11 +19,12 @@ def read_corpus(corpus_dir):
             print(f"--- {file_path} ---")
             file_paths.append(file_path)
 
-    path = Path(__file__).parent / "japanese_markdown_files.txt"
-    with open(path, "w", encoding="utf-8") as output_file:
+    txt_path = Path(__file__).parent / "japanese_markdown_files.txt"
+    with open(txt_path, "w", encoding="utf-8") as output_file:
         for path in file_paths:
             output_file.write(f"{path}\n")
 
 
 if __name__ == "__main__":
-    read_corpus("submodules/book-corpus")
+    # read_corpus("submodules/book-corpus")
+    read_corpus(Path("submodules", "book-corpus"))

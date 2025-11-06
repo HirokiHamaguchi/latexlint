@@ -3,8 +3,9 @@ import { describe, it } from "vitest";
 
 
 describe("checkParse", () => {
-    it("should not detect errors", () => {
+    it("should not detect errors", async () => {
         const text = "これはペンです。";
-        parseSentence(text);
+        const tokens = await parseSentence(text);
+        console.log(tokens);
     });
 });

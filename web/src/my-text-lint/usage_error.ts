@@ -1,5 +1,5 @@
 import type { MyTextLintError } from "./types";
-import _dict from './dict.json';
+import _dict from './my_vocabulary.json';
 
 interface UsageEntry {
     no: string;

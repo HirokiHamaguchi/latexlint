@@ -7,19 +7,14 @@ import { checkUsageError } from "./usage_error";
 import { checkNoSuccessiveWord } from "./no_successive_word";
 import type { MyTextLintError } from "./types";
 
-/**
- * 単一のテキストに対してMyTextLintチェックを実行
- */
-export async function MyTextLintSingle(text: string): Promise<string> {
+export async function MyTextLint(text: string): Promise<string> {
     if (!text.trim()) {
         return "";
     }
 
     try {
         // Parse the text into tokens
-        console.log("Parsing text:", text);
         const allTokens = await parseSentence(text);
-        console.log("allTokens:", allTokens);
 
         // Run all MyTextLint checks
         const errors: MyTextLintError[] = [
@@ -38,9 +33,8 @@ export async function MyTextLintSingle(text: string): Promise<string> {
             return "No";
         }
 
-        // Format errors as strings (similar to Python version)
-        const errorMessages = errors.map(error => `${error.message}`);
-        return errorMessages.join("\n");
+        // Format errors as strings
+        return errors.map(error => `${error.message}`).join("\n");
 
     } catch (error) {
         return `エラー: ${error instanceof Error ? error.message : String(error)}`;

@@ -13,11 +13,13 @@ describe("TextLint corpus", () => {
     it("should run without errors", async () => {
         // ファイルリストを読み込む
         const fileListPath = path.resolve("test/util/japanese_markdown_files.txt");
-        const fileNames = fs.readFileSync(fileListPath, "utf-8").split(/\r?\n/).filter(Boolean).slice(0, 10);
+
+        let fileNames = fs.readFileSync(fileListPath, "utf-8").split(/\r?\n/).filter(Boolean);
+        fileNames = fileNames.slice(0, 10); // 最初の10ファイルに制限
 
         for (const fileName of fileNames) {
             console.log(`\n=== ${fileName} ===`);
-            const filePath = path.resolve(fileName);
+            const filePath = path.resolve("../" + fileName);
             if (!fs.existsSync(filePath)) {
                 console.warn(`File not found: ${filePath}`);
                 continue;

@@ -2,6 +2,7 @@ import * as vscode from './vscode-mock';
 import { alignRules, standardRules } from '@latexlint/util/rules';
 import enumAlignEnvs from '@latexlint/util/enumAlignEnvs';
 import type * as monaco from 'monaco-editor';
+import { MyTextLint } from './my-text-lint/main';
 
 function createDocument(text: string): vscode.TextDocument {
     // Use the existing createMockTextDocument from vscode-mock
@@ -71,6 +72,8 @@ export function lintLatex(text: string, disabledRules: string[] = []): monaco.ed
     const t1 = performance.now();
 
     console.log(`Linting took ${(t1 - t0).toFixed(2)} ms`);
+
+    console.log(MyTextLint(txt));
 
     return diagnostics.map(convertToMonacoMarker);
 }

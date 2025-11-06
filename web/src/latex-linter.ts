@@ -4,11 +4,6 @@ import enumAlignEnvs from '@latexlint/util/enumAlignEnvs';
 import type * as monaco from 'monaco-editor';
 import { MyTextLint } from './my-text-lint/main';
 
-function createDocument(text: string): vscode.TextDocument {
-    // Use the existing createMockTextDocument from vscode-mock
-    const uri = vscode.Uri.file('untitled.tex');
-    return vscode.createMockTextDocument(text, uri);
-}
 
 function convertToMonacoMarker(diag: import('vscode').Diagnostic): monaco.editor.IMarkerData {
     // Convert VS Code DiagnosticSeverity to Monaco MarkerSeverity
@@ -30,14 +25,14 @@ function convertToMonacoMarker(diag: import('vscode').Diagnostic): monaco.editor
         endColumn: diag.range.end.character + 1,
         message: diag.message,
         severity: severity,
-        source: diag.source || 'latexlint',
-        code: (diag.code as { value: string }).value || '',
+        source: diag.source,
+        code: String(diag.code)
     };
 }
 
 // Main lint function for web version
-export function lintLatex(text: string, disabledRules: string[] = []): monaco.editor.IMarkerData[] {
-    const doc = createDocument(text);
+export async function lintLatex(text: string): Promise<monaco.editor.IMarkerData[]> {
+    const doc = vscode.createMockTextDocument(text, vscode.Uri.file('untitled.tex'));
     const txt = text;
     const alignLikeEnvs = enumAlignEnvs(txt, doc.positionAt, console.warn);
 
@@ -49,7 +44,6 @@ export function lintLatex(text: string, disabledRules: string[] = []): monaco.ed
 
     // Rules that need align environments
     for (const [ruleName, rule] of Object.entries(alignRules)) {
-        if (disabledRules.includes(ruleName)) continue;
         try {
             const diags = rule(vscodeDoc, txt, alignLikeEnvs);
             diagnostics.push(...diags);
@@ -60,7 +54,6 @@ export function lintLatex(text: string, disabledRules: string[] = []): monaco.ed
 
     // Rules that don't need align environments
     for (const [ruleName, rule] of Object.entries(standardRules)) {
-        if (disabledRules.includes(ruleName)) continue;
         try {
             const diags = rule(vscodeDoc, txt);
             diagnostics.push(...diags);
@@ -69,11 +62,17 @@ export function lintLatex(text: string, disabledRules: string[] = []): monaco.ed
         }
     }
 
+    // MyTextLint checks
+    try {
+        const myTextLintDiags = await MyTextLint(txt, doc);
+        diagnostics.push(...(myTextLintDiags as unknown as import('vscode').Diagnostic[]));
+    } catch (error) {
+        console.warn('MyTextLint failed:', error);
+    }
+
     const t1 = performance.now();
 
     console.log(`Linting took ${(t1 - t0).toFixed(2)} ms`);
-
-    console.log(MyTextLint(txt));
 
     return diagnostics.map(convertToMonacoMarker);
 }

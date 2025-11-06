@@ -1,4 +1,4 @@
-import type { MyTextLintError } from "./types";
+import type { MyTextLintErrorResult } from "./types";
 
 const KANJI_TO_KATAKANA: Record<string, string> = {
     "工": "エ",
@@ -58,8 +58,8 @@ const BUILTIN_ALLOWS = [
 ];
 const MAX_LEN_OF_ALLOW = Math.max(...BUILTIN_ALLOWS.map(x => x.length));
 
-export function checkOverlookedTypo(text: string): MyTextLintError[] {
-    const errors: MyTextLintError[] = [];
+export function checkOverlookedTypo(text: string): MyTextLintErrorResult[] {
+    const errors: MyTextLintErrorResult[] = [];
 
     // カタカナに混じる漢字
     for (const match of text.matchAll(UNNATURAL_KANJI_WITH_KATAKANA)) {
@@ -76,8 +76,10 @@ export function checkOverlookedTypo(text: string): MyTextLintError[] {
 
         if (correct) {
             errors.push({
+                startOffset: match.index!,
+                endOffset: match.index! + wrong.length,
                 message: `漢字の「${wrong}」はカタカナの「${correct}」の誤りの可能性があります`,
-                range: [match.index!, match.index! + wrong.length],
+                code: "overlooked-typo",
             });
         }
     }
@@ -90,9 +92,12 @@ export function checkOverlookedTypo(text: string): MyTextLintError[] {
             if (["ハマ"].includes(prev2)) continue;
         }
         const correct = String.fromCharCode(wrong.charCodeAt(0) + 0x60); // 平仮名→片仮名
+
         errors.push({
+            startOffset: match.index!,
+            endOffset: match.index! + wrong.length,
             message: `ひらがなの「${wrong}」はカタカナの「${correct}」の誤りの可能性があります`,
-            range: [match.index!, match.index! + wrong.length],
+            code: "overlooked-typo",
         });
     }
 
@@ -100,9 +105,12 @@ export function checkOverlookedTypo(text: string): MyTextLintError[] {
     for (const match of text.matchAll(UNNATURAL_KATAKANA_WITH_HIRAGANA)) {
         const wrong = match[0];
         const correct = String.fromCharCode(wrong.charCodeAt(0) - 0x60); // 片仮名→平仮名
+
         errors.push({
+            startOffset: match.index!,
+            endOffset: match.index! + wrong.length,
             message: `カタカナの「${wrong}」はひらがなの「${correct}」の誤りの可能性があります`,
-            range: [match.index!, match.index! + wrong.length],
+            code: "overlooked-typo",
         });
     }
 

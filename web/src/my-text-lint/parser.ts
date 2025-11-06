@@ -16,18 +16,8 @@ export interface Token {
 
     // extended
     word_position: number;          // word_position: 1,         // 単語の開始位置
-    range: [number, number]; // [開始位置, 終了位置] (終了位置は含まない)
+    range: [number, number];        // [開始位置, 終了位置] (終了位置は含まない)
 }
-
-function splitSentences(markdown: string): string[] {
-    // 「。」や「．」などの句点、感嘆符、疑問符、改行の直後を検出
-    // 改行の直後で、次の行がリスト（* または - で始まる）である場合を検出
-    const sentences = markdown.split(/(?<=[。．.！!？?\n])|(?=\n(?=(?:\s*[*-]\s)))/u);
-    const sumSentences = sentences.reduce((acc, s) => acc + s.length, 0);
-    console.assert(markdown.length === sumSentences, `splitSentences: length mismatch: ${markdown.length} vs ${sumSentences}`);
-    return sentences;
-}
-
 
 // kuromojiのtokenizerをキャッシュするための変数
 let tokenizerCache: Tokenizer | null = null;
@@ -57,34 +47,24 @@ async function getTokenizer(): Promise<Tokenizer> {
     return tokenizerPromise;
 }
 
-export async function parseSentence(text: string): Promise<Token[][]> {
-    const sentences = splitSentences(text);
-    const nonEmptySentences = sentences.filter(sent => sent);
-
-    if (nonEmptySentences.length === 0) {
-        return [];
-    }
+export async function parseSentence(text: string): Promise<Token[]> {
+    if (!text) return [];
 
     const tokenizer = await getTokenizer();
-    const result: Token[][] = [];
+    const kuromojiTokens = tokenizer.tokenize(text);
 
-    for (const sentence of sentences) {
-        const tokens: Token[] = [];
-        const kuromojiTokens = tokenizer.tokenize(sentence);
-        let position = 0;
-        for (const kt of kuromojiTokens) {
-            const start = position;
-            const end = start + kt.surface_form.length;
-            position = end;
-            const token = {
-                ...kt,
-                word_position: start + 1,
-                range: [start, end],
-            } as Token;
-            tokens.push(token);
-        }
-        result.push(tokens);
+    const tokens: Token[] = [];
+    let position = 0;
+
+    for (let i = 0; i < kuromojiTokens.length; i++) {
+        const len = kuromojiTokens[i].surface_form.length;
+        tokens.push({
+            ...kuromojiTokens[i],
+            word_position: position + 1,
+            range: [position, position + len],
+        });
+        position += len;
     }
 
-    return result;
+    return tokens;
 }

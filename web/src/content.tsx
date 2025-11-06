@@ -15,23 +15,27 @@ import {
 import { lintLatex } from './latex-linter';
 import type * as Monaco from 'monaco-editor';
 import sampleText from '../sample/sample_before.tex?raw';
+import japaneseText from '../sample/japanese_text.txt?raw';
 import { MonacoLatexEditor } from './MonacoLatexEditor';
 
+// Insert japanese_text.txt before \end{document}
+const initialText = sampleText.replace(/\\end\{document\}/, `${japaneseText}\n\n\\end{document}`);
+
 export function Content() {
-    const [text, setText] = useState(sampleText);
+    const [text, setText] = useState(initialText);
     const [diagnostics, setDiagnostics] = useState<Monaco.editor.IMarkerData[]>([]);
     const [isDialogOpen, setIsDialogOpen] = useState(false);
     const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-    const runLint = (inputText: string) => {
+    const runLint = async (inputText: string) => {
         if (!inputText.trim()) {
             setDiagnostics([]);
             return;
         }
 
-        setTimeout(() => {
+        setTimeout(async () => {
             try {
-                const results = lintLatex(inputText);
+                const results = await lintLatex(inputText);
                 setDiagnostics(results);
             } catch (error) {
                 console.error('Linting error:', error);
@@ -52,12 +56,12 @@ export function Content() {
 
     // Run lint on initial load
     useEffect(() => {
-        runLint(sampleText);
+        runLint(initialText);
         // Cleanup timeout on unmount
         return () => {
             if (timeoutRef.current) clearTimeout(timeoutRef.current);
         };
-    }, []); // Run once on mount with sampleText
+    }, []); // Run once on mount with initialText
 
     const getDiagnosticsSummary = () => {
         if (diagnostics.length === 0) {

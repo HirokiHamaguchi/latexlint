@@ -1,5 +1,5 @@
 import type { Token } from "./parser";
-import type { MyTextLintError } from "./types";
+import type { MyTextLintErrorResult } from "./types";
 
 /**
  * Check if a string is onomatopoeia (katakana only)
@@ -18,31 +18,31 @@ function isNumberToken(token: Token): boolean {
 }
 
 export function checkNoSuccessiveWord(
-    allTokens: Token[][],
-): MyTextLintError[] {
-    const results: MyTextLintError[] = [];
+    allTokens: Token[]
+): MyTextLintErrorResult[] {
+    const results: MyTextLintErrorResult[] = [];
 
-    for (const tokens of allTokens) {
-        if (tokens.length <= 1) continue;
+    if (allTokens.length <= 1) return results;
 
-        for (let i = 1; i < tokens.length; i++) {
-            const prevToken = tokens[i - 1];
-            const currToken = tokens[i];
-            const prevWord = prevToken.surface_form;
-            const currWord = currToken.surface_form;
-            if (prevWord !== currWord) continue;
+    for (let i = 1; i < allTokens.length; i++) {
+        const prevToken = allTokens[i - 1];
+        const currToken = allTokens[i];
+        const prevWord = prevToken.surface_form;
+        const currWord = currToken.surface_form;
+        if (prevWord !== currWord) continue;
 
-            // Skip if both tokens are numbers (漢数字)
-            // 例) 値は"九九"です。
-            if (isNumberToken(prevToken) && isNumberToken(currToken)) continue;
-            // Skip if both tokens are onomatopoeia (オノマトペ)
-            if (isOnomatopoeia(prevWord) && isOnomatopoeia(currWord)) continue;
+        // Skip if both tokens are numbers (漢数字)
+        // 例) 値は"九九"です。
+        if (isNumberToken(prevToken) && isNumberToken(currToken)) continue;
+        // Skip if both tokens are onomatopoeia (オノマトペ)
+        if (isOnomatopoeia(prevWord) && isOnomatopoeia(currWord)) continue;
 
-            results.push({
-                message: `"${currWord}" が連続して2回使われています。`,
-                range: currToken.range,
-            });
-        }
+        results.push({
+            startOffset: currToken.range[0],
+            endOffset: currToken.range[1],
+            message: `"${currWord}" が連続して2回使われています。`,
+            code: "no-successive-word",
+        });
     }
 
     return results;

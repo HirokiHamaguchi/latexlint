@@ -5,19 +5,20 @@ import { checkOverlookedTypo } from "./overlooked_typo";
 import { checkTariTari } from "./tari_tari";
 import { checkUsageError } from "./usage_error";
 import { checkNoSuccessiveWord } from "./no_successive_word";
-import type { MyTextLintError } from "./types";
+import type { Diagnostic, MyTextLintErrorResult } from "./types";
+import { DiagnosticSeverity, Range } from "../vscode-mock";
+import type { TextDocument } from "../vscode-mock";
 
-export async function MyTextLint(text: string): Promise<string> {
-    if (!text.trim()) {
-        return "";
-    }
+
+export async function MyTextLint(text: string, doc: TextDocument): Promise<Diagnostic[]> {
+    if (!text.trim()) return [];
 
     try {
         // Parse the text into tokens
         const allTokens = await parseSentence(text);
 
-        // Run all MyTextLint checks
-        const errors: MyTextLintError[] = [
+        // Run all MyTextLint checks and collect error results
+        const errorResults: MyTextLintErrorResult[] = [
             ...checkNoDroppingI(allTokens),
             ...checkNoDroppingRa(allTokens),
             ...checkTariTari(allTokens),
@@ -26,18 +27,29 @@ export async function MyTextLint(text: string): Promise<string> {
             ...checkUsageError(text)
         ];
 
-        // Sort errors by position
-        errors.sort((a, b) => a.range[0] - b.range[0]);
+        // Convert to Diagnostics
+        const diagnostics = errorResults.map(error => {
+            return {
+                range: new Range(doc.positionAt(error.startOffset), doc.positionAt(error.endOffset)),
+                message: error.message,
+                severity: DiagnosticSeverity.Warning,
+                source: "My Text Lint",
+                code: error.code,
+            };
+        });
 
-        if (errors.length === 0) {
-            return "No";
-        }
+        // Sort diagnostics by position
+        diagnostics.sort((a, b) => {
+            const lineCompare = a.range.start.line - b.range.start.line;
+            if (lineCompare !== 0) return lineCompare;
+            return a.range.start.character - b.range.start.character;
+        });
 
-        // Format errors as strings
-        return errors.map(error => `${error.message}`).join("\n");
+        return diagnostics;
 
     } catch (error) {
-        return `エラー: ${error instanceof Error ? error.message : String(error)}`;
+        console.error('MyTextLint error:', error);
+        return [];
     }
 }
 

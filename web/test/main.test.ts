@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { parseSentence, Token } from "../src/my-text-lint/parser";
-import { MyTextLintError } from "../src/my-text-lint/types";
+import type { MyTextLintErrorResult } from "../src/my-text-lint/types";
 import { checkNoDroppingI } from "../src/my-text-lint/no_dropping_i";
 import { checkNoDroppingRa } from "../src/my-text-lint/no_dropping_ra";
 import { checkOverlookedTypo } from "../src/my-text-lint/overlooked_typo";
@@ -24,7 +24,7 @@ function loadTestData(fileName: string): TestData {
 function runCommonTests(
   testName: string,
   jsonFileName: string,
-  checkFunction: (tokens: Token[][]) => MyTextLintError[]
+  checkFunction: (tokens: Token[]) => MyTextLintErrorResult[]
 ) {
   const testData = loadTestData(jsonFileName);
 
@@ -50,7 +50,7 @@ function runCommonTests(
 function runCommonTestsSync(
   testName: string,
   jsonFileName: string,
-  checkFunction: (text: string) => MyTextLintError[]
+  checkFunction: (text: string) => MyTextLintErrorResult[]
 ) {
   const testData = loadTestData(jsonFileName);
 

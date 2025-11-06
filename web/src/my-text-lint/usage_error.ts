@@ -1,4 +1,4 @@
-import type { MyTextLintError } from "./types";
+import type { MyTextLintErrorResult } from "./types";
 import _dict from './my_vocabulary.json';
 
 interface UsageEntry {
@@ -18,7 +18,7 @@ function escapeRegexExceptNum(str: string): string {
 function naiveCheck(
     text: string,
     entry: UsageEntry,
-    errors: MyTextLintError[],
+    errors: MyTextLintErrorResult[],
     matchedRanges: [number, number][]
 ): void {
     let searchIndex = 0;
@@ -28,8 +28,10 @@ function naiveCheck(
         const endIndex = index + entry.no.length;
         if (!isOverlapping(index, endIndex, matchedRanges)) {
             errors.push({
+                startOffset: index,
+                endOffset: endIndex,
                 message: `「${entry.no}」は一般に誤用とされており、「${entry.yes}」が正しい表現かも知れません。${entry.memo ? entry.memo.join('') : ''}`,
-                range: [index, endIndex],
+                code: "usage-error",
             });
             matchedRanges.push([index, endIndex]);
         }
@@ -40,7 +42,7 @@ function naiveCheck(
 function regexCheck(
     text: string,
     entry: UsageEntry,
-    errors: MyTextLintError[],
+    errors: MyTextLintErrorResult[],
     matchedRanges: [number, number][]
 ): void {
     const escaped = escapeRegexExceptNum(entry.no);
@@ -51,8 +53,10 @@ function regexCheck(
         const endIndex = index + match[0].length;
         if (!isOverlapping(index, endIndex, matchedRanges)) {
             errors.push({
+                startOffset: index,
+                endOffset: endIndex,
                 message: `「${match[0]}」は一般に誤用とされており、「${entry.yes.replace('$num', match[1])}」が正しい表現かも知れません。${entry.memo ? entry.memo.join('') : ''}`,
-                range: [index, endIndex],
+                code: "usage-error",
             });
             matchedRanges.push([index, endIndex]);
         }
@@ -60,9 +64,9 @@ function regexCheck(
 }
 
 
-export function checkUsageError(text: string): MyTextLintError[] {
+export function checkUsageError(text: string): MyTextLintErrorResult[] {
     const dict = _dict.entries as UsageEntry[];
-    const errors: MyTextLintError[] = [];
+    const errors: MyTextLintErrorResult[] = [];
     const matchedRanges: [number, number][] = [];
 
     for (const entry of dict) {
@@ -73,8 +77,8 @@ export function checkUsageError(text: string): MyTextLintError[] {
         }
     }
 
-    // Sort errors by position
-    errors.sort((a, b) => a.range[0] - b.range[0]);
+    // Sort errors by position (already done in main.ts, but keep for standalone use)
+    errors.sort((a, b) => a.startOffset - b.startOffset);
 
     return errors;
 }

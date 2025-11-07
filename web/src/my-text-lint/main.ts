@@ -29,10 +29,15 @@ export async function MyTextLint(text: string, doc: TextDocument): Promise<Diagn
 
         // Convert to Diagnostics
         const diagnostics = errorResults.map(error => {
+            // Use Information severity for overlooked-typo due to false positives
+            const severity = error.code === "overlooked-typo"
+                ? DiagnosticSeverity.Information
+                : DiagnosticSeverity.Warning;
+
             return {
                 range: new Range(doc.positionAt(error.startOffset), doc.positionAt(error.endOffset)),
                 message: error.message,
-                severity: DiagnosticSeverity.Warning,
+                severity: severity,
                 source: "My Text Lint",
                 code: error.code,
             };

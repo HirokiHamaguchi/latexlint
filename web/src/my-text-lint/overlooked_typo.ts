@@ -22,9 +22,9 @@ const KATAKANA_LIKE_HIRAGANA = "ヘベペリ";
 
 // カタカナに混じる漢字
 const UNNATURAL_KANJI_WITH_KATAKANA = new RegExp(
-    `(?:^[${KANJI_LIKE_KATAKANA}](?=[${KATAKANA}])|` +
+    `([${KANJI_LIKE_KATAKANA}](?=[${KATAKANA}])|` +
     `(?<=[${KATAKANA}])[${KANJI_LIKE_KATAKANA}](?=[${KATAKANA}])|` +
-    `(?<=[${KATAKANA}])[${KANJI_LIKE_KATAKANA}]$)`,
+    `(?<=[${KATAKANA}])[${KANJI_LIKE_KATAKANA}])`,
     "g"
 );
 
@@ -69,9 +69,13 @@ export function checkOverlookedTypo(text: string): MyTextLintErrorResult[] {
         if (["二", "三", "八"].includes(wrong)) {
             const prev3 = text.slice(Math.max(0, match.index! - 3), match.index);
             if (prev3 === "マッハ") continue;
-
+            const prev4 = text.slice(Math.max(0, match.index! - 4), match.index);
+            if (prev4 === "ステップ") continue;
             const nextN = text.slice(match.index! + wrong.length, match.index! + MAX_LEN_OF_ALLOW);
             if (BUILTIN_ALLOWS.some(x => nextN.startsWith(x))) continue;
+        } else if (wrong === "力") {
+            const prev1 = text.slice(Math.max(0, match.index! - 1), match.index);
+            if (prev1 === "入") continue;
         }
 
         if (correct) {

@@ -28,8 +28,24 @@ interface KuromojiStatic {
     builder(options: { dicPath: string }): Builder;
 }
 
-// kuromoji.js uses UMD format and exports the module directly
-const kuromoji = kuromojiModule as unknown as KuromojiStatic;
+// Extend Window interface to include kuromoji
+declare global {
+    interface Window {
+        kuromoji?: KuromojiStatic;
+    }
+}
+
+// kuromoji.js uses UMD format and exports as global window.kuromoji in browser
+// In browser environment, access it via window.kuromoji
+// In test environment with Node.js, use the imported module
+const kuromoji: KuromojiStatic = (() => {
+    // Try to get from window object (browser environment)
+    if (typeof window !== 'undefined' && window.kuromoji) {
+        return window.kuromoji;
+    }
+    // Fallback to module import (test environment)
+    return kuromojiModule as unknown as KuromojiStatic;
+})();
 
 
 export interface Token {

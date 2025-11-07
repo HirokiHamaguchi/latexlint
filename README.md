@@ -519,16 +519,29 @@ Refer to [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 
-We use [MIT License](LICENSE).
+This project consists of multiple components with different licenses:
 
-(The library [to-title-case](https://github.com/gouch/to-title-case/tree/master) is also under MIT License.)
+1. Main Extension (Root Directory)
+   Licensed under the [MIT License](LICENSE).
+   See LICENSE file for details.
+
+   (The library [to-title-case](https://github.com/gouch/to-title-case/tree/master) is also under MIT License.)
+
+2. Web Component (web/ directory)
+   Licensed under the [Apache License 2.0](web/LICENSE).
+   See web/LICENSE file for details.
+
+   The web component includes code from:
+   - textlint (MIT License)
+   - kuromoji.js (Apache License 2.0)
 
 ## Acknowledgement
 
 In some aspects, our extension resembles
 
-* LaTeX package [chktex](https://ctan.org/pkg/chktex)
-* VS Code Extension [Markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
-* VS Code Extension [LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename)
+- LaTeX package [chktex](https://ctan.org/pkg/chktex)
+- VS Code Extension [Markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
+- [textlint](https://github.com/textlint/textlint)
+- VS Code Extension [LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename)
 
 We sincerely appreciate the developers of these tools.

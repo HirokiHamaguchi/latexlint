@@ -1,4 +1,4 @@
-import "../kuromoji/kuromoji_types.d.ts";
+import kuromoji from "../kuromoji/kuromoji.js";
 
 export interface Token {
     word_id: number;                // word_id: 509800,          // 辞書内での単語ID

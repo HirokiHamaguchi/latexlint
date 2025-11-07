@@ -2810,7 +2810,7 @@
                      * `true` will fire the detect `callback` with that result. That means the
                      * result might not be the first item in the original `coll` (in terms of order)
                      * that passes the test.
-                    
+
                      * If order within the original `coll` is important, then look at
                      * [`detectSeries`]{@link module:Collections.detectSeries}.
                      *
@@ -3470,7 +3470,7 @@
                     /**
                      * Calls the asynchronous function `fn` with a callback parameter that allows it
                      * to call itself again, in series, indefinitely.
-                    
+
                      * If an error is passed to the callback then `errback` is called with the
                      * error, and execution stops, otherwise it will never be called.
                      *
@@ -6832,11 +6832,11 @@
                             case 0: var b = this.input, d = this.c, c = this.b, a = this.a, f = b.length, k = p, l = p, m = c.length, r = p; this.d = this.f = 0; d + 1 >= f && n(Error("invalid uncompressed block header: LEN")); k = b[d++] | b[d++] << 8; d + 1 >= f && n(Error("invalid uncompressed block header: NLEN")); l = b[d++] | b[d++] << 8; k === ~l && n(Error("invalid uncompressed block header: length verify")); d + k > b.length && n(Error("input buffer is broken")); switch (this.k) {
                                 case N: for (; a + k > c.length;) {
                                     r =
-                                    m - a; k -= r; if (x) c.set(b.subarray(d, d + r), a), a += r, d += r; else for (; r--;)c[a++] = b[d++]; this.a = a; c = this.e(); a = this.a
+                                        m - a; k -= r; if (x) c.set(b.subarray(d, d + r), a), a += r, d += r; else for (; r--;)c[a++] = b[d++]; this.a = a; c = this.e(); a = this.a
                                 } break; case M: for (; a + k > c.length;)c = this.e({ t: 2 }); break; default: n(Error("invalid inflate mode"))
                             }if (x) c.set(b.subarray(d, d + k), a), a += k, d += k; else for (; k--;)c[a++] = b[d++]; this.c = d; this.a = a; this.b = c; break; case 1: this.l(da, ea); break; case 2: for (var q = P(this, 5) + 257, g = P(this, 5) + 1, h = P(this, 4) + 4, v = new (x ? Uint8Array : Array)(Q.length), s = p, F = p, H = p, w = p, z = p, O = p, I = p, u = p, Z = p, u = 0; u < h; ++u)v[Q[u]] = P(this, 3); if (!x) {
                                 u =
-                                h; for (h = v.length; u < h; ++u)v[Q[u]] = 0
+                                    h; for (h = v.length; u < h; ++u)v[Q[u]] = 0
                             } s = G(v); w = new (x ? Uint8Array : Array)(q + g); u = 0; for (Z = q + g; u < Z;)switch (z = R(this, s), z) { case 16: for (I = 3 + P(this, 2); I--;)w[u++] = O; break; case 17: for (I = 3 + P(this, 3); I--;)w[u++] = 0; O = 0; break; case 18: for (I = 11 + P(this, 7); I--;)w[u++] = 0; O = 0; break; default: O = w[u++] = z }F = x ? G(w.subarray(0, q)) : G(w.slice(0, q)); H = x ? G(w.subarray(q)) : G(w.slice(q)); this.l(F, H); break; default: n(Error("unknown BTYPE: " + e))
                         }
                     } return this.q()

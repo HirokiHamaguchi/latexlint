@@ -433,6 +433,23 @@ export const workspace = {
     },
 };
 
+// Minimal window mock for error messages
+export const window = {
+    showErrorMessage: (message: string): Thenable<string | undefined> => {
+        console.error(message);
+        // In a real web implementation, you might show a modal or notification
+        return Promise.resolve(undefined);
+    },
+    showWarningMessage: (message: string): Thenable<string | undefined> => {
+        console.warn(message);
+        return Promise.resolve(undefined);
+    },
+    showInformationMessage: (message: string): Thenable<string | undefined> => {
+        console.info(message);
+        return Promise.resolve(undefined);
+    },
+};
+
 // Export as default for compatibility
 const vscode = {
     Range,
@@ -441,6 +458,7 @@ const vscode = {
     DiagnosticSeverity,
     EndOfLine,
     workspace,
+    window,
     createMockTextDocument,
 };
 

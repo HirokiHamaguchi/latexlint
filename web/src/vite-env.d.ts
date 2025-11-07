@@ -35,5 +35,5 @@ declare module "*/kuromoji.js" {
     }
 
     const kuromoji: KuromojiStatic;
-    export default kuromoji;
+    export = kuromoji;
 }

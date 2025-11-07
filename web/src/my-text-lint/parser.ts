@@ -1,4 +1,36 @@
-import kuromoji from "../kuromoji/kuromoji.js";
+import * as kuromojiModule from "../kuromoji/kuromoji.js";
+
+interface KuromojiToken {
+    word_id: number;
+    word_type: "KNOWN" | "UNKNOWN";
+    surface_form: string;
+    pos: string;
+    pos_detail_1: string;
+    pos_detail_2: string;
+    pos_detail_3: string;
+    conjugated_type: string;
+    conjugated_form: string;
+    basic_form: string;
+    reading: string;
+    pronunciation: string;
+}
+
+interface Tokenizer {
+    tokenize(text: string): KuromojiToken[];
+}
+
+interface Builder {
+    build(callback: (err: Error | null, tokenizer: Tokenizer) => void): void;
+}
+
+
+interface KuromojiStatic {
+    builder(options: { dicPath: string }): Builder;
+}
+
+// kuromoji.js uses UMD format and exports the module directly
+const kuromoji = kuromojiModule as unknown as KuromojiStatic;
+
 
 export interface Token {
     word_id: number;                // word_id: 509800,          // 辞書内での単語ID

@@ -5,7 +5,7 @@ import path from 'path';
 // kuromoji.jsをグローバル変数としてロード
 import * as kuromojiModule from '../src/kuromoji/kuromoji.js';
 // @ts-expect-error - グローバル変数として設定
-global.kuromoji = kuromojiModule.default || kuromojiModule;
+global.kuromoji = kuromojiModule as unknown;
 
 // テスト環境でXMLHttpRequestをモックして、ローカルファイルシステムから辞書を読み込む
 beforeAll(() => {

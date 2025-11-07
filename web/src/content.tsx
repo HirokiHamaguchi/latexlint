@@ -25,14 +25,17 @@ export function Content() {
     const [text, setText] = useState(initialText);
     const [diagnostics, setDiagnostics] = useState<Monaco.editor.IMarkerData[]>([]);
     const [isDialogOpen, setIsDialogOpen] = useState(false);
+    const [isLinting, setIsLinting] = useState(true); // Initial lint is in progress
     const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     const runLint = async (inputText: string) => {
         if (!inputText.trim()) {
             setDiagnostics([]);
+            setIsLinting(false);
             return;
         }
 
+        setIsLinting(true);
         setTimeout(async () => {
             try {
                 const results = await lintLatex(inputText);
@@ -40,6 +43,8 @@ export function Content() {
             } catch (error) {
                 console.error('Linting error:', error);
                 setDiagnostics([]);
+            } finally {
+                setIsLinting(false);
             }
         }, 100);
     };
@@ -64,6 +69,14 @@ export function Content() {
     }, []); // Run once on mount with initialText
 
     const getDiagnosticsSummary = () => {
+        if (isLinting) {
+            return {
+                base: "🔄 Checking...",
+                message: "(LaTeX Lint is analyzing your code...)",
+                color: "blue.600"
+            };
+        }
+
         if (diagnostics.length === 0) {
             return {
                 base: "✅ No issues found!",

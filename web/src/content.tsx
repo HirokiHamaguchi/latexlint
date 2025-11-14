@@ -30,6 +30,7 @@ export function Content() {
     const [text, setText] = useState(sampleTexBefore);
     const [diagnostics, setDiagnostics] = useState<Monaco.editor.IMarkerData[]>([]);
     const [isAboutOpen, setIsAboutOpen] = useState(false);
+    const [aboutDefaultTab, setAboutDefaultTab] = useState<string>('overview');
     const [isLinting, setIsLinting] = useState(true);
     const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -84,15 +85,17 @@ export function Content() {
             return {
                 base: "🔄 Checking...",
                 message: "(LaTeX Lint is analyzing your code...)",
-                color: "blue.600"
+                color: "blue.600",
+                clickable: false
             };
         }
 
         if (diagnostics.length === 0) {
             return {
                 base: "✅ No issues found!",
-                message: `(Type your ${docType === 'latex' ? 'LaTeX' : 'Markdown'} code below. Errors and warnings will appear inline.)`,
-                color: "green.600"
+                message: "(Errors and warnings will appear inline if any.)",
+                color: "green.600",
+                clickable: false
             };
         }
 
@@ -107,8 +110,9 @@ export function Content() {
 
         return {
             base: parts.join(', '),
-            message: "(Refer to GitHub or VS Code Extension for details.)",
-            color: errorCount > 0 ? "red.600" : warningCount > 0 ? "orange.600" : "blue.600"
+            message: "(Rule details)",
+            color: errorCount > 0 ? "red.600" : warningCount > 0 ? "orange.600" : "blue.600",
+            clickable: true
         };
     };
 
@@ -128,7 +132,7 @@ export function Content() {
                                     mr={2}
                                 />
                                 <Heading as="h1" size="2xl" color="gray.700" _hover={{ color: 'blue.600' }} transition="color 0.2s">
-                                    LaTeX Lint - Online LaTeX Linter
+                                    LaTeX Lint - Online LaTeX Code Checker
                                 </Heading>
                             </HStack>
                         </Link>
@@ -145,7 +149,6 @@ export function Content() {
                                 <Text>About</Text>
                             </HStack>
                         </Button>
-
                         <SegmentGroup.Root
                             value={docType}
                             onValueChange={(e) => handleDocTypeChange(e.value as DocType)}
@@ -171,7 +174,22 @@ export function Content() {
                         </Heading>
                         <Text fontSize="sm" fontWeight="medium">
                             <Text as="span" color={summary.color}>{summary.base}</Text>{' '}
-                            <Text as="span" color="gray.600">{summary.message}</Text>
+                            {summary.clickable ? (
+                                <Link
+                                    color="blue.500"
+                                    textDecoration="underline"
+                                    cursor="pointer"
+                                    onClick={() => {
+                                        setAboutDefaultTab('readme');
+                                        setIsAboutOpen(true);
+                                    }}
+                                    _hover={{ color: 'blue.600' }}
+                                >
+                                    {summary.message}
+                                </Link>
+                            ) : (
+                                <Text as="span" color="gray.600">{summary.message}</Text>
+                            )}
                         </Text>
                         <MonacoLatexEditor
                             value={text}
@@ -182,7 +200,7 @@ export function Content() {
                 </Box>
             </VStack>
 
-            <AboutModal isOpen={isAboutOpen} onClose={() => setIsAboutOpen(false)} />
+            <AboutModal isOpen={isAboutOpen} onClose={() => setIsAboutOpen(false)} defaultTab={aboutDefaultTab} />
         </Container>
     );
 }

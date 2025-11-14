@@ -21,6 +21,7 @@ import vocabularyData from './my-text-lint/my_vocabulary.json';
 interface AboutModalProps {
     isOpen: boolean;
     onClose: () => void;
+    defaultTab?: string;
 }
 
 const BASE_URL = import.meta.env.BASE_URL;
@@ -50,7 +51,7 @@ const SampleImage = ({ src, alt, color }: { src: string; alt: string; color: str
     </VStack>
 );
 
-export function AboutModal({ isOpen, onClose }: AboutModalProps) {
+export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutModalProps) {
     return (
         <Dialog.Root open={isOpen} onOpenChange={(e) => !e.open && onClose()} size="xl">
             <Dialog.Backdrop />
@@ -63,7 +64,7 @@ export function AboutModal({ isOpen, onClose }: AboutModalProps) {
                         <Dialog.CloseTrigger />
                     </Dialog.Header>
                     <Dialog.Body overflowY="auto">
-                        <Tabs.Root defaultValue="overview" variant="enclosed">
+                        <Tabs.Root defaultValue={defaultTab} variant="enclosed">
                             <Tabs.List>
                                 <Tabs.Trigger value="overview">Overview</Tabs.Trigger>
                                 <Tabs.Trigger value="readme">README</Tabs.Trigger>
@@ -72,6 +73,13 @@ export function AboutModal({ isOpen, onClose }: AboutModalProps) {
 
                             <Tabs.Content value="overview" pt={4}>
                                 <VStack gap={6} align="stretch">
+                                    <VStack gap={3} align="stretch">
+                                        <Heading size="md">Privacy</Heading>
+                                        <Text fontSize="sm">
+                                            All input is processed entirely in your browser.
+                                            No network requests are made.
+                                        </Text>
+                                    </VStack>
                                     <VStack gap={3} align="stretch">
                                         <Heading size="md">Links</Heading>
                                         <HStack gap={4} flexWrap="wrap">

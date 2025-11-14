@@ -31,8 +31,9 @@ function convertToMonacoMarker(diag: import('vscode').Diagnostic): monaco.editor
 }
 
 // Main lint function for web version
-export async function lintLatex(text: string): Promise<monaco.editor.IMarkerData[]> {
-    const doc = vscode.createMockTextDocument(text, vscode.Uri.file('untitled.tex'));
+export async function lintLatex(text: string, docType: 'latex' | 'markdown' = 'latex'): Promise<monaco.editor.IMarkerData[]> {
+    const ext = docType === 'latex' ? '.tex' : '.md';
+    const doc = vscode.createMockTextDocument(text, vscode.Uri.file(`untitled${ext}`));
     const txt = text;
     const alignLikeEnvs = enumAlignEnvs(txt, doc.positionAt, console.warn);
 

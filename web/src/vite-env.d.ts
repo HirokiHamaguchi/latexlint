@@ -5,6 +5,11 @@ declare module "*.tex?raw" {
     export default content;
 }
 
+declare module "*.md?raw" {
+    const content: string;
+    export default content;
+}
+
 // Type definitions for kuromoji.js
 declare module "*/kuromoji.js" {
     export interface KuromojiToken {

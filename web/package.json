@@ -5,8 +5,9 @@
   "type": "module",
   "license": "Apache-2.0",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "copy-readme": "node scripts/copy-readme.js",
+    "dev": "npm run copy-readme && vite",
+    "build": "npm run copy-readme && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
@@ -19,10 +20,14 @@
     "@monaco-editor/react": "^4.7.0",
     "@types/vscode": "^1.105.0",
     "framer-motion": "^12.23.24",
+    "github-markdown-css": "^5.8.1",
     "kuromoji": "^0.1.2",
     "monaco-editor": "^0.54.0",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "react-markdown": "^10.1.0",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",

@@ -1,0 +1,8 @@
+# Sample Markdown
+
+For a family of sets $\{X_i\}_1^23$, consider $Y := \cup_{i=1}^23 X_i$.
+Let $F: \mathbb{Z} \to \mathbb{R}$ be a mapping defined by
+\begin{align}
+    F(n) := & \sqrt( \max{ n, 10 } ),\\
+\end{align}
+and define $z=F(\sharp Y)$, which is not meaningful.

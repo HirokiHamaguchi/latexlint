@@ -1,29 +1,12 @@
-.vscode/**
-.vscode-test/**
-out/**
-node_modules/**
-src/**
-.gitignore
-.yarnrc
-.mypy_cache
-.venv
-webpack.config.js
-vsc-extension-quickstart.md
-**/tsconfig.json
-**/eslint.config.mjs
-**/*.map
-**/*.ts
-**/.vscode-test.*
+# Ignore everything by default
+**
 
-doc
-web
-rules
-other
-images
-sample
-!images/lintIconDark.svg
-!images/lintIconLight.svg
-!images/mainIcon512.png
-
-doc/*.synctex.gz
-uv.lock
+# Include only necessary files
+!dist/**
+!package.json
+!README.md
+!CHANGELOG.md
+!LICENSE
+!images/*.png
+!images/*.svg
+!rules/**/*.png

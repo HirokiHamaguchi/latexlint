@@ -10,6 +10,10 @@ All notable changes to the "latexlint" extension will be documented in this file
 - Replace Dollars (at Other folder).
 - et. al. is incorrect. Use `\emph{et al.}` instead.
 
+## 1.5.13 - 2025-11-16
+
+- Fix .vscodeignore
+
 ## 1.5.12 - 2025-11-16
 
 - Fix `LLPeriod` to exclude periods in comments.

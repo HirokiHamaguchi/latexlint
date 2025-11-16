@@ -10,19 +10,15 @@ All notable changes to the "latexlint" extension will be documented in this file
 - Replace Dollars (at Other folder).
 - et. al. is incorrect. Use `\emph{et al.}` instead.
 
-## 1.5.14 - 2025-10-??
+## 1.5.12 - 2025-11-16
 
-- Refactor
+- Fix `LLPeriod` to exclude periods in comments.
 
-## 1.5.13 - 2025-10-26
+## 1.5.11 - 2025-10-26
 
 - Improve `addRule` to show the error message.
 
-## 1.5.12 - 2025-10-26
-
 - Fix `LLUnRef` bug where `\begin{figure}` in comments incorrectly captured content outside the comment until the next `\end{figure}`.
-
-## 1.5.11 - 2025-10-26
 
 - Add `fixJapaneseSpace` command to fix missing spaces.
 

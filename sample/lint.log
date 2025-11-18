@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.25)  16 NOV 2025 14:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.25)  18 NOV 2025 22:13
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -879,7 +879,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 e/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 442.
+(hyperref)                than one, level fixed on input line 445.
 
 (c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.bdg
 File: UTF8.bdg 2021/10/16 4.8.5
@@ -891,7 +891,7 @@ File: UTF8.enc 2021/10/16 4.8.5
 File: UTF8.chr 2021/10/16 4.8.5
 )
 LaTeX Font Info:    Trying to load font information for C70+ipxm on input line 
-450.
+453.
 
 (c:/texlive/2025/texmf-dist/tex/latex/ipaex-type1/c70ipxm.fd
 File: c70ipxm.fd 2018/05/05 v0.5
@@ -932,20 +932,20 @@ paex-type1/ipxt1-u54.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type
 :/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-uff.enc}]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 574.
+(hyperref)                removing `math shift' on input line 577.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 574.
+(hyperref)                removing `math shift' on input line 577.
 
 <example-image.pdf, id=261, 321.2pt x 240.9pt>
 File: example-image.pdf Graphic file (type pdf)
 <use example-image.pdf>
-Package pdftex.def Info: example-image.pdf  used on input line 581.
+Package pdftex.def Info: example-image.pdf  used on input line 584.
 (pdftex.def)             Requested size: 167.3021pt x 125.47823pt.
 File: example-image.pdf Graphic file (type pdf)
 <use example-image.pdf>
-Package pdftex.def Info: example-image.pdf  used on input line 587.
+Package pdftex.def Info: example-image.pdf  used on input line 590.
 (pdftex.def)             Requested size: 167.3021pt x 125.47823pt.
 
 
@@ -1009,7 +1009,7 @@ f-dist/fonts/type1/public/amsfonts/latxfont/lcirclew.pfb><c:/texlive/2025/texmf
 -dist/fonts/type1/public/lm/lmss17.pfb><c:/texlive/2025/texmf-dist/fonts/type1/
 public/amsfonts/symbols/msbm10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/publ
 ic/cm-super/sfrm1000.pfb>
-Output written on sample/lint.pdf (10 pages, 423666 bytes).
+Output written on sample/lint.pdf (10 pages, 423845 bytes).
 PDF statistics:
  524 PDF objects out of 1000 (max. 8388607)
  402 compressed objects within 5 object streams

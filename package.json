@@ -111,6 +111,13 @@
           "default": [],
           "description": "Exception words"
         },
+        "latexlint.LLCref.exceptions": {
+          "type": "array",
+          "default": [
+            "line:"
+          ],
+          "description": "Exception prefixes for \\ref{} that should not trigger LLCref warnings (e.g., \\ref{line:...})"
+        },
         "latexlint.disabledRules": {
           "type": "array",
           "items": {

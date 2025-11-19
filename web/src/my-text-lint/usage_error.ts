@@ -29,10 +29,19 @@ function naiveCheck(
         if (index === -1) break;
         const endIndex = index + noPattern.length;
         if (!isOverlapping(index, endIndex, matchedRanges)) {
+            const memoText = memo && memo.length > 0
+                ? (() => {
+                    if (memo[0] === '[重言]') {
+                        memo[0] = 'この表現は重言の可能性があり、理解して使えば問題のない修辞技法となりますが、誤用の可能性もあるので注意が必要です。';
+                    }
+                    return memo.join('\n');
+                })()
+                : '';
+
             errors.push({
                 startOffset: index,
                 endOffset: endIndex,
-                message: `「${noPattern}」は一般に誤用とされており、「${yesPattern}」が正しい表現かも知れません。${memo ? memo.join('') : ''}`,
+                message: `「${noPattern}」ではなく「${yesPattern}」?\n${memoText}`,
                 code: "usage-error",
             });
             matchedRanges.push([index, endIndex]);

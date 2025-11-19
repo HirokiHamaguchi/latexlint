@@ -11,6 +11,7 @@ import showCommands from './commands/showCommands';
 import { extensionDisplayName } from './util/constants';
 import getEditor from './util/getEditor';
 import detailsFoldingRangeProvider from './commands/detailsFoldingRangeProvider';
+import RefDefinitionProvider from './commands/refDefinitionProvider';
 
 export function activate(context: vscode.ExtensionContext) {
 	console.log('"latexlint" is now activated.');
@@ -59,6 +60,9 @@ export function activate(context: vscode.ExtensionContext) {
 
 	// For md files. Folding ranges for details.
 	context.subscriptions.push(vscode.languages.registerFoldingRangeProvider("markdown", new detailsFoldingRangeProvider()));
+
+	// For LaTeX files. Go to definition for \ref, \cref, \Cref.
+	context.subscriptions.push(vscode.languages.registerDefinitionProvider({ language: 'latex', scheme: 'file' }, new RefDefinitionProvider()));
 
 	// Only once on activation. Diagnose all open documents.
 	vscode.workspace.textDocuments.forEach((document) => {

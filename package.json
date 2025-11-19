@@ -114,7 +114,9 @@
         "latexlint.LLCrefExceptions": {
           "type": "array",
           "default": [
-            "line:"
+            "line:",
+            "prob:",
+            "problem:"
           ],
           "description": "Exception prefixes for \\ref{} that should not trigger LLCref warnings (e.g., \\ref{line:...})"
         },

@@ -483,6 +483,12 @@ Rename by pressing `F2` on the `\begin{name}`, `\end{name}` or `\label{name}`.
 
 ![renameCommand](images/renameCommand.png)
 
+### Go to Label Definition
+
+Jump to the corresponding `\label{xxx}` definition by pressing `F12` on `\ref{xxx}`, `\cref{xxx}`, or `\Cref{xxx}`.
+
+This feature searches for the matching `\label{xxx}` in the current file and jumps to the first non-commented occurrence
+
 ### LaTeX Lint: Query Wolfram Alpha
 
 Query Wolfram Alpha to solve the equation.
@@ -532,16 +538,16 @@ This project consists of multiple components with different licenses:
    See web/LICENSE file for details.
 
    The web component includes code from:
-   - textlint (MIT License)
-   - kuromoji.js (Apache License 2.0)
+   * textlint (MIT License)
+   * kuromoji.js (Apache License 2.0)
 
 ## Acknowledgement
 
 In some aspects, our extension resembles
 
-- LaTeX package [chktex](https://ctan.org/pkg/chktex)
-- VS Code Extension [Markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
-- [textlint](https://github.com/textlint/textlint)
-- VS Code Extension [LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename)
+* LaTeX package [chktex](https://ctan.org/pkg/chktex)
+* VS Code Extension [Markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
+* Linter for natural language text [textlint](https://github.com/textlint/textlint)
+* VS Code Extension [LaTeX Begin End Auto Rename](https://marketplace.visualstudio.com/items?itemName=wxhenry.latex-begin-end-auto-rename)
 
 We sincerely appreciate the developers of these tools.

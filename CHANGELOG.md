@@ -12,6 +12,7 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 ## 1.5.15 - 2025-11-19
 
+- Add Go to Definition feature: Press `F12` on `\ref{xxx}`, `\cref{xxx}`, or `\Cref{xxx}` to jump to the corresponding `\label{xxx}` (ignores labels in comments).
 - Move configurations to outside of LL files.
 
 ## 1.5.14 - 2025-11-18

@@ -65,7 +65,7 @@ export async function lintLatex(text: string, docType: 'latex' | 'markdown' = 'l
 
     // Rules that need configuration
     const config = {
-        LLCrefExceptions: ['line:'],
+        LLCrefExceptions: ['line:', 'prob:', 'problem:'],
         userDefinedRules: [],
     };
     for (const [ruleName, { rule, configKey }] of Object.entries(configuredRules)) {

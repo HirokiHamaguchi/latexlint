@@ -6,6 +6,21 @@ from get_rule_names import get_rule_names
 def make_rules_ts():
     _rule_dir, rule_names = get_rule_names()
 
+    # Rules that need configuration
+    configured_rule_configs = {
+        "LLCref": "LLCrefExceptions",
+        "LLUserDefined": "userDefinedRules",
+    }
+
+    # Filter rules into categories
+    align_rules = [rule for rule in rule_names if rule.startswith("LLAlign")]
+    configured_rules = [rule for rule in rule_names if rule in configured_rule_configs]
+    standard_rules = [
+        rule
+        for rule in rule_names
+        if rule not in align_rules and rule not in configured_rule_configs
+    ]
+
     CONTENTS = (
         [
             "// !! AUTO_GENERATED !!",
@@ -16,14 +31,24 @@ def make_rules_ts():
             "// Rules that require alignLikeEnvs parameter",
             "export const alignRules = {",
         ]
-        + [f"    {rule}," for rule in rule_names if rule.startswith("LLAlign")]
+        + [f"    {rule}," for rule in align_rules]
         + [
             "};",
             "",
             "// Rules that don't require alignLikeEnvs parameter",
             "export const standardRules = {",
         ]
-        + [f"    {rule}," for rule in rule_names if not rule.startswith("LLAlign")]
+        + [f"    {rule}," for rule in standard_rules]
+        + [
+            "};",
+            "",
+            "// Rules that require configuration parameters",
+            'export const configuredRules: { [key: string]: { rule: Function; configKey: "LLCrefExceptions" | "userDefinedRules" } } = {',
+        ]
+        + [
+            f'    {rule}: {{\n        rule: {rule},\n        configKey: "{configured_rule_configs[rule]}",\n    }},'
+            for rule in configured_rules
+        ]
         + [
             "};",
             "",

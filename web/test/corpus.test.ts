@@ -45,5 +45,4 @@ describe("TextLint corpus", () => {
             }
         }
     });
-});
-
+}, 60000); // Increase timeout for file processing

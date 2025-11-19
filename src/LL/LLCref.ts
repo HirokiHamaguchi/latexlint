@@ -3,10 +3,9 @@ import { messages } from '../util/constants';
 import ranges2diagnostics from '../util/ranges2diagnostics';
 import match2range from '../util/match2range';
 
-export default function LLCref(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
+export default function LLCref(doc: vscode.TextDocument, txt: string, exceptions: string[]): vscode.Diagnostic[] {
     if (doc.languageId !== "latex") return [];
 
-    const exceptions = vscode.workspace.getConfiguration('latexlint').get<string[]>('LLCref.exceptions') || ['line:'];
     const code = "LLCref";
     const message: string[] = [];
     const ranges: vscode.Range[] = [];

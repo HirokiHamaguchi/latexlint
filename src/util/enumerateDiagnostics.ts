@@ -1,11 +1,12 @@
 import * as vscode from 'vscode';
-import { alignRules, standardRules } from './rules';
+import { alignRules, standardRules, configuredRules } from './rules';
 import formatException from './formatException';
 import enumAlignEnvs from './enumAlignEnvs';
 
 export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.Diagnostic[] {
-    const disabledRules = vscode.workspace.getConfiguration('latexlint').get<string[]>('disabledRules') || [];
-    const exceptions = vscode.workspace.getConfiguration('latexlint').get<string[]>('exceptions') || [];
+    const config = vscode.workspace.getConfiguration('latexlint');
+    const disabledRules = config.get<string[]>('disabledRules') || [];
+    const exceptions = config.get<string[]>('exceptions') || [];
     const txt = doc.getText();
     const alignLikeEnvs = enumAlignEnvs(txt, doc.positionAt, vscode.window.showErrorMessage);
 
@@ -22,6 +23,12 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
     for (const [ruleName, rule] of Object.entries(standardRules)) {
         if (disabledRules.includes(ruleName)) continue;
         const diags = rule(doc, txt);
+        diagnostics.push(...diags);
+    }
+
+    for (const [ruleName, { rule, configKey }] of Object.entries(configuredRules)) {
+        if (disabledRules.includes(ruleName)) continue;
+        const diags = rule(doc, txt, config.get(configKey) as string[]);
         diagnostics.push(...diags);
     }
 

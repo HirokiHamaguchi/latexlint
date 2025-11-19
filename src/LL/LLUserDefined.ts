@@ -3,10 +3,8 @@ import { messages } from '../util/constants';
 import ranges2diagnostics from '../util/ranges2diagnostics';
 import match2range from '../util/match2range';
 
-
-export default function LLUserDefined(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
-    let userDefinedRules = vscode.workspace.getConfiguration('latexlint').get<string[]>('userDefinedRules') || [];
-    if (!userDefinedRules) return [];
+export default function LLUserDefined(doc: vscode.TextDocument, txt: string, userDefinedRules: string[]): vscode.Diagnostic[] {
+    if (!userDefinedRules || userDefinedRules.length === 0) return [];
 
     const diagnostics: vscode.Diagnostic[] = [];
     for (let rule of userDefinedRules) {

@@ -111,7 +111,7 @@
           "default": [],
           "description": "Exception words"
         },
-        "latexlint.LLCref.exceptions": {
+        "latexlint.LLCrefExceptions": {
           "type": "array",
           "default": [
             "line:"

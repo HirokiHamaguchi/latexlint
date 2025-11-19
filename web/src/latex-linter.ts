@@ -1,5 +1,5 @@
 import * as vscode from './vscode-mock';
-import { alignRules, standardRules } from '@latexlint/util/rules';
+import { alignRules, standardRules, configuredRules } from '@latexlint/util/rules';
 import enumAlignEnvs from '@latexlint/util/enumAlignEnvs';
 import type * as monaco from 'monaco-editor';
 import { MyTextLint } from './my-text-lint/main';
@@ -57,6 +57,20 @@ export async function lintLatex(text: string, docType: 'latex' | 'markdown' = 'l
     for (const [ruleName, rule] of Object.entries(standardRules)) {
         try {
             const diags = rule(vscodeDoc, txt);
+            diagnostics.push(...diags);
+        } catch (error) {
+            console.warn(`Rule ${ruleName} failed:`, error);
+        }
+    }
+
+    // Rules that need configuration
+    const config = {
+        LLCrefExceptions: ['line:'],
+        userDefinedRules: [],
+    };
+    for (const [ruleName, { rule, configKey }] of Object.entries(configuredRules)) {
+        try {
+            const diags = rule(vscodeDoc, txt, config[configKey]);
             diagnostics.push(...diags);
         } catch (error) {
             console.warn(`Rule ${ruleName} failed:`, error);

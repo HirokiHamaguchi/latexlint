@@ -46,7 +46,6 @@ export const standardRules = {
     LLBracketRound,
     LLColonEqq,
     LLColonForMapping,
-    LLCref,
     LLDoubleQuotes,
     LLENDash,
     LLEqnarray,
@@ -65,6 +64,17 @@ export const standardRules = {
     LLTitle,
     LLUnRef,
     LLURL,
-    LLUserDefined,
+};
+
+// Rules that require configuration parameters
+export const configuredRules: { [key: string]: { rule: Function; configKey: "LLCrefExceptions" | "userDefinedRules" } } = {
+    LLCref: {
+        rule: LLCref,
+        configKey: "LLCrefExceptions",
+    },
+    LLUserDefined: {
+        rule: LLUserDefined,
+        configKey: "userDefinedRules",
+    },
 };
 

@@ -9,14 +9,14 @@ All notable changes to the "latexlint" extension will be documented in this file
 - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. Disabled by default.
 - Replace Dollars (at Other folder).
 - et. al. is incorrect. Use `\emph{et al.}` instead.
+- my_vocabulary.jsonをgoogle spreadsheetで管理するように変更。
+- https://japanknowledge.com/articles/blognihongo/entry.html?entryid=489
+- youtube, github
 
-## 1.5.15 - 2025-11-19
+## 1.5.14 - 2025-11-19
 
 - Add Go to Definition feature: Press `F12` on `\ref{xxx}`, `\cref{xxx}`, or `\Cref{xxx}` to jump to the corresponding `\label{xxx}` (ignores labels in comments).
 - Move configurations to outside of LL files.
-
-## 1.5.14 - 2025-11-18
-
 - Add `latexlint.LLCrefExceptions` configuration to allow custom exception prefixes for `\ref{}` that should not trigger LLCref warnings (default: `["line:"]`).
 
 ## 1.5.13 - 2025-11-16

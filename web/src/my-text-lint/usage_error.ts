@@ -2,7 +2,7 @@ import type { MyTextLintErrorResult } from "./types";
 import _dict from './my_vocabulary.json';
 
 interface UsageEntry {
-    no: string;
+    no: string[];
     yes: string;
     memo?: string[];
 }
@@ -17,20 +17,22 @@ function escapeRegexExceptNum(str: string): string {
 
 function naiveCheck(
     text: string,
-    entry: UsageEntry,
+    noPattern: string,
+    yesPattern: string,
+    memo: string[] | undefined,
     errors: MyTextLintErrorResult[],
     matchedRanges: [number, number][]
 ): void {
     let searchIndex = 0;
     while (true) {
-        const index = text.indexOf(entry.no, searchIndex);
+        const index = text.indexOf(noPattern, searchIndex);
         if (index === -1) break;
-        const endIndex = index + entry.no.length;
+        const endIndex = index + noPattern.length;
         if (!isOverlapping(index, endIndex, matchedRanges)) {
             errors.push({
                 startOffset: index,
                 endOffset: endIndex,
-                message: `「${entry.no}」は一般に誤用とされており、「${entry.yes}」が正しい表現かも知れません。${entry.memo ? entry.memo.join('') : ''}`,
+                message: `「${noPattern}」は一般に誤用とされており、「${yesPattern}」が正しい表現かも知れません。${memo ? memo.join('') : ''}`,
                 code: "usage-error",
             });
             matchedRanges.push([index, endIndex]);
@@ -41,11 +43,13 @@ function naiveCheck(
 
 function regexCheck(
     text: string,
-    entry: UsageEntry,
+    noPattern: string,
+    yesPattern: string,
+    memo: string[] | undefined,
     errors: MyTextLintErrorResult[],
     matchedRanges: [number, number][]
 ): void {
-    const escaped = escapeRegexExceptNum(entry.no);
+    const escaped = escapeRegexExceptNum(noPattern);
     const regex = new RegExp(escaped, 'g');
     let match: RegExpExecArray | null;
     while ((match = regex.exec(text)) !== null) {
@@ -55,7 +59,7 @@ function regexCheck(
             errors.push({
                 startOffset: index,
                 endOffset: endIndex,
-                message: `「${match[0]}」は一般に誤用とされており、「${entry.yes.replace('$num$', match[1])}」が正しい表現かも知れません。${entry.memo ? entry.memo.join('') : ''}`,
+                message: `「${match[0]}」は一般に誤用とされており、「${yesPattern.replace('$num$', match[1])}」が正しい表現かも知れません。${memo ? memo.join('') : ''}`,
                 code: "usage-error",
             });
             matchedRanges.push([index, endIndex]);
@@ -70,10 +74,13 @@ export function checkUsageError(text: string): MyTextLintErrorResult[] {
     const matchedRanges: [number, number][] = [];
 
     for (const entry of dict) {
-        if (entry.no.includes("$num$")) {
-            regexCheck(text, entry, errors, matchedRanges);
-        } else {
-            naiveCheck(text, entry, errors, matchedRanges);
+        // Check each 'no' pattern in the array
+        for (const noPattern of entry.no) {
+            if (noPattern.includes("$num$")) {
+                regexCheck(text, noPattern, entry.yes, entry.memo, errors, matchedRanges);
+            } else {
+                naiveCheck(text, noPattern, entry.yes, entry.memo, errors, matchedRanges);
+            }
         }
     }
 

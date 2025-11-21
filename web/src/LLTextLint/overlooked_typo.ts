@@ -1,4 +1,4 @@
-import type { MyTextLintErrorResult } from "./types";
+import type { LLTextLintErrorResult } from "./types";
 
 const KANJI_TO_KATAKANA: Record<string, string> = {
     "工": "エ",
@@ -58,8 +58,8 @@ const BUILTIN_ALLOWS = [
 ];
 const MAX_LEN_OF_ALLOW = Math.max(...BUILTIN_ALLOWS.map(x => x.length));
 
-export function checkOverlookedTypo(text: string): MyTextLintErrorResult[] {
-    const errors: MyTextLintErrorResult[] = [];
+export function checkOverlookedTypo(text: string): LLTextLintErrorResult[] {
+    const errors: LLTextLintErrorResult[] = [];
 
     // カタカナに混じる漢字
     for (const match of text.matchAll(UNNATURAL_KANJI_WITH_KATAKANA)) {

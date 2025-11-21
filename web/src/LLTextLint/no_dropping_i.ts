@@ -1,10 +1,10 @@
 import type { Token } from "./parser";
-import type { MyTextLintErrorResult } from "./types";
+import type { LLTextLintErrorResult } from "./types";
 
 export function checkNoDroppingI(
     allTokens: Token[]
-): MyTextLintErrorResult[] {
-    const results: MyTextLintErrorResult[] = [];
+): LLTextLintErrorResult[] {
+    const results: LLTextLintErrorResult[] = [];
 
     for (let i = 1; i < allTokens.length; i++) {
         const prev = allTokens[i - 1];

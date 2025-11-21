@@ -16,7 +16,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import 'github-markdown-css/github-markdown-light.css';
 import readmeContent from './assets/README.md?raw';
-import vocabularyData from './my-text-lint/my_vocabulary.json';
+import vocabularyData from './LLTextLint/my_vocabulary.json';
 
 interface AboutModalProps {
     isOpen: boolean;

@@ -1,5 +1,5 @@
 import type { Token } from "./parser";
-import type { MyTextLintErrorResult } from "./types";
+import type { LLTextLintErrorResult } from "./types";
 
 /**
  * Check if a string is onomatopoeia (katakana only)
@@ -19,8 +19,8 @@ function isNumberToken(token: Token): boolean {
 
 export function checkNoSuccessiveWord(
     allTokens: Token[]
-): MyTextLintErrorResult[] {
-    const results: MyTextLintErrorResult[] = [];
+): LLTextLintErrorResult[] {
+    const results: LLTextLintErrorResult[] = [];
 
     if (allTokens.length <= 1) return results;
 

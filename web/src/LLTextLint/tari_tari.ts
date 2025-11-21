@@ -1,5 +1,5 @@
 import type { Token } from "./parser";
-import type { MyTextLintErrorResult } from "./types";
+import type { LLTextLintErrorResult } from "./types";
 
 /**
  * Check if character is a sentence ending marker
@@ -13,8 +13,8 @@ function isSentenceEndChar(char: string): boolean {
  */
 export function checkTariTari(
     allTokens: Token[]
-): MyTextLintErrorResult[] {
-    const errors: MyTextLintErrorResult[] = [];
+): LLTextLintErrorResult[] {
+    const errors: LLTextLintErrorResult[] = [];
 
     // Split tokens into sentences based on sentence-ending characters
     let sentenceStart = 0;

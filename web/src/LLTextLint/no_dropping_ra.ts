@@ -1,5 +1,5 @@
 import type { Token } from "./parser";
-import type { MyTextLintErrorResult } from "./types";
+import type { LLTextLintErrorResult } from "./types";
 
 function isTargetVerb(token: Token): boolean {
     return (
@@ -22,8 +22,8 @@ function isSpecialCases(token: Token): boolean {
 
 export function checkNoDroppingRa(
     allTokens: Token[]
-): MyTextLintErrorResult[] {
-    const results: MyTextLintErrorResult[] = [];
+): LLTextLintErrorResult[] {
+    const results: LLTextLintErrorResult[] = [];
 
     // Check for special cases (single token dropping-ra words)
     for (const token of allTokens) {

@@ -1,4 +1,4 @@
-import type { MyTextLintErrorResult } from "./types";
+import type { LLTextLintErrorResult } from "./types";
 import _dict from './my_vocabulary.json';
 
 interface UsageEntry {
@@ -20,7 +20,7 @@ function naiveCheck(
     noPattern: string,
     yesPattern: string,
     memo: string[] | undefined,
-    errors: MyTextLintErrorResult[],
+    errors: LLTextLintErrorResult[],
     matchedRanges: [number, number][]
 ): void {
     let searchIndex = 0;
@@ -55,7 +55,7 @@ function regexCheck(
     noPattern: string,
     yesPattern: string,
     memo: string[] | undefined,
-    errors: MyTextLintErrorResult[],
+    errors: LLTextLintErrorResult[],
     matchedRanges: [number, number][]
 ): void {
     const escaped = escapeRegexExceptNum(noPattern);
@@ -77,9 +77,9 @@ function regexCheck(
 }
 
 
-export function checkUsageError(text: string): MyTextLintErrorResult[] {
+export function checkUsageError(text: string): LLTextLintErrorResult[] {
     const dict = _dict.entries as UsageEntry[];
-    const errors: MyTextLintErrorResult[] = [];
+    const errors: LLTextLintErrorResult[] = [];
     const matchedRanges: [number, number][] = [];
 
     for (const entry of dict) {

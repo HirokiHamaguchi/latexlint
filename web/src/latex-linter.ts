@@ -2,7 +2,7 @@ import * as vscode from './vscode-mock';
 import { alignRules, standardRules, configuredRules } from '@latexlint/util/rules';
 import enumAlignEnvs from '@latexlint/util/enumAlignEnvs';
 import type * as monaco from 'monaco-editor';
-import { MyTextLint } from './my-text-lint/main';
+import { LLTextLint } from './LLTextLint/main';
 
 
 function convertToMonacoMarker(diag: import('vscode').Diagnostic): monaco.editor.IMarkerData {
@@ -77,12 +77,12 @@ export async function lintLatex(text: string, docType: 'latex' | 'markdown' = 'l
         }
     }
 
-    // MyTextLint checks
+    // LLTextLint checks
     try {
-        const myTextLintDiags = await MyTextLint(txt, doc);
-        diagnostics.push(...(myTextLintDiags as unknown as import('vscode').Diagnostic[]));
+        const LLTextLintDiags = await LLTextLint(txt, doc);
+        diagnostics.push(...(LLTextLintDiags as unknown as import('vscode').Diagnostic[]));
     } catch (error) {
-        console.warn('MyTextLint failed:', error);
+        console.warn('LLTextLint failed:', error);
     }
 
     const t1 = performance.now();

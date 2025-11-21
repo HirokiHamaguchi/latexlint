@@ -1,7 +1,7 @@
-import { checkNoDroppingI } from "../src/my-text-lint/no_dropping_i";
-import { checkOverlookedTypo } from "../src/my-text-lint/overlooked_typo";
-import { parseSentence } from "../src/my-text-lint/parser";
-import { checkTariTari } from "../src/my-text-lint/tari_tari";
+import { checkNoDroppingI } from "../src/LLTextLint/no_dropping_i";
+import { checkOverlookedTypo } from "../src/LLTextLint/overlooked_typo";
+import { parseSentence } from "../src/LLTextLint/parser";
+import { checkTariTari } from "../src/LLTextLint/tari_tari";
 
 import * as fs from "fs";
 import * as path from "path";

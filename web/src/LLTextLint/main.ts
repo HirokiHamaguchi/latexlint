@@ -5,20 +5,20 @@ import { checkOverlookedTypo } from "./overlooked_typo";
 import { checkTariTari } from "./tari_tari";
 import { checkUsageError } from "./usage_error";
 import { checkNoSuccessiveWord } from "./no_successive_word";
-import type { Diagnostic, MyTextLintErrorResult } from "./types";
+import type { Diagnostic, LLTextLintErrorResult } from "./types";
 import { DiagnosticSeverity, Range } from "../vscode-mock";
 import type { TextDocument } from "../vscode-mock";
 
 
-export async function MyTextLint(text: string, doc: TextDocument): Promise<Diagnostic[]> {
+export async function LLTextLint(text: string, doc: TextDocument): Promise<Diagnostic[]> {
     if (!text.trim()) return [];
 
     try {
         // Parse the text into tokens
         const allTokens = await parseSentence(text);
 
-        // Run all MyTextLint checks and collect error results
-        const errorResults: MyTextLintErrorResult[] = [
+        // Run all LLTextLint checks and collect error results
+        const errorResults: LLTextLintErrorResult[] = [
             ...checkNoDroppingI(allTokens),
             ...checkNoDroppingRa(allTokens),
             ...checkTariTari(allTokens),
@@ -53,7 +53,7 @@ export async function MyTextLint(text: string, doc: TextDocument): Promise<Diagn
         return diagnostics;
 
     } catch (error) {
-        console.error('MyTextLint error:', error);
+        console.error('LLTextLint error:', error);
         return [];
     }
 }

@@ -1,11 +1,11 @@
 import { describe, it, expect } from "vitest";
-import { parseSentence, Token } from "../src/my-text-lint/parser";
-import type { MyTextLintErrorResult } from "../src/my-text-lint/types";
-import { checkNoDroppingI } from "../src/my-text-lint/no_dropping_i";
-import { checkNoDroppingRa } from "../src/my-text-lint/no_dropping_ra";
-import { checkOverlookedTypo } from "../src/my-text-lint/overlooked_typo";
-import { checkTariTari } from "../src/my-text-lint/tari_tari";
-import { checkUsageError } from "../src/my-text-lint/usage_error";
+import { parseSentence, Token } from "../src/LLTextLint/parser";
+import type { LLTextLintErrorResult } from "../src/LLTextLint/types";
+import { checkNoDroppingI } from "../src/LLTextLint/no_dropping_i";
+import { checkNoDroppingRa } from "../src/LLTextLint/no_dropping_ra";
+import { checkOverlookedTypo } from "../src/LLTextLint/overlooked_typo";
+import { checkTariTari } from "../src/LLTextLint/tari_tari";
+import { checkUsageError } from "../src/LLTextLint/usage_error";
 
 import fs from "fs";
 import path from "path";
@@ -24,7 +24,7 @@ function loadTestData(fileName: string): TestData {
 function runCommonTests(
   testName: string,
   jsonFileName: string,
-  checkFunction: (tokens: Token[]) => MyTextLintErrorResult[]
+  checkFunction: (tokens: Token[]) => LLTextLintErrorResult[]
 ) {
   const testData = loadTestData(jsonFileName);
 
@@ -50,7 +50,7 @@ function runCommonTests(
 function runCommonTestsSync(
   testName: string,
   jsonFileName: string,
-  checkFunction: (text: string) => MyTextLintErrorResult[]
+  checkFunction: (text: string) => LLTextLintErrorResult[]
 ) {
   const testData = loadTestData(jsonFileName);
 

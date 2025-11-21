@@ -11,6 +11,7 @@ All notable changes to the "latexlint" extension will be documented in this file
 - et. al. is incorrect. Use `\emph{et al.}` instead.
 - my_vocabulary.jsonをgoogle spreadsheetで管理するように変更。
 - https://japanknowledge.com/articles/blognihongo/entry.html?entryid=489
+- https://salon.mainichi-kotoba.jp/archives/95
 - youtube, github
 
 ## 1.5.14 - 2025-11-19

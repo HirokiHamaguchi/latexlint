@@ -1,0 +1,65 @@
+{
+    "userDefinedRules": {
+        "type": "array",
+        "default": [],
+        "description": "User defined Regex rules"
+    },
+    "exceptions": {
+        "type": "array",
+        "default": [],
+        "description": "Exception words"
+    },
+    "LLCrefExceptions": {
+        "type": "array",
+        "default": [
+            "line:",
+            "prob:",
+            "problem:"
+        ],
+        "description": "Exception prefixes for \\ref{} that should not trigger LLCref warnings (e.g., \\ref{line:...})"
+    },
+    "disabledRules": {
+        "type": "array",
+        "items": {
+            "type": "string",
+            "enum": [
+                "LLAlignAnd",
+                "LLAlignEnd",
+                "LLAlignSingleLine",
+                "LLArticle",
+                "LLBig",
+                "LLBracketCurly",
+                "LLBracketMissing",
+                "LLBracketRound",
+                "LLColonEqq",
+                "LLColonForMapping",
+                "LLCref",
+                "LLDoubleQuotes",
+                "LLENDash",
+                "LLEqnarray",
+                "LLFootnote",
+                "LLHeading",
+                "LLJapaneseSpace",
+                "LLLlGg",
+                "LLNonASCII",
+                "LLPeriod",
+                "LLRefEq",
+                "LLSharp",
+                "LLSI",
+                "LLSortedCites",
+                "LLT",
+                "LLThousands",
+                "LLTitle",
+                "LLUnRef",
+                "LLURL",
+                "LLUserDefined"
+            ],
+            "uniqueItems": true
+        },
+        "default": [
+            "LLCref",
+            "LLJapaneseSpace"
+        ],
+        "description": "Disabled rules"
+    }
+}

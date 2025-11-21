@@ -13,6 +13,7 @@ from test_mark_down_png import test_mark_down_png
 from test_npm_run import test_npm_run
 from test_rule_names import test_rule_names
 from test_rule_ts_file import test_rule_ts_file
+from test_web_config import test_web_config
 
 if __name__ == "__main__":
     make_constants_ts()
@@ -28,6 +29,7 @@ if __name__ == "__main__":
     test_npm_run()
     test_rule_names()
     test_rule_ts_file()
+    test_web_config()
 
     files = os.listdir(os.path.dirname(__file__))
     functions = []

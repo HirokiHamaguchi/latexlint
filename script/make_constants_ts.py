@@ -18,6 +18,9 @@ def make_constants_ts():
 
         assert "message" in values, f"messageが存在しません: {values_path}"
         message = values.get("message", "")
+        assert message != "" or rule == "LLTextLint"
+        if message == "":
+            message = "NO MESSAGE. SET EACH MESSAGE IN LL FILE."
         assert "severity" in values, f"severityが存在しません: {values_path}"
         severity = values.get("severity", "")
 

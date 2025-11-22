@@ -1,11 +1,11 @@
 import { describe, it, expect } from "vitest";
-import { parseSentence, Token } from "../src/LLTextLint/parser";
-import type { LLTextLintErrorResult } from "../src/LLTextLint/types";
-import { checkNoDroppingI } from "../src/LLTextLint/no_dropping_i";
-import { checkNoDroppingRa } from "../src/LLTextLint/no_dropping_ra";
-import { checkOverlookedTypo } from "../src/LLTextLint/overlooked_typo";
-import { checkTariTari } from "../src/LLTextLint/tari_tari";
-import { checkUsageError } from "../src/LLTextLint/usage_error";
+import { parseSentence, Token } from "@latexlint/TextLint/parser";
+import type { LLTextLintErrorResult } from "@latexlint/TextLint/types";
+import { checkNoDroppingI } from "@latexlint/TextLint/no_dropping_i";
+import { checkNoDroppingRa } from "@latexlint/TextLint/no_dropping_ra";
+import { checkOverlookedTypo } from "@latexlint/TextLint/overlooked_typo";
+import { checkTariTari } from "@latexlint/TextLint/tari_tari";
+import { checkUsageError } from "@latexlint/TextLint/usage_error";
 
 import fs from "fs";
 import path from "path";

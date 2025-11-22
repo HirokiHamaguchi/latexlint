@@ -25,6 +25,7 @@ import LLSharp from '../LL/LLSharp';
 import LLSI from '../LL/LLSI';
 import LLSortedCites from '../LL/LLSortedCites';
 import LLT from '../LL/LLT';
+import LLTextLint from '../LL/LLTextLint';
 import LLThousands from '../LL/LLThousands';
 import LLTitle from '../LL/LLTitle';
 import LLUnRef from '../LL/LLUnRef';
@@ -62,6 +63,7 @@ export const standardRules = {
     LLSI,
     LLSortedCites,
     LLT,
+    LLTextLint,
     LLThousands,
     LLTitle,
     LLUnRef,

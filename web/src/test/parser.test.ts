@@ -1,4 +1,4 @@
-import { parseSentence } from "../src/LLTextLint/parser";
+import { parseSentence } from "@latexlint/TextLint/parser";
 import { describe, it } from "vitest";
 
 

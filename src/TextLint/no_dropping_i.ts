@@ -26,14 +26,13 @@ export function checkNoDroppingI(
                 ["て", "で"].includes(prev.basic_form) &&
                 curr.pos === "動詞" &&
                 curr.basic_form === "く")
-        ) {
+        )
             results.push({
                 startOffset: curr.range[0],
                 endOffset: curr.range[1],
                 message: "い抜き言葉を使用しています。",
                 code: "no-dropping-i",
             });
-        }
     }
     return results;
 }

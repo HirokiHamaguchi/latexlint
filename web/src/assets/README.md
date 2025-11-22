@@ -48,11 +48,12 @@ Here is the list of rules we detect.
 24. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
 25. [LLSortedCites](#llsortedcites) (detect unsorted cites)
 26. [LLT](#llt) (detect `^T`)
-27. [LLThousands](#llthousands) (detect `1,000` etc.)
-28. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
-29. [LLUnRef](#llunref) (detect unreferenced figure and table labels)
-30. [LLURL](#llurl) (detect unnecessary info in URLs)
-31. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
+27. [LLTextLint](#lltextlint) (simplified text lint)
+28. [LLThousands](#llthousands) (detect `1,000` etc.)
+29. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
+30. [LLUnRef](#llunref) (detect unreferenced figure and table labels)
+31. [LLURL](#llurl) (detect unnecessary info in URLs)
+32. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
 
 Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
@@ -395,6 +396,12 @@ You likely want to use `^\top` or `^\mathsf{T}` instead to represent the transpo
 Otherwise, we cannot distinguish between the transpose and the power by a variable `T` (you can use `^{T}` for the power).
 
 [Ref by BrownieAlice](https://blog.browniealice.net/post/latex_transpose/).
+
+### LLTextLint
+
+Detect dubious text in `.tex` or `.md` files.
+
+Currently, it only checks japanese texts, and full features are available only in web version.
 
 ### LLThousands
 

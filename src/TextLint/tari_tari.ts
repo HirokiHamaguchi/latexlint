@@ -30,14 +30,12 @@ export function checkTariTari(
 
             // Check this sentence for tari-tari pattern
             const occurrences: number[] = [];
-            for (let j = 0; j < sentenceTokens.length - 1; j++) {
+            for (let j = 0; j < sentenceTokens.length - 1; j++)
                 if (
                     sentenceTokens[j].pos === "動詞" &&
                     ["たり", "だり"].includes(sentenceTokens[j + 1].surface_form)
-                ) {
+                )
                     occurrences.push(j);
-                }
-            }
 
             if (occurrences.length === 1) {
                 const j = occurrences[0] + 1;

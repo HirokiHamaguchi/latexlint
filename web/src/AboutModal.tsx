@@ -16,7 +16,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import 'github-markdown-css/github-markdown-light.css';
 import readmeContent from './assets/README.md?raw';
-import vocabularyData from './LLTextLint/my_vocabulary.json';
+import vocabularyData from '@latexlint/TextLint/my_vocabulary.json';
 import { useEffect, useRef } from 'react';
 
 interface AboutModalProps {
@@ -77,7 +77,20 @@ export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutMo
                     }
 
                     if (element) {
-                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        const scrollToElement = () => {
+                            element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        };
+
+                        // Initial scroll
+                        scrollToElement();
+
+                        // Re-scroll when images load
+                        const images = readmeRef.current.querySelectorAll('img');
+                        images.forEach((img) => {
+                            if (!img.complete)
+                                img.addEventListener('load', scrollToElement, { once: true });
+                        });
+
                         // Clear the hash from URL after scrolling
                         window.history.replaceState(null, '', window.location.pathname + window.location.search);
                     }

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.25)  22 NOV 2025 10:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.25)  22 NOV 2025 18:39
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -931,30 +931,36 @@ paex-type1/ipxt1-u54.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type
 69.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u51.enc}{c
 :/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-uff.enc}]
 
-[7]
+[7] (c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.enc
+File: UTF8.enc 2021/10/16 4.8.5
+)
+(c:/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.chr
+File: UTF8.chr 2021/10/16 4.8.5
+)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 605.
+(hyperref)                removing `math shift' on input line 613.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 605.
+(hyperref)                removing `math shift' on input line 613.
 
-<example-image.pdf, id=290, 321.2pt x 240.9pt>
+<example-image.pdf, id=297, 321.2pt x 240.9pt>
 File: example-image.pdf Graphic file (type pdf)
 <use example-image.pdf>
-Package pdftex.def Info: example-image.pdf  used on input line 612.
+Package pdftex.def Info: example-image.pdf  used on input line 620.
 (pdftex.def)             Requested size: 167.3021pt x 125.47823pt.
 File: example-image.pdf Graphic file (type pdf)
 <use example-image.pdf>
-Package pdftex.def Info: example-image.pdf  used on input line 618.
+Package pdftex.def Info: example-image.pdf  used on input line 626.
 (pdftex.def)             Requested size: 167.3021pt x 125.47823pt.
 
 
-[8 <c:/texlive/2025/texmf-dist/tex/latex/mwe/example-image.pdf>]
-(sample/lint.bbl)
+[8{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u99.enc}{c:/tex
+live/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u84.enc}{c:/texlive/2025
+/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u91.enc}] (sample/lint.bbl)
 
-[9]
+[9 <c:/texlive/2025/texmf-dist/tex/latex/mwe/example-image.pdf>]
 
 [10] (sample/lint.aux)
  ***********
@@ -962,14 +968,14 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-19>
  ***********
 Package rerunfilecheck Info: File `lint.out' has not changed.
-(rerunfilecheck)             Checksum: ED388CF74CF014CA51A1A6DC77E588FC;4843.
+(rerunfilecheck)             Checksum: 3AF1D50881F33FE153580FCC02EE3B78;4938.
  ) 
 Here is how much of TeX's memory you used:
- 24611 strings out of 467816
- 442063 string characters out of 5436431
+ 24644 strings out of 467816
+ 442705 string characters out of 5436431
  919602 words of memory out of 5000000
- 52800 multiletter control sequences out of 15000+600000
- 651750 words of font info for 128 fonts, out of 8000000 for 9000
+ 52819 multiletter control sequences out of 15000+600000
+ 652556 words of font info for 131 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  88i,17n,91p,337b,1704s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol10.pfb><c:/te
@@ -1002,17 +1008,20 @@ pxm-r-u69.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r
 -u6b.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u70.
 pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u75.pfb><
 c:/texlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u7a.pfb><c:/te
-xlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u8a.pfb><c:/texlive
-/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u97.pfb><c:/texlive/2025
-/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-uff.pfb><c:/texlive/2025/texm
-f-dist/fonts/type1/public/amsfonts/latxfont/lcirclew.pfb><c:/texlive/2025/texmf
--dist/fonts/type1/public/lm/lmss17.pfb><c:/texlive/2025/texmf-dist/fonts/type1/
-public/amsfonts/symbols/msbm10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/publ
-ic/cm-super/sfrm1000.pfb>
-Output written on sample/lint.pdf (10 pages, 425730 bytes).
+xlive/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u84.pfb><c:/texlive
+/2025/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u8a.pfb><c:/texlive/2025
+/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-u91.pfb><c:/texlive/2025/texm
+f-dist/fonts/type1/public/ipaex-type1/ipxm-r-u97.pfb><c:/texlive/2025/texmf-dis
+t/fonts/type1/public/ipaex-type1/ipxm-r-u99.pfb><c:/texlive/2025/texmf-dist/fon
+ts/type1/public/ipaex-type1/ipxm-r-uff.pfb><c:/texlive/2025/texmf-dist/fonts/ty
+pe1/public/amsfonts/latxfont/lcirclew.pfb><c:/texlive/2025/texmf-dist/fonts/typ
+e1/public/lm/lmss17.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts
+/symbols/msbm10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfr
+m1000.pfb>
+Output written on sample/lint.pdf (10 pages, 439779 bytes).
 PDF statistics:
- 545 PDF objects out of 1000 (max. 8388607)
- 423 compressed objects within 5 object streams
- 71 named destinations out of 1000 (max. 500000)
- 434 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 570 PDF objects out of 1000 (max. 8388607)
+ 439 compressed objects within 5 object streams
+ 72 named destinations out of 1000 (max. 500000)
+ 454 words of extra memory for PDF output out of 10000 (max. 10000000)
 

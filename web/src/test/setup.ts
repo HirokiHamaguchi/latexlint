@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 // kuromoji.jsをグローバル変数としてロード
-import * as kuromojiModule from '../public/kuromoji.js';
+import * as kuromojiModule from '../../public/kuromoji.js';
 // @ts-expect-error - グローバル変数として設定
 global.kuromoji = kuromojiModule as unknown;
 
@@ -13,6 +13,7 @@ beforeAll(() => {
 
     class MockXMLHttpRequest extends OriginalXMLHttpRequest {
         private _url: string = '';
+        // @ts-expect-error - declared but its value is never read
         private _method: string = '';
         public responseType: XMLHttpRequestResponseType = '';
         public onload: ((this: XMLHttpRequest, ev: ProgressEvent) => unknown) | null = null;
@@ -35,7 +36,7 @@ beforeAll(() => {
             }
 
             if (fileName) {
-                const dictPath = path.resolve(__dirname, '../public/dict', fileName);
+                const dictPath = path.resolve(__dirname, '../../public/dict', fileName);
 
                 try {
                     const data = fs.readFileSync(dictPath);

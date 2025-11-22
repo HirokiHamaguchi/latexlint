@@ -26,29 +26,26 @@ export function checkNoDroppingRa(
     const results: LLTextLintErrorResult[] = [];
 
     // Check for special cases (single token dropping-ra words)
-    for (const token of allTokens) {
-        if (isSpecialCases(token)) {
+    for (const token of allTokens)
+        if (isSpecialCases(token))
             results.push({
                 startOffset: token.range[0],
                 endOffset: token.range[1],
                 message: "ら抜き言葉を使用しています。",
                 code: "no-dropping-ra",
             });
-        }
-    }
 
     for (let i = 1; i < allTokens.length; i++) {
         const prev = allTokens[i - 1];
         const curr = allTokens[i];
 
-        if (isTargetVerb(prev) && isRaWord(curr)) {
+        if (isTargetVerb(prev) && isRaWord(curr))
             results.push({
                 startOffset: curr.range[0],
                 endOffset: curr.range[1],
                 message: "ら抜き言葉を使用しています。",
                 code: "no-dropping-ra",
             });
-        }
     }
 
     return results;

@@ -78,14 +78,13 @@ export function checkOverlookedTypo(text: string): LLTextLintErrorResult[] {
             if (prev1 === "入") continue;
         }
 
-        if (correct) {
+        if (correct)
             errors.push({
                 startOffset: match.index!,
                 endOffset: match.index! + wrong.length,
                 message: `漢字の「${wrong}」はカタカナの「${correct}」の誤りの可能性があります`,
                 code: "overlooked-typo",
             });
-        }
     }
 
     // カタカナに混じるひらがな

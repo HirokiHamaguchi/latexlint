@@ -2,9 +2,16 @@ import * as vscode from './vscode-mock';
 import { alignRules, standardRules, configuredRules } from '@latexlint/util/rules';
 import enumAlignEnvs from '@latexlint/util/enumAlignEnvs';
 import * as monaco from 'monaco-editor';
-import { LLTextLint } from './LLTextLint/main';
 import { getConfig } from './config';
-
+import type { LLTextLintErrorResult } from "@latexlint/TextLint/types";
+import { parseSentence } from "@latexlint/TextLint/parser";
+import { checkNoDroppingI } from "@latexlint/TextLint/no_dropping_i";
+import { checkNoDroppingRa } from "@latexlint/TextLint/no_dropping_ra";
+import { checkOverlookedTypo } from "@latexlint/TextLint/overlooked_typo";
+import { checkTariTari } from "@latexlint/TextLint/tari_tari";
+import { checkNoSuccessiveWord } from "@latexlint/TextLint/no_successive_word";
+import { DiagnosticSeverity, Range } from "./vscode-mock";
+import { getCodeWithURI } from '@latexlint/util/getCodeWithURI';
 
 function convertToMonacoMarker(diag: import('vscode').Diagnostic): monaco.editor.IMarkerData {
     // Convert VS Code DiagnosticSeverity to Monaco MarkerSeverity
@@ -80,7 +87,6 @@ export async function lintLatex(text: string, docType: 'latex' | 'markdown' = 'l
     }
 
     // Rules that need configuration
-    console.log(config);
     for (const [ruleName, { rule, configKey }] of Object.entries(configuredRules)) {
         if (disabledRules.includes(ruleName)) continue;
         try {
@@ -92,11 +98,33 @@ export async function lintLatex(text: string, docType: 'latex' | 'markdown' = 'l
     }
 
     // LLTextLint checks
-    try {
-        const LLTextLintDiags = await LLTextLint(txt, doc);
-        diagnostics.push(...(LLTextLintDiags as unknown as import('vscode').Diagnostic[]));
-    } catch (error) {
-        console.warn('LLTextLint failed:', error);
+    if (!disabledRules.includes('LLTextLint')) {
+        try {
+            // Parse the text into tokens
+            const allTokens = await parseSentence(text);
+
+            // Run all LLTextLint checks and collect error results
+            const errorResults: LLTextLintErrorResult[] = [
+                ...checkNoDroppingI(allTokens),
+                ...checkNoDroppingRa(allTokens),
+                ...checkTariTari(allTokens),
+                ...checkNoSuccessiveWord(allTokens),
+                ...checkOverlookedTypo(text),
+            ];
+
+            // Convert to Diagnostics
+            errorResults.map(error => {
+                diagnostics.push({
+                    code: getCodeWithURI("LLTextLint"),
+                    message: error.message,
+                    range: new Range(doc.positionAt(error.startOffset), doc.positionAt(error.endOffset)),
+                    severity: DiagnosticSeverity.Information,
+                    source: "LaTeX Lint",
+                });
+            });
+        } catch (error) {
+            console.warn('LLTextLint failed:', error);
+        }
     }
 
     const t1 = performance.now();

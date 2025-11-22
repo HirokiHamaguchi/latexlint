@@ -14,7 +14,7 @@ export function MonacoLatexEditor({ value, onChange, diagnostics, onOpenAboutWit
     const editorRef = useRef<Monaco.editor.IStandaloneCodeEditor | null>(null);
     const monacoRef = useRef<typeof Monaco | null>(null);
 
-    const handleEditorDidMount: OnMount = (editor, monaco) => {
+    const handleEditorDidMount: OnMount = (editor, monaco: typeof Monaco) => {
         editorRef.current = editor;
         monacoRef.current = monaco;
 

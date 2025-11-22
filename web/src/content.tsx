@@ -133,7 +133,7 @@ export function Content() {
 
     return (
         <Container maxW="container.xl" py={8} as="main">
-            <VStack gap={8} align="stretch">
+            <VStack gap={4} align="stretch">
                 <Box textAlign="center" as="header">
                     <HStack justify="center" align="center" mb={4}>
                         <Link href={import.meta.env.BASE_URL} _hover={{ textDecoration: 'none' }}>
@@ -180,10 +180,9 @@ export function Content() {
                     </HStack>
                 </Box>
 
-                <Box as="section" aria-label="Configuration" mb={4}>
+                <Box as="section" aria-label="Configuration">
                     <Collapsible.Root open={isConfigOpen} onOpenChange={(e) => setIsConfigOpen(e.open)}>
                         <Collapsible.Trigger
-                            paddingY="3"
                             display="flex"
                             gap="2"
                             alignItems="center"
@@ -194,7 +193,7 @@ export function Content() {
                             >
                                 <LuChevronRight />
                             </Collapsible.Indicator>
-                            Toggle
+                            Setting
                         </Collapsible.Trigger>
                         <Collapsible.Content>
                             <Box mt={4} p={4} borderWidth="1px" borderRadius="md" bg="gray.50">
@@ -234,6 +233,7 @@ export function Content() {
                                                 ) : (
                                                     // Input for non-enum fields
                                                     <Input
+                                                        id={`config-input-${key}`}
                                                         value={config[key].join(', ')}
                                                         onChange={(e) => {
                                                             const value = e.target.value

@@ -1,11 +1,5 @@
 import type { LLTextLintErrorResult } from "./types";
-import dictRaw from './my_vocabulary.json';
-
-interface UsageEntry {
-    no: string[];
-    yes: string;
-    memo?: string[];
-}
+import { getVocabularyData } from './vocabulary_loader';
 
 function isOverlapping(start: number, end: number, ranges: [number, number][]): boolean {
     return ranges.some(([rStart, rEnd]) => start < rEnd && end > rStart);
@@ -19,7 +13,7 @@ function naiveCheck(
     text: string,
     noPattern: string,
     yesPattern: string,
-    memo: string[] | undefined,
+    memo: string,
     errors: LLTextLintErrorResult[],
     matchedRanges: [number, number][]
 ): void {
@@ -29,18 +23,10 @@ function naiveCheck(
         if (index === -1) break;
         const endIndex = index + noPattern.length;
         if (!isOverlapping(index, endIndex, matchedRanges)) {
-            const memoText = memo && memo.length > 0
-                ? (() => {
-                    if (memo[0] === '[重言]')
-                        memo[0] = 'この表現は重言の可能性があり、修辞技法として意図されていれば問題ありませんが、誤用の可能性もあるので注意が必要です。';
-                    return memo.join('\n');
-                })()
-                : '';
-
             errors.push({
                 startOffset: index,
                 endOffset: endIndex,
-                message: `「${noPattern}」ではなく「${yesPattern}」?\n${memoText}`,
+                message: `「${noPattern}」ではなく「${yesPattern}」?\n${memo}`,
                 code: "usage-error",
             });
             matchedRanges.push([index, endIndex]);
@@ -53,7 +39,7 @@ function regexCheck(
     text: string,
     noPattern: string,
     yesPattern: string,
-    memo: string[] | undefined,
+    memo: string,
     errors: LLTextLintErrorResult[],
     matchedRanges: [number, number][]
 ): void {
@@ -67,7 +53,7 @@ function regexCheck(
             errors.push({
                 startOffset: index,
                 endOffset: endIndex,
-                message: `「${match[0]}」は一般に誤用とされており、「${yesPattern.replace('$num', match[1])}」が正しい表現かも知れません。${memo ? memo.join('') : ''}`,
+                message: `「${match[0]}」は一般に誤用とされており、「${yesPattern.replace('$num', match[1])}」が正しい表現かも知れません。${memo}`,
                 code: "usage-error",
             });
             matchedRanges.push([index, endIndex]);
@@ -77,17 +63,19 @@ function regexCheck(
 
 
 export function checkUsageError(text: string): LLTextLintErrorResult[] {
-    const dict = dictRaw.entries as UsageEntry[];
+    const dict = getVocabularyData();
     const errors: LLTextLintErrorResult[] = [];
     const matchedRanges: [number, number][] = [];
 
-    for (const entry of dict)
+    for (const entry of dict) {
         // Check each 'no' pattern in the array
-        for (const noPattern of entry.no)
+        const noPatterns = Array.isArray(entry.no) ? entry.no : [entry.no];
+        for (const noPattern of noPatterns)
             if (noPattern.includes("$num"))
                 regexCheck(text, noPattern, entry.yes, entry.memo, errors, matchedRanges);
             else
                 naiveCheck(text, noPattern, entry.yes, entry.memo, errors, matchedRanges);
+    }
 
     // Sort errors by position (already done in main.ts, but keep for standalone use)
     errors.sort((a, b) => a.startOffset - b.startOffset);

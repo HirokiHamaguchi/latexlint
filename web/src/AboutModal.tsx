@@ -10,14 +10,17 @@ import {
     Grid,
     Tabs,
     Table,
+    Box,
+    Collapsible,
 } from '@chakra-ui/react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import 'github-markdown-css/github-markdown-light.css';
 import readmeContent from './assets/README.md?raw';
-import vocabularyData from '@latexlint/TextLint/my_vocabulary.json';
-import { useEffect, useRef } from 'react';
+import { getVocabularyData, type VocabularyEntry } from '@latexlint/TextLint/vocabulary_loader';
+import { useEffect, useRef, useState, useMemo } from 'react';
+import { IoChevronDown, IoChevronForward } from 'react-icons/io5';
 
 interface AboutModalProps {
     isOpen: boolean;
@@ -38,7 +41,7 @@ const ExternalLink = ({ href, children, icon }: { href: string; children: React.
 );
 
 const SampleImage = ({ src, alt, color }: { src: string; alt: string; color: string }) => (
-    <VStack gap={3}>
+    <VStack>
         <Heading size="sm" color={color}>{alt}</Heading>
         <Image
             src={`${BASE_URL}${src}`}
@@ -52,8 +55,61 @@ const SampleImage = ({ src, alt, color }: { src: string; alt: string; color: str
     </VStack>
 );
 
+const VocabularyRow = ({ entry }: { entry: VocabularyEntry }) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const hasMemo = entry.memo.length > 0;
+
+    const formatList = (value: string | string[]) => {
+        if (Array.isArray(value)) {
+            return value.join(', ');
+        }
+        return value;
+    };
+
+    const formatMemo = (memo: string) => {
+        if (!memo) return null;
+        return memo.split('\n').map((line, idx) => (
+            <Text key={idx} fontSize="sm">{line}</Text>
+        ));
+    };
+
+    return (
+        <>
+            <Table.Row
+                onClick={() => hasMemo && setIsOpen(!isOpen)}
+                cursor={hasMemo ? 'pointer' : 'default'}
+            >
+                <Table.Cell width="45%">{formatList(entry.no)}</Table.Cell>
+                <Table.Cell width="45%">{entry.yes}</Table.Cell>
+                <Table.Cell width="10%" textAlign="center">
+                    {hasMemo && (
+                        <Box color="gray.500" display="inline-flex" alignItems="center">
+                            {isOpen ? <IoChevronDown size={16} /> : <IoChevronForward size={16} />}
+                        </Box>
+                    )}
+                </Table.Cell>
+            </Table.Row>
+            {hasMemo && (
+                <Table.Row style={{ borderBottom: !isOpen ? 'none' : undefined }}>
+                    <Table.Cell colSpan={3} p={0} border="none">
+                        <Collapsible.Root open={isOpen}>
+                            <Collapsible.Content>
+                                <Box width="100%" bg="gray.50" p={3}>
+                                    <Text fontSize="xs" fontWeight="bold" mb={1} color="gray.600">詳細:</Text>
+                                    {formatMemo(entry.memo)}
+                                </Box>
+                            </Collapsible.Content>
+                        </Collapsible.Root>
+                    </Table.Cell>
+                </Table.Row>
+            )}
+        </>
+    );
+};
+
 export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutModalProps) {
     const readmeRef = useRef<HTMLDivElement>(null);
+    const vocabularyData = useMemo(() => getVocabularyData(), []);
 
     useEffect(() => {
         if (isOpen && defaultTab === 'readme') {
@@ -102,8 +158,8 @@ export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutMo
     return (
         <Dialog.Root open={isOpen} onOpenChange={(e) => !e.open && onClose()} size="xl">
             <Dialog.Backdrop />
-            <Dialog.Positioner>
-                <Dialog.Content maxW="6xl" maxH="90vh" p={6}>
+            <Dialog.Positioner h="100vh" display="flex" alignItems="center" justifyContent="center" overflowY="hidden">
+                <Dialog.Content maxW="6xl" maxH="90vh" h="auto" display="flex" flexDirection="column">
                     <Dialog.Header>
                         <Dialog.Title fontSize="xl" fontWeight="bold">
                             About LaTeX Lint
@@ -118,18 +174,19 @@ export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutMo
                                 <Tabs.Trigger value="japanese">Japanese</Tabs.Trigger>
                             </Tabs.List>
 
-                            <Tabs.Content value="overview" pt={4}>
-                                <VStack gap={6} align="stretch">
-                                    <VStack gap={3} align="stretch">
-                                        <Heading size="md">Privacy</Heading>
+                            <Tabs.Content value="overview">
+                                <VStack align="stretch">
+                                    <VStack align="stretch">
+                                        <Heading size="lg">Privacy</Heading>
                                         <Text fontSize="sm">
                                             All input is processed entirely in your browser.
                                             No network requests are made.
                                         </Text>
                                     </VStack>
-                                    <VStack gap={3} align="stretch">
-                                        <Heading size="md">Links</Heading>
-                                        <HStack gap={4} flexWrap="wrap">
+
+                                    <VStack align="stretch">
+                                        <Heading size="lg">Links</Heading>
+                                        <HStack gap={5} flexWrap="wrap">
                                             <ExternalLink
                                                 href="https://github.com/HirokiHamaguchi/latexlint/tree/master"
                                                 icon="mark-github-24.svg"
@@ -145,8 +202,8 @@ export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutMo
                                         </HStack>
                                     </VStack>
 
-                                    <VStack gap={3} align="stretch">
-                                        <Heading size="md">Sample - Before and After</Heading>
+                                    <VStack align="stretch">
+                                        <Heading size="lg">Sample - Before and After</Heading>
                                         <Grid templateColumns={{ base: '1fr', md: '1fr 1fr' }} gap={6}>
                                             <SampleImage src="sample_before.png" alt="Before" color="red.600" />
                                             <SampleImage src="sample_after.png" alt="After" color="green.600" />
@@ -161,12 +218,17 @@ export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutMo
                                         remarkPlugins={[remarkGfm]}
                                         rehypePlugins={[rehypeRaw]}
                                         components={{
-                                            img: ({ ...props }) => (
-                                                <img
-                                                    {...props}
-                                                    src={props.src?.startsWith('http') ? props.src : `${GITHUB_RAW_BASE}${props.src}`}
-                                                />
-                                            ),
+                                            img: ({ src, ...props }) => {
+                                                const resolvedSrc = src?.startsWith('http') ? src : `${GITHUB_RAW_BASE}${src}`;
+                                                if ("width" in props)
+                                                    return <img {...props} src={resolvedSrc} />
+                                                else
+                                                    return (
+                                                        <span style={{ display: 'flex', justifyContent: 'center', margin: '1em 0' }}>
+                                                            <img {...props} src={resolvedSrc} style={{ maxWidth: '70%' }} />
+                                                        </span>
+                                                    );
+                                            },
                                         }}
                                     >
                                         {readmeContent}
@@ -187,7 +249,8 @@ export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutMo
                                         なお、これらは必ずしも誤りであるとは限らず、指摘はあくまで参考に留め、文脈や意図に応じて適宜判断してください。
                                     </Text>
                                     <Text fontSize="sm" color="gray.600">
-                                        また、この表自体に誤りがある場合、
+                                        現在開発途中です、まだ不完全な部分も多くあります。
+                                        この表に限らず、お気づきの点があれば
                                         <Link href="https://github.com/HirokiHamaguchi/latexlint/issues" target="_blank" rel="noopener noreferrer" color="blue.500" textDecoration="underline">
                                             フィードバック
                                         </Link>
@@ -196,16 +259,14 @@ export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutMo
                                     <Table.Root size="sm" variant="outline">
                                         <Table.Header>
                                             <Table.Row>
-                                                <Table.ColumnHeader>誤</Table.ColumnHeader>
-                                                <Table.ColumnHeader>正</Table.ColumnHeader>
+                                                <Table.ColumnHeader width="45%">現行表現</Table.ColumnHeader>
+                                                <Table.ColumnHeader width="45%">代替表現</Table.ColumnHeader>
+                                                <Table.ColumnHeader width="10%"></Table.ColumnHeader>
                                             </Table.Row>
                                         </Table.Header>
                                         <Table.Body>
-                                            {vocabularyData.entries.map((entry, index) => (
-                                                <Table.Row key={index}>
-                                                    <Table.Cell>{entry.no}</Table.Cell>
-                                                    <Table.Cell>{entry.yes}</Table.Cell>
-                                                </Table.Row>
+                                            {vocabularyData.map((entry, index) => (
+                                                <VocabularyRow key={index} entry={entry} />
                                             ))}
                                         </Table.Body>
                                     </Table.Root>
@@ -220,6 +281,6 @@ export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutMo
                     </Dialog.Footer>
                 </Dialog.Content>
             </Dialog.Positioner>
-        </Dialog.Root>
+        </Dialog.Root >
     );
 }

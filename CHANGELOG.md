@@ -14,7 +14,11 @@ All notable changes to the "latexlint" extension will be documented in this file
 - https://salon.mainichi-kotoba.jp/archives/95
 - youtube, github
 
-## 1.5.14 - 2025-11-22
+## 1.5.16 - 2025-11-22
+
+- Update about `LLTextLint`.
+
+## 1.5.15 - 2025-11-22
 
 - Change `LLSharp` severity from `WARN` to `INFO`.
 - Add `LLNonstandardNotation` rule to detect nonstandard mathematical notations.

@@ -14,6 +14,15 @@ All notable changes to the "latexlint" extension will be documented in this file
 - https://salon.mainichi-kotoba.jp/archives/95
 - youtube, github
 
+## 1.5.14 - 2025-11-22
+
+- Change `LLSharp` severity from `WARN` to `INFO`.
+- Add `LLNonstandardNotation` rule to detect nonstandard mathematical notations.
+- Implement configuration management in the linter.
+- Add `web/src/config.json` configuration file.
+- Rename `my-text-lint` to `LLTextLint`.
+- Refactor vocabulary processing and usage error checks.
+
 ## 1.5.14 - 2025-11-19
 
 - Add Go to Definition feature: Press `F12` on `\ref{xxx}`, `\cref{xxx}`, or `\Cref{xxx}` to jump to the corresponding `\label{xxx}` (ignores labels in comments).

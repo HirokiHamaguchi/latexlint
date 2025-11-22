@@ -118,8 +118,6 @@ async function testRefDefinitionProvider() {
 	}
 
 	// Test non-existent label - should return undefined
-	const text = document.getText();
-	const pos = document.positionAt(text.indexOf('\\ref{prob:example1}') + 5);
 	// Create a position that's not on a ref command
 	const nonRefPosition = new vscode.Position(70, 5);
 	const nonRefDefinition = await provider.provideDefinition(document, nonRefPosition, new vscode.CancellationTokenSource().token);

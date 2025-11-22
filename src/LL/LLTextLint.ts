@@ -1,6 +1,5 @@
-import { checkUsageError } from "../TextLint/usage_error";
-import type { LLTextLintErrorResult } from "../TextLint/types";
 import * as vscode from 'vscode';
+import { checkUsageError } from "../TextLint/usage_error";
 import ranges2diagnostics from "../util/ranges2diagnostics";
 
 export default function LLTextLint(doc: vscode.TextDocument, text: string): vscode.Diagnostic[] {

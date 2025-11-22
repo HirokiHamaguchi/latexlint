@@ -52,10 +52,14 @@ export async function lintLatex(text: string, docType: 'latex' | 'markdown' = 'l
     const vscodeDoc = doc as unknown as import('vscode').TextDocument;
     const diagnostics: import('vscode').Diagnostic[] = [];
 
+    const config = getConfig();
+    const disabledRules = config.disabledRules || [];
+
     const t0 = performance.now();
 
     // Rules that need align environments
     for (const [ruleName, rule] of Object.entries(alignRules)) {
+        if (disabledRules.includes(ruleName)) continue;
         try {
             const diags = rule(vscodeDoc, txt, alignLikeEnvs);
             diagnostics.push(...diags);
@@ -66,6 +70,7 @@ export async function lintLatex(text: string, docType: 'latex' | 'markdown' = 'l
 
     // Rules that don't need align environments
     for (const [ruleName, rule] of Object.entries(standardRules)) {
+        if (disabledRules.includes(ruleName)) continue;
         try {
             const diags = rule(vscodeDoc, txt);
             diagnostics.push(...diags);
@@ -75,8 +80,9 @@ export async function lintLatex(text: string, docType: 'latex' | 'markdown' = 'l
     }
 
     // Rules that need configuration
-    const config = getConfig();
+    console.log(config);
     for (const [ruleName, { rule, configKey }] of Object.entries(configuredRules)) {
+        if (disabledRules.includes(ruleName)) continue;
         try {
             const diags = rule(vscodeDoc, txt, config[configKey]);
             diagnostics.push(...diags);

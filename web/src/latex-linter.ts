@@ -3,6 +3,7 @@ import { alignRules, standardRules, configuredRules } from '@latexlint/util/rule
 import enumAlignEnvs from '@latexlint/util/enumAlignEnvs';
 import type * as monaco from 'monaco-editor';
 import { LLTextLint } from './LLTextLint/main';
+import { getConfig } from './config';
 
 
 function convertToMonacoMarker(diag: import('vscode').Diagnostic): monaco.editor.IMarkerData {
@@ -64,10 +65,7 @@ export async function lintLatex(text: string, docType: 'latex' | 'markdown' = 'l
     }
 
     // Rules that need configuration
-    const config = {
-        LLCrefExceptions: ['line:', 'prob:', 'problem:'],
-        userDefinedRules: [],
-    };
+    const config = getConfig();
     for (const [ruleName, { rule, configKey }] of Object.entries(configuredRules)) {
         try {
             const diags = rule(vscodeDoc, txt, config[configKey]);

@@ -41,17 +41,18 @@ Here is the list of rules we detect.
 17. [LLJapaneseSpace](#lljapanesespace) (detect the lack of space, disabled by default)
 18. [LLLlGg](#llllgg) (detect `<<` and `>>`)
 19. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters, disabled by default)
-20. [LLPeriod](#llperiod) (detect `e.g.`)
-21. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
-22. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
-23. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
-24. [LLSortedCites](#llsortedcites) (detect unsorted cites)
-25. [LLT](#llt) (detect `^T`)
-26. [LLThousands](#llthousands) (detect `1,000` etc.)
-27. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
-28. [LLUnRef](#llunref) (detect unreferenced figure and table labels)
-29. [LLURL](#llurl) (detect unnecessary info in URLs)
-30. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
+20. [LLNonstandardNotation](#llnonstandardnotation) (detect nonstandard mathematical notations)
+21. [LLPeriod](#llperiod) (detect `e.g.`)
+22. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
+23. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
+24. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
+25. [LLSortedCites](#llsortedcites) (detect unsorted cites)
+26. [LLT](#llt) (detect `^T`)
+27. [LLThousands](#llthousands) (detect `1,000` etc.)
+28. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
+29. [LLUnRef](#llunref) (detect unreferenced figure and table labels)
+30. [LLURL](#llurl) (detect unnecessary info in URLs)
+31. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
 
 Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
@@ -285,6 +286,44 @@ For example, you can detect the following Japanese characters.
 ```txt
 あア亜、。
 ```
+
+### LLNonstandardNotation
+
+Detect nonstandard mathematical notations in `.tex` or `.md` files that are not commonly used in formal academic writing.
+
+This rule detects the following notations:
+
+#### \therefore and \because commands
+
+These symbols are not generally used in formal writing.
+
+Reference: [Wikipedia's "Therefore sign"](https://en.wikipedia.org/wiki/Therefore_sign)
+
+> While it is not generally used in formal writing, it is used in mathematics and shorthand.
+
+#### The word "iff"
+
+While commonly used in informal mathematical writing, "iff" (if and only if) should be written out fully in formal academic papers.
+
+Reference: [河東泰之「数学英語」](https://www.ms.u-tokyo.ac.jp/~yasuyuki/english2.htm).
+
+#### \fallingdotseq and \risingdotseq commands
+
+These are nonstandard notation symbols. \approx is preferred in formal writing.
+
+Reference: [河東泰之「数学英語」](https://www.ms.u-tokyo.ac.jp/~yasuyuki/english2.htm).
+
+#### {}_n C_k notation for combinations
+
+The notation `{}_n C_k` for combinations is often used in Japan, but not standard in international academic writing. According to the [Japanese Wikipedia article on combinations](https://ja.wikipedia.org/wiki/%E7%B5%84%E5%90%88%E3%81%9B_(%E6%95%B0%E5%AD%A6)):
+
+> ピエール・エリゴン（フランス語版）が1634年の『実用算術』で nCk の記号を定義した。ただし、この数は数学のあらゆる分野に頻繁に現れ、大抵の場合 $\binom{n}{k}$ と書かれる。
+
+(Pierre Hérigone defined the nCk notation in his 1634 work "Practical Arithmetic". However, this number appears frequently in all areas of mathematics and is usually written as $\binom{n}{k}$.)
+
+Use the standard binomial notation $\binom{n}{k}$ instead.
+
+This rule only detects exact matches to avoid false positives.
 
 ### LLPeriod
 

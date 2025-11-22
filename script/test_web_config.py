@@ -21,15 +21,17 @@ def load_package_json_config():
 
 
 def load_web_config():
-    """Load configuration from web/src/config.json."""
-    config_path = Path(__file__).parent.parent / "web" / "src" / "config.json"
+    """Load configuration from web/src/assets/config.json."""
+    config_path = (
+        Path(__file__).parent.parent / "web" / "src" / "assets" / "config.json"
+    )
     with open(config_path, "r", encoding="utf-8") as f:
         config_data = json.load(f)
     return config_data
 
 
 def test_web_config():
-    """Test consistency between package.json and web/src/config.json."""
+    """Test consistency between package.json and web/src/assets/config.json."""
     package_config = load_package_json_config()
     web_config = load_web_config()
 

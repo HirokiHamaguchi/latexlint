@@ -481,6 +481,34 @@ The following line contains non-ASCII characters.
 
 (You can write Japanese sentences as usual with upLaTeX.)
 
+\section{LLNonstandardNotation}
+
+\subsection{Therefore and Because}
+
+Not Standard?: $\therefore a = b$, $\because x > 0$\\
+Standard: Therefore, $a = b$. Because $x > 0$, $\ldots$.
+
+% OK: These should not be detected (commented out as they are undefined)
+% $\Therefore a = b$
+% $\Because x > 0$
+% $\thereforeThis$
+% $\becauseThen$
+
+\subsection{Iff}
+
+Not Standard?: This statement is true iff the condition holds.\\
+Standard: This statement is true if and only if the condition holds.
+
+\subsection{DotSeq}
+
+Not Standard?: $a \fallingdotseq b$, $x \risingdotseq y$\\
+Standard: $a \approx b$, $x \approx y$
+
+\subsection{Combination Notation}
+
+Not Standard?: ${}_n C_k$, ${}_n \mathrm{C}_k$\\
+Standard: $\binom{n}{k}$
+
 \section{LLPeriod}
 
 \begin{table}[H]

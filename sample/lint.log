@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.25)  19 NOV 2025 11:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.25)  22 NOV 2025 10:05
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -931,25 +931,25 @@ paex-type1/ipxt1-u54.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type
 69.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-u51.enc}{c
 :/texlive/2025/texmf-dist/fonts/enc/dvips/ipaex-type1/ipxt1-uff.enc}]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 577.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 577.
-
-<example-image.pdf, id=261, 321.2pt x 240.9pt>
-File: example-image.pdf Graphic file (type pdf)
-<use example-image.pdf>
-Package pdftex.def Info: example-image.pdf  used on input line 584.
-(pdftex.def)             Requested size: 167.3021pt x 125.47823pt.
-File: example-image.pdf Graphic file (type pdf)
-<use example-image.pdf>
-Package pdftex.def Info: example-image.pdf  used on input line 590.
-(pdftex.def)             Requested size: 167.3021pt x 125.47823pt.
-
-
 [7]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 605.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 605.
+
+<example-image.pdf, id=290, 321.2pt x 240.9pt>
+File: example-image.pdf Graphic file (type pdf)
+<use example-image.pdf>
+Package pdftex.def Info: example-image.pdf  used on input line 612.
+(pdftex.def)             Requested size: 167.3021pt x 125.47823pt.
+File: example-image.pdf Graphic file (type pdf)
+<use example-image.pdf>
+Package pdftex.def Info: example-image.pdf  used on input line 618.
+(pdftex.def)             Requested size: 167.3021pt x 125.47823pt.
+
 
 [8 <c:/texlive/2025/texmf-dist/tex/latex/mwe/example-image.pdf>]
 (sample/lint.bbl)
@@ -962,13 +962,13 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-19>
  ***********
 Package rerunfilecheck Info: File `lint.out' has not changed.
-(rerunfilecheck)             Checksum: 4825636038185895F31E57C28684F915;4194.
+(rerunfilecheck)             Checksum: ED388CF74CF014CA51A1A6DC77E588FC;4843.
  ) 
 Here is how much of TeX's memory you used:
- 24601 strings out of 467816
- 441913 string characters out of 5436431
+ 24611 strings out of 467816
+ 442063 string characters out of 5436431
  919602 words of memory out of 5000000
- 52795 multiletter control sequences out of 15000+600000
+ 52800 multiletter control sequences out of 15000+600000
  651750 words of font info for 128 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  88i,17n,91p,337b,1704s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1009,10 +1009,10 @@ f-dist/fonts/type1/public/amsfonts/latxfont/lcirclew.pfb><c:/texlive/2025/texmf
 -dist/fonts/type1/public/lm/lmss17.pfb><c:/texlive/2025/texmf-dist/fonts/type1/
 public/amsfonts/symbols/msbm10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/publ
 ic/cm-super/sfrm1000.pfb>
-Output written on sample/lint.pdf (10 pages, 423848 bytes).
+Output written on sample/lint.pdf (10 pages, 425730 bytes).
 PDF statistics:
- 524 PDF objects out of 1000 (max. 8388607)
- 402 compressed objects within 5 object streams
- 66 named destinations out of 1000 (max. 500000)
- 394 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 545 PDF objects out of 1000 (max. 8388607)
+ 423 compressed objects within 5 object streams
+ 71 named destinations out of 1000 (max. 500000)
+ 434 words of extra memory for PDF output out of 10000 (max. 10000000)
 

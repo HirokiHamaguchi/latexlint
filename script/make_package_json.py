@@ -46,6 +46,20 @@ def make_package_json():
         json.dump(package_data, f, indent=2, ensure_ascii=False)
         f.write("\n")
 
+    # Update web/src/assets/config.json
+    web_config_path = (
+        Path(__file__).parent.parent / "web" / "src" / "assets" / "config.json"
+    )
+    with open(web_config_path, encoding="utf-8") as f:
+        web_config_data = json.load(f)
+
+    web_disabled_rules_config = web_config_data["disabledRules"]
+    web_disabled_rules_config["items"]["enum"] = rule_names
+    web_disabled_rules_config["default"] = disabled_by_default
+    with open(web_config_path, "w", encoding="utf-8") as f:
+        json.dump(web_config_data, f, indent=4, ensure_ascii=False)
+        f.write("\n")
+
 
 if __name__ == "__main__":
     make_package_json()

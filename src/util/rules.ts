@@ -18,6 +18,7 @@ import LLHeading from '../LL/LLHeading';
 import LLJapaneseSpace from '../LL/LLJapaneseSpace';
 import LLLlGg from '../LL/LLLlGg';
 import LLNonASCII from '../LL/LLNonASCII';
+import LLNonstandardNotation from '../LL/LLNonstandardNotation';
 import LLPeriod from '../LL/LLPeriod';
 import LLRefEq from '../LL/LLRefEq';
 import LLSharp from '../LL/LLSharp';
@@ -54,6 +55,7 @@ export const standardRules = {
     LLJapaneseSpace,
     LLLlGg,
     LLNonASCII,
+    LLNonstandardNotation,
     LLPeriod,
     LLRefEq,
     LLSharp,

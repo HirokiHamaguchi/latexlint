@@ -1,0 +1,39 @@
+import * as vscode from 'vscode';
+import { messages } from '../util/constants';
+import ranges2diagnostics from '../util/ranges2diagnostics';
+
+export default function LLNonstandardNotation(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
+    const ranges: vscode.Range[] = [];
+
+    // Detect \therefore and \because (exact matches only)
+    for (const match of txt.matchAll(/\\(?:therefore|because)(?![a-zA-Z])/g)) {
+        const startPos = doc.positionAt(match.index);
+        const endPos = doc.positionAt(match.index + match[0].length);
+        ranges.push(new vscode.Range(startPos, endPos));
+    }
+
+    // Detect iff as a word (not as part of another word like "different")
+    for (const match of txt.matchAll(/(?<![a-zA-Z])iff(?![a-zA-Z])/g)) {
+        const startPos = doc.positionAt(match.index);
+        const endPos = doc.positionAt(match.index + match[0].length);
+        ranges.push(new vscode.Range(startPos, endPos));
+    }
+
+    // Detect \fallingdotseq and \risingdotseq
+    for (const match of txt.matchAll(/\\(?:fallingdotseq|risingdotseq)(?![a-zA-Z])/g)) {
+        const startPos = doc.positionAt(match.index);
+        const endPos = doc.positionAt(match.index + match[0].length);
+        ranges.push(new vscode.Range(startPos, endPos));
+    }
+
+    // Detect {}_n C_k and {}_n \mathrm{C}_k (exact matches)
+    for (const match of txt.matchAll(/\{\}_n (?:\\mathrm\{C\}|C)_k/g)) {
+        const startPos = doc.positionAt(match.index);
+        const endPos = doc.positionAt(match.index + match[0].length);
+        ranges.push(new vscode.Range(startPos, endPos));
+    }
+
+    const code = "LLNonstandardNotation";
+    const message = messages[code];
+    return ranges2diagnostics(doc, code, message, ranges);
+}

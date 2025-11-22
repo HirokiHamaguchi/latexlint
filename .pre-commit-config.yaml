@@ -1,9 +1,0 @@
-repos:
-  - repo: local
-    hooks:
-      - id: sync-readme
-        name: Check README.md sync
-        entry: bash -c 'set -e; cd web && npm run copy-readme 2>&1'
-        language: system
-        files: ^README\.md$
-        pass_filenames: false

@@ -5,9 +5,8 @@
   "type": "module",
   "license": "Apache-2.0",
   "scripts": {
-    "copy-readme": "node scripts/copy-readme.js",
-    "dev": "npm run copy-readme && vite",
-    "build": "npm run copy-readme && tsc -b && vite build",
+    "dev": "vite",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",

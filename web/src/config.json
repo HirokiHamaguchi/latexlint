@@ -16,7 +16,7 @@
             "prob:",
             "problem:"
         ],
-        "description": "Exception prefixes for \\ref{} that should not trigger LLCref warnings (e.g., \\ref{line:...})"
+        "description": "Exception prefixes for LLCref (e.g., \\ref{line:...})"
     },
     "disabledRules": {
         "type": "array",

@@ -98,7 +98,7 @@ export const severity: Record<LLCode, vscode.DiagnosticSeverity> = {
     LLNonstandardNotation: INFO,
     LLPeriod: WARN,
     LLRefEq: WARN,
-    LLSharp: WARN,
+    LLSharp: INFO,
     LLSI: WARN,
     LLSortedCites: INFO,
     LLT: WARN,

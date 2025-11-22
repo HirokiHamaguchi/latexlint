@@ -1,5 +1,5 @@
 {
   "message": "If this sharp is for a number sign, consider using \\\\#.",
-  "severity": "WARN",
+  "severity": "INFO",
   "lint_test_count": 4
 }

@@ -17,6 +17,7 @@ import rehypeRaw from 'rehype-raw';
 import 'github-markdown-css/github-markdown-light.css';
 import readmeContent from './assets/README.md?raw';
 import vocabularyData from './LLTextLint/my_vocabulary.json';
+import { useEffect, useRef } from 'react';
 
 interface AboutModalProps {
     isOpen: boolean;
@@ -52,6 +53,39 @@ const SampleImage = ({ src, alt, color }: { src: string; alt: string; color: str
 );
 
 export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutModalProps) {
+    const readmeRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (isOpen && defaultTab === 'readme') {
+            // Wait for the dialog and markdown to render
+            setTimeout(() => {
+                const hash = window.location.hash.slice(1); // Remove '#'
+                if (hash && readmeRef.current) {
+                    const targetId = hash.toLowerCase();
+                    // Try to find element by id first
+                    let element = readmeRef.current.querySelector(`#${targetId}`);
+
+                    // If not found, try to find by heading text
+                    if (!element) {
+                        const headings = readmeRef.current.querySelectorAll('h1, h2, h3, h4, h5, h6');
+                        Array.from(headings).forEach((heading) => {
+                            const headingText = heading.textContent?.toLowerCase().replace(/\s+/g, '');
+                            if (headingText === targetId && !element) {
+                                element = heading;
+                            }
+                        });
+                    }
+
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        // Clear the hash from URL after scrolling
+                        window.history.replaceState(null, '', window.location.pathname + window.location.search);
+                    }
+                }
+            }, 300);
+        }
+    }, [isOpen, defaultTab]);
+
     return (
         <Dialog.Root open={isOpen} onOpenChange={(e) => !e.open && onClose()} size="xl">
             <Dialog.Backdrop />
@@ -109,7 +143,7 @@ export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutMo
                             </Tabs.Content>
 
                             <Tabs.Content value="readme" pt={4}>
-                                <div className="markdown-body">
+                                <div className="markdown-body" ref={readmeRef}>
                                     <Markdown
                                         remarkPlugins={[remarkGfm]}
                                         rehypePlugins={[rehypeRaw]}

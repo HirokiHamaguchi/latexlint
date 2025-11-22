@@ -6,11 +6,11 @@ import type * as Monaco from 'monaco-editor';
 interface MonacoLatexEditorProps {
     value: string;
     onChange: (value: string) => void;
-    diagnostics?: Monaco.editor.IMarkerData[];
-    minHeight?: string;
+    diagnostics: Monaco.editor.IMarkerData[];
+    onOpenAboutWithHash: (hash: string) => void;
 }
 
-export function MonacoLatexEditor({ value, onChange, diagnostics }: MonacoLatexEditorProps) {
+export function MonacoLatexEditor({ value, onChange, diagnostics, onOpenAboutWithHash }: MonacoLatexEditorProps) {
     const editorRef = useRef<Monaco.editor.IStandaloneCodeEditor | null>(null);
     const monacoRef = useRef<typeof Monaco | null>(null);
 
@@ -63,6 +63,18 @@ export function MonacoLatexEditor({ value, onChange, diagnostics }: MonacoLatexE
             wordWrap: 'on',
             automaticLayout: true,
         });
+
+        monaco.editor.registerLinkOpener({
+            open: (resource) => {
+                const url = resource.toString();
+                const hashMatch = url.match(/#(.+)$/);
+                if (hashMatch && url.includes(window.location.origin)) {
+                    onOpenAboutWithHash(hashMatch[1]);
+                    return true; // Prevent default behavior
+                }
+                return false;
+            }
+        });
     };
 
     const handleEditorChange = (value: string | undefined) => {
@@ -71,7 +83,7 @@ export function MonacoLatexEditor({ value, onChange, diagnostics }: MonacoLatexE
 
     // Update markers when diagnostics change
     useEffect(() => {
-        if (!editorRef.current || !monacoRef.current || !diagnostics) return;
+        if (!editorRef.current || !monacoRef.current) return;
 
         const model = editorRef.current.getModel();
         if (!model) return;

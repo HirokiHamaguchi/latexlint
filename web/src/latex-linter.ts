@@ -1,7 +1,7 @@
 import * as vscode from './vscode-mock';
 import { alignRules, standardRules, configuredRules } from '@latexlint/util/rules';
 import enumAlignEnvs from '@latexlint/util/enumAlignEnvs';
-import type * as monaco from 'monaco-editor';
+import * as monaco from 'monaco-editor';
 import { LLTextLint } from './LLTextLint/main';
 import { getConfig } from './config';
 
@@ -19,6 +19,16 @@ function convertToMonacoMarker(diag: import('vscode').Diagnostic): monaco.editor
         default: severity = 2; break; // Default to Info
     }
 
+    const code_value = String(typeof diag.code === "object" ? diag.code.value : diag.code);
+    let code_target = monaco.Uri.parse('');
+    if (typeof diag.code === "object" && diag.code.target) {
+        const targetUrl = diag.code.target.toString();
+        const hashMatch = targetUrl.match(/#(.+)$/);
+        if (hashMatch) {
+            code_target = monaco.Uri.parse(`${window.location.origin}${window.location.pathname}#${hashMatch[1]}`);
+        }
+    }
+
     return {
         startLineNumber: diag.range.start.line + 1, // Monaco uses 1-based line numbers
         startColumn: diag.range.start.character + 1, // Monaco uses 1-based column numbers
@@ -27,7 +37,7 @@ function convertToMonacoMarker(diag: import('vscode').Diagnostic): monaco.editor
         message: diag.message,
         severity: severity,
         source: diag.source,
-        code: String(diag.code)
+        code: { value: code_value, target: code_target }
     };
 }
 

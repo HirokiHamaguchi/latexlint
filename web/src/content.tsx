@@ -284,6 +284,14 @@ export function Content() {
                             value={text}
                             onChange={handleTextChange}
                             diagnostics={diagnostics}
+                            onOpenAboutWithHash={(hash) => {
+                                setAboutDefaultTab('readme');
+                                setIsAboutOpen(true);
+                                // Trigger scroll after modal opens
+                                setTimeout(() => {
+                                    window.location.hash = hash;
+                                }, 100);
+                            }}
                         />
                     </VStack>
                 </Box>

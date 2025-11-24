@@ -14,6 +14,10 @@ All notable changes to the "latexlint" extension will be documented in this file
 - https://salon.mainichi-kotoba.jp/archives/95
 - youtube, github
 
+## 1.5.17 - 2025-11-24
+
+- Don't process `LLTextLint` if no Japanese hiragana characters are found.
+
 ## 1.5.16 - 2025-11-22
 
 - Update about `LLTextLint`.

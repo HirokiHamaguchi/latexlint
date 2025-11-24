@@ -15,7 +15,7 @@ import {
     SimpleGrid,
     Checkbox,
 } from '@chakra-ui/react';
-import { lintLatex } from './latex-linter';
+import { lintLatex, preloadTextLintDictionary } from './latex-linter';
 import { type LintConfig, defaultConfig, setConfig, configMetadata } from './config';
 import type * as Monaco from 'monaco-editor';
 import sampleMdBefore from '../sample/sample_before.md?raw';
@@ -47,7 +47,7 @@ export function Content() {
         setConfig(newConfig);
     };
 
-    const runLint = async (inputText: string, type: DocType) => {
+    const runLint = async (inputText: string, type: DocType, skipTextLint: boolean = false) => {
         if (!inputText.trim()) {
             setDiagnostics([]);
             setIsLinting(false);
@@ -57,7 +57,7 @@ export function Content() {
         setIsLinting(true);
         setTimeout(async () => {
             try {
-                const results = await lintLatex(inputText, type);
+                const results = await lintLatex(inputText, type, skipTextLint);
                 setDiagnostics(results);
             } catch (error) {
                 console.error('Linting error:', error);
@@ -90,7 +90,8 @@ export function Content() {
     };
 
     useEffect(() => {
-        runLint(sampleTexBefore, 'latex');
+        runLint(sampleTexBefore, 'latex', true);
+        preloadTextLintDictionary();
     }, []);
 
     const getDiagnosticsSummary = () => {

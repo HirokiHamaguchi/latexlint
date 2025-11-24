@@ -85,9 +85,9 @@ async function getTokenizer(): Promise<Tokenizer> {
 }
 
 export async function parseSentence(text: string): Promise<Token[]> {
-    if (!text) return [];
-
     const tokenizer = await getTokenizer();
+
+    if (!text) return [];
     const kuromojiTokens = tokenizer.tokenize(text);
 
     const tokens: Token[] = [];

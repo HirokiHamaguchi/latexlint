@@ -13,6 +13,25 @@ import { checkNoSuccessiveWord } from "@latexlint/TextLint/no_successive_word";
 import { DiagnosticSeverity, Range } from "./vscode-mock";
 import { getCodeWithURI } from '@latexlint/util/getCodeWithURI';
 
+// TextLint readiness state
+let isTextLintReady = false;
+let textLintPreloadPromise: Promise<void> | null = null;
+
+export async function preloadTextLintDictionary(): Promise<void> {
+    if (isTextLintReady || textLintPreloadPromise) {
+        return textLintPreloadPromise || Promise.resolve();
+    }
+
+    textLintPreloadPromise = parseSentence('').then(() => {
+        isTextLintReady = true;
+    }).catch(error => {
+        console.error('Failed to preload TextLint dictionary:', error);
+        textLintPreloadPromise = null;
+    });
+
+    return textLintPreloadPromise;
+}
+
 function convertToMonacoMarker(diag: import('vscode').Diagnostic): monaco.editor.IMarkerData {
     // Convert VS Code DiagnosticSeverity to Monaco MarkerSeverity
     // VS Code: Error=0, Warning=1, Information=2, Hint=3
@@ -49,7 +68,11 @@ function convertToMonacoMarker(diag: import('vscode').Diagnostic): monaco.editor
 }
 
 // Main lint function for web version
-export async function lintLatex(text: string, docType: 'latex' | 'markdown' = 'latex'): Promise<monaco.editor.IMarkerData[]> {
+export async function lintLatex(
+    text: string,
+    docType: 'latex' | 'markdown' = 'latex',
+    skipTextLintIfNotReady: boolean = false
+): Promise<monaco.editor.IMarkerData[]> {
     const ext = docType === 'latex' ? '.tex' : '.md';
     const doc = vscode.createMockTextDocument(text, vscode.Uri.file(`untitled${ext}`));
     const txt = text;
@@ -98,7 +121,7 @@ export async function lintLatex(text: string, docType: 'latex' | 'markdown' = 'l
     }
 
     // LLTextLint checks
-    if (!disabledRules.includes('LLTextLint')) {
+    if (!disabledRules.includes('LLTextLint') && (!skipTextLintIfNotReady || isTextLintReady)) {
         try {
             // Parse the text into tokens
             const allTokens = await parseSentence(text);

@@ -101,7 +101,7 @@ export function MonacoLatexEditor({ value, onChange, diagnostics, onOpenAboutWit
         };
     }, [diagnostics]);
 
-    const minHeight = "80vh";
+    const minHeight = "80svh";
 
     return (
         <Box

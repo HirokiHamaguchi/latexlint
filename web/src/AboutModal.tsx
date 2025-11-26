@@ -158,8 +158,8 @@ export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutMo
     return (
         <Dialog.Root open={isOpen} onOpenChange={(e) => !e.open && onClose()} size="xl">
             <Dialog.Backdrop />
-            <Dialog.Positioner h="100vh" display="flex" alignItems="center" justifyContent="center" overflowY="hidden">
-                <Dialog.Content maxW="6xl" maxH="90vh" h="auto" display="flex" flexDirection="column">
+            <Dialog.Positioner h="100dvh" display="flex" alignItems="center" justifyContent="center" overflowY="hidden">
+                <Dialog.Content maxW="6xl" maxH="90dvh" h="auto" display="flex" flexDirection="column">
                     <Dialog.Header>
                         <Dialog.Title fontSize="xl" fontWeight="bold">
                             About LaTeX Lint

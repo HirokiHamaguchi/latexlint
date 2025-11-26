@@ -70,8 +70,8 @@ function convertToMonacoMarker(diag: import('vscode').Diagnostic): monaco.editor
 // Main lint function for web version
 export async function lintLatex(
     text: string,
-    docType: 'latex' | 'markdown' = 'latex',
-    skipTextLintIfNotReady: boolean = false
+    docType: 'latex' | 'markdown',
+    forceTextLint: boolean
 ): Promise<monaco.editor.IMarkerData[]> {
     const ext = docType === 'latex' ? '.tex' : '.md';
     const doc = vscode.createMockTextDocument(text, vscode.Uri.file(`untitled${ext}`));
@@ -121,32 +121,36 @@ export async function lintLatex(
     }
 
     // LLTextLint checks
-    if (!disabledRules.includes('LLTextLint') && (!skipTextLintIfNotReady || isTextLintReady)) {
-        try {
-            // Parse the text into tokens
-            const allTokens = await parseSentence(text);
+    if (!disabledRules.includes('LLTextLint')) {
+        if (isTextLintReady || forceTextLint) {
+            try {
+                // Parse the text into tokens
+                const allTokens = await parseSentence(text);
 
-            // Run all LLTextLint checks and collect error results
-            const errorResults: LLTextLintErrorResult[] = [
-                ...checkNoDroppingI(allTokens),
-                ...checkNoDroppingRa(allTokens),
-                ...checkTariTari(allTokens),
-                ...checkNoSuccessiveWord(allTokens),
-                ...checkOverlookedTypo(text),
-            ];
+                // Run all LLTextLint checks and collect error results
+                const errorResults: LLTextLintErrorResult[] = [
+                    ...checkNoDroppingI(allTokens),
+                    ...checkNoDroppingRa(allTokens),
+                    ...checkTariTari(allTokens),
+                    ...checkNoSuccessiveWord(allTokens),
+                    ...checkOverlookedTypo(text),
+                ];
 
-            // Convert to Diagnostics
-            errorResults.map(error => {
-                diagnostics.push({
-                    code: getCodeWithURI("LLTextLint"),
-                    message: error.message,
-                    range: new Range(doc.positionAt(error.startOffset), doc.positionAt(error.endOffset)),
-                    severity: DiagnosticSeverity.Information,
-                    source: "LaTeX Lint",
+                // Convert to Diagnostics
+                errorResults.map(error => {
+                    diagnostics.push({
+                        code: getCodeWithURI("LLTextLint"),
+                        message: error.message,
+                        range: new Range(doc.positionAt(error.startOffset), doc.positionAt(error.endOffset)),
+                        severity: DiagnosticSeverity.Information,
+                        source: "LaTeX Lint",
+                    });
                 });
-            });
-        } catch (error) {
-            console.warn('LLTextLint failed:', error);
+            } catch (error) {
+                console.warn('LLTextLint failed:', error);
+            }
+        } else {
+            console.log("Skipping LLTextLint");
         }
     }
 

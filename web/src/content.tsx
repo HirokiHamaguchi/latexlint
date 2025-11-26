@@ -25,6 +25,8 @@ import { AboutModal } from './AboutModal';
 import { LuChevronRight } from "react-icons/lu";
 
 type DocType = 'latex' | 'markdown';
+type LintingState = 'idle' | 'linting' | 'complete';
+
 const samples: Record<DocType, string> = {
     latex: sampleTexBefore,
     markdown: sampleMdBefore,
@@ -37,9 +39,10 @@ export function Content() {
     const [diagnostics, setDiagnostics] = useState<Monaco.editor.IMarkerData[]>([]);
     const [isAboutOpen, setIsAboutOpen] = useState(false);
     const [aboutDefaultTab, setAboutDefaultTab] = useState<string>('overview');
-    const [isLinting, setIsLinting] = useState(true);
+    const [lintingState, setLintingState] = useState<LintingState>('idle');
     const [isConfigOpen, setIsConfigOpen] = useState(false);
     const [config, setConfigState] = useState<LintConfig>(defaultConfig);
+    const [isEditorReady, setIsEditorReady] = useState(false);
     const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     const updateConfig = (newConfig: LintConfig) => {
@@ -47,23 +50,23 @@ export function Content() {
         setConfig(newConfig);
     };
 
-    const runLint = async (inputText: string, type: DocType, skipTextLint: boolean = false) => {
+    const runLint = async (inputText: string, type: DocType, forceTextLint: boolean) => {
         if (!inputText.trim()) {
             setDiagnostics([]);
-            setIsLinting(false);
+            setLintingState('complete');
             return;
         }
 
-        setIsLinting(true);
+        setLintingState('linting');
         setTimeout(async () => {
             try {
-                const results = await lintLatex(inputText, type, skipTextLint);
+                const results = await lintLatex(inputText, type, forceTextLint);
                 setDiagnostics(results);
             } catch (error) {
                 console.error('Linting error:', error);
                 setDiagnostics([]);
             } finally {
-                setIsLinting(false);
+                setLintingState('complete');
             }
         }, 100);
     };
@@ -72,7 +75,7 @@ export function Content() {
         setText(newText);
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
         timeoutRef.current = setTimeout(() => {
-            runLint(newText, docType);
+            runLint(newText, docType, true);
         }, 500);
     };
 
@@ -86,16 +89,30 @@ export function Content() {
             textToLint = samples.latex;
             setText(textToLint);
         }
-        runLint(textToLint, newType);
+        runLint(textToLint, newType, true);
     };
 
     useEffect(() => {
-        runLint(sampleTexBefore, 'latex', true);
         preloadTextLintDictionary();
     }, []);
 
+    useEffect(() => {
+        if (isEditorReady) {
+            runLint(sampleTexBefore, 'latex', false);
+        }
+    }, [isEditorReady]);
+
     const getDiagnosticsSummary = () => {
-        if (isLinting) {
+        if (lintingState === 'idle') {
+            return {
+                base: "ℹ️ Linting not started",
+                message: "",
+                color: "gray.600",
+                clickable: false
+            };
+        }
+
+        if (lintingState === 'linting') {
             return {
                 base: "🔄 Checking...",
                 message: "(LaTeX Lint is analyzing your code...)",
@@ -221,7 +238,7 @@ export function Content() {
                                                                             ? [...config[key], option]
                                                                             : config[key].filter((v) => v !== option);
                                                                         updateConfig({ ...config, [key]: newValue });
-                                                                        runLint(text, docType);
+                                                                        runLint(text, docType, true);
                                                                     }}
                                                                 >
                                                                     <Checkbox.HiddenInput />
@@ -242,7 +259,7 @@ export function Content() {
                                                                 .map((s) => s.trim())
                                                                 .filter((s) => s);
                                                             updateConfig({ ...config, [key]: value });
-                                                            runLint(text, docType);
+                                                            runLint(text, docType, true);
                                                         }}
                                                         placeholder="word1, word2, word3"
                                                         size="sm"
@@ -283,8 +300,9 @@ export function Content() {
                         </Text>
                         <MonacoLatexEditor
                             value={text}
-                            onChange={handleTextChange}
                             diagnostics={diagnostics}
+                            onChange={handleTextChange}
+                            onEditorReady={() => setIsEditorReady(true)}
                             onOpenAboutWithHash={(hash) => {
                                 setAboutDefaultTab('readme');
                                 setIsAboutOpen(true);

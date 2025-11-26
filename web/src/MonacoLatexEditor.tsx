@@ -5,12 +5,13 @@ import type * as Monaco from 'monaco-editor';
 
 interface MonacoLatexEditorProps {
     value: string;
-    onChange: (value: string) => void;
     diagnostics: Monaco.editor.IMarkerData[];
+    onChange: (value: string) => void;
+    onEditorReady: () => void;
     onOpenAboutWithHash: (hash: string) => void;
 }
 
-export function MonacoLatexEditor({ value, onChange, diagnostics, onOpenAboutWithHash }: MonacoLatexEditorProps) {
+export function MonacoLatexEditor({ value, diagnostics, onChange, onEditorReady, onOpenAboutWithHash }: MonacoLatexEditorProps) {
     const editorRef = useRef<Monaco.editor.IStandaloneCodeEditor | null>(null);
     const monacoRef = useRef<typeof Monaco | null>(null);
 
@@ -75,6 +76,8 @@ export function MonacoLatexEditor({ value, onChange, diagnostics, onOpenAboutWit
                 return false;
             }
         });
+
+        onEditorReady();
     };
 
     const handleEditorChange = (value: string | undefined) => {

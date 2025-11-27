@@ -153,7 +153,7 @@ export function Content() {
         <Container maxW="container.xl" py={8} as="main">
             <VStack gap={4} align="stretch">
                 <Box textAlign="center" as="header">
-                    <HStack justify="center" align="center" mb={4}>
+                    <VStack justify="center" align="center" mb={4}>
                         <Link href={import.meta.env.BASE_URL} _hover={{ textDecoration: 'none' }}>
                             <HStack align="center">
                                 <Image
@@ -162,12 +162,15 @@ export function Content() {
                                     boxSize="1.8em"
                                     mr={2}
                                 />
-                                <Heading as="h1" size="2xl" color="gray.700" _hover={{ color: 'blue.600' }} transition="color 0.2s">
-                                    LaTeX Lint - Online LaTeX Code Checker
+                                <Heading as="h1" size="2xl" color="#333333" _hover={{ color: 'blue.600' }} transition="color 0.2s">
+                                    <Text fontFamily="Times New Roman, serif">LaTeX Lint</Text>
                                 </Heading>
                             </HStack>
                         </Link>
-                    </HStack>
+                        <Text fontSize="lg" color="gray.500">
+                            Online LaTeX Code Checker
+                        </Text>
+                    </VStack>
 
 
                     <HStack justify="center" gap={6} flexWrap="wrap" fontSize="sm" as="nav" aria-label="Main navigation">

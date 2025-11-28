@@ -15,6 +15,7 @@ import {
 } from '@chakra-ui/react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import remarkSlug from 'remark-slug';
 import rehypeRaw from 'rehype-raw';
 import 'github-markdown-css/github-markdown-light.css';
 import readmeContent from './assets/README.md?raw';
@@ -215,7 +216,8 @@ export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutMo
                             <Tabs.Content value="readme" pt={4}>
                                 <div className="markdown-body" ref={readmeRef}>
                                     <Markdown
-                                        remarkPlugins={[remarkGfm]}
+                                        // @ts-expect-error: Type '() => void | Transformer<Root, Root>' is not assignable to type 'Pluggable'.
+                                        remarkPlugins={[remarkGfm, remarkSlug]}
                                         rehypePlugins={[rehypeRaw]}
                                         components={{
                                             img: ({ src, ...props }) => {

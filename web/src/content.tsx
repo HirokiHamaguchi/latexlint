@@ -157,7 +157,7 @@ export function Content() {
                         <Link href={import.meta.env.BASE_URL} _hover={{ textDecoration: 'none' }}>
                             <HStack align="center">
                                 <Image
-                                    src="https://github.com/HirokiHamaguchi/latexlint/blob/master/images/lintIconLight.svg?raw=true"
+                                    src="lintIconLight_copied.svg"
                                     alt="LaTeX Lint Icon"
                                     boxSize="1.8em"
                                     mr={2}

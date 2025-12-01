@@ -26,7 +26,7 @@ def getMarkDown():
         for line in lines:
             if line.startswith("### LL"):
                 basename = line.split(" ")[1].strip()
-            if "in `.tex` or `.md` files" in line:
+            if "in `.tex` and `.md` files" in line:
                 isForWhat[basename] = "both"
             if "in `.tex` files" in line:
                 isForWhat[basename] = "latex"

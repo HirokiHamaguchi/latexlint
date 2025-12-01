@@ -304,7 +304,7 @@ export interface Location {
 }
 
 // Helper function to create TextDocument from plain text
-export function createMockTextDocument(content: string, uri: Uri): TextDocument {
+export function createMockTextDocument(content: string, uri: Uri, languageId: string): TextDocument {
     const lines = content.split('\n');
 
     const offsetAt = (position: Position): number => {
@@ -331,7 +331,7 @@ export function createMockTextDocument(content: string, uri: Uri): TextDocument 
         uri,
         fileName: uri.fsPath,
         isUntitled: uri.scheme !== 'file',
-        languageId: 'latex',
+        languageId: languageId,
         version: 1,
         isDirty: false,
         isClosed: false,

@@ -5,14 +5,20 @@ All notable changes to the "latexlint" extension will be documented in this file
 ## [Unreleased]
 
 - `LLNonRef`: Detect non-referenced figures with caption.
-- `LLSetBar`: Detect `mid` in `\left` and `\right`.
-- `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. Disabled by default.
-- Replace Dollars (at Other folder).
+- Make a tab containing latex tips:
+  - `LLSetBar`: Detect `mid` in `\left` and `\right`.
+  - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. Disabled by default.
 - et. al. is incorrect. Use `\emph{et al.}` instead.
 - my_vocabulary.jsonをgoogle spreadsheetで管理するように変更。
-- https://japanknowledge.com/articles/blognihongo/entry.html?entryid=489
-- https://salon.mainichi-kotoba.jp/archives/95
-- youtube, github
+- https://salon.mainichi-kotoba.jp/archives/95 圧倒的に弱いなど
+- Youtube, Github
+- enhance rules so that we can apply them to markdown files.
+- \begin{lstlisting} \begin{verbatim}
+
+## 1.5.18 - 2025-12-01
+
+- Fix bug in web (unrecognized languageId)
+- `LLColonEqq`: Now works with markdown files in addition to LaTeX files.
 
 ## 1.5.17 - 2025-11-24
 

@@ -3,7 +3,7 @@
 
 ### LLAlignSingleLine
 
-Detect `align` environment without `\\` in `.tex` or `.md` files.
+Detect `align` environment without `\\` in `.tex` and `.md` files.
 You should likely use the `equation` environment.
 
 ![rules/LLAlignSingleLine](rules/LLAlignSingleLine/LLAlignSingleLine.png)

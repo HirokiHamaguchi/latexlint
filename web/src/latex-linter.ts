@@ -74,7 +74,7 @@ export async function lintLatex(
     forceTextLint: boolean
 ): Promise<monaco.editor.IMarkerData[]> {
     const ext = docType === 'latex' ? '.tex' : '.md';
-    const doc = vscode.createMockTextDocument(text, vscode.Uri.file(`untitled${ext}`));
+    const doc = vscode.createMockTextDocument(text, vscode.Uri.file(`untitled${ext}`), docType === 'latex' ? 'latex' : 'markdown');
     const txt = text;
     const alignLikeEnvs = enumAlignEnvs(txt, doc.positionAt, console.warn);
 

@@ -59,7 +59,7 @@ Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint
 
 ### LLAlignAnd
 
-Detect `=&` in `.tex` or `.md` files.
+Detect `=&` in `.tex` and `.md` files.
 Use `&=` or `={}&` in the `align` environment to avoid relation spacing error.
 
 ![rules/LLAlignAnd](rules/LLAlignAnd/LLAlignAnd.png)
@@ -72,12 +72,12 @@ As a limitation of this extension, there are some false positives, such as `&=` 
 
 ### LLAlignEnd
 
-Detect `align`, `gather`, and other environments end with `\\` in `.tex` or `.md` files.
+Detect `align`, `gather`, and other environments end with `\\` in `.tex` and `.md` files.
 This `\\` can be unnecessary.
 
 ### LLAlignSingleLine
 
-Detect `align` environment without `\\` in `.tex` or `.md` files.
+Detect `align` environment without `\\` in `.tex` and `.md` files.
 You should likely use the `equation` environment.
 
 ![rules/LLAlignSingleLine](rules/LLAlignSingleLine/LLAlignSingleLine.png)
@@ -90,14 +90,14 @@ You can rename the command by [LaTeX Lint: Rename Command or Label](#latex-lint-
 
 ### LLArticle
 
-Detect wrong article usage in `.tex` or `.md` files.
+Detect wrong article usage in `.tex` and `.md` files.
 For example, `A $n$-dimensional` should be `An $n$-dimensional` (We might add more patterns in the future).
 
 Such error cannot be detected by grammar checkers such as Grammarly, since it contains a math equation.
 
 ### LLBig
 
-Detect `\cap_`, `\cup_`, `\odot_`, `\oplus_`, `\otimes_`, `\sqcup_`, `uplus_`, `\vee_`, and `\wedge_` in `.tex` or `.md` files.
+Detect `\cap_`, `\cup_`, `\odot_`, `\oplus_`, `\otimes_`, `\sqcup_`, `uplus_`, `\vee_`, and `\wedge_` in `.tex` and `.md` files.
 
 You should likely use `\bigcap`, `\bigcup`, `\bigodot`, `\bigoplus`, `\bigotimes`, `\bigsqcup`, `\biguplus`, `\bigvee`, and `\bigwedge` instead.
 
@@ -107,7 +107,7 @@ You should likely use `\bigcap`, `\bigcup`, `\bigodot`, `\bigoplus`, `\bigotimes
 
 ### LLBracketCurly
 
-Detect `\max{` and `\min{` in `.tex` or `.md` files.
+Detect `\max{` and `\min{` in `.tex` and `.md` files.
 You should likely use `\max(` and `\min(` instead, or add a space after `\max` or `\min` to clarify.
 
 ![rules/LLBracketCurly](rules/LLBracketCurly/LLBracketCurly.png)
@@ -121,14 +121,14 @@ Clarify the scope of the superscript and subscript by adding `{}` or a space.
 
 ### LLBracketRound
 
-Detect `\sqrt(`, `^(`, and `_(` in `.tex` or `.md` files.
+Detect `\sqrt(`, `^(`, and `_(` in `.tex` and `.md` files.
 You should likely use `\sqrt{`, `^{`, and `_{` instead.
 
 ![rules/LLBracketRound](rules/LLBracketRound/LLBracketRound.png)
 
 ### LLColonEqq
 
-Detect `:=`, `=:`, `::=`, and `=::` in `.tex` files.
+Detect `:=`, `=:`, `::=`, and `=::` in `.tex` and `.md` files.
 You should likely use `\coloneqq`, `\eqqcolon`, `\Coloneqq`, and `\Eqqcolon` in the [mathtools](https://ctan.org/pkg/mathtools) package instead.
 
 ![rules/LLColonEqq](rules/LLColonEqq/LLColonEqq.png)
@@ -139,7 +139,7 @@ The colon is slightly too low in `:=`, but vertically centered in `\coloneqq` ac
 
 ### LLColonForMapping
 
-Detect `:` which seems to be used for mapping in `.tex` or `.md` files.
+Detect `:` which seems to be used for mapping in `.tex` and `.md` files.
 You likely want to use `\colon` instead.
 
 ![rules/LLColonForMapping](rules/LLColonForMapping/LLColonForMapping.png)
@@ -173,7 +173,7 @@ You can also use `\enquote{XXX}` with the [csquotes](https://ctan.org/pkg/csquot
 
 ### LLENDash
 
-Detect the dubious use of hyphens in `.tex` or `.md` files.
+Detect the dubious use of hyphens in `.tex` and `.md` files.
 You should likely use `--` for en-dash and `---` for em-dash.
 
 ![rules/LLENDash](rules/LLENDash/LLENDash.png)
@@ -201,7 +201,7 @@ We assume that this represents someone's name.
 
 ### LLEqnarray
 
-Detect `eqnarray` environment in `.tex` or `.md` files.
+Detect `eqnarray` environment in `.tex` and `.md` files.
 You should likely use the `align` environment instead.
 
 It is known that the `eqnarray` environment is [not recommended](https://texfaq.org/FAQ-eqnarray) because it has some spacing issues.
@@ -227,12 +227,12 @@ The rule checks the following heading levels (in order):
 
 ### LLJapaneseSpace
 
-Detect the lack of space between Japanese characters and math equations in `.tex` or `.md` files.
+Detect the lack of space between Japanese characters and math equations in `.tex` and `.md` files.
 By default, this rule is disabled by `latexlint.disabledRules` in `settings.json`.
 
 ### LLLlGg
 
-Detect `<<` and `>>` in `.tex` or `.md` files.
+Detect `<<` and `>>` in `.tex` and `.md` files.
 You should likely use `\ll` and `\gg` instead.
 
 ![rules/LLLlGg](rules/LLLlGg/LLLlGg.png)
@@ -245,7 +245,7 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 
 ### LLNonASCII
 
-Detect all fullwidth ASCII characters in `.tex` or `.md` files.
+Detect all fullwidth ASCII characters in `.tex` and `.md` files.
 
 We detect the following characters.
 
@@ -328,7 +328,7 @@ This rule only detects exact matches to avoid false positives.
 
 ### LLPeriod
 
-Detect `e.g.` in `.tex` or `.md` files.
+Detect `e.g.` in `.tex` and `.md` files.
 You should likely add a comma like `e.g.,` or use `e.g.\` to avoid spacing issues.
 
 ![rules/LLPeriod](rules/LLPeriod/LLPeriod.png)
@@ -344,7 +344,7 @@ This command automatically adds parentheses around the reference.
 
 ### LLSharp
 
-Detect `\sharp` in `.tex` or `.md` files.
+Detect `\sharp` in `.tex` and `.md` files.
 You should likely use `\#` instead for the [number sign](https://en.wikipedia.org/wiki/Number_sign).
 
 ![rules/LLSharp](rules/LLSharp/LLSharp.png)
@@ -388,7 +388,7 @@ This rule only applies when:
 
 ### LLT
 
-Detect `^T` in `.tex` or `.md` files.
+Detect `^T` in `.tex` and `.md` files.
 You likely want to use `^\top` or `^\mathsf{T}` instead to represent the transpose of a matrix or a vector.
 
 ![rules/LLT](rules/LLT/LLT.png)
@@ -399,7 +399,7 @@ Otherwise, we cannot distinguish between the transpose and the power by a variab
 
 ### LLTextLint
 
-Detect dubious text in `.tex` or `.md` files.
+Detect dubious text in `.tex` and `.md` files.
 
 Currently, it only checks japanese texts, and full features are available only in web version.
 
@@ -442,7 +442,7 @@ Reference all the figures and tables you label to ensure there are no unused lab
 
 ### LLURL
 
-Detect URLs containing query strings in `.tex` or `.md` files.
+Detect URLs containing query strings in `.tex` and `.md` files.
 
 The following query strings are considered unnecessary:
 
@@ -459,7 +459,7 @@ The other query strings are allowed:
 
 ### LLUserDefined
 
-You can define your own regular expressions to detect in `.tex` or `.md` files.
+You can define your own regular expressions to detect in `.tex` and `.md` files.
 
 Check [LaTex Lint: Add Custom Detection Rule](#latex-lint-add-custom-detection-rule) for more details.
 

@@ -3,7 +3,7 @@
 
 ### LLColonForMapping
 
-Detect `:` which seems to be used for mapping in `.tex` or `.md` files.
+Detect `:` which seems to be used for mapping in `.tex` and `.md` files.
 You likely want to use `\colon` instead.
 
 ![rules/LLColonForMapping](rules/LLColonForMapping/LLColonForMapping.png)

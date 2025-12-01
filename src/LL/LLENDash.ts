@@ -7,6 +7,7 @@ import { wordSet } from '../util/wordSet';
 
 const okWords = [
     'Fritz-John',
+    'Primal-Dual',
 ];
 
 export default function LLENDash(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {

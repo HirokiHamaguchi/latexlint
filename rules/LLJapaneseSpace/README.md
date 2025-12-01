@@ -3,5 +3,5 @@
 
 ### LLJapaneseSpace
 
-Detect the lack of space between Japanese characters and math equations in `.tex` or `.md` files.
+Detect the lack of space between Japanese characters and math equations in `.tex` and `.md` files.
 By default, this rule is disabled by `latexlint.disabledRules` in `settings.json`.

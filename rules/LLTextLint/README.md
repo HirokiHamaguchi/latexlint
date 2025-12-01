@@ -3,6 +3,6 @@
 
 ### LLTextLint
 
-Detect dubious text in `.tex` or `.md` files.
+Detect dubious text in `.tex` and `.md` files.
 
 Currently, it only checks japanese texts, and full features are available only in web version.

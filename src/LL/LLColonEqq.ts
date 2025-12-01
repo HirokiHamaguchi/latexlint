@@ -11,7 +11,6 @@ const correctCommandsColonEqq: { [key: string]: string } = {
 };
 
 export default function LLColonEqq(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
-    if (doc.languageId !== "latex") return [];
     const code = "LLColonEqq";
     let message: string[] = [];
     let ranges: vscode.Range[] = [];

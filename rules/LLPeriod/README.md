@@ -3,7 +3,7 @@
 
 ### LLPeriod
 
-Detect `e.g.` in `.tex` or `.md` files.
+Detect `e.g.` in `.tex` and `.md` files.
 You should likely add a comma like `e.g.,` or use `e.g.\` to avoid spacing issues.
 
 ![rules/LLPeriod](rules/LLPeriod/LLPeriod.png)

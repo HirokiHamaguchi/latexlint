@@ -3,7 +3,7 @@
 
 ### LLUserDefined
 
-You can define your own regular expressions to detect in `.tex` or `.md` files.
+You can define your own regular expressions to detect in `.tex` and `.md` files.
 
 Check [LaTex Lint: Add Custom Detection Rule](#latex-lint-add-custom-detection-rule) for more details.
 

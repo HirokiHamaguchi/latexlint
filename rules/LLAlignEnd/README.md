@@ -3,5 +3,5 @@
 
 ### LLAlignEnd
 
-Detect `align`, `gather`, and other environments end with `\\` in `.tex` or `.md` files.
+Detect `align`, `gather`, and other environments end with `\\` in `.tex` and `.md` files.
 This `\\` can be unnecessary.

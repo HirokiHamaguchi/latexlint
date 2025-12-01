@@ -3,7 +3,7 @@
 
 ### LLENDash
 
-Detect the dubious use of hyphens in `.tex` or `.md` files.
+Detect the dubious use of hyphens in `.tex` and `.md` files.
 You should likely use `--` for en-dash and `---` for em-dash.
 
 ![rules/LLENDash](rules/LLENDash/LLENDash.png)

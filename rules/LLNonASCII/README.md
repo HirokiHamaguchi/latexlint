@@ -3,7 +3,7 @@
 
 ### LLNonASCII
 
-Detect all fullwidth ASCII characters in `.tex` or `.md` files.
+Detect all fullwidth ASCII characters in `.tex` and `.md` files.
 
 We detect the following characters.
 

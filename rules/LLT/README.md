@@ -3,7 +3,7 @@
 
 ### LLT
 
-Detect `^T` in `.tex` or `.md` files.
+Detect `^T` in `.tex` and `.md` files.
 You likely want to use `^\top` or `^\mathsf{T}` instead to represent the transpose of a matrix or a vector.
 
 ![rules/LLT](rules/LLT/LLT.png)

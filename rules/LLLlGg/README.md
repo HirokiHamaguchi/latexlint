@@ -3,7 +3,7 @@
 
 ### LLLlGg
 
-Detect `<<` and `>>` in `.tex` or `.md` files.
+Detect `<<` and `>>` in `.tex` and `.md` files.
 You should likely use `\ll` and `\gg` instead.
 
 ![rules/LLLlGg](rules/LLLlGg/LLLlGg.png)

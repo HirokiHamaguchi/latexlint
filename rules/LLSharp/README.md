@@ -3,7 +3,7 @@
 
 ### LLSharp
 
-Detect `\sharp` in `.tex` or `.md` files.
+Detect `\sharp` in `.tex` and `.md` files.
 You should likely use `\#` instead for the [number sign](https://en.wikipedia.org/wiki/Number_sign).
 
 ![rules/LLSharp](rules/LLSharp/LLSharp.png)

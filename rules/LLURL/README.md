@@ -3,7 +3,7 @@
 
 ### LLURL
 
-Detect URLs containing query strings in `.tex` or `.md` files.
+Detect URLs containing query strings in `.tex` and `.md` files.
 
 The following query strings are considered unnecessary:
 

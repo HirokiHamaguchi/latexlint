@@ -1,4 +1,4 @@
-import configData from './assets/config.json';
+import configData from '../assets/config.json';
 
 export interface LintConfig {
     userDefinedRules: string[];

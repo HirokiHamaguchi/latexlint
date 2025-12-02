@@ -2,7 +2,7 @@ import * as vscode from './vscode-mock';
 import { alignRules, standardRules, configuredRules } from '@latexlint/util/rules';
 import enumAlignEnvs from '@latexlint/util/enumAlignEnvs';
 import * as monaco from 'monaco-editor';
-import { getConfig } from './config';
+import { getConfig } from '../config';
 import type { LLTextLintErrorResult } from "@latexlint/TextLint/types";
 import { parseSentence } from "@latexlint/TextLint/parser";
 import { checkNoDroppingI } from "@latexlint/TextLint/no_dropping_i";
@@ -10,7 +10,7 @@ import { checkNoDroppingRa } from "@latexlint/TextLint/no_dropping_ra";
 import { checkOverlookedTypo } from "@latexlint/TextLint/overlooked_typo";
 import { checkTariTari } from "@latexlint/TextLint/tari_tari";
 import { checkNoSuccessiveWord } from "@latexlint/TextLint/no_successive_word";
-import { DiagnosticSeverity, Range } from "./vscode-mock";
+import { DiagnosticSeverity, Range } from './vscode-mock';
 import { getCodeWithURI } from '@latexlint/util/getCodeWithURI';
 
 // TextLint readiness state

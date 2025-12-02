@@ -18,7 +18,7 @@ import remarkGfm from 'remark-gfm';
 import remarkSlug from 'remark-slug';
 import rehypeRaw from 'rehype-raw';
 import 'github-markdown-css/github-markdown-light.css';
-import readmeContent from './assets/README.md?raw';
+import readmeContent from '../assets/README.md?raw';
 import { getVocabularyData, type VocabularyEntry } from '@latexlint/TextLint/vocabulary_loader';
 import { useEffect, useRef, useState, useMemo } from 'react';
 import { IoChevronDown, IoChevronForward } from 'react-icons/io5';

@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 // kuromoji.jsをグローバル変数としてロード
-import * as kuromojiModule from '../../public/kuromoji.js';
+import * as kuromojiModule from '../public/kuromoji.js';
 // @ts-expect-error - グローバル変数として設定
 global.kuromoji = kuromojiModule as unknown;
 

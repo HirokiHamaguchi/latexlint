@@ -13,7 +13,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      'vscode': path.resolve(__dirname, './src/vscode-mock.ts'),
+      'vscode': path.resolve(__dirname, './src/utils/vscode-mock.ts'),
       '@latexlint': path.resolve(__dirname, '../src')
     }
   },

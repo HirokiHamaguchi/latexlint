@@ -290,7 +290,7 @@ For example, you can detect the following Japanese characters.
 
 ### LLNonstandardNotation
 
-Detect nonstandard mathematical notations in `.tex` or `.md` files that are not commonly used in formal academic writing.
+Detect nonstandard mathematical notations in `.tex` and `.md` files that are not commonly used in formal academic writing.
 
 This rule detects the following notations:
 

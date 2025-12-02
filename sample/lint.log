@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.25)  1 DEC 2025 17:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.25)  2 DEC 2025 16:25
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1018,7 +1018,7 @@ pe1/public/amsfonts/latxfont/lcirclew.pfb><c:/texlive/2025/texmf-dist/fonts/typ
 e1/public/lm/lmss17.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts
 /symbols/msbm10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfr
 m1000.pfb>
-Output written on sample/lint.pdf (10 pages, 439750 bytes).
+Output written on sample/lint.pdf (10 pages, 439621 bytes).
 PDF statistics:
  570 PDF objects out of 1000 (max. 8388607)
  439 compressed objects within 5 object streams

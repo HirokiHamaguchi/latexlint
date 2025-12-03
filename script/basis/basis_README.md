@@ -10,7 +10,9 @@
 
 ## Abstract
 
-LaTex Lint is a LaTeX Linter for `.tex` and `.md` files in VS Code.
+LaTex Lint is a LaTeX Linter for `.tex` and `.md` files.
+
+[VS Code Extension Version](https://marketplace.visualstudio.com/items?itemName=hari64boli64.latexlint) is available.
 
 ![abstract](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/abstract.png)
 
@@ -18,7 +20,7 @@ LaTex Lint is a LaTeX Linter for `.tex` and `.md` files in VS Code.
 
 ![abstract_web](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/abstract_web.png)
 
-We welcome any kind of feedback, suggestions, and pull requests!
+We welcome any kind of [feedback](https://marketplace.visualstudio.com/items?itemName=hari64boli64.latexlint&ssr=false#review-details), [suggestions](https://github.com/HirokiHamaguchi/latexlint/issues), and [pull requests](https://github.com/HirokiHamaguchi/latexlint/pulls)!
 
 ## Rules
 

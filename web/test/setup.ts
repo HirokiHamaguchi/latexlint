@@ -6,7 +6,6 @@ import path from 'path';
 import * as kuromojiModule from '../public/kuromoji.js';
 
 // windowオブジェクトをグローバルに追加し、kuromojiを設定
-// @ts-expect-error - グローバル変数として設定
 global.window = global.window || {};
 // @ts-expect-error - グローバル変数として設定
 global.window.kuromoji = kuromojiModule as unknown;

@@ -42,6 +42,7 @@ export function ConfigurationSection({
                     display="flex"
                     gap="2"
                     alignItems="center"
+                    cursor="pointer"
                 >
                     <Collapsible.Indicator
                         transition="transform 0.2s"

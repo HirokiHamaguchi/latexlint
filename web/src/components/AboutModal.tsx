@@ -108,12 +108,117 @@ const VocabularyRow = ({ entry }: { entry: VocabularyEntry }) => {
     );
 };
 
-export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutModalProps) {
-    const readmeRef = useRef<HTMLDivElement>(null);
+// Lazy-loaded components
+const OverviewTab = () => (
+    <VStack align="stretch">
+        <VStack align="stretch">
+            <Heading size="lg">Privacy</Heading>
+            <Text fontSize="sm">
+                All input is processed entirely in your browser.
+                No network requests are made.
+            </Text>
+        </VStack>
+
+        <VStack align="stretch">
+            <Heading size="lg">Links</Heading>
+            <HStack gap={5} flexWrap="wrap">
+                <ExternalLink
+                    href="https://github.com/HirokiHamaguchi/latexlint/tree/master"
+                    icon="mark-github-24.svg"
+                >
+                    GitHub Repository
+                </ExternalLink>
+                <ExternalLink
+                    href="https://marketplace.visualstudio.com/items?itemName=hari64boli64.latexlint"
+                    icon="Visual_Studio_Code_1.35_icon.svg"
+                >
+                    Marketplace of VS Code Extension
+                </ExternalLink>
+            </HStack>
+        </VStack>
+
+        <VStack align="stretch">
+            <Heading size="lg">Sample - Before and After</Heading>
+            <Grid templateColumns={{ base: '1fr', md: '1fr 1fr' }} gap={6}>
+                <SampleImage src="sample_before.png" alt="Before" color="red.600" />
+                <SampleImage src="sample_after.png" alt="After" color="green.600" />
+            </Grid>
+        </VStack>
+    </VStack>
+);
+
+const ReadmeTab = ({ readmeRef }: { readmeRef: React.RefObject<HTMLDivElement | null> }) => (
+    <div className="markdown-body" ref={readmeRef}>
+        <Markdown
+            // @ts-expect-error: Type '() => void | Transformer<Root, Root>' is not assignable to type 'Pluggable'.
+            remarkPlugins={[remarkGfm, remarkSlug]}
+            rehypePlugins={[rehypeRaw]}
+            components={{
+                img: ({ src, ...props }) => {
+                    const resolvedSrc = src?.startsWith('http') ? src : `${GITHUB_RAW_BASE}${src}`;
+                    if ("width" in props)
+                        return <img {...props} src={resolvedSrc} />
+                    else
+                        return (
+                            <span style={{ display: 'flex', justifyContent: 'center', margin: '1em 0' }}>
+                                <img {...props} src={resolvedSrc} style={{ maxWidth: '70%' }} />
+                            </span>
+                        );
+                },
+            }}
+        >
+            {readmeContent}
+        </Markdown>
+    </div>
+);
+
+const JapaneseTab = () => {
     const vocabularyData = useMemo(() => getVocabularyData(), []);
 
+    return (
+        <VStack gap={4} align="stretch">
+            <Heading size="md">Japanese Vocabulary Check</Heading>
+            <Text fontSize="sm" color="gray.600">
+                textlintというツールの一部機能と、独自の語彙チェックを走らせています。
+            </Text>
+            <Text fontSize="sm" color="gray.600">
+                単語レベルでのチェックに関しては、以下の潜在的な誤りを検出します。
+            </Text>
+            <Text fontSize="sm" color="gray.600">
+                なお、これらは必ずしも誤りであるとは限らず、指摘はあくまで参考に留め、文脈や意図に応じて適宜判断してください。
+            </Text>
+            <Text fontSize="sm" color="gray.600">
+                現在開発途中です、まだ不完全な部分も多くあります。
+                この表に限らず、お気づきの点があれば
+                <Link href="https://github.com/HirokiHamaguchi/latexlint/issues" target="_blank" rel="noopener noreferrer" color="blue.500" textDecoration="underline">
+                    フィードバック
+                </Link>
+                をいただけると幸いです。
+            </Text>
+            <Table.Root size="sm" variant="outline">
+                <Table.Header>
+                    <Table.Row>
+                        <Table.ColumnHeader width="45%">現行表現</Table.ColumnHeader>
+                        <Table.ColumnHeader width="45%">代替表現</Table.ColumnHeader>
+                        <Table.ColumnHeader width="10%"></Table.ColumnHeader>
+                    </Table.Row>
+                </Table.Header>
+                <Table.Body>
+                    {vocabularyData.map((entry, index) => (
+                        <VocabularyRow key={index} entry={entry} />
+                    ))}
+                </Table.Body>
+            </Table.Root>
+        </VStack>
+    );
+};
+
+export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutModalProps) {
+    const readmeRef = useRef<HTMLDivElement>(null);
+    const [activeTab, setActiveTab] = useState(defaultTab);
+
     useEffect(() => {
-        if (isOpen && defaultTab === 'readme') {
+        if (isOpen && activeTab === 'readme') {
             // Wait for the dialog and markdown to render
             setTimeout(() => {
                 const hash = window.location.hash.slice(1); // Remove '#'
@@ -154,7 +259,7 @@ export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutMo
                 }
             }, 300);
         }
-    }, [isOpen, defaultTab]);
+    }, [isOpen, activeTab]);
 
     return (
         <Dialog.Root open={isOpen} onOpenChange={(e) => !e.open && onClose()} size="xl">
@@ -168,7 +273,7 @@ export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutMo
                         <Dialog.CloseTrigger />
                     </Dialog.Header>
                     <Dialog.Body overflowY="auto">
-                        <Tabs.Root defaultValue={defaultTab} variant="enclosed">
+                        <Tabs.Root defaultValue={defaultTab} variant="enclosed" onValueChange={(details) => setActiveTab(details.value)}>
                             <Tabs.List>
                                 <Tabs.Trigger value="overview">Overview</Tabs.Trigger>
                                 <Tabs.Trigger value="readme">README</Tabs.Trigger>
@@ -176,103 +281,15 @@ export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutMo
                             </Tabs.List>
 
                             <Tabs.Content value="overview">
-                                <VStack align="stretch">
-                                    <VStack align="stretch">
-                                        <Heading size="lg">Privacy</Heading>
-                                        <Text fontSize="sm">
-                                            All input is processed entirely in your browser.
-                                            No network requests are made.
-                                        </Text>
-                                    </VStack>
-
-                                    <VStack align="stretch">
-                                        <Heading size="lg">Links</Heading>
-                                        <HStack gap={5} flexWrap="wrap">
-                                            <ExternalLink
-                                                href="https://github.com/HirokiHamaguchi/latexlint/tree/master"
-                                                icon="mark-github-24.svg"
-                                            >
-                                                GitHub Repository
-                                            </ExternalLink>
-                                            <ExternalLink
-                                                href="https://marketplace.visualstudio.com/items?itemName=hari64boli64.latexlint"
-                                                icon="Visual_Studio_Code_1.35_icon.svg"
-                                            >
-                                                Marketplace of VS Code Extension
-                                            </ExternalLink>
-                                        </HStack>
-                                    </VStack>
-
-                                    <VStack align="stretch">
-                                        <Heading size="lg">Sample - Before and After</Heading>
-                                        <Grid templateColumns={{ base: '1fr', md: '1fr 1fr' }} gap={6}>
-                                            <SampleImage src="sample_before.png" alt="Before" color="red.600" />
-                                            <SampleImage src="sample_after.png" alt="After" color="green.600" />
-                                        </Grid>
-                                    </VStack>
-                                </VStack>
+                                {activeTab === 'overview' && <OverviewTab />}
                             </Tabs.Content>
 
                             <Tabs.Content value="readme" pt={4}>
-                                <div className="markdown-body" ref={readmeRef}>
-                                    <Markdown
-                                        // @ts-expect-error: Type '() => void | Transformer<Root, Root>' is not assignable to type 'Pluggable'.
-                                        remarkPlugins={[remarkGfm, remarkSlug]}
-                                        rehypePlugins={[rehypeRaw]}
-                                        components={{
-                                            img: ({ src, ...props }) => {
-                                                const resolvedSrc = src?.startsWith('http') ? src : `${GITHUB_RAW_BASE}${src}`;
-                                                if ("width" in props)
-                                                    return <img {...props} src={resolvedSrc} />
-                                                else
-                                                    return (
-                                                        <span style={{ display: 'flex', justifyContent: 'center', margin: '1em 0' }}>
-                                                            <img {...props} src={resolvedSrc} style={{ maxWidth: '70%' }} />
-                                                        </span>
-                                                    );
-                                            },
-                                        }}
-                                    >
-                                        {readmeContent}
-                                    </Markdown>
-                                </div>
+                                {activeTab === 'readme' && <ReadmeTab readmeRef={readmeRef} />}
                             </Tabs.Content>
 
                             <Tabs.Content value="japanese" pt={4}>
-                                <VStack gap={4} align="stretch">
-                                    <Heading size="md">Japanese Vocabulary Check</Heading>
-                                    <Text fontSize="sm" color="gray.600">
-                                        textlintというツールの一部機能と、独自の語彙チェックを走らせています。
-                                    </Text>
-                                    <Text fontSize="sm" color="gray.600">
-                                        単語レベルでのチェックに関しては、以下の潜在的な誤りを検出します。
-                                    </Text>
-                                    <Text fontSize="sm" color="gray.600">
-                                        なお、これらは必ずしも誤りであるとは限らず、指摘はあくまで参考に留め、文脈や意図に応じて適宜判断してください。
-                                    </Text>
-                                    <Text fontSize="sm" color="gray.600">
-                                        現在開発途中です、まだ不完全な部分も多くあります。
-                                        この表に限らず、お気づきの点があれば
-                                        <Link href="https://github.com/HirokiHamaguchi/latexlint/issues" target="_blank" rel="noopener noreferrer" color="blue.500" textDecoration="underline">
-                                            フィードバック
-                                        </Link>
-                                        をいただけると幸いです。
-                                    </Text>
-                                    <Table.Root size="sm" variant="outline">
-                                        <Table.Header>
-                                            <Table.Row>
-                                                <Table.ColumnHeader width="45%">現行表現</Table.ColumnHeader>
-                                                <Table.ColumnHeader width="45%">代替表現</Table.ColumnHeader>
-                                                <Table.ColumnHeader width="10%"></Table.ColumnHeader>
-                                            </Table.Row>
-                                        </Table.Header>
-                                        <Table.Body>
-                                            {vocabularyData.map((entry, index) => (
-                                                <VocabularyRow key={index} entry={entry} />
-                                            ))}
-                                        </Table.Body>
-                                    </Table.Root>
-                                </VStack>
+                                {activeTab === 'japanese' && <JapaneseTab />}
                             </Tabs.Content>
                         </Tabs.Root>
                     </Dialog.Body>

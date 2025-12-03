@@ -5,15 +5,15 @@ import ranges2diagnostics from '../util/ranges2diagnostics';
 export default function LLNonstandardNotation(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
     const ranges: vscode.Range[] = [];
 
-    // Detect \therefore and \because (exact matches only)
-    for (const match of txt.matchAll(/\\(?:therefore|because)(?![a-zA-Z])/g)) {
+    // Detect iff as a word (not as part of another word like "different" or after a backslash like "\iff")
+    for (const match of txt.matchAll(/(?:^|\s)(?:iff|Iff)(?![A-Za-z])/g)) {
         const startPos = doc.positionAt(match.index);
         const endPos = doc.positionAt(match.index + match[0].length);
         ranges.push(new vscode.Range(startPos, endPos));
     }
 
-    // Detect iff as a word (not as part of another word like "different" or after a backslash like "\iff")
-    for (const match of txt.matchAll(/(?<!\\)(?<![a-zA-Z])iff(?![a-zA-Z])/g)) {
+    // Detect \therefore and \because (exact matches only)
+    for (const match of txt.matchAll(/\\(?:therefore|because)(?![a-zA-Z])/g)) {
         const startPos = doc.positionAt(match.index);
         const endPos = doc.positionAt(match.index + match[0].length);
         ranges.push(new vscode.Range(startPos, endPos));

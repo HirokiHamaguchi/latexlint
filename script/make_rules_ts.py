@@ -13,12 +13,9 @@ def make_rules_ts():
     }
 
     # Filter rules into categories
-    align_rules = [rule for rule in rule_names if rule.startswith("LLAlign")]
     configured_rules = [rule for rule in rule_names if rule in configured_rule_configs]
     standard_rules = [
-        rule
-        for rule in rule_names
-        if rule not in align_rules and rule not in configured_rule_configs
+        rule for rule in rule_names if rule not in configured_rule_configs
     ]
 
     CONTENTS = (
@@ -27,23 +24,24 @@ def make_rules_ts():
         ]
         + [f"import {rule} from '../LL/{rule}';" for rule in rule_names]
         + [
+            "import type { LLText } from './LLText';",
+            "import * as vscode from 'vscode';",
             "",
-            "// Rules that require alignLikeEnvs parameter",
-            "export const alignRules = {",
-        ]
-        + [f"    {rule}," for rule in align_rules]
-        + [
-            "};",
+            "// Type for standard rule functions",
+            "type StandardRuleFunction = (doc: vscode.TextDocument, txt: LLText) => vscode.Diagnostic[];",
             "",
-            "// Rules that don't require alignLikeEnvs parameter",
-            "export const standardRules = {",
+            "// All standard rules that take LLText as parameter",
+            "export const standardRules: Record<string, StandardRuleFunction> = {",
         ]
         + [f"    {rule}," for rule in standard_rules]
         + [
             "};",
             "",
+            "// Type for configured rule functions",
+            "type ConfiguredRuleFunction = (doc: vscode.TextDocument, txt: LLText, config: any) => vscode.Diagnostic[];",
+            "",
             "// Rules that require configuration parameters",
-            'export const configuredRules: { [key: string]: { rule: Function; configKey: "LLCrefExceptions" | "userDefinedRules" } } = {',
+            'export const configuredRules: { [key: string]: { rule: ConfiguredRuleFunction; configKey: "LLCrefExceptions" | "userDefinedRules" } } = {',
         ]
         + [
             f'    {rule}: {{\n        rule: {rule},\n        configKey: "{configured_rule_configs[rule]}",\n    }},'

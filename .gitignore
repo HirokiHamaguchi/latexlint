@@ -9,4 +9,6 @@ node_modules
 other/azurePersonalAccessToken.txt
 
 sample/localTest.*
-*/*.synctex.gz
+**/**.aux
+**/**.log
+**/**.synctex.gz

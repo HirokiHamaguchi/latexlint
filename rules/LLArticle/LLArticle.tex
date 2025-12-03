@@ -1,0 +1,28 @@
+\documentclass[preview]{standalone}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{siunitx}
+\usepackage{geometry}
+\geometry{paperwidth=5cm, margin=0cm}
+
+\usepackage{xcolor}
+\definecolor{cA}{HTML}{0072BD}
+\definecolor{cB}{HTML}{EDB120}
+\definecolor{cC}{HTML}{77AC30}
+\definecolor{cD}{HTML}{D95319}
+
+\newcommand{\tA}[1]{\textcolor{cA}{#1}}
+\newcommand{\tB}[1]{\textcolor{cB}{#1}}
+\newcommand{\tC}[1]{\textcolor{cC}{#1}}
+\newcommand{\tD}[1]{\textcolor{cD}{#1}}
+
+\begin{document}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{ll}
+        An $n$-dimensional & \tA{ok} \\[0.3cm]
+        A $n$-dimensional  & \tD{ng}
+    \end{tabular}
+\end{table}
+\end{document}

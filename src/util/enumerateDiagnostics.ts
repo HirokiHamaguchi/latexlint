@@ -8,7 +8,7 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
     const disabledRules = config.get<string[]>('disabledRules') || [];
     const exceptions = config.get<string[]>('exceptions') || [];
     const txt = doc.getText();
-    const alignLikeEnvs = enumAlignEnvs(txt, doc.positionAt, vscode.window.showErrorMessage);
+    const alignLikeEnvs = enumAlignEnvs(txt, doc.positionAt, console.warn);
 
     let diagnostics: vscode.Diagnostic[] = [];
 

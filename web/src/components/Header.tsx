@@ -55,13 +55,13 @@ export function Header({ docType, onDocTypeChange, onAboutClick }: HeaderProps) 
                     size="sm"
                 >
                     <SegmentGroup.Indicator />
-                    <SegmentGroup.Item value="latex">
+                    <SegmentGroup.Item value="latex" cursor="pointer">
+                        <SegmentGroup.ItemHiddenInput />
                         <SegmentGroup.ItemText>LaTeX</SegmentGroup.ItemText>
-                        <SegmentGroup.ItemHiddenInput />
                     </SegmentGroup.Item>
-                    <SegmentGroup.Item value="markdown">
-                        <SegmentGroup.ItemText>Markdown</SegmentGroup.ItemText>
+                    <SegmentGroup.Item value="markdown" cursor="pointer">
                         <SegmentGroup.ItemHiddenInput />
+                        <SegmentGroup.ItemText>Markdown</SegmentGroup.ItemText>
                     </SegmentGroup.Item>
                 </SegmentGroup.Root>
             </HStack>

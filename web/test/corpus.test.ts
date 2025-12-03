@@ -12,7 +12,7 @@ import { describe, it } from "vitest";
 describe("TextLint corpus", () => {
     it("should run without errors", async () => {
         // ファイルリストを読み込む
-        const fileListPath = path.resolve("src/test/util/japanese_markdown_files.txt");
+        const fileListPath = path.resolve("test/util/japanese_markdown_files.txt");
 
         let fileNames = fs.readFileSync(fileListPath, "utf-8").split(/\r?\n/).filter(Boolean);
         fileNames = fileNames.slice(0, 10); // 最初の10ファイルに制限

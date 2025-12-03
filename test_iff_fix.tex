@@ -1,0 +1,14 @@
+% Test file to verify the \iff fix
+\documentclass{article}
+\begin{document}
+
+% These should be detected:
+This statement is true iff the condition holds.
+
+% This should NOT be detected (LaTeX command):
+$a = b \iff c = d$
+
+% Also should NOT be detected:
+$P \iff Q$
+
+\end{document}

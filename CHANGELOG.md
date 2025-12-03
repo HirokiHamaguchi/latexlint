@@ -15,6 +15,10 @@ All notable changes to the "latexlint" extension will be documented in this file
 - enhance rules so that we can apply them to markdown files.
 - \begin{lstlisting} \begin{verbatim}
 
+## 1.5.19 - 2025-12-03
+
+- Fix bug in `LLNonstandardNotation` where `\iff` LaTeX command was incorrectly detected as plain text "iff".
+
 ## 1.5.18 - 2025-12-01
 
 - Fix bug in web (unrecognized languageId)

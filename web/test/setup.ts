@@ -4,8 +4,12 @@ import path from 'path';
 
 // kuromoji.jsをグローバル変数としてロード
 import * as kuromojiModule from '../public/kuromoji.js';
+
+// windowオブジェクトをグローバルに追加し、kuromojiを設定
 // @ts-expect-error - グローバル変数として設定
-global.kuromoji = kuromojiModule as unknown;
+global.window = global.window || {};
+// @ts-expect-error - グローバル変数として設定
+global.window.kuromoji = kuromojiModule as unknown;
 
 // テスト環境でXMLHttpRequestをモックして、ローカルファイルシステムから辞書を読み込む
 beforeAll(() => {
@@ -33,13 +37,17 @@ beforeAll(() => {
             let fileName = '';
             if (this._url.startsWith('/latexlint/dict/')) {
                 fileName = this._url.replace('/latexlint/dict/', '');
+            } else if (this._url.startsWith('/dict/')) {
+                fileName = this._url.replace('/dict/', '');
             }
 
             if (fileName) {
-                const dictPath = path.resolve(__dirname, '../../public/dict', fileName);
+                const dictPath = path.resolve(__dirname, '../public/dict', fileName);
+                console.log(`Attempting to load dictionary file: ${dictPath}`);
 
                 try {
                     const data = fs.readFileSync(dictPath);
+                    console.log(`Successfully loaded file: ${dictPath}, size: ${data.length}`);
 
                     if (this.responseType === 'arraybuffer') {
                         this._response = data.buffer.slice(data.byteOffset, data.byteOffset + data.byteLength);
@@ -60,7 +68,8 @@ beforeAll(() => {
                             this.onload.call(this as unknown as XMLHttpRequest, event);
                         }
                     }, 0);
-                } catch {
+                } catch (error) {
+                    console.error(`Failed to load file: ${dictPath}`, error);
                     this._status = 404;
                     this._readyState = 4;
 
@@ -73,6 +82,7 @@ beforeAll(() => {
                 }
             } else {
                 // 通常のXMLHttpRequestの動作
+                console.log(`Unhandled URL: ${this._url}`);
                 super.send();
             }
         }

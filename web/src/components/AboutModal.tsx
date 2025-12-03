@@ -26,7 +26,8 @@ import { IoChevronDown, IoChevronForward } from 'react-icons/io5';
 interface AboutModalProps {
     isOpen: boolean;
     onClose: () => void;
-    defaultTab?: string;
+    tab: string;
+    onTabChange: (tab: string) => void;
 }
 
 const BASE_URL = import.meta.env.BASE_URL;
@@ -213,12 +214,11 @@ const JapaneseTab = () => {
     );
 };
 
-export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutModalProps) {
+export function AboutModal({ isOpen, onClose, tab, onTabChange }: AboutModalProps) {
     const readmeRef = useRef<HTMLDivElement>(null);
-    const [activeTab, setActiveTab] = useState(defaultTab);
 
     useEffect(() => {
-        if (isOpen && activeTab === 'readme') {
+        if (isOpen && tab === 'readme') {
             // Wait for the dialog and markdown to render
             setTimeout(() => {
                 const hash = window.location.hash.slice(1); // Remove '#'
@@ -259,7 +259,7 @@ export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutMo
                 }
             }, 300);
         }
-    }, [isOpen, activeTab]);
+    }, [isOpen, tab]);
 
     return (
         <Dialog.Root open={isOpen} onOpenChange={(e) => !e.open && onClose()} size="xl">
@@ -273,7 +273,7 @@ export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutMo
                         <Dialog.CloseTrigger />
                     </Dialog.Header>
                     <Dialog.Body overflowY="auto">
-                        <Tabs.Root defaultValue={defaultTab} variant="enclosed" onValueChange={(details) => setActiveTab(details.value)}>
+                        <Tabs.Root value={tab} variant="enclosed" onValueChange={(details) => onTabChange(details.value)}>
                             <Tabs.List>
                                 <Tabs.Trigger value="overview">Overview</Tabs.Trigger>
                                 <Tabs.Trigger value="readme">README</Tabs.Trigger>
@@ -281,15 +281,15 @@ export function AboutModal({ isOpen, onClose, defaultTab = "overview" }: AboutMo
                             </Tabs.List>
 
                             <Tabs.Content value="overview">
-                                {activeTab === 'overview' && <OverviewTab />}
+                                {tab === 'overview' && <OverviewTab />}
                             </Tabs.Content>
 
                             <Tabs.Content value="readme" pt={4}>
-                                {activeTab === 'readme' && <ReadmeTab readmeRef={readmeRef} />}
+                                {tab === 'readme' && <ReadmeTab readmeRef={readmeRef} />}
                             </Tabs.Content>
 
                             <Tabs.Content value="japanese" pt={4}>
-                                {activeTab === 'japanese' && <JapaneseTab />}
+                                {tab === 'japanese' && <JapaneseTab />}
                             </Tabs.Content>
                         </Tabs.Root>
                     </Dialog.Body>

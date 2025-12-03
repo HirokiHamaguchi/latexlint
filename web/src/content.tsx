@@ -20,7 +20,7 @@ export function Content() {
     const [docType, setDocType] = useState<DocType>('latex');
     const [text, setText] = useState(sampleTexBefore);
     const [isAboutOpen, setIsAboutOpen] = useState(false);
-    const [aboutDefaultTab, setAboutDefaultTab] = useState<string>('overview');
+    const [aboutTab, setAboutTab] = useState<string>('overview');
     const [isConfigOpen, setIsConfigOpen] = useState(false);
     const [config, setConfigState] = useState<LintConfig>(defaultConfig);
     const [isEditorReady, setIsEditorReady] = useState(false);
@@ -55,7 +55,7 @@ export function Content() {
     };
 
     const handleOpenAboutWithHash = (hash: string) => {
-        setAboutDefaultTab('readme');
+        setAboutTab('readme');
         setIsAboutOpen(true);
         // Trigger scroll after modal opens
         setTimeout(() => {
@@ -64,7 +64,7 @@ export function Content() {
     };
 
     const handleOpenAboutForRuleDetails = () => {
-        setAboutDefaultTab('readme');
+        setAboutTab('readme');
         setIsAboutOpen(true);
     };
 
@@ -112,7 +112,8 @@ export function Content() {
             <AboutModal
                 isOpen={isAboutOpen}
                 onClose={() => setIsAboutOpen(false)}
-                defaultTab={aboutDefaultTab}
+                tab={aboutTab}
+                onTabChange={setAboutTab}
             />
         </Container>
     );

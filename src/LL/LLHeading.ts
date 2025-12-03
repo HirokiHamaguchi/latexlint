@@ -3,8 +3,9 @@ import { messages } from '../util/constants';
 import ranges2diagnostics from '../util/ranges2diagnostics';
 import match2range from '../util/match2range';
 import isInComment from '../util/isInComment';
+import type { LLText } from '../util/LLText';
 
-export default function LLHeading(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
+export default function LLHeading(doc: vscode.TextDocument, txt: LLText): vscode.Diagnostic[] {
     if (doc.languageId !== "latex") return [];
 
     const code = "LLHeading";
@@ -27,7 +28,7 @@ export default function LLHeading(doc: vscode.TextDocument, txt: string): vscode
     // Find all heading commands
     const headingRegex = /\\(chapter|section|subsection|subsubsection)\*?\{/g;
 
-    for (const headingMatch of txt.matchAll(headingRegex)) {
+    for (const headingMatch of txt.text.matchAll(headingRegex)) {
         const headingType = headingMatch[1];
         const currentLevel = headingLevels[headingType];
 

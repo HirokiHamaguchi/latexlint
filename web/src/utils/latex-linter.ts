@@ -1,5 +1,5 @@
 import * as vscode from './vscode-mock';
-import { alignRules, standardRules, configuredRules } from '@latexlint/util/rules';
+import { standardRules, configuredRules } from '@latexlint/util/rules';
 import enumAlignEnvs from '@latexlint/util/enumAlignEnvs';
 import * as monaco from 'monaco-editor';
 import { getConfig } from '../config';
@@ -12,6 +12,7 @@ import { checkTariTari } from "@latexlint/TextLint/tari_tari";
 import { checkNoSuccessiveWord } from "@latexlint/TextLint/no_successive_word";
 import { DiagnosticSeverity, Range } from './vscode-mock';
 import { getCodeWithURI } from '@latexlint/util/getCodeWithURI';
+import type { LLText } from '@latexlint/util/LLText';
 
 // TextLint readiness state
 let isTextLintReady = false;
@@ -75,8 +76,13 @@ export async function lintLatex(
 ): Promise<monaco.editor.IMarkerData[]> {
     const ext = docType === 'latex' ? '.tex' : '.md';
     const doc = vscode.createMockTextDocument(text, vscode.Uri.file(`untitled${ext}`), docType === 'latex' ? 'latex' : 'markdown');
-    const txt = text;
-    const alignLikeEnvs = enumAlignEnvs(txt, doc.positionAt, console.warn);
+    const alignLikeEnvs = enumAlignEnvs(text, doc.positionAt, console.warn);
+
+    // Create LLText object
+    const txt: LLText = {
+        text: text,
+        alignLikeEnvs: alignLikeEnvs
+    };
 
     // Note: Using type assertion to bridge mock types with real VS Code types for web compatibility
     const vscodeDoc = doc as unknown as import('vscode').TextDocument;
@@ -87,18 +93,7 @@ export async function lintLatex(
 
     const t0 = performance.now();
 
-    // Rules that need align environments
-    for (const [ruleName, rule] of Object.entries(alignRules)) {
-        if (disabledRules.includes(ruleName)) continue;
-        try {
-            const diags = rule(vscodeDoc, txt, alignLikeEnvs);
-            diagnostics.push(...diags);
-        } catch (error) {
-            console.warn(`Rule ${ruleName} failed:`, error);
-        }
-    }
-
-    // Rules that don't need align environments
+    // All standard rules (now includes former align rules)
     for (const [ruleName, rule] of Object.entries(standardRules)) {
         if (disabledRules.includes(ruleName)) continue;
         try {

@@ -1,13 +1,14 @@
 import * as vscode from 'vscode';
 import ranges2diagnostics from '../util/ranges2diagnostics';
 import { messages } from '../util/constants';
+import type { LLText } from '../util/LLText';
 
-export default function LLAlignEnd(doc: vscode.TextDocument, txt: string, alignLikeEnvs: [number, number][]): vscode.Diagnostic[] {
+export default function LLAlignEnd(doc: vscode.TextDocument, txt: LLText): vscode.Diagnostic[] {
     const code = 'LLAlignEnd';
     const message = messages[code];
     const ranges = [];
-    for (const [s, t] of alignLikeEnvs) {
-        const txt2 = txt.slice(s, t);
+    for (const [s, t] of txt.alignLikeEnvs) {
+        const txt2 = txt.text.slice(s, t);
         if (txt2.startsWith("\\begin{split")) continue;
         let i = txt2.length - 1;
         while (i >= 0 && (/\s/.test(txt2[i]))) i--;

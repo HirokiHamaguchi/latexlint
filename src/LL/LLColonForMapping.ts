@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import { messages } from '../util/constants';
 import ranges2diagnostics from '../util/ranges2diagnostics';
+import type { LLText } from '../util/LLText';
 
 function isCorrectBraces(str: string): boolean {
     let count = 0;
@@ -18,20 +19,20 @@ const REGEXPS = [
     /\\rightarrow(?![a-zA-Z])/g
 ];
 
-export default function LLColonForMapping(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
+export default function LLColonForMapping(doc: vscode.TextDocument, txt: LLText): vscode.Diagnostic[] {
     const ranges: vscode.Range[] = [];
 
     for (const regexp of REGEXPS)
-        for (const match of txt.matchAll(regexp)) {
+        for (const match of txt.text.matchAll(regexp)) {
             let i = match.index - 1;
             for (let wordCount = 0; wordCount < 10; wordCount++) {
-                while (i >= 0 && /\s/.test(txt[i])) i--;
+                while (i >= 0 && /\s/.test(txt.text[i])) i--;
                 if (i < 0) break;
-                while (i >= 0 && txt[i] !== ':' && txt[i] !== '$' && /\S/.test(txt[i])) i--;
+                while (i >= 0 && txt.text[i] !== ':' && txt.text[i] !== '$' && /\S/.test(txt.text[i])) i--;
                 if (i < 0) break;
-                if (txt[i] === '$') break;
-                if (txt[i] === ':') {
-                    const strColon2Arrow = txt.slice(i + 1, match.index);
+                if (txt.text[i] === '$') break;
+                if (txt.text[i] === ':') {
+                    const strColon2Arrow = txt.text.slice(i + 1, match.index);
                     if (!strColon2Arrow.includes('\\(') &&
                         !strColon2Arrow.includes('\\begin{') &&
                         isCorrectBraces(strColon2Arrow)

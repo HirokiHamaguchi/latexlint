@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import type { LLText } from '../util/LLText';
 import { messages } from '../util/constants';
 import ranges2diagnostics from '../util/ranges2diagnostics';
 import match2range from '../util/match2range';
@@ -17,7 +18,7 @@ const collectNonCommentMatches = (doc: vscode.TextDocument, txt: string, regex: 
 };
 
 
-export default function LLUnRef(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
+export default function LLUnRef(doc: vscode.TextDocument, txt: LLText): vscode.Diagnostic[] {
     if (doc.languageId !== "latex") return [];
 
     const code = "LLUnRef";
@@ -27,7 +28,7 @@ export default function LLUnRef(doc: vscode.TextDocument, txt: string): vscode.D
     // Collect all references
     const allRefs = new Set<string>();
     const refRegex = /\\[cC]?ref\{([^}]*)\}/g;
-    for (const refMatch of txt.matchAll(refRegex)) {
+    for (const refMatch of txt.text.matchAll(refRegex)) {
         const pos = doc.positionAt(refMatch.index!);
         const line = doc.lineAt(pos.line);
         const idx = refMatch.index! - doc.offsetAt(line.range.start);
@@ -37,15 +38,15 @@ export default function LLUnRef(doc: vscode.TextDocument, txt: string): vscode.D
     // Helper function to process environment labels
     const processEnvironmentLabels = (envName: string) => {
         const beginRegex = new RegExp(`\\\\begin\\{${envName}\\}`, 'g');
-        const beginMatches = collectNonCommentMatches(doc, txt, beginRegex);
+        const beginMatches = collectNonCommentMatches(doc, txt.text, beginRegex);
 
         const endRegex = new RegExp(`\\\\end\\{${envName}\\}`, 'g');
-        const endMatches = collectNonCommentMatches(doc, txt, endRegex);
+        const endMatches = collectNonCommentMatches(doc, txt.text, endRegex);
 
         for (const beginMatch of beginMatches) {
             const correspondingEnd = endMatches.find(endMatch => endMatch.index > beginMatch.index);
             if (correspondingEnd) {
-                const envContent = txt.substring(
+                const envContent = txt.text.substring(
                     beginMatch.index + `\\begin{${envName}}`.length,
                     correspondingEnd.index
                 );

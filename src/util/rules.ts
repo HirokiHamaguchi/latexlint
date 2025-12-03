@@ -31,16 +31,17 @@ import LLTitle from '../LL/LLTitle';
 import LLUnRef from '../LL/LLUnRef';
 import LLURL from '../LL/LLURL';
 import LLUserDefined from '../LL/LLUserDefined';
+import type { LLText } from './LLText';
+import * as vscode from 'vscode';
 
-// Rules that require alignLikeEnvs parameter
-export const alignRules = {
+// Type for standard rule functions
+type StandardRuleFunction = (doc: vscode.TextDocument, txt: LLText) => vscode.Diagnostic[];
+
+// All standard rules that take LLText as parameter
+export const standardRules: Record<string, StandardRuleFunction> = {
     LLAlignAnd,
     LLAlignEnd,
     LLAlignSingleLine,
-};
-
-// Rules that don't require alignLikeEnvs parameter
-export const standardRules = {
     LLArticle,
     LLBig,
     LLBracketCurly,
@@ -70,8 +71,11 @@ export const standardRules = {
     LLURL,
 };
 
+// Type for configured rule functions
+type ConfiguredRuleFunction = (doc: vscode.TextDocument, txt: LLText, config: any) => vscode.Diagnostic[];
+
 // Rules that require configuration parameters
-export const configuredRules: { [key: string]: { rule: Function; configKey: "LLCrefExceptions" | "userDefinedRules" } } = {
+export const configuredRules: { [key: string]: { rule: ConfiguredRuleFunction; configKey: "LLCrefExceptions" | "userDefinedRules" } } = {
     LLCref: {
         rule: LLCref,
         configKey: "LLCrefExceptions",

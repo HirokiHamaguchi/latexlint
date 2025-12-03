@@ -1,31 +1,34 @@
 import * as vscode from 'vscode';
-import { alignRules, standardRules, configuredRules } from './rules';
+import { standardRules, configuredRules } from './rules';
 import formatException from './formatException';
 import enumAlignEnvs from './enumAlignEnvs';
+import type { LLText } from './LLText';
 
 export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.Diagnostic[] {
     const config = vscode.workspace.getConfiguration('latexlint');
     const disabledRules = config.get<string[]>('disabledRules') || [];
     const exceptions = config.get<string[]>('exceptions') || [];
-    const txt = doc.getText();
-    const alignLikeEnvs = enumAlignEnvs(txt, doc.positionAt, console.warn);
+    const text = doc.getText();
+    const alignLikeEnvs = enumAlignEnvs(text, doc.positionAt, console.warn);
+
+    // Create LLText object
+    const txt: LLText = {
+        text: text,
+        alignLikeEnvs: alignLikeEnvs
+    };
 
     let diagnostics: vscode.Diagnostic[] = [];
 
     const t0 = performance.now();
 
-    for (const [ruleName, rule] of Object.entries(alignRules)) {
-        if (disabledRules.includes(ruleName)) continue;
-        const diags = rule(doc, txt, alignLikeEnvs);
-        diagnostics.push(...diags);
-    }
-
+    // Process all standard rules (now includes former align rules)
     for (const [ruleName, rule] of Object.entries(standardRules)) {
         if (disabledRules.includes(ruleName)) continue;
         const diags = rule(doc, txt);
         diagnostics.push(...diags);
     }
 
+    // Process rules that require configuration
     for (const [ruleName, { rule, configKey }] of Object.entries(configuredRules)) {
         if (disabledRules.includes(ruleName)) continue;
         const diags = rule(doc, txt, config.get(configKey) as string[]);

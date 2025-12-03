@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import type { LLText } from '../util/LLText';
 import toTitleCase from '../util/toTitleCase';
 import { extensionDisplayName, severity, messages } from '../util/constants';
 import { getCodeWithURI } from '../util/getCodeWithURI';
@@ -13,24 +14,24 @@ const REGEXPS = [
     /\\subparagraph\*?{/g
 ];
 
-export default function LLTitle(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
+export default function LLTitle(doc: vscode.TextDocument, txt: LLText): vscode.Diagnostic[] {
     if (doc.languageId !== "latex") return [];
 
     const code = 'LLTitle';
     const diagnostics: vscode.Diagnostic[] = [];
 
     for (const regexp of REGEXPS)
-        for (const match of txt.matchAll(regexp)) {
+        for (const match of txt.text.matchAll(regexp)) {
             let index = match.index + match[0].length;
             const beginIndex = index;
             let braceCount = 1;
-            while (braceCount > 0 && index < txt.length) {
-                if (txt[index] === '{') braceCount++;
-                else if (txt[index] === '}') braceCount--;
+            while (braceCount > 0 && index < txt.text.length) {
+                if (txt.text[index] === '{') braceCount++;
+                else if (txt.text[index] === '}') braceCount--;
                 index++;
             }
             const endIndex = index - 1;
-            const sectionText = txt.slice(beginIndex, endIndex);
+            const sectionText = txt.text.slice(beginIndex, endIndex);
 
             // TODO: elaborate on this
             if (sectionText === sectionText.toUpperCase()) continue;

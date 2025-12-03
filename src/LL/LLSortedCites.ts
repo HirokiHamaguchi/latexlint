@@ -1,18 +1,19 @@
 import * as vscode from 'vscode';
+import type { LLText } from '../util/LLText';
 import { messages } from '../util/constants';
 import ranges2diagnostics from '../util/ranges2diagnostics';
 import match2range from '../util/match2range';
 
-export default function LLSortedCites(doc: vscode.TextDocument, txt: string): vscode.Diagnostic[] {
+export default function LLSortedCites(doc: vscode.TextDocument, txt: LLText): vscode.Diagnostic[] {
     if (doc.languageId !== "latex") return [];
 
-    const bibtexIterator = txt.matchAll(/\\bibliography\{/g);
+    const bibtexIterator = txt.text.matchAll(/\\bibliography\{/g);
     const firstMatchResult = bibtexIterator.next();
     const firstMatch = firstMatchResult.value;
     if (!firstMatch) return [];
 
     const natbibPattern = /\\usepackage(\[[^\]]*\])?\{natbib\}/g;
-    const matches = txt.matchAll(natbibPattern);
+    const matches = txt.text.matchAll(natbibPattern);
     let hasNatbibSort = false;
     for (const match of matches) {
         const options = match[1];
@@ -22,7 +23,7 @@ export default function LLSortedCites(doc: vscode.TextDocument, txt: string): vs
 
     const citePackagePattern = /\\usepackage(\[[^\]]*\])?\{cite\}/g;
     const biblatexPattern = /\\usepackage(\[[^\]]*\])?\{biblatex\}/g;
-    if (txt.match(citePackagePattern) || txt.match(biblatexPattern)) return [];
+    if (txt.text.match(citePackagePattern) || txt.text.match(biblatexPattern)) return [];
 
     const range = match2range(doc, firstMatch);
     const message = messages['LLSortedCites'];

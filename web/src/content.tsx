@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { flushSync } from 'react-dom';
 import {
     Container,
     VStack,
@@ -55,7 +56,9 @@ export function Content() {
     };
 
     const handleOpenAboutWithHash = (hash: string) => {
-        setAboutTab('readme');
+        flushSync(() => {
+            setAboutTab('readme');
+        });
         setIsAboutOpen(true);
         // Trigger scroll after modal opens
         setTimeout(() => {
@@ -64,7 +67,9 @@ export function Content() {
     };
 
     const handleOpenAboutForRuleDetails = () => {
-        setAboutTab('readme');
+        flushSync(() => {
+            setAboutTab('readme');
+        });
         setIsAboutOpen(true);
     };
 

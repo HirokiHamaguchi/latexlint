@@ -12,11 +12,11 @@
 
 LaTex Lint is a LaTeX Linter for `.tex` and `.md` files in VS Code.
 
-![abstract](images/abstract.png)
+![abstract](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/abstract.png)
 
 [Web Version](https://hirokihamaguchi.github.io/latexlint/) is also available.
 
-![abstract_web](images/abstract_web.png)
+![abstract_web](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/abstract_web.png)
 
 We welcome any kind of feedback, suggestions, and pull requests!
 
@@ -34,7 +34,7 @@ Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint
 
 You can also use the following features in VS Code. These commands are available by clicking the icon on the editor toolbar.
 
-![enableDisableButton](images/enableDisableButton.png)
+![enableDisableButton](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/enableDisableButton.png)
 
 ### LaTeX Lint: Add Custom Detection Rule
 
@@ -43,13 +43,13 @@ For example, we can detect `f^a` by the following steps.
 
 #### 1. Select the string you want to detect (optional)
 
-![addRule1](images/addRule1.png)
+![addRule1](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/addRule1.png)
 
 #### 2. Run the command (Add Custom Detection Rule)
 
 Run the commands by clicking the icon or opening the command palette (`Ctrl`+`Shift`+`P`) and type `LaTeX Lint: Add Custom Detection Rule`.
 
-![addRule2](images/addRule2.png)
+![addRule2](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/addRule2.png)
 
 #### 3. Follow the instructions
 
@@ -62,13 +62,13 @@ Then, you can define your own rule.
 
 Select which rules to detect. Check the rules you want to detect.
 
-![selectRules](images/selectRulesToDetect.png)
+![selectRules](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/selectRulesToDetect.png)
 
 ### LaTeX Lint: Rename Command or Label
 
 Rename by pressing `F2` on the `\begin{name}`, `\end{name}` or `\label{name}`.
 
-![renameCommand](images/renameCommand.png)
+![renameCommand](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/renameCommand.png)
 
 ### Go to Label Definition
 
@@ -82,19 +82,19 @@ Query Wolfram Alpha to solve the equation.
 
 #### 1. Select the equation you want to solve
 
-![askWolframAlpha1](images/askWolframAlpha1.png)
+![askWolframAlpha1](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/askWolframAlpha1.png)
 
 #### 2. Run the command (Query Wolfram Alpha)
 
 Run the commands by clicking the icon or opening the command palette (`Ctrl`+`Shift`+`P`) and type `LaTeX Lint: Query Wolfram Alpha`.
 
-![askWolframAlpha2](images/askWolframAlpha2.png)
+![askWolframAlpha2](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/askWolframAlpha2.png)
 
 #### 3. Check the Wolfram Alpha page
 
 You can see the result on the Wolfram Alpha page. We remove some unnecessary commands when sending the equation.
 
-![askWolframAlpha3](images/askWolframAlpha3.png)
+![askWolframAlpha3](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/askWolframAlpha3.png)
 
 ## Note
 

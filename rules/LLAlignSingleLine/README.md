@@ -6,7 +6,7 @@
 Detect `align` environment without `\\` in `.tex` and `.md` files.
 You should likely use the `equation` environment.
 
-![rules/LLAlignSingleLine](rules/LLAlignSingleLine/LLAlignSingleLine.png)
+![rules/LLAlignSingleLine](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLAlignSingleLine/LLAlignSingleLine.png)
 
 The spacing of the `align` environment is [different](https://tex.stackexchange.com/questions/239550/what-is-the-difference-between-align-and-equation-environment-when-i-only-want-t) from the `equation` environment with only one equation.
 

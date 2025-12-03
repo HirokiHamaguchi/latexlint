@@ -13,11 +13,11 @@
 
 LaTex Lint is a LaTeX Linter for `.tex` and `.md` files in VS Code.
 
-![abstract](images/abstract.png)
+![abstract](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/abstract.png)
 
 [Web Version](https://hirokihamaguchi.github.io/latexlint/) is also available.
 
-![abstract_web](images/abstract_web.png)
+![abstract_web](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/abstract_web.png)
 
 We welcome any kind of feedback, suggestions, and pull requests!
 
@@ -65,7 +65,7 @@ Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint
 Detect `=&` in `.tex` and `.md` files.
 Use `&=` or `={}&` in the `align` environment to avoid relation spacing error.
 
-![rules/LLAlignAnd](rules/LLAlignAnd/LLAlignAnd.png)
+![rules/LLAlignAnd](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLAlignAnd/LLAlignAnd.png)
 
 We also detect `\neq&`, `\leq&`, `\geq&`, `\le&`, `\ge&`, `<&`, and `>&`.
 
@@ -83,7 +83,7 @@ This `\\` can be unnecessary.
 Detect `align` environment without `\\` in `.tex` and `.md` files.
 You should likely use the `equation` environment.
 
-![rules/LLAlignSingleLine](rules/LLAlignSingleLine/LLAlignSingleLine.png)
+![rules/LLAlignSingleLine](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLAlignSingleLine/LLAlignSingleLine.png)
 
 The spacing of the `align` environment is [different](https://tex.stackexchange.com/questions/239550/what-is-the-difference-between-align-and-equation-environment-when-i-only-want-t) from the `equation` environment with only one equation.
 
@@ -104,7 +104,7 @@ Detect `\cap_`, `\cup_`, `\odot_`, `\oplus_`, `\otimes_`, `\sqcup_`, `uplus_`, `
 
 You should likely use `\bigcap`, `\bigcup`, `\bigodot`, `\bigoplus`, `\bigotimes`, `\bigsqcup`, `\biguplus`, `\bigvee`, and `\bigwedge` instead.
 
-![rules/LLBig](rules/LLBig/LLBig.png)
+![rules/LLBig](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLBig/LLBig.png)
 
 [Ref by Stack Exchange](https://tex.stackexchange.com/questions/205125/formatting-the-union-of-sets).
 
@@ -113,28 +113,28 @@ You should likely use `\bigcap`, `\bigcup`, `\bigodot`, `\bigoplus`, `\bigotimes
 Detect `\max{` and `\min{` in `.tex` and `.md` files.
 You should likely use `\max(` and `\min(` instead, or add a space after `\max` or `\min` to clarify.
 
-![rules/LLBracketCurly](rules/LLBracketCurly/LLBracketCurly.png)
+![rules/LLBracketCurly](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLBracketCurly/LLBracketCurly.png)
 
 ### LLBracketMissing
 
 Detect cases such as `^23`, `_23`, `^ab`, and `_ab` in `.tex` files.
 Clarify the scope of the superscript and subscript by adding `{}` or a space.
 
-![rules/LLBracketMissing](rules/LLBracketMissing/LLBracketMissing.png)
+![rules/LLBracketMissing](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLBracketMissing/LLBracketMissing.png)
 
 ### LLBracketRound
 
 Detect `\sqrt(`, `^(`, and `_(` in `.tex` and `.md` files.
 You should likely use `\sqrt{`, `^{`, and `_{` instead.
 
-![rules/LLBracketRound](rules/LLBracketRound/LLBracketRound.png)
+![rules/LLBracketRound](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLBracketRound/LLBracketRound.png)
 
 ### LLColonEqq
 
 Detect `:=`, `=:`, `::=`, and `=::` in `.tex` and `.md` files.
 You should likely use `\coloneqq`, `\eqqcolon`, `\Coloneqq`, and `\Eqqcolon` in the [mathtools](https://ctan.org/pkg/mathtools) package instead.
 
-![rules/LLColonEqq](rules/LLColonEqq/LLColonEqq.png)
+![rules/LLColonEqq](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLColonEqq/LLColonEqq.png)
 
 The colon is slightly too low in `:=`, but vertically centered in `\coloneqq` according to [this](https://tex.stackexchange.com/questions/4216/how-to-typeset-correctly).
 
@@ -145,7 +145,7 @@ The colon is slightly too low in `:=`, but vertically centered in `\coloneqq` ac
 Detect `:` which seems to be used for mapping in `.tex` and `.md` files.
 You likely want to use `\colon` instead.
 
-![rules/LLColonForMapping](rules/LLColonForMapping/LLColonForMapping.png)
+![rules/LLColonForMapping](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLColonForMapping/LLColonForMapping.png)
 
 `\colon` is [recommended](https://tex.stackexchange.com/questions/37789/using-colon-or-in-formulas) for the mapping symbol. `:` is used for ratios, such as `1:2`.
 
@@ -179,7 +179,7 @@ You can also use `\enquote{XXX}` with the [csquotes](https://ctan.org/pkg/csquot
 Detect the dubious use of hyphens in `.tex` and `.md` files.
 You should likely use `--` for en-dash and `---` for em-dash.
 
-![rules/LLENDash](rules/LLENDash/LLENDash.png)
+![rules/LLENDash](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLENDash/LLENDash.png)
 
 Although this rule is [not inherent orthographic "correctness"](https://en.wikipedia.org/wiki/Dash#En_dash), in a lot of cases, the use of an en dash is [preferred](https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style#Dashes).
 
@@ -214,7 +214,7 @@ It is known that the `eqnarray` environment is [not recommended](https://texfaq.
 Detect `.` + newline + `\footnote` in `.tex` files.
 You should likely add `%` after `.` to avoid spacing issues.
 
-![rules/LLFootnote](rules/LLFootnote/LLFootnote.png)
+![rules/LLFootnote](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLFootnote/LLFootnote.png)
 
 ### LLHeading
 
@@ -238,7 +238,7 @@ By default, this rule is disabled by `latexlint.disabledRules` in `settings.json
 Detect `<<` and `>>` in `.tex` and `.md` files.
 You should likely use `\ll` and `\gg` instead.
 
-![rules/LLLlGg](rules/LLLlGg/LLLlGg.png)
+![rules/LLLlGg](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLLlGg/LLLlGg.png)
 
 We do not detect `<<` like this one.
 
@@ -334,7 +334,7 @@ This rule only detects exact matches to avoid false positives.
 Detect `e.g.` in `.tex` and `.md` files.
 You should likely add a comma like `e.g.,` or use `e.g.\` to avoid spacing issues.
 
-![rules/LLPeriod](rules/LLPeriod/LLPeriod.png)
+![rules/LLPeriod](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLPeriod/LLPeriod.png)
 
 [Ref by Stack Exchange](https://tex.stackexchange.com/questions/2229/is-a-period-after-an-abbreviation-the-same-as-an-end-of-sentence-period)
 
@@ -350,7 +350,7 @@ This command automatically adds parentheses around the reference.
 Detect `\sharp` in `.tex` and `.md` files.
 You should likely use `\#` instead for the [number sign](https://en.wikipedia.org/wiki/Number_sign).
 
-![rules/LLSharp](rules/LLSharp/LLSharp.png)
+![rules/LLSharp](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLSharp/LLSharp.png)
 
 `\sharp` is used for the musical symbol.
 
@@ -359,7 +359,7 @@ You should likely use `\#` instead for the [number sign](https://en.wikipedia.or
 Detect `KB`, `MB`, `GB`, `TB`, `PB`, `EB`, `ZB`, `YB`, `KiB`, `MiB`, `GiB`, `TiB`, `PiB`, `EiB`, `ZiB`, and `YiB` without `\SI` in `.tex` files.
 You should likely use `\SI` instead, like `\SI{1}{\kilo\byte}`(10^3 byte) and `\SI{1}{\kibi\byte}`(2^{10} byte).
 
-![rules/LLSI](rules/LLSI/LLSI.png)
+![rules/LLSI](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLSI/LLSI.png)
 
 | Prefix  | Command  | Symbol  | Power |
 |:-------:|:--------:|:-------:|:-----:|
@@ -394,7 +394,7 @@ This rule only applies when:
 Detect `^T` in `.tex` and `.md` files.
 You likely want to use `^\top` or `^\mathsf{T}` instead to represent the transpose of a matrix or a vector.
 
-![rules/LLT](rules/LLT/LLT.png)
+![rules/LLT](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLT/LLT.png)
 
 Otherwise, we cannot distinguish between the transpose and the power by a variable `T` (you can use `^{T}` for the power).
 
@@ -411,7 +411,7 @@ Currently, it only checks japanese texts, and full features are available only i
 Detect wrongly used commas as thousands separators, such as `1,000` in `.tex` files.
 You should likely use `1{,}000` or use the package [icomma](https://ctan.org/pkg/icomma?lang=en).
 
-![rules/LLThousands](rules/LLThousands/LLThousands.png)
+![rules/LLThousands](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLThousands/LLThousands.png)
 
 [Ref by Stack Exchange](https://tex.stackexchange.com/questions/303110/avoid-space-after-commas-used-as-thousands-separator-in-math-mode).
 
@@ -474,7 +474,7 @@ When you use English letters in math mode for an explanation, you should use `\m
 
 For example, if the character `a` is not a variable and represents something like **a**tractive force, `f^a(x)` should be written as `f^{\mathrm{a}}(x)`.
 
-![rules/LLUserDefined](rules/LLUserDefined/LLUserDefined1.png)
+![rules/LLUserDefined](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLUserDefined/LLUserDefined1.png)
 
 However, it is difficult to detect without context. You can define the rule `f\^a` to detect this pattern.
 
@@ -488,7 +488,7 @@ For example, if you use `\Box` as a [infimal convolution](https://en.wikipedia.o
 \DeclareMathOperator{\infConv}{\Box}
 ```
 
-![rules/LLUserDefined](rules/LLUserDefined/LLUserDefined2.png)
+![rules/LLUserDefined](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLUserDefined/LLUserDefined2.png)
 
 Then, you can use `\infConv` instead of `\Box`.
 
@@ -496,7 +496,7 @@ Then, you can use `\infConv` instead of `\Box`.
 
 You can also use the following features in VS Code. These commands are available by clicking the icon on the editor toolbar.
 
-![enableDisableButton](images/enableDisableButton.png)
+![enableDisableButton](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/enableDisableButton.png)
 
 ### LaTeX Lint: Add Custom Detection Rule
 
@@ -505,13 +505,13 @@ For example, we can detect `f^a` by the following steps.
 
 #### 1. Select the string you want to detect (optional)
 
-![addRule1](images/addRule1.png)
+![addRule1](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/addRule1.png)
 
 #### 2. Run the command (Add Custom Detection Rule)
 
 Run the commands by clicking the icon or opening the command palette (`Ctrl`+`Shift`+`P`) and type `LaTeX Lint: Add Custom Detection Rule`.
 
-![addRule2](images/addRule2.png)
+![addRule2](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/addRule2.png)
 
 #### 3. Follow the instructions
 
@@ -524,13 +524,13 @@ Then, you can define your own rule.
 
 Select which rules to detect. Check the rules you want to detect.
 
-![selectRules](images/selectRulesToDetect.png)
+![selectRules](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/selectRulesToDetect.png)
 
 ### LaTeX Lint: Rename Command or Label
 
 Rename by pressing `F2` on the `\begin{name}`, `\end{name}` or `\label{name}`.
 
-![renameCommand](images/renameCommand.png)
+![renameCommand](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/renameCommand.png)
 
 ### Go to Label Definition
 
@@ -544,19 +544,19 @@ Query Wolfram Alpha to solve the equation.
 
 #### 1. Select the equation you want to solve
 
-![askWolframAlpha1](images/askWolframAlpha1.png)
+![askWolframAlpha1](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/askWolframAlpha1.png)
 
 #### 2. Run the command (Query Wolfram Alpha)
 
 Run the commands by clicking the icon or opening the command palette (`Ctrl`+`Shift`+`P`) and type `LaTeX Lint: Query Wolfram Alpha`.
 
-![askWolframAlpha2](images/askWolframAlpha2.png)
+![askWolframAlpha2](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/askWolframAlpha2.png)
 
 #### 3. Check the Wolfram Alpha page
 
 You can see the result on the Wolfram Alpha page. We remove some unnecessary commands when sending the equation.
 
-![askWolframAlpha3](images/askWolframAlpha3.png)
+![askWolframAlpha3](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/askWolframAlpha3.png)
 
 ## Note
 

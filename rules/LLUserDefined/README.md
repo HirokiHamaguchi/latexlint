@@ -15,7 +15,7 @@ When you use English letters in math mode for an explanation, you should use `\m
 
 For example, if the character `a` is not a variable and represents something like **a**tractive force, `f^a(x)` should be written as `f^{\mathrm{a}}(x)`.
 
-![rules/LLUserDefined](rules/LLUserDefined/LLUserDefined1.png)
+![rules/LLUserDefined](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLUserDefined/LLUserDefined1.png)
 
 However, it is difficult to detect without context. You can define the rule `f\^a` to detect this pattern.
 
@@ -29,6 +29,6 @@ For example, if you use `\Box` as a [infimal convolution](https://en.wikipedia.o
 \DeclareMathOperator{\infConv}{\Box}
 ```
 
-![rules/LLUserDefined](rules/LLUserDefined/LLUserDefined2.png)
+![rules/LLUserDefined](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLUserDefined/LLUserDefined2.png)
 
 Then, you can use `\infConv` instead of `\Box`.

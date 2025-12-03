@@ -6,7 +6,7 @@
 Detect `:` which seems to be used for mapping in `.tex` and `.md` files.
 You likely want to use `\colon` instead.
 
-![rules/LLColonForMapping](rules/LLColonForMapping/LLColonForMapping.png)
+![rules/LLColonForMapping](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLColonForMapping/LLColonForMapping.png)
 
 `\colon` is [recommended](https://tex.stackexchange.com/questions/37789/using-colon-or-in-formulas) for the mapping symbol. `:` is used for ratios, such as `1:2`.
 

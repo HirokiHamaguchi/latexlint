@@ -6,4 +6,4 @@
 Detect `\sqrt(`, `^(`, and `_(` in `.tex` and `.md` files.
 You should likely use `\sqrt{`, `^{`, and `_{` instead.
 
-![rules/LLBracketRound](rules/LLBracketRound/LLBracketRound.png)
+![rules/LLBracketRound](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLBracketRound/LLBracketRound.png)

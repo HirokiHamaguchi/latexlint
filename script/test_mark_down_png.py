@@ -10,6 +10,14 @@ def test_mark_down_png():
     assert png_paths, "No PNG paths found in README.md"
     for png_path in png_paths:
         if png_path.endswith(".png"):
+            # png_path must
+            assert png_path.startswith(
+                "https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/"
+            ), png_path
+            png_path = png_path.replace(
+                "https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/",
+                "",
+            )
             assert (Path(__file__).parent.parent / png_path).exists(), png_path
     print("test_mark_down_png ok!")
 

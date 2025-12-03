@@ -6,7 +6,7 @@
 Detect `<<` and `>>` in `.tex` and `.md` files.
 You should likely use `\ll` and `\gg` instead.
 
-![rules/LLLlGg](rules/LLLlGg/LLLlGg.png)
+![rules/LLLlGg](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLLlGg/LLLlGg.png)
 
 We do not detect `<<` like this one.
 

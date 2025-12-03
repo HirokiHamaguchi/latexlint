@@ -6,7 +6,7 @@
 Detect the dubious use of hyphens in `.tex` and `.md` files.
 You should likely use `--` for en-dash and `---` for em-dash.
 
-![rules/LLENDash](rules/LLENDash/LLENDash.png)
+![rules/LLENDash](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLENDash/LLENDash.png)
 
 Although this rule is [not inherent orthographic "correctness"](https://en.wikipedia.org/wiki/Dash#En_dash), in a lot of cases, the use of an en dash is [preferred](https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style#Dashes).
 

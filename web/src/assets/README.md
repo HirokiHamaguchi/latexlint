@@ -11,11 +11,14 @@
 
 ## Abstract
 
-This extension provides a LaTeX Linter for `.tex` and `.md` files with useful commands for academic writing.
+LaTex Lint is a LaTeX Linter for `.tex` and `.md` files in VS Code.
 
 ![abstract](images/abstract.png)
 
 [Web Version](https://hirokihamaguchi.github.io/latexlint/) is also available.
+
+![abstract_web](images/abstract_web.png)
+
 We welcome any kind of feedback, suggestions, and pull requests!
 
 ## Rules
@@ -491,7 +494,7 @@ Then, you can use `\infConv` instead of `\Box`.
 
 ## Other Features
 
-You can also use the following features. These commands are available by clicking the icon on the editor toolbar.
+You can also use the following features in VS Code. These commands are available by clicking the icon on the editor toolbar.
 
 ![enableDisableButton](images/enableDisableButton.png)
 

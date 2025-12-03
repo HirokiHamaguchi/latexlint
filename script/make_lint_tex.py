@@ -80,6 +80,22 @@ def make_lint_tex():
 
     compile_lint_tex()
 
+    # Cleanup auxiliary files
+    aux_extensions = [
+        ".aux",
+        ".bbl",
+        ".blg",
+        ".log",
+        ".out",
+        ".pdfsync",
+        ".synctex.gz",
+    ]
+    sample_dir = Path(__file__).parent.parent / "sample"
+    for ext in aux_extensions:
+        aux_path = sample_dir / f"lint{ext}"
+        if aux_path.exists():
+            aux_path.unlink()
+
 
 if __name__ == "__main__":
     make_lint_tex()

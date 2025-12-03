@@ -78,6 +78,8 @@ As a limitation of this extension, there are some false positives, such as `&=` 
 Detect `align`, `gather`, and other environments end with `\\` in `.tex` and `.md` files.
 This `\\` can be unnecessary.
 
+![rules/LLAlignEnd](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLAlignEnd/LLAlignEnd.png)
+
 ### LLAlignSingleLine
 
 Detect `align` environment without `\\` in `.tex` and `.md` files.
@@ -95,6 +97,8 @@ You can rename the command by [LaTeX Lint: Rename Command or Label](#latex-lint-
 
 Detect wrong article usage in `.tex` and `.md` files.
 For example, `A $n$-dimensional` should be `An $n$-dimensional` (We might add more patterns in the future).
+
+![rules/LLArticle](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLArticle/LLArticle.png)
 
 Such error cannot be detected by grammar checkers such as Grammarly, since it contains a math equation.
 
@@ -167,6 +171,8 @@ Detect `“`, `”` and `"` in `.tex` files.
 These might be used as "XXX" or “XXX”.
 
 Use ``XXX'' instead for double quotation.
+
+![rules/LLDoubleQuotes](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLDoubleQuotes/LLDoubleQuotes.png)
 
 As for “XXX”, there is no problem in most cases. We prefer to use ``XXX'' for consistency.
 

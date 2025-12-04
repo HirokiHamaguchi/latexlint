@@ -1,18 +1,19 @@
-import * as vscode from './vscode-mock';
-import { standardRules, configuredRules } from '@latexlint/util/rules';
-import enumAlignEnvs from '@latexlint/util/enumAlignEnvs';
-import * as monaco from 'monaco-editor';
-import { getConfig } from '../config';
-import type { LLTextLintErrorResult } from "@latexlint/TextLint/types";
-import { parseSentence } from "@latexlint/TextLint/parser";
 import { checkNoDroppingI } from "@latexlint/TextLint/no_dropping_i";
 import { checkNoDroppingRa } from "@latexlint/TextLint/no_dropping_ra";
-import { checkOverlookedTypo } from "@latexlint/TextLint/overlooked_typo";
-import { checkTariTari } from "@latexlint/TextLint/tari_tari";
 import { checkNoSuccessiveWord } from "@latexlint/TextLint/no_successive_word";
-import { DiagnosticSeverity, Range } from './vscode-mock';
+import { checkOverlookedTypo } from "@latexlint/TextLint/overlooked_typo";
+import { parseSentence } from "@latexlint/TextLint/parser";
+import { checkTariTari } from "@latexlint/TextLint/tari_tari";
+import type { LLTextLintErrorResult } from "@latexlint/TextLint/types";
+import enumAlignEnvs from '@latexlint/util/enumAlignEnvs';
+import formatException from "@latexlint/util/formatException";
 import { getCodeWithURI } from '@latexlint/util/getCodeWithURI';
 import type { LLText } from '@latexlint/util/LLText';
+import { configuredRules, standardRules } from '@latexlint/util/rules';
+import * as monaco from 'monaco-editor';
+import { getConfig } from '../config';
+import * as vscode from './vscode-mock';
+import { DiagnosticSeverity, Range } from './vscode-mock';
 
 // TextLint readiness state
 let isTextLintReady = false;
@@ -153,5 +154,5 @@ export async function lintLatex(
 
     console.log(`Linting took ${(t1 - t0).toFixed(2)} ms`);
 
-    return diagnostics.map(convertToMonacoMarker);
+    return diagnostics.filter(diag => !config.exceptions.includes(formatException(vscodeDoc.getText(diag.range)))).map(convertToMonacoMarker);
 }

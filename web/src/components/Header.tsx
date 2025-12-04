@@ -1,23 +1,23 @@
 import {
     Box,
+    Button,
     Heading,
+    HStack,
+    Image,
+    Link,
+    SegmentGroup,
     Text,
     VStack,
-    HStack,
-    Link,
-    Image,
-    Button,
-    SegmentGroup,
 } from '@chakra-ui/react';
 import { DocType } from '../types';
 
-interface HeaderProps {
+type HeaderProps = {
     docType: DocType;
     onDocTypeChange: (type: DocType) => void;
     onAboutClick: () => void;
-}
+};
 
-export function Header({ docType, onDocTypeChange, onAboutClick }: HeaderProps) {
+export function Header(props: HeaderProps) {
     return (
         <Box textAlign="center" as="header">
             <VStack justify="center" align="center" mb={4}>
@@ -43,15 +43,15 @@ export function Header({ docType, onDocTypeChange, onAboutClick }: HeaderProps) 
                 <Button
                     variant="outline"
                     size="sm"
-                    onClick={onAboutClick}
+                    onClick={props.onAboutClick}
                 >
                     <HStack align="center" gap={1}>
                         <Text>About</Text>
                     </HStack>
                 </Button>
                 <SegmentGroup.Root
-                    value={docType}
-                    onValueChange={(e) => onDocTypeChange(e.value as DocType)}
+                    value={props.docType}
+                    onValueChange={(e) => props.onDocTypeChange(e.value as DocType)}
                     size="sm"
                 >
                     <SegmentGroup.Indicator />

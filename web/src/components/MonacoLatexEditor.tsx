@@ -1,7 +1,7 @@
-import { useState, useRef, useEffect } from 'react';
 import { Box } from '@chakra-ui/react';
 import Editor, { OnMount } from '@monaco-editor/react';
 import type * as Monaco from 'monaco-editor';
+import { useEffect, useRef, useState } from 'react';
 
 interface MonacoLatexEditorProps {
     value: string;

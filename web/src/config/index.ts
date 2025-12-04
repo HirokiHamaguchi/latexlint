@@ -30,6 +30,8 @@ export const defaultConfig: LintConfig = Object.keys(configData).reduce((acc, ke
 // Global mutable config for web version
 export let currentConfig: LintConfig = { ...defaultConfig };
 
+// todo: consider persisting to localStorage
+// todo: format exceptions before setting
 export function setConfig(newConfig: LintConfig): void {
     currentConfig = { ...newConfig };
 }

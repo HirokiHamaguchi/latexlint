@@ -1,27 +1,27 @@
 import {
-    Dialog,
+    Box,
     Button,
-    VStack,
-    Text,
-    Link,
+    Collapsible,
+    Dialog,
+    Grid,
+    Heading,
     HStack,
     Image,
-    Heading,
-    Grid,
-    Tabs,
+    Link,
     Table,
-    Box,
-    Collapsible,
+    Tabs,
+    Text,
+    VStack,
 } from '@chakra-ui/react';
+import { getVocabularyData, type VocabularyEntry } from '@latexlint/TextLint/vocabulary_loader';
+import 'github-markdown-css/github-markdown-light.css';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { IoChevronDown, IoChevronForward } from 'react-icons/io5';
 import Markdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 import remarkSlug from 'remark-slug';
-import rehypeRaw from 'rehype-raw';
-import 'github-markdown-css/github-markdown-light.css';
 import readmeContent from '../assets/README.md?raw';
-import { getVocabularyData, type VocabularyEntry } from '@latexlint/TextLint/vocabulary_loader';
-import { useEffect, useRef, useState, useMemo } from 'react';
-import { IoChevronDown, IoChevronForward } from 'react-icons/io5';
 
 interface AboutModalProps {
     isOpen: boolean;
@@ -240,7 +240,7 @@ export function AboutModal({ isOpen, onClose, tab, onTabChange }: AboutModalProp
 
                     if (element) {
                         const scrollToElement = () => {
-                            element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            element?.scrollIntoView({ behavior: 'auto', block: 'start' });
                         };
 
                         // Initial scroll
@@ -257,7 +257,7 @@ export function AboutModal({ isOpen, onClose, tab, onTabChange }: AboutModalProp
                         window.history.replaceState(null, '', window.location.pathname + window.location.search);
                     }
                 }
-            }, 300);
+            }, 10);
         }
     }, [isOpen, tab]);
 

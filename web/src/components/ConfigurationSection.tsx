@@ -1,53 +1,93 @@
 import {
     Box,
+    Checkbox,
+    Collapsible,
+    Input,
+    SimpleGrid,
     Text,
     VStack,
-    Input,
-    Collapsible,
-    SimpleGrid,
-    Checkbox,
 } from '@chakra-ui/react';
 import { LuChevronRight } from "react-icons/lu";
-import { type LintConfig, configMetadata } from '../config';
+import { configMetadata, type LintConfig } from '../config';
 import { DocType } from '../types';
 
-interface ConfigurationSectionProps {
-    isOpen: boolean;
-    onToggle: (open: boolean) => void;
+type ConfigFieldProps = {
+    keyName: keyof LintConfig;
     config: LintConfig;
-    onConfigChange: (newConfig: LintConfig) => void;
-    onRunLint: (text: string, type: DocType, forceTextLint: boolean) => void;
-    text: string;
-    docType: DocType;
+    updateConfig: (newConfig: LintConfig) => void;
+};
+
+function ConfigField(props: ConfigFieldProps) {
+    const metadata = configMetadata[props.keyName];
+    const currentValues = props.config[props.keyName] as unknown as string[];
+    return (
+        <Box key={String(props.keyName)}>
+            <Text fontWeight="bold" mb={2}>
+                {metadata.description}
+            </Text>
+            {metadata.items?.enum ? (
+                // Checkbox UI for enum fields
+                <Box>
+                    <SimpleGrid columns={{ base: 2, md: 3, lg: 4 }} gap={2}>
+                        {metadata.items.enum.map((option) => (
+                            <Checkbox.Root
+                                key={option}
+                                checked={currentValues.includes(option)}
+                                onCheckedChange={(details) => {
+                                    const newValue = details.checked === true
+                                        ? [...currentValues, option]
+                                        : currentValues.filter((v) => v !== option);
+                                    props.updateConfig({ ...props.config, [props.keyName]: newValue } as LintConfig);
+                                }}
+                            >
+                                <Checkbox.HiddenInput />
+                                <Checkbox.Control />
+                                <Checkbox.Label>{option}</Checkbox.Label>
+                            </Checkbox.Root>
+                        ))}
+                    </SimpleGrid>
+                </Box>
+            ) : (
+                // Input for non-enum fields
+                <Input
+                    id={`config-input-${String(props.keyName)}`}
+                    value={currentValues.join(', ')}
+                    onChange={(e) => {
+                        const value = e.target.value
+                            .split(',')
+                            .map((s) => s.trim())
+                            .filter((s) => s);
+                        props.updateConfig({ ...props.config, [props.keyName]: value } as LintConfig);
+                    }}
+                    placeholder="word1, word2, word3"
+                    size="sm"
+                />
+            )}
+        </Box>
+    );
 }
 
-export function ConfigurationSection({
-    isOpen,
-    onToggle,
-    config,
-    onConfigChange,
-    onRunLint,
-    text,
-    docType,
-}: ConfigurationSectionProps) {
-    const updateConfig = (newConfig: LintConfig) => {
-        onConfigChange(newConfig);
-        onRunLint(text, docType, true);
-    };
+type ConfigurationSectionProps = {
+    text: string;
+    isOpen: boolean;
+    docType: DocType;
+    config: LintConfig;
+    onToggle: (open: boolean) => void;
+    onConfigChange: (newConfig: LintConfig) => void;
+    onRunLint: (text: string, type: DocType, forceTextLint: boolean) => void;
+}
 
+export function ConfigurationSection(props: ConfigurationSectionProps) {
     return (
         <Box as="section" aria-label="Configuration">
-            <Collapsible.Root open={isOpen} onOpenChange={(e) => onToggle(e.open)}>
+            <Collapsible.Root open={props.isOpen} onOpenChange={(e) => props.onToggle(e.open)}>
                 <Collapsible.Trigger
                     display="flex"
                     gap="2"
                     alignItems="center"
                     cursor="pointer"
                 >
-                    <Collapsible.Indicator
-                        transition="transform 0.2s"
-                        _open={{ transform: "rotate(90deg)" }}
-                    >
+                    <Collapsible.Indicator transition="transform 0.2s" _open={{ transform: "rotate(90deg)" }}>
                         <LuChevronRight />
                     </Collapsible.Indicator>
                     Setting
@@ -55,54 +95,16 @@ export function ConfigurationSection({
                 <Collapsible.Content>
                     <Box mt={4} p={4} borderWidth="1px" borderRadius="md" bg="gray.50">
                         <VStack align="stretch" gap={4}>
-                            {(Object.keys(config) as Array<keyof LintConfig>).map((key) => {
-                                const metadata = configMetadata[key];
-                                const hasEnum = metadata.items?.enum;
-
+                            {(Object.keys(props.config) as Array<keyof LintConfig>).map((key) => {
                                 return (
-                                    <Box key={key}>
-                                        <Text fontWeight="bold" mb={2}>
-                                            {metadata.description}
-                                        </Text>
-                                        {hasEnum ? (
-                                            // Checkbox UI for enum fields
-                                            <Box>
-                                                <SimpleGrid columns={{ base: 2, md: 3, lg: 4 }} gap={2}>
-                                                    {metadata.items!.enum.map((option) => (
-                                                        <Checkbox.Root
-                                                            key={option}
-                                                            checked={config[key].includes(option)}
-                                                            onCheckedChange={(details) => {
-                                                                const newValue = details.checked === true
-                                                                    ? [...config[key], option]
-                                                                    : config[key].filter((v) => v !== option);
-                                                                updateConfig({ ...config, [key]: newValue });
-                                                            }}
-                                                        >
-                                                            <Checkbox.HiddenInput />
-                                                            <Checkbox.Control />
-                                                            <Checkbox.Label>{option}</Checkbox.Label>
-                                                        </Checkbox.Root>
-                                                    ))}
-                                                </SimpleGrid>
-                                            </Box>
-                                        ) : (
-                                            // Input for non-enum fields
-                                            <Input
-                                                id={`config-input-${key}`}
-                                                value={config[key].join(', ')}
-                                                onChange={(e) => {
-                                                    const value = e.target.value
-                                                        .split(',')
-                                                        .map((s) => s.trim())
-                                                        .filter((s) => s);
-                                                    updateConfig({ ...config, [key]: value });
-                                                }}
-                                                placeholder="word1, word2, word3"
-                                                size="sm"
-                                            />
-                                        )}
-                                    </Box>
+                                    <ConfigField
+                                        keyName={key}
+                                        config={props.config}
+                                        updateConfig={(newConfig: LintConfig) => {
+                                            props.onConfigChange(newConfig);
+                                            props.onRunLint(props.text, props.docType, true);
+                                        }}
+                                    />
                                 );
                             })}
                         </VStack>

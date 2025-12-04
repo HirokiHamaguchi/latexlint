@@ -1,16 +1,14 @@
-import { useState, useEffect } from 'react';
+import { Container, SimpleGrid, VStack } from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
 import { flushSync } from 'react-dom';
-import {
-    Container,
-    VStack,
-} from '@chakra-ui/react';
-import { preloadTextLintDictionary } from './utils';
-import { type LintConfig, defaultConfig, setConfig } from './config';
 import sampleMdBefore from '../sample/sample_before.md?raw';
 import sampleTexBefore from '../sample/sample_before.tex?raw';
-import { Header, ConfigurationSection, EditorSection, AboutModal } from './components';
+import { AboutModal, ConfigurationSection, EditorSection, Header } from './components';
+import { DiagnosticsSection } from './components/DiagnosticsSection';
+import { type LintConfig, defaultConfig, setConfig } from './config';
 import { useLinting } from './hooks';
 import { DocType } from './types';
+import { preloadTextLintDictionary } from './utils';
 
 const samples: Record<DocType, string> = {
     latex: sampleTexBefore,
@@ -55,22 +53,19 @@ export function Content() {
         setIsAboutOpen(true);
     };
 
+    const handleAboutClose = () => {
+        setIsAboutOpen(false);
+        if (window.location.hash) window.location.hash = '';
+    };
+
     const handleOpenAboutWithHash = (hash: string) => {
         flushSync(() => {
             setAboutTab('readme');
+            setIsAboutOpen(true);
         });
-        setIsAboutOpen(true);
-        // Trigger scroll after modal opens
-        setTimeout(() => {
-            window.location.hash = hash;
-        }, 100);
-    };
-
-    const handleOpenAboutForRuleDetails = () => {
         flushSync(() => {
-            setAboutTab('readme');
+            window.location.hash = hash;
         });
-        setIsAboutOpen(true);
     };
 
     useEffect(() => {
@@ -78,9 +73,7 @@ export function Content() {
     }, []);
 
     useEffect(() => {
-        if (isEditorReady) {
-            runLint(sampleTexBefore, 'latex', false);
-        }
+        if (isEditorReady) runLint(sampleTexBefore, 'latex', false);
     }, [isEditorReady, runLint]);
 
     return (
@@ -102,21 +95,27 @@ export function Content() {
                     docType={docType}
                 />
 
-                <EditorSection
-                    docType={docType}
-                    text={text}
-                    diagnostics={diagnostics}
-                    lintingState={lintingState}
-                    onTextChange={handleTextChange}
-                    onEditorReady={() => setIsEditorReady(true)}
-                    onOpenAboutWithHash={handleOpenAboutWithHash}
-                    onOpenAbout={handleOpenAboutForRuleDetails}
-                />
+                <SimpleGrid columns={{ base: 1, lg: 2 }} gap={4}>
+                    <EditorSection
+                        docType={docType}
+                        text={text}
+                        diagnostics={diagnostics}
+                        lintingState={lintingState}
+                        onTextChange={handleTextChange}
+                        onEditorReady={() => setIsEditorReady(true)}
+                        onOpenAboutWithHash={handleOpenAboutWithHash}
+                    />
+
+                    <DiagnosticsSection
+                        diagnostics={diagnostics}
+                        onOpenAboutWithHash={handleOpenAboutWithHash}
+                    />
+                </SimpleGrid>
             </VStack>
 
             <AboutModal
                 isOpen={isAboutOpen}
-                onClose={() => setIsAboutOpen(false)}
+                onClose={handleAboutClose}
                 tab={aboutTab}
                 onTabChange={setAboutTab}
             />

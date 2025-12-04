@@ -26,10 +26,10 @@ export function Header(props: HeaderProps) {
                         <Image
                             src="lintIconLight_copied.svg"
                             alt="LaTeX Lint Icon"
-                            boxSize="1.8em"
+                            boxSize="2.5em"
                             mr={2}
                         />
-                        <Heading as="h1" size="2xl" color="#333333" _hover={{ color: 'blue.600' }} transition="color 0.2s">
+                        <Heading as="h1" size="3xl" color="#333333" _hover={{ color: 'blue.600' }} transition="color 0.2s">
                             <Text fontFamily="Times New Roman, serif">LaTeX Lint</Text>
                         </Heading>
                     </HStack>

@@ -1,45 +1,32 @@
 import {
     Box,
-    HStack,
-    Text,
-    VStack,
+    VStack
 } from '@chakra-ui/react';
 import type * as Monaco from 'monaco-editor';
-import { DocType, LintingState } from '../types';
+import { LintingState } from '../types';
 import { MonacoLatexEditor } from './MonacoLatexEditor';
 
 type EditorSectionProps = {
-    docType: DocType;
     text: string;
     diagnostics: Monaco.editor.IMarkerData[];
     lintingState: LintingState;
     onTextChange: (text: string) => void;
     onEditorReady: () => void;
     onOpenAboutWithHash: (hash: string) => void;
+    onEditorRef: (ref: { current: Monaco.editor.IStandaloneCodeEditor | null }) => void;
 };
 
 export function EditorSection(props: EditorSectionProps) {
     return (
         <Box as="section" aria-label="LaTeX Linting Interface">
             <VStack align="stretch" gap={4}>
-                <HStack color="gray.700">
-                    <Text as="span" fontWeight="medium">
-                        {props.docType === 'latex' ? 'LaTeX' : 'Markdown'} Editor
-                    </Text>
-                    <Text as="span" color="blue.600">
-                        {(() => {
-                            if (props.lintingState === 'idle') return 'ℹ️ Not Started';
-                            if (props.lintingState === 'linting') return '🔄 Analyzing...';
-                            return '';
-                        })()}
-                    </Text>
-                </HStack>
                 <MonacoLatexEditor
                     value={props.text}
                     diagnostics={props.diagnostics}
                     onChange={props.onTextChange}
                     onEditorReady={props.onEditorReady}
                     onOpenAboutWithHash={props.onOpenAboutWithHash}
+                    onEditorRef={props.onEditorRef}
                 />
             </VStack>
         </Box>

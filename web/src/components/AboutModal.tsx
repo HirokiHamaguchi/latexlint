@@ -11,7 +11,7 @@ import {
     Table,
     Tabs,
     Text,
-    VStack,
+    VStack
 } from '@chakra-ui/react';
 import { getVocabularyData, type VocabularyEntry } from '@latexlint/TextLint/vocabulary_loader';
 import 'github-markdown-css/github-markdown-light.css';
@@ -270,7 +270,11 @@ export function AboutModal({ isOpen, onClose, tab, onTabChange }: AboutModalProp
                         <Dialog.Title fontSize="xl" fontWeight="bold">
                             About LaTeX Lint
                         </Dialog.Title>
-                        <Dialog.CloseTrigger />
+                        <Dialog.CloseTrigger>
+                            <Button colorScheme="black" onClick={onClose}>
+                                Close
+                            </Button>
+                        </Dialog.CloseTrigger>
                     </Dialog.Header>
                     <Dialog.Body overflowY="auto">
                         <Tabs.Root value={tab} variant="enclosed" onValueChange={(details) => onTabChange(details.value)}>
@@ -293,11 +297,6 @@ export function AboutModal({ isOpen, onClose, tab, onTabChange }: AboutModalProp
                             </Tabs.Content>
                         </Tabs.Root>
                     </Dialog.Body>
-                    <Dialog.Footer>
-                        <Button onClick={onClose} colorScheme="blue">
-                            Close
-                        </Button>
-                    </Dialog.Footer>
                 </Dialog.Content>
             </Dialog.Positioner>
         </Dialog.Root >

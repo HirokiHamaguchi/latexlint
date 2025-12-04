@@ -9,9 +9,10 @@ interface MonacoLatexEditorProps {
     onChange: (value: string) => void;
     onEditorReady: () => void;
     onOpenAboutWithHash: (hash: string) => void;
+    onEditorRef: (ref: { current: Monaco.editor.IStandaloneCodeEditor | null }) => void;
 }
 
-export function MonacoLatexEditor({ value, diagnostics, onChange, onEditorReady, onOpenAboutWithHash }: MonacoLatexEditorProps) {
+export function MonacoLatexEditor({ value, diagnostics, onChange, onEditorReady, onOpenAboutWithHash, onEditorRef }: MonacoLatexEditorProps) {
     const editorRef = useRef<Monaco.editor.IStandaloneCodeEditor | null>(null);
     const monacoRef = useRef<typeof Monaco | null>(null);
     const [height, setHeight] = useState<number>(200);
@@ -78,6 +79,7 @@ export function MonacoLatexEditor({ value, diagnostics, onChange, onEditorReady,
         editor.onDidContentSizeChange(updateHeight);
         updateHeight();
         onEditorReady();
+        onEditorRef?.({ current: editor });
     };
 
     // Update markers when diagnostics change

@@ -1,4 +1,5 @@
-import { Container, SimpleGrid, VStack } from '@chakra-ui/react';
+import { Container, HStack, SimpleGrid, Text, VStack } from '@chakra-ui/react';
+import type * as monaco from 'monaco-editor';
 import { useEffect, useState } from 'react';
 import { flushSync } from 'react-dom';
 import sampleMdBefore from '../sample/sample_before.md?raw';
@@ -23,6 +24,7 @@ export function Content() {
     const [isConfigOpen, setIsConfigOpen] = useState(false);
     const [config, setConfigState] = useState<LintConfig>(defaultConfig);
     const [isEditorReady, setIsEditorReady] = useState(false);
+    const [editorRef, setEditorRef] = useState<{ current: monaco.editor.IStandaloneCodeEditor | null } | null>(null);
 
     const { lintingState, diagnostics, runLint, runLintWithDelay } = useLinting();
 
@@ -68,6 +70,14 @@ export function Content() {
         });
     };
 
+    const handleDiagnosticClick = (lineNumber: number, column: number) => {
+        if (editorRef?.current) {
+            editorRef.current.setPosition({ lineNumber, column });
+            editorRef.current.focus();
+            editorRef.current.revealLineInCenter(lineNumber);
+        }
+    };
+
     useEffect(() => {
         preloadTextLintDictionary();
     }, []);
@@ -95,20 +105,34 @@ export function Content() {
                     docType={docType}
                 />
 
+                <HStack color="gray.700">
+                    <Text as="span" fontWeight="medium">
+                        {docType === 'latex' ? 'LaTeX' : 'Markdown'} Editor
+                    </Text>
+                    <Text as="span" color="blue.600">
+                        {(() => {
+                            if (lintingState === 'idle') return 'ℹ️ Not Started';
+                            if (lintingState === 'linting') return '🔄 Analyzing...';
+                            return '';
+                        })()}
+                    </Text>
+                </HStack>
+
                 <SimpleGrid columns={{ base: 1, lg: 2 }} gap={4}>
                     <EditorSection
-                        docType={docType}
                         text={text}
                         diagnostics={diagnostics}
                         lintingState={lintingState}
                         onTextChange={handleTextChange}
                         onEditorReady={() => setIsEditorReady(true)}
                         onOpenAboutWithHash={handleOpenAboutWithHash}
+                        onEditorRef={setEditorRef}
                     />
 
                     <DiagnosticsSection
                         diagnostics={diagnostics}
                         onOpenAboutWithHash={handleOpenAboutWithHash}
+                        onDiagnosticClick={handleDiagnosticClick}
                     />
                 </SimpleGrid>
             </VStack>

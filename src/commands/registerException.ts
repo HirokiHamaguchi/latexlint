@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
-import diagnose from './diagnose';
-import getEditor from '../util/getEditor';
 import formatException from '../util/formatException';
+import getEditor from '../util/getEditor';
+import diagnose from './diagnose';
 
 export default async function registerException(isEnabled: boolean, diagnosticsCollection: vscode.DiagnosticCollection) {
     const editor = getEditor(true, isEnabled);

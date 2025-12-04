@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
-import diagnose from './diagnose';
 import getEditor from '../util/getEditor';
+import diagnose from './diagnose';
 
 export default async function addRule(isEnabled: boolean, diagnosticsCollection: vscode.DiagnosticCollection) {
     const editor = getEditor(true, isEnabled);

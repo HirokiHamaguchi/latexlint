@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import isInComment from '../util/isInComment';
+import isInComment from '../LLText/isInComment';
 
 export default class RefDefinitionProvider implements vscode.DefinitionProvider {
     provideDefinition(

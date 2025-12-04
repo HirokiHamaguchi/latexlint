@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
-import findLabelTargets, { LabelResult } from '../util/findLabelTargets';
 import findBeginEndTargets, { BeginEndResult } from '../util/findBeginEndTargets';
+import findLabelTargets, { LabelResult } from '../util/findLabelTargets';
 import getEditor from '../util/getEditor';
 
 

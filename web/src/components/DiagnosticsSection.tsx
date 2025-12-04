@@ -12,7 +12,10 @@ import { LuExternalLink } from 'react-icons/lu';
 
 const SEVERITY = { ERROR: 8, WARNING: 4, INFO: 2, HINT: 1 } as const;
 
-const SEVERITY_CONFIG = {
+type SeverityKey = 'errors' | 'warnings' | 'info' | 'hints';
+type DiagnosticCounts = Record<SeverityKey, number>;
+
+const SEVERITY_CONFIG: Record<SeverityKey, { severity: number; color: string; label: string }> = {
     errors: { severity: SEVERITY.ERROR, color: 'red', label: 'Errors' },
     warnings: { severity: SEVERITY.WARNING, color: 'orange', label: 'Warnings' },
     info: { severity: SEVERITY.INFO, color: 'blue', label: 'Info' },
@@ -26,8 +29,8 @@ const SEVERITY_TO_KEY = {
     [SEVERITY.HINT]: 'hints',
 } as const;
 
-const getDiagnosticCounts = (diagnostics: monaco.editor.IMarkerData[]) => {
-    const counts = { errors: 0, warnings: 0, info: 0, hints: 0 };
+const getDiagnosticCounts = (diagnostics: monaco.editor.IMarkerData[]): DiagnosticCounts => {
+    const counts: DiagnosticCounts = { errors: 0, warnings: 0, info: 0, hints: 0 };
     diagnostics.forEach(d => {
         const key = SEVERITY_TO_KEY[d.severity as keyof typeof SEVERITY_TO_KEY];
         if (key) counts[key]++;
@@ -35,12 +38,10 @@ const getDiagnosticCounts = (diagnostics: monaco.editor.IMarkerData[]) => {
     return counts;
 };
 
-const getDiagnosticColor = (counts: ReturnType<typeof getDiagnosticCounts>) => {
-    for (const [key, config] of Object.entries(SEVERITY_CONFIG))
-        if (counts[key as keyof typeof counts] > 0)
-            return config.color;
-    return 'green';
-};
+const getDiagnosticColor = (counts: DiagnosticCounts) =>
+    Object.entries(SEVERITY_CONFIG)
+        .find(([key]) => counts[key as SeverityKey] > 0)
+        ?.[1].color ?? 'green';
 
 const sortDiagnostics = (diagnostics: monaco.editor.IMarkerData[]) =>
     [...diagnostics].sort((a, b) =>
@@ -72,7 +73,7 @@ const RuleLink = ({ diagnostic, onOpenAboutWithHash }: {
     );
 };
 
-const DiagnosticBadges = ({ counts }: { counts: ReturnType<typeof getDiagnosticCounts> }) => {
+const DiagnosticBadges = ({ counts }: { counts: DiagnosticCounts }) => {
     return (
         <HStack gap={2}>
             {Object.entries(SEVERITY_CONFIG).map(([key, config]) => {

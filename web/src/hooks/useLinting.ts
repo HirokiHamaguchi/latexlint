@@ -1,7 +1,7 @@
-import { useState, useRef, useCallback } from 'react';
 import type * as Monaco from 'monaco-editor';
-import { lintLatex } from '../utils';
+import { useCallback, useRef, useState } from 'react';
 import { DocType, LintingState } from '../types';
+import { lintLatex } from '../utils';
 
 export function useLinting() {
     const [lintingState, setLintingState] = useState<LintingState>('idle');
@@ -14,19 +14,16 @@ export function useLinting() {
             setLintingState('complete');
             return;
         }
-
         setLintingState('linting');
-        setTimeout(async () => {
-            try {
-                const results = await lintLatex(inputText, type, forceTextLint);
-                setDiagnostics(results);
-            } catch (error) {
-                console.error('Linting error:', error);
-                setDiagnostics([]);
-            } finally {
-                setLintingState('complete');
-            }
-        }, 100);
+        try {
+            const results = await lintLatex(inputText, type, forceTextLint);
+            setDiagnostics(results);
+        } catch (error) {
+            console.error('Linting error:', error);
+            setDiagnostics([]);
+        } finally {
+            setLintingState('complete');
+        }
     }, []);
 
     const runLintWithDelay = useCallback((text: string, docType: DocType, delay = 500) => {

@@ -57,6 +57,7 @@ function ConfigField(props: ConfigFieldProps) {
                             .split(',')
                             .map((s) => s.trim())
                             .filter((s) => s);
+                        // todo: validation
                         props.updateConfig({ ...props.config, [props.keyName]: value } as LintConfig);
                     }}
                     placeholder="word1, word2, word3"

@@ -56,9 +56,9 @@
 
 \renewcommand\thesection{Appendix \Alph{section}}
 
-\section{Bugs}
+\section{Check LLText}
 
-ToDo: Fix This.
+\verb|"Checking LLText..."|
 
 \begin{verbatim}
 	"double quotes in verbatim"
@@ -68,6 +68,12 @@ ToDo: Fix This.
 def test():
 	S = "double quotes in listing"
 \end{lstlisting}
+
+\begin{verbatim}
+	Wrong LaTeX math environment:
+	\begin{align}
+	\end{equation}
+\end{verbatim}
 
 \section{LLSetBar}
 

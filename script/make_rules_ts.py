@@ -21,11 +21,11 @@ def make_rules_ts():
     CONTENTS = (
         [
             "// !! AUTO_GENERATED !!",
+            "import * as vscode from 'vscode';",
         ]
         + [f"import {rule} from '../LL/{rule}';" for rule in rule_names]
         + [
-            "import type { LLText } from './LLText';",
-            "import * as vscode from 'vscode';",
+            "import type { LLText } from '../LLText/LLText';",
             "",
             "// Type for standard rule functions",
             "type StandardRuleFunction = (doc: vscode.TextDocument, txt: LLText) => vscode.Diagnostic[];",

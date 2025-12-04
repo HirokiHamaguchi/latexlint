@@ -1,22 +1,16 @@
 import * as vscode from 'vscode';
-import { standardRules, configuredRules } from './rules';
+import { createLLText } from '../LLText/createLLText';
 import formatException from './formatException';
-import enumAlignEnvs from './enumAlignEnvs';
-import type { LLText } from './LLText';
+import { configuredRules, standardRules } from './rules';
 
 export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.Diagnostic[] {
     const config = vscode.workspace.getConfiguration('latexlint');
     const disabledRules = config.get<string[]>('disabledRules') || [];
     const exceptions = config.get<string[]>('exceptions') || [];
-    const text = doc.getText();
     let diagnostics: vscode.Diagnostic[] = [];
-    const alignLikeEnvs = enumAlignEnvs(text, doc.positionAt, diagnostics);
 
-    // Create LLText object
-    const txt: LLText = {
-        text: text,
-        alignLikeEnvs: alignLikeEnvs
-    };
+    // Create LLText object with all computed metadata
+    const txt = createLLText(doc, diagnostics);
 
     const t0 = performance.now();
 

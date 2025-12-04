@@ -1,4 +1,5 @@
 // !! AUTO_GENERATED !!
+import * as vscode from 'vscode';
 import LLAlignAnd from '../LL/LLAlignAnd';
 import LLAlignEnd from '../LL/LLAlignEnd';
 import LLAlignSingleLine from '../LL/LLAlignSingleLine';
@@ -31,8 +32,7 @@ import LLTitle from '../LL/LLTitle';
 import LLUnRef from '../LL/LLUnRef';
 import LLURL from '../LL/LLURL';
 import LLUserDefined from '../LL/LLUserDefined';
-import type { LLText } from './LLText';
-import * as vscode from 'vscode';
+import type { LLText } from '../LLText/LLText';
 
 // Type for standard rule functions
 type StandardRuleFunction = (doc: vscode.TextDocument, txt: LLText) => vscode.Diagnostic[];

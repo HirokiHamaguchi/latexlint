@@ -30,6 +30,7 @@ export function MonacoLatexEditor({ value, diagnostics, onChange, onEditorReady,
 
     const handleEditorDidMount: OnMount = (editor, monaco: typeof Monaco) => {
         editorRef.current = editor;
+        console.log("mounted", editor);
         monacoRef.current = monaco;
 
         monaco.languages.register({ id: 'latex' });
@@ -79,7 +80,7 @@ export function MonacoLatexEditor({ value, diagnostics, onChange, onEditorReady,
         editor.onDidContentSizeChange(updateHeight);
         updateHeight();
         onEditorReady();
-        onEditorRef?.({ current: editor });
+        onEditorRef({ current: editor });
     };
 
     // Update markers when diagnostics change

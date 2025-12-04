@@ -1,6 +1,6 @@
 import {
     Box,
-    Button,
+    CloseButton,
     Collapsible,
     Dialog,
     Grid,
@@ -27,6 +27,7 @@ interface AboutModalProps {
     isOpen: boolean;
     onClose: () => void;
     tab: string;
+    hash?: string;
     onTabChange: (tab: string) => void;
 }
 
@@ -270,10 +271,8 @@ export function AboutModal({ isOpen, onClose, tab, onTabChange }: AboutModalProp
                         <Dialog.Title fontSize="xl" fontWeight="bold">
                             About LaTeX Lint
                         </Dialog.Title>
-                        <Dialog.CloseTrigger>
-                            <Button colorScheme="black" onClick={onClose}>
-                                Close
-                            </Button>
+                        <Dialog.CloseTrigger asChild>
+                            <CloseButton size="xl" onClick={onClose} />
                         </Dialog.CloseTrigger>
                     </Dialog.Header>
                     <Dialog.Body overflowY="auto">

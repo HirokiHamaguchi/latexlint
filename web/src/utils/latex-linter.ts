@@ -48,14 +48,16 @@ function convertToMonacoMarker(diag: import('vscode').Diagnostic): monaco.editor
     }
 
     const code_value = String(typeof diag.code === "object" ? diag.code.value : diag.code);
-    let code_target = monaco.Uri.parse('');
+    let code: string | { value: string; target: monaco.Uri } = "";
     if (typeof diag.code === "object" && diag.code.target) {
         const targetUrl = diag.code.target.toString();
         const hashMatch = targetUrl.match(/#(.+)$/);
         if (hashMatch) {
-            code_target = monaco.Uri.parse(`${window.location.origin}${window.location.pathname}#${hashMatch[1]}`);
+            const code_target = monaco.Uri.parse(`${window.location.origin}${window.location.pathname}#${hashMatch[1]}`);
+            code = { value: code_value, target: code_target }
         }
     }
+    if (!code) code = code_value;
 
     return {
         startLineNumber: diag.range.start.line + 1, // Monaco uses 1-based line numbers
@@ -65,7 +67,7 @@ function convertToMonacoMarker(diag: import('vscode').Diagnostic): monaco.editor
         message: diag.message,
         severity: severity,
         source: diag.source,
-        code: { value: code_value, target: code_target }
+        code: code
     };
 }
 
@@ -77,17 +79,15 @@ export async function lintLatex(
 ): Promise<monaco.editor.IMarkerData[]> {
     const ext = docType === 'latex' ? '.tex' : '.md';
     const doc = vscode.createMockTextDocument(text, vscode.Uri.file(`untitled${ext}`), docType === 'latex' ? 'latex' : 'markdown');
-    const alignLikeEnvs = enumAlignEnvs(text, doc.positionAt, console.warn);
+    const vscodeDoc = doc as unknown as import('vscode').TextDocument;
+    const diagnostics: import('vscode').Diagnostic[] = [];
+    const alignLikeEnvs = enumAlignEnvs(text, doc.positionAt, diagnostics);
 
     // Create LLText object
     const txt: LLText = {
         text: text,
         alignLikeEnvs: alignLikeEnvs
     };
-
-    // Note: Using type assertion to bridge mock types with real VS Code types for web compatibility
-    const vscodeDoc = doc as unknown as import('vscode').TextDocument;
-    const diagnostics: import('vscode').Diagnostic[] = [];
 
     const config = getConfig();
     const disabledRules = config.disabledRules || [];

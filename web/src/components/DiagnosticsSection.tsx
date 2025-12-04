@@ -60,6 +60,8 @@ const RuleLink = ({ diagnostic, onOpenAboutWithHash }: {
         const code = diagnostic.code;
         if (code && typeof code === 'object' && 'value' in code) {
             onOpenAboutWithHash(code.value as string);
+        } else {
+            console.warn('Diagnostic code is not in expected format:', diagnostic.code);
         }
     };
 
@@ -95,13 +97,13 @@ const DiagnosticBadges = ({ counts }: { counts: DiagnosticCounts }) => {
 const DiagnosticItem = ({ diagnostic, onOpenAboutWithHash, onDiagnosticClick }: {
     diagnostic: monaco.editor.IMarkerData;
     onOpenAboutWithHash: (hash: string) => void;
-    onDiagnosticClick?: (lineNumber: number, column: number) => void;
+    onDiagnosticClick: (lineNumber: number, column: number) => void;
 }) => {
     const severityKey = SEVERITY_TO_KEY[diagnostic.severity as keyof typeof SEVERITY_TO_KEY];
     const config = severityKey ? SEVERITY_CONFIG[severityKey] : SEVERITY_CONFIG.hints;
 
     const handleClick = () => {
-        onDiagnosticClick?.(diagnostic.startLineNumber, diagnostic.startColumn);
+        onDiagnosticClick(diagnostic.startLineNumber, diagnostic.startColumn);
     };
 
     return (
@@ -112,7 +114,7 @@ const DiagnosticItem = ({ diagnostic, onOpenAboutWithHash, onDiagnosticClick }: 
             p={4}
             bg="white"
             _hover={{ bg: 'gray.50' }}
-            cursor={onDiagnosticClick ? 'pointer' : 'default'}
+            cursor={'pointer'}
             onClick={handleClick}
         >
             <VStack align="stretch" gap={3}>
@@ -136,7 +138,7 @@ const DiagnosticItem = ({ diagnostic, onOpenAboutWithHash, onDiagnosticClick }: 
 export function DiagnosticsSection({ diagnostics, onOpenAboutWithHash, onDiagnosticClick }: {
     diagnostics: monaco.editor.IMarkerData[];
     onOpenAboutWithHash: (hash: string) => void;
-    onDiagnosticClick?: (lineNumber: number, column: number) => void;
+    onDiagnosticClick: (lineNumber: number, column: number) => void;
 }) {
     const counts = getDiagnosticCounts(diagnostics);
     const color = getDiagnosticColor(counts);

@@ -1,3 +1,5 @@
+import * as vscode from 'vscode';
+import { extensionDisplayName } from './constants';
 import isInComment from './isInComment';
 
 const alignLikeEnvs = [
@@ -12,7 +14,7 @@ const alignLikeEnvs = [
 export default function enumAlignEnvs(
     txt: string,
     computeLinePos: (index: number) => { line: number; character: number },
-    onError: (errorMessage: string) => void
+    diagnostics: vscode.Diagnostic[]
 ): [number, number][] {
     // Extract all \begin{align} and \end{align} commands
 
@@ -52,11 +54,16 @@ export default function enumAlignEnvs(
     if (isMatched !== -1 || stack.length !== 0) {
         const errorIndex = isMatched !== -1 ? isMatched : stack[0].index;
         const { line, character } = computeLinePos(errorIndex);
-        onError(
-            "Unmatched \\begin{align} and \\end{align} commands" +
-            ` at Line ${line + 1}, Character ${character + 1}. ` +
-            "Are the commands properly paired?"
-        );
+        const position = new vscode.Position(line, character);
+        const range = new vscode.Range(position, position);
+        diagnostics.push({
+            message: "Unmatched alignment environment commands" +
+                ` at Line ${line + 1}, Character ${character + 1}. ` +
+                "Are the commands properly paired?",
+            range: range,
+            severity: vscode.DiagnosticSeverity.Error,
+            source: extensionDisplayName
+        });
         return [];
     }
     return STs;

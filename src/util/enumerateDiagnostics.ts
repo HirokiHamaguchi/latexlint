@@ -9,15 +9,14 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
     const disabledRules = config.get<string[]>('disabledRules') || [];
     const exceptions = config.get<string[]>('exceptions') || [];
     const text = doc.getText();
-    const alignLikeEnvs = enumAlignEnvs(text, doc.positionAt, console.warn);
+    let diagnostics: vscode.Diagnostic[] = [];
+    const alignLikeEnvs = enumAlignEnvs(text, doc.positionAt, diagnostics);
 
     // Create LLText object
     const txt: LLText = {
         text: text,
         alignLikeEnvs: alignLikeEnvs
     };
-
-    let diagnostics: vscode.Diagnostic[] = [];
 
     const t0 = performance.now();
 

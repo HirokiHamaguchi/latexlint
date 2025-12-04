@@ -1,7 +1,6 @@
 import { Container, HStack, SimpleGrid, Text, VStack } from '@chakra-ui/react';
 import type * as monaco from 'monaco-editor';
-import { useEffect, useState } from 'react';
-import { flushSync } from 'react-dom';
+import { useEffect, useRef, useState } from 'react';
 import sampleMdBefore from '../sample/sample_before.md?raw';
 import sampleTexBefore from '../sample/sample_before.tex?raw';
 import { AboutModal, ConfigurationSection, EditorSection, Header } from './components';
@@ -26,9 +25,9 @@ const getStatusMessage = (state: LintingState) => {
 export function Content() {
     const [docType, setDocType] = useState<DocType>('latex');
     const [text, setText] = useState(sampleTexBefore);
-    const [modals, setModals] = useState({ about: { isOpen: false, tab: 'overview' }, config: { isOpen: false } });
+    const [modals, setModals] = useState({ about: { isOpen: false, tab: 'overview', hash: '' }, config: { isOpen: false } });
     const [isEditorReady, setIsEditorReady] = useState(false);
-    const [editorRef, setEditorRef] = useState<{ current: monaco.editor.IStandaloneCodeEditor | null } | null>(null);
+    const editorRef = useRef<monaco.editor.IStandaloneCodeEditor | null>(null);
 
     const { lintingState, diagnostics, runLint, runLintWithDelay } = useLinting();
     const { config, updateConfig } = useConfig();
@@ -49,21 +48,23 @@ export function Content() {
     const handleAboutClick = () => setModals(prev => ({ ...prev, about: { ...prev.about, isOpen: true } }));
 
     const handleAboutClose = () => {
-        setModals(prev => ({ ...prev, about: { ...prev.about, isOpen: false } }));
-        if (window.location.hash) window.location.hash = '';
+        setModals(prev => ({ ...prev, about: { ...prev.about, isOpen: false, hash: '' } }));
     };
 
     const handleOpenAboutWithHash = (hash: string) => {
-        flushSync(() => setModals(prev => ({ ...prev, about: { isOpen: true, tab: 'readme' } })));
-        flushSync(() => { window.location.hash = hash; });
+        setModals(prev => ({ ...prev, about: { isOpen: true, tab: 'readme', hash } }));
     };
 
     const handleDiagnosticClick = (lineNumber: number, column: number) => {
-        if (editorRef?.current) {
-            editorRef.current.setPosition({ lineNumber, column });
-            editorRef.current.focus();
-            editorRef.current.revealLineInCenter(lineNumber);
+        console.log("clicked diagnostic", lineNumber, column, editorRef);
+        if (!editorRef.current) {
+            console.warn("Editor is not ready yet");
+            return;
         }
+
+        editorRef.current.setPosition({ lineNumber, column });
+        editorRef.current.focus();
+        editorRef.current.revealLineInCenter(lineNumber);
     };
 
     useEffect(() => {
@@ -110,7 +111,7 @@ export function Content() {
                         onTextChange={handleTextChange}
                         onEditorReady={() => setIsEditorReady(true)}
                         onOpenAboutWithHash={handleOpenAboutWithHash}
-                        onEditorRef={setEditorRef}
+                        onEditorRef={(ref) => { editorRef.current = ref.current; }}
                     />
 
                     <DiagnosticsSection
@@ -125,6 +126,7 @@ export function Content() {
                 isOpen={modals.about.isOpen}
                 onClose={handleAboutClose}
                 tab={modals.about.tab}
+                hash={modals.about.hash}
                 onTabChange={(tab) => setModals(prev => ({ ...prev, about: { ...prev.about, tab } }))}
             />
         </Container>

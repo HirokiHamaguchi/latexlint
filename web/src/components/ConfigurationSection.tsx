@@ -21,7 +21,7 @@ function ConfigField(props: ConfigFieldProps) {
     const metadata = configMetadata[props.keyName];
     const currentValues = props.config[props.keyName] as unknown as string[];
     return (
-        <Box key={String(props.keyName)}>
+        <Box>
             <Text fontWeight="bold" mb={2}>
                 {metadata.description}
             </Text>
@@ -98,6 +98,7 @@ export function ConfigurationSection(props: ConfigurationSectionProps) {
                             {(Object.keys(props.config) as Array<keyof LintConfig>).map((key) => {
                                 return (
                                     <ConfigField
+                                        key={key}
                                         keyName={key}
                                         config={props.config}
                                         updateConfig={(newConfig: LintConfig) => {

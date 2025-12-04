@@ -23,14 +23,6 @@ import remarkGfm from 'remark-gfm';
 import remarkSlug from 'remark-slug';
 import readmeContent from '../assets/README.md?raw';
 
-interface AboutModalProps {
-    isOpen: boolean;
-    onClose: () => void;
-    tab: string;
-    hash?: string;
-    onTabChange: (tab: string) => void;
-}
-
 const BASE_URL = import.meta.env.BASE_URL;
 const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/';
 
@@ -110,9 +102,8 @@ const VocabularyRow = ({ entry }: { entry: VocabularyEntry }) => {
     );
 };
 
-// Lazy-loaded components
-const OverviewTab = () => (
-    <VStack align="stretch">
+function OverviewTab() {
+    return <VStack align="stretch">
         <VStack align="stretch">
             <Heading size="lg">Privacy</Heading>
             <Text fontSize="sm">
@@ -147,36 +138,36 @@ const OverviewTab = () => (
             </Grid>
         </VStack>
     </VStack>
-);
+};
 
-const ReadmeTab = ({ readmeRef }: { readmeRef: React.RefObject<HTMLDivElement | null> }) => (
-    <div className="markdown-body" ref={readmeRef}>
-        <Markdown
-            // @ts-expect-error: Type '() => void | Transformer<Root, Root>' is not assignable to type 'Pluggable'.
-            remarkPlugins={[remarkGfm, remarkSlug]}
-            rehypePlugins={[rehypeRaw]}
-            components={{
-                img: ({ src, ...props }) => {
-                    const resolvedSrc = src?.startsWith('http') ? src : `${GITHUB_RAW_BASE}${src}`;
-                    if ("width" in props)
-                        return <img {...props} src={resolvedSrc} />
-                    else
+function ReadmeTab({ readmeRef, tab }: { readmeRef: React.RefObject<HTMLDivElement | null>, tab: string }) {
+    return <div className="markdown-body" ref={readmeRef}>
+        {tab === "readme" ?
+            <Markdown
+                // @ts-expect-error: Type '() => void | Transformer<Root, Root>' is not assignable to type 'Pluggable'.
+                remarkPlugins={[remarkGfm, remarkSlug]}
+                rehypePlugins={[rehypeRaw]}
+                components={{
+                    img: ({ src, ...props }) => {
+                        const resolvedSrc = src?.startsWith('http') ? src : `${GITHUB_RAW_BASE}${src}`;
+                        if ("width" in props) return <img {...props} src={resolvedSrc} />;
                         return (
                             <span style={{ display: 'flex', justifyContent: 'center', margin: '1em 0' }}>
                                 <img {...props} src={resolvedSrc} style={{ maxWidth: '70%' }} />
                             </span>
                         );
-                },
-            }}
-        >
-            {readmeContent}
-        </Markdown>
+                    },
+                }}
+            >
+                {readmeContent}
+            </Markdown>
+            : null
+        }
     </div>
-);
+};
 
-const JapaneseTab = () => {
+function JapaneseTab() {
     const vocabularyData = useMemo(() => getVocabularyData(), []);
-
     return (
         <VStack gap={4} align="stretch">
             <Heading size="md">Japanese Vocabulary Check</Heading>
@@ -215,52 +206,45 @@ const JapaneseTab = () => {
     );
 };
 
-export function AboutModal({ isOpen, onClose, tab, onTabChange }: AboutModalProps) {
+interface AboutModalProps {
+    tab: string;
+    isOpen: boolean;
+    readmeLink: string;
+    onClose: () => void;
+    onTabChange: (tab: string) => void;
+}
+
+export function AboutModal({ tab, isOpen, readmeLink, onClose, onTabChange }: AboutModalProps) {
+    const dialogBodyRef = useRef<HTMLDivElement>(null);
     const readmeRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         if (isOpen && tab === 'readme') {
-            // Wait for the dialog and markdown to render
             setTimeout(() => {
-                const hash = window.location.hash.slice(1); // Remove '#'
-                if (hash && readmeRef.current) {
-                    const targetId = hash.toLowerCase();
-                    // Try to find element by id first
-                    let element = readmeRef.current.querySelector(`#${targetId}`);
+                if (readmeLink && readmeRef.current && dialogBodyRef.current) {
+                    const element = readmeRef.current.querySelector(`#${readmeLink.toLowerCase()}`);
+                    if (!element) return;
+                    const dialogBody = dialogBodyRef.current;
+                    if (!dialogBody) return;
 
-                    // If not found, try to find by heading text
-                    if (!element) {
-                        const headings = readmeRef.current.querySelectorAll('h1, h2, h3, h4, h5, h6');
-                        Array.from(headings).forEach((heading) => {
-                            const headingText = heading.textContent?.toLowerCase().replace(/\s+/g, '');
-                            if (headingText === targetId && !element) {
-                                element = heading;
-                            }
+                    const scrollToElement = () => {
+                        dialogBody.scrollTo({
+                            top: Math.max(0, (element as HTMLElement).offsetTop),
+                            behavior: 'auto'
                         });
-                    }
+                    };
 
-                    if (element) {
-                        const scrollToElement = () => {
-                            element?.scrollIntoView({ behavior: 'auto', block: 'start' });
-                        };
+                    // Initial scroll
+                    scrollToElement();
 
-                        // Initial scroll
-                        scrollToElement();
-
-                        // Re-scroll when images load
-                        const images = readmeRef.current.querySelectorAll('img');
-                        images.forEach((img) => {
-                            if (!img.complete)
-                                img.addEventListener('load', scrollToElement, { once: true });
-                        });
-
-                        // Clear the hash from URL after scrolling
-                        window.history.replaceState(null, '', window.location.pathname + window.location.search);
-                    }
+                    // Re-scroll when images load
+                    readmeRef.current.querySelectorAll('img').forEach((img) => {
+                        if (!img.complete) img.addEventListener('load', scrollToElement, { once: true });
+                    });
                 }
             }, 10);
         }
-    }, [isOpen, tab]);
+    }, [tab, isOpen, readmeLink]);
 
     return (
         <Dialog.Root open={isOpen} onOpenChange={(e) => !e.open && onClose()} size="xl">
@@ -275,22 +259,19 @@ export function AboutModal({ isOpen, onClose, tab, onTabChange }: AboutModalProp
                             <CloseButton size="xl" onClick={onClose} />
                         </Dialog.CloseTrigger>
                     </Dialog.Header>
-                    <Dialog.Body overflowY="auto">
+                    <Dialog.Body ref={dialogBodyRef} overflowY="auto">
                         <Tabs.Root value={tab} variant="enclosed" onValueChange={(details) => onTabChange(details.value)}>
                             <Tabs.List>
                                 <Tabs.Trigger value="overview">Overview</Tabs.Trigger>
                                 <Tabs.Trigger value="readme">README</Tabs.Trigger>
                                 <Tabs.Trigger value="japanese">Japanese</Tabs.Trigger>
                             </Tabs.List>
-
                             <Tabs.Content value="overview">
-                                {tab === 'overview' && <OverviewTab />}
+                                {tab === "overview" && <OverviewTab />}
                             </Tabs.Content>
-
                             <Tabs.Content value="readme" pt={4}>
-                                {tab === 'readme' && <ReadmeTab readmeRef={readmeRef} />}
+                                <ReadmeTab readmeRef={readmeRef} tab={tab} />
                             </Tabs.Content>
-
                             <Tabs.Content value="japanese" pt={4}>
                                 {tab === 'japanese' && <JapaneseTab />}
                             </Tabs.Content>

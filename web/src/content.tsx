@@ -126,7 +126,7 @@ export function Content() {
                 isOpen={modals.about.isOpen}
                 onClose={handleAboutClose}
                 tab={modals.about.tab}
-                hash={modals.about.hash}
+                readmeLink={modals.about.hash}
                 onTabChange={(tab) => setModals(prev => ({ ...prev, about: { ...prev.about, tab } }))}
             />
         </Container>

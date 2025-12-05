@@ -1,5 +1,7 @@
 import json
+import os
 import subprocess
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Any, Dict, List
 
@@ -83,41 +85,65 @@ def main() -> None:
     blocks: List[str] = []
     error_blocks: List[str] = []
 
-    for tex in tex_files:
-        print(f"Processing {tex}...")
-        result = run_node(tex)
-        if not result.get("ok"):
-            failures += 1
-            error_blocks.append(
-                "\n".join(
-                    [
-                        f"[ERROR] {tex}",
-                        f"reason: {result.get('error', 'unknown')}",
-                        f"stdout: {result.get('stdout', '').strip()}",
-                        f"stderr: {result.get('stderr', '').strip()}",
-                        "",
-                    ]
-                )
-            )
-            continue
+    # Parallel execution: use ThreadPoolExecutor to run node subprocesses concurrently.
+    max_workers = min(32, (os.cpu_count() or 1) * 4)
+    future_to_tex = {}
 
-        diagnostics: List[Dict[str, Any]] = result.get("diagnostics", [])
-        total_diags += len(diagnostics)
-        if diagnostics:
-            files_with_diags += 1
-            for diag in diagnostics:
-                start = diag.get("start", {})
-                line = int(start.get("line", 0)) + 1
-                code = diag.get("code", {}).get("value", "unknown")
-                message = diag.get("message", "")
-                diagnostics_by_code.setdefault(code, []).append(
-                    {
-                        "file": tex,
-                        "line": line,
-                        "message": message,
-                        "context": format_context(tex, line, context=2),
-                    }
+    with ThreadPoolExecutor(max_workers=max_workers) as ex:
+        for tex in tex_files:
+            print(f"Processing {tex}...")
+            future = ex.submit(run_node, tex)
+            future_to_tex[future] = tex
+
+        for future in as_completed(future_to_tex):
+            tex = future_to_tex[future]
+            try:
+                result = future.result()
+            except Exception as exc:  # unexpected error from run_node
+                failures += 1
+                error_blocks.append(
+                    "\n".join(
+                        [
+                            f"[ERROR] {tex}",
+                            f"reason: exception during run: {exc}",
+                            "",
+                        ]
+                    )
                 )
+                continue
+
+            if not result.get("ok"):
+                failures += 1
+                error_blocks.append(
+                    "\n".join(
+                        [
+                            f"[ERROR] {tex}",
+                            f"reason: {result.get('error', 'unknown')}",
+                            f"stdout: {result.get('stdout', '').strip()}",
+                            f"stderr: {result.get('stderr', '').strip()}",
+                            "",
+                        ]
+                    )
+                )
+                continue
+
+            diagnostics: List[Dict[str, Any]] = result.get("diagnostics", [])
+            total_diags += len(diagnostics)
+            if diagnostics:
+                files_with_diags += 1
+                for diag in diagnostics:
+                    start = diag.get("start", {})
+                    line = int(start.get("line", 0)) + 1
+                    code = diag.get("code", {}).get("value", "unknown")
+                    message = diag.get("message", "")
+                    diagnostics_by_code.setdefault(code, []).append(
+                        {
+                            "file": tex,
+                            "line": line,
+                            "message": message,
+                            "context": format_context(tex, line, context=2),
+                        }
+                    )
 
     summary = (
         f"Checked {len(tex_files)} files. Diagnostics: {total_diags}. "

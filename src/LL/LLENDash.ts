@@ -9,6 +9,7 @@ import { wordSet } from '../util/wordSet';
 const okWords = [
     'Fritz-John',
     'Primal-Dual',
+    'Zig-Zag',
 ];
 
 export default function LLENDash(doc: vscode.TextDocument, txt: LLText): vscode.Diagnostic[] {
@@ -18,6 +19,7 @@ export default function LLENDash(doc: vscode.TextDocument, txt: LLText): vscode.
         if (okWords.includes(match[0])) continue;
         const words = match[0].split('-');
         if (words.every(word => wordSet.has(word.toLowerCase()))) continue;
+        if (words.some(word => word.length === 1)) continue;
         if (isLabelOrURL(txt.text, match)) continue;
         ranges.push(match2range(doc, match));
     }

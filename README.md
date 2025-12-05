@@ -126,6 +126,10 @@ You should likely use `\max(` and `\min(` instead, or add a space after `\max` o
 Detect cases such as `^23`, `_23`, `^ab`, and `_ab` in `.tex` files.
 Clarify the scope of the superscript and subscript by adding `{}` or a space.
 
+Filenames / URLs / labels are ignored, such as in `\includegraphics{figure_23}` or `\url{http://example.com/abc_123}`.
+
+Custom commands that take an argument including `^` or `_` can yield false positives; disable this rule if your document defines and uses such macros heavily.
+
 ![rules/LLBracketMissing](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLBracketMissing/LLBracketMissing.png)
 
 ### LLBracketRound
@@ -154,8 +158,7 @@ You likely want to use `\colon` instead.
 ![rules/LLColonForMapping](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLColonForMapping/LLColonForMapping.png)
 
 `\colon` is [recommended](https://tex.stackexchange.com/questions/37789/using-colon-or-in-formulas) for the mapping symbol. `:` is used for ratios, such as `1:2`.
-
-In order to detect this pattern, we seek `\to`,`\mapsto` and `\rightarrow` after the `:`. If there are any of these commands within 10 words after the `:` and before `$` without escaping, we regard the `:` as a mapping symbol. There are some false positives and negatives.
+When `\to`, `\mapsto`, or `\rightarrow` appear, the rule looks back up to 10 words for the nearest `:`, using some heuristics to suppress false positives.
 
 ### LLCref
 
@@ -202,8 +205,9 @@ For example, we detect the following.
 
 However, we do not detect the following as an exception.
 
+* Common word pairs such as `Real-Valued` / `Two-Dimensional` are skipped when both words are recognized general vocabulary.
 * `Fritz-John` (optimization, name of a person)
-* todo: add more exceptions
+* (We might add more exceptions later.)
 
 We also should use `--` instead of `-` to indicate a range of pages, e.g., `123--456` instead of `123-456`. A lot of BibTeX files follow this rule. We do not detect this because it might be just a subtraction.
 
@@ -342,6 +346,8 @@ This rule only detects exact matches to avoid false positives.
 Detect `e.g.` in `.tex` and `.md` files.
 You should likely add a comma like `e.g.,` or use `e.g.\` to avoid spacing issues.
 
+This rule also flags `i.e.` in the same way.
+
 ![rules/LLPeriod](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLPeriod/LLPeriod.png)
 
 [Ref by Stack Exchange](https://tex.stackexchange.com/questions/2229/is-a-period-after-an-abbreviation-the-same-as-an-end-of-sentence-period)
@@ -360,7 +366,7 @@ You should likely use `\#` instead for the [number sign](https://en.wikipedia.or
 
 ![rules/LLSharp](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLSharp/LLSharp.png)
 
-`\sharp` is used for the musical symbol.
+`\sharp` is used for the musical symbol. This rule reports it only when it is not used as a superscript nor subscript, and when followed by an uppercase letter or `{...}`; other cases are ignored.
 
 ### LLSI
 

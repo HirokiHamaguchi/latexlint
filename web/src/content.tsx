@@ -56,12 +56,10 @@ export function Content() {
     };
 
     const handleDiagnosticClick = (lineNumber: number, column: number) => {
-        console.log("clicked diagnostic", lineNumber, column, editorRef);
         if (!editorRef.current) {
             console.warn("Editor is not ready yet");
             return;
         }
-
         editorRef.current.setPosition({ lineNumber, column });
         editorRef.current.focus();
         editorRef.current.revealLineInCenter(lineNumber);

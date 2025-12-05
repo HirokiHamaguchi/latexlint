@@ -4,7 +4,6 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 ## [Unreleased]
 
-- `LLNonRef`: Detect non-referenced figures with caption.
 - Make a tab containing latex tips:
   - `LLSetBar`: Detect `mid` in `\left` and `\right`.
   - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. Disabled by default.
@@ -13,7 +12,10 @@ All notable changes to the "latexlint" extension will be documented in this file
 - https://salon.mainichi-kotoba.jp/archives/95 圧倒的に弱いなど
 - Youtube, Github
 - enhance rules so that we can apply them to markdown files.
-- \begin{lstlisting} \begin{verbatim}
+
+## 1.6.0 - 2025-12-05
+
+- Fix bugs regarding `\begin{lstlisting}` and `\begin{verbatim}`
 
 ## 1.5.20 - 2025-12-03
 

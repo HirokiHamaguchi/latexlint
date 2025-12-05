@@ -96,7 +96,7 @@ export function Content() {
                     <Text as="span" fontWeight="medium">
                         {docType === 'latex' ? 'LaTeX' : 'Markdown'} Editor
                     </Text>
-                    <Text as="span" color="blue.600">
+                    <Text as="span" color="blue.600" fontWeight="medium">
                         {getStatusMessage(lintingState)}
                     </Text>
                 </HStack>

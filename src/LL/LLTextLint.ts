@@ -22,4 +22,3 @@ export default function LLTextLint(doc: vscode.TextDocument, txt: LLText): vscod
         ranges
     );
 }
-

@@ -119,4 +119,3 @@ export function checkOverlookedTypo(text: string): LLTextLintErrorResult[] {
 
     return errors;
 }
-

@@ -35,4 +35,3 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
     console.log(`enum took ${(t1 - t0).toFixed(2)} ms`);
     return diagnostics;
 }
-

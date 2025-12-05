@@ -286,7 +286,7 @@ Package translations Info: loading dictionary `translations-basic-dictionary' fo
 * paper: custom
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
+* modes:
 * h-part:(L,W,R)=(0.0pt, 142.26378pt, 0.0pt)
 * v-part:(T,H,B)=(0.0pt, 794.96999pt, 0.0pt)
 * \paperwidth=142.26378pt
@@ -338,7 +338,7 @@ Preview: Tightpage 0 0 0 0
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-19>
  ***********
- ) 
+ )
 Here is how much of TeX's memory you used:
  8739 strings out of 467816
  197487 string characters out of 5436431
@@ -354,4 +354,3 @@ PDF statistics:
  28 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
-

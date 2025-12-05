@@ -10,4 +10,3 @@ export default function LLFootnote(doc: vscode.TextDocument, txt: LLText): vscod
         /(\.)(\r?\n)+\\footnote/g,
     );
 }
-

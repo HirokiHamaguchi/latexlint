@@ -85,4 +85,3 @@ export const configuredRules: { [key: string]: { rule: ConfiguredRuleFunction; c
         configKey: "userDefinedRules",
     },
 };
-

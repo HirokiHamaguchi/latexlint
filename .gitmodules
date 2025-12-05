@@ -34,3 +34,12 @@
 [submodule "submodules/kuromoji.js"]
 	path = submodules/kuromoji.js
 	url = https://github.com/takuyaa/kuromoji.js.git
+[submodule "submodules/openintro-statistics"]
+	path = submodules/openintro-statistics
+	url = https://github.com/OpenIntroStat/openintro-statistics.git
+[submodule "submodules/OpenLogic"]
+	path = submodules/OpenLogic
+	url = https://github.com/OpenLogicProject/OpenLogic.git
+[submodule "submodules/coursebook"]
+	path = submodules/coursebook
+	url = https://github.com/cs341-illinois/coursebook.git

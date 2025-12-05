@@ -7,5 +7,15 @@
 Use \cref{thm:sample} with cref instead of Thm. \ref{thm:sample} with ref to avoid mistakes.
 Disabled by default.
 
-% \ref{line:1}
-% \ref{myline:2}
+\begin{algorithm}
+	\caption{Sample Algorithm}
+	\begin{algorithmic}[1]
+		\State First line \label{line:1}
+		\State Second line \label{myline:2}
+	\end{algorithmic}
+\end{algorithm}
+
+In the pseudocode, cleveref can fail to appropriately reference lines.
+Thus, we don't detect \verb|\ref{line:1}| like this: Line~\ref{line:1}.
+We detect other formats \verb|\ref{myline:2}| like this: Line~\ref{myline:2}.
+You can change these behaviors via settings.

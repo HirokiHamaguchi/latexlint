@@ -3,9 +3,9 @@
 \begin{table}[H]
 	\centering
 	\begin{tabular}{lll}
-		\verb|A:B|       & $A:B$                               & \tA{ok} \\
+		\verb|A:B|       & $A:B$                               & \tA{ok}  \\
 		\verb|A\colon B| & $A\colon B$                         & \tC{ok?} \\
-		\verb|f:|        & $f:\mathbb{R} \to \mathbb{R}$       & \tD{ng} \\
+		\verb|f:|        & $f:\mathbb{R} \to \mathbb{R}$       & \tD{ng}  \\
 		\verb|f\colon|   & $f\colon \mathbb{R} \to \mathbb{R}$ & \tA{ok}
 	\end{tabular}
 \end{table}
@@ -38,11 +38,14 @@
 	\end{itemize}
 \end{itembox}
 
-% The following contains colon:
-% $f: X \to Y$
-% The following contains colon:
-% \( f: X \to Y \)
-% The following contains colon:
-% \begin{equation} f: X \to Y \end{equation}
-% \label{eq:test} f: X_{\test{}} \to Y
-% \label{eq:test} \lim_{k \to \infty}
+The following contains colon:
+$f: X \to Y$
+
+The following contains colon:
+\( f: X \to Y \)
+
+The following contains colon:
+\begin{align}
+	f: X \to Y \label{eq:test} \\
+	\lim_{k \to \infty} x_k = L
+\end{align}

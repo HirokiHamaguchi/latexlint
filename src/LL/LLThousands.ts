@@ -11,6 +11,7 @@ export default function LLThousands(doc: vscode.TextDocument, txt: LLText): vsco
     let message: string[] = [];
     let ranges: vscode.Range[] = [];
     for (const match of txt.text.matchAll(/(\d{1,3}),(\d{3})(?=\$|\\\))/g)) {
+        if (!txt.isValid(match.index)) continue;
         message.push(messages[code].replaceAll("%1", match[1]).replaceAll("%2", match[2]));
         ranges.push(match2range(doc, match));
     }

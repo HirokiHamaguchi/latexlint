@@ -22,5 +22,18 @@
     "latexlint.exceptions": [
         "Exception handling",
         "Second-Order"
+    ],
+    "cSpell.words": [
+        "'enyi",
+        "alignat",
+        "eqnarray",
+        "eqref",
+        "Karush",
+        "LLEN",
+        "LLSI",
+        "LLURL",
+        "Podolsky",
+        "R",
+        "Rosen"
     ]
 }

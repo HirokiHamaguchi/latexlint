@@ -1,10 +1,10 @@
 import * as assert from 'assert';
-import * as vscode from 'vscode';
 import * as path from 'path';
+import * as vscode from 'vscode';
 
-import findModifyTargets from '../util/findBeginEndTargets';
-import enumerateDiagnostics from '../util/enumerateDiagnostics';
 import RefDefinitionProvider from '../commands/refDefinitionProvider';
+import enumerateDiagnostics from '../util/enumerateDiagnostics';
+import findModifyTargets from '../util/findBeginEndTargets';
 
 async function testFindModifyTargetsTex() {
 	const uri = vscode.Uri.file(path.resolve(__dirname, '../../sample/otherFeature.tex'));
@@ -73,8 +73,8 @@ async function testEnumerateDiagnostics(fileName: string, expected: number) {
 }
 
 async function testEnumerateDiagnosticsTex() {
-	const bug = 4;
-	const correct = 128;
+	const bug = 0;
+	const correct = 117;
 	await testEnumerateDiagnostics("sample/lint.tex", bug + correct);
 }
 

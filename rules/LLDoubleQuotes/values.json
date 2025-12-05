@@ -1,5 +1,5 @@
 {
   "message": "For double quotes, use ``...\\'\\'.",
   "severity": "WARN",
-  "lint_test_count": 8
+  "lint_test_count": 4
 }

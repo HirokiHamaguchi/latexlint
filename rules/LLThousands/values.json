@@ -1,5 +1,5 @@
 {
   "message": "Consider using \"%1{,}%2\" instead of \"%1,%2\".",
   "severity": "WARN",
-  "lint_test_count": 2
+  "lint_test_count": 1
 }

@@ -1,5 +1,5 @@
 {
   "message": "Consider using \\\\cref instead of \\\\ref.",
   "severity": "WARN",
-  "lint_test_count": 5
+  "lint_test_count": 4
 }

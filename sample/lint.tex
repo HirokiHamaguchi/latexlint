@@ -15,9 +15,13 @@
 \usepackage{mathtools}
 \usepackage{MnSymbol}
 \usepackage{mwe}
+\usepackage{natbib}
 \usepackage{physics}
 \usepackage{siunitx}
 \usepackage{xcolor}
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 
 \usepackage{cleveref}
 
@@ -332,9 +336,9 @@ The difference is quite subtle, but the vertical position of the colon is differ
 \begin{table}[H]
 	\centering
 	\begin{tabular}{lll}
-		\verb|A:B|       & $A:B$                               & \tA{ok} \\
+		\verb|A:B|       & $A:B$                               & \tA{ok}  \\
 		\verb|A\colon B| & $A\colon B$                         & \tC{ok?} \\
-		\verb|f:|        & $f:\mathbb{R} \to \mathbb{R}$       & \tD{ng} \\
+		\verb|f:|        & $f:\mathbb{R} \to \mathbb{R}$       & \tD{ng}  \\
 		\verb|f\colon|   & $f\colon \mathbb{R} \to \mathbb{R}$ & \tA{ok}
 	\end{tabular}
 \end{table}
@@ -367,14 +371,17 @@ The difference is quite subtle, but the vertical position of the colon is differ
 	\end{itemize}
 \end{itembox}
 
-% The following contains colon:
-% $f: X \to Y$
-% The following contains colon:
-% \( f: X \to Y \)
-% The following contains colon:
-% \begin{equation} f: X \to Y \end{equation}
-% \label{eq:test} f: X_{\test{}} \to Y
-% \label{eq:test} \lim_{k \to \infty}
+The following contains colon:
+$f: X \to Y$
+
+The following contains colon:
+\( f: X \to Y \)
+
+The following contains colon:
+\begin{align}
+	f: X \to Y \label{eq:test} \\
+	\lim_{k \to \infty} x_k = L
+\end{align}
 
 \section{LLCref}
 
@@ -385,8 +392,18 @@ The difference is quite subtle, but the vertical position of the colon is differ
 Use \cref{thm:sample} with cref instead of Thm. \ref{thm:sample} with ref to avoid mistakes.
 Disabled by default.
 
-% \ref{line:1}
-% \ref{myline:2}
+\begin{algorithm}
+	\caption{Sample Algorithm}
+	\begin{algorithmic}[1]
+		\State First line \label{line:1}
+		\State Second line \label{myline:2}
+	\end{algorithmic}
+\end{algorithm}
+
+In the pseudocode, cleveref can fail to appropriately reference lines.
+Thus, we don't detect \verb|\ref{line:1}| like this: Line~\ref{line:1}.
+We detect other formats \verb|\ref{myline:2}| like this: Line~\ref{myline:2}.
+You can change these behaviors via settings.
 
 \section{LLDoubleQuotes}
 
@@ -394,6 +411,17 @@ Use ``XXX'' instead of “XXX” or "XXX".
 You can use them for \verb|H\"older| and \verb"\verb".
 
 % You can also use “XXX” and "XXX" in the comment.
+
+\verb|"Checking LLText..."|
+
+\begin{verbatim}
+	"double quotes in verbatim"
+\end{verbatim}
+
+\begin{lstlisting}
+def test():
+	S = "double quotes in listing"
+\end{lstlisting}
 
 \section{LLENDash}
 
@@ -632,7 +660,7 @@ Only for Japanese texts.
   \end{minipage}
 \end{figure}
 
-Fig.~\ref{fig:referenced} is referenced in the text, while the other figure is not.
+\Cref{fig:referenced} is referenced in the text, while the other figure is not.
 
 \section{LLURL}
 
@@ -684,18 +712,13 @@ You can define your own rule.
 
 \renewcommand\thesection{Appendix \Alph{section}}
 
-\section{Bugs}
-
-ToDo: Fix This.
+\section{Check LLText}
 
 \begin{verbatim}
-	"double quotes in verbatim"
+	Wrong LaTeX math environment:
+	\begin{align}
+	\end{equation}
 \end{verbatim}
-
-\begin{lstlisting}
-def test():
-	S = "double quotes in listing"
-\end{lstlisting}
 
 \section{LLSetBar}
 

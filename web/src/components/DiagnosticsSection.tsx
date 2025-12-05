@@ -121,7 +121,7 @@ const DiagnosticItem = ({ diagnostic, onOpenAboutWithHash, onDiagnosticClick }: 
                 <HStack justify="space-between" align="center">
                     <HStack gap={2}>
                         <Badge colorPalette={config.color} variant="solid" size="sm">
-                            {config.label.slice(0, -1)}
+                            {config.label.endsWith('s') ? config.label.slice(0, -1) : config.label}
                         </Badge>
                         <Text fontSize="sm" color="gray.600">
                             Line {diagnostic.startLineNumber}, Column {diagnostic.startColumn}

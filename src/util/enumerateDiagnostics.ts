@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { createLLText } from '../LLText/createLLText';
+import createLLText from '../LLText/createLLText';
 import formatException from './formatException';
 import { configuredRules, standardRules } from './rules';
 
@@ -10,7 +10,7 @@ export default function enumerateDiagnostics(doc: vscode.TextDocument): vscode.D
     let diagnostics: vscode.Diagnostic[] = [];
 
     // Create LLText object with all computed metadata
-    const txt = createLLText(doc, diagnostics);
+    const txt = createLLText(doc.getText(), doc.languageId, diagnostics, doc.positionAt);
 
     const t0 = performance.now();
 

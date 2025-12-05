@@ -1,3 +1,4 @@
+import createLLText from '@latexlint/LLText/createLLText';
 import { checkNoDroppingI } from "@latexlint/TextLint/no_dropping_i";
 import { checkNoDroppingRa } from "@latexlint/TextLint/no_dropping_ra";
 import { checkNoSuccessiveWord } from "@latexlint/TextLint/no_successive_word";
@@ -5,10 +6,8 @@ import { checkOverlookedTypo } from "@latexlint/TextLint/overlooked_typo";
 import { parseSentence } from "@latexlint/TextLint/parser";
 import { checkTariTari } from "@latexlint/TextLint/tari_tari";
 import type { LLTextLintErrorResult } from "@latexlint/TextLint/types";
-import enumAlignEnvs from '@latexlint/util/enumAlignEnvs';
 import formatException from "@latexlint/util/formatException";
 import { getCodeWithURI } from '@latexlint/util/getCodeWithURI';
-import type { LLText } from '@latexlint/util/LLText';
 import { configuredRules, standardRules } from '@latexlint/util/rules';
 import * as monaco from 'monaco-editor';
 import { getConfig } from '../config';
@@ -81,13 +80,9 @@ export async function lintLatex(
     const doc = vscode.createMockTextDocument(text, vscode.Uri.file(`untitled${ext}`), docType === 'latex' ? 'latex' : 'markdown');
     const vscodeDoc = doc as unknown as import('vscode').TextDocument;
     const diagnostics: import('vscode').Diagnostic[] = [];
-    const alignLikeEnvs = enumAlignEnvs(text, doc.positionAt, diagnostics);
 
-    // Create LLText object
-    const txt: LLText = {
-        text: text,
-        alignLikeEnvs: alignLikeEnvs
-    };
+    // Create LLText object with all computed metadata
+    const txt = createLLText(doc.getText(), doc.languageId, diagnostics, doc.positionAt);
 
     const config = getConfig();
     const disabledRules = config.disabledRules || [];

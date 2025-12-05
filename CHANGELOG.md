@@ -13,6 +13,13 @@ All notable changes to the "latexlint" extension will be documented in this file
 - Youtube, Github
 - enhance rules so that we can apply them to markdown files.
 
+## 1.6.2 - 2025-12-05
+
+- Added pre-commit setup.
+- Updated LaTeX linting rules.
+- Refined web assets/styles.
+- General bug fixes.
+
 ## 1.6.1 - 2025-12-05
 
 - Fix bug of mainIcon512.png (was not included in the package).

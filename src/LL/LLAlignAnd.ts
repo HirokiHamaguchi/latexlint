@@ -1,8 +1,8 @@
 import * as vscode from 'vscode';
-import ranges2diagnostics from '../util/ranges2diagnostics';
-import match2range from '../util/match2range';
+import type { LLText } from '../LLText/LLText';
 import { messages } from '../util/constants';
-import type { LLText } from '../util/LLText';
+import match2range from '../util/match2range';
+import ranges2diagnostics from '../util/ranges2diagnostics';
 
 export default function LLAlignAnd(doc: vscode.TextDocument, txt: LLText): vscode.Diagnostic[] {
     const code = 'LLAlignAnd';
@@ -12,9 +12,11 @@ export default function LLAlignAnd(doc: vscode.TextDocument, txt: LLText): vscod
     for (const [s, t] of txt.alignLikeEnvs) {
         const match = txt.text.slice(s, t).matchAll(/(=|<|>|\\neq|\\leq|\\geq|\\le|\\ge|\\succ|\\prec|\\succeq|\\preceq|\\approx|\\asymp|\\iff|\\implies|\\impliedby)\s*&/g);
         for (const m of match) {
-            ranges.push(match2range(doc, m, s));
+            const range = match2range(doc, m, s);
+            if (!txt.isValid(doc.offsetAt(range.start))) continue;
+            ranges.push(range);
             replacedMessages.push(message.replaceAll("%1", m[1]));
         }
     }
-    return ranges2diagnostics(doc, code, replacedMessages, ranges);
+    return ranges2diagnostics(code, replacedMessages, ranges);
 }

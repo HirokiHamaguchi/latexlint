@@ -1,8 +1,8 @@
 import * as vscode from 'vscode';
+import type { LLText } from '../LLText/LLText';
 import { messages } from '../util/constants';
-import ranges2diagnostics from '../util/ranges2diagnostics';
 import match2range from '../util/match2range';
-import type { LLText } from '../util/LLText';
+import ranges2diagnostics from '../util/ranges2diagnostics';
 
 const correctCommandsLlGg: { [key: string]: string } = {
     "<<": "\\ll",
@@ -14,8 +14,9 @@ export default function LLLlGg(doc: vscode.TextDocument, txt: LLText): vscode.Di
     let message: string[] = [];
     let ranges: vscode.Range[] = [];
     for (const match of txt.text.matchAll(/(?<!<)<<(?!<)|(?<!>)>>(?!>)/g)) {
+        if (!txt.isValid(match.index)) continue;
         message.push(messages[code].replaceAll("%1", correctCommandsLlGg[match[0]]).replaceAll("%2", match[0]));
         ranges.push(match2range(doc, match));
     }
-    return ranges2diagnostics(doc, code, message, ranges);
+    return ranges2diagnostics(code, message, ranges);
 }

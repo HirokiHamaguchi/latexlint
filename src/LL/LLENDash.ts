@@ -1,10 +1,10 @@
 import * as vscode from 'vscode';
+import isLabelOrURL from '../LLText/isLabelOrURL';
+import type { LLText } from '../LLText/LLText';
 import { messages } from '../util/constants';
-import isLabelOrURL from '../util/isLabelOrURL';
 import match2range from '../util/match2range';
 import ranges2diagnostics from '../util/ranges2diagnostics';
 import { wordSet } from '../util/wordSet';
-import type { LLText } from '../util/LLText';
 
 const okWords = [
     'Fritz-John',
@@ -24,5 +24,5 @@ export default function LLENDash(doc: vscode.TextDocument, txt: LLText): vscode.
 
     const code = "LLENDash";
     const message = messages[code];
-    return ranges2diagnostics(doc, code, message, ranges);
+    return ranges2diagnostics(code, message, ranges);
 }

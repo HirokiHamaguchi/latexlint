@@ -1,8 +1,8 @@
 import * as vscode from 'vscode';
-import type { LLText } from '../util/LLText';
-import toTitleCase from '../util/toTitleCase';
-import { extensionDisplayName, severity, messages } from '../util/constants';
+import type { LLText } from '../LLText/LLText';
+import { extensionDisplayName, messages, severity } from '../util/constants';
 import { getCodeWithURI } from '../util/getCodeWithURI';
+import toTitleCase from '../util/toTitleCase';
 
 
 const REGEXPS = [

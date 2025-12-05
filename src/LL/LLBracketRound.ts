@@ -1,10 +1,9 @@
 import * as vscode from 'vscode';
+import type { LLText } from '../LLText/LLText';
+import isLabelOrURL from '../LLText/isLabelOrURL';
 import { messages } from '../util/constants';
-import ranges2diagnostics from '../util/ranges2diagnostics';
 import match2range from '../util/match2range';
-import isLabelOrURL from '../util/isLabelOrURL';
-import type { LLText } from '../util/LLText';
-
+import ranges2diagnostics from '../util/ranges2diagnostics';
 
 export default function LLBracketRound(doc: vscode.TextDocument, txt: LLText): vscode.Diagnostic[] {
     const code = "LLBracketRound";
@@ -12,6 +11,7 @@ export default function LLBracketRound(doc: vscode.TextDocument, txt: LLText): v
     const ranges: vscode.Range[] = [];
 
     for (const match of txt.text.matchAll(/(?:\\sqrt|\^|_)\(/g)) {
+        if (!txt.isValid(match.index)) continue;
         if (match[0] === "\\sqrt(")
             message.push(messages[code].replaceAll("%1", "\\sqrt"));
         else {
@@ -21,5 +21,5 @@ export default function LLBracketRound(doc: vscode.TextDocument, txt: LLText): v
         ranges.push(match2range(doc, match));
     }
 
-    return ranges2diagnostics(doc, code, message, ranges);
+    return ranges2diagnostics(code, message, ranges);
 }

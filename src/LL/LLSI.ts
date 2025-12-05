@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
+import type { LLText } from '../LLText/LLText';
 import { messages } from '../util/constants';
 import ranges2diagnostics from '../util/ranges2diagnostics';
-import type { LLText } from '../util/LLText';
 
 export default function LLSI(doc: vscode.TextDocument, txt: LLText): vscode.Diagnostic[] {
     if (doc.languageId !== "latex") return [];
@@ -38,5 +38,5 @@ export default function LLSI(doc: vscode.TextDocument, txt: LLText): vscode.Diag
 
     const code = "LLSI";
     const message = messages[code];
-    return ranges2diagnostics(doc, code, message, ranges);
+    return ranges2diagnostics(code, message, ranges);
 }

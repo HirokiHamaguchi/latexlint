@@ -1,8 +1,8 @@
 import * as vscode from 'vscode';
+import type { LLText } from '../LLText/LLText';
 import { messages } from '../util/constants';
-import ranges2diagnostics from '../util/ranges2diagnostics';
 import match2range from '../util/match2range';
-import type { LLText } from '../util/LLText';
+import ranges2diagnostics from '../util/ranges2diagnostics';
 
 export default function LLUserDefined(doc: vscode.TextDocument, txt: LLText, userDefinedRules: string[]): vscode.Diagnostic[] {
     if (!userDefinedRules || userDefinedRules.length === 0) return [];
@@ -23,7 +23,7 @@ export default function LLUserDefined(doc: vscode.TextDocument, txt: LLText, use
             message.push(messages[code].replaceAll("%1", regex.source));
             ranges.push(match2range(doc, match));
         }
-        diagnostics.push(...ranges2diagnostics(doc, code, message, ranges));
+        diagnostics.push(...ranges2diagnostics(code, message, ranges));
     }
     return diagnostics;
 }

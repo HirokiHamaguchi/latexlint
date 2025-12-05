@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
-import ranges2diagnostics from '../util/ranges2diagnostics';
+import type { LLText } from '../LLText/LLText';
 import { messages } from '../util/constants';
-import type { LLText } from '../util/LLText';
+import ranges2diagnostics from '../util/ranges2diagnostics';
 
 export default function LLAlignSingleLine(doc: vscode.TextDocument, txt: LLText): vscode.Diagnostic[] {
     const code = 'LLAlignSingleLine';
@@ -13,5 +13,5 @@ export default function LLAlignSingleLine(doc: vscode.TextDocument, txt: LLText)
             const endPos = doc.positionAt(t);
             ranges.push(new vscode.Range(startPos, endPos));
         }
-    return ranges2diagnostics(doc, code, message, ranges);
+    return ranges2diagnostics(code, message, ranges);
 }

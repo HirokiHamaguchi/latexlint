@@ -1,8 +1,8 @@
 import * as vscode from 'vscode';
+import type { LLText } from '../LLText/LLText';
 import { messages } from '../util/constants';
-import ranges2diagnostics from '../util/ranges2diagnostics';
 import match2range from '../util/match2range';
-import type { LLText } from '../util/LLText';
+import ranges2diagnostics from '../util/ranges2diagnostics';
 
 export default function LLCref(doc: vscode.TextDocument, txt: LLText, exceptions: string[]): vscode.Diagnostic[] {
     if (doc.languageId !== "latex") return [];
@@ -11,14 +11,13 @@ export default function LLCref(doc: vscode.TextDocument, txt: LLText, exceptions
     const message: string[] = [];
     const ranges: vscode.Range[] = [];
 
-    const refRegex = /\\ref\{([^}]*)/g;
-    for (const match of txt.text.matchAll(refRegex)) {
+    for (const match of txt.text.matchAll(/\\ref\{([^}]*)/g)) {
+        if (!txt.isValid(match.index)) continue;
         const refContent = match[1];
         if (exceptions.some(exception => refContent.startsWith(exception))) continue;
-
         message.push(messages[code]);
         ranges.push(match2range(doc, match));
     }
 
-    return ranges2diagnostics(doc, code, message, ranges);
+    return ranges2diagnostics(code, message, ranges);
 }

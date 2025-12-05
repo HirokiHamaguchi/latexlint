@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
+import type { LLText } from '../LLText/LLText';
 import { messages } from '../util/constants';
 import ranges2diagnostics from '../util/ranges2diagnostics';
-import type { LLText } from '../util/LLText';
 
 function isCorrectBraces(str: string): boolean {
     let count = 0;
@@ -24,6 +24,7 @@ export default function LLColonForMapping(doc: vscode.TextDocument, txt: LLText)
 
     for (const regexp of REGEXPS)
         for (const match of txt.text.matchAll(regexp)) {
+            if (!txt.isValid(match.index)) continue;
             let i = match.index - 1;
             for (let wordCount = 0; wordCount < 10; wordCount++) {
                 while (i >= 0 && /\s/.test(txt.text[i])) i--;
@@ -48,5 +49,5 @@ export default function LLColonForMapping(doc: vscode.TextDocument, txt: LLText)
 
     const code = 'LLColonForMapping';
     const message = messages[code];
-    return ranges2diagnostics(doc, code, message, ranges);
+    return ranges2diagnostics(code, message, ranges);
 }

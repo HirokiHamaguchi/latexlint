@@ -1,9 +1,8 @@
 import * as vscode from 'vscode';
+import type { LLText } from '../LLText/LLText';
 import { messages } from '../util/constants';
-import ranges2diagnostics from '../util/ranges2diagnostics';
 import match2range from '../util/match2range';
-import isInComment from '../util/isInComment';
-import type { LLText } from '../util/LLText';
+import ranges2diagnostics from '../util/ranges2diagnostics';
 
 export default function LLHeading(doc: vscode.TextDocument, txt: LLText): vscode.Diagnostic[] {
     if (doc.languageId !== "latex") return [];
@@ -33,10 +32,7 @@ export default function LLHeading(doc: vscode.TextDocument, txt: LLText): vscode
         const currentLevel = headingLevels[headingType];
 
         // Skip if the heading is in a comment
-        const pos = doc.positionAt(headingMatch.index!);
-        const line = doc.lineAt(pos.line);
-        const idx = headingMatch.index! - doc.offsetAt(line.range.start);
-        if (isInComment(line.text, idx)) continue;
+        if (!txt.isValid(headingMatch.index!)) continue;
 
         // Check if we're skipping levels
         // Shoddy implementation: set lastLevel > 0 to avoid expectedLevelName handling
@@ -52,5 +48,5 @@ export default function LLHeading(doc: vscode.TextDocument, txt: LLText): vscode
         lastLevel = currentLevel;
     }
 
-    return ranges2diagnostics(doc, code, message, ranges);
+    return ranges2diagnostics(code, message, ranges);
 }

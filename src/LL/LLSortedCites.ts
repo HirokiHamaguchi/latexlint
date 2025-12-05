@@ -1,8 +1,8 @@
 import * as vscode from 'vscode';
-import type { LLText } from '../util/LLText';
+import type { LLText } from '../LLText/LLText';
 import { messages } from '../util/constants';
-import ranges2diagnostics from '../util/ranges2diagnostics';
 import match2range from '../util/match2range';
+import ranges2diagnostics from '../util/ranges2diagnostics';
 
 export default function LLSortedCites(doc: vscode.TextDocument, txt: LLText): vscode.Diagnostic[] {
     if (doc.languageId !== "latex") return [];
@@ -27,5 +27,5 @@ export default function LLSortedCites(doc: vscode.TextDocument, txt: LLText): vs
 
     const range = match2range(doc, firstMatch);
     const message = messages['LLSortedCites'];
-    return ranges2diagnostics(doc, 'LLSortedCites', [message], [range]);
+    return ranges2diagnostics('LLSortedCites', [message], [range]);
 }

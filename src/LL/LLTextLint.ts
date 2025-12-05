@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
+import type { LLText } from '../LLText/LLText';
 import { checkUsageError } from "../TextLint/usage_error";
 import ranges2diagnostics from "../util/ranges2diagnostics";
-import type { LLText } from '../util/LLText';
 
 export default function LLTextLint(doc: vscode.TextDocument, txt: LLText): vscode.Diagnostic[] {
     if (!txt.text.trim()) return [];
@@ -17,7 +17,6 @@ export default function LLTextLint(doc: vscode.TextDocument, txt: LLText): vscod
     }
 
     return ranges2diagnostics(
-        doc,
         "LLTextLint",
         messages,
         ranges

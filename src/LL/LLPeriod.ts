@@ -11,7 +11,9 @@ export default function LLPeriod(doc: vscode.TextDocument, txt: LLText): vscode.
 
     for (const match of txt.text.matchAll(/\b(?:i\.e\.|e\.g\.) /g)) {
         if (!txt.isValid(match.index)) continue;
-        message.push(messages[code]);
+        const abbreviation = match[0].trim();
+        const customizedMessage = messages[code].replaceAll("%1", abbreviation);
+        message.push(customizedMessage);
         ranges.push(match2range(doc, match));
     }
     return ranges2diagnostics(code, message, ranges);

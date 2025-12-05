@@ -74,7 +74,7 @@ async function testEnumerateDiagnostics(fileName: string, expected: number) {
 
 async function testEnumerateDiagnosticsTex() {
 	const bug = 0;
-	const correct = 117;
+	const correct = 118;
 	await testEnumerateDiagnostics("sample/lint.tex", bug + correct);
 }
 

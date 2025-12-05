@@ -1,5 +1,5 @@
 {
-  "message": "Consider adding a comma \"e.g.,\" or using \"e.g.\\\\ \" to avoid spacing issues.",
+  "message": "Consider adding a comma \"%1,\" or using \"%1\\\\ \" to avoid spacing issues.",
   "severity": "WARN",
-  "lint_test_count": 1
+  "lint_test_count": 2
 }

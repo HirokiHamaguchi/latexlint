@@ -7,6 +7,7 @@
 \usepackage{ascmac}
 \usepackage{CJKutf8}
 \usepackage{enumitem}
+\usepackage{fancyvrb}
 \usepackage{float}
 \usepackage{geometry}
 \usepackage{graphicx}
@@ -42,7 +43,7 @@
 
 \DeclareMathOperator{\infConv}{\Box}
 
-% \sample_command for LLBracketMissing
+\DefineVerbatimEnvironment{myVerbatim}{Verbatim}{}
 
 \begin{document}
 
@@ -282,21 +283,20 @@ $x_23$, $x^ab$, and $x_ab$ are also checked.
 Cases like $x^a b$, $x^2\;$, and $e^i\pi$ are not detected.
 
 Following examples are ignored.
-\begin{verbatim}
-escaped underscore: \_123
-https://sample_url.com
-\includegraphics{sample_link.png}
-\includegraphics{sample_link.pdf}
-\label{sample_label}
-\cref{sample_label}
-\eqref{sample_label}
-\cite{sample_label}
-\Cref{sample_Label}
-\bibliography{abc_def}
-\bibliographystyle{my_style}
-\addbibresource{ref_file.bib}
-% x^23 comment
-\end{verbatim}
+\begin{myVerbatim}
+	escaped underscore: \_123
+	https://sample_url.com
+	\includegraphics{sample_link.png}
+	\includegraphics{sample_link.pdf}
+	\label{sample_label}
+	\cref{sample_label}
+	\eqref{sample_label}
+	\cite{sample_label}
+	\Cref{sample_Label}
+	\bibliographystyle{my_style}
+	\addbibresource{ref_file.bib}
+	% x^23 comment
+\end{myVerbatim}
 
 \section{LLBracketRound}
 
@@ -567,6 +567,8 @@ Standard: $\binom{n}{k}$
 		\verb|e.g. test.|  & e.g. test.  & \tD{ng} \\
 	\end{tabular}
 \end{table}
+
+i.e. is also checked.
 
 \section{LLRefEq}
 

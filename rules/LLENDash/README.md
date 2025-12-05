@@ -21,8 +21,9 @@ For example, we detect the following.
 
 However, we do not detect the following as an exception.
 
+* Common word pairs such as `Real-Valued` / `Two-Dimensional` are skipped when both words are recognized general vocabulary.
 * `Fritz-John` (optimization, name of a person)
-* todo: add more exceptions
+* (We might add more exceptions later.)
 
 We also should use `--` instead of `-` to indicate a range of pages, e.g., `123--456` instead of `123-456`. A lot of BibTeX files follow this rule. We do not detect this because it might be just a subtraction.
 

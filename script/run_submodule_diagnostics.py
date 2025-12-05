@@ -1,11 +1,3 @@
-#!/usr/bin/env python
-"""
-Run enumerateDiagnostics on all .tex files in submodules and log results.
-Outputs a human-readable log at script/submodule_diagnostics.log.
-"""
-
-from __future__ import annotations
-
 import json
 import subprocess
 from pathlib import Path
@@ -13,7 +5,8 @@ from typing import Any, Dict, List
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 NODE_RUNNER = BASE_DIR / "script" / "run_enumerate.js"
-LOG_PATH = BASE_DIR / "script" / "submodule_diagnostics.log"
+LOG_DIR = BASE_DIR / "logs"
+LOG_PATH = LOG_DIR / "submodule_diagnostics.log"
 SUBMODULES = [
     BASE_DIR / "submodules" / "openintro-statistics",
     BASE_DIR / "submodules" / "OpenLogic",
@@ -27,6 +20,12 @@ def find_tex_files() -> List[Path]:
         if root.exists():
             files.extend(sorted(root.rglob("*.tex")))
     return files
+
+
+def sanitize_code(code: str) -> str:
+    """Return a filesystem-safe name derived from diagnostic code."""
+
+    return "".join(ch if ch.isalnum() or ch in ("-", "_") else "_" for ch in code)
 
 
 def run_node(tex_path: Path) -> Dict[str, Any]:
@@ -74,20 +73,22 @@ def format_context(tex_path: Path, start_line: int, context: int = 2) -> str:
 
 
 def main() -> None:
-    tex_files = find_tex_files()[:10]
-    LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    tex_files = find_tex_files()
+    LOG_DIR.mkdir(parents=True, exist_ok=True)
 
     total_diags = 0
     files_with_diags = 0
     failures = 0
+    diagnostics_by_code: Dict[str, List[Dict[str, Any]]] = {}
     blocks: List[str] = []
+    error_blocks: List[str] = []
 
     for tex in tex_files:
         print(f"Processing {tex}...")
         result = run_node(tex)
         if not result.get("ok"):
             failures += 1
-            blocks.append(
+            error_blocks.append(
                 "\n".join(
                     [
                         f"[ERROR] {tex}",
@@ -104,28 +105,59 @@ def main() -> None:
         total_diags += len(diagnostics)
         if diagnostics:
             files_with_diags += 1
-            parts = [f"[DIAGNOSTICS] {tex} ({len(diagnostics)})"]
             for diag in diagnostics:
                 start = diag.get("start", {})
                 line = int(start.get("line", 0)) + 1
                 code = diag.get("code", {}).get("value", "unknown")
                 message = diag.get("message", "")
-                parts.append(f"- {code}, message: {message}")
-                parts.append(format_context(tex, line, context=2))
-                parts.append("")
-            parts.append("")
-            parts.append("")
-            blocks.append("\n".join(parts))
+                diagnostics_by_code.setdefault(code, []).append(
+                    {
+                        "file": tex,
+                        "line": line,
+                        "message": message,
+                        "context": format_context(tex, line, context=2),
+                    }
+                )
 
     summary = (
         f"Checked {len(tex_files)} files. Diagnostics: {total_diags}. "
-        f"Files with diagnostics: {files_with_diags}. Failures: {failures}."
+        f"Files with diagnostics: {files_with_diags}. "
+        f"Codes: {len(diagnostics_by_code)}. Failures: {failures}."
     )
 
+    # Write per-code logs
+    code_files: List[str] = []
+    for code in sorted(diagnostics_by_code):
+        entries = diagnostics_by_code[code]
+        safe_code = sanitize_code(code or "unknown")
+        code_path = LOG_DIR / f"submodule_diagnostics_{safe_code}.log"
+        code_files.append(code_path.name)
+
+        parts = [f"[CODE] {code} ({len(entries)})"]
+        for entry in entries:
+            parts.append(f"- file: {entry['file']} (line {entry['line']})")
+            parts.append(f"  message: {entry['message']}")
+            parts.append(entry["context"])
+            parts.append("")
+        parts.append("")
+
+        with code_path.open("w", encoding="utf-8") as fh:
+            fh.write("\n".join(parts))
+
+    # Write summary and errors to main log
+    if error_blocks:
+        blocks.extend(error_blocks)
+
     with LOG_PATH.open("w", encoding="utf-8") as fh:
-        fh.write(summary + "\n\n")
-        for block in blocks:
-            fh.write(block + "\n")
+        fh.write(summary + "\n")
+        if code_files:
+            fh.write("Per-code logs:\n")
+            for name in code_files:
+                fh.write(f"- {name}\n")
+            fh.write("\n")
+        if blocks:
+            for block in blocks:
+                fh.write(block + "\n")
 
     print(summary)
 

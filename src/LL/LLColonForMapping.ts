@@ -35,6 +35,7 @@ export default function LLColonForMapping(doc: vscode.TextDocument, txt: LLText)
                 if (txt.text[i] === ':') {
                     const strColon2Arrow = txt.text.slice(i + 1, match.index);
                     if (!strColon2Arrow.includes('\\(') &&
+                        !strColon2Arrow.includes('\\[') &&
                         !strColon2Arrow.includes('\\begin{') &&
                         isCorrectBraces(strColon2Arrow)
                     ) {

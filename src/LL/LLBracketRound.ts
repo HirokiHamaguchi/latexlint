@@ -16,6 +16,7 @@ export default function LLBracketRound(doc: vscode.TextDocument, txt: LLText): v
             message.push(messages[code].replaceAll("%1", "\\sqrt"));
         else {
             if (isLabelOrURL(txt.text, match)) continue;
+            if (match.index > 0 && txt.text[match.index - 1] === '\\') continue;
             message.push(messages[code].replaceAll("%1", txt.text[match.index]));
         }
         ranges.push(match2range(doc, match));

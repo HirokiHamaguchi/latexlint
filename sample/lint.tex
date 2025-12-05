@@ -310,11 +310,28 @@ https://sample_url.com
 
 $a^(1)$ and $a_(1)$ are also checked.
 
-Following examples are ignored.
-\begin{verbatim}
-\includegraphics{sample_(1).png}
-\label{eq:f(x_(k+1))<=m(x_(k+1))<=m(x_k)=f(x_k)}
-\end{verbatim}
+Following examples are ignored:
+
+\verb|Test\_(1)|
+Test\_(1)
+
+\verb|Test\^2|
+Test\^2
+
+\verb|sample_(1).png|
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.3\columnwidth]{images/sample_(1).png}
+	\caption{sample\_(1).png}
+\end{figure}
+sample\_(1).pdf
+
+\verb|\label{eq:f(x_(k+1)) <= m(x_(k+1)) <= m(x_k) = f(x_k)}|
+\begin{equation}
+	f(x_{k+1}) \leq m(x_{k+1}) \leq m(x_k) = f(x_k)
+	\label{eq:f(x_(k+1))<=m(x_(k+1))<=m(x_k)=f(x_k)}
+\end{equation}
+The label in Eq.~\eqref{eq:f(x_(k+1))<=m(x_(k+1))<=m(x_k)=f(x_k)} is ignored.
 
 \section{LLColonEqq}
 

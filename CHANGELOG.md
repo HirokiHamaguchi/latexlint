@@ -13,6 +13,10 @@ All notable changes to the "latexlint" extension will be documented in this file
 - Youtube, Github
 - enhance rules so that we can apply them to markdown files.
 
+## 1.6.1 - 2025-12-05
+
+- Fix bug of mainIcon512.png (was not included in the package).
+
 ## 1.6.0 - 2025-12-05
 
 - Fix bugs regarding `\begin{lstlisting}` and `\begin{verbatim}`

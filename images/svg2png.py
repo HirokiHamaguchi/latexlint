@@ -1,7 +1,6 @@
 import os
 
 import cairosvg
-from PIL import Image
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 cairosvg.svg2png(

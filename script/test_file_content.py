@@ -22,9 +22,11 @@ def test_file_content():
         with open(rule_dir / rule / "values.json", encoding="utf-8") as f:
             values = json.load(f)
         assert isinstance(values, dict), f"{rule}/values.json is not a dict"
-        assert values.keys() == {"message", "severity", "lint_test_count"}, (
-            f"{rule}/values.json has unexpected keys: {values.keys()}"
-        )
+        assert values.keys() == {
+            "message",
+            "severity",
+            "lint_test_count",
+        }, f"{rule}/values.json has unexpected keys: {values.keys()}"
 
     print("test_file_content ok!")
 

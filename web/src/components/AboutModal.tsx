@@ -105,14 +105,6 @@ const VocabularyRow = ({ entry }: { entry: VocabularyEntry }) => {
 function OverviewTab() {
     return <VStack align="stretch">
         <VStack align="stretch">
-            <Heading size="lg">Privacy</Heading>
-            <Text fontSize="sm">
-                All input is processed entirely in your browser.
-                No network requests are made.
-            </Text>
-        </VStack>
-
-        <VStack align="stretch">
             <Heading size="lg">Links</Heading>
             <HStack gap={5} flexWrap="wrap">
                 <ExternalLink
@@ -129,9 +121,15 @@ function OverviewTab() {
                 </ExternalLink>
             </HStack>
         </VStack>
-
         <VStack align="stretch">
-            <Heading size="lg">Sample - Before and After</Heading>
+            <Heading size="lg">Privacy</Heading>
+            <Text fontSize="sm">
+                Your input is processed entirely within your browser.
+                No data is sent to any server.
+            </Text>
+        </VStack>
+        <VStack align="stretch">
+            <Heading size="lg">Sample</Heading>
             <Grid templateColumns={{ base: '1fr', md: '1fr 1fr' }} gap={6}>
                 <SampleImage src="sample_before.png" alt="Before" color="red.600" />
                 <SampleImage src="sample_after.png" alt="After" color="green.600" />

@@ -11,32 +11,32 @@
 \begin{document}
 
 \title{Sample Document}
-\author{hari64boli64}
+\author{Hiroki Hamaguchi}
 \date{\today}
 \maketitle
 
 \section{Rename Command}
 
 \begin{equation}\label{eq:1}
-    a = b
+	a = b
 \end{equation}
 
 \begin{equation*}
-    c = d
+	c = d
 \end{equation*}
 
 \begin{align}
-    e & = \begin{dcases}
-              f & \text{if } g = h \\
-              i & \text{if } j = k
-          \end{dcases} \\
-    l & = m \notag
+	e & = \begin{dcases}
+		      f & \text{if } g = h \\
+		      i & \text{if } j = k
+	      \end{dcases} \\
+	l & = m \notag
 \end{align}
 
 \begin{figure*}[h] % comment
-    \centering
-    \includegraphics[width=0.5\columnwidth]{../images/sample.png}
-    \caption{Sample Figure}\label{fig:1}
+	\centering
+	\includegraphics[width=0.5\columnwidth]{../images/sample.png}
+	\caption{Sample Figure}\label{fig:1}
 \end{figure*}
 
 Sample figure is shown in Figure~\ref{fig:1}.
@@ -45,16 +45,16 @@ Sample figure is shown in Figure~\ref{fig:1}.
 
 Select a line. Then, press \texttt{Ctrl + Shift + P} and type \texttt{askWolframAlpha}.
 \begin{gather*}
-    \sum_{n=1}^{\infty} \frac{1}{n^2} \\
-    \int_{-\infty}^{\infty} e^{-x^2} \dd x \\
-    \left(1+\left(1+\left(1+x\right)^2\right)^2\right)
+	\sum_{n=1}^{\infty} \frac{1}{n^2} \\
+	\int_{-\infty}^{\infty} e^{-x^2} \dd x \\
+	\left(1+\left(1+\left(1+x\right)^2\right)^2\right)
 \end{gather*}
 
 The Wolfram Alpha page with adjusted expressions will open as in Figure~\ref{fig:2}.
 \begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\columnwidth]{../images/askWolframAlpha3.png}
-    \caption{Wolfram Alpha}\label{fig:2}
+	\centering
+	\includegraphics[width=\columnwidth]{../images/askWolframAlpha3.png}
+	\caption{Wolfram Alpha}\label{fig:2}
 \end{figure}
 
 \section{
@@ -72,18 +72,18 @@ when you press F12 on \texttt{\textbackslash{}ref}, \texttt{\textbackslash{}cref
 
 % This is a comment: \label{eq:commented} should be ignored
 \begin{equation}\label{prob:example1}
-    \min_x \|Ax - b\|_2^2
+	\min_x \|Ax - b\|_2^2
 \end{equation}
 
 \begin{equation}\label{eq:example2}
-    E = mc^2
+	E = mc^2
 \end{equation}
 
 Here are some examples:
 \begin{itemize}
-    \item Press F12 on \texttt{\textbackslash{}ref\{prob:example1\}} to jump: Prob~\ref{prob:example1}
-    \item Press F12 on \texttt{\textbackslash{}cref\{eq:example2\}} to jump: \cref{eq:example2}
-    \item Press F12 on \texttt{\textbackslash{}Cref\{fig:1\}} to jump to Figure 1: \Cref{fig:1}
+	\item Press F12 on \texttt{\textbackslash{}ref\{prob:example1\}} to jump: Prob~\ref{prob:example1}
+	\item Press F12 on \texttt{\textbackslash{}cref\{eq:example2\}} to jump: \cref{eq:example2}
+	\item Press F12 on \texttt{\textbackslash{}Cref\{fig:1\}} to jump to Figure 1: \Cref{fig:1}
 \end{itemize}
 
 % Another commented label: \label{eq:another-comment}

@@ -90,6 +90,7 @@ export function Content() {
                     onRunLint={runLint}
                     text={text}
                     docType={docType}
+                    onOpenAboutWithHash={handleOpenAboutWithHash}
                 />
 
                 <HStack color="gray.700">

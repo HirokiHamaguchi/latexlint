@@ -2,12 +2,13 @@ import {
     Box,
     Checkbox,
     Collapsible,
+    IconButton,
     Input,
     SimpleGrid,
     Text,
     VStack,
 } from '@chakra-ui/react';
-import { LuChevronRight } from "react-icons/lu";
+import { LuChevronRight, LuCircleHelp } from "react-icons/lu";
 import { configMetadata, type LintConfig } from '../config';
 import { DocType } from '../types';
 
@@ -15,6 +16,7 @@ type ConfigFieldProps = {
     keyName: keyof LintConfig;
     config: LintConfig;
     updateConfig: (newConfig: LintConfig) => void;
+    onOpenAboutWithHash: (hash: string) => void;
 };
 
 function ConfigField(props: ConfigFieldProps) {
@@ -22,9 +24,21 @@ function ConfigField(props: ConfigFieldProps) {
     const currentValues = props.config[props.keyName] as unknown as string[];
     return (
         <Box>
-            <Text fontWeight="bold" mb={2}>
-                {metadata.description}
-            </Text>
+            <Box display="flex" alignItems="center" gap={2} mb={2}>
+                <Text fontWeight="bold">
+                    {metadata.description}
+                </Text>
+                {metadata.description && (
+                    <IconButton
+                        aria-label={`Open docs for ${metadata.description}`}
+                        size="xs"
+                        variant="ghost"
+                        onClick={() => props.onOpenAboutWithHash(metadata.description)}
+                    >
+                        <LuCircleHelp />
+                    </IconButton>
+                )}
+            </Box>
             {metadata.items?.enum ? (
                 // Checkbox UI for enum fields
                 <Box>
@@ -76,6 +90,7 @@ type ConfigurationSectionProps = {
     onToggle: (open: boolean) => void;
     onConfigChange: (newConfig: LintConfig) => void;
     onRunLint: (text: string, type: DocType, forceTextLint: boolean) => void;
+    onOpenAboutWithHash: (hash: string) => void;
 }
 
 export function ConfigurationSection(props: ConfigurationSectionProps) {
@@ -106,6 +121,7 @@ export function ConfigurationSection(props: ConfigurationSectionProps) {
                                             props.onConfigChange(newConfig);
                                             props.onRunLint(props.text, props.docType, true);
                                         }}
+                                        onOpenAboutWithHash={props.onOpenAboutWithHash}
                                     />
                                 );
                             })}

@@ -221,7 +221,10 @@ export function AboutModal({ tab, isOpen, readmeLink, onClose, onTabChange }: Ab
             setTimeout(() => {
                 if (readmeLink && readmeRef.current && dialogBodyRef.current) {
                     const element = readmeRef.current.querySelector(`#${readmeLink.toLowerCase()}`);
-                    if (!element) return;
+                    if (!element) {
+                        console.warn(`Element with id ${readmeLink} not found in README.`);
+                        return;
+                    }
                     const dialogBody = dialogBodyRef.current;
                     if (!dialogBody) return;
 

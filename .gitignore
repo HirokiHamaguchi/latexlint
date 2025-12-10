@@ -15,3 +15,5 @@ sample/localTest.*
 **/**.aux
 **/**.log
 **/**.synctex.gz
+
+TODO.md

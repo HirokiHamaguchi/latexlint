@@ -1,47 +1,24 @@
-export function computeValidRanges(
+export default function computeValidRanges(
   text: string,
   languageId: string
 ): [number, number][] {
-  const invalidRanges: [number, number][] = [];
-  invalidRanges.push(...computeCommentRanges(text));
+  let invalidRanges: [number, number][] = [];
+
   if (languageId === "latex")
-    invalidRanges.push(...computeVerbatimRanges(text));
+    invalidRanges = computeLaTeXInvalidRanges(text, invalidRanges);
   else if (languageId === "markdown")
-    invalidRanges.push(...computeMarkdownCodeBlockRanges(text));
+    invalidRanges = computeMarkdownCodeBlockRanges(text);
   else console.log(`Unknown languageId ${languageId} in computeValidRanges.`);
+
   const mergedInvalidRanges = mergeRanges(invalidRanges);
-  return invertRanges(mergedInvalidRanges, text.length);
+  const validRanges = invertRanges(mergedInvalidRanges, text.length);
+  return validRanges.filter(([start, end]) => end - start > 0);
 }
 
-export function isPositionValid(
-  idx: number,
-  validRanges: [number, number][]
-): boolean {
-  for (const [start, end] of validRanges)
-    if (idx >= start && idx < end) return true;
-  return false;
-}
-
-function computeCommentRanges(text: string): [number, number][] {
-  const ranges: [number, number][] = [];
-  const lines = text.split("\n");
-  let currentPos = 0;
-  for (const line of lines) {
-    let i = 0;
-    while (i < line.length) {
-      if (line[i] === "%") {
-        ranges.push([currentPos + i, currentPos + line.length]);
-        break;
-      }
-      i++;
-    }
-    currentPos += line.length + 1; // +1 for newline
-  }
-  return ranges;
-}
-
-function computeVerbatimRanges(text: string): [number, number][] {
-  const ranges: [number, number][] = [];
+function computeLaTeXInvalidRanges(
+  text: string,
+  verbatimRanges: [number, number][] = []
+): [number, number][] {
   const verbatimEnvs = [
     "verbatim",
     "lstlisting",
@@ -53,50 +30,35 @@ function computeVerbatimRanges(text: string): [number, number][] {
     "VerbatimOut",
   ];
 
-  // Detect block verbatim environments
-  for (const env of verbatimEnvs) {
-    const beginRegex = new RegExp(`\\\\begin\\{${env}[*]?\\}`, "g");
-    const endRegex = new RegExp(`\\\\end\\{${env}[*]?\\}`, "g");
-
-    let beginMatch;
-    while ((beginMatch = beginRegex.exec(text)) !== null) {
-      endRegex.lastIndex = beginMatch.index + beginMatch[0].length;
-      const endMatch = endRegex.exec(text);
-      if (endMatch)
-        ranges.push([beginMatch.index, endMatch.index + endMatch[0].length]);
-      else ranges.push([beginMatch.index, text.length]);
-    }
-  }
-
-  // Detect inline \verb commands
-  const verbRegex = /\\verb(.)(.*?)\1/g;
-  let verbMatch;
-  while ((verbMatch = verbRegex.exec(text)) !== null)
-    ranges.push([verbMatch.index, verbMatch.index + verbMatch[0].length]);
-
-  return ranges;
+  // verbsBegin: \\\\begin\\{${env}[*]?\\}
+  // verbsEnd: \\\\end\\{${env}[*]?\\}
+  // verbsInline: \verb
+  // comments: %
+  // 上の4つのパターンをまずは一度全て検出し、順にみていく。
+  // 先頭のパターンが、
+  // 1. verbsBeginなら、次のverbsEndまで他のパターンを捨てながら範囲を追加。
+  // 2. verbsInlineなら、まずそれが本当に有効な\verbかを確認する。
+  //    つまり、\verbの直後の1文字が[a-zA-Z]でなければ有効。
+  //    その場合、その文字を区切り文字として、次に同じ文字が出現するまで範囲を追加。
+  //    ただし、行末までに出現しなければ、暫定処置としてその行の終端まで範囲を追加。
+  //    追加された範囲内に存在する他のパターンは全て捨てる。
+  //    これは本来latexのエラーなので、console.warnで警告を出す。
+  // 3. commentsなら、まずそれがエスケープされていないかを確認する。
+  //    つまり、その直前に\が奇数個連続していなければ有効。
+  //    その場合、その行の終端まで範囲を追加。
+  //    追加された範囲内に存在する他のパターンは全て捨てる。
+  // 上記を繰り返す。
 }
 
 function computeMarkdownCodeBlockRanges(text: string): [number, number][] {
-  const ranges: [number, number][] = [];
-  const lines = text.split("\n");
-  let currentPos = 0;
-  let inCodeBlock = false;
-  let codeBlockStart = 0;
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    if (line.startsWith("```"))
-      if (!inCodeBlock) {
-        inCodeBlock = true;
-        codeBlockStart = currentPos;
-      } else {
-        inCodeBlock = false;
-        ranges.push([codeBlockStart, currentPos + lines[i].length]);
-      }
-    currentPos += lines[i].length;
-  }
-  if (inCodeBlock) ranges.push([codeBlockStart, text.length]);
-  return ranges;
+  // commentBegin: <!--
+  // commentEnd: -->
+  // codeBlockFence: ``` (ただし、行頭に限る)
+  // 上の3つのパターンをまずは一度全て検出し、順にみていく。
+  // 先頭のパターンが、
+  // 1. commentBeginなら、次のcommentEndまで他のパターンを捨てながら範囲を追加。
+  // 2. codeBlockFenceなら、次のcodeBlockFenceまで他のパターンを捨てながら範囲を追加。
+  // 上記を繰り返す。
 }
 
 function mergeRanges(ranges: [number, number][]): [number, number][] {

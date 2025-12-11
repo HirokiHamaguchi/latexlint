@@ -33,12 +33,21 @@ async function testEnumerateDiagnosticsLocalTestTex() {
   const diagnostics = await testEnumerateDiagnostics(
     "sample/localTest.LLText.tex"
   );
-  const lines = [];
+  const positions = [];
   for (const diag of diagnostics) {
     const line = diag.range.start.line + 1;
-    lines.push(line);
+    const char = diag.range.start.character + 1;
+    positions.push([line, char]);
   }
-  assert.deepStrictEqual(lines, [16, 17, 18, 19, 20, 40, 44]);
+  assert.deepStrictEqual(positions, [
+    [16, 2],
+    [17, 9],
+    [18, 15],
+    [19, 4],
+    [20, 6],
+    [39, 1],
+    [43, 1],
+  ]);
 }
 
 async function testEnumerateDiagnosticsLocalTestMd() {
@@ -50,7 +59,7 @@ async function testEnumerateDiagnosticsLocalTestMd() {
     const line = diag.range.start.line + 1;
     lines.push(line);
   }
-  assert.deepStrictEqual(lines, [16, 17, 18, 19, 20, 40, 44]);
+  assert.deepStrictEqual(lines, [13, 22]);
 }
 
 suite("Extension Test Suite", () => {

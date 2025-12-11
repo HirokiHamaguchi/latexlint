@@ -25,8 +25,11 @@ export default function createLLText(
 }
 
 function isPositionValid(idx: number, validRanges: [number, number][]) {
-  for (const [start, end] of validRanges)
-    if (idx >= start && idx < end) return true;
+  for (const [start, end] of validRanges) {
+    if (end < idx) continue;
+    if (start <= idx && idx <= end) return true;
+    if (idx < start) return false;
+  }
   return false;
 }
 

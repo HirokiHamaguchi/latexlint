@@ -1,6 +1,7 @@
 import os
 
 from make_constants_ts import make_constants_ts
+from make_enumerate_diagnostics_test import make_enumerate_diagnostics_test
 from make_lint_tex import make_lint_tex
 from make_package_json import make_package_json
 from make_png_files import make_png_files
@@ -8,7 +9,6 @@ from make_readme_md import make_readme_md
 from make_rules_ts import make_rules_ts
 from make_web_readme import make_web_readme
 from make_web_svg import make_web_svg
-from test_diagnostics_count import test_diagnostics_count
 from test_file_content import test_file_content
 from test_is_for_md import test_is_for_md
 from test_mark_down_png import test_mark_down_png
@@ -26,7 +26,7 @@ if __name__ == "__main__":
     make_rules_ts()
     make_web_readme()
     make_web_svg()
-    test_diagnostics_count()
+    make_enumerate_diagnostics_test()
     test_file_content()
     test_is_for_md()
     test_mark_down_png()

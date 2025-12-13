@@ -1,0 +1,265 @@
+[CODE] LLThousands (33)
+- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1749)
+  message: Consider using "11{,}785" instead of "11,785".
+  1747: (\$137 + \$33) \times  25 = \$170 \times  25 = \$4,250
+  1748: \end{align*}
+> 1749: Thus, the bookstore should expect to generate about $\$7,535 + \$4,250 = \$11,785$ from these 100 students for this one class. However, there might be some \emph{sampling variability} so the actual amount may differ by a little bit.
+  1750: \end{nexample}
+  1751: \end{examplewrap}
+
+- file: sample\arxiv_sources\2103.03874v2\2-related-work.tex (line 5)
+  message: Consider using "1{,}602" instead of "1,602".
+     3: \textbf{Neural Theorem Provers.}\quad
+     4: Much of the existing work on machine learning models for mathematical reasoning relies on automated theorem proving benchmarks.
+>    5: \citet{Huang2019GamePadAL} use the Coq theorem proving environment to create a machine learning benchmark with $1,602$ theorems and lemmas. \citet{Bansal2019HOListAE} introduce the HOList benchmark for automated theorem proving, which uses a formal language to enable automatic evaluation. Rather than use HOList, \citet{Polu2020GenerativeLM} use the Metamath formalization language for automated theorem proving with promising results. We show an example of Metamath in \Cref{fig:splash}. These benchmarks can be approached with seq2seq \citep{Sutskever2014SequenceTS} Transformers which have traction on the problem \citep{Polu2020GenerativeLM, Rabe2020MathematicalRV, Li2020ModellingHM}.
+     6: 
+     7: \begin{wrapfigure}{r}{0.5\textwidth}
+
+- file: sample\arxiv_sources\2103.03874v2\2-related-work.tex (line 39)
+  message: Consider using "12{,}500" instead of "12,500".
+    37: In the Supplementary Materials, %
+    38: we even find that large GPT-3 models can perform remarkably well on a sequence completion test similar to an IQ test, the C-Test \citep{ctest,Legg2007UniversalIA}. Even difficult logical understanding tasks such as LogiQA \citep{Liu2020LogiQAAC} will soon be straightforwardly solved by enormous Transformers should trends continue, which we also show in the Supplementary Materials. %
+>   39: \citet{Hendrycks2020MeasuringMM} create a multiple-choice benchmark covering $57$ subjects. However, unlike our benchmark, which is a text generation task with $12,500$ mathematical reasoning questions, their benchmark is a multiple choice task that includes only a few hundred questions about mathematics. 
+    40: In contrast to these benchmarks, we find that our MATH benchmark is unusually challenging for current models and, if trends continue, simply using bigger versions of today's Transformers will not solve our task in the foreseeable future.
+    41: 
+
+- file: sample\arxiv_sources\2103.03874v2\1-intro.tex (line 34)
+  message: Consider using "12{,}500" instead of "12,500".
+    32: ability of machine learning models, we introduce the MATH 
+    33: dataset, which consists of 
+>   34: $12,500$ problems from high school math competitions. 
+    35: Given a problem from MATH, machine learning models generate a sequence, such as \verb=$\frac{2}{3}$=, that encodes the final answer. These 
+    36: answers are unique after normalization, allowing MATH to be scored with exact match rather than with heuristic metrics such as BLEU. %
+
+- file: sample\arxiv_sources\2103.03874v2\1-intro.tex (line 152)
+  message: Consider using "100{,}000" instead of "100,000".
+   150: mathematics. To address this, 
+   151: we create the first large-scale mathematics pretraining dataset with hundreds of thousands of step-by-step solutions in natural language and \LaTeX{}.
+>  152: We call this dataset the Auxiliary Mathematics Problems and Solutions (AMPS) pretraining corpus, which consists of Khan Academy and Mathematica data. AMPS has over $100,000$ Khan Academy problems with step-by-step solutions in \LaTeX{}; these exercises are used to teach human students concepts ranging from basic addition to Stokes' Theorem.
+   153: It also contains over $5$ million problems generated using Mathematica scripts, based on $100$ hand-designed modules covering topics such as conic sections, div grad and curl, KL divergence, eigenvalues, polyhedra, and Diophantine equations. In total AMPS contains 
+   154: 23GB of problems and solutions.
+
+- file: sample\arxiv_sources\2103.12048v3\2_data.tex (line 26)
+  message: Consider using "281{,}265" instead of "281,265".
+    24: 
+    25: \paragraph{StackExchange Probability Problems.}
+>   26: We obtained the data dump from \textit{stats.stackexchange},  containing  $281,265$ Statistics problems.  Each problem is labeled with relevant  concept tags. We discarded all    programming-related problems, tagged with: \textit{`Matlab'} and  \textit{`R'}, resulting in  $139, 303$ problems. We also pruned  concept tags  outside of the $69$ background concepts.
+    27: To avoid overly complex problems, those with $> 3$ tags were pruned. Lastly, we   only kept problems for which there is an `\textit{accepted answer}' from the forum.  Overall after pre-processing,  there were $1,171$ remaining  problems,  spanning 11 Probability  concepts,  along with their answers.
+    28: Table~\ref{tab:trainvalidtestsplit} shows the  train/dev/test  split\footnote{Breakdown of problems by concept is in the appendix.}.
+
+- file: sample\arxiv_sources\2103.12048v3\2_data.tex (line 27)
+  message: Consider using "1{,}171" instead of "1,171".
+    25: \paragraph{StackExchange Probability Problems.}
+    26: We obtained the data dump from \textit{stats.stackexchange},  containing  $281,265$ Statistics problems.  Each problem is labeled with relevant  concept tags. We discarded all    programming-related problems, tagged with: \textit{`Matlab'} and  \textit{`R'}, resulting in  $139, 303$ problems. We also pruned  concept tags  outside of the $69$ background concepts.
+>   27: To avoid overly complex problems, those with $> 3$ tags were pruned. Lastly, we   only kept problems for which there is an `\textit{accepted answer}' from the forum.  Overall after pre-processing,  there were $1,171$ remaining  problems,  spanning 11 Probability  concepts,  along with their answers.
+    28: Table~\ref{tab:trainvalidtestsplit} shows the  train/dev/test  split\footnote{Breakdown of problems by concept is in the appendix.}.
+    29: 
+
+- file: sample\arxiv_sources\2103.12048v3\3_labelunk.tex (line 3)
+  message: Consider using "1{,}171" instead of "1,171".
+     1: \paragraph{Unknown Annotation.}
+     2: To collect labeled data, we  assume  the unknown is  a contiguous sequence of tokens in the problem specification. 
+>    3: We implemented a simple labeling tool, shown in Figure~\ref{fig:labelinterface}. A problem can have multiple unknowns, each unknown is entered separately.   In total,  $1,171$ problems were annotated. Problems whose unknowns were deemed `unclear'  were few: $26/904(2.9\%)$, $4/110 (3.6)\%$, and $2/157(1.3\%)$ for  train, dev, test, respectively.
+     4: % On average, it took $6$ minutes to label a problem.   Fleiss’ Kappa is $0.862$, computed from a pair of annotations.
+     5: On average the unknown(s) is~(are) spread across $1.7$.
+
+- file: sample\arxiv_sources\2103.12048v3\4_models_2unk.tex (line 34)
+  message: Consider using "2{,}360" instead of "2,360".
+    32: We construct a graph 
+    33: with three types of \textit{nodes}:  concept, problem;   and answer nodes. We have $5$ \textit{edge} types: \textit{problem-has-type}~(between problems and concepts); \textit{problems-has-answer}~(between problems and answers); and \textit{same-section-as}, \textit{mentioned-in-before-chapters},  \textit{same-chapter-as} (all three between concepts).  We use the concept hierarchy derived from the ordering of concepts in \citet{wasserman2013all} to obtain the last three relationships. Our graph consists of 
+>   34: $2,360$~nodes, $5,116$ edges,  and $768$  initial node features obtained from  BERT embeddings. Node features are from average pooling the embeddings. For the concept nodes, the  pooled tokens are taken from the concept definitions.
+    35: The task for  learning node  representations is predicting the \textit{problem-has-type} links. 
+    36: 
+
+- file: sample\arxiv_sources\2103.12048v3\4_models_2unk.tex (line 34)
+  message: Consider using "5{,}116" instead of "5,116".
+    32: We construct a graph 
+    33: with three types of \textit{nodes}:  concept, problem;   and answer nodes. We have $5$ \textit{edge} types: \textit{problem-has-type}~(between problems and concepts); \textit{problems-has-answer}~(between problems and answers); and \textit{same-section-as}, \textit{mentioned-in-before-chapters},  \textit{same-chapter-as} (all three between concepts).  We use the concept hierarchy derived from the ordering of concepts in \citet{wasserman2013all} to obtain the last three relationships. Our graph consists of 
+>   34: $2,360$~nodes, $5,116$ edges,  and $768$  initial node features obtained from  BERT embeddings. Node features are from average pooling the embeddings. For the concept nodes, the  pooled tokens are taken from the concept definitions.
+    35: The task for  learning node  representations is predicting the \textit{problem-has-type} links. 
+    36: 
+
+- file: sample\arxiv_sources\2103.12048v3\5_experiments.tex (line 36)
+  message: Consider using "980{,}018" instead of "980,018".
+    34: A \textbf{CNN}~(7), well-understood to be a strong text classifier, achieves F1 of $0.776$ on the test data. We see the context vector is important as  \textbf{CNN\_NoContext}~(8) has lower performance than (7).
+    35: % However,   this is not significantly better than just a \textbf{CNN}. 
+>   36: Incorporating graph structure,  \textbf{CNN+Graph}~(9), yields F1 of $0.78$.  \textbf{ CNN+Graph+LSTM/GRU}~(10-11) both yield poor results. This is likely due to the size of our dataset given that these methods have about twice as many parameters as the other methods, for example, CNN+Graph+LSTM has $2,980,018$ parameters vs. CNN+Graph with $1,502,386$. 
+    37: 
+    38: What cues are the methods relying on to achieve strong performance on this task? We sampled some sentences from data, a few of which are shown in Table~\ref{tbl:samples}. It is clear that unambiguous  cues for our task are indeed in the sentences, such as ``derive", ``calculate", ``what is the probability that '', and ``prove that ''. In addition to these sentence cues, our results, (7) vs. (8) and (9) in  Table~\ref{tbl:samples} show that there are also useful signals in the context.
+
+- file: sample\arxiv_sources\2103.12048v3\5_experiments.tex (line 36)
+  message: Consider using "502{,}386" instead of "502,386".
+    34: A \textbf{CNN}~(7), well-understood to be a strong text classifier, achieves F1 of $0.776$ on the test data. We see the context vector is important as  \textbf{CNN\_NoContext}~(8) has lower performance than (7).
+    35: % However,   this is not significantly better than just a \textbf{CNN}. 
+>   36: Incorporating graph structure,  \textbf{CNN+Graph}~(9), yields F1 of $0.78$.  \textbf{ CNN+Graph+LSTM/GRU}~(10-11) both yield poor results. This is likely due to the size of our dataset given that these methods have about twice as many parameters as the other methods, for example, CNN+Graph+LSTM has $2,980,018$ parameters vs. CNN+Graph with $1,502,386$. 
+    37: 
+    38: What cues are the methods relying on to achieve strong performance on this task? We sampled some sentences from data, a few of which are shown in Table~\ref{tbl:samples}. It is clear that unambiguous  cues for our task are indeed in the sentences, such as ``derive", ``calculate", ``what is the probability that '', and ``prove that ''. In addition to these sentence cues, our results, (7) vs. (8) and (9) in  Table~\ref{tbl:samples} show that there are also useful signals in the context.
+
+- file: sample\arxiv_sources\2502.17387v1\main.tex (line 267)
+  message: Consider using "275{,}000" instead of "275,000".
+   265: First, there are three sources that we do not use from Numina: the synthetic\_math, synthetic\_amc, and the MATH subsets. We choose not to include either of the synthetic data subsets as they was never evaluated independently from the remainder of the dataset, so we cannot know their quality. Additionally, while NuminaMath uses the original split of the MATH dataset (7,000 training problems, 5,500 test problems), we choose to use version with 12,000 training problems and 500 test problems, as proposed by~\citep{lightman2023let}.
+   266: % -- 6 sources we did use
+>  267: The largest subset from Numina is the cn\_k12 subset of data, composed of $\sim275,000$ math problems scraped from chinese math exams. The next largest subset from NuminaMath is the Orca-Math~\citep{mitra2024orcamathunlockingpotentialslms} subset ($\sim150,000$ problems), which is a synthetically generated dataset of grade school math problems. Although this data was synthetically generated,~\citet{mitra2024orcamathunlockingpotentialslms} demonstrate that as the lone source of SFT training data, this subset leads to impressive math performance, even for small language models. Next, we include the olympiads subset, consisting of 150,000 problems collected from online sources of international-level math competitions. Next,~\citet{numina_math_datasets} scrape the Art of Problem Solving forum for additional math competition problems, selecting to keep only problems with high quantities of LaTeX and at least one \texttt{\textbackslash boxed} or $\blacksquare$ symbol, leading to an additional 30,000 problems. Additionally, we use the GSM8k~\citep{cobbe2021trainingverifierssolvemath} subset, providing another $\sim8,000$ problems. Finally, we also include the amc\_aime subset, consisting of 4,000 more math competition problems, with solutions scraped from online sources.
+   268: 
+   269: 
+
+- file: sample\arxiv_sources\2502.17387v1\main.tex (line 267)
+  message: Consider using "150{,}000" instead of "150,000".
+   265: First, there are three sources that we do not use from Numina: the synthetic\_math, synthetic\_amc, and the MATH subsets. We choose not to include either of the synthetic data subsets as they was never evaluated independently from the remainder of the dataset, so we cannot know their quality. Additionally, while NuminaMath uses the original split of the MATH dataset (7,000 training problems, 5,500 test problems), we choose to use version with 12,000 training problems and 500 test problems, as proposed by~\citep{lightman2023let}.
+   266: % -- 6 sources we did use
+>  267: The largest subset from Numina is the cn\_k12 subset of data, composed of $\sim275,000$ math problems scraped from chinese math exams. The next largest subset from NuminaMath is the Orca-Math~\citep{mitra2024orcamathunlockingpotentialslms} subset ($\sim150,000$ problems), which is a synthetically generated dataset of grade school math problems. Although this data was synthetically generated,~\citet{mitra2024orcamathunlockingpotentialslms} demonstrate that as the lone source of SFT training data, this subset leads to impressive math performance, even for small language models. Next, we include the olympiads subset, consisting of 150,000 problems collected from online sources of international-level math competitions. Next,~\citet{numina_math_datasets} scrape the Art of Problem Solving forum for additional math competition problems, selecting to keep only problems with high quantities of LaTeX and at least one \texttt{\textbackslash boxed} or $\blacksquare$ symbol, leading to an additional 30,000 problems. Additionally, we use the GSM8k~\citep{cobbe2021trainingverifierssolvemath} subset, providing another $\sim8,000$ problems. Finally, we also include the amc\_aime subset, consisting of 4,000 more math competition problems, with solutions scraped from online sources.
+   268: 
+   269: 
+
+- file: sample\arxiv_sources\2502.17387v1\main.tex (line 267)
+  message: Consider using "8{,}000" instead of "8,000".
+   265: First, there are three sources that we do not use from Numina: the synthetic\_math, synthetic\_amc, and the MATH subsets. We choose not to include either of the synthetic data subsets as they was never evaluated independently from the remainder of the dataset, so we cannot know their quality. Additionally, while NuminaMath uses the original split of the MATH dataset (7,000 training problems, 5,500 test problems), we choose to use version with 12,000 training problems and 500 test problems, as proposed by~\citep{lightman2023let}.
+   266: % -- 6 sources we did use
+>  267: The largest subset from Numina is the cn\_k12 subset of data, composed of $\sim275,000$ math problems scraped from chinese math exams. The next largest subset from NuminaMath is the Orca-Math~\citep{mitra2024orcamathunlockingpotentialslms} subset ($\sim150,000$ problems), which is a synthetically generated dataset of grade school math problems. Although this data was synthetically generated,~\citet{mitra2024orcamathunlockingpotentialslms} demonstrate that as the lone source of SFT training data, this subset leads to impressive math performance, even for small language models. Next, we include the olympiads subset, consisting of 150,000 problems collected from online sources of international-level math competitions. Next,~\citet{numina_math_datasets} scrape the Art of Problem Solving forum for additional math competition problems, selecting to keep only problems with high quantities of LaTeX and at least one \texttt{\textbackslash boxed} or $\blacksquare$ symbol, leading to an additional 30,000 problems. Additionally, we use the GSM8k~\citep{cobbe2021trainingverifierssolvemath} subset, providing another $\sim8,000$ problems. Finally, we also include the amc\_aime subset, consisting of 4,000 more math competition problems, with solutions scraped from online sources.
+   268: 
+   269: 
+
+- file: sample\arxiv_sources\2502.17387v1\main.tex (line 377)
+  message: Consider using "000{,}000" instead of "000,000".
+   375: % - Model-based filters: If either Llama-3.1-8B or Llama-3.1-405B correctly answer at least once (to determine an approximation to validity of answer. 8B is run 64 times over all data (totalling 29,202,886 rollouts), 405B is only run 5-8 times on a subset of the data due to high costs (totalling 1,124,259 rollouts).
+   376: \indent \textbf{(Model Solve Rate)}
+>  377: Finally, while it is not feasible to manually ensure the correctness of each problem-answer pair, we develop a heuristic for correctness using language models. For each problem, we generate 64 solutions from Llama-3.1-8B ($\sim 30,000,000$ rollouts) and 5-8 solutions from Llama-3.1-405B ($\sim 1,100,000$ rollouts, generated on a pre-filtered subset)~\citep{dubey2024llama3herdmodels}. If either model answers the question with the ground truth answer, then we determine that the question-answer pair may be valid. We do not apply this filter to HARP, Omni-Math, MATH, or GSM8k as these datasets include pre-parsed answers.\\
+   378: % -- issues with this filter
+   379: \indent Of course, this method does not guarantee that the given answer is correct, as it is possible that the answers fall under a commonly made mistake, or that the models have seen the data during pre- or post-training. Furthermore, this filter does not guarantee that removed data has an incorrect answer, as it is very likely that the models we use cannot solve the most difficult math problems. One method for improving this filter would be to use a stronger, math-specific model.
+
+- file: sample\arxiv_sources\2502.17387v1\main.tex (line 377)
+  message: Consider using "100{,}000" instead of "100,000".
+   375: % - Model-based filters: If either Llama-3.1-8B or Llama-3.1-405B correctly answer at least once (to determine an approximation to validity of answer. 8B is run 64 times over all data (totalling 29,202,886 rollouts), 405B is only run 5-8 times on a subset of the data due to high costs (totalling 1,124,259 rollouts).
+   376: \indent \textbf{(Model Solve Rate)}
+>  377: Finally, while it is not feasible to manually ensure the correctness of each problem-answer pair, we develop a heuristic for correctness using language models. For each problem, we generate 64 solutions from Llama-3.1-8B ($\sim 30,000,000$ rollouts) and 5-8 solutions from Llama-3.1-405B ($\sim 1,100,000$ rollouts, generated on a pre-filtered subset)~\citep{dubey2024llama3herdmodels}. If either model answers the question with the ground truth answer, then we determine that the question-answer pair may be valid. We do not apply this filter to HARP, Omni-Math, MATH, or GSM8k as these datasets include pre-parsed answers.\\
+   378: % -- issues with this filter
+   379: \indent Of course, this method does not guarantee that the given answer is correct, as it is possible that the answers fall under a commonly made mistake, or that the models have seen the data during pre- or post-training. Furthermore, this filter does not guarantee that removed data has an incorrect answer, as it is very likely that the models we use cannot solve the most difficult math problems. One method for improving this filter would be to use a stronger, math-specific model.
+
+- file: sample\arxiv_sources\2502.17387v1\main.tex (line 434)
+  message: Consider using "117{,}000" instead of "117,000".
+   432: % From the previous filtering, we find a huge quantity of multiple choice questions, 117,018 of them. The multiple choice format allows models to guess the correct answer by giving it options, increasing the probability of getting a correct answer, regardless of whether the reasoning was correct. This makes multiple choice problems unsuitable for RL. However, by simply removing the options and reformulating the problem as open-ended, the problems become suitable for RL.
+   433: % - We lost a lot of data because it's multiple choice
+>  434: During the development of our filters, we found a staggering number of multiple choice questions ($> 117,000$), which are removed during the filtering process for \bigmath. In particular, we are concerned with the loss of significant quantities of data from human-written and high-quality sources: olympiads, amc\_aime, and aops\_forum.
+   435: % - This is why we have to remove it, but we also note that with a simple change, we can reintroduce this data after slight changes
+   436: The inherent structure of multiple choice questions presents a challenge for RL algorithms.
+
+- file: sample\arxiv_sources\2502.17387v1\main.tex (line 525)
+  message: Consider using "120{,}000" instead of "120,000".
+   523: In general, those training less capable, or smaller, models may want to remove the most difficult problems as it is unlikely that model rollouts will lead to a correct answer. This leads to inefficiency in the learning process because most RL methods used for LLMs (except those with a process reward model) will have 0 signal if the model can never come to the correct answer.
+   524: % -- stronger models
+>  525: On the other hand, for those training a larger, or math-specific, model will find many of the easy questions redundant, and training on such data will be inefficient. Therefore, for practitioners training strong models it would be sensible to keep only the harder problems. Supposing that the hardest two quintiles of data are retained, there is still $> 120,000$ problems, \textit{10 times more problems than the next closest RL-suitable dataset.}
+   526: % -- Problem difficulty based on Llama3-405B successrate@5/8??
+   527: 
+
+- file: sample\arxiv_sources\2502.17387v1\main.tex (line 628)
+  message: Consider using "66{,}000" instead of "66,000".
+   626: 
+   627: % -- distribution, outliers, interesting bits in the middle
+>  628: We see in Figures~\ref{fig:omnimath_domains} and~\ref{fig:msc_domains} that the distributions for both ontologies have long tails. The largest domain from~\citet{gao2024omnimathuniversalolympiadlevel} is the Math Word Problems, which we find to come disproportionately from Orca-Math, which contains $>66,000$ such problems.
+   629: % - MSC: Covers 47 topics with > 10 problems each, 29 topics with > 100 problems each, and 20 topics with > 1000 problems
+   630: % -- From manual inspection, it seems that a large number of problems classified as "Operations Research" are really just applications of algebra in another domain, so take the classifications with a grain of salt.
+
+- file: sample\arxiv_sources\2502.17387v1\main.tex (line 633)
+  message: Consider using "10{,}000" instead of "10,000".
+   631: Surprisingly, we find that the largest MSC domain was operations research, and we inspected the data under this category to better understand where such a large quantity came from. We found that these problems are generally an application of algebra, geometry, or statistics to real world domains and could just as easily have been classified into another category.
+   632: % -- findings from MSC
+>  633: We found that the distribution of MSC domains follows a nearly log-linear relation, with large quantities of problems in college-level topics, including $\sim10,000$ problems on ordinary differential equations, field theory, and optimal control. We also found smaller quantities of applications in the sciences in the dataset, with problems in electromagnetic theory, thermodynamics, and fluid mechanics, showing that the collected dataset contains problems from a wide variety of mathematics domains.
+   634: 
+   635: 
+
+- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 174)
+  message: Consider using "29{,}100" instead of "29,100".
+   172: 
+   173: \begin{abstract}
+>  174: Understanding causality in event sequences with thousands of sparse event types is critical in domains such as healthcare, cybersecurity, or vehicle diagnostics, yet current methods fail to scale. We present OSCAR, a one-shot causal autoregressive method that infers per-sequence Markov Boundaries using two pretrained Transformers as density estimators. This enables efficient, parallel causal discovery without costly global CI testing. On a real-world automotive dataset with \(29,100\) events and \(474\) labels, OSCAR recovers interpretable causal structures in minutes, while classical methods fail to scale— enabling practical scientific diagnostics at production scale.
+   175: \end{abstract}
+   176: 
+
+- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 306)
+  message: Consider using "300{,}000" instead of "300,000".
+   304: 
+   305: \textbf{Vehicle Event Sequences Dataset.}
+>  306: We evaluated our method on a real-world vehicular test set of \(n=300,000\) sequences. It contains \(|\mathbb{Y}|=474\) different error patterns and about \(|\mathbb{X}| = 29,100\) different DTCs forming sequences of \( \approx 150 \pm 90\) events. We used 105m backbones as \(\text{Tf}_x, \text{Tf}_y\) \cite{math2024harnessingeventsensorydata}. The two NADEs were not exposed to the test set during. 
+   307: The error patterns are manually defined by domain experts as boolean rules between DTCs in Eq \eqref{eq:ep_def} where \((y_1)\) is a boolean definition based on diagnosis trouble codes \((x_i)\):
+   308: \begin{equation}\label{eq:ep_def}
+
+- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 306)
+  message: Consider using "29{,}100" instead of "29,100".
+   304: 
+   305: \textbf{Vehicle Event Sequences Dataset.}
+>  306: We evaluated our method on a real-world vehicular test set of \(n=300,000\) sequences. It contains \(|\mathbb{Y}|=474\) different error patterns and about \(|\mathbb{X}| = 29,100\) different DTCs forming sequences of \( \approx 150 \pm 90\) events. We used 105m backbones as \(\text{Tf}_x, \text{Tf}_y\) \cite{math2024harnessingeventsensorydata}. The two NADEs were not exposed to the test set during. 
+   307: The error patterns are manually defined by domain experts as boolean rules between DTCs in Eq \eqref{eq:ep_def} where \((y_1)\) is a boolean definition based on diagnosis trouble codes \((x_i)\):
+   308: \begin{equation}\label{eq:ep_def}
+
+- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 316)
+  message: Consider using "50{,}000" instead of "50,000".
+   314: \begin{table}[h]
+   315: \centering
+>  316: \caption{Comparisons of \textbf{MB} retrieval with \(n=50,000\) samples, \(|\mathbb{X}| = 29,100, |\mathbb{Y}|=474\) averaged over \(6-\)folds. Classification metrics averaging is 'weighted' and shown as one-shot for OSCAR. The symbol ’-’ indicates that the algorithm didn't output the \(\textbf{MBs}\) under 3 days. Metrics are given in \(\%\).}
+   317: \begin{tabular}{lcccc}
+   318: \hline
+
+- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 330)
+  message: Consider using "50{,}000" instead of "50,000".
+   328: \label{tab:performance_comparison}
+   329: \end{table}
+>  330: Table~\ref{tab:performance_comparison} shows comparision with \(n=50,000\). We found out LSL algorithms failed to compute the Markov Boundaries within multiple days (3-day timeout), far exceeding practical limits for deployment. OSCAR, on the other hand, shows robust classification over a large amount of events \((29,100)\), especially \(55\%\) precision, in a matter of minutes.
+   331: This behaviour highlights the current infeasibility of multi-label causal discovery in high-dimensional event sequences, since it relies on expensive global CI-testings \cite{cd_temporaldata_review}. This positions OSCAR as a more feasible approach for large-scale causal per-sequence causal reasoning in production environments.
+   332: 
+
+- file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 180)
+  message: Consider using "29{,}100" instead of "29,100".
+   178: %We show this criterion to be locally consistent and equivalent under standard assumptions, allowing CARGO to recover a Markov Equivalence Class of the true underlying DAG. [\textbf{Add long tail problem, implied by high dim cd}]
+   179: 
+>  180: We empirically validate CARGO on a large-scale vehicular dataset composed of about \(29,100\) events and \(474\) imbalanced labels, demonstrating for the first time, scalability and practical superiority over traditional causal discovery baselines. We also provide ablation on scoring criterions, frequency thresholds and the quality of the Transformers.
+   181: %a complete causal framework backed by theoretical guarantee under certain assumptions proper to multi-labeled event sequences that the aggregated graph will be a MEC.
+   182: %By testing the conditional independencies per sequence and not on all the observational data level, we parallelize the CI-tests using two autoregressive Transformers. Then, we fusion the sequential graphs using a backward equivalence search with information gain between labels and events as a criterion. We show this criterion to be locally consistent and equivalent, thus recovering a MEC of the causal graph.
+
+- file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 506)
+  message: Consider using "300{,}000" instead of "300,000".
+   504: \textbf{Settings \& Vehicle Dataset.}\label{sec:settings}
+   505: We used a \(g4dn.12xlarge\) instance from AWS Sagemaker to run comparisons. It contains 48 vCPUs and 4 NVIDIA T4 GPUs. We used a combination of F1-Score, Precision, and Recall with different averaging \cite{reviewmultilabellearning} to perform comparisons.
+>  506: We evaluated our method on a real-world vehicular test set of \(m=300,000\) sequences, with \(|\mathbb{Y}|=474\) different error patterns and \(|\mathbb{X}| = 29,100\) different DTCs forming sequences of \( \approx 100 \pm 35\) events. We used \(\text{Tf}_x\) and \(\text{Tf}_y\) with 90m and 15m parameters \cite{math2024harnessingeventsensorydata}. The two NADEs didn't see the test set during training. 
+   507: The error patterns are manually defined by domain experts as boolean rules between DTCs (Fig. \ref{fig:ep_def}). We set the elements of this rule as the correct Markov Boundary for each label \(y_j\) in the tested sequences. 
+   508: %Rules are subject to changes over time by domain experts, making it more difficult to extract the true \textbf{MB}.
+
+- file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 506)
+  message: Consider using "29{,}100" instead of "29,100".
+   504: \textbf{Settings \& Vehicle Dataset.}\label{sec:settings}
+   505: We used a \(g4dn.12xlarge\) instance from AWS Sagemaker to run comparisons. It contains 48 vCPUs and 4 NVIDIA T4 GPUs. We used a combination of F1-Score, Precision, and Recall with different averaging \cite{reviewmultilabellearning} to perform comparisons.
+>  506: We evaluated our method on a real-world vehicular test set of \(m=300,000\) sequences, with \(|\mathbb{Y}|=474\) different error patterns and \(|\mathbb{X}| = 29,100\) different DTCs forming sequences of \( \approx 100 \pm 35\) events. We used \(\text{Tf}_x\) and \(\text{Tf}_y\) with 90m and 15m parameters \cite{math2024harnessingeventsensorydata}. The two NADEs didn't see the test set during training. 
+   507: The error patterns are manually defined by domain experts as boolean rules between DTCs (Fig. \ref{fig:ep_def}). We set the elements of this rule as the correct Markov Boundary for each label \(y_j\) in the tested sequences. 
+   508: %Rules are subject to changes over time by domain experts, making it more difficult to extract the true \textbf{MB}.
+
+- file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 524)
+  message: Consider using "50{,}000" instead of "50,000".
+   522: \subsection{Results}
+   523: \textbf{Comparisons.}
+>  524: We performed comparaisons on Table~\ref{tab:performance_comparison} with \(n = 50,000\) random sequences. We found out that even under this reduced setup, LSL algorithms failed to compute the Markov Boundaries within multiple days (3 days timeout), far exceeding practical limits for deployment.
+   525: This behaviour highlights the current infeasibility of multi-label causal discovery in high-dimensional event sequences.
+   526: Current algorithms are cursed under high-dimensional data since they rely on expensive CI testing that scales quadratically with the number of nodes \cite{cd_temporaldata_review}. This positions CARGO as a more feasible approach for large-scale, multi-label causal discovery.
+
+- file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 529)
+  message: Consider using "50{,}000" instead of "50,000".
+   527: \begin{table}[h]
+   528: \centering
+>  529: \caption{Comparisons of \textbf{MB} retrieval with \(m=50,000\) samples averaged over \(6-\)folds with \(|Y| = 474, |X|=29,100\) nodes. Averaging is 'weighted'. The symbol ’-’ indicates that the algorithm didn't output the \(\textbf{MBs}\) within 3 days. Metrics are given in \(\%\).}
+   530: \begin{tabular}{lcccc}
+   531: \hline
+
+- file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 529)
+  message: Consider using "29{,}100" instead of "29,100".
+   527: \begin{table}[h]
+   528: \centering
+>  529: \caption{Comparisons of \textbf{MB} retrieval with \(m=50,000\) samples averaged over \(6-\)folds with \(|Y| = 474, |X|=29,100\) nodes. Averaging is 'weighted'. The symbol ’-’ indicates that the algorithm didn't output the \(\textbf{MBs}\) within 3 days. Metrics are given in \(\%\).}
+   530: \begin{tabular}{lcccc}
+   531: \hline
+
+- file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 553)
+  message: Consider using "29{,}100" instead of "29,100".
+   551: \begin{figure}[!h]
+   552:     \centering
+>  553:     \caption{Comparison of different criterions for the structural fusion (Phase 2) in function of the number of samples \(m\). With \(|Y| = 474, |X|=29,100\) nodes.}\label{fig:ablation_comparaison_criterions}
+   554:     \includegraphics[width=0.95\linewidth]{plots/comparaison_cargo_nsamples.pdf}
+   555:     \label{fig:placeholder}
+

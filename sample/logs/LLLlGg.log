@@ -1,0 +1,33 @@
+[CODE] LLLlGg (4)
+- file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 597)
+  message: Consider using \ll instead of <<.
+   595:         c) $\Phi(\nu)$ uniquely extends $\phi_m(\nu)$'s on the Borel $\sigma$-algebra.\\
+   596:         (ii)
+>  597:         Suppose there exists $\mu\in P(K)$ such that  $U^*\mu = \mu$ and  $P^0_x<<P^0_y$ for all $x, y\in K_i$ and $i\in S:=\{j:\mu(K_j)>0\}$.  Then
+   598:         $\Phi(\nu'_0)(\Sigma)>0.$
+   599:     \end{Proposition}
+
+- file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 604)
+  message: Consider using \ll instead of <<.
+   602: 
+   603:      (ii)
+>  604:       Clearly, it follows from the hypothesis that $P^0_x<<\phi_0(\nu'_0)$ for all $x\in K_i$ and $i\in S$. Therefore, $\phi_0(\mu)<<\phi_0(\nu'_0)$. Hence, by Lemma \ref{pomm}(i),  $\Phi(\mu)<<\Phi(\nu'_0)$.
+   605:       Since, by (i), $\Phi(\mu)(\Sigma) > 0$, the claim follows.
+   606:     \hfill$\Box$
+
+- file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 604)
+  message: Consider using \ll instead of <<.
+   602: 
+   603:      (ii)
+>  604:       Clearly, it follows from the hypothesis that $P^0_x<<\phi_0(\nu'_0)$ for all $x\in K_i$ and $i\in S$. Therefore, $\phi_0(\mu)<<\phi_0(\nu'_0)$. Hence, by Lemma \ref{pomm}(i),  $\Phi(\mu)<<\Phi(\nu'_0)$.
+   605:       Since, by (i), $\Phi(\mu)(\Sigma) > 0$, the claim follows.
+   606:     \hfill$\Box$
+
+- file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 604)
+  message: Consider using \ll instead of <<.
+   602: 
+   603:      (ii)
+>  604:       Clearly, it follows from the hypothesis that $P^0_x<<\phi_0(\nu'_0)$ for all $x\in K_i$ and $i\in S$. Therefore, $\phi_0(\mu)<<\phi_0(\nu'_0)$. Hence, by Lemma \ref{pomm}(i),  $\Phi(\mu)<<\Phi(\nu'_0)$.
+   605:       Since, by (i), $\Phi(\mu)(\Sigma) > 0$, the claim follows.
+   606:     \hfill$\Box$
+

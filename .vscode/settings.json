@@ -4,10 +4,12 @@
 		"**/.venv": true,
 		"**/.vscode-test": true,
 		"**/node_modules": true,
+		"out": true,
+		"dist": true
 	},
 	"search.exclude": {
-		"out": true, // set this to false to include "out" folder in search results
-		"dist": true // set this to false to include "dist" folder in search results
+		"out": false, // set this to false to include "out" folder in search results
+		"dist": false // set this to false to include "dist" folder in search results
 	},
 	"editor.codeActionsOnSave": {
 		"source.organizeImports": "explicit",

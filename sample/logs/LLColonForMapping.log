@@ -1,0 +1,1009 @@
+[CODE] LLColonForMapping (126)
+- file: sample\submodules\coursebook\deadlock\deadlock.tex (line 111)
+  message: If this : is for a mapping, consider using \colon.
+   109: 	For simplicity, a process can only request one resource at a time but the proof can be generalized to multiple.
+   110: 	Let assume that the system is a state at time $t$.
+>  111: 	Let us assume that the state of the system is a tuple $(h_t, w_t)$ where there are two functions $h_t: R \rightarrow P \cup \{\text{unassigned}\}$ that maps resources to the processes that own them (this is a function, meaning that we have mutual exclusion) and or unassigned and $w_t: P \rightarrow R \cup \{\text{satisfied}\}$ that maps the requests that each process makes to a resource or if the process is satisfied.
+   112: 	If the process is satisfied, we consider the work trivial and the process exits, releasing all resources -- this can also be generalized.
+   113: 	Let $L_t \subseteq P \times R$ be a set of lists of requests that a process uses to release a resource at any given time.
+
+- file: sample\submodules\coursebook\deadlock\deadlock.tex (line 111)
+  message: If this : is for a mapping, consider using \colon.
+   109: 	For simplicity, a process can only request one resource at a time but the proof can be generalized to multiple.
+   110: 	Let assume that the system is a state at time $t$.
+>  111: 	Let us assume that the state of the system is a tuple $(h_t, w_t)$ where there are two functions $h_t: R \rightarrow P \cup \{\text{unassigned}\}$ that maps resources to the processes that own them (this is a function, meaning that we have mutual exclusion) and or unassigned and $w_t: P \rightarrow R \cup \{\text{satisfied}\}$ that maps the requests that each process makes to a resource or if the process is satisfied.
+   112: 	If the process is satisfied, we consider the work trivial and the process exits, releasing all resources -- this can also be generalized.
+   113: 	Let $L_t \subseteq P \times R$ be a set of lists of requests that a process uses to release a resource at any given time.
+
+- file: sample\submodules\OpenLogic\content\many-valued-logic\syntax-and-semantics\matrices.tex (line 25)
+  message: If this : is for a mapping, consider using \colon.
+    23: \item a set $V^+ \subseteq V$ of designated truth values;
+    24: \item for each $n$-place connective $\star$ in $\Lang L$, a truth
+>   25: function~$\tf{\star} : V^n \to V$. If $n = 0$, then $\tf{\star}$ is
+    26: just an element of~$V$.
+    27: \end{enumerate}
+
+- file: sample\submodules\OpenLogic\content\second-order-logic\syntax-and-semantics\inf-count.tex (line 24)
+  message: If this : is for a mapping, consider using \colon.
+    22: \lexists[y][\lforall[x][\eq/[y][f(x)]]].
+    23: \]
+>   24: If $\Struct{M}$ satisfies this !!{sentence}, $\Assign{f}{M}:
+    25: \Domain{M} \to \Domain{M}$ is !!{injective}, and so $\Domain{M}$ must
+    26: be infinite. If $\Domain{M}$ is infinite, and hence such a function
+
+- file: sample\submodules\OpenLogic\content\set-theory\ordinals\iso.tex (line 98)
+  message: If this : is for a mapping, consider using \colon.
+    96: Let $\tuple{A, <}$ and $\tuple{B, \lessdot}$ be well-orderings. If $f
+    97: \colon A \to B$ is an isomorphism and $a \in A$, then
+>   98: $\funrestrictionto{f}{A_{a}} : A_a \to B_{f(a)}$ is an isomorphism.
+    99: \end{lem}
+   100: 
+
+- file: sample\submodules\OpenLogic\content\sets-functions-relations\arithmetization\cauchy.tex (line 84)
+  message: If this : is for a mapping, consider using \colon.
+    82: Fortunately, we can work with a closely related idea of a limit. 
+    83: \begin{defn}\ollabel{def:CauchySequence}
+>   84:   A function $f: \Nat \to \Rat$ is a \emph{Cauchy sequence} iff for
+    85:   any positive $\epsilon \in \Rat$ we have that $(\exists \ell \in
+    86:   \Nat)(\forall m, n > \ell)|f(m) - f(n)| < \epsilon$.
+
+- file: sample\submodules\OpenLogic\content\sets-functions-relations\arithmetization\cauchy.tex (line 112)
+  message: If this : is for a mapping, consider using \colon.
+   110: Cauchy sequences, and identify real numbers with equivalence
+   111: relations. First we need the idea of a function which tends to $0$ in
+>  112: the limit. For any function $h : \Nat \to \Rat$, say that \emph{$h$
+   113: tends to $0$} iff for any positive $\epsilon \in \Rat$ we have that
+   114: $(\exists \ell \in \Nat)(\forall n > \ell)|f(n)| <
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3522)
+  message: If this : is for a mapping, consider using \colon.
+  3520: \label{def:Cauchy} Let $X\subseteq\RR^{m}$ and $f\colon X\times\RR\to\CC$
+  3521: be Lebesgue measurable, and $p\in[1,+\infty]$. For each $y\in\RR$,
+> 3522: define $f_{y}:X\to\CC$ by $f_{y}\left(x\right)=f\left(x,y\right)$ for all $x\in X$. We
+  3523: say that the family of functions $\left(f_{y}\right)_{y\in\RR}$ is 
+  3524: %
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3607)
+  message: If this : is for a mapping, consider using \colon.
+  3605: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  3606: Let us first give the parametric version of Definition \ref{def CUD map}. For this, let $X$ be a nonempty set and  
+> 3607:   $\psi=\left(\psi_1, \ldots, \psi_n\right): X\times [0,+\infty)\to \mathbb{R}^n$ be a map. 
+  3608: If $I_1, \ldots, I_n\subseteq \RR$ are bounded intervals with nonempty interior, we denote by 
+  3609: $I$ the box $\prod_{j=1}^\ell I_j$  
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3635)
+  message: If this : is for a mapping, consider using \colon.
+  3633: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  3634: \begin{rem}\label{rem:Param:geometricIntervals}
+> 3635: Suppose that $\psi:X\times[0,+\infty)\to\RR^n$ is c.u.d.\ mod $1$ on $X$.  Then for each box $I \subseteq [0,1)^n$, there exists $k_0 \in \NN$ such that for all $k\geq k_0$, for all $x\in X$,
+  3636: \[
+  3637: \vol_1\left(  \{t\in[2^k, 2^{k+1}) :   \{ \psi\left(x,t\right)\}\in I\}  \right) 
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3653)
+  message: If this : is for a mapping, consider using \colon.
+  3651: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  3652: \begin{lem}\label{lemma:Weyl}
+> 3653: Define $\phi:X\times [0,+\infty)\to\RR$ by
+  3654: \[
+  3655: \phi\left(x,t\right) = \sum_{j=0}^{d} \phi_j\left(x\right) t^j,
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3657)
+  message: If this : is for a mapping, consider using \colon.
+  3655: \phi\left(x,t\right) = \sum_{j=0}^{d} \phi_j\left(x\right) t^j,
+  3656: \]
+> 3657: where $d$ is a positive integer, the functions $\phi_0,\ldots,\phi_d:X\to\RR$ are bounded, and there exists $\varepsilon > 0$ such that $|\phi_d\left(x\right)| > \varepsilon$ for all $x\in X$.  Then the function $\Phi:X\times[0,+\infty)\to\CC$ defined by
+  3658: \[
+  3659: \Phi\left(x,T\right) = \int_{0}^{T} \mathrm{e}^{\mathrm{i}\phi\left(x,t\right)}\,\mathrm{d}t
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3657)
+  message: If this : is for a mapping, consider using \colon.
+  3655: \phi\left(x,t\right) = \sum_{j=0}^{d} \phi_j\left(x\right) t^j,
+  3656: \]
+> 3657: where $d$ is a positive integer, the functions $\phi_0,\ldots,\phi_d:X\to\RR$ are bounded, and there exists $\varepsilon > 0$ such that $|\phi_d\left(x\right)| > \varepsilon$ for all $x\in X$.  Then the function $\Phi:X\times[0,+\infty)\to\CC$ defined by
+  3658: \[
+  3659: \Phi\left(x,T\right) = \int_{0}^{T} \mathrm{e}^{\mathrm{i}\phi\left(x,t\right)}\,\mathrm{d}t
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3718)
+  message: If this : is for a mapping, consider using \colon.
+  3716: %%%%%%%%%%%%%%%%%%%%%%%
+  3717: \begin{prop}\label{prop:WeylToCUD}
+> 3718: Consider a map $\psi = \left(\psi_1,\ldots,\psi_n\right):X\times[0,+\infty)\to\RR^n$, where $X$ is a compact topological space and where for each $j\in\{1,\ldots,n\}$,
+  3719: \[
+  3720: \psi_j\left(x,t\right) = g_j\left(x\right) t^{\gamma_j}
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3722)
+  message: If this : is for a mapping, consider using \colon.
+  3720: \psi_j\left(x,t\right) = g_j\left(x\right) t^{\gamma_j}
+  3721: \]
+> 3722: for some continuous function $g_j:X\to\RR$ and positive integer $\gamma_j$.  Assume that for each $x\in X$, the functions $t\mapsto \psi_1\left(x,t\right),\ldots,t\mapsto\psi_n\left(x,t\right)$ are linearly independent over $\QQ$.  Then $\psi$ is c.u.d.\ mod $1$ on $X$.
+  3723: \end{prop}
+  3724: The following notation and observation will be used in the proof of Proposition \ref{prop:WeylToCUD}. 
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3741)
+  message: If this : is for a mapping, consider using \colon.
+  3739: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  3740: \begin{proof}[Proof of Proposition  \ref{prop:WeylToCUD}]
+> 3741: We shall use the variables $t$, $y = \left(y_1,\ldots,y_n\right)$, and $z = \left(z_1,\ldots,z_n\right)$, and write $\mathrm{d}y $ for $ \mathrm{d}y_1\wedge\ldots\wedge \mathrm{d}y_n$.  Let $\varepsilon > 0$ and a box $I = \prod_{j=1}^{n}I_j \subseteq [0,1)^n$ be given.  For each $j\in\{1,\ldots,n\}$, let $\chi_{I_j}:\RR\to\{0,1\}$ be the $1$-periodic extension of the characteristic function of $I_j$ in $[0,1)$, and define $\chi_I :\RR^n\to\{0,1\}$ by $\chi_I\left(y\right) = \prod_{j=1}^{n}\chi_{I_j}\left(y_j\right)$.  Thus
+  3742: $$
+  3743: \vol_1\left(\{t\in[0,T] : \{\psi\left(x,t\right)\}\in I\}\right) = \int_{0}^{T}\chi_I\circ\psi\left(t\right) \,\mathrm{d}t.
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3741)
+  message: If this : is for a mapping, consider using \colon.
+  3739: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  3740: \begin{proof}[Proof of Proposition  \ref{prop:WeylToCUD}]
+> 3741: We shall use the variables $t$, $y = \left(y_1,\ldots,y_n\right)$, and $z = \left(z_1,\ldots,z_n\right)$, and write $\mathrm{d}y $ for $ \mathrm{d}y_1\wedge\ldots\wedge \mathrm{d}y_n$.  Let $\varepsilon > 0$ and a box $I = \prod_{j=1}^{n}I_j \subseteq [0,1)^n$ be given.  For each $j\in\{1,\ldots,n\}$, let $\chi_{I_j}:\RR\to\{0,1\}$ be the $1$-periodic extension of the characteristic function of $I_j$ in $[0,1)$, and define $\chi_I :\RR^n\to\{0,1\}$ by $\chi_I\left(y\right) = \prod_{j=1}^{n}\chi_{I_j}\left(y_j\right)$.  Thus
+  3742: $$
+  3743: \vol_1\left(\{t\in[0,T] : \{\psi\left(x,t\right)\}\in I\}\right) = \int_{0}^{T}\chi_I\circ\psi\left(t\right) \,\mathrm{d}t.
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3749)
+  message: If this : is for a mapping, consider using \colon.
+  3747: %|\frac{1}{T}\int_{0}^{T}\chi_I\circ\psi\left(x,t\right)\,\mathrm{d}t - \vol_n\left(I\right)| \leq \varepsilon.
+  3748: %\]
+> 3749: Let $\varepsilon>0$ and fix $\delta\in (0,1]^n$ sufficiently small so that $ 1 - \left(1-\delta\right)^n < \frac{\varepsilon}{4}$.  For each $j\in\{1,\ldots,n\}$, fix $1$-periodic continuous functions $p_j:\RR\to[0,1]$ and $q_j:\RR\to[0,1]$ such that $p_j\left(t\right) \leq \chi_{I_j}\left(t\right) \leq q_j\left(t\right)$ for all $t\in\RR$ and such that
+  3750: \[
+  3751: \vol_1\left(\{t\in[0,1] : p_j\left(t\right) \neq \chi_{I_j}\left(t\right)\}\right) \leq \delta
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3749)
+  message: If this : is for a mapping, consider using \colon.
+  3747: %|\frac{1}{T}\int_{0}^{T}\chi_I\circ\psi\left(x,t\right)\,\mathrm{d}t - \vol_n\left(I\right)| \leq \varepsilon.
+  3748: %\]
+> 3749: Let $\varepsilon>0$ and fix $\delta\in (0,1]^n$ sufficiently small so that $ 1 - \left(1-\delta\right)^n < \frac{\varepsilon}{4}$.  For each $j\in\{1,\ldots,n\}$, fix $1$-periodic continuous functions $p_j:\RR\to[0,1]$ and $q_j:\RR\to[0,1]$ such that $p_j\left(t\right) \leq \chi_{I_j}\left(t\right) \leq q_j\left(t\right)$ for all $t\in\RR$ and such that
+  3750: \[
+  3751: \vol_1\left(\{t\in[0,1] : p_j\left(t\right) \neq \chi_{I_j}\left(t\right)\}\right) \leq \delta
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3755)
+  message: If this : is for a mapping, consider using \colon.
+  3753: \vol_1\left(\{t\in[0,1] : q_j\left(t\right) \neq \chi_{I_j}\left(t\right)\}\right) \leq \delta.
+  3754: \]
+> 3755: Define $p:\RR^n\to[0,1]$ and $q:\RR^n\to[0,1]$ by $p\left(y\right) = \prod_{j=1}^{n}p_j\left(y_j\right)$ and $q\left(y\right) = \prod_{j=1}^{n}q_j\left(y_j\right)$.  Since $p\left(y\right) \leq \chi_I\left(y\right)\leq q\left(y\right)$ for all $y\in\RR^n$, we have, for all $x\in X$,
+  3756: \begin{equation}\label{eq:squeeze}
+  3757: \frac{1}{T}\int_{0}^{T}p\circ\psi\left(x,t\right)\,\mathrm{d}t
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3755)
+  message: If this : is for a mapping, consider using \colon.
+  3753: \vol_1\left(\{t\in[0,1] : q_j\left(t\right) \neq \chi_{I_j}\left(t\right)\}\right) \leq \delta.
+  3754: \]
+> 3755: Define $p:\RR^n\to[0,1]$ and $q:\RR^n\to[0,1]$ by $p\left(y\right) = \prod_{j=1}^{n}p_j\left(y_j\right)$ and $q\left(y\right) = \prod_{j=1}^{n}q_j\left(y_j\right)$.  Since $p\left(y\right) \leq \chi_I\left(y\right)\leq q\left(y\right)$ for all $y\in\RR^n$, we have, for all $x\in X$,
+  3756: \begin{equation}\label{eq:squeeze}
+  3757: \frac{1}{T}\int_{0}^{T}p\circ\psi\left(x,t\right)\,\mathrm{d}t
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3774)
+  message: If this : is for a mapping, consider using \colon.
+  3772: \left|p_j\left(t\right) - P_j\left(t\right)\right| \leq \eta
+  3773: \end{equation}
+> 3774: for all $t\in\RR$.  Define $P:\RR^n\to\CC$ by $P\left(y\right) = \prod_{j=1}^{n}P_j\left(y_j\right)$.  Since
+  3775: $
+  3776: \vol_n\left(I\right) = \int_{[0,1]^n}\chi_I\left(y\right)\,\mathrm{d}y,$
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3855)
+  message: If this : is for a mapping, consider using \colon.
+  3853: For this consider a cell 
+  3854: $$A = \{\left(x,t\right) : x\in\Pi_m\left(A\right), t > a\left(x\right)\},$$
+> 3855:  where $\Pi_m\left(A\right)$ is connected and open in $\RR^m$.  Define $f:A\to\CC$ by
+  3856: \[
+  3857: f\left(x,t\right) = \sum_{j\in J} f_j\left(x\right) \mathrm{e}^{\mathrm{i}\phi_j\left(x,t\right)},
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 4104)
+  message: If this : is for a mapping, consider using \colon.
+  4102: f\left(x,y\right) = \sum_{j\in J} T_j\left(x,y\right)
+  4103: \]
+> 4104: on $A$ with each term of the form $T_j\left(x,y\right) = y^{r_j}\left(\log y\right)^{s_j} g_j\left(x,y\right)$ specified in Remark \ref{rem: superint tend to 0}; thus $g_j\in\C^{\exp}\left(A\right)$ with $|g_j\left(x,y\right)| \leq \eta_j\left(x\right)$ on $A$ for some continuous function $\eta_j:\Pi_m\left(A\right)\to[0,+\infty)$, and $g_j\left(x,y\right) = f_j\left(x\right) \mathrm{e}^{\mathrm{i}\phi_j\left(x,y\right)}$ when $r_j \geq -1$, with $\phi_j\left(x,y\right)$ distinct polynomials in $y^{1/d}$
+  4105: for some integer $d\ge 0$, such that $\phi_j\left(x,0\right)=0$ for all
+  4106: $x\in \Pi_m\left(A\right)$. 
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 4117)
+  message: If this : is for a mapping, consider using \colon.
+  4115: S_{\left(r,s\right)}\left(x,y\right) = \sum_{j\in J_{\left(r,s\right)}} g_j\left(x,y\right).
+  4116: \end{equation}
+> 4117: For each $\left(r,s\right)\in E$, define $\eta_{\left(r,s\right)}:\Pi_m\left(A\right)\to[0,+\infty)$ by $\eta_{\left(r,s\right)}\left(x\right) = \sum_{j\in J_{\left(r,s\right)}} \eta_j\left(x\right)$, and observe that $\eta_{\left(r,s\right)}$ is continuous and that $\left|S_{\left(r,s\right)}\left(x,y\right)\right|\leq \eta_{\left(r,s\right)}\left(x\right)$ on $A$.
+  4118: 
+  4119: Let $\left(\bar{r},\bar{s}\right)$ be the lexicographic maximum element of $E$.  If $\bar{r} < 0$, then $\lim_{y\to+\infty} f\left(x,y\right) = 0$ for all $x\in\Pi_m\left(A\right)$, and we are done.  If $\bar{r} = \bar{s} = 0$ and $J$ is a singleton, say $J = \{j_0\}$, and $\phi_{j_0} = 0$, then
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 858)
+  message: If this : is for a mapping, consider using \colon.
+   856: functions on $X$ generated by
+   857: \[
+>  858: \{\gamma_{h,\ell}:\text{\ensuremath{\ell\in\NN}\ and \ensuremath{h\in\S\left(X\times\RR\right)}\ with }t\mapsto h\left(x,t\right)\text{\ in\ }L^{1}\left(\RR\right)\}.
+   859: \]
+   860: We write
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1444)
+  message: If this : is for a mapping, consider using \colon.
+  1442: and
+  1443: \[
+> 1444: \pi:\mathbb{R}^{M+4}\ni\left(z_{1},\ldots,z_{M},Z_{1},Z_{2},Z_{3},Z_{4}\right)\mapsto\left(z_{1},\ldots,z_{M},Z_{1}Z_{3},Z_{2}Z_{4}\right)\in\mathbb{R}^{M+2}.
+  1445: \]
+  1446: Then $\psi$ is bounded, $\widetilde{\psi}=\pi\circ\psi$ and the closure
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 440)
+  message: If this : is for a mapping, consider using \colon.
+   438: of every point of $\mathbb{P}^{1}\left(\mathbb{R}\right)^{m+n}$,
+   439: $Y$ is described by a finite number of analytic equations and inequalities).
+>  440: Given a set $X\subseteq\mathbb{R}^{m}$, a map $f:X\rightarrow\mathbb{R}^{n}$
+   441: is globally subanalytic if its graph is a globally subanalytic subset
+   442: of $\RR^{m+n}$ (this definition implies that $X$ is a globally subanalytic
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 875)
+  message: If this : is for a mapping, consider using \colon.
+   873: is stable under composition with subanalytic functions, in the following
+   874: sense: if $X\subseteq\mathbb{R}^{m},\ Y\subseteq\mathbb{R}^{n}$ are
+>  875: subanalytic sets, $G:Y\rightarrow X$ is a subanalytic map and if
+   876: $f\in\mathcal{C}^{\exp}\left( X\right)$, then $f\circ G\in\mathcal{C}^{\exp}\left(Y \right)$.
+   877: \end{rem}
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1352)
+  message: If this : is for a mapping, consider using \colon.
+  1350: in $\mathbb{C}^{N}$, so $\log F$ is given by a single convergent
+  1351: power series on $B_{r}\left(\mathbb{C}\right)$ centred at $0$.
+> 1352: Therefore $\log f:X\rightarrow\mathbb{R}$ is a $\psi$-function.
+  1353: \end{enumerate}
+  1354: \end{rems}
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1777)
+  message: If this : is for a mapping, consider using \colon.
+  1775: a function $g_{j}\left(x,y\right)\in\mathcal{C}^{\exp}\left(X\times\mathbb{R}\right)$
+  1776: which is bounded in $y$ (more precisely, there is a subanalytic function
+> 1777: $\eta:\Pi_{m}\left(A\right)\rightarrow[0,+\infty)$ such that $\forall y>a\left(x\right),\ |g_{j}\left(x,y\right)|<\eta\left(x\right)$),
+  1778: such that
+  1779: \begin{equation}
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3167)
+  message: If this : is for a mapping, consider using \colon.
+  3165: \begin{defn}
+  3166: \label{def: asympt exp}A collection $\mathcal{G}=\left( g_{n} \right)_{n\in\mathbb{N}}$
+> 3167: of functions $g_{n}:\left(0,+\infty\right)\rightarrow\mathbb{R}$ with strictly positive germ at $+\infty$
+  3168: is an \textbf{\emph{asymptotic scale at $+\infty$}} if for all $n\in\mathbb{N},\ \lim_{y\rightarrow+\infty}\frac{g_{n+1}\left(y\right)}{g_{n}\left(y\right)}=0$.
+  3169: 
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3170)
+  message: If this : is for a mapping, consider using \colon.
+  3168: is an \textbf{\emph{asymptotic scale at $+\infty$}} if for all $n\in\mathbb{N},\ \lim_{y\rightarrow+\infty}\frac{g_{n+1}\left(y\right)}{g_{n}\left(y\right)}=0$.
+  3169: 
+> 3170: An $\mathbb{C}$-vector space $\mathcal{A}$ of functions $a:\mathbb{R}\rightarrow\mathbb{C}$
+  3171: is a \textbf{\emph{space of coefficients}} if for every $a\in\mathcal{A}\setminus\{ 0\} $
+  3172: there are $\varepsilon>0$ and a sequence $\left( y_n\right)_{n\in\mathbb{N}}$,
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3175)
+  message: If this : is for a mapping, consider using \colon.
+  3173: with $\lim_{n\rightarrow+\infty}y_{n}=+\infty$, such that $\forall n\in\mathbb{N},\ |a\left(y_{n}\right)|>\varepsilon$.
+  3174: 
+> 3175: Given a function $f:\left(0,+\infty\right)\rightarrow\mathbb{C}$,
+  3176: an asymptotic scale $\mathcal{G}$ and a space of coefficients $\mathcal{A}$,
+  3177: we say that $f$ \textbf{\emph{has a $\left(\mathcal{G},\mathcal{A}\right)$-asymptotic
+
+- file: sample\arxiv_sources\1912.00839v1\AAAI-YuanK.6564.tex (line 494)
+  message: If this : is for a mapping, consider using \colon.
+   492:          \hline
+   493:          Partial Math Detailed
+>  494:          Question (EXEQ-300k) &Suppose that the function $\psi:\mathbb{R}^2 \to \mathbb{R}$ is continuously differentiable. Define the function $g:\mathbb{R}^2 \to \mathbb{R}$ by...\\ %$g(s,t) = \psi(s^2$...\\
+   495:          \hline
+   496:          Human-Written&using the chain rule in $\mathbb{R}^n$\\
+
+- file: sample\arxiv_sources\1912.00839v1\AAAI-YuanK.6564.tex (line 494)
+  message: If this : is for a mapping, consider using \colon.
+   492:          \hline
+   493:          Partial Math Detailed
+>  494:          Question (EXEQ-300k) &Suppose that the function $\psi:\mathbb{R}^2 \to \mathbb{R}$ is continuously differentiable. Define the function $g:\mathbb{R}^2 \to \mathbb{R}$ by...\\ %$g(s,t) = \psi(s^2$...\\
+   495:          \hline
+   496:          Human-Written&using the chain rule in $\mathbb{R}^n$\\
+
+- file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 634)
+  message: If this : is for a mapping, consider using \colon.
+   632: interior faces only. 
+   633: We also introduce the
+>  634: \emph{mesh size} function $\hG:\Omega\to \mathbb{R}$, defined by $\hG(x):=
+   635: h_\elm$, if $x\in \elm\backslash\partial\elm$ and $\hG(x)=h_\side:=
+   636: |S|^{1/(d-1)} $, if $x\in S\in\sides$
+
+- file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 722)
+  message: If this : is for a mapping, consider using \colon.
+   720: $\normal^-$ the outward normal vectors of $\elm^+$ respectively
+   721: $\elm^-$ on $S$. For
+>  722: $q:\Omega\to\mathbb{R}$ and $\vec{\phi}:\Omega\to\mathbb{R}^d$, let
+   723: $q^{\pm}:=q|_{S\cap\partial\elm^{\pm}}$ and
+   724: $\vec{\phi}^{\pm}:=\vec{\phi}|_{S\cap\partial\elm^{\pm}}$, and set
+
+- file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 722)
+  message: If this : is for a mapping, consider using \colon.
+   720: $\normal^-$ the outward normal vectors of $\elm^+$ respectively
+   721: $\elm^-$ on $S$. For
+>  722: $q:\Omega\to\mathbb{R}$ and $\vec{\phi}:\Omega\to\mathbb{R}^d$, let
+   723: $q^{\pm}:=q|_{S\cap\partial\elm^{\pm}}$ and
+   724: $\vec{\phi}^{\pm}:=\vec{\phi}|_{S\cap\partial\elm^{\pm}}$, and set
+
+- file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 741)
+  message: If this : is for a mapping, consider using \colon.
+   739: In order to define the discontinuous Galerkin schemes, we
+   740:   introduce the following local lifting operators. For $S\in\sides$,
+>  741:   we define  $\riftS:L^2(\side)^d\to
+   742:   \prod_{\elm\in\grid}\P_\ell(\elm)^d$ and $\liftS:L^2(\side)\to
+   743:   \prod_{\elm\in\grid}\P_\ell(\elm)^d$ by 
+
+- file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 742)
+  message: If this : is for a mapping, consider using \colon.
+   740:   introduce the following local lifting operators. For $S\in\sides$,
+   741:   we define  $\riftS:L^2(\side)^d\to
+>  742:   \prod_{\elm\in\grid}\P_\ell(\elm)^d$ and $\liftS:L^2(\side)\to
+   743:   \prod_{\elm\in\grid}\P_\ell(\elm)^d$ by 
+   744:   \begin{subequations}\label{eq:liftG}
+
+- file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 774)
+  message: If this : is for a mapping, consider using \colon.
+   772:     Observing that the sets $\omegaG(S)$, $\side\in\sides$ do
+   773:     overlap  at most $d+1$ times, we have for the 
+>  774:     global lifting operators $\riftG:L^2(\Gamma)^d\to \VG^d$ and
+   775:     $\liftG:L^2(\mathring\Gamma)\to \VG^d$ defined by 
+   776:     \begin{align*}
+
+- file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 775)
+  message: If this : is for a mapping, consider using \colon.
+   773:     overlap  at most $d+1$ times, we have for the 
+   774:     global lifting operators $\riftG:L^2(\Gamma)^d\to \VG^d$ and
+>  775:     $\liftG:L^2(\mathring\Gamma)\to \VG^d$ defined by 
+   776:     \begin{align*}
+   777:       \riftG(\vec{\phi}):=\sum_{\side\in\sides}\riftS(\vec{\phi})\qquad\text{and}\qquad \liftG(q):=\sum_{\side\in\mathring\sides}\riftS(q),
+
+- file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 791)
+  message: If this : is for a mapping, consider using \colon.
+   789: 
+   790: 
+>  791: We define the bilinear form $\bilin{\cdot}{\cdot}:\VG\times \VG\to
+   792: \mathbb{R}$ by
+   793: \begin{align}\label{dgbilinear}
+
+- file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 884)
+  message: If this : is for a mapping, consider using \colon.
+   882: \begin{prop}\label{P:dist-dGcG}
+   883:   For $\grid\in\grids$, there exists an interpolation operator
+>  884:   $\mathcal{I}_\grid:H^1(\grid)\to\VG\cap H_0^1(\Omega)$, such that we have 
+   885:   \begin{align*}
+   886:     \norm[\elm]{\hG^{-1/2}(v-\mathcal{I}_\grid
+
+- file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1060)
+  message: If this : is for a mapping, consider using \colon.
+  1058:   all}~\elm\in\grid\setminus\mathcal{M}.
+  1059: \end{align}
+> 1060: Here $g:\R_0^+\to\R_0^+$ is a fixed function, which is continuous in
+  1061: $0$ with $g(0)=0$, i.e. $\lim_{\epsilon\to 0}g(\epsilon)=0$.
+  1062: 
+
+- file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1500)
+  message: If this : is for a mapping, consider using \colon.
+  1498:   We define
+  1499:   the local lifting operators
+> 1500:   $\riftS[\infty]:L^2(S)^d\to L^2(\Omega)^d$ and 
+  1501:   $\liftS[\infty]:L^2(S)\to L^2(\Omega)^d$ by
+  1502:   \begin{align}\label{eq:lift-inf}
+
+- file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1501)
+  message: If this : is for a mapping, consider using \colon.
+  1499:   the local lifting operators
+  1500:   $\riftS[\infty]:L^2(S)^d\to L^2(\Omega)^d$ and 
+> 1501:   $\liftS[\infty]:L^2(S)\to L^2(\Omega)^d$ by
+  1502:   \begin{align}\label{eq:lift-inf}
+  1503:     \riftS[\infty]=\riftS[\ell]:=\riftS[{\gridk[\ell]}]\qquad
+
+- file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1644)
+  message: If this : is for a mapping, consider using \colon.
+  1642:   all}~z,y\in\nodes_k(\elm).
+  1643: \end{align*}
+> 1644: For all $\ell\ge k$, we define $\Pi_k:L^1(\Omega)\to L^1(\Omega)$ by 
+  1645: \begin{align}\label{df:Pik}
+  1646:   \Pi_kv:=\sum_{\elm\in\gridk}\sum_{z\in\nodes_k(\elm)}
+
+- file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1673)
+  message: If this : is for a mapping, consider using \colon.
+  1671: 
+  1672: \begin{lem}[Properties of $\Pi_k$]\label{lem:Pik}
+> 1673:   The operator $\Pi_k:L^1(\Omega)\to L^1(\Omega)$ defined
+  1674:   in~\eqref{df:Pik} has the following properties:
+  1675:   \begin{enumerate}
+
+- file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1676)
+  message: If this : is for a mapping, consider using \colon.
+  1674:   in~\eqref{df:Pik} has the following properties:
+  1675:   \begin{enumerate}
+> 1676:   \item\label{Pik:1} $\Pi_k:L^p(\Omega)\to L^p(\Omega)$ is a linear and
+  1677:     bounded projection for all $1\le p\le\infty$. In particular, we have that 
+  1678:     \begin{align*}
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 81)
+  message: If this : is for a mapping, consider using \colon.
+    79: Though we have regarded $g_{t}(z)$ as just a formal power series, it becomes a uniformization map of a simply connected domain.
+    80: Namely, for each realization of $g_{t}(z)$, we can take a subset $K_{t}\subset\mbb{H}$ called a hull such that
+>   81: $g_{t}$ becomes a biholomorphic map $g_{t}:\mbb{H}\backslash K_{t}\to\mbb{H}$.
+    82: Moreover, for each realization, the family $\{K_{t}\}_{t\ge 0}$ of hulls parametrized by time is increasing, {\it i.e.}, if $t<s$, $K_{t}\subset K_{s}$ holds.
+    83: When we investigate an evolution of hulls in more detail, we find that it is governed by an evolution of the tip $\gamma_{t}$ in the upper half plane,
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 591)
+  message: If this : is for a mapping, consider using \colon.
+   589: In this section, we recall the notion of affine Lie algebras and their representation theory.
+   590: Let $\mfrak{g}$ be a {{finite-dimensional}} Lie algebra that is simple or commutative
+>  591: and $(\cdot|\cdot):\mfrak{g}\times\mfrak{g}\to\mbb{C}$ be a nondegenerate symmetric invariant bilinear form on $\mfrak{g}$.
+   592: The affinization $\what{\mfrak{g}}$ of $\mfrak{g}$ is defined by $\what{\mfrak{g}}=\mfrak{g}\otimes \mbb{C}[\zeta,\zeta^{-1}]\oplus\mbb{C}K$
+   593: with Lie brackets being defined by
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 659)
+  message: If this : is for a mapping, consider using \colon.
+   657: In the following, we call this VOA the affine VOA of $\mfrak{g}$ with level $k$ and denote it by $L_{\mfrak{g},k}$.
+   658: Simple modules over $L_{\mfrak{g},k}$ are realized as highest weight representations $L_{\mfrak{g}}(\Lambda,k)$ of the same level.
+>  659: For an $L_{\mfrak{g},k}$-module $M$, the invariance in Eq.(\ref{eq:invariant_form}) of a nondegenerate bilinear form $\braket{\cdot|\cdot}:M\times M\to\mbb{C}$ is rephrased as
+   660: $\braket{X(n)u|v}=-\braket{u|X(-n)v}$ for $u,v \in M$, $X\in\mfrak{g}$ and $n\in\mbb{Z}$.
+   661: Such an invariant bilinear form is specified on an irreducible representation $L_{\mfrak{g}}(\Lambda,k)$ by the normalization $\braket{v_{\Lambda}|v_{\Lambda}}=1$
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1366)
+  message: If this : is for a mapping, consider using \colon.
+  1364: 	&-\mrm{Res}_{z}(2\del h(z)e(z)-\del e(z)+\del f(z)e^{-2h(z)}e(z)^{2})z^{-\ell}.
+  1365: \end{align}
+> 1366: Here the representation $\pi:\mfrak{sl}_{2}\to \mrm{End}(L(\Lambda)^{\ast})$ is defined by
+  1367: $(\pi(X)\phi)(v)=-\phi(Xv)$ for $X\in\mfrak{sl}_{2}$, $\phi\in L(\Lambda)^{\ast}$ and $v\in L(\Lambda)$.
+  1368: 
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1588)
+  message: If this : is for a mapping, consider using \colon.
+  1586: Let $(V,\ket{0}, T, Y, \omega)$ be a VOA.
+  1587: A weak $V$-module is a pair $(M, Y^{M})$ of a vector space $M$
+> 1588: and a linear map $Y^{M}:V\to \mrm{End}(M)[[z,z^{-1}]]$
+  1589: satisfying the following conditions:
+  1590: \begin{itemize}
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1640)
+  message: If this : is for a mapping, consider using \colon.
+  1638: An intertwining operator of type $\binom{M_{1}}{M_{2}\ \ M_{3}}$ is a linear operator
+  1639: \begin{equation}
+> 1640: 	\mcal{Y}(-,z):M^{1}\to \mrm{Hom}(M^{2},M^{3})z^{K}:=\left\{\sum_{a \in K}v_{a}z^{a}\Bigg|v_{\alpha}\in\mrm{Hom}(M^{2},M^{3})\right\},
+  1641: \end{equation}
+  1642: where $K=\bigcup_{i}(\alpha_{i}+\mbb{Z})$ with finitely many $\alpha_{i}\in\mbb{C}$ being chosen associated with $M^{1}$, $M^{2}$ and $M^{3}$
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1727)
+  message: If this : is for a mapping, consider using \colon.
+  1725: \subsubsection{Lattice vertex algebra}
+  1726: Let $L$ be a nondegenerate even lattice of rank $\ell$; namely, it is a free $\mbb{Z}$-module of rank $\ell$
+> 1727: endowed with a nondegenerate $\mbb{Z}$-bilinear form $(\cdot|\cdot):L\times L\to \mbb{Z}$,
+  1728: such that $(\alpha|\alpha)\in 2\mbb{Z}$ for $\alpha\in L$.
+  1729: There uniquely exists a cohomology class $[\epsilon]\in H^{2}(L,\mbb{C}^{\times})$ satisfying
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 149)
+  message: If this : is for a mapping, consider using \colon.
+   147: \label{sect:wzw_theory}
+   148: Let $\mfrak{g}$ be a finite-dimensional simple Lie algebra.
+>  149: We denote a symmetric invariant bilinear form on $\mfrak{g}$ by $(\cdot|\cdot):\mfrak{g}\times\mfrak{g}\to\mbb{C}$.
+   150: The affine Lie algebra of $\mfrak{g}$ is a Lie algebra
+   151: \begin{equation}
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 264)
+  message: If this : is for a mapping, consider using \colon.
+   262: The fundamental object in the theory of VOAs is the state-field correspondence map
+   263: \begin{equation}
+>  264: 	\mcal{Y}(-,z):V_{\mfrak{g},k}\to\mrm{End}(V_{\mfrak{g},k})\{z\}=\left\{\sum_{a\in\mbb{C}}T_{a}z^{a}\bigg|T_{a}\in\mrm{End}(V_{\mfrak{g},k})\right\},
+   265: \end{equation}
+   266: which satisfies
+
+- file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 445)
+  message: If this : is for a mapping, consider using \colon.
+   443: Without loss of generality, the least
+   444: element of $L'$ is 0 and the greatest element of $L'$ is 1.  
+>  445: Define a function $e:L' \rightarrow \omega$ as follows.  
+   446: Let $e(0) = 1$ (the latter being the code for ordinal 0). 
+   447: For $k \in L'$ and $n \in \omega$, let $h(k,n)$ 
+
+- file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 454)
+  message: If this : is for a mapping, consider using \colon.
+   452: 3\cdot 5^{e(h(k,n))} + n & \text{ otherwise.}\end{cases}$$
+   453: Then let $a = e(1)$.  It is routine to show that 
+>  454: $e: (L, <_{L}) \rightarrow (W_{p(a)}^X, <_\ast)$ is order-preserving.  Also, 
+   455: the order type of $W_{p(a)}^X$ is $\omega \cdot (1+L)$, with $e$ 
+   456: providing a selector for each $\omega$-chain in $W_{p(a)}^X$.  
+
+- file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 507)
+  message: If this : is for a mapping, consider using \colon.
+   505: \begin{definition}
+   506: If $T\subseteq \omega^{<\omega}$ is any tree, 
+>  507: and $\rho : T\rightarrow \kO^\ast$, we say that  $\rho$ 
+   508: \emph{ranks} $T$ if 
+   509: \begin{enumerate}
+
+- file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 645)
+  message: If this : is for a mapping, consider using \colon.
+   643: an \emph{evaluation map}
+   644: for $X \in T$ is a function
+>  645: $f:T\rightarrow \{0,1\}$ such that 
+   646: \begin{itemize}
+   647:   \item If $\sigma$ is a leaf, $f(\sigma) = 1$ if and only if $X$
+
+- file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 1134)
+  message: If this : is for a mapping, consider using \colon.
+  1132: With only a slight amount of effort, we also have the following.
+  1133: \begin{proposition} In $\RCA$,
+> 1134: if $A$ is a completely determined Borel set and $h:2^\omega\rightarrow 2^\omega$ 
+  1135: is continuous, then $h^{-1}(A)$ is a completely determined Borel set.
+  1136: \end{proposition}
+
+- file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 1138)
+  message: If this : is for a mapping, consider using \colon.
+  1136: \end{proposition}
+  1137: \begin{proof}
+> 1138: Let $T$ be a completely determined Borel code and $h:2^\omega\rightarrow 2^\omega$ 
+  1139: a continuous function. Then $h$ is encoded by a sequence of pairs 
+  1140: $(p_1,q_1), (p_2,q_2)\dots$ from $2^{<\omega}\times 2^{<\omega}$, which are compatible in the sense that 
+
+- file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 1832)
+  message: If this : is for a mapping, consider using \colon.
+  1830: maps $g_{P,d},g_{N,d}$ for 
+  1831: $X$ in $\Decorate(P_d,h)$ and $\Decorate(N_d^c,h)$. 
+> 1832: Consider the function $g:\Decorate(T,h) \rightarrow \{0,1\}$ 
+  1833: defined by 
+  1834: $$g(\sigma)
+
+- file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 2506)
+  message: If this : is for a mapping, consider using \colon.
+  2504: there are computable 
+  2505: functions $h$ and $k$ such that for all $d \in \kO^A$, 
+> 2506: whenever $g:\omega\rightarrow \omega$ dominates the 
+  2507: increasing function
+  2508: $$f_d(n) := \Phi_{h(d)}^{H^A_d}(n),$$ we have 
+
+- file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 2657)
+  message: If this : is for a mapping, consider using \colon.
+  2655: considered as an evaluation map.  For example, a weaker version 
+  2656: of an evaluation map would be a partial function 
+> 2657: $f:\subseteq T\rightarrow \{0,1\}$ such that $f(\lambda)$ is 
+  2658: defined; and whenever $\sigma \in T$ is a $\cup$, and $f(\sigma)=1$,
+  2659: there is an $n$ such that $f(\sigma\concat n) = 1$;
+
+- file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 183)
+  message: If this : is for a mapping, consider using \colon.
+   181:  \varphi = B_{13}dx^3 + B_{14}dx^4 =\varphi_{3}dx^3+\varphi_{4}dx^4. 
+   182: \end{equation}
+>  183: The space of solutions of $(A_C, \varphi)$ to \eqref{Hitchin eqns} modulo gauge transformations then span Hitchin's moduli space $\mathcal{M}^G_H(C)$ for a connection $A_C$ on a principal $G$-bundle $P$ over the Riemann surface $C$, and a section $\varphi\in\Omega^1(C)$. The above equations leave the $(x^1, x^2)$ dependence of $A_C$ and $\varphi$ arbitrary, and thus the fields $(A_C, \varphi)$ define a map $\Phi: \Sigma \to \mathcal{M}^G_H(C)$. 
+   184: The target space $\mathcal{M}^G_H(C)$ is a hyper-K\"{a}hler manifold, whence the sigma-model on $\Sigma$ has an $\mathcal{N}=(4,4)$ supersymmetry ~\cite{AF81}. 
+   185: 
+
+- file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 206)
+  message: If this : is for a mapping, consider using \colon.
+   204: \end{split}
+   205: \end{equation}
+>  206: Hence, the path integral of the 2d, ${\mathcal N} = (4,4)$ sigma model on $\Sigma$ with action \eqref{2dfinalaction}, localizes on the moduli space of holomorphic maps $\Phi(X^i, Y^i):\Sigma\to\mathcal{M}^G_H(C)$:
+   207: \begin{equation}\label{mmaps2d}
+   208:     \mathcal{M}_{\text{maps}} = \{ \Phi(X^i, Y^i):\Sigma\to\mathcal{M}^G_H(C) \;|\; \partial_{\bar{z}}X^{i}=\partial_{\bar{z}}Y^{i}=0 \},
+
+- file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 208)
+  message: If this : is for a mapping, consider using \colon.
+   206: Hence, the path integral of the 2d, ${\mathcal N} = (4,4)$ sigma model on $\Sigma$ with action \eqref{2dfinalaction}, localizes on the moduli space of holomorphic maps $\Phi(X^i, Y^i):\Sigma\to\mathcal{M}^G_H(C)$:
+   207: \begin{equation}\label{mmaps2d}
+>  208:     \mathcal{M}_{\text{maps}} = \{ \Phi(X^i, Y^i):\Sigma\to\mathcal{M}^G_H(C) \;|\; \partial_{\bar{z}}X^{i}=\partial_{\bar{z}}Y^{i}=0 \},
+   209: \end{equation}
+   210: where we have a 2d ${\mathcal N} = (4,4)$ $A$-model on $\Sigma$ with target $\mathcal{M}^G_H(C)$.
+
+- file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 231)
+  message: If this : is for a mapping, consider using \colon.
+   229: We thus have a 2d, ${\mathcal N} = (4,4)$ $A$-model on $\Sigma$ with target $\mathcal{M}^G_{\text{Higgs}}(C)$, where the path integral localizes on 
+   230: \begin{equation} \label{Mmaps final}
+>  231:     \mathcal{M}_{\text{maps}} = \{ \Phi(X^i, Y^i):\Sigma\to\mathcal{M}^G_{\text{Higgs}}(C) \;|\; \partial_{\bar{z}}X^{i}=\partial_{\bar{z}}Y^{i}=0 \},
+   232: \end{equation}
+   233: the moduli space of holomorphic maps $\Phi:\Sigma\to \mathcal{M}^G_{\text{Higgs}}(C)$. 
+
+- file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 233)
+  message: If this : is for a mapping, consider using \colon.
+   231:     \mathcal{M}_{\text{maps}} = \{ \Phi(X^i, Y^i):\Sigma\to\mathcal{M}^G_{\text{Higgs}}(C) \;|\; \partial_{\bar{z}}X^{i}=\partial_{\bar{z}}Y^{i}=0 \},
+   232: \end{equation}
+>  233: the moduli space of holomorphic maps $\Phi:\Sigma\to \mathcal{M}^G_{\text{Higgs}}(C)$. 
+   234: 
+   235: \subsection{Vafa-Witten Invariants as Gromov-Witten Invariants of Higgs Bundles}
+
+- file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 337)
+  message: If this : is for a mapping, consider using \colon.
+   335:     \label{fig:aai_time_mileage}
+   336: \end{figure}
+>  337: In order to feed our model with the time $t$ feature, we need a scaling method to level out the left-tail distribution somewhat. Using $\log_b (t + 1)$ is a natural choice. At the same time, we want to approximately map $t$ into the range of $[-1, 1]$. Therefore, we apply the following non-linear function $f_t: \mathbb{R}^+ \to \mathbb{R}$ to $t$: 
+   338: \begin{equation}\label{eq:ttransform}
+   339:     t' = f_t(t, b) = \log_b (t + 1) - 1\: \forall t \in \mathbb{R}^+
+
+- file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 641)
+  message: If this : is for a mapping, consider using \colon.
+   639: \text{MAE} = \frac{1}{N}\sum_{i=1}^{L'} |\Delta \hat{t'}_i - \Delta t'_i|
+   640: $$
+>  641: In Figure \ref{fig:mae_h}, the MAE (h) is calculated using the inverse function $f^{-1}_t: \mathbb{R} \to \mathbb{R}^+$, defined as $t = f^{-1}_t(t', b) = b^{t'+1} - 1 \forall t' \in \mathbb{R}$. Thus, the MAE (h) is:
+   642: $$
+   643: \text{MAE}_h = \frac{1}{N}\sum_{i=1}^{L'} |f^{-1}_t(\Delta \hat{t'}_i, 30) - f^{-1}_t(\Delta t'_i, 30)|
+
+- file: sample\arxiv_sources\2507.20527v3\appendix.tex (line 443)
+  message: If this : is for a mapping, consider using \colon.
+   441: \vspace{0.5em}
+   442: 
+>  443: \textbf{Question:} Consider a function $f: \mathbb{R} \to \mathbb{R}$ that satisfies the following conditions:
+   444: \begin{enumerate}
+   445:     \item $f(x + y) = f(x) + f(y)$ for all real numbers $x$ and $y$.
+
+- file: sample\arxiv_sources\2504.04313v2\main.tex (line 485)
+  message: If this : is for a mapping, consider using \colon.
+   483: 
+   484: \begin{quote}
+>  485: The orbit of \( s \in S \) is the image of the morphism \( o(\cdot, s): G \to S \), induced by the action map \( a: G \times S \to S \) with \( g \mapsto a(g, s) \).
+   486: \end{quote}
+   487: 
+
+- file: sample\arxiv_sources\2504.04313v2\main.tex (line 485)
+  message: If this : is for a mapping, consider using \colon.
+   483: 
+   484: \begin{quote}
+>  485: The orbit of \( s \in S \) is the image of the morphism \( o(\cdot, s): G \to S \), induced by the action map \( a: G \times S \to S \) with \( g \mapsto a(g, s) \).
+   486: \end{quote}
+   487: 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 281)
+  message: If this : is for a mapping, consider using \colon.
+   279: 
+   280:  
+>  281: We show that for every continuous function $f:[0,1]\to[0,\infty[$, 
+   282: $$\ovalbox{$I(f):=\dis \int_0^1 x^3f(x)^2 dx-\int_0^1 x^2 f(x)^3 dx\leq \frac{2}{81}.$}$$
+   283: and that for  $f(x)=(2/3)x$, we have $I(f)= 2/81$.\\
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 369)
+  message: If this : is for a mapping, consider using \colon.
+   367: Here we use the following standard result (see \cite{wwa}):
+   368:  \begin{theorem}
+>  369:  Suppose that $D\ss\R$ is an interval, that $H:[a,b[\times D \to \R$ is locally Lipschitz, and that $u,v: [a,b[\to D$ are differentiable functions satisfying
+   370:  $$u'(x)-H(x, u(x))\leq v'(x)-H(x,v(x)) \quad (x\in [a,b[)$$ 
+   371:  $$u(a)\leq v(a).$$
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 369)
+  message: If this : is for a mapping, consider using \colon.
+   367: Here we use the following standard result (see \cite{wwa}):
+   368:  \begin{theorem}
+>  369:  Suppose that $D\ss\R$ is an interval, that $H:[a,b[\times D \to \R$ is locally Lipschitz, and that $u,v: [a,b[\to D$ are differentiable functions satisfying
+   370:  $$u'(x)-H(x, u(x))\leq v'(x)-H(x,v(x)) \quad (x\in [a,b[)$$ 
+   371:  $$u(a)\leq v(a).$$
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3326)
+  message: If this : is for a mapping, consider using \colon.
+  3324: 
+  3325: We reduce the present problem to Problem 12340,  telling us that for each
+> 3326:  $f:[0,1]\to \R$  continuous, 
+  3327:  \begin{equation}\label{old}
+  3328: \lim_{n\to\infty}\frac{n}{2^n}\int_0^1 \frac{f(x)}{x^n+(1-x)^n}\;dx  =\frac{\pi}{4}\; f\left(\frac{1}{2}\right).
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3363)
+  message: If this : is for a mapping, consider using \colon.
+  3361: $$x^t +(1-x)^t \geq (1/2+\delta)^t +(1/2 -\delta)^t.$$
+  3362: Hence 
+> 3363: $$\frac{t}{2^t}\;\frac{1}{x^t +(1-x)^t}\leq \frac{t}{(1+2\delta)^t+(1-2\delta)^t}=:m_t\to 0\; \text{as $t\to\infty$}$$
+  3364: 
+  3365: 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3422)
+  message: If this : is for a mapping, consider using \colon.
+  3420: But $M^+\not=-\infty$, either,  since otherwise
+  3421: $$\mbox{$f(f(x))+abx =(a+b)f(x)\to -\infty$ as $x\to\infty$},$$
+> 3422: and so $\dis \lim_{x\to\infty} f(f(x))=-\infty$. Hence, with $y:=f(x)\to-\infty$, we deduce that
+  3423: $$\lim_{y\to-\infty} f(y)=-\infty=\lim_{x\to\infty} f(x),$$
+  3424:  contradicting the monotonicity of $f$.  We conclude that $f$ is strictly increasing,  
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3428)
+  message: If this : is for a mapping, consider using \colon.
+  3426: $\lim_{x\to-\infty} f(x) =-\infty$, $\lim_{x\to\infty} f(x) =\infty$.\\
+  3427: 
+> 3428: \co {\Large iii)} The inverse $h:=f^{-1}:\R\to \R$ satisfies the functional equation
+  3429: 
+  3430: \begin{equation}
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3536)
+  message: If this : is for a mapping, consider using \colon.
+  3534: 
+  3535: 
+> 3536: As $g:[0,1]\to \R$ is continuous, $||g||_\infty=\max\{|g(x)|: 0\leq x\leq 1\}<\infty$.
+  3537: Let 
+  3538: $$I_n:=\frac{n}{2^n}\int_0^1 \frac{g(x)}{x^n+(1-x)^n}\;dx.$$
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3756)
+  message: If this : is for a mapping, consider using \colon.
+  3754: \medskip
+  3755: 
+> 3756: Let $y=y(x):=\int_0^x f(t)dt$ and suppose that the continuous function $f:[0,\infty[\to\R$  satisfies on $]0,\infty[$ 
+  3757: $$
+  3758: f(x)\left( f(x)-\frac{1}{x}\int_0^x f(t)dt\right) \geq (f(x)-1)^2.
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3768)
+  message: If this : is for a mapping, consider using \colon.
+  3766: $$y'(0)(2-y'(0))\geq 1\iff (y'(0)-1)^2\leq 0$$
+  3767: 
+> 3768: Let  the function $w:[0,\infty[\to \R$ be given by 
+  3769:  $$w(x):=\begin{cases} \frac{y(x)}{x} &\text{if $x>0$}\\ y'(0)  &\text{if $x=0$}.
+  3770:  \end{cases}
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 4269)
+  message: If this : is for a mapping, consider using \colon.
+  4267: 
+  4268: Let $0<||x||<1$ and  $s\in S$.  Let  $s'$ be the (second) uniquely determined intersection point of  the half-line starting at  $s$ and passing through $x$ with $S$. Then the 
+> 4269: map  $Q: S\to [0,\infty[, \; s\mapsto  ||x-s|| / ||x-s'||$ is a nonconstant continuous map.
+  4270:  \end{lemma}
+  4271: \begin{proof}
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 4339)
+  message: If this : is for a mapping, consider using \colon.
+  4337: (8) By hypothesis, $||f(s)||\leq C$ for every $s\in S$.
+  4338: Let $0<||x||<1$. Consider, as in Lemma \ref{center}, 
+> 4339:  the map $H: S\to [0,\infty[, s\mapsto ||x-s||/||x-s'||$. 
+  4340: $H$ is continuous and non-constant. Since ${\rm dim}\; E\geq 2$,
+  4341:  $S$ is connected by Lemma \ref{conn}. Hence $H(S)$ is an interval. In particular,
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 4611)
+  message: If this : is for a mapping, consider using \colon.
+  4609:  $$\sqrt e \sqrt \pi e^{-N}  \left( \frac{N+1}{N}\right)^{N^2-1}.$$
+  4610:  
+> 4611:  But $a_N:=\dis e^{-N} \left( \frac{N+1}{N}\right)^{N^2-1}\to \frac{1}{\sqrt e}$ as $N\to\infty$;
+  4612:  in fact, by  taking logarithms we obtain
+  4613:   
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 5122)
+  message: If this : is for a mapping, consider using \colon.
+  5120: continuous but not continuous,   and has only a finite number of discontinuities.
+  5121:  This guarantees that $I:=f(\R)$  is a union of non-degenerated
+> 5122: intervals, with pairwise disjoint closures. The inverse function $f^{-1}: I\to \R$
+  5123: then is continuous on $I$. Fix $x_0$.  Hence for every $\epsilon>0$ there exists $\delta>0$
+  5124: such that $B_{\rho}(x_0,\delta)\subseteq B_d(x_0,\epsilon)$. 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 5136)
+  message: If this : is for a mapping, consider using \colon.
+  5134:  It is  clear that the identity map id: $(\R,\rho)\to (\R,d)$, although
+  5135: being continuous, has no continuous inverse. 
+> 5136: Note  that ${\rm id}: (\R,d)\to (\R,\rho)$ is continuous at $x_0$ if and only if $f$
+  5137: is continuous at $x_0$. Thus the two topologies are distinct.
+  5138: 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 5227)
+  message: If this : is for a mapping, consider using \colon.
+  5225: 
+  5226: 
+> 5227: Suppose that $f:{\bf R} \to{\bf R}$ is  a function, continuous  at the origin, and  satisfying 
+  5228: $$f(x+2f(y))=f(x)+f(y)+y\eqno (1)$$
+  5229:  for all $x,y\in{\bf R}$.
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 5568)
+  message: If this : is for a mapping, consider using \colon.
+  5566: The above results are related to the following more general result:\vs 0,2cm
+  5567: 
+> 5568: {\bf Proposition 3.} {\sl  Let $h$ be an entire function and let $u:D\to\R$ and  $v:D\to\R$ be two
+  5569:  nonconstant harmonic functions  in a simply connected domain $D$. Let $\tilde u$ be a harmonic 
+  5570: conjugate of $u$ in $D$.
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 5568)
+  message: If this : is for a mapping, consider using \colon.
+  5566: The above results are related to the following more general result:\vs 0,2cm
+  5567: 
+> 5568: {\bf Proposition 3.} {\sl  Let $h$ be an entire function and let $u:D\to\R$ and  $v:D\to\R$ be two
+  5569:  nonconstant harmonic functions  in a simply connected domain $D$. Let $\tilde u$ be a harmonic 
+  5570: conjugate of $u$ in $D$.
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 5571)
+  message: If this : is for a mapping, consider using \colon.
+  5569:  nonconstant harmonic functions  in a simply connected domain $D$. Let $\tilde u$ be a harmonic 
+  5570: conjugate of $u$ in $D$.
+> 5571: Then $h(u+iv):D\to \C$ is harmonic if and only if $v=\pm\tilde u +a$ for
+  5572: a constant $a\in\R$.}\vs 0,2cm
+  5573: 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6218)
+  message: If this : is for a mapping, consider using \colon.
+  6216:  
+  6217:   We prove that
+> 6218: $$\ovalbox{$\dis I_n:=\int_0^1 \frac{(1-x)^{2n}\big((1+x)^n-1\big)}{x}dx\to \log 2$}.$$
+  6219: 
+  6220: To achieve this goal we use that the harmonic number 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6347)
+  message: If this : is for a mapping, consider using \colon.
+  6345: This does not seem to be  a serious problem proposal.  Let $X:=(\R,d_1)$, where $d_1$ is the usual Euclidean metric $d_1(x,y)=|x-y|$. 
+  6346: Now take as $d_2$ the discrete metric defined by
+> 6347: $d_2(x,y)=1$ if $x\not=y$ and $d_2(x,x)=0$ (the triangle inequality is trivially satisfied).  Since continuous functions map connected sets to connected sets, and since the only non-empty connected sets in $Y=(\R, d_2)$ are the singletons,  any continuous map $f:X\to Y$ must be constant (since 
+  6348:  $f(\R)$ is connected, hence a singleton). Conversely, every constant function $f:M\to \tilde M$, $x\mapsto c$, between any metric spaces $M,\tilde M$, is continuous since 
+  6349:  $f^{-1}[V]=M$ for every  open set $V$ in $\tilde M$ with $c\in V$, and $f^{-1}[V]=\emp$ for any open set $V$ in
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6348)
+  message: If this : is for a mapping, consider using \colon.
+  6346: Now take as $d_2$ the discrete metric defined by
+  6347: $d_2(x,y)=1$ if $x\not=y$ and $d_2(x,x)=0$ (the triangle inequality is trivially satisfied).  Since continuous functions map connected sets to connected sets, and since the only non-empty connected sets in $Y=(\R, d_2)$ are the singletons,  any continuous map $f:X\to Y$ must be constant (since 
+> 6348:  $f(\R)$ is connected, hence a singleton). Conversely, every constant function $f:M\to \tilde M$, $x\mapsto c$, between any metric spaces $M,\tilde M$, is continuous since 
+  6349:  $f^{-1}[V]=M$ for every  open set $V$ in $\tilde M$ with $c\in V$, and $f^{-1}[V]=\emp$ for any open set $V$ in
+  6350:   $\tilde M$ with $c\notin V$.
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 8114)
+  message: If this : is for a mapping, consider using \colon.
+  8112: \end{eqnarray*}
+  8113: 
+> 8114: Next we use that  for  $s_m:=\frac{1}{ma^m}$ and $x_m:=\log(1-b^m)\to 0$
+  8115: %$$\frac{1}{ma^m}-1<\dis\left\lfloor \frac{1}{ma^m}\right\rfloor\leq \frac{1}{ma^m}=:s_m,$$
+  8116: the inequalities 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 8534)
+  message: If this : is for a mapping, consider using \colon.
+  8532: 
+  8533: We use Carath\'eodory's definition of differentiability:
+> 8534: A function $f:I\to \R$ is differentiable at a point $x_0\in I$,  $I\ss\R$ an  interval,
+  8535: if there exists a function $g=g_{x_0}:I\to\R$ continuous at $x_0$ such that
+  8536:  $$f(x)=f(x_0)+(x-x_0)g(x);$$
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 8535)
+  message: If this : is for a mapping, consider using \colon.
+  8533: We use Carath\'eodory's definition of differentiability:
+  8534: A function $f:I\to \R$ is differentiable at a point $x_0\in I$,  $I\ss\R$ an  interval,
+> 8535: if there exists a function $g=g_{x_0}:I\to\R$ continuous at $x_0$ such that
+  8536:  $$f(x)=f(x_0)+(x-x_0)g(x);$$
+  8537: just define $g_{x_0}(x)=\begin{cases}\frac{f(x)-f(x_0)}{x-x_0}& \text{ if $x\not =x_0$}\\
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10514)
+  message: If this : is for a mapping, consider using \colon.
+ 10512: $$\sum_{n=1}^N [(2n-1)\psi^{(1)}(n)-2]= -N+N^2\psi^{(1)}(N+1).$$
+ 10513: Thus it remains to show that
+>10514: $$I_N:= \left( -N+N^2 \int_0^\infty  \frac{t }{e^t-1}\;e^{ -Nt}dt\right) \to -\frac{1}{2}.$$
+ 10515: This is done using twice partial integration:
+ 10516: 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10959)
+  message: If this : is for a mapping, consider using \colon.
+ 10957: Let $\dis F(y)=\int_a^y \frac{f(t)}{t}dt$ be  a primitive of $f(t)/t$ on $]0,\infty[$. Note that $F(y)$ may be unbounded near $0$
+ 10958:  (for $f\equiv 1$ for instance). But one can control its behaviour near $0$: 
+>10959: $$R(y):= y( F(a+y)-F(y))\to 0\; \text{as $y\to 0$}.$$
+ 10960: 
+ 10961: In fact,  as $f$ is continuous, $|f|\leq M$ on $[0,a]$. Hence, for $0<y\leq a$, 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12029)
+  message: If this : is for a mapping, consider using \colon.
+ 12027: 
+ 12028: 
+>12029: We show that all solutions $f:\R\to\R$ of the functional equation 
+ 12030: \begin{equation}\label{fequ3}
+ 12031: f\Big( f(x)+y f(z)-1\Big)+f(z+1)=zf(y)+f(x+z) \quad (x,y,z\in \R)
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12202)
+  message: If this : is for a mapping, consider using \colon.
+ 12200: We show that 
+ 12201: $$\ovalbox{$f(x)=2x$}$$
+>12202:  is   the only continuous function $f:[-1,1]\to\R$  satisfying  for 
+ 12203: \co{$x\in [-1,1]\setminus \{0\}=:X$}  the integral equation
+ 12204: \begin{equation}\label{int-feq}
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12260)
+  message: If this : is for a mapping, consider using \colon.
+ 12258: 
+ 12259: 
+>12260: We show that all nonconstant continuous functions $f:\R\to \R$ and $g:\R\to\R$ satisfying (1)
+ 12261: are given by 
+ 12262: $$\ovalbox{$f(x)=ax+b$ for $a\not=0$, $b\in \R$  and $g(x)=x$.}$$
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12260)
+  message: If this : is for a mapping, consider using \colon.
+ 12258: 
+ 12259: 
+>12260: We show that all nonconstant continuous functions $f:\R\to \R$ and $g:\R\to\R$ satisfying (1)
+ 12261: are given by 
+ 12262: $$\ovalbox{$f(x)=ax+b$ for $a\not=0$, $b\in \R$  and $g(x)=x$.}$$
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12360)
+  message: If this : is for a mapping, consider using \colon.
+ 12358: {\it Case 2} $m\geq 1$.
+ 12359: We claim that
+>12360: $$ R_n:=(n+1)\;\int_0^1 x^m \left(\frac{1+x}{2}\right)^{n}\;dx\to 2 \text{\quad as $n\to\infty$}.$$
+ 12361: In fact, partial integration yields
+ 12362: 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12514)
+  message: If this : is for a mapping, consider using \colon.
+ 12512: 
+ 12513: This is entirely trivial.
+>12514: We claim that ${\ovalbox{\rm the identity}}$ is the only solution $f:\R\to \R$ to
+ 12515: 
+ 12516: \begin{equation}\label{sol1}
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13516)
+  message: If this : is for a mapping, consider using \colon.
+ 13514: 
+ 13515: Let $E:=]0,\infty[ \,\times\, ]0,\infty[\,\times \,]0,\infty[$ and 
+>13516: let $H: E\to \;]0,\infty[$ be given by
+ 13517: 
+ 13518: $$
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13751)
+  message: If this : is for a mapping, consider using \colon.
+ 13749:   
+ 13750:   
+>13751:   We show, more generally, that whenever $f,g:[0,1]\to [0,\infty[$ are continuous and $f(1)g(1)\not=0$, then
+ 13752: $$\ovalbox{$\dis{ \lim_{n\to\infty} \frac{1}{n^3}  \sum_{n=1}^n \left(\int_0^1 x^k f(x)\,dx\right) ^{-1}\;  \left(\int_0^1 x^k g(x)\,dx\right) ^{-1}=
+ 13753: \frac{1}{3}\;\frac{1}{f(1)}\frac{1}{g(1)}}$.
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13908)
+  message: If this : is for a mapping, consider using \colon.
+ 13906: \end{eqnarray*}
+ 13907: 
+>13908: $\bullet$ Suppose that $f:\,]0,\infty[\to \R$ is a solution. Let $y= \frac{1}{1+x}$. Then
+ 13909: \begin{equation}\label{main4801}
+ 13910: f(2x+1)=f(x+\frac{1}{y})=  y f(y(1+x))=\frac{1}{1+x} f(1).
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13948)
+  message: If this : is for a mapping, consider using \colon.
+ 13946: (see \cite{memo} and \cite{mhr}) and we follow those published solutions.  \\
+ 13947: 
+>13948: We claim that for $a>0$, all solutions $f:\R^+\to\R^+$ of \footnote{ We prefer to use the letter $a$ instead of $k$, as for us $k$ always belongs to $\mathbb N$.}
+ 13949: \begin{equation}\label{fgle}
+ 13950: f(ax+f(y))=\frac{y}{a}\;f(xy+1)
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 14479)
+  message: If this : is for a mapping, consider using \colon.
+ 14477: 
+ 14478: As shown above,   $2S\ss P\ss S$ and $2S$ is a subgroup of $S$.  Here $S=2S$  if and only if all the translation operators 
+>14479: $\tau_x: S\to S, y\mapsto x-y$ have a fixed point.
+ 14480: 
+ 14481: Also note that $R$ has the following property:
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 14682)
+  message: If this : is for a mapping, consider using \colon.
+ 14680:  $f\equiv 0$. In fact, fix $x\in \mathbb R\setminus \{0\}$. By induction, $f(x/2^n)=(-1)^n f(x)$. By taking  limits,  the continuity at $0$ implies that for $n$ even we get $f(0)=f(x)$ and for $n$ odd, we get $f(0)=-f(x)$. Hence $2f(x)=f(0)-f(0)=0$, and so $f\equiv 0$.
+ 14681:  
+>14682:  b) Define the function $f:\mathbb R^+\to \mathbb R$ by $f(0)=0$, $f(x)=1$ if $1\leq x<2$ and $x$ rational, $f(x)=-1$  if $1<x<2$ and $x$ irrational.
+ 14683:   If $n\in \mathbb N$ and $2^n\leq x<2^{n+1}$, put $f(x)=(-1)^nf(x/2^n)$. If $\frac{1}{2^{n+1}}\leq x< \frac{1}{2^n}$, put $f(x)=(-1)^nf(2^nx)$.
+ 14684:  If $x<0$, then let $f(x)=f(-x)$. Then $f$ is discontinuous everywhere and, by construction, $f(x)+f(2x)=0$.
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 14689)
+  message: If this : is for a mapping, consider using \colon.
+ 14687: c) \underline{All solutions to $f(x)+f(2x)\equiv 0$ on $\mathbb R$:}
+ 14688: 
+>14689: Let $g:[-2,-1[\cup [1,2[\to \mathbb R$ be an arbitrary function.  Put  
+ 14690: 
+ 14691: $$f(x)=\begin{cases}  0 &\text{ if $x=0$}\\ 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 15165)
+  message: If this : is for a mapping, consider using \colon.
+ 15163: $$
+ 15164: 
+>15165: Now $I(R):=\dis\int_{\gamma_2(R)} f(z)dz\to 0$ as $R\to\infty$. In fact,
+ 15166: 
+ 15167: \begin{eqnarray*}
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 15171)
+  message: If this : is for a mapping, consider using \colon.
+ 15169: \end{eqnarray*}
+ 15170: 
+>15171: Moreover, $J(r):=\dis\int_{\gamma_4(r)} f(z)dz\to  -2\pi$ as $r\to 0$.  In fact, since
+ 15172: the Taylor expansion of $zf(z)=\frac{(1-e^{-2z})(1-e^{2iz})}{z^2}$ at the origin equals
+ 15173: $$ -4i +(4+4i)z-4z^2+\Oh(z^3),$$
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 4269)
+  message: If this : is for a mapping, consider using \colon.
+  4267: 
+  4268: Let $0<||x||<1$ and  $s\in S$.  Let  $s'$ be the (second) uniquely determined intersection point of  the half-line starting at  $s$ and passing through $x$ with $S$. Then the 
+> 4269: map  $Q: S\to [0,\infty[, \; s\mapsto  ||x-s|| / ||x-s'||$ is a nonconstant continuous map.
+  4270:  \end{lemma}
+  4271: \begin{proof}
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 4339)
+  message: If this : is for a mapping, consider using \colon.
+  4337: (8) By hypothesis, $||f(s)||\leq C$ for every $s\in S$.
+  4338: Let $0<||x||<1$. Consider, as in Lemma \ref{center}, 
+> 4339:  the map $H: S\to [0,\infty[, s\mapsto ||x-s||/||x-s'||$. 
+  4340: $H$ is continuous and non-constant. Since ${\rm dim}\; E\geq 2$,
+  4341:  $S$ is connected by Lemma \ref{conn}. Hence $H(S)$ is an interval. In particular,
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7018)
+  message: If this : is for a mapping, consider using \colon.
+  7016: \item[(2)]  $p_{a,b}(z)=az^3+bz^2+(a-1)z+b$ has a multiple zero.
+  7017: 
+> 7018: \item[(3)] The line $L:s\mapsto as+b$ is tangent to the graph $G$ of $f$ at the point $(x,f(x))$  for some \footnote{
+  7019: Later we shall see that $x$ is uniquely determined; so a line $L$ can be tangent to  $G$ at at most one point.}
+  7020:  $x\in \R$,  and
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12618)
+  message: If this : is for a mapping, consider using \colon.
+ 12616: 
+ 12617: It is easily seen that these are solutions. Now let $(a,b)$ be a solution.  Then $(b,a)$ is a solution, too. If $b=a$, or if $b=1$, then nothing remains to be shown. So we may assume that
+>12618: $a> b>1$.  Let $\log x$ be the natural logarithm. Now the function $f:x \mapsto x/\log x$ is strictly increasing for $x\geq e$ and strictly decreasing for $1<x\leq e$ with $ \min_{x>0} f(x)= e$. So if $a>b\geq 3> e$, 
+ 12619: $$\frac{a}{\log a}>\frac{b}{\log b}$$
+ 12620: or equivalently,
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 14479)
+  message: If this : is for a mapping, consider using \colon.
+ 14477: 
+ 14478: As shown above,   $2S\ss P\ss S$ and $2S$ is a subgroup of $S$.  Here $S=2S$  if and only if all the translation operators 
+>14479: $\tau_x: S\to S, y\mapsto x-y$ have a fixed point.
+ 14480: 
+ 14481: Also note that $R$ has the following property:
+

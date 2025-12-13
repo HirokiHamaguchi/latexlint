@@ -1,0 +1,740 @@
+[CODE] LLUnRef (93)
+- file: sample\submodules\coursebook\appendix\appendix.tex (line 197)
+  message: Label "fig:sloppy_struct" is defined but never referenced.
+   195: \includegraphics[width=.7\textwidth]{appendix/drawings/struct_slop.eps}
+   196: \caption{Eight box struct, two boxes of slop}
+>  197: \label{fig:sloppy_struct}
+   198: \end{figure}
+   199: 
+
+- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 183)
+  message: Label "satACTstats" is defined but never referenced.
+   181: \end{tabular}
+   182: \caption{Mean and standard deviation for the SAT and ACT.}
+>  183: \label{satACTstats}
+   184: \end{figure}
+   185: 
+
+- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 701)
+  message: Label "6895997" is defined but never referenced.
+   699: \Figure[A normal distribution is shown. The central region, from one standard deviation below the mean to one standard deviation above the mean, is shaded blue and is labeled with a value of 68\%. The region further out to two standard deviations below the mean to two standard deviations above the mean is shaded green (besides the portion shaded blue) and is labeled with a value of 95\%. The region further out to three standard deviations below the mean to three standard deviations above the mean is shaded yellow (besides the portions shaded green or blue) and is labeled with a value of 99.7\%. Those percentages -- 68\%, 95\%, and 99.7\% -- represent the portions of the area below a normal distribution within 1, 2, and 3 standard deviations of the mean.]{0.63}{6895997}
+   700: \caption{Probabilities for falling within 1, 2, and 3 standard deviations of the mean in a normal distribution.}
+>  701: \label{6895997}
+   702: \end{figure}
+   703: 
+
+- file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 448)
+  message: Label "variables" is defined but never referenced.
+   446:     {0.57}{variables}
+   447:   \caption{Breakdown of variables into their respective types.}
+>  448:   \label{variables}
+   449: \end{figure}
+   450: 
+
+- file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 899)
+  message: Label "mnWinter" is defined but never referenced.
+   897:         As comedian Jon Stewart pointed out,
+   898:         ``It's one storm, in one region, of one country.''
+>  899:     \label{mnWinter}}
+   900:   \end{minipage}
+   901: \end{figure}
+
+- file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 943)
+  message: Label "popToSampleGraduates" is defined but never referenced.
+   941:       selected from the population to be included in the
+   942:       sample.}
+>  943:   \label{popToSampleGraduates}
+   944: \end{figure}
+   945: 
+
+- file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 972)
+  message: Label "popToSubSampleGraduates" is defined but never referenced.
+   970:       disproportionate number of graduates from
+   971:       health-related majors.}
+>  972:   \label{popToSubSampleGraduates}
+   973: \end{figure}
+   974: 
+
+- file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 1012)
+  message: Label "surveySample" is defined but never referenced.
+  1010:       It is difficult, and often times impossible,
+  1011:       to completely fix this problem.}
+> 1012:   \label{surveySample}
+  1013: \end{figure}
+  1014: 
+
+- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1183)
+  message: Label "quadcopter_david_j" is defined but never referenced.
+  1181:    \oiRedirect{textbook-CC_BY_2}{CC-BY 2.0 license.}
+  1182:    This photo has been cropped and a border has been added.}}
+> 1183: \label{quadcopter_david_j}
+  1184: \end{figure}
+  1185: 
+
+- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1571)
+  message: Label "arrayOfFigureAreasForChiSquareDistribution" is defined but never referenced.
+  1569: \textbf{\subref{chiSquareAreaAbove9Point21WithDF3}}~3~degrees of freedom, area above 9.21 shaded.
+  1570: }
+> 1571: \label{arrayOfFigureAreasForChiSquareDistribution}
+  1572: \end{figure}
+  1573: 
+
+- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 661)
+  message: Label "rissosDolphin" is defined but never referenced.
+   659:    -----------------------------\vspace{-2mm}\\
+   660:    {\footnotesize Photo by Mike Baird (\oiRedirect{textbook-bairdphotos_com}{www.bairdphotos.com}). \oiRedirect{textbook-CC_BY_2}{CC~BY~2.0~license}.}\vspace{-8mm}}
+>  661:    \label{rissosDolphin}
+   662: \end{minipage}
+   663: \stdvspace{}
+
+- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 1175)
+  message: Label "textbooksSummaryStats" is defined but never referenced.
+  1173: \end{tabular}
+  1174: \caption{Summary statistics for the \uclabookN{} price differences.}
+> 1175: \label{textbooksSummaryStats}
+  1176: \end{figure}
+  1177: 
+
+- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 777)
+  message: Label "photoClassifyVenn" is defined but never referenced.
+   775:   \caption{A Venn diagram using boxes for the
+   776:       \data{photo\us{}classify} data set.}
+>  777:   \label{photoClassifyVenn}
+   778: \end{figure}
+   779: 
+
+- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 2295)
+  message: Label "fdicHeightContDistFilled" is defined but never referenced.
+  2293:       with the area between 180 and 185 cm shaded.
+  2294:       Compare this plot with Figure~\ref{usHeightsHist180185}.}
+> 2295:   \label{fdicHeightContDistFilled}
+  2296: \end{figure}
+  2297: 
+
+- file: sample\submodules\openintro-statistics\extraTeX\tables\TeX\chiSquareTable.tex (line 94)
+  message: Label "arrayOfFigureAreasForChiSquareDistributionChiSqAppendix" is defined but never referenced.
+    92: %\textbf{\subref{app_chiSquareAreaAbove9Point21WithDF3}}~3~degrees of freedom, area above 9.21 shaded.
+    93: }
+>   94: \label{arrayOfFigureAreasForChiSquareDistributionChiSqAppendix}
+    95: \end{figure}
+    96: 
+
+- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1125)
+  message: Label "county_pop_transformed" is defined but never referenced.
+  1123:       of 10, e.g. ``4'' on the x-axis corresponds to
+  1124:       $10^4 =$ 10,000.}
+> 1125:     \label{county_pop_transformed}
+  1126: \end{figure}
+  1127: 
+
+- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1190)
+  message: Label "county_pop_change_v_pop_transform_main" is defined but never referenced.
+  1188:       of the same data but where the population
+  1189:       size has been log-transformed.}
+> 1190:   \label{county_pop_change_v_pop_transform_main}
+  1191: \end{figure}
+  1192: 
+
+- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1275)
+  message: Label "countyPovertyMap" is defined but never referenced.
+  1273:         {countyIntensityMaps}
+  1274:         {countyPovertyMap}
+> 1275:     \label{countyPovertyMap}
+  1276:   }
+  1277:   \subfigure[]{
+
+- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1282)
+  message: Label "countyUnemploymentRateMap" is defined but never referenced.
+  1280:         {countyIntensityMaps}
+  1281:         {countyUnemploymentRateMap}
+> 1282:     \label{countyUnemploymentRateMap}
+  1283:   }
+  1284:   \caption{\subref{countyPovertyMap} Intensity map of
+
+- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1298)
+  message: Label "countyHomeownershipMap" is defined but never referenced.
+  1296:         {countyIntensityMaps}
+  1297:         {countyHomeownershipMap}
+> 1298:     \label{countyHomeownershipMap}
+  1299:   }
+  1300:   \subfigure[]{
+
+- file: sample\submodules\openintro-statistics\extraTeX\tables\TeX\zTable.tex (line 198)
+  message: Label "normTableSide1" is defined but never referenced.
+   196: \multicolumn{11}{l}{{\normalsize$^*$For $Z \leq -3.50$, the probability is less than or equal to $0.0002$.}}
+   197: \end{tabular}}
+>  198: \label{normTableSide1}
+   199: \end{center}
+   200: \end{table}
+
+- file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 674)
+  message: Label "fig:prichn2b" is defined but never referenced.
+   672: 
+   673: \begin{figure}[h]
+>  674:   \label{fig:prichn2b}
+   675:   \centering
+   676:   \begin{tikzpicture}[scale=2.5]
+
+- file: sample\arxiv_sources\1609.03457v1\tables_for-avail-engines-chapter.tex (line 12)
+  message: Label "table:Web-available-main" is defined but never referenced.
+    10: \small
+    11: \centering
+>   12: \label{table:Web-available-main}
+    13: \begin{tabular}{SlSlSlSlSlSl}  \toprule %
+    14: %
+
+- file: sample\arxiv_sources\1609.03457v1\tables_for-avail-engines-chapter.tex (line 124)
+  message: Label "table:web-available-query" is defined but never referenced.
+   122: \begin{table}[H]
+   123: \caption{Querying in Web-Available Engines}
+>  124: \label{table:web-available-query}
+   125: \small
+   126: \begin{tabular}{SlSlSlSlSlSlSl}  \toprule
+
+- file: sample\arxiv_sources\1609.03457v1\tables_for-avail-engines-chapter.tex (line 278)
+  message: Label "table:downloadable-main" is defined but never referenced.
+   276: \small
+   277: \centering
+>  278: \label{table:downloadable-main}
+   279: \begin{tabular}{SlSlSlSlSlSlSlSl}  \toprule %
+   280: %
+
+- file: sample\arxiv_sources\1609.03457v1\tables_for-avail-engines-chapter.tex (line 358)
+  message: Label "table:downloadable-querying" is defined but never referenced.
+   356: \begin{threeparttable}
+   357: \caption{Querying in Downloadable Versions}
+>  358: \label{table:downloadable-querying}
+   359: \small
+   360: \centering
+
+- file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 208)
+  message: Label "fig:1" is defined but never referenced.
+   206: \end{tikzpicture}
+   207: \caption{$\DPB$, $\ATR$, and some theories of hyperarithmetic analysis.  The new results are those concerning $\DPB$.  A double arrow indicates a 
+>  208: strict implication.}\label{fig:1}
+   209: \end{figure}
+   210: \end{center}
+
+- file: sample\arxiv_sources\2103.12048v3\2_data.tex (line 79)
+  message: Label "fig:turnspertype" is defined but never referenced.
+    77:   \begin{subfigure}[b]{0.44\linewidth}
+    78: \includegraphics[width=\linewidth]{images/total_sents2.pdf}\vspace{-0.25cm}
+>   79: \caption{}\label{fig:turnspertype}
+    80: \end{subfigure}~
+    81:   \begin{subfigure}[b]{0.44\linewidth}
+
+- file: sample\arxiv_sources\2103.12048v3\2_data.tex (line 83)
+  message: Label "fig:numwords" is defined but never referenced.
+    81:   \begin{subfigure}[b]{0.44\linewidth}
+    82: \includegraphics[width=\linewidth]{images/location_of_unks_train_all2.pdf}\vspace{-0.25cm}
+>   83: \caption{}\label{fig:numwords}
+    84: \end{subfigure}
+    85: % \begin{subfigure}[b]{0.27\linewidth}
+
+- file: sample\arxiv_sources\2103.12048v3\2_data.tex (line 90)
+  message: Label "fig:distributions" is defined but never referenced.
+    88: % \end{subfigure}
+    89: \caption{Distributions of  \textbf{(a)} number of sentences per problem, and \textbf{(b)} position of unknown.}
+>   90: \label{fig:distributions}
+    91: \end{figure}
+    92: 
+
+- file: sample\arxiv_sources\2307.16112v1\4-system.tex (line 182)
+  message: Label "fig:implementation" is defined but never referenced.
+   180: \includegraphics[width=0.327\linewidth]{figures/graph-extraction.jpg}
+   181: \caption{Example results of figure extraction, math formula extraction, and graph identification.}
+>  182: \label{fig:implementation}
+   183: \end{figure}
+   184: 
+
+- file: sample\arxiv_sources\2401.03238v1\Using_Large.tex (line 201)
+  message: Label "fig:your_label" is defined but never referenced.
+   199:     \includegraphics[width=0.9\textwidth]{Lesson_Image.png} % Replace 'image_filename' with your image file's name
+   200:     \caption{Scenario from \textit{Reacting to Errors} lesson}
+>  201:     \label{fig:your_label}
+   202: \end{figure}
+   203: 
+
+- file: sample\arxiv_sources\2401.03238v1\Using_Large.tex (line 123)
+  message: Label "tab:my-table" is defined but never referenced.
+   121: \centering
+   122: \caption{Agreement Among Human Graders}
+>  123: \label{tab:my-table}
+   124: \vspace{10pt}
+   125: \begin{tabular}{lccc}
+
+- file: sample\arxiv_sources\2401.03238v1\Using_Large.tex (line 160)
+  message: Label "tab:my-table" is defined but never referenced.
+   158: \centering
+   159: \caption{Performance Comparison of GPT-3.5-turbo and GPT-4}
+>  160: \label{tab:my-table}
+   161: \vspace{10pt}
+   162: \begin{tabular}{lllllll}
+
+- file: sample\arxiv_sources\2401.03238v1\Using_Large.tex (line 227)
+  message: Label "tab:my-table" is defined but never referenced.
+   225: \begin{table}[]
+   226: \caption{Criteria with Explanations/Actions by the Tutor}
+>  227: \label{tab:my-table}
+   228: \vspace{10pt}
+   229: \begin{tabular}{ll}
+
+- file: sample\arxiv_sources\2401.03238v1\Using_Large.tex (line 248)
+  message: Label "tab:my-table" is defined but never referenced.
+   246: \begin{table}[]
+   247: \caption{Criteria with Annotated Example Utterances}
+>  248: \label{tab:my-table}
+   249: \vspace{10pt}
+   250: \resizebox{\columnwidth}{!}{%
+
+- file: sample\arxiv_sources\2402.06332v2\main.tex (line 114)
+  message: Label "fig:head" is defined but never referenced.
+   112:       {figures/math256.jpeg}
+   113:  \caption{4-shot MATH performances with 256 times majority voting. Comparison is based on our pre-trained base model, Llemma \citep{llemma}, and Minerva \citep{Minerva}. The figure is modified from \cite{llemma}.}
+>  114:  \label{fig:head}
+   115: \end{figure}
+   116: 
+
+- file: sample\arxiv_sources\2312.01661v2\samplebody-conf.tex (line 100)
+  message: Label "daposedit" is defined but never referenced.
+    98: 
+    99: \begin{table}[]
+>  100: \label{daposedit}    
+   101: \vspace{10pt}
+   102: \begin{tabular}{l}
+
+- file: sample\arxiv_sources\2312.01661v2\samplebody-conf.tex (line 188)
+  message: Label "table2" is defined but never referenced.
+   186: \end{tabular}
+   187: \caption{{\dataset} statistics by grades.} \label{tab:diffdist}
+>  188: \label{table2}
+   189: \vspace{-10mm}
+   190: \end{table}
+
+- file: sample\arxiv_sources\2312.01661v2\samplebody-conf.tex (line 349)
+  message: Label "tab:answer-unaware-results" is defined but never referenced.
+   347: }
+   348: \caption{\small{Answer-unaware question generation results in the context-aware setting.}}
+>  349: \label{tab:answer-unaware-results}
+   350: \vspace{-10mm}
+   351: \end{table}
+
+- file: sample\arxiv_sources\2312.01661v2\samplebody-conf.tex (line 406)
+  message: Label "tab:my_label" is defined but never referenced.
+   404: }
+   405: \caption{Human evaluation results in the context-unaware setting. The format is $\mu + \sigma$}
+>  406: \label{tab:my_label}
+   407: \vspace{-7mm}
+   408: \end{table}
+
+- file: sample\arxiv_sources\2105.03843v1\IsMathUseful.tex (line 62)
+  message: Label "figRV" is defined but never referenced.
+    60: 		\includegraphics[width=0.60\textwidth]{RobyVic.PNG}
+    61: 	\caption{\textit{Math describes reality}, according to young Roby Vic, a Disney version of the ESA austronaut Roberto Vittori in the story \textit{3 gradini per le stelle --- Paperino Paperotto, Roby Vic e i conti... alla rovescia} (\textit{3 steps to the stars --- Donald Duckling, Roby Vic and the countdowns}) \cite{RV}}
+>   62: 	\label{figRV}
+    63: \end{figure}
+    64: 
+
+- file: sample\arxiv_sources\2105.03843v1\IsMathUseful.tex (line 115)
+  message: Label "figRedBaron" is defined but never referenced.
+   113: 		\includegraphics[width=0.40\textwidth]{Royal_guardsmen_snoopy.jpg}
+   114: 	\caption{The cover of the album Snoopy vs the Red Baron (imagine from wikipedia)}
+>  115: 	\label{figRedBaron}
+   116: \end{figure}
+   117: 
+
+- file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 769)
+  message: Label "" is defined but never referenced.
+   767: \includegraphics{filename}
+   768: \caption{text of caption}
+>  769: \label{}
+   770: \end{figure}
+   771: 
+
+- file: sample\arxiv_sources\2307.16112v1\5-user-study.tex (line 34)
+  message: Label "fig:boxplot" is defined but never referenced.
+    32: \includegraphics[width=\linewidth]{figures/study-box-plot.pdf}
+    33: \caption{This box plot summarizes the average scores of engagement (purple) and overall rating (orange) based on participants' preferences.}
+>   34: \label{fig:boxplot}
+    35: \end{figure}
+    36: 
+
+- file: sample\arxiv_sources\2307.16112v1\5-user-study.tex (line 47)
+  message: Label "fig:feature" is defined but never referenced.
+    45: \includegraphics[width=\linewidth]{figures/study-feature-feedback.pdf}
+    46: \caption{This figure summarize our participants' feedback on the usefulness of the implemented features. From top to bottom, the features are sorted by their average score in descending order.}
+>   47: \label{fig:feature}
+    48: \end{figure}
+    49: 
+
+- file: sample\arxiv_sources\2402.14804v1\03-Datasets.tex (line 46)
+  message: Label "fig:sotas" is defined but never referenced.
+    44: \includegraphics[width=1.0\columnwidth]{figures/sotas.pdf}
+    45: \caption{State-of-the-art performance and corresponding model (\circled{1}: GPT-4V, \circled{2}: InternLM-XComposer2-VL-7B, \circled{3}: GPT-4 Code Interpreter) of several mathematical benchmarks in \textbf{zero-shot} settings. Our~\datasetname~benchmark is markedly more challenging compared to existing text-only and multi-modal mathematical benchmarks. Results of other benchmarks are either from their official website or \href{https://paperswithcode.com/sota/}{Papers With Code}.}
+>   46: \label{fig:sotas}
+    47: \end{figure}
+    48:     
+
+- file: sample\arxiv_sources\2407.13690v2\datasets.tex (line 37)
+  message: Label "tab:datasets" is defined but never referenced.
+    35:     % Our datasets only utilize a 7B open-source model and are open-source.
+    36:   }
+>   37:   \label{tab:datasets}
+    38:   \vspace{-15pt}
+    39: \end{table}
+
+- file: sample\arxiv_sources\2407.13690v2\comparison_to_non_vanilla.tex (line 27)
+  message: Label "tab:comparison_to_non_vanilla" is defined but never referenced.
+    25:     implemented by us according to their papers' descriptions, since
+    26:   the official implementations have not been open-sourced.}
+>   27:   \label{tab:comparison_to_non_vanilla}
+    28: \end{table}
+
+- file: sample\arxiv_sources\2407.13690v2\level_wise_math_coverage.tex (line 25)
+  message: Label "tab:level_wise_math_coverage" is defined but never referenced.
+    23:     same coverage because of the ``Cover'' operation, which tries to
+    24:   ensure there is at least one correct response for each query.}
+>   25:   \label{tab:level_wise_math_coverage}
+    26: \end{table}
+    27: 
+
+- file: sample\arxiv_sources\2407.13690v2\main_results.tex (line 194)
+  message: Label "tab:main-results" is defined but never referenced.
+   192:     % paper here}
+   193:   }
+>  194:   \label{tab:main-results}
+   195:   \vspace{-15pt}
+   196: \end{table}
+
+- file: sample\arxiv_sources\2407.13690v2\appendix.tex (line 232)
+  message: Label "tab:train_time" is defined but never referenced.
+   230:   \end{tabular}
+   231:   \caption{Examples of training time cost.}
+>  232:   \label{tab:train_time}
+   233: \end{table}
+   234: 
+
+- file: sample\arxiv_sources\2407.13690v2\domain_wise_math.tex (line 50)
+  message: Label "tab:domain_wise_math" is defined but never referenced.
+    48:     Precalculus, Geometry, respectively. \textbf{Bold} means the best
+    49:   score within the respective base model.}
+>   50:   \label{tab:domain_wise_math}
+    51: \end{table}
+
+- file: sample\arxiv_sources\2407.13690v2\dsmath_dart_rl.tex (line 24)
+  message: Label "tab:dsmath_dart_rl" is defined but never referenced.
+    22:     benchmarks respectively. \textbf{Bold} means the best score within the
+    23:   respective base model.}
+>   24:   \label{tab:dsmath_dart_rl}
+    25: \end{table}
+
+- file: sample\arxiv_sources\2409.02834v3\model_params.tex (line 5)
+  message: Label "table: model_param" is defined but never referenced.
+     3: % \small
+     4: \caption{Detail of \texttt{Math-LMM} parameters}
+>    5: \label{table: model_param}
+     6: \vspace{-2mm}
+     7: \setlength{\tabcolsep}{1.6mm}{
+
+- file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 239)
+  message: Label "fig:SBI-RAG" is defined but never referenced.
+   237:   \includegraphics[width=1\linewidth, scale=2]{Arch.jpg}
+   238:   \caption{Illustration of SBI-RAG Architecture}
+>  239:   \label{fig:SBI-RAG}
+   240: \end{figure}
+   241: 
+
+- file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 540)
+  message: Label "GSM8k" is defined but never referenced.
+   538:   \includegraphics[width=1\linewidth, scale=2]{GSM8K.png}
+   539:   \caption{GSM8K dataset example problems}
+>  540:   \label{GSM8k}
+   541: \end{figure}
+   542: 
+
+- file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 625)
+  message: Label "fig:Reasoning_score" is defined but never referenced.
+   623:     \includegraphics[width=\linewidth]{Response_GPT4_new.png}
+   624:     \caption{Reasoning Score SBI-RAG vs GPT-4}
+>  625:     \label{fig:Reasoning_score}
+   626:   \end{minipage}
+   627:   \hfill
+
+- file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 632)
+  message: Label "fig:Confusion_matrix_Reasoning" is defined but never referenced.
+   630:     \includegraphics[width=\linewidth]{Reasoning_score_New.png}
+   631:     \caption{Reasoning Score SBI-RAG vs GPT 3.5 Turbo}
+>  632:     \label{fig:Confusion_matrix_Reasoning}
+   633:   \end{minipage}
+   634: \end{figure}
+
+- file: sample\arxiv_sources\2409.02834v3\test_dataset.tex (line 6)
+  message: Label "table: detailed statics" is defined but never referenced.
+     4: \centering
+     5: \caption{Detailed statistics of CMM-Math datasets. }
+>    6: \label{table: detailed statics}
+     7: \vspace{-2mm}
+     8: \setlength{\tabcolsep}{0.8mm}{
+
+- file: sample\arxiv_sources\2409.02834v3\dataset_overview.tex (line 5)
+  message: Label "table: Overview" is defined but never referenced.
+     3: \centering
+     4: \caption{Key statistics of CMM-Math. }
+>    5: \label{table: Overview}
+     6: \vspace{-3mm}
+     7: \begin{tabular}{ll}
+
+- file: sample\arxiv_sources\2411.00387v3\lstm_acc_data.tex (line 15)
+  message: Label "tab: input_length" is defined but never referenced.
+    13: }
+    14: \caption{LSTM first-level classification accuracy based on different input context lengths. }
+>   15: \label{tab: input_length}
+    16: \end{table}
+
+- file: sample\arxiv_sources\2411.00387v3\lstm_acc_model.tex (line 15)
+  message: Label "tab: model_sizes" is defined but never referenced.
+    13: }
+    14: \caption{LSTM first-level classification accuracy based on different model sizes}
+>   15: \label{tab: model_sizes}
+    16: \end{table}
+
+- file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 410)
+  message: Label "fig:carformer" is defined but never referenced.
+   408: \includegraphics[width=0.86\columnwidth]{plots/carformer_cropped.pdf}
+   409:     \caption{CarFormer architecture}
+>  410:     \label{fig:carformer}
+   411: \end{figure}
+   412: \subsubsection{Next Event Prediction.} 
+
+- file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 560)
+  message: Label "fig:exp_epredictor_arch" is defined but never referenced.
+   558:     \includegraphics[width=1\columnwidth]{plots/f1.pdf}
+   559:     \caption{F1 Score comparison with multiple Epredictor architectures in function of the number of observations.}
+>  560:     \label{fig:exp_epredictor_arch}
+   561: \end{figure}
+   562: \begin{figure}[ht]
+
+- file: sample\arxiv_sources\2411.00387v3\finetune_gpt.tex (line 23)
+  message: Label "tab:fine_tune" is defined but never referenced.
+    21: }
+    22: \caption{First-level classification with various context lengths on GPT-3.5 and fine-tuned GPT-3.5.}
+>   23: \label{tab:fine_tune}
+    24: \end{table}
+    25: 
+
+- file: sample\arxiv_sources\2411.00387v3\math_reasoning_res.tex (line 25)
+  message: Label "tab:math_reason_res" is defined but never referenced.
+    23: }
+    24: \caption{Evaluation of LLMs on downstream mathematical reasoning tasks. \textbf{+ LoRA (\ours)} indicates that the corresponding model is first fine-tuned using LoRA on \ours before being evaluated on downstream mathematical reasoning tasks. The improvements from LoRA fine-tuning on \ours are highlighted in \textcolor{darkgreen}{darkgreen} (\(\uparrow x\)).}
+>   25: \label{tab:math_reason_res}
+    26: \end{table}
+    27: 
+
+- file: sample\arxiv_sources\2502.20808v6\3_MI-MATH.tex (line 103)
+  message: Label "tab:result_diffculty" is defined but never referenced.
+   101:     \vspace{-3mm}
+   102:     \caption{Result decomposition across question difficulty levels.}
+>  103:     \label{tab:result_diffculty}
+   104:     \vspace{-5mm}
+   105: \end{table}
+
+- file: sample\arxiv_sources\2502.17387v1\main.tex (line 203)
+  message: Label "fig:treemaps" is defined but never referenced.
+   201: \end{minipage}
+   202: \caption{The sources (left) and domains (right) of the \bigmath~dataset, scaled by size.}
+>  203: \label{fig:treemaps}
+   204: \end{figure}
+   205: 
+
+- file: sample\arxiv_sources\2502.17387v1\main.tex (line 424)
+  message: Label "fig:reformulation" is defined but never referenced.
+   422:     \includegraphics[width=0.95\linewidth]{figures/big_math_reformulation.pdf}
+   423:     \caption{\textbf{Our reformulation strategy} first extracts key information, then reformulates the problem as open-ended, followed by a judgement of the reformulation and a final verification. The full process is detailed in Section~\ref{sec:reformulation_strategy}, with successful and failed examples of reformulation in Appendix~\ref{app:reformulation_examples}.}
+>  424:     \label{fig:reformulation}
+   425: \end{figure}
+   426: 
+
+- file: sample\arxiv_sources\2502.17387v1\main.tex (line 977)
+  message: Label "app:llama8b_rollout" is defined but never referenced.
+   975: You are a math expert. Given the following math problem, provide your solution in Latex format. Always format your final answer in perfect LaTeX \textbackslash boxed\{final\_answer\} format.
+   976:     \end{text_full}
+>  977:     \label{app:llama8b_rollout}
+   978: \end{figure}
+   979: 
+
+- file: sample\arxiv_sources\2502.17387v1\main.tex (line 1039)
+  message: Label "app:llama405b_rollout" is defined but never referenced.
+  1037: ---\\
+  1038:     \end{text_full}
+> 1039:     \label{app:llama405b_rollout}
+  1040: \end{figure}
+  1041: 
+
+- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 102)
+  message: Label "fig:interestingness" is defined but never referenced.
+   100:     \includegraphics[width=0.9\linewidth]{Images/interestingness.png}
+   101:     \caption{Human interactions with mathematics involve not just solving problems, but deciding what problems are worth pursuing at all. LLMs, in many of their applications today, are asked to solve problems directly -- without ``choice'' in what to solve. Our work compares model and humans' judgments of problems at both the final judgment and the factors considered in that judgment.}%A gap remains: in settings where LLMs interact with mathematics in a human-like way, LLMs’ judgments of how interesting problems are and why they are interesting remains unexplored. In our work, we study two human participant pools, exploring how language models' assessments of interestigness can be compared to people both in the final assessment of whether the problem is interesting and in the \textit{process} by which a reasoner arrives at such a judgement (e.g., what factors are considered when judging interestingness).} %We conduct a first study comparing LLMs' judgments of problem interestingness to those of humans; we collect data from two human participant pools --- participants from a crowdsourcing website, and IMO participants --- and compare those to LLMs, showing ways in which LLMs' judgments align (and do not) with those of humans.}
+>  102:     \label{fig:interestingness}
+   103: \end{figure}
+   104: 
+
+- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 194)
+  message: Label "fig:r2" is defined but never referenced.
+   192:     \includegraphics[width=0.32\linewidth]{Images/prolific/mixtral_8x7b_instruct_temp1.00_vs_human_interestingness.png}
+   193:     \caption{Correlation plots with $95\%$ bootstrapped confidence intervals for human vs. LLM interestingness ratings at temperature $1.0$. All plots for interestingness and difficulty correlations across temperatures and models are listed in Appendix \ref{app:model_corr}.}
+>  194:     \label{fig:r2}
+   195: \end{figure}
+   196: 
+
+- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 244)
+  message: Label "fig:heatmap-prolific-int-1.0" is defined but never referenced.
+   242:     \includegraphics[width=\linewidth]{Images/prolific/agent_correlation_interestingness_t1.00.png}
+   243:     \caption{Interestingness (temp = 1.0)}
+>  244:     \label{fig:heatmap-prolific-int-1.0}
+   245:   \end{subfigure}
+   246:   \hfill
+
+- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 252)
+  message: Label "fig:heatmap-prolific-chal-1.0" is defined but never referenced.
+   250:     \includegraphics[width=\linewidth]{Images/prolific/agent_correlation_challenge_t1.00.png}
+   251:     \caption{Difficulty (temp = 1.0)}
+>  252:     \label{fig:heatmap-prolific-chal-1.0}
+   253:   \end{subfigure}
+   254:   \caption{
+
+- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 304)
+  message: Label "fig:prolific-wd-heatmaps-t1" is defined but never referenced.
+   302:     Ratings at temperature $0.30$ are included in Appendix~\ref{app:add_results}.
+   303:     }
+>  304:     \label{fig:prolific-wd-heatmaps-t1}
+   305: \end{figure}
+   306: \end{comment}
+
+- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 404)
+  message: Label "fig:placeholder" is defined but never referenced.
+   402:     \includegraphics[width=\linewidth]{Images/original_vs_variant_interestingness.png}
+   403:     \caption{Caption}
+>  404:     \label{fig:placeholder}
+   405: \end{figure}\paragraph{Features of Problem Interestingness}
+   406: 
+
+- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 430)
+  message: Label "fig:placeholder" is defined but never referenced.
+   428:     \includegraphics[width=\linewidth]{Images/deepseek_interestingness_vs_reasoning.png}
+   429:     \caption{Caption}
+>  430:     \label{fig:placeholder}
+   431: \end{figure}
+   432: 
+
+- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 517)
+  message: Label "fig:heatmap-prolific-int-0.3" is defined but never referenced.
+   515:     \includegraphics[width=0.75\linewidth]{Images/prolific/agent_correlation_interestingness_t0.30.png}
+   516:     \caption{Interestingness (temp = 0.3)}
+>  517:     \label{fig:heatmap-prolific-int-0.3}
+   518:   \end{subfigure}
+   519:   \hfill
+
+- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 525)
+  message: Label "fig:heatmap-prolific-chal-0.3" is defined but never referenced.
+   523:     \includegraphics[width=0.75\linewidth]{Images/prolific/agent_correlation_challenge_t0.30.png}
+   524:     \caption{Difficulty (temp = 0.3)}
+>  525:     \label{fig:heatmap-prolific-chal-0.3}
+   526:   \end{subfigure}
+   527: 
+
+- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 545)
+  message: Label "fig:heatmap-prolific-int-1.0" is defined but never referenced.
+   543:     \includegraphics[width=0.75\linewidth]{Images/prolific/agent_correlation_interestingness_t1.00.png}
+   544:     \caption{Interestingness (temp = 1.0)}
+>  545:     \label{fig:heatmap-prolific-int-1.0}
+   546:   \end{subfigure}
+   547:   \hfill
+
+- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 553)
+  message: Label "fig:heatmap-prolific-chal-1.0" is defined but never referenced.
+   551:     \includegraphics[width=0.75\linewidth]{Images/prolific/agent_correlation_challenge_t1.00.png}
+   552:     \caption{Difficulty (temp = 1.0)}
+>  553:     \label{fig:heatmap-prolific-chal-1.0}
+   554:   \end{subfigure}
+   555: 
+
+- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 768)
+  message: Label "fig:qwq_r2" is defined but never referenced.
+   766:     \end{tabular}
+   767:     \caption{QwQ-32B: Human vs LLM ratings}
+>  768:     \label{fig:qwq_r2}
+   769: \end{figure}
+   770: 
+
+- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 913)
+  message: Label "tab:models" is defined but never referenced.
+   911: \hline
+   912: \end{tabular}
+>  913: \label{tab:models}
+   914: \end{table}
+   915: 
+
+- file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 555)
+  message: Label "fig:placeholder" is defined but never referenced.
+   553:     \caption{Comparison of different criterions for the structural fusion (Phase 2) in function of the number of samples \(m\). With \(|Y| = 474, |X|=29,100\) nodes.}\label{fig:ablation_comparaison_criterions}
+   554:     \includegraphics[width=0.95\linewidth]{plots/comparaison_cargo_nsamples.pdf}
+>  555:     \label{fig:placeholder}
+   556: \end{figure}
+   557: \section{Conclusion}
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6901)
+  message: Label "red" is defined but never referenced.
+  6899:    \begin{figure}[h!]
+  6900:         {\scalebox{0.40} {\includegraphics{Tangenten}} }
+> 6901: \caption{\label{red} {The red curve}}
+  6902: \end{figure}
+  6903: 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6910)
+  message: Label "bsp" is defined but never referenced.
+  6908:   \scalebox{0.45} 
+  6909:   {\includegraphics{onetang}} 
+> 6910:  \caption{\label{bsp} {Graph of $f$ and one tangent}}
+  6911: 
+  6912: \end{figure}
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 8307)
+  message: Label "" is defined but never referenced.
+  8305:   \scalebox{.40} 
+  8306:   {\includegraphics{real-ana}} 
+> 8307: \caption{\label{} {Intersecting curves}}
+  8308: \end{figure}
+  8309: 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9628)
+  message: Label "$r=0$" is defined but never referenced.
+  9626:   \scalebox{0.45} 
+  9627:   {\includegraphics{kurv}} 
+> 9628:   \caption{\label{$r=0$} $r=0$, $a=1$, $b=0$}
+  9629: \end{figure}
+  9630: 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9647)
+  message: Label "$r=1$" is defined but never referenced.
+  9645:   \scalebox{0.35} 
+  9646:   {\includegraphics{kurv1}} 
+> 9647:    \caption{\label{$r=1$} $r=1$, $a=3$, $b=3$}
+  9648: \end{figure}
+  9649: 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9704)
+  message: Label "a-neg4" is defined but never referenced.
+  9702:   \scalebox{0.33} 
+  9703:   {\includegraphics{kurv5}} 
+> 9704:    \caption{\label{a-neg4} $a=9$, $b=18$ blau, $b=-18$ rot}
+  9705: \end{figure}
+  9706: 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10313)
+  message: Label "max-sigma" is defined but never referenced.
+ 10311:   \scalebox{.45} 
+ 10312:   {\includegraphics{sigma}} 
+>10313: \caption{\label{max-sigma} The H\"older-Lipschitz constant $\sigma(\alpha)$}
+ 10314: \end{figure}
+ 10315: 
+

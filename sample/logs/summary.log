@@ -1,0 +1,25 @@
+Checked 1041 files. Diagnostics: 7533. Files with diagnostics: 472. Codes: 22. Failures: 0.
+Per-code logs:
+- LLAlignAnd.log
+- LLAlignEnd.log
+- LLAlignSingleLine.log
+- LLBig.log
+- LLBracketMissing.log
+- LLBracketRound.log
+- LLColonEqq.log
+- LLColonForMapping.log
+- LLDoubleQuotes.log
+- LLENDash.log
+- LLEqnarray.log
+- LLHeading.log
+- LLLlGg.log
+- LLNonstandardNotation.log
+- LLPeriod.log
+- LLRefEq.log
+- LLSI.log
+- LLSortedCites.log
+- LLT.log
+- LLThousands.log
+- LLTitle.log
+- LLUnRef.log
+

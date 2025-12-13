@@ -1,0 +1,785 @@
+[CODE] LLSI (98)
+- file: sample\submodules\coursebook\ipc\ipc.tex (line 35)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+    33: 	 
+    34: To illustrate, consider a 32-bit machine, meaning pointers are 32-bits.
+>   35: They can address $2^{32}$ different locations or 4GB of memory where one address is one byte.
+    36: Imagine we had a large table for every possible address where we will store the `real' i.e. ~physical address.
+    37: Each physical address will need 4 bytes -- to hold the 32-bits.
+
+- file: sample\submodules\coursebook\ipc\ipc.tex (line 39)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+    37: Each physical address will need 4 bytes -- to hold the 32-bits.
+    38: Naturally, This scheme would require 16 billion bytes to store all of the entries.
+>   39: It should be painfully obvious that our lookup scheme would consume all of the memory that we could buy for our 4GB machine.
+    40: Our lookup table should be smaller than the memory we have otherwise we will have no space left for our actual programs and operating system data.
+    41: The solution is to chunk memory into small regions called `pages' and `frames' and use a lookup table for each page.
+
+- file: sample\submodules\coursebook\ipc\ipc.tex (line 46)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+    44: 	 
+    45: A \textbf{page} is a block of virtual memory.
+>   46: A typical block size on Linux is 4KiB or $2^{12}$ addresses, though one can find examples of larger blocks.
+    47: So rather than talking about individual bytes, we can talk about blocks of 4KiBs, each block is called a page.
+    48: We can also number our pages (``Page 0'' ``Page 1'' etc). Let's do a sample calculation of how many pages are there assume page size of 4KiB.
+
+- file: sample\submodules\coursebook\ipc\ipc.tex (line 48)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+    46: A typical block size on Linux is 4KiB or $2^{12}$ addresses, though one can find examples of larger blocks.
+    47: So rather than talking about individual bytes, we can talk about blocks of 4KiBs, each block is called a page.
+>   48: We can also number our pages (``Page 0'' ``Page 1'' etc). Let's do a sample calculation of how many pages are there assume page size of 4KiB.
+    49: 	 
+    50: For a 32-bit machine,
+
+- file: sample\submodules\coursebook\ipc\ipc.tex (line 63)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+    61: 	 
+    62: We also call this a \textbf{frame} or sometimes called a `page frame' is a block of \emph{physical memory} or RAM -- Random Access Memory.
+>   63: A frame is the same number of bytes as a virtual page or 4KiB on our machine.
+    64: It stores the bytes of interest.
+    65: To access a particular byte in a frame, an MMU goes from the start of the frame and adds the offset -- discussed later.
+
+- file: sample\submodules\coursebook\ipc\ipc.tex (line 81)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+    79: 	 
+    80: Now to go through the actual calculations.
+>   81: We will assume that a 32-bit machine has 4KiB pages
+    82: Naturally, to address all the possible entries, there are $2^{20}$ frames.
+    83: Since there are $2^{20}$ possible frames, we will need 20 bits to number all of the possible frames meaning \keyword{Frame Number} must be 2.5 bytes long.
+
+- file: sample\submodules\coursebook\ipc\ipc.tex (line 85)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+    83: Since there are $2^{20}$ possible frames, we will need 20 bits to number all of the possible frames meaning \keyword{Frame Number} must be 2.5 bytes long.
+    84: In practice, we'll round that up to 4 bytes and do something interesting with the rest of the bits.
+>   85: With 4 bytes per entry x $2^{20}$ entries = 4 MiB of physical memory are required to hold the entire page table for a process.
+    86: 	 
+    87: Remember our page table maps pages to frames, but each frame is a block of contiguous addresses.
+
+- file: sample\submodules\coursebook\ipc\ipc.tex (line 129)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   127: 	 
+   128: We do have a problem with 64-bit operating systems.
+>  129: For a 64-bit machine with 4KiB pages, each entry needs 52 bits.
+   130: Meaning we need roughly
+   131: With $2^{52}$ entries, that's $2^{55}$ bytes (roughly 40 petabytes).
+
+- file: sample\submodules\coursebook\ipc\ipc.tex (line 154)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   152: Then go to the \keyword{Index2}'th entry of that table.
+   153: That will contain a frame number.
+>  154: This is the good old fashioned 4KiB RAM that we were talking about earlier.
+   155: Then, the MMU adds the offset and do the read or write.
+   156: 	 
+
+- file: sample\submodules\coursebook\ipc\ipc.tex (line 180)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   178: Each \keyword{page\_table\_num} index is 10 bits wide because there are only $2^{10}$ possible \keyword{sub-tables}, so we need 10 bits to store each directory index.
+   179: We'll round up to 2 bytes for the sake of reasoning.
+>  180: If 2 bytes are used for each entry in the top-level table and there are only $2^{10}$ entries, we only need 2KiB to store this entire first level page table.
+   181: Each subtable will point to physical frames, and each of their entries needs to be the required 4 bytes to be able to address all the frames as mentioned earlier.
+   182: However, for processes with only tiny memory needs, we only need to specify entries for low memory addresses for the heap and program code and high memory addresses for the stack.
+
+- file: sample\submodules\coursebook\ipc\ipc.tex (line 184)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   182: However, for processes with only tiny memory needs, we only need to specify entries for low memory addresses for the heap and program code and high memory addresses for the stack.
+   183: 	 
+>  184: Thus, the total memory overhead for our multi-level page table has shrunk from 4MiB for the single-level implementation to three page tables of memory or 2KiB for the top-level and 4KiB for the two intermediate levels of size 10KiB.
+   185: Here's why.
+   186: We need at least one frame for the high-level directory and two frames for two sub-tables.
+
+- file: sample\submodules\coursebook\ipc\ipc.tex (line 184)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   182: However, for processes with only tiny memory needs, we only need to specify entries for low memory addresses for the heap and program code and high memory addresses for the stack.
+   183: 	 
+>  184: Thus, the total memory overhead for our multi-level page table has shrunk from 4MiB for the single-level implementation to three page tables of memory or 2KiB for the top-level and 4KiB for the two intermediate levels of size 10KiB.
+   185: Here's why.
+   186: We need at least one frame for the high-level directory and two frames for two sub-tables.
+
+- file: sample\submodules\coursebook\ipc\ipc.tex (line 184)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   182: However, for processes with only tiny memory needs, we only need to specify entries for low memory addresses for the heap and program code and high memory addresses for the stack.
+   183: 	 
+>  184: Thus, the total memory overhead for our multi-level page table has shrunk from 4MiB for the single-level implementation to three page tables of memory or 2KiB for the top-level and 4KiB for the two intermediate levels of size 10KiB.
+   185: Here's why.
+   186: We need at least one frame for the high-level directory and two frames for two sub-tables.
+
+- file: sample\submodules\coursebook\ipc\ipc.tex (line 184)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   182: However, for processes with only tiny memory needs, we only need to specify entries for low memory addresses for the heap and program code and high memory addresses for the stack.
+   183: 	 
+>  184: Thus, the total memory overhead for our multi-level page table has shrunk from 4MiB for the single-level implementation to three page tables of memory or 2KiB for the top-level and 4KiB for the two intermediate levels of size 10KiB.
+   185: Here's why.
+   186: We need at least one frame for the high-level directory and two frames for two sub-tables.
+
+- file: sample\submodules\coursebook\ipc\ipc.tex (line 189)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   187: One sub-table is necessary for the low addresses -- program code, constants and possibly a tiny heap.
+   188: The other sub-table is for higher addresses used by the environment and stack.
+>  189: In practice, real programs will likely need more sub-table entries, as each subtable can only reference 1024*4KiB = 4MiB of address space.
+   190: The main point still stands.
+   191: We have significantly reduced the memory overhead required to perform page table lookups.
+
+- file: sample\submodules\coursebook\ipc\ipc.tex (line 189)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   187: One sub-table is necessary for the low addresses -- program code, constants and possibly a tiny heap.
+   188: The other sub-table is for higher addresses used by the environment and stack.
+>  189: In practice, real programs will likely need more sub-table entries, as each subtable can only reference 1024*4KiB = 4MiB of address space.
+   190: The main point still stands.
+   191: We have significantly reduced the memory overhead required to perform page table lookups.
+
+- file: sample\submodules\coursebook\ipc\ipc.tex (line 566)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   564: 	 
+   565: The problem with using a pipe in this fashion is that writing to a pipe can block meaning the pipe only has a limited buffering capacity.
+>  566: The maximum size of the buffer is system-dependent; typical values from 4KiB up to 128KiB though they can be changed.
+   567: 	 
+   568: \begin{lstlisting}[language=C]
+
+- file: sample\submodules\coursebook\ipc\ipc.tex (line 566)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   564: 	 
+   565: The problem with using a pipe in this fashion is that writing to a pipe can block meaning the pipe only has a limited buffering capacity.
+>  566: The maximum size of the buffer is system-dependent; typical values from 4KiB up to 128KiB though they can be changed.
+   567: 	 
+   568: \begin{lstlisting}[language=C]
+
+- file: sample\submodules\coursebook\networking\networking.tex (line 991)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   989: Note that if you perform a partial read from a packet, the rest of that data is discarded.
+   990: One call to recvfrom is one packet.
+>  991: To make sure that you have enough space, use 64 KiB as storage space.
+   992: 
+   993: \section{Layer 7: HTTP}
+
+- file: sample\submodules\coursebook\malloc\malloc.tex (line 205)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   203: \end{figure}
+   204: 
+>  205: If a new malloc request for 2KiB is executed (\keyword{malloc(2048)}), where should \keyword{malloc} reserve the memory?
+   206: It could use the last 2KiB hole, which happens to be the perfect size!
+   207: Or it could split one of the other two free holes.
+
+- file: sample\submodules\coursebook\malloc\malloc.tex (line 206)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   204: 
+   205: If a new malloc request for 2KiB is executed (\keyword{malloc(2048)}), where should \keyword{malloc} reserve the memory?
+>  206: It could use the last 2KiB hole, which happens to be the perfect size!
+   207: Or it could split one of the other two free holes.
+   208: These choices represent different placement strategies.
+
+- file: sample\submodules\coursebook\malloc\malloc.tex (line 211)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   209: Whichever hole is chosen, the allocator will need to split the hole into two.
+   210: The newly allocated space, which will be returned to the program and a smaller hole if there is spare space left over.
+>  211: A perfect-fit strategy finds the smallest hole that is of sufficient size (at least 2KiB):
+   212: 
+   213: \begin{figure}[H]
+
+- file: sample\submodules\coursebook\malloc\malloc.tex (line 219)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   217: \end{figure}
+   218: 
+>  219: A worst-fit strategy finds the largest hole that is of sufficient size so break the 30KiB hole into two:
+   220: 
+   221: \begin{figure}[H]
+
+- file: sample\submodules\coursebook\malloc\malloc.tex (line 228)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   226: 
+   227: 
+>  228: A first-fit strategy finds the first available hole that is of sufficient size so break the 16KiB hole into two.
+   229: We don't even have to look through the entire heap!
+   230: 
+
+- file: sample\submodules\coursebook\malloc\malloc.tex (line 239)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   237: One thing to keep in mind is those placement strategies don't need to replace the block.
+   238: For example, our first fit allocator could've returned the original block unbroken.
+>  239: Notice that this would lead to about 14KiB of space to be unused by the user and the allocator.
+   240: We call this internal fragmentation.
+   241: 
+
+- file: sample\submodules\coursebook\malloc\malloc.tex (line 243)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   241: 
+   242: In contrast, external fragmentation is that even though we have enough memory in the heap, it may be divided up in a way so a continuous block of that size is unavailable.
+>  243: In our previous example, of the 64KiB of heap memory, 17KiB is allocated, and 47KiB is free.
+   244: However, the largest available block is only 30KiB because our available unallocated heap memory is fragmented into smaller pieces.
+   245: 
+
+- file: sample\submodules\coursebook\malloc\malloc.tex (line 243)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   241: 
+   242: In contrast, external fragmentation is that even though we have enough memory in the heap, it may be divided up in a way so a continuous block of that size is unavailable.
+>  243: In our previous example, of the 64KiB of heap memory, 17KiB is allocated, and 47KiB is free.
+   244: However, the largest available block is only 30KiB because our available unallocated heap memory is fragmented into smaller pieces.
+   245: 
+
+- file: sample\submodules\coursebook\malloc\malloc.tex (line 243)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   241: 
+   242: In contrast, external fragmentation is that even though we have enough memory in the heap, it may be divided up in a way so a continuous block of that size is unavailable.
+>  243: In our previous example, of the 64KiB of heap memory, 17KiB is allocated, and 47KiB is free.
+   244: However, the largest available block is only 30KiB because our available unallocated heap memory is fragmented into smaller pieces.
+   245: 
+
+- file: sample\submodules\coursebook\malloc\malloc.tex (line 244)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   242: In contrast, external fragmentation is that even though we have enough memory in the heap, it may be divided up in a way so a continuous block of that size is unavailable.
+   243: In our previous example, of the 64KiB of heap memory, 17KiB is allocated, and 47KiB is free.
+>  244: However, the largest available block is only 30KiB because our available unallocated heap memory is fragmented into smaller pieces.
+   245: 
+   246: \subsection{Placement Strategy Pros and Cons}
+
+- file: sample\submodules\coursebook\malloc\malloc.tex (line 330)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   328: Since we write integers and pointers into memory that we already control, we can later consistently hop from one address to the next.
+   329: This internal information represents some overhead.
+>  330: Meaning even if we had requested 1024 KiB of contiguous memory from the system, we an allocation of that size will fail.
+   331: 
+   332: Our heap memory is a list of blocks where each block is either allocated or unallocated.
+
+- file: sample\submodules\coursebook\review\review.tex (line 517)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   515: \item In an \keyword{ext2} filesystem what is the minimum number of disk blocks that must be read from disk to access the first byte of the file \keyword{/dir1/subdirA/notes.txt} ? Assume the directory names and inode numbers in the root directory and all inodes are already in memory.
+   516: 
+>  517: \item In an \keyword{ext2} filesystem with 32 bit addresses and 4KiB disk blocks, an inode can store 10 direct disk block numbers. What is the minimum file size required to require a single indirection table? ii) a double direction table?
+   518: 
+   519: \item Fix the shell command \keyword{chmod} below to set the permission of a file \keyword{secret.txt} so that the owner can read,write,and execute permissions the group can read and everyone else has no access.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 218)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   216: This is a important concept, as inodes are stored in the superblock, or some other structure in a well known location with a constant amount of space, indirection allows exponential increases in the amount of space an inode can keep track of.
+   217: 
+>  218: As a worked example, suppose we divide the disk into 4KiB blocks and we want to address up to $2^{32}$ blocks.
+   219: The maximum disk size is $4KiB *2^{32} = 16TiB$ remember $2^{10} = 1024$.
+   220: A disk block can store $\frac{4KiB}{4B}$ possible pointers or 1024 pointers.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 219)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   217: 
+   218: As a worked example, suppose we divide the disk into 4KiB blocks and we want to address up to $2^{32}$ blocks.
+>  219: The maximum disk size is $4KiB *2^{32} = 16TiB$ remember $2^{10} = 1024$.
+   220: A disk block can store $\frac{4KiB}{4B}$ possible pointers or 1024 pointers.
+   221: Four byte wide pointers are needed because we want to address 32 bits worth of blocks.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 219)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   217: 
+   218: As a worked example, suppose we divide the disk into 4KiB blocks and we want to address up to $2^{32}$ blocks.
+>  219: The maximum disk size is $4KiB *2^{32} = 16TiB$ remember $2^{10} = 1024$.
+   220: A disk block can store $\frac{4KiB}{4B}$ possible pointers or 1024 pointers.
+   221: Four byte wide pointers are needed because we want to address 32 bits worth of blocks.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 220)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   218: As a worked example, suppose we divide the disk into 4KiB blocks and we want to address up to $2^{32}$ blocks.
+   219: The maximum disk size is $4KiB *2^{32} = 16TiB$ remember $2^{10} = 1024$.
+>  220: A disk block can store $\frac{4KiB}{4B}$ possible pointers or 1024 pointers.
+   221: Four byte wide pointers are needed because we want to address 32 bits worth of blocks.
+   222: Each pointer refers to a 4KiB disk block, so you can refer up to $1024*4KiB = 4MiB$ of data.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 222)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   220: A disk block can store $\frac{4KiB}{4B}$ possible pointers or 1024 pointers.
+   221: Four byte wide pointers are needed because we want to address 32 bits worth of blocks.
+>  222: Each pointer refers to a 4KiB disk block, so you can refer up to $1024*4KiB = 4MiB$ of data.
+   223: For the same disk configuration, a double indirect block stores 1024 pointers to 1024 indirection tables.
+   224: Thus a double-indirect block can refer up to $1024 * 4MiB = 4GiB$ of data.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 222)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   220: A disk block can store $\frac{4KiB}{4B}$ possible pointers or 1024 pointers.
+   221: Four byte wide pointers are needed because we want to address 32 bits worth of blocks.
+>  222: Each pointer refers to a 4KiB disk block, so you can refer up to $1024*4KiB = 4MiB$ of data.
+   223: For the same disk configuration, a double indirect block stores 1024 pointers to 1024 indirection tables.
+   224: Thus a double-indirect block can refer up to $1024 * 4MiB = 4GiB$ of data.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 222)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   220: A disk block can store $\frac{4KiB}{4B}$ possible pointers or 1024 pointers.
+   221: Four byte wide pointers are needed because we want to address 32 bits worth of blocks.
+>  222: Each pointer refers to a 4KiB disk block, so you can refer up to $1024*4KiB = 4MiB$ of data.
+   223: For the same disk configuration, a double indirect block stores 1024 pointers to 1024 indirection tables.
+   224: Thus a double-indirect block can refer up to $1024 * 4MiB = 4GiB$ of data.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 224)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   222: Each pointer refers to a 4KiB disk block, so you can refer up to $1024*4KiB = 4MiB$ of data.
+   223: For the same disk configuration, a double indirect block stores 1024 pointers to 1024 indirection tables.
+>  224: Thus a double-indirect block can refer up to $1024 * 4MiB = 4GiB$ of data.
+   225: Similarly, a triple indirect block can refer up to 4TiB of data.
+   226: This is three times as slow for reading between blocks, due to increased levels of indirection.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 224)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   222: Each pointer refers to a 4KiB disk block, so you can refer up to $1024*4KiB = 4MiB$ of data.
+   223: For the same disk configuration, a double indirect block stores 1024 pointers to 1024 indirection tables.
+>  224: Thus a double-indirect block can refer up to $1024 * 4MiB = 4GiB$ of data.
+   225: Similarly, a triple indirect block can refer up to 4TiB of data.
+   226: This is three times as slow for reading between blocks, due to increased levels of indirection.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 225)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   223: For the same disk configuration, a double indirect block stores 1024 pointers to 1024 indirection tables.
+   224: Thus a double-indirect block can refer up to $1024 * 4MiB = 4GiB$ of data.
+>  225: Similarly, a triple indirect block can refer up to 4TiB of data.
+   226: This is three times as slow for reading between blocks, due to increased levels of indirection.
+   227: The actual intra-block reading times don't change.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 869)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   867: 
+   868: Use the versatile \keyword{dd} command.
+>  869: For example, the following command copies 1 MiB of data from the file \keyword{/dev/urandom} to the file \keyword{/dev/null}.
+   870: The data is copied as 1024 blocks of block size 1024 bytes.
+   871: 
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1180)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  1178: \end{figure}
+  1179: 
+> 1180: We will assume that a data block is 4 KiB.
+  1181: 
+  1182: Note that a file will fill up each of its data blocks completely before requesting an additional data block.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1194)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  1192: However, we can compute upper and lower bounds on the filesize by only looking at how many blocks the file uses.
+  1193: 
+> 1194: There are two full direct blocks, which together store $2*sizeof(data\_block)=2*4KiB=8KiB$.
+  1195: 
+  1196: There are two used blocks referenced by the indirect block, which can store up to $8KiB$ as calculated above.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1194)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  1192: However, we can compute upper and lower bounds on the filesize by only looking at how many blocks the file uses.
+  1193: 
+> 1194: There are two full direct blocks, which together store $2*sizeof(data\_block)=2*4KiB=8KiB$.
+  1195: 
+  1196: There are two used blocks referenced by the indirect block, which can store up to $8KiB$ as calculated above.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1196)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  1194: There are two full direct blocks, which together store $2*sizeof(data\_block)=2*4KiB=8KiB$.
+  1195: 
+> 1196: There are two used blocks referenced by the indirect block, which can store up to $8KiB$ as calculated above.
+  1197: 
+  1198: We can now add these values to get an upper bound on the file size of $16KiB$.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1198)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  1196: There are two used blocks referenced by the indirect block, which can store up to $8KiB$ as calculated above.
+  1197: 
+> 1198: We can now add these values to get an upper bound on the file size of $16KiB$.
+  1199: 
+  1200: What about a lower bound? We know that we must use the two direct blocks, one block referenced by the indirect block and at least 1 byte of a
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1202)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  1200: What about a lower bound? We know that we must use the two direct blocks, one block referenced by the indirect block and at least 1 byte of a
+  1201: second block referenced by the indirect block.
+> 1202: With this information, we can work out the lower bound to be $2*4KiB+4KiB+1=12KiB+1B$.
+  1203: 
+  1204: Note that our calculations so far have been to determine how much data the user is storing on disk.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1202)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  1200: What about a lower bound? We know that we must use the two direct blocks, one block referenced by the indirect block and at least 1 byte of a
+  1201: second block referenced by the indirect block.
+> 1202: With this information, we can work out the lower bound to be $2*4KiB+4KiB+1=12KiB+1B$.
+  1203: 
+  1204: Note that our calculations so far have been to determine how much data the user is storing on disk.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1202)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  1200: What about a lower bound? We know that we must use the two direct blocks, one block referenced by the indirect block and at least 1 byte of a
+  1201: second block referenced by the indirect block.
+> 1202: With this information, we can work out the lower bound to be $2*4KiB+4KiB+1=12KiB+1B$.
+  1203: 
+  1204: Note that our calculations so far have been to determine how much data the user is storing on disk.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1208)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  1206: You'll notice that we use an indirect block to store the disk block numbers of blocks used beyond the two direct blocks.
+  1207: While doing our above calculations, we omitted this block.
+> 1208: This would instead be counted as the overhead of the file, and thus the total overhead of storing this file on disk is $sizeof(indirect\_block)=4KiB)$.
+  1209: 
+  1210: Thinking about overhead, a related calculation could be to determine the max/min disk usage per file in this filesystem.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1215)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  1213: How about the disk usage of the smallest non-empty file? That is, consider a file of size $1B$.
+  1214: Note that when a user writes the first byte, a data block will be allocated.
+> 1215: Since each data block is $4KiB$, we find that $4KiB$ is the minimum disk usage for a non-empty file.
+  1216: Here, we observe that the file size will only be $1B$, despite that $4KiB$ of the disk is used -- there is a distinction between file size and disk usage because of overhead!
+  1217: 
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1215)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  1213: How about the disk usage of the smallest non-empty file? That is, consider a file of size $1B$.
+  1214: Note that when a user writes the first byte, a data block will be allocated.
+> 1215: Since each data block is $4KiB$, we find that $4KiB$ is the minimum disk usage for a non-empty file.
+  1216: Here, we observe that the file size will only be $1B$, despite that $4KiB$ of the disk is used -- there is a distinction between file size and disk usage because of overhead!
+  1217: 
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1216)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  1214: Note that when a user writes the first byte, a data block will be allocated.
+  1215: Since each data block is $4KiB$, we find that $4KiB$ is the minimum disk usage for a non-empty file.
+> 1216: Here, we observe that the file size will only be $1B$, despite that $4KiB$ of the disk is used -- there is a distinction between file size and disk usage because of overhead!
+  1217: 
+  1218: Finding maximum is slightly more involved.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1220)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  1218: Finding maximum is slightly more involved.
+  1219: As we saw earlier in this chapter, a filesystem with this structure can have $1024$ data block numbers in one indirect block.
+> 1220: This implies that the maximum filesize can be $2*4KiB + 1024*4KiB = 4MiB + 8KiB$ (after accounting for the direct blocks as well).
+  1221: However, on disk we also store the indirect block itself.
+  1222: This means that an additional $4KiB$ of overhead will be used to account for the indirect block, so the total disk usage will be $4MiB + 12KiB$.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1220)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  1218: Finding maximum is slightly more involved.
+  1219: As we saw earlier in this chapter, a filesystem with this structure can have $1024$ data block numbers in one indirect block.
+> 1220: This implies that the maximum filesize can be $2*4KiB + 1024*4KiB = 4MiB + 8KiB$ (after accounting for the direct blocks as well).
+  1221: However, on disk we also store the indirect block itself.
+  1222: This means that an additional $4KiB$ of overhead will be used to account for the indirect block, so the total disk usage will be $4MiB + 12KiB$.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1220)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  1218: Finding maximum is slightly more involved.
+  1219: As we saw earlier in this chapter, a filesystem with this structure can have $1024$ data block numbers in one indirect block.
+> 1220: This implies that the maximum filesize can be $2*4KiB + 1024*4KiB = 4MiB + 8KiB$ (after accounting for the direct blocks as well).
+  1221: However, on disk we also store the indirect block itself.
+  1222: This means that an additional $4KiB$ of overhead will be used to account for the indirect block, so the total disk usage will be $4MiB + 12KiB$.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1220)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  1218: Finding maximum is slightly more involved.
+  1219: As we saw earlier in this chapter, a filesystem with this structure can have $1024$ data block numbers in one indirect block.
+> 1220: This implies that the maximum filesize can be $2*4KiB + 1024*4KiB = 4MiB + 8KiB$ (after accounting for the direct blocks as well).
+  1221: However, on disk we also store the indirect block itself.
+  1222: This means that an additional $4KiB$ of overhead will be used to account for the indirect block, so the total disk usage will be $4MiB + 12KiB$.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1222)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  1220: This implies that the maximum filesize can be $2*4KiB + 1024*4KiB = 4MiB + 8KiB$ (after accounting for the direct blocks as well).
+  1221: However, on disk we also store the indirect block itself.
+> 1222: This means that an additional $4KiB$ of overhead will be used to account for the indirect block, so the total disk usage will be $4MiB + 12KiB$.
+  1223: 
+  1224: Note that when only using direct blocks, completely filling up a direct block implies that our filesize and our disk usage are the same thing!
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1222)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  1220: This implies that the maximum filesize can be $2*4KiB + 1024*4KiB = 4MiB + 8KiB$ (after accounting for the direct blocks as well).
+  1221: However, on disk we also store the indirect block itself.
+> 1222: This means that an additional $4KiB$ of overhead will be used to account for the indirect block, so the total disk usage will be $4MiB + 12KiB$.
+  1223: 
+  1224: Note that when only using direct blocks, completely filling up a direct block implies that our filesize and our disk usage are the same thing!
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1222)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  1220: This implies that the maximum filesize can be $2*4KiB + 1024*4KiB = 4MiB + 8KiB$ (after accounting for the direct blocks as well).
+  1221: However, on disk we also store the indirect block itself.
+> 1222: This means that an additional $4KiB$ of overhead will be used to account for the indirect block, so the total disk usage will be $4MiB + 12KiB$.
+  1223: 
+  1224: Note that when only using direct blocks, completely filling up a direct block implies that our filesize and our disk usage are the same thing!
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1252)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  1250: \subsubsection{Writing to files}
+  1251: Performing writes fall into two categories, writes to files and writes to directories.
+> 1252: First we'll focus on files and assume that we are writing a byte to the $6$th KiB of our file.
+  1253: To perform a write on a file at a particular offset, first the filesystem must go to the data block would start at that offset.
+  1254: For this particular example we would have to go to the 2nd or indexed number 1 inode to perform our write.
+
+- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1255)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  1253: To perform a write on a file at a particular offset, first the filesystem must go to the data block would start at that offset.
+  1254: For this particular example we would have to go to the 2nd or indexed number 1 inode to perform our write.
+> 1255: We would once again fetch this number from the inode, go to the root of the data blocks, go to the $5$th data block and perform our write at the $2$KiB offset from this block because we skipped the first four kibibytes of the file in block 7.
+  1256: We perform our write and go on our merry way.
+  1257: 
+
+- file: sample\submodules\coursebook\threads\threads.tex (line 495)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   493: \begin{lstlisting}[language=C]
+   494: 
+>  495: // 8 KiB stacks
+   496: #define STACK_SIZE (8 * 1024 * 1024)
+   497: 
+
+- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\review_exercises.tex (line 236)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   234: The results are shown in the figure below:
+   235: \begin{center}
+>  236: \FigureFullPath[A side-by-side dot plot is shown for "Torque required to loosen a rusty bolt, in foot-pounds". There are only 2 to 4 observations per option, which are roughly as follows: Heat (82, 98), WD-40 (106, 118, 129, 131), Royal Purple (108, 114, 122, 132), PB Blaster (110, 124, 127, 128), Liquid Wrench (85, 88, 98, 114), AeroKroil (107, 125, 132, 134), Acetone/ATF (105, 107, 114, 129), and "none" (110, 123, 129, 142).)]{0.8}{ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot}
+   237: \end{center}
+   238: \begin{parts}
+
+- file: sample\arxiv_sources\1609.03457v1\avail-engines.tex (line 146)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   144: \section{Ready for ArXiV deployment: Needs Server Space}
+   145: 
+>  146: The developer of the equation-based search engine MathWebSearch, Michael Kohlhase, states on his webpage that MathWebSearch is ready for deployment on arXiv.org.  To do so, he needs 128GB of additional server space, and that their restriction comes especially from the RAM; donations of server space are invited. \cite{MathWebSearch-info}
+   147: 
+   148: MathWebSearch currently powers zbMATH, and is available for download to build local and web-crawled searchable databases. \cite{MathWebSearch-info}  It also has a demo interface at \cite{Sentido-search}, but that demo is only partially operational at this time.
+
+- file: sample\arxiv_sources\1609.03457v1\avail-engines.tex (line 189)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   187: A working search interface which uses MWS is zbMATH. \cite{zbMATH-engine}  Another demo, called Sentido-search (\cite{Sentido-search}), showcases an MWS input panel which both has a template and allows for and coding in many languages, including LaTeX; it has a search feature, but it is currently not fully functional.
+   188: 
+>  189: ArXiv.org deployment of MWS is stated to need only an additional 128GB of RAM; donations of server space are invited. \cite{MathWebSearch-info}  MWS developers tested its performance on about 65\% of the arXiv (as of 2012).  Query times averaged 25 - 75 ms for most queries, and went just past 300 ms for a more difficult class of query.  The system uses distributed computing, so that its estimated memory requirements for the entire arXiv (170GB) can be accommodated.  A user interface for arXiv retrieval was designed, and appears to use LaTeX for its query language. \cite{MWS-05-2012}
+   190: 
+   191: The github version of MWS allows indexing of MathML formulae from a website or a local repository of XHTML documents. \cite{MWSgithub}  (To use it on arXiv.org documents, the developers use an XML-translation of the arXiv.org files. \cite{MWS-05-2012, XML-arxiv})  Instructions for installation of MWS are included on the github page (\cite{MWSgithub}).
+
+- file: sample\arxiv_sources\1609.03457v1\avail-engines.tex (line 189)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   187: A working search interface which uses MWS is zbMATH. \cite{zbMATH-engine}  Another demo, called Sentido-search (\cite{Sentido-search}), showcases an MWS input panel which both has a template and allows for and coding in many languages, including LaTeX; it has a search feature, but it is currently not fully functional.
+   188: 
+>  189: ArXiv.org deployment of MWS is stated to need only an additional 128GB of RAM; donations of server space are invited. \cite{MathWebSearch-info}  MWS developers tested its performance on about 65\% of the arXiv (as of 2012).  Query times averaged 25 - 75 ms for most queries, and went just past 300 ms for a more difficult class of query.  The system uses distributed computing, so that its estimated memory requirements for the entire arXiv (170GB) can be accommodated.  A user interface for arXiv retrieval was designed, and appears to use LaTeX for its query language. \cite{MWS-05-2012}
+   190: 
+   191: The github version of MWS allows indexing of MathML formulae from a website or a local repository of XHTML documents. \cite{MWSgithub}  (To use it on arXiv.org documents, the developers use an XML-translation of the arXiv.org files. \cite{MWS-05-2012, XML-arxiv})  Instructions for installation of MWS are included on the github page (\cite{MWSgithub}).
+
+- file: sample\arxiv_sources\2103.03874v2\1-intro.tex (line 154)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   152: We call this dataset the Auxiliary Mathematics Problems and Solutions (AMPS) pretraining corpus, which consists of Khan Academy and Mathematica data. AMPS has over $100,000$ Khan Academy problems with step-by-step solutions in \LaTeX{}; these exercises are used to teach human students concepts ranging from basic addition to Stokes' Theorem.
+   153: It also contains over $5$ million problems generated using Mathematica scripts, based on $100$ hand-designed modules covering topics such as conic sections, div grad and curl, KL divergence, eigenvalues, polyhedra, and Diophantine equations. In total AMPS contains 
+>  154: 23GB of problems and solutions.
+   155: Pretraining on AMPS enables a $0.1$ billion parameter model to perform comparably to a fine-tuned model that is $130\times$ larger.
+   156: 
+
+- file: sample\arxiv_sources\2103.03874v2\3-dataset.tex (line 100)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+    98: 
+    99: \textbf{Mathematica.}\quad
+>  100: To make AMPS larger, we also contribute our own Mathematica scripts to generate approximately $50\times$ more problems than our Khan Academy dataset. With Mathematica, we designed $100$ scripts that test distinct mathematics concepts, $37$ of which include full step-by-step \LaTeX{} solutions in addition to final answers. We generated around $50,\!000$ exercises from each of our scripts, or around $5$ million problems in total. This results in over $23$ GB of mathematics problems, making it larger than the $16$ GB of natural language used to train BERT \citep{Devlin2019BERTPO}.
+   101: 
+   102: Problems include various aspects of algebra, calculus, counting and statistics, geometry, linear algebra, and number theory (see \Cref{fig:mesa} for a sampling of topics). Unlike prior approaches to algorithmically generating mathematics problems, we use Mathematica's computer algebra system so that we can manipulate fractions, transcendental numbers, and analytic functions. 
+
+- file: sample\arxiv_sources\2103.03874v2\3-dataset.tex (line 100)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+    98: 
+    99: \textbf{Mathematica.}\quad
+>  100: To make AMPS larger, we also contribute our own Mathematica scripts to generate approximately $50\times$ more problems than our Khan Academy dataset. With Mathematica, we designed $100$ scripts that test distinct mathematics concepts, $37$ of which include full step-by-step \LaTeX{} solutions in addition to final answers. We generated around $50,\!000$ exercises from each of our scripts, or around $5$ million problems in total. This results in over $23$ GB of mathematics problems, making it larger than the $16$ GB of natural language used to train BERT \citep{Devlin2019BERTPO}.
+   101: 
+   102: Problems include various aspects of algebra, calculus, counting and statistics, geometry, linear algebra, and number theory (see \Cref{fig:mesa} for a sampling of topics). Unlike prior approaches to algorithmically generating mathematics problems, we use Mathematica's computer algebra system so that we can manipulate fractions, transcendental numbers, and analytic functions. 
+
+- file: sample\arxiv_sources\2103.03874v2\4-experiments.tex (line 117)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   115: 
+   116: We additionally tried pretraining on StackExchange, a real-world but less  curated source of mathematics text. 
+>  117: A GPT-2 (0.3B) model pretrained on both AMPS and questions and answers from Math StackExchange ($\sim\!3$ GB) had $6.0\%$ accuracy. This is actually less than the $6.2\%$ accuracy attained by pretraining on AMPS alone. Thus our dataset is %
+   118: more useful for pretraining even than %
+   119: diverse real-world mathematics data.
+
+- file: sample\arxiv_sources\2103.12048v3\99_appendix.tex (line 24)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+    22: \paragraph{Computing Infrastructure.}
+    23: OS: 16.04.1-Ubuntu/ x86\_64.  \\
+>   24: GPU: GeForce GTX 1080 Ti with 12 GB of memory. 
+    25: 
+    26: \paragraph{Evaluation Metrics.}
+
+- file: sample\arxiv_sources\2103.12048v3\99_appendix.tex (line 310)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   308: \paragraph{Computing Infrastructure.}
+   309: Operating System: 16.04.1-Ubuntu/ x86\_64.  \\
+>  310: GPU: GeForce GTX 1080 Ti with 12 GB of memory. 
+   311: 
+   312: \paragraph{Evaluation Metrics.}
+
+- file: sample\arxiv_sources\2401.03238v1\Using_Large.tex (line 143)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   141: \subsection{Corpus Description, Data Pre-Processing, \& Prompting GPT }
+   142: % \begin{Prompting GPT-4 and Identification of Criteria}
+>  143: The corpus consists of an unknown number of online tutors (a tutor could be represented in more than one dialogue) who were college students at a Pennsylvanian university. The students were middle school students, ranging from 6th-8th grade, from two schools. The student-level demographics represented in the corpus are unknown, however, the school-level demographics consisted of 52\% Latinx from a California public school and 100\% Black and male from a Pennsylvania charter school. Math proficiency is low at both schools, with  one school at zero percent proficiency suggesting the majority of students have low self-efficacy in learning math. Tutoring was performed remotely using Pencil as a remote communication platform with audio recordings transcribed within the platform. Individual dialogue recordings ranged in size from 100 bytes to 37KB. Transcriptions between 2KB and 8KB were used to provide sufficient utterances to assess dialogue while not overloading and slowing down the processing of  the GPT models. In addition, we strive to keep costs low, particularly when scaling to more transcriptions. For all transcriptions, the tutor was the first utterance in the dialogue, which was used as a guide in diarization. We prompt GPT-3.5-Turbo and GPT-4 using the prompt created (shown in Appendix E), with the temperature at 0. Running the prompt on 50 real-life tutoring dialogues, we  report the absolute performance of each model compared to a human grader. Appendix E displays the prompt used to assess real-life dialogues. 
+   144: 
+   145: 
+
+- file: sample\arxiv_sources\2401.03238v1\Using_Large.tex (line 143)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   141: \subsection{Corpus Description, Data Pre-Processing, \& Prompting GPT }
+   142: % \begin{Prompting GPT-4 and Identification of Criteria}
+>  143: The corpus consists of an unknown number of online tutors (a tutor could be represented in more than one dialogue) who were college students at a Pennsylvanian university. The students were middle school students, ranging from 6th-8th grade, from two schools. The student-level demographics represented in the corpus are unknown, however, the school-level demographics consisted of 52\% Latinx from a California public school and 100\% Black and male from a Pennsylvania charter school. Math proficiency is low at both schools, with  one school at zero percent proficiency suggesting the majority of students have low self-efficacy in learning math. Tutoring was performed remotely using Pencil as a remote communication platform with audio recordings transcribed within the platform. Individual dialogue recordings ranged in size from 100 bytes to 37KB. Transcriptions between 2KB and 8KB were used to provide sufficient utterances to assess dialogue while not overloading and slowing down the processing of  the GPT models. In addition, we strive to keep costs low, particularly when scaling to more transcriptions. For all transcriptions, the tutor was the first utterance in the dialogue, which was used as a guide in diarization. We prompt GPT-3.5-Turbo and GPT-4 using the prompt created (shown in Appendix E), with the temperature at 0. Running the prompt on 50 real-life tutoring dialogues, we  report the absolute performance of each model compared to a human grader. Appendix E displays the prompt used to assess real-life dialogues. 
+   144: 
+   145: 
+
+- file: sample\arxiv_sources\2401.03238v1\Using_Large.tex (line 143)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   141: \subsection{Corpus Description, Data Pre-Processing, \& Prompting GPT }
+   142: % \begin{Prompting GPT-4 and Identification of Criteria}
+>  143: The corpus consists of an unknown number of online tutors (a tutor could be represented in more than one dialogue) who were college students at a Pennsylvanian university. The students were middle school students, ranging from 6th-8th grade, from two schools. The student-level demographics represented in the corpus are unknown, however, the school-level demographics consisted of 52\% Latinx from a California public school and 100\% Black and male from a Pennsylvania charter school. Math proficiency is low at both schools, with  one school at zero percent proficiency suggesting the majority of students have low self-efficacy in learning math. Tutoring was performed remotely using Pencil as a remote communication platform with audio recordings transcribed within the platform. Individual dialogue recordings ranged in size from 100 bytes to 37KB. Transcriptions between 2KB and 8KB were used to provide sufficient utterances to assess dialogue while not overloading and slowing down the processing of  the GPT models. In addition, we strive to keep costs low, particularly when scaling to more transcriptions. For all transcriptions, the tutor was the first utterance in the dialogue, which was used as a guide in diarization. We prompt GPT-3.5-Turbo and GPT-4 using the prompt created (shown in Appendix E), with the temperature at 0. Running the prompt on 50 real-life tutoring dialogues, we  report the absolute performance of each model compared to a human grader. Appendix E displays the prompt used to assess real-life dialogues. 
+   144: 
+   145: 
+
+- file: sample\arxiv_sources\2407.21009v4\example_paper.tex (line 390)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   388: We evaluate the generated set of questions on a variety of language models, both small and large. Specifically, we assess the MetaMath \citep{yu2023metamath}, MAmmoTH \citep{yue2023mammoth}, Gemma \citep{team2024gemma}, Llama-3.1 series~\citep{dubey2024llama}, Phi-3~\citep{abdin2024phi}, deepseek-math~\citep{shao2024deepseekmath}, one Mixture-of-Experts model Mixtral-8$\times$7B-Instruct~\citep{jiang2024mixtral} as well as some of the new ``thinking" models in the form of DeepSeek-R1~\cite{guo2025deepseek} distilled models (specifically, DeepSeek-R1 distilled, Qwen2.5-Math-7B, Qwen2.5-14B, Qwen2.5-32B~\cite{yang2024qwen2} and Llama-3.1-8B models). Additionally, we include evaluations of proprietary models such as the proprietary ``thinking" model o1-preview~\cite{@o1}, GPT-4o, GPT-4 Turbo\footnote{\texttt{gpt-4-turbo-2024-04-09} at the time of writing} \citep{openai2023gpt4}, Gemini-1.5-Pro~\citep{team2024gemini}, Claude 3.5 Sonnet \footnote{\texttt{claude-3-5-sonnet-20240620} at the time of writing} and Claude-3 Opus\footnote{\texttt{claude-3-opus-20240229} at the time of writing}~\citep{anthropic2024claude3_5}. We compare the performances of these models on our generated questions (MATH$^2$) against their performance on the MATH dataset \citep{hendrycks2021measuring}. We further report several ablation studies on MATH$^2$ in Appendix~\ref{app:expts}. 
+   389: 
+>  390: For generating responses, we use the MAmmoTH \citep{yue2023mammoth} codebase. The responses are graded using a GPT-4 grader, where GPT-4 Omni checks the correctness of a solution response against the ground truth solution. This allows us to account for cases where incorrect reasoning traces lead to a correct final answer. Appendix~\ref{app:prompt_eval} shows the prompt used for evaluation. During response generation, we set the temperature to 0 and top\_p to 1 for all models. All necessary compute details are discussed in Appendix~\ref{app:expts}%For open source LLMs, 2 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. For evaluating GPT-4 Omni and GPT-4 Turbo, we use 25 parallel workers to make the API calls, and for Claude-3 Opus we use 2 workers.
+   391: 
+   392: \subsection{Performance across the two datasets: A surprising pattern } 
+
+- file: sample\arxiv_sources\2407.21009v4\example_paper.tex (line 390)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   388: We evaluate the generated set of questions on a variety of language models, both small and large. Specifically, we assess the MetaMath \citep{yu2023metamath}, MAmmoTH \citep{yue2023mammoth}, Gemma \citep{team2024gemma}, Llama-3.1 series~\citep{dubey2024llama}, Phi-3~\citep{abdin2024phi}, deepseek-math~\citep{shao2024deepseekmath}, one Mixture-of-Experts model Mixtral-8$\times$7B-Instruct~\citep{jiang2024mixtral} as well as some of the new ``thinking" models in the form of DeepSeek-R1~\cite{guo2025deepseek} distilled models (specifically, DeepSeek-R1 distilled, Qwen2.5-Math-7B, Qwen2.5-14B, Qwen2.5-32B~\cite{yang2024qwen2} and Llama-3.1-8B models). Additionally, we include evaluations of proprietary models such as the proprietary ``thinking" model o1-preview~\cite{@o1}, GPT-4o, GPT-4 Turbo\footnote{\texttt{gpt-4-turbo-2024-04-09} at the time of writing} \citep{openai2023gpt4}, Gemini-1.5-Pro~\citep{team2024gemini}, Claude 3.5 Sonnet \footnote{\texttt{claude-3-5-sonnet-20240620} at the time of writing} and Claude-3 Opus\footnote{\texttt{claude-3-opus-20240229} at the time of writing}~\citep{anthropic2024claude3_5}. We compare the performances of these models on our generated questions (MATH$^2$) against their performance on the MATH dataset \citep{hendrycks2021measuring}. We further report several ablation studies on MATH$^2$ in Appendix~\ref{app:expts}. 
+   389: 
+>  390: For generating responses, we use the MAmmoTH \citep{yue2023mammoth} codebase. The responses are graded using a GPT-4 grader, where GPT-4 Omni checks the correctness of a solution response against the ground truth solution. This allows us to account for cases where incorrect reasoning traces lead to a correct final answer. Appendix~\ref{app:prompt_eval} shows the prompt used for evaluation. During response generation, we set the temperature to 0 and top\_p to 1 for all models. All necessary compute details are discussed in Appendix~\ref{app:expts}%For open source LLMs, 2 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. For evaluating GPT-4 Omni and GPT-4 Turbo, we use 25 parallel workers to make the API calls, and for Claude-3 Opus we use 2 workers.
+   391: 
+   392: \subsection{Performance across the two datasets: A surprising pattern } 
+
+- file: sample\arxiv_sources\2407.21009v4\example_paper.tex (line 873)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   871: \subsection{Further Experimental Details and Results}
+   872: \label{app:expts}
+>  873: For open source LLMs, we use 4 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. We use 50 parallel workers while querying o1-preview, GPT-4 Omni, GPT-4 Turbo and Gemini-1.5-Pro, and 2 workers for querying Claude-3 Opus and Claude-3.5-Sonnet.
+   874: 
+   875: % \textbf{Analysis of performance degradation on smaller models.} Figure~\ref{fig:size_perf} %illustrates the performance drop on the MATH dataset for various models. 
+
+- file: sample\arxiv_sources\2407.21009v4\example_paper.tex (line 873)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   871: \subsection{Further Experimental Details and Results}
+   872: \label{app:expts}
+>  873: For open source LLMs, we use 4 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. We use 50 parallel workers while querying o1-preview, GPT-4 Omni, GPT-4 Turbo and Gemini-1.5-Pro, and 2 workers for querying Claude-3 Opus and Claude-3.5-Sonnet.
+   874: 
+   875: % \textbf{Analysis of performance degradation on smaller models.} Figure~\ref{fig:size_perf} %illustrates the performance drop on the MATH dataset for various models. 
+
+- file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 396)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   394: We evaluate the generated set of questions on a variety of language models, both small and large. Specifically, we assess the MetaMath \citep{yu2023metamath}, MAmmoTH \citep{yue2023mammoth}, Gemma \citep{team2024gemma}, Llama-3.1 series~\citep{dubey2024llama}, Phi-3~\citep{abdin2024phi}, deepseek-math~\citep{shao2024deepseekmath}, one Mixture-of-Experts model Mixtral-8$\times$7B-Instruct~\citep{jiang2024mixtral} as well as some of the new ``thinking" models in the form of DeepSeek-R1~\cite{guo2025deepseek} distilled models (specifically, DeepSeek-R1 distilled, Qwen2.5-Math-7B, Qwen2.5-14B, Qwen2.5-32B~\cite{yang2024qwen2} and Llama-3.1-8B models). Additionally, we include evaluations of proprietary models such as the proprietary ``thinking" model o1-preview~\cite{@o1}, GPT-4o, GPT-4 Turbo\footnote{\texttt{gpt-4-turbo-2024-04-09} at the time of writing} \citep{openai2023gpt4}, Gemini-1.5-Pro~\citep{team2024gemini}, Claude 3.5 Sonnet \footnote{\texttt{claude-3-5-sonnet-20240620} at the time of writing} and Claude-3 Opus\footnote{\texttt{claude-3-opus-20240229} at the time of writing}~\citep{anthropic2024claude3_5}. We compare the performances of these models on our generated questions (MATH$^2$) against their performance on the MATH dataset \citep{hendrycks2021measuring}. We further report several ablation studies on MATH$^2$ in Appendix~\ref{app:expts}. 
+   395: 
+>  396: For generating responses, we use the MAmmoTH \citep{yue2023mammoth} codebase. The responses are graded using a GPT-4 grader, where GPT-4 Omni checks the correctness of a solution response against the ground truth solution. This allows us to account for cases where incorrect reasoning traces lead to a correct final answer. Appendix~\ref{app:prompt_eval} shows the prompt used for evaluation. During response generation, we set the temperature to 0 and top\_p to 1 for all models. All necessary compute details are discussed in Appendix~\ref{app:expts}%For open source LLMs, 2 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. For evaluating GPT-4 Omni and GPT-4 Turbo, we use 25 parallel workers to make the API calls, and for Claude-3 Opus we use 2 workers.
+   397: 
+   398: \subsection{Performance across the two datasets: A surprising pattern } 
+
+- file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 396)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   394: We evaluate the generated set of questions on a variety of language models, both small and large. Specifically, we assess the MetaMath \citep{yu2023metamath}, MAmmoTH \citep{yue2023mammoth}, Gemma \citep{team2024gemma}, Llama-3.1 series~\citep{dubey2024llama}, Phi-3~\citep{abdin2024phi}, deepseek-math~\citep{shao2024deepseekmath}, one Mixture-of-Experts model Mixtral-8$\times$7B-Instruct~\citep{jiang2024mixtral} as well as some of the new ``thinking" models in the form of DeepSeek-R1~\cite{guo2025deepseek} distilled models (specifically, DeepSeek-R1 distilled, Qwen2.5-Math-7B, Qwen2.5-14B, Qwen2.5-32B~\cite{yang2024qwen2} and Llama-3.1-8B models). Additionally, we include evaluations of proprietary models such as the proprietary ``thinking" model o1-preview~\cite{@o1}, GPT-4o, GPT-4 Turbo\footnote{\texttt{gpt-4-turbo-2024-04-09} at the time of writing} \citep{openai2023gpt4}, Gemini-1.5-Pro~\citep{team2024gemini}, Claude 3.5 Sonnet \footnote{\texttt{claude-3-5-sonnet-20240620} at the time of writing} and Claude-3 Opus\footnote{\texttt{claude-3-opus-20240229} at the time of writing}~\citep{anthropic2024claude3_5}. We compare the performances of these models on our generated questions (MATH$^2$) against their performance on the MATH dataset \citep{hendrycks2021measuring}. We further report several ablation studies on MATH$^2$ in Appendix~\ref{app:expts}. 
+   395: 
+>  396: For generating responses, we use the MAmmoTH \citep{yue2023mammoth} codebase. The responses are graded using a GPT-4 grader, where GPT-4 Omni checks the correctness of a solution response against the ground truth solution. This allows us to account for cases where incorrect reasoning traces lead to a correct final answer. Appendix~\ref{app:prompt_eval} shows the prompt used for evaluation. During response generation, we set the temperature to 0 and top\_p to 1 for all models. All necessary compute details are discussed in Appendix~\ref{app:expts}%For open source LLMs, 2 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. For evaluating GPT-4 Omni and GPT-4 Turbo, we use 25 parallel workers to make the API calls, and for Claude-3 Opus we use 2 workers.
+   397: 
+   398: \subsection{Performance across the two datasets: A surprising pattern } 
+
+- file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 882)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   880: \subsection{Further Experimental Details and Results}
+   881: \label{app:expts}
+>  882: For open source LLMs, we use 4 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. We use 50 parallel workers while querying o1-preview, GPT-4 Omni, GPT-4 Turbo and Gemini-1.5-Pro, and 2 workers for querying Claude-3 Opus and Claude-3.5-Sonnet.
+   883: 
+   884: % \textbf{Analysis of performance degradation on smaller models.} Figure~\ref{fig:size_perf} %illustrates the performance drop on the MATH dataset for various models. 
+
+- file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 882)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   880: \subsection{Further Experimental Details and Results}
+   881: \label{app:expts}
+>  882: For open source LLMs, we use 4 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. We use 50 parallel workers while querying o1-preview, GPT-4 Omni, GPT-4 Turbo and Gemini-1.5-Pro, and 2 workers for querying Claude-3 Opus and Claude-3.5-Sonnet.
+   883: 
+   884: % \textbf{Analysis of performance degradation on smaller models.} Figure~\ref{fig:size_perf} %illustrates the performance drop on the MATH dataset for various models. 
+
+- file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 2009)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  2007: We evaluate the generated set of questions on a variety of language models, both small and large. Specifically, we assess the MetaMath \citep{yu2023metamath}, MAmmoTH \citep{yue2023mammoth}, Gemma \citep{team2024gemma}, Llama-3.1 series~\citep{dubey2024llama}, Phi-3~\citep{abdin2024phi}, deepseek-math~\citep{shao2024deepseekmath}, one Mixture-of-Experts model Mixtral-8$\times$7B-Instruct~\citep{jiang2024mixtral} as well as some of the new ``thinking" models in the form of DeepSeek-R1~\cite{guo2025deepseek} distilled models (specifically, DeepSeek-R1 distilled, Qwen2.5-Math-7B, Qwen2.5-14B, Qwen2.5-32B~\cite{yang2024qwen2} and Llama-3.1-8B models). Additionally, we include evaluations of proprietary models such as the proprietary ``thinking" model o1-preview~\cite{@o1}, GPT-4o, GPT-4 Turbo\footnote{\texttt{gpt-4-turbo-2024-04-09} at the time of writing} \citep{openai2023gpt4}, Gemini-1.5-Pro~\citep{team2024gemini}, Claude 3.5 Sonnet \footnote{\texttt{claude-3-5-sonnet-20240620} at the time of writing} and Claude-3 Opus\footnote{\texttt{claude-3-opus-20240229} at the time of writing}~\citep{anthropic2024claude3_5}. We compare the performances of these models on our generated questions (MATH$^2$) against their performance on the MATH dataset \citep{hendrycks2021measuring}. We further report several ablation studies on MATH$^2$ in Appendix~\ref{app:expts}. 
+  2008: 
+> 2009: For generating responses, we use the MAmmoTH \citep{yue2023mammoth} codebase. The responses are graded using a GPT-4 grader, where GPT-4 Omni checks the correctness of a solution response against the ground truth solution. This allows us to account for cases where incorrect reasoning traces lead to a correct final answer. Appendix~\ref{app:prompt_eval} shows the prompt used for evaluation. During response generation, we set the temperature to 0 and top\_p to 1 for all models. All necessary compute details are discussed in Appendix~\ref{app:expts}%For open source LLMs, 2 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. For evaluating GPT-4 Omni and GPT-4 Turbo, we use 25 parallel workers to make the API calls, and for Claude-3 Opus we use 2 workers.
+  2010: 
+  2011: \subsection{Performance across the two datasets: A surprising pattern } 
+
+- file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 2009)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  2007: We evaluate the generated set of questions on a variety of language models, both small and large. Specifically, we assess the MetaMath \citep{yu2023metamath}, MAmmoTH \citep{yue2023mammoth}, Gemma \citep{team2024gemma}, Llama-3.1 series~\citep{dubey2024llama}, Phi-3~\citep{abdin2024phi}, deepseek-math~\citep{shao2024deepseekmath}, one Mixture-of-Experts model Mixtral-8$\times$7B-Instruct~\citep{jiang2024mixtral} as well as some of the new ``thinking" models in the form of DeepSeek-R1~\cite{guo2025deepseek} distilled models (specifically, DeepSeek-R1 distilled, Qwen2.5-Math-7B, Qwen2.5-14B, Qwen2.5-32B~\cite{yang2024qwen2} and Llama-3.1-8B models). Additionally, we include evaluations of proprietary models such as the proprietary ``thinking" model o1-preview~\cite{@o1}, GPT-4o, GPT-4 Turbo\footnote{\texttt{gpt-4-turbo-2024-04-09} at the time of writing} \citep{openai2023gpt4}, Gemini-1.5-Pro~\citep{team2024gemini}, Claude 3.5 Sonnet \footnote{\texttt{claude-3-5-sonnet-20240620} at the time of writing} and Claude-3 Opus\footnote{\texttt{claude-3-opus-20240229} at the time of writing}~\citep{anthropic2024claude3_5}. We compare the performances of these models on our generated questions (MATH$^2$) against their performance on the MATH dataset \citep{hendrycks2021measuring}. We further report several ablation studies on MATH$^2$ in Appendix~\ref{app:expts}. 
+  2008: 
+> 2009: For generating responses, we use the MAmmoTH \citep{yue2023mammoth} codebase. The responses are graded using a GPT-4 grader, where GPT-4 Omni checks the correctness of a solution response against the ground truth solution. This allows us to account for cases where incorrect reasoning traces lead to a correct final answer. Appendix~\ref{app:prompt_eval} shows the prompt used for evaluation. During response generation, we set the temperature to 0 and top\_p to 1 for all models. All necessary compute details are discussed in Appendix~\ref{app:expts}%For open source LLMs, 2 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. For evaluating GPT-4 Omni and GPT-4 Turbo, we use 25 parallel workers to make the API calls, and for Claude-3 Opus we use 2 workers.
+  2010: 
+  2011: \subsection{Performance across the two datasets: A surprising pattern } 
+
+- file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 2492)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  2490: \subsection{Further Experimental Details and Results}
+  2491: \label{app:expts}
+> 2492: For open source LLMs, we use 4 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. We use 50 parallel workers while querying o1-preview, GPT-4 Omni, GPT-4 Turbo and Gemini-1.5-Pro, and 2 workers for querying Claude-3 Opus and Claude-3.5-Sonnet.
+  2493: 
+  2494: % \textbf{Analysis of performance degradation on smaller models.} Figure~\ref{fig:size_perf} %illustrates the performance drop on the MATH dataset for various models. 
+
+- file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 2492)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  2490: \subsection{Further Experimental Details and Results}
+  2491: \label{app:expts}
+> 2492: For open source LLMs, we use 4 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. We use 50 parallel workers while querying o1-preview, GPT-4 Omni, GPT-4 Turbo and Gemini-1.5-Pro, and 2 workers for querying Claude-3 Opus and Claude-3.5-Sonnet.
+  2493: 
+  2494: % \textbf{Analysis of performance degradation on smaller models.} Figure~\ref{fig:size_perf} %illustrates the performance drop on the MATH dataset for various models. 
+
+- file: sample\arxiv_sources\2501.04519v1\appendix.tex (line 22)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+    20: 
+    21: 
+>   22: \noindent\textbf{Self-evolution Inference Costs.} In the initial bootstrap round, we use DeepSeek-Coder-v2-Instruct (236B) as the policy model, using 10 nodes of 8×80GB H100 GPUs with 8 MCTS rollouts. This required approximately two weeks to finish the data generation. For rounds 2–4, using our fine-tuned 7B SLM as the policy model, data generation was performed on 15 nodes of 4×40GB A100 GPUs,
+    23: with each round completed in three days. In the final round, to include more challenging problems, we increased the number of MCTS rollouts to 64, extending the data generation time to one week.
+    24: 
+
+- file: sample\arxiv_sources\2501.04519v1\appendix.tex (line 22)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+    20: 
+    21: 
+>   22: \noindent\textbf{Self-evolution Inference Costs.} In the initial bootstrap round, we use DeepSeek-Coder-v2-Instruct (236B) as the policy model, using 10 nodes of 8×80GB H100 GPUs with 8 MCTS rollouts. This required approximately two weeks to finish the data generation. For rounds 2–4, using our fine-tuned 7B SLM as the policy model, data generation was performed on 15 nodes of 4×40GB A100 GPUs,
+    23: with each round completed in three days. In the final round, to include more challenging problems, we increased the number of MCTS rollouts to 64, extending the data generation time to one week.
+    24: 
+
+- file: sample\arxiv_sources\2501.04519v1\method.tex (line 20)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+    18: 
+    19: 
+>   20: \noindent\textbf{Overview}. To this end, we explore using two 7B SLMs (a policy SLM and a PRM) to generate higher-quality training data, with their smaller size allowing for extensive MCTS rollouts on accessible hardware (e.g., 4$\times$40GB A100 GPUs). However, self-generating data presents greater challenges for SLMs, due to their weaker capabilities.
+    21: SLMs frequently fail to generate correct solutions, and even when the final answer is correct, the intermediate steps are often flawed or of poor quality. Moreover, SLMs solve fewer challenging problems compared to advanced models like GPT-4.
+    22: 
+
+- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 232)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   230: \begin{figure}[!t]
+   231:     \centering
+>  232:     \caption{The overview of OSCAR: \uline{O}ne-\uline{S}hot multi-label \uline{C}ausal \uline{A}utoRegressive discovery. \(d\) denotes the hidden dimension, \(L\) the sequence length, \(\text{MB}_1, \text{MB}_2\) the Markov Boundary of \(Y_1, Y_2\) respectively. All green and blue areas represent parallelised operations.}
+   233:     \includegraphics[width=1\linewidth]{plots/OSCAR.drawio_cropped.pdf}
+   234:     \label{fig:oscar}
+
+- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 615)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   613: 
+   614: \textbf{Inter-label Effects.}
+>  615: By definition, the labels are explained solely by events. While simplifying multi-label causal discovery, this intrinsic assumption could be relaxed in future work by using the \textit{do} operator \cite{pearl_2009} to perform interventions on common causal variables of multiple labels. For example, our current framework estimates the Markov Boundaries for each label independently. However, inter-label dependencies can exist, particularly when labels share overlapping Markov Boundaries (e.g \(MB_1 =  [X_1, X_3], MB_2 = [X1, X_2]\). We propose to investigate a 'Phase 2' for OSCAR, focusing on inter-label dependencies through simulated interventions. For instance, if we consider a sequence \(S_1\) of two labels \(Y_1, Y_2\) with the MB above, we could perform counterfactual interventions by applying \(do(X_1=0), do(X_3=0)\)to \(S_1\). Then we would observe the average change in the likelihood of \(Y_1\)  which, if it is non-zero, would indicate a dependence between \(Y_1\) and \(Y_2\). \citet{learningcommoncausalvarlabel} points out that the assumptions of these inter-label dependencies are already anchored in the Markov Boundaries; we do the same here.
+   616: 
+   617: \textbf{NADEs.}
+
+- file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 433)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   431: \begin{figure}[!t]
+   432:     \centering
+>  433:     \caption{The overview of CARGO. Phase 1 (One-shot) is on top, and Phase 2 (Adaptive Thresholding) is on the bottom. \(d\) denotes the hidden dimension, \(L\) the sequence length, \(m\) the number of samples and \(\text{MB}_1, \text{MB}_2\) the Markov Boundary of \(Y_1, Y_2\). All green and blue areas are parallelised.}
+   434:     \includegraphics[width=1\linewidth]{plots/CARGO.pdf}
+   435:     \label{fig:cargo}
+
+- file: sample\arxiv_sources\2508.15096v1\iclr2025_conference.tex (line 142)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   140: \vspace{-1.3em}
+   141: \section{The Collection of \dataset} \vspace{-0.5em}
+>  142: We construct the \dataset corpus from Common Crawl\footnote{\url{https://commoncrawl.org/}}, a large-scale web archive extensively used in recent LLM training \citep{dubey2024llama, hui2024qwen25codertechnicalreport, deepseekai2025deepseekv3technicalreport}. Common Crawl contains over 300B documents across more than 6M WARC files (each contains over 1GB of compressed content). Our goal is to build a pipeline that can process the technical content from Common Crawl correctly. We apply our pipeline to math domain to assemble a high-quality, large-scale corpus of mathematical content from Common Crawl. To achieve this, we designed a robust and highly scalable data processing pipeline capable of operating at the full scale of Common Crawl, as illustrated in Figure~\ref{fig:pipeline}.
+   143: 
+   144: Prior efforts such as OWM~\citep{paster2023openwebmath} and DeepSeekMath~\citep{shao2024deepseekmath} rely on lightweight classifiers to identify technical pages. We initially explored a similar approach but found fundamental limitations in achieving meaningful improvements: first, mathematical content constitutes $<1\%$ of Common Crawl, making manual ground truth annotation extremely difficult; second, since classifiers must run on all Common Crawl documents, only very efficient methods like FastText with simplified HTML parsing are viable. This creates an inherently high-bias setup with no straightforward path to improvement—attempts to increase recall for technical content invariably lead to drastic drops in precision. Rather than refining such classifiers for marginal gains, we leverage community-filtered datasets: extracting URLs from OWM, InfiMM-WebMath~\citep{han2024infimm}, FineMath~\citep{allal2025smollm2smolgoesbig}, and MegaMath~\citep{zhou2025megamath}, including all major subsets. This approach allows us to benefit from the diverse filtering strategies employed by different research groups while avoiding the limitations of any single classifier.
+
+- file: sample\arxiv_sources\2508.15096v1\iclr2025_conference.tex (line 686)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   684: Detailed explanation of a smart solution to an algo problem beating 99.9% submission
+   685: 
+>  686:    Written on January 7th, 2018 by @10000TB
+   687:    [attachments_article_algorithm_col_slide_lamparas-colgantes-algorithm-slide-03.jpg]
+   688: 
+
+- file: sample\arxiv_sources\2508.15096v1\iclr2025_conference.tex (line 839)
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+   837: ## Detailed Explanation of a Smart Solution to an Algorithm Problem
+   838: 
+>  839: *Written on January 7th, 2018 by @10000TB*
+   840: 
+   841: This post is about a coding problem and why the solution provided is smart. The problem is as follows:
+

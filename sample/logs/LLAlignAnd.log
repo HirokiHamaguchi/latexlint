@@ -1,0 +1,385 @@
+[CODE] LLAlignAnd (48)
+- file: sample\submodules\OpenLogic\content\methods\induction\structural-induction.tex (line 25)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+    23: one operation: the operations are
+    24: \begin{align*}
+>   25:   o(s_1, s_2) = & [s_1 \circ s_2]
+    26: \end{align*}
+    27: You can even think of the natural numbers~$\Nat$ themselves as being
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1317)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1315: For any polyradius $r=\left(r_{1},\ldots,r_{N}\right)\in\left(0,+\infty\right)^{N}$, define
+  1316: \[
+> 1317: \begin{aligned}B_{r}\left(\mathbb{\mathbb{C}}\right)= & \left\{ z\in\mathbb{\mathbb{C}}^{N}:\ |z_{1}|\leq r_{1},\ldots,|z_{N}|\leq r_{N}\right\} \\
+  1318: \text{and}\  & B_{r}\left(\mathbb{R}\right)=B_{r}\left(\mathbb{\mathbb{C}}\right)\cap\mathbb{R}^{N},
+  1319: \end{aligned}
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 996)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+   994: the SDE in Eq.(\ref{eq:sde_internal_sym}) implies the following set of SDEs:
+   995: \begin{align}
+>  996: 	de_{t}(\zeta)=&-\frac{e^{2h_{t}(\zeta)}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(2)}-\frac{ie^{2h_{t}(\zeta)}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(3)}, \\
+   997: 	dh_{t}(\zeta)=&-\frac{\tau}{2\rho_{t}(\zeta)^{2}}dt
+   998: 				-\frac{1}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(1)}+\frac{f_{t}(\zeta)}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(2)}+\frac{if_{t}(\zeta)}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(3)}, \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 997)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+   995: \begin{align}
+   996: 	de_{t}(\zeta)=&-\frac{e^{2h_{t}(\zeta)}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(2)}-\frac{ie^{2h_{t}(\zeta)}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(3)}, \\
+>  997: 	dh_{t}(\zeta)=&-\frac{\tau}{2\rho_{t}(\zeta)^{2}}dt
+   998: 				-\frac{1}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(1)}+\frac{f_{t}(\zeta)}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(2)}+\frac{if_{t}(\zeta)}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(3)}, \\
+   999: 	df_{t}(\zeta)=&-\frac{\sqrt{2}f_{t}(\zeta)}{\rho_{t}(\zeta)}dB_{t}^{(1)}-\frac{1-f_{t}(\zeta)^{2}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(2)}+\frac{i(1+f_{t}(\zeta)^{2})}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(3)}.		
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 999)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+   997: 	dh_{t}(\zeta)=&-\frac{\tau}{2\rho_{t}(\zeta)^{2}}dt
+   998: 				-\frac{1}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(1)}+\frac{f_{t}(\zeta)}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(2)}+\frac{if_{t}(\zeta)}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(3)}, \\
+>  999: 	df_{t}(\zeta)=&-\frac{\sqrt{2}f_{t}(\zeta)}{\rho_{t}(\zeta)}dB_{t}^{(1)}-\frac{1-f_{t}(\zeta)^{2}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(2)}+\frac{i(1+f_{t}(\zeta)^{2})}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(3)}.		
+  1000: \end{align}
+  1001: \end{prop}
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1146)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1144: When we further take {{the}} adjoint by $Q(\rho_{t})^{-1}$ on it, we obtain
+  1145: \begin{align}
+> 1146: 	\scr{G}_{t}^{-1}L(z)\scr{G}_{t}=
+  1147: 	&L(\rho_{t}(z))\del\rho_{t}(z)^{2}-\sum_{i=1}^{\ell} \del h^{i}_{t}(z)\del \rho_{t}(z)H_{i}(\rho_{t}(z)) \notag \\
+  1148: 	&+\frac{c}{12}(S\rho_{t})(z)+\frac{1}{2}\sum_{i=1}^{\ell}\del h^{i}_{t}(z)^{2}. 
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1165)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1163: From the transformation rule of a current field $H(z)$, its positive and negative power parts are transformed as
+  1164: \begin{align}
+> 1165: 	\scr{G}_{t}^{-1}H(z)_{+}\scr{G}_{t}=
+  1166: 	&\sum_{m\in\mbb{Z}}\mrm{Res}_{w}\frac{\del \rho_{t}(w)\rho_{t}(w)^{-m-1}}{w-z}H(m)
+  1167: 	-\mrm{Res}_{w}\frac{1}{w-z}\sum_{i=1}^{\ell}(H_{i}|H)\del h^{i}_{t}(w), \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1168)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1166: 	&\sum_{m\in\mbb{Z}}\mrm{Res}_{w}\frac{\del \rho_{t}(w)\rho_{t}(w)^{-m-1}}{w-z}H(m)
+  1167: 	-\mrm{Res}_{w}\frac{1}{w-z}\sum_{i=1}^{\ell}(H_{i}|H)\del h^{i}_{t}(w), \\
+> 1168: 	\scr{G}_{t}^{-1}H(z)_{-}\scr{G}_{t}=
+  1169: 	&\sum_{m\in\mbb{Z}}\mrm{Res}_{w}\frac{\del \rho_{t}(w) \rho_{t}(w)^{-m-1}}{z-w}H(m)
+  1170: 	-\mrm{Res}_{w}\frac{1}{z-w}\sum_{i=1}^{\ell}(H_{i}|H)\del h^{i}_{t}(w).
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1176)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1174: Thus the local martingale associated with the normal ordered product $\no{H(z)^{2}}$ is computed as
+  1175: \begin{align}
+> 1176: 	\braket{v_{\Lambda}|\no{H(z)^{2}}\scr{G}_{t}|v_{\Lambda}}=
+  1177: 	&(H|H)\mrm{Res}_{w}\left[\frac{\del\rho_{t}(w)}{w-z}\del_{z}\left(\frac{1}{\rho_{t}(w)-\rho_{t}(z)}\right)-\frac{\del\rho_{t}(w)}{z-w}\del_{z}\left(\frac{\rho_{t}(z)\rho_{t}(w)^{-1}}{\rho_{t}(z)-\rho_{t}(w)}\right)\right]  \notag \\
+  1178: 	&+(\lambda (H_{1}|H))^{2}\left(\frac{\del \rho_{t}(z)}{\rho_{t}(z)}\right)^{2}
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1183)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1181: This enables us to derive another form of the local martingale $\braket{v_{\Lambda}|L(z)\scr{G}|v_{\Lambda}}$ so that
+  1182: \begin{align}
+> 1183: 	\braket{v_{\Lambda}|L(z)\scr{G}_{t}|v_{\Lambda}}=
+  1184: 	&\frac{\ell}{2}\mrm{Res}_{w}\left[\frac{\del\rho_{t}(w)}{w-z}\del_{z}\left(\frac{1}{\rho_{t}(w)-\rho_{t}(z)}\right)-\frac{\del\rho_{t}(w)}{z-w}\del_{z}\left(\frac{\rho_{t}(z)\rho_{t}(w)^{-1}}{\rho_{t}(z)-\rho_{t}(w)}\right)\right]  \notag \\
+  1185: 	&+h_{\Lambda}\left(\frac{\del \rho_{t}(z)}{\rho_{t}(z)}\right)^{2}-\lambda \frac{\del\rho_{t}(z)}{\rho_{t}(z)}\del h^{1}_{t}(z).
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1204)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1202: \label{lem:transform_current}
+  1203: \begin{align}
+> 1204: 	\scr{G}_{t}^{-1}E(z)\scr{G}_{t}=
+  1205: 	&e^{-2h_{t}(z)}\del \rho_{t}(z) E(\rho_{t}(z)) +e^{-2h_{t}(z)}f_{t}(z)\del \rho_{t}(z)H(\rho_{t}(z)) \notag \\
+  1206: 	&-e^{-2h_{t}(z)}f_{t}(z)^{2}\del\rho_{t}(z)F(\rho_{t}(z)) -k\del f_{t}(z),  \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1207)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1205: 	&e^{-2h_{t}(z)}\del \rho_{t}(z) E(\rho_{t}(z)) +e^{-2h_{t}(z)}f_{t}(z)\del \rho_{t}(z)H(\rho_{t}(z)) \notag \\
+  1206: 	&-e^{-2h_{t}(z)}f_{t}(z)^{2}\del\rho_{t}(z)F(\rho_{t}(z)) -k\del f_{t}(z),  \\
+> 1207: 	\scr{G}_{t}^{-1}H(z)\scr{G}_{t}=
+  1208: 	&2e^{-2h_{t}(z)}e_{t}(z)\del\rho_{t}(z)E(\rho_{t}(z))+(1+2e^{-2h_{t}(z)}e_{t}(z)f_{t}(z))\del\rho_{t}(z)H(\rho_{t}(z)) \notag \\
+  1209: 	&-(2f_{t}(z)+2e^{-2h_{t}(z)}e_{t}(z)f_{t}(z)^{2})\del\rho_{t}(z) F(\rho_{t}(z)) \notag \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1211)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1209: 	&-(2f_{t}(z)+2e^{-2h_{t}(z)}e_{t}(z)f_{t}(z)^{2})\del\rho_{t}(z) F(\rho_{t}(z)) \notag \\
+  1210: 	&-k(2\del h_{t}(z)+2e^{-2h_{t}(z)}e_{t}(z)\del f_{t}(z)),  \\
+> 1211: 	\scr{G}_{t}^{-1}F(z)\scr{G}_{t}=
+  1212: 	&-e^{-2h_{t}(z)}e_{t}(z)^{2}\del \rho_{t}(z) E(\rho_{t}(z)) \notag \\
+  1213: 	&-(e_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}f_{t}(z))\del \rho_{t}(z) H(\rho_{t}(z)) \notag \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1240)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1238: \item 	$X=H$.
+  1239: 		\begin{align}
+> 1240: 			\braket{v_{\Lambda}|H(z)\scr{G}_{t}|v_{\Lambda}}=&(1+2e^{-2h_{t}(z)}e_{t}(z)f_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)}  \notag \\
+  1241: 										&-(2\del h_{t}(z)+2e^{-2h_{t}(z)}e_{t}(z)\del f_{t}(z)),  \\
+  1242: 			\braket{v_{-\Lambda}|H(z)\scr{G}_{t}|v_{\Lambda}}=&-(2f_{t}(z)+2e^{-2h_{t}(z)}e_{t}(z)f_{t}(z)^{2})\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1242)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1240: 			\braket{v_{\Lambda}|H(z)\scr{G}_{t}|v_{\Lambda}}=&(1+2e^{-2h_{t}(z)}e_{t}(z)f_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)}  \notag \\
+  1241: 										&-(2\del h_{t}(z)+2e^{-2h_{t}(z)}e_{t}(z)\del f_{t}(z)),  \\
+> 1242: 			\braket{v_{-\Lambda}|H(z)\scr{G}_{t}|v_{\Lambda}}=&-(2f_{t}(z)+2e^{-2h_{t}(z)}e_{t}(z)f_{t}(z)^{2})\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
+  1243: 			\braket{v_{\Lambda}|H(z)\scr{G}_{t}|v_{-\Lambda}}=&2e^{-2h_{t}(z)}e_{t}(z)\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
+  1244: 			\braket{v_{-\Lambda}|H(z)\scr{G}_{t}|v_{-\Lambda}}=&-(1+2e^{-2h_{t}(z)}e_{t}(z)f_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)} \notag \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1243)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1241: 										&-(2\del h_{t}(z)+2e^{-2h_{t}(z)}e_{t}(z)\del f_{t}(z)),  \\
+  1242: 			\braket{v_{-\Lambda}|H(z)\scr{G}_{t}|v_{\Lambda}}=&-(2f_{t}(z)+2e^{-2h_{t}(z)}e_{t}(z)f_{t}(z)^{2})\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
+> 1243: 			\braket{v_{\Lambda}|H(z)\scr{G}_{t}|v_{-\Lambda}}=&2e^{-2h_{t}(z)}e_{t}(z)\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
+  1244: 			\braket{v_{-\Lambda}|H(z)\scr{G}_{t}|v_{-\Lambda}}=&-(1+2e^{-2h_{t}(z)}e_{t}(z)f_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)} \notag \\
+  1245: 										&-(2\del h_{t}(z)+2e^{-2h_{t}(z)}e_{t}(z)\del f_{t}(z)).
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1244)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1242: 			\braket{v_{-\Lambda}|H(z)\scr{G}_{t}|v_{\Lambda}}=&-(2f_{t}(z)+2e^{-2h_{t}(z)}e_{t}(z)f_{t}(z)^{2})\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
+  1243: 			\braket{v_{\Lambda}|H(z)\scr{G}_{t}|v_{-\Lambda}}=&2e^{-2h_{t}(z)}e_{t}(z)\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
+> 1244: 			\braket{v_{-\Lambda}|H(z)\scr{G}_{t}|v_{-\Lambda}}=&-(1+2e^{-2h_{t}(z)}e_{t}(z)f_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)} \notag \\
+  1245: 										&-(2\del h_{t}(z)+2e^{-2h_{t}(z)}e_{t}(z)\del f_{t}(z)).
+  1246: 		\end{align}
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1250)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1248: \item 	$X=F$.
+  1249: 		\begin{align}
+> 1250: 			\braket{v_{\Lambda}|F(z)\scr{G}_{t}|v_{\Lambda}}=&-(e_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}f_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)} \notag \\
+  1251: 										&+(2e_{t}(z)\del f_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}\del f_{t}(z)-\del e_{t}(z)),  \\
+  1252: 			\braket{v_{-\Lambda}|F(z)\scr{G}_{t}|v_{\Lambda}}=&(2e_{t}(z)f_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}f_{t}(z)^{2})\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1252)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1250: 			\braket{v_{\Lambda}|F(z)\scr{G}_{t}|v_{\Lambda}}=&-(e_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}f_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)} \notag \\
+  1251: 										&+(2e_{t}(z)\del f_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}\del f_{t}(z)-\del e_{t}(z)),  \\
+> 1252: 			\braket{v_{-\Lambda}|F(z)\scr{G}_{t}|v_{\Lambda}}=&(2e_{t}(z)f_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}f_{t}(z)^{2})\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
+  1253: 			\braket{v_{\Lambda}|F(z)\scr{G}_{t}|v_{-\Lambda}}=&-e^{-2h_{t}(z)}e_{t}(z)^{2}\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
+  1254: 			\braket{v_{-\Lambda}|F(z)\scr{G}_{t}|v_{-\Lambda}}=&(e_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}f_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)} \notag \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1253)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1251: 										&+(2e_{t}(z)\del f_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}\del f_{t}(z)-\del e_{t}(z)),  \\
+  1252: 			\braket{v_{-\Lambda}|F(z)\scr{G}_{t}|v_{\Lambda}}=&(2e_{t}(z)f_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}f_{t}(z)^{2})\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
+> 1253: 			\braket{v_{\Lambda}|F(z)\scr{G}_{t}|v_{-\Lambda}}=&-e^{-2h_{t}(z)}e_{t}(z)^{2}\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
+  1254: 			\braket{v_{-\Lambda}|F(z)\scr{G}_{t}|v_{-\Lambda}}=&(e_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}f_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)} \notag \\
+  1255: 										&+(2e_{t}(z)\del f_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}\del f_{t}(z)-\del e_{t}(z)).
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1254)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1252: 			\braket{v_{-\Lambda}|F(z)\scr{G}_{t}|v_{\Lambda}}=&(2e_{t}(z)f_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}f_{t}(z)^{2})\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
+  1253: 			\braket{v_{\Lambda}|F(z)\scr{G}_{t}|v_{-\Lambda}}=&-e^{-2h_{t}(z)}e_{t}(z)^{2}\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
+> 1254: 			\braket{v_{-\Lambda}|F(z)\scr{G}_{t}|v_{-\Lambda}}=&(e_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}f_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)} \notag \\
+  1255: 										&+(2e_{t}(z)\del f_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}\del f_{t}(z)-\del e_{t}(z)).
+  1256: 		\end{align}
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1271)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1269: \begin{lem}
+  1270: \begin{align}
+> 1271: 	\scr{G}_{t}^{-1}L(z)\scr{G}_{t}=
+  1272: 	&(\del\rho_{t}(z))^{2}L(\rho_{t}(z)) \notag \\
+  1273: 	&-e^{-2h_{t}(z)}\del e_{t}(z)\del \rho_{t}(z) E(\rho_{t}(z)) \notag \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1287)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1285: the following quantities are local martingales:
+  1286: \begin{align}
+> 1287: 	\braket{v_{\Lambda}|L(z)\scr{G}_{t}|v_{\Lambda}}=
+  1288: 	&\frac{1}{4}\left(\frac{\del\rho_{t}(z)}{\rho_{t}(z)}\right)^{2}-(\del h_{t}(z)+e^{-2h_{t}(z)}f_{t}(z)\del e_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)} \notag \\
+  1289: 	&+((\del h_{t}(z))^{2}+e^{-2h_{t}(z)}\del e_{t}(z) \del f_{t}(z))+\frac{1}{12}(S\rho_{t})(z),  \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1290)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1288: 	&\frac{1}{4}\left(\frac{\del\rho_{t}(z)}{\rho_{t}(z)}\right)^{2}-(\del h_{t}(z)+e^{-2h_{t}(z)}f_{t}(z)\del e_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)} \notag \\
+  1289: 	&+((\del h_{t}(z))^{2}+e^{-2h_{t}(z)}\del e_{t}(z) \del f_{t}(z))+\frac{1}{12}(S\rho_{t})(z),  \\
+> 1290: 	\braket{v_{-\Lambda}|L(z)\scr{G}_{t}|v_{\Lambda}}=
+  1291: 	&-(\del f_{t}(z)-2f_{t}(z)\del h_{t}(z)-e^{-2h_{t}(z)}f_{t}(z)^{2}\del e_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
+  1292: 	\braket{v_{\Lambda}|L(z)\scr{G}_{t}|v_{-\Lambda}}=
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1292)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1290: 	\braket{v_{-\Lambda}|L(z)\scr{G}_{t}|v_{\Lambda}}=
+  1291: 	&-(\del f_{t}(z)-2f_{t}(z)\del h_{t}(z)-e^{-2h_{t}(z)}f_{t}(z)^{2}\del e_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
+> 1292: 	\braket{v_{\Lambda}|L(z)\scr{G}_{t}|v_{-\Lambda}}=
+  1293: 	&-e^{-2h_{t}(z)}\del e_{t}(z)\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
+  1294: 	\braket{v_{-\Lambda}|L(z)\scr{G}_{t}|v_{-\Lambda}}=
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1294)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1292: 	\braket{v_{\Lambda}|L(z)\scr{G}_{t}|v_{-\Lambda}}=
+  1293: 	&-e^{-2h_{t}(z)}\del e_{t}(z)\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
+> 1294: 	\braket{v_{-\Lambda}|L(z)\scr{G}_{t}|v_{-\Lambda}}=
+  1295: 	&\frac{1}{4}\left(\frac{\del\rho_{t}(z)}{\rho_{t}(z)}\right)^{2}+(\del h_{t}(z)+e^{-2h_{t}(z)}f_{t}(z)\del e_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)} \notag \\
+  1296: 	&+((\del h_{t}(z))^{2}+e^{-2h_{t}(z)}\del e_{t}(z) \del f_{t}(z))+\frac{1}{12}(S\rho_{t})(z).
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1336)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1334: and we {{note the results here:}}
+  1335: \begin{align}
+> 1336: 	\scr{E}_{\ell}=
+  1337: 	&-\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}e^{2h(w)}e^{-2h(z)}z^{-\ell}\pr{g}(z)}{g(w)-g(z)}\frac{\del}{\del e_{n}}   \notag \\
+  1338: 	&-\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}e^{-2h(z)}(f(z)-f(w))z^{-\ell}\pr{g}(z)}{g(w)-g(z)}\frac{\del}{\del h_{n}} \notag \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1346)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1344: \end{align}
+  1345: \begin{align}
+> 1346: 	\scr{H}_{\ell}=
+  1347: 	&-2\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}e^{2h(w)}e^{-2h(z)}e(z)z^{-\ell}\pr{g}(z)}{g(w)-g(z)}\frac{\del}{\del e_{n}} \notag \\
+  1348: 	&-\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}(1+2e^{-2h(z)}(f(z)-f(w)))z^{-\ell}\pr{g}(z)}{g(w)-g(z)}\frac{\del}{\del h_{n}} \notag \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1356)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1354: \end{align}
+  1355: \begin{align}
+> 1356: 	\scr{F}_{\ell}=
+  1357: 	&\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}e^{2h(w)}e^{-2h(z)}e(z)^{2}z^{-\ell}\pr{g}(z)}{g(w)-g(z)}\frac{\del}{\del e_{n}} \notag \\
+  1358: 	&-\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}(1+e^{-2h(z)}e(z)(f(w)-f(z)))e(z)z^{-\ell}\pr{g}(z)}{g(w)-g(z)}\frac{\del}{\del h_{n}} \notag \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1373)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1371: {{The}} detailed derivation is {{conducted in}} Appendix \ref{sect:app_operator_X}, {{but}} it yields
+  1372: \begin{align}
+> 1373: 	\scr{L}_{\ell}=
+  1374: 	&-\sum_{n\le 0}\mrm{Res}_{z}\mrm{Res}_{w}\frac{z^{-\ell+1}w^{-n-1}\pr{g}(z)^{2}}{g(w)-g(z)}\frac{\del}{\del g_{n}}  \notag \\
+  1375: 	&-\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{z^{-\ell+1}w^{-n-1}e^{2h(w)}e^{-2h(z)}\del e(z)\pr{g}(z)}{g(w)-g(z)}\frac{\del}{\del e_{n}} \notag \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1915)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1913: The increment of $\Theta_{t}$ is also computed as
+  1914: \begin{align}
+> 1915: 	d\Theta_{t}=
+  1916: 	&(de^{{\bf e}_{t}})e^{{\bf h}_{t}}e^{{\bf f}_{t}}+e^{{\bf e}_{t}}(de^{{\bf h}_{t}})e^{{\bf f}_{t}}+e^{{\bf e}_{t}}e^{{\bf h}_{t}}(de^{{\bf f}_{t}})  \notag \\
+  1917: 	&+(de^{{\bf e}_{t}})(de^{{\bf h}_{t}})e^{{\bf f}_{t}}+(d e^{{\bf e}_{t}})e^{{\bf h}_{t}}(de^{{\bf f}_{t}})+e^{{\bf e}_{t}}(de^{{\bf h}_{t}})(de^{{\bf f}_{t}}).
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1948)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1946: We can finally formulate SDEs
+  1947: \begin{align}
+> 1948: 	de_{t}(\zeta)=
+  1949: 	&-\frac{e^{2h_{t}(\zeta)}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(2)}-\frac{ie^{2h_{t}(\zeta)}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(3)}, \\
+  1950: 	dh_{t}(\zeta)=
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1950)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1948: 	de_{t}(\zeta)=
+  1949: 	&-\frac{e^{2h_{t}(\zeta)}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(2)}-\frac{ie^{2h_{t}(\zeta)}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(3)}, \\
+> 1950: 	dh_{t}(\zeta)=
+  1951: 	&-\frac{\tau}{2}\rho_{t}(\zeta)^{-2}dt -\frac{1}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(1)}
+  1952: 	+\frac{f_{t}(\zeta)}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(2)}+\frac{if_{t}(\zeta)}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(3)}, \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1953)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1951: 	&-\frac{\tau}{2}\rho_{t}(\zeta)^{-2}dt -\frac{1}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(1)}
+  1952: 	+\frac{f_{t}(\zeta)}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(2)}+\frac{if_{t}(\zeta)}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(3)}, \\
+> 1953: 	df_{t}(\zeta)=
+  1954: 	&-\frac{\sqrt{2}f_{t}(\zeta)}{\rho_{t}(\zeta)}dB_{t}^{(1)}-\frac{1-f_{t}(\zeta)^{2}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(2)}
+  1955: 	+\frac{i(1+f_{t}(\zeta)^{2})}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(3)}.
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1975)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1973: After transferring $E\otimes \zeta^{n}$ to the rightest position in the product, we have a differential equation
+  1974: \begin{align}
+> 1975: 	\scr{G}^{-1}\frac{\del \scr{G}}{\del e_{n}}=&E\otimes e^{-2h(g^{-1}(\zeta))}g^{-1}(\zeta)^{n}+H\otimes e^{-2h(g^{-1}(\zeta))}f(g^{-1}(\zeta))g^{-1}(\zeta)^{n} \notag \\
+  1976: 	&-F\otimes e^{-2h(g^{-1}(\zeta))}f(g^{-1}(\zeta))^{2}g^{-1}(\zeta)^{n}
+  1977: \end{align}
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1991)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1989: \begin{align}
+  1990: 	\scr{G}F\otimes \theta(\zeta)&=\sum_{n\le -1}\left(\mrm{Res}_{w}w^{-n-1}\theta(g(w))\right)\frac{\del \scr{G}}{\del f_{n}}, \\
+> 1991: 	\scr{G}H\otimes \theta(\zeta)=&\sum_{n\le -1}\left(\mrm{Res}_{w}w^{-n-1}\theta(g(w))\right)\frac{\del \scr{G}}{\del h_{n}} 
+  1992: 		+2\sum_{n\le -1}\left(\mrm{Res}_{w}w^{-n-1}f(w)\theta(g(w))\right)\frac{\del \scr{G}}{\del f_{n}}, \\
+  1993: 	\scr{G}E\otimes \theta(\zeta)=
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1993)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  1991: 	\scr{G}H\otimes \theta(\zeta)=&\sum_{n\le -1}\left(\mrm{Res}_{w}w^{-n-1}\theta(g(w))\right)\frac{\del \scr{G}}{\del h_{n}} 
+  1992: 		+2\sum_{n\le -1}\left(\mrm{Res}_{w}w^{-n-1}f(w)\theta(g(w))\right)\frac{\del \scr{G}}{\del f_{n}}, \\
+> 1993: 	\scr{G}E\otimes \theta(\zeta)=
+  1994: 	&\sum_{n\le -1}\left(\mrm{Res}_{w}w^{-n-1}e^{2h(w)}\theta(g(w))\right)\frac{\del \scr{G}}{\del e_{n}}
+  1995: 		-\sum_{n\le -1}\left(\mrm{Res}_{w}w^{-n-1}f(w)\theta(g(w))\right)\frac{\del \scr{G}}{\del h_{n}} \notag \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2013)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  2011: \begin{align}
+  2012: 	\scr{G}^{-1}E\otimes \zeta^{-\ell}\scr{G}
+> 2013: 	=& E\otimes e^{-2h(\xi)}\xi^{-\ell}+H\otimes e^{-2h(\xi)}f(\xi)\xi^{-\ell}  \notag \\
+  2014: 		&-F\otimes e^{-2h(\xi)}f(\xi)^{2}\xi^{-\ell}-k\mrm{Res}_{w}\del f(w)e^{-2h(w)}w^{-\ell}, \\
+  2015: 	\scr{G}^{-1}H\otimes \zeta^{-\ell}\scr{G}
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2016)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  2014: 		&-F\otimes e^{-2h(\xi)}f(\xi)^{2}\xi^{-\ell}-k\mrm{Res}_{w}\del f(w)e^{-2h(w)}w^{-\ell}, \\
+  2015: 	\scr{G}^{-1}H\otimes \zeta^{-\ell}\scr{G}
+> 2016: 	=& 2E\otimes e^{-2h(\xi)}e(\xi)\xi^{-\ell} \notag \\
+  2017: 		&+H\otimes (1+2e^{-2h(\xi)}e(\xi)f(\xi))\xi^{-\ell} \notag \\
+  2018: 		&-2F\otimes( f(\xi)+ e^{-2h(\xi)}e(\xi)f(\xi)^{2})\xi^{-\ell} \notag \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2021)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  2019: 		&-2k\mrm{Res}_{w}(\del h(w)+\del f(w)e^{-2h(w)}e(w))w^{-\ell}, \\
+  2020: 	\scr{G}^{-1}F\otimes \zeta^{-\ell}\scr{G}
+> 2021: 	=& -E\otimes e^{-2h(\xi)}e(\xi)^{2}\xi^{-\ell}  \notag \\
+  2022: 		&-H\otimes (e(\xi)+e^{-2h(\xi)}e(\xi)^{2}f(\xi))\xi^{-\ell} \notag \\
+  2023: 		&+F\otimes (e^{2h(\xi)}+2e(\xi)f(\xi)+e^{-2h(\xi)}e(\xi)^{2}f(\xi)^{2})\xi^{-\ell} \notag \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2036)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  2034: Then
+  2035: \begin{align}
+> 2036: 	\scr{G}E\otimes \theta(\zeta)\mcal{Y}(v,x)\ket{0}=
+  2037: 	&\Biggl(\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}e^{2h(w)}\theta(z)}{g(w)-z}\frac{\del}{\del e_{n}}  \notag \\
+  2038: 		&\hspace{10pt}-\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}f(w)\theta(z)}{g(w)-z}\frac{\del}{\del h_{n}} \notag \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2041)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  2039: 		&\hspace{10pt} -\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}f(w)^{2}\theta(z)}{g(w)-z}\frac{\del}{\del f_{n}}\Biggr)\scr{G}\mcal{Y}(v,x)\ket{0} \notag \\
+  2040: 	&+\mrm{Res}_{z}\frac{\theta(z)}{z-x}\scr{G}\mcal{Y}(Ev,x)\ket{0}, \\
+> 2041: 	\scr{G}H\otimes \theta(\zeta)\mcal{Y}(v,x)\ket{0}=
+  2042: 	&\Biggl(\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}\theta(z)}{g(w)-z}\frac{\del}{\del h_{n}}  \notag \\
+  2043: 	&\hspace{10pt}+2\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}f(w)\theta(z)}{g(w)-z}\frac{\del}{\del f_{n}}\Biggr)\scr{G}\mcal{Y}(v,x)\ket{0} \notag \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2046)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  2044: 	&+\mrm{Res}_{z}\frac{\theta(z)}{z-x}\scr{G}\mcal{Y}(Hv,x)\ket{0},  \\
+  2045: 	\label{eq:divide_F}
+> 2046: 	\scr{G}F\otimes \theta(\zeta)\mcal{Y}(v,x)\ket{0}=
+  2047: 	&\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}\theta(z)}{g(w)-z}\frac{\del}{\del f_{n}}\scr{G}\mcal{Y}(v,x)\ket{0}  \notag \\
+  2048: 	&+\mrm{Res}_{z}\frac{\theta(z)}{z-x}\scr{G}\mcal{Y}(Fv,x)\ket{0}.
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2091)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  2089: where
+  2090: \begin{align}
+> 2091: 	\scr{E}_{\ell}=
+  2092: 	&-\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}e^{2h(w)}e^{-2h(z)}z^{-\ell}\pr{g}(z)}{g(w)-g(z)}\frac{\del}{\del e_{n}} \notag \\
+  2093: 	&-\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}e^{-2h(z)}(f(z)-f(w))z^{-\ell}\pr{g}(z)}{g(w)-g(z)}\frac{\del}{\del h_{n}} \notag \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2107)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  2105: where
+  2106: \begin{align}
+> 2107: 	\scr{H}_{\ell}=
+  2108: 	&-2\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}e^{2h(w)}e^{-2h(z)}e(z)z^{-\ell}\pr{g}(z)}{g(w)-g(z)}\frac{\del}{\del e_{n}} \notag \\
+  2109: 	&-\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}(1+2e^{-2h(z)}(f(z)-f(w)))z^{-\ell}\pr{g}(z)}{g(w)-g(z)}\frac{\del}{\del h_{n}} \notag \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2122)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  2120: where
+  2121: \begin{align}
+> 2122: 	\scr{F}_{\ell}=
+  2123: 	&\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}e^{2h(w)}e^{-2h(z)}e(z)^{2}z^{-\ell}\pr{g}(z)}{g(w)-g(z)}\frac{\del}{\del e_{n}} \notag \\
+  2124: 	&-\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}(1+e^{-2h(z)}e(z)(f(w)-f(z)))e(z)z^{-\ell}\pr{g}(z)}{g(w)-g(z)}\frac{\del}{\del h_{n}} \notag \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2138)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  2136: \begin{align}
+  2137: 	\scr{G}^{-1}L_{-\ell}\scr{G}
+> 2138: 	=&\sum_{m\in\mbb{Z}}\left(\mrm{Res}_{z}z^{-\ell+1}g(z)^{-n-2}\pr{g}(z)^{2}\right)L_{m} \notag \\
+  2139: 	&-E\otimes e^{-2h(\xi)}\del e(\xi)\xi^{-\ell+1} \notag \\
+  2140: 	&-H\otimes (\del h(\xi)+e^{-2h(\xi)}f(\xi)\del e(\xi))\xi^{-\ell+1} \notag \\
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2155)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  2153: Thus the desired operator $\scr{L}_{\ell}$ is specified as
+  2154: \begin{align}
+> 2155: 	\scr{L}_{\ell}=
+  2156: 	&-\sum_{n\le 0}\mrm{Res}_{z}\mrm{Res}_{w}\frac{z^{-\ell+1}w^{-n-1}\pr{g}(z)^{2}}{g(w)-g(z)}\frac{\del}{\del g_{n}} \notag \\
+  2157: 	&-\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{z^{-\ell+1}w^{-n-1}e^{2h(w)}e^{-2h(z)}\del e(z)\pr{g}(z)}{g(w)-g(z)}\frac{\del}{\del e_{n}} \notag \\
+

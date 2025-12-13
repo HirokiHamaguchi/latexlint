@@ -69,36 +69,10 @@ function bundleAndLoad(repoRoot) {
     return { ...mod, bundlePath: outFile };
 }
 
-function main() {
-    ensureLocalStorage();
-    applyDefaultConfig();
-
-    const filePath = process.argv[2];
-    if (!filePath) {
-        console.error(JSON.stringify({ ok: false, error: 'Usage: run_enumerate.js <file>' }));
-        process.exit(1);
-    }
-
-    const repoRoot = path.resolve(__dirname, '..');
+function processFile(filePath, enumerateDiagnostics, createMockTextDocument, Uri) {
     const absPath = path.resolve(filePath);
-
-    let text;
     try {
-        text = fs.readFileSync(absPath, 'utf8');
-    } catch (err) {
-        console.error(JSON.stringify({ ok: false, error: `read failed: ${err.message}` }));
-        process.exit(1);
-    }
-
-    let enumerateDiagnostics, createMockTextDocument, Uri, bundlePath;
-    try {
-        ({ enumerateDiagnostics, createMockTextDocument, Uri, bundlePath } = bundleAndLoad(repoRoot));
-    } catch (err) {
-        console.error(JSON.stringify({ ok: false, error: `bundle failed: ${err.message}` }));
-        process.exit(1);
-    }
-
-    try {
+        const text = fs.readFileSync(absPath, 'utf8');
         const languageId = absPath.toLowerCase().endsWith('.md') ? 'markdown' : 'latex';
         const doc = createMockTextDocument(text, Uri.file(absPath), languageId);
         const diagnostics = enumerateDiagnostics(doc) || [];
@@ -109,9 +83,59 @@ function main() {
             end: { line: d.range.end.line, character: d.range.end.character },
             code: d.code,
         }));
-        console.log(JSON.stringify({ ok: true, diagnostics: payload }));
+        return { ok: true, file: absPath, diagnostics: payload };
     } catch (err) {
-        console.error(JSON.stringify({ ok: false, error: `enumerate failed: ${err.message}`, stack: err && err.stack }));
+        return { ok: false, file: absPath, error: err.message };
+    }
+}
+
+function main() {
+    ensureLocalStorage();
+    applyDefaultConfig();
+
+    // Support both single file and multiple files (batch mode)
+    const args = process.argv.slice(2);
+    if (args.length === 0) {
+        console.error(JSON.stringify({ ok: false, error: 'Usage: run_diagnose.js <file1> [file2] ... or run_diagnose.js --batch <files.json>' }));
+        process.exit(1);
+    }
+
+    const repoRoot = path.resolve(__dirname, '..');
+
+    // Bundle once for all files
+    let enumerateDiagnostics, createMockTextDocument, Uri, bundlePath;
+    try {
+        ({ enumerateDiagnostics, createMockTextDocument, Uri, bundlePath } = bundleAndLoad(repoRoot));
+    } catch (err) {
+        console.error(JSON.stringify({ ok: false, error: `bundle failed: ${err.message}` }));
+        process.exit(1);
+    }
+
+    try {
+        let filePaths;
+
+        // Check if batch mode (reading file paths from JSON file)
+        if (args[0] === '--batch' && args[1]) {
+            try {
+                const batchContent = fs.readFileSync(args[1], 'utf8');
+                filePaths = JSON.parse(batchContent);
+                if (!Array.isArray(filePaths)) {
+                    throw new Error('Batch file must contain an array of file paths');
+                }
+            } catch (err) {
+                console.error(JSON.stringify({ ok: false, error: `batch read failed: ${err.message}` }));
+                process.exit(1);
+            }
+        } else {
+            // Individual files mode
+            filePaths = args;
+        }
+
+        // Process all files
+        const results = filePaths.map((fp) => processFile(fp, enumerateDiagnostics, createMockTextDocument, Uri));
+        console.log(JSON.stringify({ ok: true, results }));
+    } catch (err) {
+        console.error(JSON.stringify({ ok: false, error: `processing failed: ${err.message}`, stack: err && err.stack }));
         process.exit(1);
     } finally {
         try { fs.unlinkSync(bundlePath); } catch (_) { /* ignore */ }

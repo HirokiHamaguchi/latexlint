@@ -41,33 +41,50 @@ def sanitize_code(code: str) -> str:
     return "".join(ch if ch.isalnum() or ch in ("-", "_") else "_" for ch in code)
 
 
-def run_node(tex_path: Path) -> Dict[str, Any]:
-    cmd = ["node", str(NODE_RUNNER), str(tex_path)]
-    result = subprocess.run(cmd, capture_output=True, text=True, check=False)
-    stdout = result.stdout.strip()
-    stderr = result.stderr.strip()
+def run_node_batch(tex_paths: List[Path]) -> Dict[str, Any]:
+    """Run node script once for all files using batch mode."""
+    # Create a temporary JSON file with all paths
+    import tempfile
 
-    payload = None
-    if stdout:
-        try:
-            payload = json.loads(stdout.splitlines()[-1])
-        except Exception as exc:  # noqa: BLE001
+    with tempfile.NamedTemporaryFile(
+        mode="w", suffix=".json", delete=False, encoding="utf-8"
+    ) as tmp:
+        json.dump([str(p) for p in tex_paths], tmp)
+        tmp_path = tmp.name
+
+    try:
+        cmd = ["node", str(NODE_RUNNER), "--batch", tmp_path]
+        result = subprocess.run(cmd, capture_output=True, text=True, check=False)
+        stdout = result.stdout.strip()
+        stderr = result.stderr.strip()
+
+        payload = None
+        if stdout:
+            try:
+                payload = json.loads(stdout.splitlines()[-1])
+            except Exception as exc:  # noqa: BLE001
+                return {
+                    "ok": False,
+                    "error": f"failed to parse stdout as JSON: {exc}",
+                    "stdout": stdout,
+                    "stderr": stderr,
+                }
+
+        if not payload or not payload.get("ok"):
             return {
                 "ok": False,
-                "error": f"failed to parse stdout as JSON: {exc}",
+                "error": payload.get("error") if payload else "missing payload",
                 "stdout": stdout,
                 "stderr": stderr,
             }
 
-    if not payload or not payload.get("ok"):
-        return {
-            "ok": False,
-            "error": payload.get("error") if payload else "missing payload",
-            "stdout": stdout,
-            "stderr": stderr,
-        }
-
-    return {"ok": True, "diagnostics": payload.get("diagnostics", []), "stderr": stderr}
+        return {"ok": True, "results": payload.get("results", []), "stderr": stderr}
+    finally:
+        # Clean up temp file
+        try:
+            os.unlink(tmp_path)
+        except Exception:  # noqa: BLE001, S110
+            pass
 
 
 def format_context(tex_path: Path, start_line: int, context: int = 2) -> str:
@@ -100,65 +117,97 @@ def run_diagnose() -> None:
     blocks: List[str] = []
     error_blocks: List[str] = []
 
-    # Parallel execution: use ThreadPoolExecutor to run node subprocesses concurrently.
-    max_workers = min(32, (os.cpu_count() or 1) * 4)
-    future_to_tex: Dict[Any, Path] = {}
+    # Split files into 4 batches for parallel processing
+    num_workers = 4
+    batch_size = (len(tex_files) + num_workers - 1) // num_workers
+    file_batches = [
+        tex_files[i : i + batch_size] for i in range(0, len(tex_files), batch_size)
+    ]
 
-    with ThreadPoolExecutor(max_workers=max_workers) as ex:
-        for tex in tex_files:
-            future = ex.submit(run_node, tex)
-            future_to_tex[future] = tex
+    print(
+        f"Processing {len(tex_files)} files in {len(file_batches)} parallel batches..."
+    )
 
-        for future in as_completed(future_to_tex):
-            tex = future_to_tex[future]
-            print(f"Processed {tex.relative_to(BASE_DIR)}")
+    # Process batches in parallel
+    future_to_batch: Dict[Any, int] = {}
+    with ThreadPoolExecutor(max_workers=num_workers) as ex:
+        for batch_idx, batch in enumerate(file_batches):
+            future = ex.submit(run_node_batch, batch)
+            future_to_batch[future] = batch_idx
+
+        for future in as_completed(future_to_batch):
+            batch_idx = future_to_batch[future]
+            print(f"Completed batch {batch_idx + 1}/{len(file_batches)}")
+
             try:
-                result = future.result()
-            except Exception as exc:  # unexpected error from run_node
-                failures += 1
+                batch_result = future.result()
+            except Exception as exc:
+                failures += len(file_batches[batch_idx])
                 error_blocks.append(
                     "\n".join(
                         [
-                            f"[ERROR] {tex}",
-                            f"reason: exception during run: {exc}",
+                            f"[ERROR] Batch {batch_idx + 1} failed",
+                            f"reason: exception during processing: {exc}",
                             "",
                         ]
                     )
                 )
                 continue
 
-            if not result.get("ok"):
-                failures += 1
+            if not batch_result.get("ok"):
+                failures += len(file_batches[batch_idx])
                 error_blocks.append(
                     "\n".join(
                         [
-                            f"[ERROR] {tex}",
-                            f"reason: {result.get('error', 'unknown')}",
-                            f"stdout: {result.get('stdout', '').strip()}",
-                            f"stderr: {result.get('stderr', '').strip()}",
+                            f"[ERROR] Batch {batch_idx + 1} processing failed",
+                            f"reason: {batch_result.get('error', 'unknown')}",
+                            f"stdout: {batch_result.get('stdout', '').strip()}",
+                            f"stderr: {batch_result.get('stderr', '').strip()}",
                             "",
                         ]
                     )
                 )
                 continue
 
-            diagnostics: List[Dict[str, Any]] = result.get("diagnostics", [])
-            total_diags += len(diagnostics)
-            if diagnostics:
-                files_with_diags += 1
-                for diag in diagnostics:
-                    start = diag.get("start", {})
-                    line = int(start.get("line", 0)) + 1
-                    code = diag.get("code", {}).get("value", "unknown")
-                    message = diag.get("message", "")
-                    diagnostics_by_code.setdefault(code, []).append(
-                        {
-                            "file": tex,
-                            "line": line,
-                            "message": message,
-                            "context": format_context(tex, line, context=2),
-                        }
+            # Process results for each file in this batch
+            results = batch_result.get("results", [])
+
+            for result in results:
+                file_path = Path(result.get("file", ""))
+                print(
+                    f"Processed {file_path.relative_to(BASE_DIR) if file_path else 'unknown'}"
+                )
+
+                if not result.get("ok"):
+                    failures += 1
+                    error_blocks.append(
+                        "\n".join(
+                            [
+                                f"[ERROR] {file_path}",
+                                f"reason: {result.get('error', 'unknown')}",
+                                "",
+                            ]
+                        )
                     )
+                    continue
+
+                diagnostics: List[Dict[str, Any]] = result.get("diagnostics", [])
+                total_diags += len(diagnostics)
+                if diagnostics:
+                    files_with_diags += 1
+                    for diag in diagnostics:
+                        start = diag.get("start", {})
+                        line = int(start.get("line", 0)) + 1
+                        code = diag.get("code", {}).get("value", "unknown")
+                        message = diag.get("message", "")
+                        diagnostics_by_code.setdefault(code, []).append(
+                            {
+                                "file": file_path,
+                                "line": line,
+                                "message": message,
+                                "context": format_context(file_path, line, context=2),
+                            }
+                        )
 
     summary = (
         f"Checked {len(tex_files)} files. Diagnostics: {total_diags}. "

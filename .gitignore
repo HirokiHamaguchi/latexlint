@@ -9,6 +9,7 @@ node_modules
 other/azurePersonalAccessToken.txt
 
 sample/localTest.*
+sample/arxiv_sources
 **/**.dvi
 **/**.out
 **/**.aux

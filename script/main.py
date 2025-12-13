@@ -22,6 +22,18 @@ from test_web_config import test_web_config
 
 
 def main():
+    only_run = input("Do you want to only run diagnose? (y/N): ").strip().lower() == "y"
+
+    # only once
+    if False:
+        run_fetch_arXiv()
+        run_fetch_arxiv_from_list()
+
+    run_diagnose()
+
+    if only_run:
+        return
+
     make_constants_ts()
     make_lint_tex()
     make_package_json()
@@ -31,14 +43,6 @@ def main():
     make_web_readme()
     make_web_svg()
     make_enumerate_diagnostics_test()
-
-    # only once
-    if False:
-        run_fetch_arXiv()
-        run_fetch_arxiv_from_list()
-
-    run_diagnose()
-
     test_file_content()
     test_is_for_md()
     test_mark_down_png()

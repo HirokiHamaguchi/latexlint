@@ -89,6 +89,10 @@ def run_diagnose() -> None:
     tex_files = find_tex_files()
     LOG_DIR.mkdir(parents=True, exist_ok=True)
 
+    # Delete existing log files
+    for log_file in LOG_DIR.glob("*.log"):
+        log_file.unlink()
+
     total_diags = 0
     files_with_diags = 0
     failures = 0
@@ -204,6 +208,12 @@ def run_diagnose() -> None:
                 fh.write(block + "\n")
 
     print(summary)
+
+    # Raise exception if there are any failures
+    if failures > 0:
+        raise RuntimeError(
+            f"Diagnostics failed for {failures} file(s). See logs for details."
+        )
 
 
 if __name__ == "__main__":

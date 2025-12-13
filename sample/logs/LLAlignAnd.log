@@ -1,12 +1,4 @@
 [CODE] LLAlignAnd (48)
-- file: sample\submodules\OpenLogic\content\methods\induction\structural-induction.tex (line 25)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
-    23: one operation: the operations are
-    24: \begin{align*}
->   25:   o(s_1, s_2) = & [s_1 \circ s_2]
-    26: \end{align*}
-    27: You can even think of the natural numbers~$\Nat$ themselves as being
-
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1317)
   message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
   1315: For any polyradius $r=\left(r_{1},\ldots,r_{N}\right)\in\left(0,+\infty\right)^{N}$, define
@@ -382,4 +374,12 @@
 > 2155: 	\scr{L}_{\ell}=
   2156: 	&-\sum_{n\le 0}\mrm{Res}_{z}\mrm{Res}_{w}\frac{z^{-\ell+1}w^{-n-1}\pr{g}(z)^{2}}{g(w)-g(z)}\frac{\del}{\del g_{n}} \notag \\
   2157: 	&-\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{z^{-\ell+1}w^{-n-1}e^{2h(w)}e^{-2h(z)}\del e(z)\pr{g}(z)}{g(w)-g(z)}\frac{\del}{\del e_{n}} \notag \\
+
+- file: sample\submodules\OpenLogic\content\methods\induction\structural-induction.tex (line 25)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+    23: one operation: the operations are
+    24: \begin{align*}
+>   25:   o(s_1, s_2) = & [s_1 \circ s_2]
+    26: \end{align*}
+    27: You can even think of the natural numbers~$\Nat$ themselves as being
 

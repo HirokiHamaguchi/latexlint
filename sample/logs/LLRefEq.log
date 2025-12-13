@@ -503,6 +503,254 @@
    116: 
    117: 
 
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 100)
+  message: Consider using \eqref instead of \ref for equations.
+    98: In particular, $\scr{G}_{t}\ket{h, c}$ for a certain highest weight vector $\ket{h,c}$ of conformal weight $h$ and central charge $c$ is a random process on
+    99: the corresponding highest weight Verma module.
+>  100: The SLE/CFT correspondence in the sense of Bauer and Bernard states that, if the family of germs $\{g_{t}(z)\}_{t\ge 0}$ satisfies Eq. (\ref{eq:sle}), then
+   101: the random process $\scr{G}_{t}\ket{h,c}$ is a martingale for a certain choice of the highest weight because of the existence of a null vector of conformal weight $h+2$
+   102: in the irreducible representation $L(h,c)$.
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 199)
+  message: Consider using \eqref instead of \ref for equations.
+   197: \end{equation}
+   198: where the coefficients $X_{n}\in\mrm{End}(V_{\mfrak{g},k})$ are thought of as the action of $X_{n}\in\what{\mfrak{g}}$ on $V_{\mfrak{g},k}$.
+>  199: From the definition of the affine Lie algebra, Eq. (\ref{eq:def_of_affine}), two fields satisfy the commutation relation
+   200: \begin{equation}
+   201: 	[X(z),Y(w)]=[X,Y](w)\delta(z-w)+k(X|Y)\del_{w}\delta(z-w),
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 317)
+  message: Consider using \eqref instead of \ref for equations.
+   315: Although we assumed that the Lie group $G$ is finite dimensional above,
+   316: an Ito process on an infinite-dimensional Lie group is significant in the context of SLE/CFT correspondence.
+>  317: We assume that the expression in Eq. (\ref{eq:increment_fin_dim}) makes sense on some representations
+   318: even if the Lie group is infinite dimensional in the following discussion.
+   319: 
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 331)
+  message: Consider using \eqref instead of \ref for equations.
+   329: \end{align}
+   330: for $m,n\in\mbb{Z}_{<0}$.
+>  331: The commutation relation in Eq. (\ref{eq:primary_aff_field}) suggests that
+   332: the state space $V_{\mfrak{g},k}$ is indeed a representation of this Lie algebra.
+   333: 
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 337)
+  message: Consider using \eqref instead of \ref for equations.
+   335: labeled by a certain finite set $I_{B}$
+   336: and that the variance of each $B_{t}^{(i)}$ is $\kappa_{i}>0$.
+>  337: Then, analogously to the expression in Eq. (\ref{eq:increment_fin_dim}), the increment of $\scr{G}_{t}$ can be written in the form
+   338: \begin{equation}
+   339: 	\scr{G}_{t}^{-1}d\scr{G}_{t}=\left(\mu+\frac{1}{2}\sum_{i\in I_{B}}\kappa_{i}\sigma_{i}^{2}\right)dt+\sum_{i\in I_{B}}\sigma_{i}dB_{t}^{(i)},
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 346)
+  message: Consider using \eqref instead of \ref for equations.
+   344: As is explained in the previous section,
+   345: for a vector $v\in (L_{\mfrak{g},k}(\Lambda))_{h_{\Lambda}}$ in the top space of $L_{\mfrak{g},k}(\Lambda)$,
+>  346: the corresponding field $\mcal{Y}(v,z)$ satisfies the primary field conditions given by Eqs. (\ref{eq:primary_cond1}) and (\ref{eq:primary_cond2}).
+   347: This implies that the adjoint action of $\scr{G}\in \what{G}_{\mrm{Vir}}^{<0}$ transforms the primary field $\mcal{Y}(v,z)$ so that
+   348: \begin{equation}
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 346)
+  message: Consider using \eqref instead of \ref for equations.
+   344: As is explained in the previous section,
+   345: for a vector $v\in (L_{\mfrak{g},k}(\Lambda))_{h_{\Lambda}}$ in the top space of $L_{\mfrak{g},k}(\Lambda)$,
+>  346: the corresponding field $\mcal{Y}(v,z)$ satisfies the primary field conditions given by Eqs. (\ref{eq:primary_cond1}) and (\ref{eq:primary_cond2}).
+   347: This implies that the adjoint action of $\scr{G}\in \what{G}_{\mrm{Vir}}^{<0}$ transforms the primary field $\mcal{Y}(v,z)$ so that
+   348: \begin{equation}
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 388)
+  message: Consider using \eqref instead of \ref for equations.
+   386: with $\overline{\theta}_{r,t}(z)$ and $\theta_{r,t}^{i}(z)$ being $\mbb{C}[[z^{-1}]]$-valued random processes.
+   387: 
+>  388: Our strategy is to compare the increments of both sides of Eq. (\ref{eq:random_transformation_primary})
+   389: and to establish stochastic differential equations on $f_{t}(z)$ and $\theta_{r,t}(z)$ for a given Ito process $\scr{G}_{t}$
+   390: on $\what{G}_{\mrm{Vir}}^{<0}$.
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 396)
+  message: Consider using \eqref instead of \ref for equations.
+   394: 	(d\scr{G}_{t}^{-1})\scr{G}_{t}=\left(-\mu+\frac{1}{2}\sum_{i\in I_{B}}\kappa_{i}\sigma_{i}^{2}\right)dt-\sum_{i\in I_{B}}\sigma_{i}dB_{t}^{(i)}.
+   395: \end{equation}
+>  396: Using this formula, we find that the increment of the left-hand side of Eq. (\ref{eq:random_transformation_primary}) yields
+   397: \begin{align}
+   398: 	\label{eq:increment_lhs}
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 403)
+  message: Consider using \eqref instead of \ref for equations.
+   401: 	&\hspace{11pt}-(\pr{f}_{t}(z))^{h_{\Lambda}}\sum_{i\in I_{B}}[\sigma_{i},\mcal{Y}(\Theta_{t}(z)v,f_{t}(z))]dB_{t}^{(i)}. \notag
+   402: \end{align}
+>  403: The increment of the right-hand side of Eq. (\ref{eq:random_transformation_primary}) is computed by standard Ito calculus as
+   404: \begin{align}
+   405: 	\label{eq:increment_rhs}
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 416)
+  message: Consider using \eqref instead of \ref for equations.
+   414: 	&\hspace{90pt}+\sum_{r\in I_{\mfrak{g}}}\theta_{r,t}^{i}(z)\mcal{Y}(X_{r}\Theta_{t}(z)v,f_{t}(z))\Bigg\}dB_{t}^{(i)}. \notag
+   415: \end{align}
+>  416: Comparing the coefficients of each $dB_{t}^{(i)}$ in Eqs. (\ref{eq:increment_lhs}) and (\ref{eq:increment_rhs}), we find
+   417: \begin{align}
+   418: 	[\sigma_{i},\mcal{Y}(\Theta_{t}(z)v,f_{t}(z))]
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 416)
+  message: Consider using \eqref instead of \ref for equations.
+   414: 	&\hspace{90pt}+\sum_{r\in I_{\mfrak{g}}}\theta_{r,t}^{i}(z)\mcal{Y}(X_{r}\Theta_{t}(z)v,f_{t}(z))\Bigg\}dB_{t}^{(i)}. \notag
+   415: \end{align}
+>  416: Comparing the coefficients of each $dB_{t}^{(i)}$ in Eqs. (\ref{eq:increment_lhs}) and (\ref{eq:increment_rhs}), we find
+   417: \begin{align}
+   418: 	[\sigma_{i},\mcal{Y}(\Theta_{t}(z)v,f_{t}(z))]
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 422)
+  message: Consider using \eqref instead of \ref for equations.
+   420: 	&\hspace{11pt}-\sum_{r\in I_{\mfrak{g}}}\theta_{r,t}^{i}(z)\mcal{Y}(X_{r}\Theta_{t}(z)v,f_{t}(z)). \notag
+   421: \end{align}
+>  422: The primary field conditions, Eqs. (\ref{eq:primary_cond1}) and (\ref{eq:primary_cond2}), help us
+   423: determine $f_{t}^{i}(z)$ and $\theta_{r,t}^{i}(z)$ for a given $\sigma_{i}$.
+   424: For example, if $\sigma_{i}=L_{n}$, we have
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 422)
+  message: Consider using \eqref instead of \ref for equations.
+   420: 	&\hspace{11pt}-\sum_{r\in I_{\mfrak{g}}}\theta_{r,t}^{i}(z)\mcal{Y}(X_{r}\Theta_{t}(z)v,f_{t}(z)). \notag
+   421: \end{align}
+>  422: The primary field conditions, Eqs. (\ref{eq:primary_cond1}) and (\ref{eq:primary_cond2}), help us
+   423: determine $f_{t}^{i}(z)$ and $\theta_{r,t}^{i}(z)$ for a given $\sigma_{i}$.
+   424: For example, if $\sigma_{i}=L_{n}$, we have
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 436)
+  message: Consider using \eqref instead of \ref for equations.
+   434: \end{align}
+   435: These give part of stochastic differential equations on $f_{t}(z)$ and $\theta_{r,t}(z)$.
+>  436: Comparing the coefficients of $dt$ in Eqs. (\ref{eq:increment_lhs}) and (\ref{eq:increment_rhs}),
+   437: we can fully determine these stochastic differential equations, in principle.
+   438: In the next section, we complete this program for a certain choice of $\mu$, $\sigma_{i}$.
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 436)
+  message: Consider using \eqref instead of \ref for equations.
+   434: \end{align}
+   435: These give part of stochastic differential equations on $f_{t}(z)$ and $\theta_{r,t}(z)$.
+>  436: Comparing the coefficients of $dt$ in Eqs. (\ref{eq:increment_lhs}) and (\ref{eq:increment_rhs}),
+   437: we can fully determine these stochastic differential equations, in principle.
+   438: In the next section, we complete this program for a certain choice of $\mu$, $\sigma_{i}$.
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 463)
+  message: Consider using \eqref instead of \ref for equations.
+   461: 	&f_{t}^{r}(z)=0,\ \ \theta_{r,t}^{r}(z)=(f_{t}(z))^{-n},\ \ \theta_{s,t}^{r}(z)=0, \ \ r\in I_{\mfrak{g}},\ s \neq r.
+   462: \end{align}
+>  463: These results simplify Eq. (\ref{eq:increment_rhs}) to
+   464: \begin{align}
+   465: 	&d\left((\pr{f}_{t}(z))^{h_{\Lambda}}\mcal{Y}(\Theta_{t}(z)v,f(z))\right) \\
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 473)
+  message: Consider using \eqref instead of \ref for equations.
+   471: 	&\hspace{11pt}+(\mbox{terms proportional to }dB_{t}^{(i)}). \notag
+   472: \end{align}
+>  473: The increment in Eq. (\ref{eq:increment_lhs}) becomes
+   474: \begin{align}
+   475: 	&d(\scr{G}_{t}^{-1}\mcal{Y}(v,z)\scr{G}_{t}) \\
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 494)
+  message: Consider using \eqref instead of \ref for equations.
+   492: 	d\theta_{r,t}(z)&=(f_{t}(z))^{-n}dB_{t}^{(r)},\ \ r\in I_{\mfrak{g}}.
+   493: \end{align}
+>  494: If $n=1$, the differential equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
+   495: reduce to the ones considered in \cite{AlekseevBytskoIzyurov2011}.
+   496: Therefore, one can regard the set of equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 494)
+  message: Consider using \eqref instead of \ref for equations.
+   492: 	d\theta_{r,t}(z)&=(f_{t}(z))^{-n}dB_{t}^{(r)},\ \ r\in I_{\mfrak{g}}.
+   493: \end{align}
+>  494: If $n=1$, the differential equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
+   495: reduce to the ones considered in \cite{AlekseevBytskoIzyurov2011}.
+   496: Therefore, one can regard the set of equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 496)
+  message: Consider using \eqref instead of \ref for equations.
+   494: If $n=1$, the differential equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
+   495: reduce to the ones considered in \cite{AlekseevBytskoIzyurov2011}.
+>  496: Therefore, one can regard the set of equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
+   497: as generalization of the SLE-type growth process obtained in \cite{AlekseevBytskoIzyurov2011}.
+   498: 
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 496)
+  message: Consider using \eqref instead of \ref for equations.
+   494: If $n=1$, the differential equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
+   495: reduce to the ones considered in \cite{AlekseevBytskoIzyurov2011}.
+>  496: Therefore, one can regard the set of equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
+   497: as generalization of the SLE-type growth process obtained in \cite{AlekseevBytskoIzyurov2011}.
+   498: 
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 509)
+  message: Consider using \eqref instead of \ref for equations.
+   507: 	d\theta_{r,t}(z)&=\frac{dB_{t}^{(r)}}{g_{t}(z)-nB_{t}^{(0)}},\ \ r\in I_{\mfrak{g}}.
+   508: \end{align}
+>  509: It is remarkable that Eq. (\ref{eq:sle_rescaled}) is nothing but the stochastic Loewner equation (\ref{eq:sle}) with a rescaled time variable,
+   510: but we have to comment that here the introduced $g_{t}(z)$ cannot be a uniformizing map in the sense of \cite{BauerBernard2003a} unless $n=1$, while $f_{t}(z)$ can be.
+   511: To see this, let us consider the automorphism group of an algebra of formal power series.
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 509)
+  message: Consider using \eqref instead of \ref for equations.
+   507: 	d\theta_{r,t}(z)&=\frac{dB_{t}^{(r)}}{g_{t}(z)-nB_{t}^{(0)}},\ \ r\in I_{\mfrak{g}}.
+   508: \end{align}
+>  509: It is remarkable that Eq. (\ref{eq:sle_rescaled}) is nothing but the stochastic Loewner equation (\ref{eq:sle}) with a rescaled time variable,
+   510: but we have to comment that here the introduced $g_{t}(z)$ cannot be a uniformizing map in the sense of \cite{BauerBernard2003a} unless $n=1$, while $f_{t}(z)$ can be.
+   511: To see this, let us consider the automorphism group of an algebra of formal power series.
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 538)
+  message: Consider using \eqref instead of \ref for equations.
+   536: Here we take $v_{i}\in (L_{\mfrak{g},k}(\Lambda_{i}))_{h_{\Lambda_{i}}}$ and
+   537: we let $\bra{0}$ be the dual of the vacuum vector $\ket{0}\in L_{\mfrak{g},k}$.
+>  538: From the transformation rule of primary fields, Eqs. (\ref{eq:primary_cond1}) and (\ref{eq:primary_cond2}),
+   539: and the translation invariance of the vacuum vector,
+   540: the above function is the same as
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 538)
+  message: Consider using \eqref instead of \ref for equations.
+   536: Here we take $v_{i}\in (L_{\mfrak{g},k}(\Lambda_{i}))_{h_{\Lambda_{i}}}$ and
+   537: we let $\bra{0}$ be the dual of the vacuum vector $\ket{0}\in L_{\mfrak{g},k}$.
+>  538: From the transformation rule of primary fields, Eqs. (\ref{eq:primary_cond1}) and (\ref{eq:primary_cond2}),
+   539: and the translation invariance of the vacuum vector,
+   540: the above function is the same as
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 545)
+  message: Consider using \eqref instead of \ref for equations.
+   543: 	\prod_{i=1}^{N}(\pr{f}_{t}(z_{i}))^{h_{\Lambda_{i}}}\braket{0|\mcal{Y}(\Theta_{t}(z)v_{1},f_{t}(z_{1}))\cdots\mcal{Y}(\Theta_{t}(z)v_{N},f_{t}(z_{N}))w}
+   544: \end{equation}
+>  545: As is demonstrated in \cite{BauerBernard2003a}, the expectation value of Eq. (\ref{eq:correlation_function2})
+   546: has a probability theoretical interpretation.
+   547: If $\scr{G}_{t}w$ is a martingale, the expectation value of Eq. (\ref{eq:correlation_function1})
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 547)
+  message: Consider using \eqref instead of \ref for equations.
+   545: As is demonstrated in \cite{BauerBernard2003a}, the expectation value of Eq. (\ref{eq:correlation_function2})
+   546: has a probability theoretical interpretation.
+>  547: If $\scr{G}_{t}w$ is a martingale, the expectation value of Eq. (\ref{eq:correlation_function1})
+   548: does not depend on time, yielding
+   549: \begin{equation}
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 556)
+  message: Consider using \eqref instead of \ref for equations.
+   554: Therefore, the martingale property of $\scr{G}_{t}$ is significant in bridging probability theory to CFT via SLE/CFT correspondence.
+   555: 
+>  556: For our $\scr{G}_{t}$ designed in Eq. (\ref{eq:stochastic_dif_specific}),
+   557: the random process $\scr{G}_{t}w$ on $L_{\mfrak{g},k}(\Lambda)$ is a martingale if and only if the vector
+   558: \begin{equation}
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 629)
+  message: Consider using \eqref instead of \ref for equations.
+   627: is a martingale.
+   628: 
+>  629: We can also look for a null vector of the form of Eq. (\ref{eq:specific_null_vector}) in $L_{\mfrak{sl}_{3},1}$ by similar computation.
+   630: An orthonormal basis of $\mfrak{sl}_{3}$ is taken as
+   631: \begin{align}
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 698)
+  message: Consider using \eqref instead of \ref for equations.
+   696: 
+   697: The situation is more subtle for a spin representation of level $1$.
+>  698: It may be impossible to construct a null vector of the form of Eq. (\ref{eq:specific_null_vector}) in $L_{\mfrak{g},1}(\Lambda)$
+   699: other than $\Lambda=0$.
+   700: Indeed, we have confirmed that there does not exist such a null vector in the spin-$\frac{1}{2}$ representation $L_{\mfrak{sl}_{2},1}(\Lambda_{1})$
+
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 145)
   message: Consider using \eqref instead of \ref for equations.
    143: and $z_{t}$ is the tip of the SLE slit defined by $z_{t}=\rho_{t}^{-1}(0)$, where $\rho_{t}(z)=g_{t}(z)+B_{t}$ satisfies $d\rho_{t}(z)=\frac{2dt}{\rho_{t}(z)}-dB_{t}$
@@ -783,254 +1031,6 @@
   2053: The other two equalities are shown in a similar way.
   2054: We divide a Leurant series $\theta(\zeta)=\sum_{n\in\mbb{Z}}\theta_{n}\zeta^{n}$ into the negative power part and the non-negative power part as
 
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 100)
-  message: Consider using \eqref instead of \ref for equations.
-    98: In particular, $\scr{G}_{t}\ket{h, c}$ for a certain highest weight vector $\ket{h,c}$ of conformal weight $h$ and central charge $c$ is a random process on
-    99: the corresponding highest weight Verma module.
->  100: The SLE/CFT correspondence in the sense of Bauer and Bernard states that, if the family of germs $\{g_{t}(z)\}_{t\ge 0}$ satisfies Eq. (\ref{eq:sle}), then
-   101: the random process $\scr{G}_{t}\ket{h,c}$ is a martingale for a certain choice of the highest weight because of the existence of a null vector of conformal weight $h+2$
-   102: in the irreducible representation $L(h,c)$.
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 199)
-  message: Consider using \eqref instead of \ref for equations.
-   197: \end{equation}
-   198: where the coefficients $X_{n}\in\mrm{End}(V_{\mfrak{g},k})$ are thought of as the action of $X_{n}\in\what{\mfrak{g}}$ on $V_{\mfrak{g},k}$.
->  199: From the definition of the affine Lie algebra, Eq. (\ref{eq:def_of_affine}), two fields satisfy the commutation relation
-   200: \begin{equation}
-   201: 	[X(z),Y(w)]=[X,Y](w)\delta(z-w)+k(X|Y)\del_{w}\delta(z-w),
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 317)
-  message: Consider using \eqref instead of \ref for equations.
-   315: Although we assumed that the Lie group $G$ is finite dimensional above,
-   316: an Ito process on an infinite-dimensional Lie group is significant in the context of SLE/CFT correspondence.
->  317: We assume that the expression in Eq. (\ref{eq:increment_fin_dim}) makes sense on some representations
-   318: even if the Lie group is infinite dimensional in the following discussion.
-   319: 
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 331)
-  message: Consider using \eqref instead of \ref for equations.
-   329: \end{align}
-   330: for $m,n\in\mbb{Z}_{<0}$.
->  331: The commutation relation in Eq. (\ref{eq:primary_aff_field}) suggests that
-   332: the state space $V_{\mfrak{g},k}$ is indeed a representation of this Lie algebra.
-   333: 
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 337)
-  message: Consider using \eqref instead of \ref for equations.
-   335: labeled by a certain finite set $I_{B}$
-   336: and that the variance of each $B_{t}^{(i)}$ is $\kappa_{i}>0$.
->  337: Then, analogously to the expression in Eq. (\ref{eq:increment_fin_dim}), the increment of $\scr{G}_{t}$ can be written in the form
-   338: \begin{equation}
-   339: 	\scr{G}_{t}^{-1}d\scr{G}_{t}=\left(\mu+\frac{1}{2}\sum_{i\in I_{B}}\kappa_{i}\sigma_{i}^{2}\right)dt+\sum_{i\in I_{B}}\sigma_{i}dB_{t}^{(i)},
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 346)
-  message: Consider using \eqref instead of \ref for equations.
-   344: As is explained in the previous section,
-   345: for a vector $v\in (L_{\mfrak{g},k}(\Lambda))_{h_{\Lambda}}$ in the top space of $L_{\mfrak{g},k}(\Lambda)$,
->  346: the corresponding field $\mcal{Y}(v,z)$ satisfies the primary field conditions given by Eqs. (\ref{eq:primary_cond1}) and (\ref{eq:primary_cond2}).
-   347: This implies that the adjoint action of $\scr{G}\in \what{G}_{\mrm{Vir}}^{<0}$ transforms the primary field $\mcal{Y}(v,z)$ so that
-   348: \begin{equation}
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 346)
-  message: Consider using \eqref instead of \ref for equations.
-   344: As is explained in the previous section,
-   345: for a vector $v\in (L_{\mfrak{g},k}(\Lambda))_{h_{\Lambda}}$ in the top space of $L_{\mfrak{g},k}(\Lambda)$,
->  346: the corresponding field $\mcal{Y}(v,z)$ satisfies the primary field conditions given by Eqs. (\ref{eq:primary_cond1}) and (\ref{eq:primary_cond2}).
-   347: This implies that the adjoint action of $\scr{G}\in \what{G}_{\mrm{Vir}}^{<0}$ transforms the primary field $\mcal{Y}(v,z)$ so that
-   348: \begin{equation}
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 388)
-  message: Consider using \eqref instead of \ref for equations.
-   386: with $\overline{\theta}_{r,t}(z)$ and $\theta_{r,t}^{i}(z)$ being $\mbb{C}[[z^{-1}]]$-valued random processes.
-   387: 
->  388: Our strategy is to compare the increments of both sides of Eq. (\ref{eq:random_transformation_primary})
-   389: and to establish stochastic differential equations on $f_{t}(z)$ and $\theta_{r,t}(z)$ for a given Ito process $\scr{G}_{t}$
-   390: on $\what{G}_{\mrm{Vir}}^{<0}$.
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 396)
-  message: Consider using \eqref instead of \ref for equations.
-   394: 	(d\scr{G}_{t}^{-1})\scr{G}_{t}=\left(-\mu+\frac{1}{2}\sum_{i\in I_{B}}\kappa_{i}\sigma_{i}^{2}\right)dt-\sum_{i\in I_{B}}\sigma_{i}dB_{t}^{(i)}.
-   395: \end{equation}
->  396: Using this formula, we find that the increment of the left-hand side of Eq. (\ref{eq:random_transformation_primary}) yields
-   397: \begin{align}
-   398: 	\label{eq:increment_lhs}
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 403)
-  message: Consider using \eqref instead of \ref for equations.
-   401: 	&\hspace{11pt}-(\pr{f}_{t}(z))^{h_{\Lambda}}\sum_{i\in I_{B}}[\sigma_{i},\mcal{Y}(\Theta_{t}(z)v,f_{t}(z))]dB_{t}^{(i)}. \notag
-   402: \end{align}
->  403: The increment of the right-hand side of Eq. (\ref{eq:random_transformation_primary}) is computed by standard Ito calculus as
-   404: \begin{align}
-   405: 	\label{eq:increment_rhs}
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 416)
-  message: Consider using \eqref instead of \ref for equations.
-   414: 	&\hspace{90pt}+\sum_{r\in I_{\mfrak{g}}}\theta_{r,t}^{i}(z)\mcal{Y}(X_{r}\Theta_{t}(z)v,f_{t}(z))\Bigg\}dB_{t}^{(i)}. \notag
-   415: \end{align}
->  416: Comparing the coefficients of each $dB_{t}^{(i)}$ in Eqs. (\ref{eq:increment_lhs}) and (\ref{eq:increment_rhs}), we find
-   417: \begin{align}
-   418: 	[\sigma_{i},\mcal{Y}(\Theta_{t}(z)v,f_{t}(z))]
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 416)
-  message: Consider using \eqref instead of \ref for equations.
-   414: 	&\hspace{90pt}+\sum_{r\in I_{\mfrak{g}}}\theta_{r,t}^{i}(z)\mcal{Y}(X_{r}\Theta_{t}(z)v,f_{t}(z))\Bigg\}dB_{t}^{(i)}. \notag
-   415: \end{align}
->  416: Comparing the coefficients of each $dB_{t}^{(i)}$ in Eqs. (\ref{eq:increment_lhs}) and (\ref{eq:increment_rhs}), we find
-   417: \begin{align}
-   418: 	[\sigma_{i},\mcal{Y}(\Theta_{t}(z)v,f_{t}(z))]
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 422)
-  message: Consider using \eqref instead of \ref for equations.
-   420: 	&\hspace{11pt}-\sum_{r\in I_{\mfrak{g}}}\theta_{r,t}^{i}(z)\mcal{Y}(X_{r}\Theta_{t}(z)v,f_{t}(z)). \notag
-   421: \end{align}
->  422: The primary field conditions, Eqs. (\ref{eq:primary_cond1}) and (\ref{eq:primary_cond2}), help us
-   423: determine $f_{t}^{i}(z)$ and $\theta_{r,t}^{i}(z)$ for a given $\sigma_{i}$.
-   424: For example, if $\sigma_{i}=L_{n}$, we have
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 422)
-  message: Consider using \eqref instead of \ref for equations.
-   420: 	&\hspace{11pt}-\sum_{r\in I_{\mfrak{g}}}\theta_{r,t}^{i}(z)\mcal{Y}(X_{r}\Theta_{t}(z)v,f_{t}(z)). \notag
-   421: \end{align}
->  422: The primary field conditions, Eqs. (\ref{eq:primary_cond1}) and (\ref{eq:primary_cond2}), help us
-   423: determine $f_{t}^{i}(z)$ and $\theta_{r,t}^{i}(z)$ for a given $\sigma_{i}$.
-   424: For example, if $\sigma_{i}=L_{n}$, we have
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 436)
-  message: Consider using \eqref instead of \ref for equations.
-   434: \end{align}
-   435: These give part of stochastic differential equations on $f_{t}(z)$ and $\theta_{r,t}(z)$.
->  436: Comparing the coefficients of $dt$ in Eqs. (\ref{eq:increment_lhs}) and (\ref{eq:increment_rhs}),
-   437: we can fully determine these stochastic differential equations, in principle.
-   438: In the next section, we complete this program for a certain choice of $\mu$, $\sigma_{i}$.
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 436)
-  message: Consider using \eqref instead of \ref for equations.
-   434: \end{align}
-   435: These give part of stochastic differential equations on $f_{t}(z)$ and $\theta_{r,t}(z)$.
->  436: Comparing the coefficients of $dt$ in Eqs. (\ref{eq:increment_lhs}) and (\ref{eq:increment_rhs}),
-   437: we can fully determine these stochastic differential equations, in principle.
-   438: In the next section, we complete this program for a certain choice of $\mu$, $\sigma_{i}$.
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 463)
-  message: Consider using \eqref instead of \ref for equations.
-   461: 	&f_{t}^{r}(z)=0,\ \ \theta_{r,t}^{r}(z)=(f_{t}(z))^{-n},\ \ \theta_{s,t}^{r}(z)=0, \ \ r\in I_{\mfrak{g}},\ s \neq r.
-   462: \end{align}
->  463: These results simplify Eq. (\ref{eq:increment_rhs}) to
-   464: \begin{align}
-   465: 	&d\left((\pr{f}_{t}(z))^{h_{\Lambda}}\mcal{Y}(\Theta_{t}(z)v,f(z))\right) \\
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 473)
-  message: Consider using \eqref instead of \ref for equations.
-   471: 	&\hspace{11pt}+(\mbox{terms proportional to }dB_{t}^{(i)}). \notag
-   472: \end{align}
->  473: The increment in Eq. (\ref{eq:increment_lhs}) becomes
-   474: \begin{align}
-   475: 	&d(\scr{G}_{t}^{-1}\mcal{Y}(v,z)\scr{G}_{t}) \\
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 494)
-  message: Consider using \eqref instead of \ref for equations.
-   492: 	d\theta_{r,t}(z)&=(f_{t}(z))^{-n}dB_{t}^{(r)},\ \ r\in I_{\mfrak{g}}.
-   493: \end{align}
->  494: If $n=1$, the differential equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
-   495: reduce to the ones considered in \cite{AlekseevBytskoIzyurov2011}.
-   496: Therefore, one can regard the set of equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 494)
-  message: Consider using \eqref instead of \ref for equations.
-   492: 	d\theta_{r,t}(z)&=(f_{t}(z))^{-n}dB_{t}^{(r)},\ \ r\in I_{\mfrak{g}}.
-   493: \end{align}
->  494: If $n=1$, the differential equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
-   495: reduce to the ones considered in \cite{AlekseevBytskoIzyurov2011}.
-   496: Therefore, one can regard the set of equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 496)
-  message: Consider using \eqref instead of \ref for equations.
-   494: If $n=1$, the differential equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
-   495: reduce to the ones considered in \cite{AlekseevBytskoIzyurov2011}.
->  496: Therefore, one can regard the set of equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
-   497: as generalization of the SLE-type growth process obtained in \cite{AlekseevBytskoIzyurov2011}.
-   498: 
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 496)
-  message: Consider using \eqref instead of \ref for equations.
-   494: If $n=1$, the differential equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
-   495: reduce to the ones considered in \cite{AlekseevBytskoIzyurov2011}.
->  496: Therefore, one can regard the set of equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
-   497: as generalization of the SLE-type growth process obtained in \cite{AlekseevBytskoIzyurov2011}.
-   498: 
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 509)
-  message: Consider using \eqref instead of \ref for equations.
-   507: 	d\theta_{r,t}(z)&=\frac{dB_{t}^{(r)}}{g_{t}(z)-nB_{t}^{(0)}},\ \ r\in I_{\mfrak{g}}.
-   508: \end{align}
->  509: It is remarkable that Eq. (\ref{eq:sle_rescaled}) is nothing but the stochastic Loewner equation (\ref{eq:sle}) with a rescaled time variable,
-   510: but we have to comment that here the introduced $g_{t}(z)$ cannot be a uniformizing map in the sense of \cite{BauerBernard2003a} unless $n=1$, while $f_{t}(z)$ can be.
-   511: To see this, let us consider the automorphism group of an algebra of formal power series.
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 509)
-  message: Consider using \eqref instead of \ref for equations.
-   507: 	d\theta_{r,t}(z)&=\frac{dB_{t}^{(r)}}{g_{t}(z)-nB_{t}^{(0)}},\ \ r\in I_{\mfrak{g}}.
-   508: \end{align}
->  509: It is remarkable that Eq. (\ref{eq:sle_rescaled}) is nothing but the stochastic Loewner equation (\ref{eq:sle}) with a rescaled time variable,
-   510: but we have to comment that here the introduced $g_{t}(z)$ cannot be a uniformizing map in the sense of \cite{BauerBernard2003a} unless $n=1$, while $f_{t}(z)$ can be.
-   511: To see this, let us consider the automorphism group of an algebra of formal power series.
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 538)
-  message: Consider using \eqref instead of \ref for equations.
-   536: Here we take $v_{i}\in (L_{\mfrak{g},k}(\Lambda_{i}))_{h_{\Lambda_{i}}}$ and
-   537: we let $\bra{0}$ be the dual of the vacuum vector $\ket{0}\in L_{\mfrak{g},k}$.
->  538: From the transformation rule of primary fields, Eqs. (\ref{eq:primary_cond1}) and (\ref{eq:primary_cond2}),
-   539: and the translation invariance of the vacuum vector,
-   540: the above function is the same as
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 538)
-  message: Consider using \eqref instead of \ref for equations.
-   536: Here we take $v_{i}\in (L_{\mfrak{g},k}(\Lambda_{i}))_{h_{\Lambda_{i}}}$ and
-   537: we let $\bra{0}$ be the dual of the vacuum vector $\ket{0}\in L_{\mfrak{g},k}$.
->  538: From the transformation rule of primary fields, Eqs. (\ref{eq:primary_cond1}) and (\ref{eq:primary_cond2}),
-   539: and the translation invariance of the vacuum vector,
-   540: the above function is the same as
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 545)
-  message: Consider using \eqref instead of \ref for equations.
-   543: 	\prod_{i=1}^{N}(\pr{f}_{t}(z_{i}))^{h_{\Lambda_{i}}}\braket{0|\mcal{Y}(\Theta_{t}(z)v_{1},f_{t}(z_{1}))\cdots\mcal{Y}(\Theta_{t}(z)v_{N},f_{t}(z_{N}))w}
-   544: \end{equation}
->  545: As is demonstrated in \cite{BauerBernard2003a}, the expectation value of Eq. (\ref{eq:correlation_function2})
-   546: has a probability theoretical interpretation.
-   547: If $\scr{G}_{t}w$ is a martingale, the expectation value of Eq. (\ref{eq:correlation_function1})
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 547)
-  message: Consider using \eqref instead of \ref for equations.
-   545: As is demonstrated in \cite{BauerBernard2003a}, the expectation value of Eq. (\ref{eq:correlation_function2})
-   546: has a probability theoretical interpretation.
->  547: If $\scr{G}_{t}w$ is a martingale, the expectation value of Eq. (\ref{eq:correlation_function1})
-   548: does not depend on time, yielding
-   549: \begin{equation}
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 556)
-  message: Consider using \eqref instead of \ref for equations.
-   554: Therefore, the martingale property of $\scr{G}_{t}$ is significant in bridging probability theory to CFT via SLE/CFT correspondence.
-   555: 
->  556: For our $\scr{G}_{t}$ designed in Eq. (\ref{eq:stochastic_dif_specific}),
-   557: the random process $\scr{G}_{t}w$ on $L_{\mfrak{g},k}(\Lambda)$ is a martingale if and only if the vector
-   558: \begin{equation}
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 629)
-  message: Consider using \eqref instead of \ref for equations.
-   627: is a martingale.
-   628: 
->  629: We can also look for a null vector of the form of Eq. (\ref{eq:specific_null_vector}) in $L_{\mfrak{sl}_{3},1}$ by similar computation.
-   630: An orthonormal basis of $\mfrak{sl}_{3}$ is taken as
-   631: \begin{align}
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 698)
-  message: Consider using \eqref instead of \ref for equations.
-   696: 
-   697: The situation is more subtle for a spin representation of level $1$.
->  698: It may be impossible to construct a null vector of the form of Eq. (\ref{eq:specific_null_vector}) in $L_{\mfrak{g},1}(\Lambda)$
-   699: other than $\Lambda=0$.
-   700: Indeed, we have confirmed that there does not exist such a null vector in the spin-$\frac{1}{2}$ representation $L_{\mfrak{sl}_{2},1}(\Lambda_{1})$
-
 - file: sample\arxiv_sources\2308.07921v1\iclr2023_conference.tex (line 862)
   message: Consider using \eqref instead of \ref for equations.
    860: 
@@ -1087,6 +1087,14 @@
     77:  For terminal node $s_d$, we do not use  PRM for scoring during training data generation. Instead, we assign a more accurate score based on ground truth labels as terminal-guided rewarding.  
     78: 
 
+- file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 928)
+  message: Consider using \eqref instead of \ref for equations.
+   926: \end{equation}
+   927: 
+>  928: Assuming that P is faithful (A\ref{def:bn_faithfulness}) to \(\mathbb{G}\), no hidden confounders bias the estimate (A\ref{assumption:causal_sufficiency}) and temporal precedence (A\ref{assumption:temporal_precedence}), we can estimate the CMI \ref{eq:cmi_theorique} such that iif \(I(X_1, Y_j)|\emptyset) > 0 \Leftrightarrow Y_j \not\perp_{\theta_x, \theta_y} X_1 \implies Y_j \not\perp_{\mathbb{G}} X_1\) (Lemma \ref{lemma:oracle_identifiability}).
+   929: 
+   930: Since we assume temporal precedence A\ref{assumption:temporal_precedence}, we can orient the edge such that \(X_1\) must be a parent of \(Y_j\) in \(\mathbb{G}\). Using Lemma \ref{lemma:mb_par}, we know that \(Par(Y_j) = \textbf{MB}(Y_j) \implies X_{1} \in \textbf{MB}(Y_j)\), thus we must include \(X_1\) in \(M^1_j \), otherwise not. 
+
 - file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 288)
   message: Consider using \eqref instead of \ref for equations.
    286: \textbf{Computation.}
@@ -1102,12 +1110,4 @@
 >  464: Assuming that P is faithful (A\ref{def:bn_faithfulness}) to \(\mathbb{G}\), no hidden confounders bias the estimate (A\ref{assumption:causal_sufficiency}) and temporal precedence (A\ref{assumption:temporal_precedence}), we can estimate the CMI \ref{eq:cmi_theorique} such that iif \(I(X_1, Y_j)|\emptyset) > 0 \Leftrightarrow Y_j \not\perp_{\theta_x, \theta_y} X_1 \implies Y_j \not\perp_{\mathbb{G}} X_1\) (Lemma \ref{lemma:oracle_identifiability}).
    465: 
    466: Since we assume temporal precedence A\ref{assumption:temporal_precedence}, we can orient the edge such that \(X_1\) must be a parent of \(Y_j\) in \(\mathbb{G}\). Using Lemma \ref{lemma:mb_par}, we know that \(Par(Y_j) = \textbf{MB}(Y_j) \implies X_{1} \in \textbf{MB}(Y_j)\), thus we must include \(X_1\) in \(M^1_j \), otherwise not. 
-
-- file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 928)
-  message: Consider using \eqref instead of \ref for equations.
-   926: \end{equation}
-   927: 
->  928: Assuming that P is faithful (A\ref{def:bn_faithfulness}) to \(\mathbb{G}\), no hidden confounders bias the estimate (A\ref{assumption:causal_sufficiency}) and temporal precedence (A\ref{assumption:temporal_precedence}), we can estimate the CMI \ref{eq:cmi_theorique} such that iif \(I(X_1, Y_j)|\emptyset) > 0 \Leftrightarrow Y_j \not\perp_{\theta_x, \theta_y} X_1 \implies Y_j \not\perp_{\mathbb{G}} X_1\) (Lemma \ref{lemma:oracle_identifiability}).
-   929: 
-   930: Since we assume temporal precedence A\ref{assumption:temporal_precedence}, we can orient the edge such that \(X_1\) must be a parent of \(Y_j\) in \(\mathbb{G}\). Using Lemma \ref{lemma:mb_par}, we know that \(Par(Y_j) = \textbf{MB}(Y_j) \implies X_{1} \in \textbf{MB}(Y_j)\), thus we must include \(X_1\) in \(M^1_j \), otherwise not. 
 

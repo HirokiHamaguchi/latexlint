@@ -1,27 +1,11 @@
 [CODE] LLAlignEnd (6)
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1444)
+- file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 392)
   message: \\ at the enf of align-like environments might be unnecessary.
-  1442: & Z_2 = \frac{26-19.25}{\sqrt{19.25}}=1.54\ \ \ \ 
-  1443: 	&& Z_3 = \frac{25-33}{\sqrt{33}}=-1.39\ \ \ \ 
-> 1444: 	&& Z_4 = \frac{19-24.75}{\sqrt{24.75}}=-1.16 \\
-  1445: \end{align*}
-  1446: We would like to use a single test statistic to determine if these four standardized differences are irregularly far from zero. That is, $Z_1$, $Z_2$, $Z_3$, and $Z_4$ must be combined somehow to help determine if they -- as a group -- tend to be unusually far from zero. A first thought might be to take the absolute value of these four standardized differences and add them~up:
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 2442)
-  message: \\ at the enf of align-like environments might be unnecessary.
-  2440:   3 &= 2.8 \times \sqrt{\frac{12^2}{n} + \frac{12^2}{n}} \\
-  2441:   n &= \frac{2.8^2}{3^2} \times \left( 12^2 + 12^2 \right)
-> 2442:     = 250.88 \\
-  2443:   \end{align*}
-  2444:   We should target 251 patients per group in order to achieve
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1304)
-  message: \\ at the enf of align-like environments might be unnecessary.
-  1302:         \color{oiGB}P(X=\text{\resp{1}})}
-  1303:       {\color{oiGB}P(X=\text{\resp{1}})} \\
-> 1304:     &= P(Y=\text{\resp{1}}) \\
-  1305: \end{align*}
-  1306: 
+   390:     \mathbf{CE}^T_m \mathbf{R}^d_{\Theta, n-m} \mathbf{CE}_n \nonumber \\
+   391:     &= \text{(1): query-to-key} + \text{(2): query-to-ce} \nonumber \\
+>  392:     &\quad \text{(3): ce-to-key} + \text{(4): ce-to-ce}\nonumber \\
+   393: \end{align}}
+   394: where $\mathbf{R}^d_{\Theta, n-m} = (\mathbf{R}^d_{\Theta, m})^T\mathbf{R}^d_{\Theta, n}$ is a sparse orthogonal matrix. The additional terms (2), (3), (4) provide richer query and key representations when computing the attention scores.
 
 - file: sample\submodules\OpenLogic\content\lambda-calculus\lambda-definability\arithmetical-functions.tex (line 44)
   message: \\ at the enf of align-like environments might be unnecessary.
@@ -39,11 +23,27 @@
     71:   \end{align*}
     72: \end{defn}
 
-- file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 392)
+- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 2442)
   message: \\ at the enf of align-like environments might be unnecessary.
-   390:     \mathbf{CE}^T_m \mathbf{R}^d_{\Theta, n-m} \mathbf{CE}_n \nonumber \\
-   391:     &= \text{(1): query-to-key} + \text{(2): query-to-ce} \nonumber \\
->  392:     &\quad \text{(3): ce-to-key} + \text{(4): ce-to-ce}\nonumber \\
-   393: \end{align}}
-   394: where $\mathbf{R}^d_{\Theta, n-m} = (\mathbf{R}^d_{\Theta, m})^T\mathbf{R}^d_{\Theta, n}$ is a sparse orthogonal matrix. The additional terms (2), (3), (4) provide richer query and key representations when computing the attention scores.
+  2440:   3 &= 2.8 \times \sqrt{\frac{12^2}{n} + \frac{12^2}{n}} \\
+  2441:   n &= \frac{2.8^2}{3^2} \times \left( 12^2 + 12^2 \right)
+> 2442:     = 250.88 \\
+  2443:   \end{align*}
+  2444:   We should target 251 patients per group in order to achieve
+
+- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1444)
+  message: \\ at the enf of align-like environments might be unnecessary.
+  1442: & Z_2 = \frac{26-19.25}{\sqrt{19.25}}=1.54\ \ \ \ 
+  1443: 	&& Z_3 = \frac{25-33}{\sqrt{33}}=-1.39\ \ \ \ 
+> 1444: 	&& Z_4 = \frac{19-24.75}{\sqrt{24.75}}=-1.16 \\
+  1445: \end{align*}
+  1446: We would like to use a single test statistic to determine if these four standardized differences are irregularly far from zero. That is, $Z_1$, $Z_2$, $Z_3$, and $Z_4$ must be combined somehow to help determine if they -- as a group -- tend to be unusually far from zero. A first thought might be to take the absolute value of these four standardized differences and add them~up:
+
+- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1304)
+  message: \\ at the enf of align-like environments might be unnecessary.
+  1302:         \color{oiGB}P(X=\text{\resp{1}})}
+  1303:       {\color{oiGB}P(X=\text{\resp{1}})} \\
+> 1304:     &= P(Y=\text{\resp{1}}) \\
+  1305: \end{align*}
+  1306: 
 

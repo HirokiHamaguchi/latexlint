@@ -1,11 +1,19 @@
 [CODE] LLThousands (33)
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1749)
-  message: Consider using "11{,}785" instead of "11,785".
-  1747: (\$137 + \$33) \times  25 = \$170 \times  25 = \$4,250
-  1748: \end{align*}
-> 1749: Thus, the bookstore should expect to generate about $\$7,535 + \$4,250 = \$11,785$ from these 100 students for this one class. However, there might be some \emph{sampling variability} so the actual amount may differ by a little bit.
-  1750: \end{nexample}
-  1751: \end{examplewrap}
+- file: sample\arxiv_sources\2103.03874v2\1-intro.tex (line 34)
+  message: Consider using "12{,}500" instead of "12,500".
+    32: ability of machine learning models, we introduce the MATH 
+    33: dataset, which consists of 
+>   34: $12,500$ problems from high school math competitions. 
+    35: Given a problem from MATH, machine learning models generate a sequence, such as \verb=$\frac{2}{3}$=, that encodes the final answer. These 
+    36: answers are unique after normalization, allowing MATH to be scored with exact match rather than with heuristic metrics such as BLEU. %
+
+- file: sample\arxiv_sources\2103.03874v2\1-intro.tex (line 152)
+  message: Consider using "100{,}000" instead of "100,000".
+   150: mathematics. To address this, 
+   151: we create the first large-scale mathematics pretraining dataset with hundreds of thousands of step-by-step solutions in natural language and \LaTeX{}.
+>  152: We call this dataset the Auxiliary Mathematics Problems and Solutions (AMPS) pretraining corpus, which consists of Khan Academy and Mathematica data. AMPS has over $100,000$ Khan Academy problems with step-by-step solutions in \LaTeX{}; these exercises are used to teach human students concepts ranging from basic addition to Stokes' Theorem.
+   153: It also contains over $5$ million problems generated using Mathematica scripts, based on $100$ hand-designed modules covering topics such as conic sections, div grad and curl, KL divergence, eigenvalues, polyhedra, and Diophantine equations. In total AMPS contains 
+   154: 23GB of problems and solutions.
 
 - file: sample\arxiv_sources\2103.03874v2\2-related-work.tex (line 5)
   message: Consider using "1{,}602" instead of "1,602".
@@ -22,22 +30,6 @@
 >   39: \citet{Hendrycks2020MeasuringMM} create a multiple-choice benchmark covering $57$ subjects. However, unlike our benchmark, which is a text generation task with $12,500$ mathematical reasoning questions, their benchmark is a multiple choice task that includes only a few hundred questions about mathematics. 
     40: In contrast to these benchmarks, we find that our MATH benchmark is unusually challenging for current models and, if trends continue, simply using bigger versions of today's Transformers will not solve our task in the foreseeable future.
     41: 
-
-- file: sample\arxiv_sources\2103.03874v2\1-intro.tex (line 34)
-  message: Consider using "12{,}500" instead of "12,500".
-    32: ability of machine learning models, we introduce the MATH 
-    33: dataset, which consists of 
->   34: $12,500$ problems from high school math competitions. 
-    35: Given a problem from MATH, machine learning models generate a sequence, such as \verb=$\frac{2}{3}$=, that encodes the final answer. These 
-    36: answers are unique after normalization, allowing MATH to be scored with exact match rather than with heuristic metrics such as BLEU. %
-
-- file: sample\arxiv_sources\2103.03874v2\1-intro.tex (line 152)
-  message: Consider using "100{,}000" instead of "100,000".
-   150: mathematics. To address this, 
-   151: we create the first large-scale mathematics pretraining dataset with hundreds of thousands of step-by-step solutions in natural language and \LaTeX{}.
->  152: We call this dataset the Auxiliary Mathematics Problems and Solutions (AMPS) pretraining corpus, which consists of Khan Academy and Mathematica data. AMPS has over $100,000$ Khan Academy problems with step-by-step solutions in \LaTeX{}; these exercises are used to teach human students concepts ranging from basic addition to Stokes' Theorem.
-   153: It also contains over $5$ million problems generated using Mathematica scripts, based on $100$ hand-designed modules covering topics such as conic sections, div grad and curl, KL divergence, eigenvalues, polyhedra, and Diophantine equations. In total AMPS contains 
-   154: 23GB of problems and solutions.
 
 - file: sample\arxiv_sources\2103.12048v3\2_data.tex (line 26)
   message: Consider using "281{,}265" instead of "281,265".
@@ -167,46 +159,6 @@
    634: 
    635: 
 
-- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 174)
-  message: Consider using "29{,}100" instead of "29,100".
-   172: 
-   173: \begin{abstract}
->  174: Understanding causality in event sequences with thousands of sparse event types is critical in domains such as healthcare, cybersecurity, or vehicle diagnostics, yet current methods fail to scale. We present OSCAR, a one-shot causal autoregressive method that infers per-sequence Markov Boundaries using two pretrained Transformers as density estimators. This enables efficient, parallel causal discovery without costly global CI testing. On a real-world automotive dataset with \(29,100\) events and \(474\) labels, OSCAR recovers interpretable causal structures in minutes, while classical methods fail to scale— enabling practical scientific diagnostics at production scale.
-   175: \end{abstract}
-   176: 
-
-- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 306)
-  message: Consider using "300{,}000" instead of "300,000".
-   304: 
-   305: \textbf{Vehicle Event Sequences Dataset.}
->  306: We evaluated our method on a real-world vehicular test set of \(n=300,000\) sequences. It contains \(|\mathbb{Y}|=474\) different error patterns and about \(|\mathbb{X}| = 29,100\) different DTCs forming sequences of \( \approx 150 \pm 90\) events. We used 105m backbones as \(\text{Tf}_x, \text{Tf}_y\) \cite{math2024harnessingeventsensorydata}. The two NADEs were not exposed to the test set during. 
-   307: The error patterns are manually defined by domain experts as boolean rules between DTCs in Eq \eqref{eq:ep_def} where \((y_1)\) is a boolean definition based on diagnosis trouble codes \((x_i)\):
-   308: \begin{equation}\label{eq:ep_def}
-
-- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 306)
-  message: Consider using "29{,}100" instead of "29,100".
-   304: 
-   305: \textbf{Vehicle Event Sequences Dataset.}
->  306: We evaluated our method on a real-world vehicular test set of \(n=300,000\) sequences. It contains \(|\mathbb{Y}|=474\) different error patterns and about \(|\mathbb{X}| = 29,100\) different DTCs forming sequences of \( \approx 150 \pm 90\) events. We used 105m backbones as \(\text{Tf}_x, \text{Tf}_y\) \cite{math2024harnessingeventsensorydata}. The two NADEs were not exposed to the test set during. 
-   307: The error patterns are manually defined by domain experts as boolean rules between DTCs in Eq \eqref{eq:ep_def} where \((y_1)\) is a boolean definition based on diagnosis trouble codes \((x_i)\):
-   308: \begin{equation}\label{eq:ep_def}
-
-- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 316)
-  message: Consider using "50{,}000" instead of "50,000".
-   314: \begin{table}[h]
-   315: \centering
->  316: \caption{Comparisons of \textbf{MB} retrieval with \(n=50,000\) samples, \(|\mathbb{X}| = 29,100, |\mathbb{Y}|=474\) averaged over \(6-\)folds. Classification metrics averaging is 'weighted' and shown as one-shot for OSCAR. The symbol ’-’ indicates that the algorithm didn't output the \(\textbf{MBs}\) under 3 days. Metrics are given in \(\%\).}
-   317: \begin{tabular}{lcccc}
-   318: \hline
-
-- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 330)
-  message: Consider using "50{,}000" instead of "50,000".
-   328: \label{tab:performance_comparison}
-   329: \end{table}
->  330: Table~\ref{tab:performance_comparison} shows comparision with \(n=50,000\). We found out LSL algorithms failed to compute the Markov Boundaries within multiple days (3-day timeout), far exceeding practical limits for deployment. OSCAR, on the other hand, shows robust classification over a large amount of events \((29,100)\), especially \(55\%\) precision, in a matter of minutes.
-   331: This behaviour highlights the current infeasibility of multi-label causal discovery in high-dimensional event sequences, since it relies on expensive global CI-testings \cite{cd_temporaldata_review}. This positions OSCAR as a more feasible approach for large-scale causal per-sequence causal reasoning in production environments.
-   332: 
-
 - file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 180)
   message: Consider using "29{,}100" instead of "29,100".
    178: %We show this criterion to be locally consistent and equivalent under standard assumptions, allowing CARGO to recover a Markov Equivalence Class of the true underlying DAG. [\textbf{Add long tail problem, implied by high dim cd}]
@@ -262,4 +214,52 @@
 >  553:     \caption{Comparison of different criterions for the structural fusion (Phase 2) in function of the number of samples \(m\). With \(|Y| = 474, |X|=29,100\) nodes.}\label{fig:ablation_comparaison_criterions}
    554:     \includegraphics[width=0.95\linewidth]{plots/comparaison_cargo_nsamples.pdf}
    555:     \label{fig:placeholder}
+
+- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 174)
+  message: Consider using "29{,}100" instead of "29,100".
+   172: 
+   173: \begin{abstract}
+>  174: Understanding causality in event sequences with thousands of sparse event types is critical in domains such as healthcare, cybersecurity, or vehicle diagnostics, yet current methods fail to scale. We present OSCAR, a one-shot causal autoregressive method that infers per-sequence Markov Boundaries using two pretrained Transformers as density estimators. This enables efficient, parallel causal discovery without costly global CI testing. On a real-world automotive dataset with \(29,100\) events and \(474\) labels, OSCAR recovers interpretable causal structures in minutes, while classical methods fail to scale— enabling practical scientific diagnostics at production scale.
+   175: \end{abstract}
+   176: 
+
+- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 306)
+  message: Consider using "300{,}000" instead of "300,000".
+   304: 
+   305: \textbf{Vehicle Event Sequences Dataset.}
+>  306: We evaluated our method on a real-world vehicular test set of \(n=300,000\) sequences. It contains \(|\mathbb{Y}|=474\) different error patterns and about \(|\mathbb{X}| = 29,100\) different DTCs forming sequences of \( \approx 150 \pm 90\) events. We used 105m backbones as \(\text{Tf}_x, \text{Tf}_y\) \cite{math2024harnessingeventsensorydata}. The two NADEs were not exposed to the test set during. 
+   307: The error patterns are manually defined by domain experts as boolean rules between DTCs in Eq \eqref{eq:ep_def} where \((y_1)\) is a boolean definition based on diagnosis trouble codes \((x_i)\):
+   308: \begin{equation}\label{eq:ep_def}
+
+- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 306)
+  message: Consider using "29{,}100" instead of "29,100".
+   304: 
+   305: \textbf{Vehicle Event Sequences Dataset.}
+>  306: We evaluated our method on a real-world vehicular test set of \(n=300,000\) sequences. It contains \(|\mathbb{Y}|=474\) different error patterns and about \(|\mathbb{X}| = 29,100\) different DTCs forming sequences of \( \approx 150 \pm 90\) events. We used 105m backbones as \(\text{Tf}_x, \text{Tf}_y\) \cite{math2024harnessingeventsensorydata}. The two NADEs were not exposed to the test set during. 
+   307: The error patterns are manually defined by domain experts as boolean rules between DTCs in Eq \eqref{eq:ep_def} where \((y_1)\) is a boolean definition based on diagnosis trouble codes \((x_i)\):
+   308: \begin{equation}\label{eq:ep_def}
+
+- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 316)
+  message: Consider using "50{,}000" instead of "50,000".
+   314: \begin{table}[h]
+   315: \centering
+>  316: \caption{Comparisons of \textbf{MB} retrieval with \(n=50,000\) samples, \(|\mathbb{X}| = 29,100, |\mathbb{Y}|=474\) averaged over \(6-\)folds. Classification metrics averaging is 'weighted' and shown as one-shot for OSCAR. The symbol ’-’ indicates that the algorithm didn't output the \(\textbf{MBs}\) under 3 days. Metrics are given in \(\%\).}
+   317: \begin{tabular}{lcccc}
+   318: \hline
+
+- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 330)
+  message: Consider using "50{,}000" instead of "50,000".
+   328: \label{tab:performance_comparison}
+   329: \end{table}
+>  330: Table~\ref{tab:performance_comparison} shows comparision with \(n=50,000\). We found out LSL algorithms failed to compute the Markov Boundaries within multiple days (3-day timeout), far exceeding practical limits for deployment. OSCAR, on the other hand, shows robust classification over a large amount of events \((29,100)\), especially \(55\%\) precision, in a matter of minutes.
+   331: This behaviour highlights the current infeasibility of multi-label causal discovery in high-dimensional event sequences, since it relies on expensive global CI-testings \cite{cd_temporaldata_review}. This positions OSCAR as a more feasible approach for large-scale causal per-sequence causal reasoning in production environments.
+   332: 
+
+- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1749)
+  message: Consider using "11{,}785" instead of "11,785".
+  1747: (\$137 + \$33) \times  25 = \$170 \times  25 = \$4,250
+  1748: \end{align*}
+> 1749: Thus, the bookstore should expect to generate about $\$7,535 + \$4,250 = \$11,785$ from these 100 students for this one class. However, there might be some \emph{sampling variability} so the actual amount may differ by a little bit.
+  1750: \end{nexample}
+  1751: \end{examplewrap}
 

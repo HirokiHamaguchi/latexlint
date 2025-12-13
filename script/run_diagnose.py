@@ -162,6 +162,11 @@ def run_diagnose() -> None:
         f"Codes: {len(diagnostics_by_code)}. Failures: {failures}."
     )
 
+    for code in diagnostics_by_code:
+        diagnostics_by_code[code].sort(
+            key=lambda entry: (entry["file"].as_posix(), entry["line"])
+        )
+
     # Write per-code logs
     code_files: List[str] = []
     for code in sorted(diagnostics_by_code):

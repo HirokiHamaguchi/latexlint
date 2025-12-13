@@ -1,4 +1,20 @@
 [CODE] LLBig (36)
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 178)
+  message: Consider using \bigotimes for subscripts and superscripts.
+   176: Then a representation $\what{M}_{k}$ of the affine Lie algebra is obtained by induction:
+   177: \begin{equation}
+>  178: 	\what{M}_{k}:=\mrm{Ind}_{\what{\mfrak{p}}}^{\what{\mfrak{g}}}M_{k}=U(\what{\mfrak{g}})\otimes_{U(\what{\mfrak{p}})}M_{k}.
+   179: \end{equation}
+   180: By the Poincar\'{e}--Birkhoff--Witt theorem, it is isomorphic to $U(\mfrak{g}\otimes t^{-1}\mbb{C}[t^{-1}])\otimes_{\mbb{C}}M_{k}$ as a vector space.
+
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 180)
+  message: Consider using \bigotimes for subscripts and superscripts.
+   178: 	\what{M}_{k}:=\mrm{Ind}_{\what{\mfrak{p}}}^{\what{\mfrak{g}}}M_{k}=U(\what{\mfrak{g}})\otimes_{U(\what{\mfrak{p}})}M_{k}.
+   179: \end{equation}
+>  180: By the Poincar\'{e}--Birkhoff--Witt theorem, it is isomorphic to $U(\mfrak{g}\otimes t^{-1}\mbb{C}[t^{-1}])\otimes_{\mbb{C}}M_{k}$ as a vector space.
+   181: For a finite-dimensional irreducible representation $L(\Lambda)$ of $\mfrak{g}$, $\what{L(\Lambda)}_{k}$, called a Weyl module,
+   182: may be reducible for specific levels.
+
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 220)
   message: Consider using \bigotimes for subscripts and superscripts.
    218: For a pair $(c,h)\in\mbb{C}^{2}$, let $\mbb{C}_{(c,h)}=\mbb{C}{\bf 1}_{(c,h)}$ be a {{one-dimensional}} representation of $\mrm{Vir}_{\ge 0}$
@@ -46,22 +62,6 @@
 > 1753: We set $\mfrak{h}=\mbb{C}\otimes_{\mbb{Z}}L$ and extend the symmetric $\mbb{Z}$-bilinear form $(\cdot|\cdot)$ on $L$
   1754: to a symmetric $\mbb{C}$-bilinear form on $\mfrak{h}$.
   1755: Then we obtain the corresponding Heisenberg algebra $\widehat{\mfrak{h}}$ and its vacuum representation $L_{\mfrak{h}}(0,1)$ of level $1$.
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 178)
-  message: Consider using \bigotimes for subscripts and superscripts.
-   176: Then a representation $\what{M}_{k}$ of the affine Lie algebra is obtained by induction:
-   177: \begin{equation}
->  178: 	\what{M}_{k}:=\mrm{Ind}_{\what{\mfrak{p}}}^{\what{\mfrak{g}}}M_{k}=U(\what{\mfrak{g}})\otimes_{U(\what{\mfrak{p}})}M_{k}.
-   179: \end{equation}
-   180: By the Poincar\'{e}--Birkhoff--Witt theorem, it is isomorphic to $U(\mfrak{g}\otimes t^{-1}\mbb{C}[t^{-1}])\otimes_{\mbb{C}}M_{k}$ as a vector space.
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 180)
-  message: Consider using \bigotimes for subscripts and superscripts.
-   178: 	\what{M}_{k}:=\mrm{Ind}_{\what{\mfrak{p}}}^{\what{\mfrak{g}}}M_{k}=U(\what{\mfrak{g}})\otimes_{U(\what{\mfrak{p}})}M_{k}.
-   179: \end{equation}
->  180: By the Poincar\'{e}--Birkhoff--Witt theorem, it is isomorphic to $U(\mfrak{g}\otimes t^{-1}\mbb{C}[t^{-1}])\otimes_{\mbb{C}}M_{k}$ as a vector space.
-   181: For a finite-dimensional irreducible representation $L(\Lambda)$ of $\mfrak{g}$, $\what{L(\Lambda)}_{k}$, called a Weyl module,
-   182: may be reducible for specific levels.
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 744)
   message: Consider using \bigcap for subscripts and superscripts.

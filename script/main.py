@@ -31,6 +31,14 @@ def main():
     make_web_readme()
     make_web_svg()
     make_enumerate_diagnostics_test()
+
+    # only once
+    if False:
+        run_fetch_arXiv()
+        run_fetch_arxiv_from_list()
+
+    run_diagnose()
+
     test_file_content()
     test_is_for_md()
     test_mark_down_png()
@@ -49,15 +57,5 @@ def main():
     print("All done!")
 
 
-def run():
-    # only once
-    if False:
-        run_fetch_arXiv()
-        run_fetch_arxiv_from_list()
-
-    run_diagnose()
-
-
 if __name__ == "__main__":
-    # main()
-    run()
+    main()

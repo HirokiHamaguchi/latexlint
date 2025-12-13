@@ -1,52 +1,4 @@
 [CODE] LLColonEqq (722)
-- file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4_Erratum.tex (line 110)
-  message: Consider using \coloneqq instead of :=.
-   108: 
-   109:    \begin{Lemma}\label{cecl}
->  110:        Let $e\in E$. Suppose $\mathcal{M}$ is contractive with $P^0_x\ll P^0_y$ for all $x,y\in K_i$ and $1\leq i\leq N$, and there exists $\mu\in P(K)$ such that $U^*\mu = \mu$. Suppose  each $K_i$ is open. Let $S:=\{i|\ \mu(K_i)>0\}$ and $\nu'_0:=1/|S|\sum_{i\in S}\delta_{x_i}$. Then
-   111:         \begin{equation}\label{cefr}
-   112:             E_{\Phi\left(\nu'_0\right)}\left(1_{_1[e]}|\mathcal{F}\right) =  p_e\circ F\ \ \
-
-- file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4_Erratum.tex (line 110)
-  message: Consider using \coloneqq instead of :=.
-   108: 
-   109:    \begin{Lemma}\label{cecl}
->  110:        Let $e\in E$. Suppose $\mathcal{M}$ is contractive with $P^0_x\ll P^0_y$ for all $x,y\in K_i$ and $1\leq i\leq N$, and there exists $\mu\in P(K)$ such that $U^*\mu = \mu$. Suppose  each $K_i$ is open. Let $S:=\{i|\ \mu(K_i)>0\}$ and $\nu'_0:=1/|S|\sum_{i\in S}\delta_{x_i}$. Then
-   111:         \begin{equation}\label{cefr}
-   112:             E_{\Phi\left(\nu'_0\right)}\left(1_{_1[e]}|\mathcal{F}\right) =  p_e\circ F\ \ \
-
-- file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4_Erratum.tex (line 131)
-  message: Consider using \coloneqq instead of :=.
-   129: 
-   130:    \begin{Theorem}\label{cec}
->  131:        Let $e\in E$. Suppose $\mathcal{M}$ is contractive with $P^0_x\ll P^0_y$ for all $x,y\in K_i$ and  $1\leq i\leq N$, and there exists $\mu\in P(K)$ such that $U^*\mu = \mu$. Suppose  each $K_i$ is open. Let $S:=\{i|\ \mu(K_i)>0\}$ and $\nu'_0:=1/|S|\sum_{i\in S}\delta_{x_i}$. 
-   132:         Then  the normalized $\Phi(\nu'_0)$ is an equilibrium states for $u$ given by
-   133:  \begin{equation*}
-
-- file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4_Erratum.tex (line 131)
-  message: Consider using \coloneqq instead of :=.
-   129: 
-   130:    \begin{Theorem}\label{cec}
->  131:        Let $e\in E$. Suppose $\mathcal{M}$ is contractive with $P^0_x\ll P^0_y$ for all $x,y\in K_i$ and  $1\leq i\leq N$, and there exists $\mu\in P(K)$ such that $U^*\mu = \mu$. Suppose  each $K_i$ is open. Let $S:=\{i|\ \mu(K_i)>0\}$ and $\nu'_0:=1/|S|\sum_{i\in S}\delta_{x_i}$. 
-   132:         Then  the normalized $\Phi(\nu'_0)$ is an equilibrium states for $u$ given by
-   133:  \begin{equation*}
-
-- file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4_Erratum.tex (line 134)
-  message: Consider using \coloneqq instead of :=.
-   132:         Then  the normalized $\Phi(\nu'_0)$ is an equilibrium states for $u$ given by
-   133:  \begin{equation*}
->  134:     u(\sigma):=\left\{\begin{array}{cc}
-   135:     \log  p_{\sigma_1}\circ F(\sigma)&  \mbox{if }\sigma\in D\\
-   136:     -\infty& \mbox{ otherwise, }
-
-- file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4_Erratum.tex (line 139)
-  message: Consider using \coloneqq instead of :=.
-   137:      \end{array}\right.
-   138:      \end{equation*}
->  139:      with the definition $\log(0) := -\infty$,
-   140: and
-   141:        \[h_{\Phi\left(\nu'_0\right)}(S) = -\int u\ d\Phi\left(\nu'_0\right).\]
-
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 111)
   message: Consider using \coloneqq instead of :=.
    109: 
@@ -327,6 +279,118 @@
    836: for each $e\in E$. Then as above
    837: \[h_\Lambda(S) = -\sum\limits_{e\in E}\int\limits_{_1[e]}\log g_e\ d\Lambda.\]
 
+- file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4_Erratum.tex (line 110)
+  message: Consider using \coloneqq instead of :=.
+   108: 
+   109:    \begin{Lemma}\label{cecl}
+>  110:        Let $e\in E$. Suppose $\mathcal{M}$ is contractive with $P^0_x\ll P^0_y$ for all $x,y\in K_i$ and $1\leq i\leq N$, and there exists $\mu\in P(K)$ such that $U^*\mu = \mu$. Suppose  each $K_i$ is open. Let $S:=\{i|\ \mu(K_i)>0\}$ and $\nu'_0:=1/|S|\sum_{i\in S}\delta_{x_i}$. Then
+   111:         \begin{equation}\label{cefr}
+   112:             E_{\Phi\left(\nu'_0\right)}\left(1_{_1[e]}|\mathcal{F}\right) =  p_e\circ F\ \ \
+
+- file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4_Erratum.tex (line 110)
+  message: Consider using \coloneqq instead of :=.
+   108: 
+   109:    \begin{Lemma}\label{cecl}
+>  110:        Let $e\in E$. Suppose $\mathcal{M}$ is contractive with $P^0_x\ll P^0_y$ for all $x,y\in K_i$ and $1\leq i\leq N$, and there exists $\mu\in P(K)$ such that $U^*\mu = \mu$. Suppose  each $K_i$ is open. Let $S:=\{i|\ \mu(K_i)>0\}$ and $\nu'_0:=1/|S|\sum_{i\in S}\delta_{x_i}$. Then
+   111:         \begin{equation}\label{cefr}
+   112:             E_{\Phi\left(\nu'_0\right)}\left(1_{_1[e]}|\mathcal{F}\right) =  p_e\circ F\ \ \
+
+- file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4_Erratum.tex (line 131)
+  message: Consider using \coloneqq instead of :=.
+   129: 
+   130:    \begin{Theorem}\label{cec}
+>  131:        Let $e\in E$. Suppose $\mathcal{M}$ is contractive with $P^0_x\ll P^0_y$ for all $x,y\in K_i$ and  $1\leq i\leq N$, and there exists $\mu\in P(K)$ such that $U^*\mu = \mu$. Suppose  each $K_i$ is open. Let $S:=\{i|\ \mu(K_i)>0\}$ and $\nu'_0:=1/|S|\sum_{i\in S}\delta_{x_i}$. 
+   132:         Then  the normalized $\Phi(\nu'_0)$ is an equilibrium states for $u$ given by
+   133:  \begin{equation*}
+
+- file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4_Erratum.tex (line 131)
+  message: Consider using \coloneqq instead of :=.
+   129: 
+   130:    \begin{Theorem}\label{cec}
+>  131:        Let $e\in E$. Suppose $\mathcal{M}$ is contractive with $P^0_x\ll P^0_y$ for all $x,y\in K_i$ and  $1\leq i\leq N$, and there exists $\mu\in P(K)$ such that $U^*\mu = \mu$. Suppose  each $K_i$ is open. Let $S:=\{i|\ \mu(K_i)>0\}$ and $\nu'_0:=1/|S|\sum_{i\in S}\delta_{x_i}$. 
+   132:         Then  the normalized $\Phi(\nu'_0)$ is an equilibrium states for $u$ given by
+   133:  \begin{equation*}
+
+- file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4_Erratum.tex (line 134)
+  message: Consider using \coloneqq instead of :=.
+   132:         Then  the normalized $\Phi(\nu'_0)$ is an equilibrium states for $u$ given by
+   133:  \begin{equation*}
+>  134:     u(\sigma):=\left\{\begin{array}{cc}
+   135:     \log  p_{\sigma_1}\circ F(\sigma)&  \mbox{if }\sigma\in D\\
+   136:     -\infty& \mbox{ otherwise, }
+
+- file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4_Erratum.tex (line 139)
+  message: Consider using \coloneqq instead of :=.
+   137:      \end{array}\right.
+   138:      \end{equation*}
+>  139:      with the definition $\log(0) := -\infty$,
+   140: and
+   141:        \[h_{\Phi\left(\nu'_0\right)}(S) = -\int u\ d\Phi\left(\nu'_0\right).\]
+
+- file: sample\arxiv_sources\1101.2623v9\SecondCaratheodoryGibbsMeasures4_Erratum.tex (line 119)
+  message: Consider using \coloneqq instead of :=.
+   117:   
+   118: For $Q\subset\Sigma$, let $\dot\xi(Q)$ be the class of all  disjoint covers $(A_m)_{m\leq 0}\in\C(Q)$ with at most finitely many non-empty sets where each $A_m$ is a finite union of cylinder sets from $\A_m$.
+>  119:  Set \[\dot\Phi(Q):=\inf\limits_{(A_m)_{m\leq 0}\in\dot\xi(Q)}\sum\limits_{m\leq 0}\phi_0\left(S^mA_m\right).\]
+   120:    \begin{Lemma} Let $Q\subset\Sigma$ be compact. Then
+   121:        \[\Phi(Q)=\dot\Phi(Q).\]
+
+- file: sample\arxiv_sources\1101.2623v9\SecondCaratheodoryGibbsMeasures4_Erratum.tex (line 126)
+  message: Consider using \coloneqq instead of :=.
+   124: 
+   125:     1. Step.  Let $\tilde\xi(Q)$ be the set of all $(A_m)_{m\leq 0}\in\C(Q)$ such that each $A_m$ is an at most countable union of cylinder sets from $\A_m $. Set
+>  126:    \[\tilde\Phi(Q):=\inf\limits_{(A_m)_{m\leq 0}\in\tilde\xi(Q)}\sum\limits_{m\leq 0}\phi_0\left(S^mA_m\right).\]
+   127:  Then, obviously, $\tilde\Phi(Q)\geq \Phi(Q)$.
+   128: Let $\left((A^n_m)_{m\leq 0}\right)_{n\in\mathbb{N}}\subset\mathcal{C}(Q)$ such that
+
+- file: sample\arxiv_sources\1101.2623v9\SecondCaratheodoryGibbsMeasures4_Erratum.tex (line 142)
+  message: Consider using \coloneqq instead of :=.
+   140: 
+   141: 2. Step. Let $\xi'(Q)$ be the set of all $(A_m)_{m\leq 0}\in\tilde\xi(Q)$ such at most finitely many $A_m$'s are not empty and each $A_m$ is a finite union of cylinder sets. Set
+>  142:   \[\Phi'(Q):=\inf\limits_{(A_m)_{m\leq 0}\in\xi'(Q)}\sum\limits_{m\leq 0}\phi_0\left(S^mA_m\right).\]
+   143:  Then, clearly, $\Phi'(Q)\geq \tilde\Phi(Q)$. By the compactness of $Q$, for every $(A_m)_{m\leq 0}\in\tilde\xi(Q)$ there exists $(A'_m)_{m\leq 0}\in\xi'(Q)$ such that $A'_m\subset A_m$ for all $m\leq 0$, and therefore,
+   144: \[\sum\limits_{m\leq 0}\phi_0\left(S^mA_m\right)\geq\sum\limits_{m\leq 0}\phi_0\left(S^mA'_m\right)\geq\Phi'(Q).\]
+
+- file: sample\arxiv_sources\1101.2623v9\SecondCaratheodoryGibbsMeasures4_Erratum.tex (line 147)
+  message: Consider using \coloneqq instead of :=.
+   145: Hence $\tilde\Phi(Q)\geq\Phi'(Q)$. Thus \[\tilde\Phi(Q)=\Phi'(Q).\]
+   146: 
+>  147: 3. Step.  Obviously, $\Phi'(Q)\leq \dot\Phi(Q)$. Now, let $(A_m)_{m\leq 0}\in\xi'(Q)$, and set \[B_m:=A_m\setminus(A_{m+1}\cup...\cup A_0)\]
+   148: for all $m\leq 0$. Then, since finite unions of cylinder sets from $\A_m$ form an algebra in $\A_m$,
+   149:   $(B_m)_{m\leq 0}\in\dot\xi(Q)$, and $B_m\subset A_m$ for all $m\leq 0$. Hence
+
+- file: sample\arxiv_sources\1101.2623v9\SecondCaratheodoryGibbsMeasures4_Erratum.tex (line 176)
+  message: Consider using \coloneqq instead of :=.
+   174: 
+   175:  \begin{Definition}
+>  176:  Let us abbreviate $\M:=(K_{i(e)},w_e,p_e)_{e\in E}$. Set 
+   177: \begin{eqnarray*}
+   178: E(\M)&:=&\left\{\Lambda\in P_S(\Sigma)|\  \Lambda(D) = 1\mbox{ and }E_\Lambda(1_{_1[e]}|\F)=p_e\circ F\right.\\  
+
+- file: sample\arxiv_sources\1101.2623v9\SecondCaratheodoryGibbsMeasures4_Erratum.tex (line 178)
+  message: Consider using \coloneqq instead of :=.
+   176:  Let us abbreviate $\M:=(K_{i(e)},w_e,p_e)_{e\in E}$. Set 
+   177: \begin{eqnarray*}
+>  178: E(\M)&:=&\left\{\Lambda\in P_S(\Sigma)|\  \Lambda(D) = 1\mbox{ and }E_\Lambda(1_{_1[e]}|\F)=p_e\circ F\right.\\  
+   179: &&\left.\Lambda\mbox{-a.e. for all }e\in E\right\}.
+   180: \end{eqnarray*}
+
+- file: sample\arxiv_sources\1101.2623v9\SecondCaratheodoryGibbsMeasures4_Erratum.tex (line 196)
+  message: Consider using \coloneqq instead of :=.
+   194: 
+   195: \begin{Corollary}
+>  196: Suppose $\M$ is contractive and non-degenerate such that all $p_e|_{K_{i(e)}}$'s are Dini-continuous and there exists $\delta>0$ such that $p_e|_{K_{i(e)}}\geq\delta$ for all $e\in E$. Let $M\in E(\M)$, $S:=\{i|\ F(M)(K_i)>0\}$ and $\nu'_0:=1/|S|\sum_{i\in S}\delta_{x_i}$. Then the following holds true.
+   197: 
+   198: (i) $\Phi(\nu'_0)/\Phi(\nu'_0)(\Sigma)\in E(\M)$ if $\Phi(\nu'_0)(\Sigma)>0$.\\
+
+- file: sample\arxiv_sources\1101.2623v9\SecondCaratheodoryGibbsMeasures4_Erratum.tex (line 196)
+  message: Consider using \coloneqq instead of :=.
+   194: 
+   195: \begin{Corollary}
+>  196: Suppose $\M$ is contractive and non-degenerate such that all $p_e|_{K_{i(e)}}$'s are Dini-continuous and there exists $\delta>0$ such that $p_e|_{K_{i(e)}}\geq\delta$ for all $e\in E$. Let $M\in E(\M)$, $S:=\{i|\ F(M)(K_i)>0\}$ and $\nu'_0:=1/|S|\sum_{i\in S}\delta_{x_i}$. Then the following holds true.
+   197: 
+   198: (i) $\Phi(\nu'_0)/\Phi(\nu'_0)(\Sigma)\in E(\M)$ if $\Phi(\nu'_0)(\Sigma)>0$.\\
+
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 466)
   message: Consider using \coloneqq instead of :=.
    464: and we write
@@ -575,69 +639,157 @@
   4041: \]
   4042: Fubini's theorem gives, integrating first in the variable $t$ and then in the variable $x$,
 
-- file: sample\arxiv_sources\1101.2623v9\SecondCaratheodoryGibbsMeasures4_Erratum.tex (line 119)
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 172)
   message: Consider using \coloneqq instead of :=.
-   117:   
-   118: For $Q\subset\Sigma$, let $\dot\xi(Q)$ be the class of all  disjoint covers $(A_m)_{m\leq 0}\in\C(Q)$ with at most finitely many non-empty sets where each $A_m$ is a finite union of cylinder sets from $\A_m$.
->  119:  Set \[\dot\Phi(Q):=\inf\limits_{(A_m)_{m\leq 0}\in\dot\xi(Q)}\sum\limits_{m\leq 0}\phi_0\left(S^mA_m\right).\]
-   120:    \begin{Lemma} Let $Q\subset\Sigma$ be compact. Then
-   121:        \[\Phi(Q)=\dot\Phi(Q).\]
+   170: by means of parabolic induction.
+   171: Let $M$ be a representation of $\mfrak{g}$.
+>  172: Then the representation $M_{k}$ of a parabolic subalgebra $\what{\mfrak{p}}:=\mfrak{g}\otimes \mbb{C}[t]\oplus\mbb{C}K$ of the affine Lie algebra
+   173: is $M$ as a vector space, on which $\mfrak{g}\otimes t^{0}$ acts naturally, $\mfrak{g}\otimes t\mbb{C}[t]$ acts trivially,
+   174: and $K$ acts as the multiplication by $k\in \mbb{C}$.
 
-- file: sample\arxiv_sources\1101.2623v9\SecondCaratheodoryGibbsMeasures4_Erratum.tex (line 126)
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 178)
   message: Consider using \coloneqq instead of :=.
-   124: 
-   125:     1. Step.  Let $\tilde\xi(Q)$ be the set of all $(A_m)_{m\leq 0}\in\C(Q)$ such that each $A_m$ is an at most countable union of cylinder sets from $\A_m $. Set
->  126:    \[\tilde\Phi(Q):=\inf\limits_{(A_m)_{m\leq 0}\in\tilde\xi(Q)}\sum\limits_{m\leq 0}\phi_0\left(S^mA_m\right).\]
-   127:  Then, obviously, $\tilde\Phi(Q)\geq \Phi(Q)$.
-   128: Let $\left((A^n_m)_{m\leq 0}\right)_{n\in\mathbb{N}}\subset\mathcal{C}(Q)$ such that
+   176: Then a representation $\what{M}_{k}$ of the affine Lie algebra is obtained by induction:
+   177: \begin{equation}
+>  178: 	\what{M}_{k}:=\mrm{Ind}_{\what{\mfrak{p}}}^{\what{\mfrak{g}}}M_{k}=U(\what{\mfrak{g}})\otimes_{U(\what{\mfrak{p}})}M_{k}.
+   179: \end{equation}
+   180: By the Poincar\'{e}--Birkhoff--Witt theorem, it is isomorphic to $U(\mfrak{g}\otimes t^{-1}\mbb{C}[t^{-1}])\otimes_{\mbb{C}}M_{k}$ as a vector space.
 
-- file: sample\arxiv_sources\1101.2623v9\SecondCaratheodoryGibbsMeasures4_Erratum.tex (line 142)
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 239)
   message: Consider using \coloneqq instead of :=.
-   140: 
-   141: 2. Step. Let $\xi'(Q)$ be the set of all $(A_m)_{m\leq 0}\in\tilde\xi(Q)$ such at most finitely many $A_m$'s are not empty and each $A_m$ is a finite union of cylinder sets. Set
->  142:   \[\Phi'(Q):=\inf\limits_{(A_m)_{m\leq 0}\in\xi'(Q)}\sum\limits_{m\leq 0}\phi_0\left(S^mA_m\right).\]
-   143:  Then, clearly, $\Phi'(Q)\geq \tilde\Phi(Q)$. By the compactness of $Q$, for every $(A_m)_{m\leq 0}\in\tilde\xi(Q)$ there exists $(A'_m)_{m\leq 0}\in\xi'(Q)$ such that $A'_m\subset A_m$ for all $m\leq 0$, and therefore,
-   144: \[\sum\limits_{m\leq 0}\phi_0\left(S^mA_m\right)\geq\sum\limits_{m\leq 0}\phi_0\left(S^mA'_m\right)\geq\Phi'(Q).\]
+   237: where
+   238: \begin{equation}
+>  239: 	L_{\mfrak{g},k}(\Lambda)_{h}:=\{v\in L_{\mfrak{g},k}(\Lambda)|L_{0}v=hv\}
+   240: \end{equation}
+   241: is a finite-dimensional eigenspace of $L_{0}$ and the constant $h_{\Lambda}$ is given by
 
-- file: sample\arxiv_sources\1101.2623v9\SecondCaratheodoryGibbsMeasures4_Erratum.tex (line 147)
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 257)
   message: Consider using \coloneqq instead of :=.
-   145: Hence $\tilde\Phi(Q)\geq\Phi'(Q)$. Thus \[\tilde\Phi(Q)=\Phi'(Q).\]
-   146: 
->  147: 3. Step.  Obviously, $\Phi'(Q)\leq \dot\Phi(Q)$. Now, let $(A_m)_{m\leq 0}\in\xi'(Q)$, and set \[B_m:=A_m\setminus(A_{m+1}\cup...\cup A_0)\]
-   148: for all $m\leq 0$. Then, since finite unions of cylinder sets from $\A_m$ form an algebra in $\A_m$,
-   149:   $(B_m)_{m\leq 0}\in\dot\xi(Q)$, and $B_m\subset A_m$ for all $m\leq 0$. Hence
+   255: In the rest of this section, we give a vertex operator algebra (VOA) structure on $V_{\mfrak{g},k}$,
+   256: which is convenient in the following computation.
+>  257: To be precise, only the space $L_{\mfrak{g},k}:=L_{\mfrak{g},k}(0)\subset V_{\mfrak{g},k}$ carries a VOA structure,
+   258: and the other direct summands are regarded as modules over this VOA.
+   259: In this paper, however, we sacrifice the preciseness and introduce the standard computational tools in the theory of VOAs,
 
-- file: sample\arxiv_sources\1101.2623v9\SecondCaratheodoryGibbsMeasures4_Erratum.tex (line 176)
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 445)
   message: Consider using \coloneqq instead of :=.
-   174: 
-   175:  \begin{Definition}
->  176:  Let us abbreviate $\M:=(K_{i(e)},w_e,p_e)_{e\in E}$. Set 
-   177: \begin{eqnarray*}
-   178: E(\M)&:=&\left\{\Lambda\in P_S(\Sigma)|\  \Lambda(D) = 1\mbox{ and }E_\Lambda(1_{_1[e]}|\F)=p_e\circ F\right.\\  
+   443: Let $\{X_{r}\}_{r\in I_{\mfrak{g}}}$ be an orthonormal basis of $\mfrak{g}$
+   444: with respect to the symmetric invariant bilinear form $(\cdot|\cdot)$.
+>  445: We prepare mutually independent Brownian motions $B_{t}^{(i)}$ labeled by $i\in I_{B}:=\{0\}\cup I_{\mfrak{g}}$, identifying $I_{\mfrak{g}}$ with a subset of $I_{B}$,
+   446: and let $\kappa_{i}>0$ for $i \in I_{B}$ be the variance of $B_{t}^{(i)}$.
+   447: 
 
-- file: sample\arxiv_sources\1101.2623v9\SecondCaratheodoryGibbsMeasures4_Erratum.tex (line 178)
+- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 512)
   message: Consider using \coloneqq instead of :=.
-   176:  Let us abbreviate $\M:=(K_{i(e)},w_e,p_e)_{e\in E}$. Set 
-   177: \begin{eqnarray*}
->  178: E(\M)&:=&\left\{\Lambda\in P_S(\Sigma)|\  \Lambda(D) = 1\mbox{ and }E_\Lambda(1_{_1[e]}|\F)=p_e\circ F\right.\\  
-   179: &&\left.\Lambda\mbox{-a.e. for all }e\in E\right\}.
-   180: \end{eqnarray*}
+   510: but we have to comment that here the introduced $g_{t}(z)$ cannot be a uniformizing map in the sense of \cite{BauerBernard2003a} unless $n=1$, while $f_{t}(z)$ can be.
+   511: To see this, let us consider the automorphism group of an algebra of formal power series.
+>  512: Let $\mcal{O}:=\mbb{C}[[w]]=\varprojlim \mbb{C}[w]/(w^{n})$ be a complete $\mbb{C}$-algebra.
+   513: A continuous automorphism of $\mcal{O}$ is identified with the image of the topological generator $w$ of $\mcal{O}$.
+   514: Under this identification, the group of continuous automorphisms $\mrm{Aut}\mcal{O}$ of $\mcal{O}$ is described as
 
-- file: sample\arxiv_sources\1101.2623v9\SecondCaratheodoryGibbsMeasures4_Erratum.tex (line 196)
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 231)
   message: Consider using \coloneqq instead of :=.
-   194: 
-   195: \begin{Corollary}
->  196: Suppose $\M$ is contractive and non-degenerate such that all $p_e|_{K_{i(e)}}$'s are Dini-continuous and there exists $\delta>0$ such that $p_e|_{K_{i(e)}}\geq\delta$ for all $e\in E$. Let $M\in E(\M)$, $S:=\{i|\ F(M)(K_i)>0\}$ and $\nu'_0:=1/|S|\sum_{i\in S}\delta_{x_i}$. Then the following holds true.
-   197: 
-   198: (i) $\Phi(\nu'_0)/\Phi(\nu'_0)(\Sigma)\in E(\M)$ if $\Phi(\nu'_0)(\Sigma)>0$.\\
+   229: but for a specific highest weight, it is not.
+   230: Then we denote the irreducible quotient of the Verma module by $L(c,h)$,
+>  231: and call an element in $J(c,h):=\ker (M(c,h)\twoheadrightarrow L(c,h))$ a null vector.
+   232: 
+   233: Among other irreducible modules, that of the highest weight $(c,0)$ denoted by $L(c,0)$ above has {{a special feature, which is}} that it carries {{the}} structure of a {{VOA}}.
 
-- file: sample\arxiv_sources\1101.2623v9\SecondCaratheodoryGibbsMeasures4_Erratum.tex (line 196)
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 335)
   message: Consider using \coloneqq instead of :=.
-   194: 
-   195: \begin{Corollary}
->  196: Suppose $\M$ is contractive and non-degenerate such that all $p_e|_{K_{i(e)}}$'s are Dini-continuous and there exists $\delta>0$ such that $p_e|_{K_{i(e)}}\geq\delta$ for all $e\in E$. Let $M\in E(\M)$, $S:=\{i|\ F(M)(K_i)>0\}$ and $\nu'_0:=1/|S|\sum_{i\in S}\delta_{x_i}$. Then the following holds true.
-   197: 
-   198: (i) $\Phi(\nu'_0)/\Phi(\nu'_0)(\Sigma)\in E(\M)$ if $\Phi(\nu'_0)(\Sigma)>0$.\\
+   333: For an automorphism $\rho\in\mrm{Aut}\mcal{O}$, we define an endomorphism $T_{\rho}$ on $\mrm{Hom}(V,\mrm{Fie}(V))$ by
+   334: \begin{equation}
+>  335: 	(T_{\rho}\cdot X)(A,w):=R(\rho)X(R(\rho_{w})^{-1}A,\rho(w))R(\rho)^{-1}
+   336: \end{equation}
+   337: for $X\in \mrm{Hom}(V,\mrm{Fie}(V))$ and $A\in V$.
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1325)
+  message: Consider using \eqqcolon instead of =:.
+  1323: of type $\binom{L_{\mfrak{g}}(\Lambda,k)}{L_{\mfrak{g}}(\Lambda,k)\ \ L_{\mfrak{g},k}}$, the quantity
+  1324: \begin{equation}
+> 1325: 	\mcal{M}_{u}=\braket{u|\scr{G}\mcal{Y}(-,x)|0} \in L(\Lambda)^{\ast}[g_{n+1},e_{n},h_{n},f_{n}|n<0][[x]]=:\mcal{F}_{\mrm{aff}}(\Lambda)
+  1326: \end{equation}
+  1327: for any vector $u\in L_{\mfrak{g}}(\Lambda,k)$ gives a local martingale when we evaluate $g_{n}$, $e_{n}$, $h_{n}$, $f_{n}$ at the SLE with internal degrees of freedom,
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1523)
+  message: Consider using \coloneqq instead of :=.
+  1521: such that for any $v\in V$ we have $a_{(n)}v=0$ for $n \gg 0$.
+  1522: Equivalently, a field is a linear map from $V$ to $V((z))=V[[z]][z^{-1}]$.
+> 1523: We let the space of fields be denoted by $\mrm{Fie}(V):=\mrm{Hom}_{\mbb{C}}(V,V((z)))$.
+  1524: 
+  1525: \begin{defn}[Vertex algebra]
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1640)
+  message: Consider using \coloneqq instead of :=.
+  1638: An intertwining operator of type $\binom{M_{1}}{M_{2}\ \ M_{3}}$ is a linear operator
+  1639: \begin{equation}
+> 1640: 	\mcal{Y}(-,z):M^{1}\to \mrm{Hom}(M^{2},M^{3})z^{K}:=\left\{\sum_{a \in K}v_{a}z^{a}\Bigg|v_{\alpha}\in\mrm{Hom}(M^{2},M^{3})\right\},
+  1641: \end{equation}
+  1642: where $K=\bigcup_{i}(\alpha_{i}+\mbb{Z})$ with finitely many $\alpha_{i}\in\mbb{C}$ being chosen associated with $M^{1}$, $M^{2}$ and $M^{3}$
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1668)
+  message: Consider using \coloneqq instead of :=.
+  1666: Then the universal Virasoro VOA of central charge $c$ is defined by
+  1667: \begin{equation}
+> 1668: 	V_{c}:=M(c,0)/U(\mrm{Vir_{<0}})L_{-1}{\bf 1}_{c,0}.
+  1669: \end{equation}
+  1670: Now we prepare the components of the vertex algebra structure on $V_{c}$.
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1763)
+  message: Consider using \coloneqq instead of :=.
+  1761: We define the action of $\widehat{\mfrak{h}}$ on $V_{L}$ by
+  1762: \begin{equation}
+> 1763: 	H(m).(s\otimes e^{\alpha}):=(H(m)+\delta_{m,0}(H|\alpha))s\otimes e^{\alpha}
+  1764: \end{equation}
+  1765: for $H\in\mfrak{h}$, $m\in\mbb{Z}$, $s\in L_{\mfrak{h}}(0,1)$, and $\alpha\in L$.
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1768)
+  message: Consider using \coloneqq instead of :=.
+  1766: We also define the action of $\mbb{C}_{\epsilon}[L]$ on $V_{L}$ by
+  1767: \begin{equation}
+> 1768: 	e^{\beta}.(s\otimes e^{\alpha}):=\epsilon(\beta,\alpha)s\otimes e^{\alpha+\beta}
+  1769: \end{equation}
+  1770: for $\alpha,\beta\in L$ and $s\in L_{\mfrak{h}}(0,1)$.
+
+- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2010)
+  message: Consider using \coloneqq instead of :=.
+  2008: \begin{lem}
+  2009: \label{lem:adjoint_GinvXG}
+> 2010: We set $\xi:=g^{-1}(\zeta)$:
+  2011: \begin{align}
+  2012: 	\scr{G}^{-1}E\otimes \zeta^{-\ell}\scr{G}
+
+- file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 1093)
+  message: Consider using \coloneqq instead of :=.
+  1091: Since $\omega_1^{ck} = \omega_1^{G_0}$, there is some $a \in \kO$ 
+  1092: and an index $e$ such that $Y = \Phi_e(H_a^{G_0})$.  Then 
+> 1093: $R(X) := \exists e P(\Phi_e(H_a^{X}))$ is a hyperarithmetic predicate 
+  1094: that holds of $G_0$ and holds of $p\concat G_0$ for 
+  1095: any $p \in 2^{<\omega}$.  Therefore, for any $\Delta^1_1$-generic 
+
+- file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 1481)
+  message: Consider using \coloneqq instead of :=.
+  1479: For contradiction, suppose there were a jump hierarchy on 
+  1480: $a^\ast$ in $\Delta^1_1(G)$.  Then for some $b \in \kO$, 
+> 1481: $R(X) :=$ ``$H_b^X$ computes a jump hierarchy on $a^\ast$'' 
+  1482: is again a $\Sigma^0_{b+O(1)}$ predicate,
+  1483: where $R$ holds of $G$.  (Recall that
+
+- file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 2200)
+  message: Consider using \coloneqq instead of :=.
+  2198: Let $h$ be the name of the nice decorating 
+  2199: function mapping $b$ to 
+> 2200: $(P_b,N_b)$, and consider the code $T := \Decorate^Z(E_{a^\ast},h)$.
+  2201: Observe that since $\lambda$ in $E_{a^\ast}$ is a $\cup$, 
+  2202: we know that $\lambda$ in $T$ is a $\cup$.
+
+- file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 2508)
+  message: Consider using \coloneqq instead of :=.
+  2506: whenever $g:\omega\rightarrow \omega$ dominates the 
+  2507: increasing function
+> 2508: $$f_d(n) := \Phi_{h(d)}^{H^A_d}(n),$$ we have 
+  2509: $$\Phi_{k(d)}(A\oplus g) = H_d^A.$$
+  2510: (To get this from the proof of
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 84)
   message: Consider using \eqqcolon instead of =:.
@@ -1383,182 +1535,6 @@
   3040:   \elm\quad\text{and}\quad\elm\in\grid^+. 
   3041: \end{align*}
 
-- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 231)
-  message: Consider using \coloneqq instead of :=.
-   229: but for a specific highest weight, it is not.
-   230: Then we denote the irreducible quotient of the Verma module by $L(c,h)$,
->  231: and call an element in $J(c,h):=\ker (M(c,h)\twoheadrightarrow L(c,h))$ a null vector.
-   232: 
-   233: Among other irreducible modules, that of the highest weight $(c,0)$ denoted by $L(c,0)$ above has {{a special feature, which is}} that it carries {{the}} structure of a {{VOA}}.
-
-- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 335)
-  message: Consider using \coloneqq instead of :=.
-   333: For an automorphism $\rho\in\mrm{Aut}\mcal{O}$, we define an endomorphism $T_{\rho}$ on $\mrm{Hom}(V,\mrm{Fie}(V))$ by
-   334: \begin{equation}
->  335: 	(T_{\rho}\cdot X)(A,w):=R(\rho)X(R(\rho_{w})^{-1}A,\rho(w))R(\rho)^{-1}
-   336: \end{equation}
-   337: for $X\in \mrm{Hom}(V,\mrm{Fie}(V))$ and $A\in V$.
-
-- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1325)
-  message: Consider using \eqqcolon instead of =:.
-  1323: of type $\binom{L_{\mfrak{g}}(\Lambda,k)}{L_{\mfrak{g}}(\Lambda,k)\ \ L_{\mfrak{g},k}}$, the quantity
-  1324: \begin{equation}
-> 1325: 	\mcal{M}_{u}=\braket{u|\scr{G}\mcal{Y}(-,x)|0} \in L(\Lambda)^{\ast}[g_{n+1},e_{n},h_{n},f_{n}|n<0][[x]]=:\mcal{F}_{\mrm{aff}}(\Lambda)
-  1326: \end{equation}
-  1327: for any vector $u\in L_{\mfrak{g}}(\Lambda,k)$ gives a local martingale when we evaluate $g_{n}$, $e_{n}$, $h_{n}$, $f_{n}$ at the SLE with internal degrees of freedom,
-
-- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1523)
-  message: Consider using \coloneqq instead of :=.
-  1521: such that for any $v\in V$ we have $a_{(n)}v=0$ for $n \gg 0$.
-  1522: Equivalently, a field is a linear map from $V$ to $V((z))=V[[z]][z^{-1}]$.
-> 1523: We let the space of fields be denoted by $\mrm{Fie}(V):=\mrm{Hom}_{\mbb{C}}(V,V((z)))$.
-  1524: 
-  1525: \begin{defn}[Vertex algebra]
-
-- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1640)
-  message: Consider using \coloneqq instead of :=.
-  1638: An intertwining operator of type $\binom{M_{1}}{M_{2}\ \ M_{3}}$ is a linear operator
-  1639: \begin{equation}
-> 1640: 	\mcal{Y}(-,z):M^{1}\to \mrm{Hom}(M^{2},M^{3})z^{K}:=\left\{\sum_{a \in K}v_{a}z^{a}\Bigg|v_{\alpha}\in\mrm{Hom}(M^{2},M^{3})\right\},
-  1641: \end{equation}
-  1642: where $K=\bigcup_{i}(\alpha_{i}+\mbb{Z})$ with finitely many $\alpha_{i}\in\mbb{C}$ being chosen associated with $M^{1}$, $M^{2}$ and $M^{3}$
-
-- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1668)
-  message: Consider using \coloneqq instead of :=.
-  1666: Then the universal Virasoro VOA of central charge $c$ is defined by
-  1667: \begin{equation}
-> 1668: 	V_{c}:=M(c,0)/U(\mrm{Vir_{<0}})L_{-1}{\bf 1}_{c,0}.
-  1669: \end{equation}
-  1670: Now we prepare the components of the vertex algebra structure on $V_{c}$.
-
-- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1763)
-  message: Consider using \coloneqq instead of :=.
-  1761: We define the action of $\widehat{\mfrak{h}}$ on $V_{L}$ by
-  1762: \begin{equation}
-> 1763: 	H(m).(s\otimes e^{\alpha}):=(H(m)+\delta_{m,0}(H|\alpha))s\otimes e^{\alpha}
-  1764: \end{equation}
-  1765: for $H\in\mfrak{h}$, $m\in\mbb{Z}$, $s\in L_{\mfrak{h}}(0,1)$, and $\alpha\in L$.
-
-- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1768)
-  message: Consider using \coloneqq instead of :=.
-  1766: We also define the action of $\mbb{C}_{\epsilon}[L]$ on $V_{L}$ by
-  1767: \begin{equation}
-> 1768: 	e^{\beta}.(s\otimes e^{\alpha}):=\epsilon(\beta,\alpha)s\otimes e^{\alpha+\beta}
-  1769: \end{equation}
-  1770: for $\alpha,\beta\in L$ and $s\in L_{\mfrak{h}}(0,1)$.
-
-- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2010)
-  message: Consider using \coloneqq instead of :=.
-  2008: \begin{lem}
-  2009: \label{lem:adjoint_GinvXG}
-> 2010: We set $\xi:=g^{-1}(\zeta)$:
-  2011: \begin{align}
-  2012: 	\scr{G}^{-1}E\otimes \zeta^{-\ell}\scr{G}
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 172)
-  message: Consider using \coloneqq instead of :=.
-   170: by means of parabolic induction.
-   171: Let $M$ be a representation of $\mfrak{g}$.
->  172: Then the representation $M_{k}$ of a parabolic subalgebra $\what{\mfrak{p}}:=\mfrak{g}\otimes \mbb{C}[t]\oplus\mbb{C}K$ of the affine Lie algebra
-   173: is $M$ as a vector space, on which $\mfrak{g}\otimes t^{0}$ acts naturally, $\mfrak{g}\otimes t\mbb{C}[t]$ acts trivially,
-   174: and $K$ acts as the multiplication by $k\in \mbb{C}$.
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 178)
-  message: Consider using \coloneqq instead of :=.
-   176: Then a representation $\what{M}_{k}$ of the affine Lie algebra is obtained by induction:
-   177: \begin{equation}
->  178: 	\what{M}_{k}:=\mrm{Ind}_{\what{\mfrak{p}}}^{\what{\mfrak{g}}}M_{k}=U(\what{\mfrak{g}})\otimes_{U(\what{\mfrak{p}})}M_{k}.
-   179: \end{equation}
-   180: By the Poincar\'{e}--Birkhoff--Witt theorem, it is isomorphic to $U(\mfrak{g}\otimes t^{-1}\mbb{C}[t^{-1}])\otimes_{\mbb{C}}M_{k}$ as a vector space.
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 239)
-  message: Consider using \coloneqq instead of :=.
-   237: where
-   238: \begin{equation}
->  239: 	L_{\mfrak{g},k}(\Lambda)_{h}:=\{v\in L_{\mfrak{g},k}(\Lambda)|L_{0}v=hv\}
-   240: \end{equation}
-   241: is a finite-dimensional eigenspace of $L_{0}$ and the constant $h_{\Lambda}$ is given by
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 257)
-  message: Consider using \coloneqq instead of :=.
-   255: In the rest of this section, we give a vertex operator algebra (VOA) structure on $V_{\mfrak{g},k}$,
-   256: which is convenient in the following computation.
->  257: To be precise, only the space $L_{\mfrak{g},k}:=L_{\mfrak{g},k}(0)\subset V_{\mfrak{g},k}$ carries a VOA structure,
-   258: and the other direct summands are regarded as modules over this VOA.
-   259: In this paper, however, we sacrifice the preciseness and introduce the standard computational tools in the theory of VOAs,
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 445)
-  message: Consider using \coloneqq instead of :=.
-   443: Let $\{X_{r}\}_{r\in I_{\mfrak{g}}}$ be an orthonormal basis of $\mfrak{g}$
-   444: with respect to the symmetric invariant bilinear form $(\cdot|\cdot)$.
->  445: We prepare mutually independent Brownian motions $B_{t}^{(i)}$ labeled by $i\in I_{B}:=\{0\}\cup I_{\mfrak{g}}$, identifying $I_{\mfrak{g}}$ with a subset of $I_{B}$,
-   446: and let $\kappa_{i}>0$ for $i \in I_{B}$ be the variance of $B_{t}^{(i)}$.
-   447: 
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 512)
-  message: Consider using \coloneqq instead of :=.
-   510: but we have to comment that here the introduced $g_{t}(z)$ cannot be a uniformizing map in the sense of \cite{BauerBernard2003a} unless $n=1$, while $f_{t}(z)$ can be.
-   511: To see this, let us consider the automorphism group of an algebra of formal power series.
->  512: Let $\mcal{O}:=\mbb{C}[[w]]=\varprojlim \mbb{C}[w]/(w^{n})$ be a complete $\mbb{C}$-algebra.
-   513: A continuous automorphism of $\mcal{O}$ is identified with the image of the topological generator $w$ of $\mcal{O}$.
-   514: Under this identification, the group of continuous automorphisms $\mrm{Aut}\mcal{O}$ of $\mcal{O}$ is described as
-
-- file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 1093)
-  message: Consider using \coloneqq instead of :=.
-  1091: Since $\omega_1^{ck} = \omega_1^{G_0}$, there is some $a \in \kO$ 
-  1092: and an index $e$ such that $Y = \Phi_e(H_a^{G_0})$.  Then 
-> 1093: $R(X) := \exists e P(\Phi_e(H_a^{X}))$ is a hyperarithmetic predicate 
-  1094: that holds of $G_0$ and holds of $p\concat G_0$ for 
-  1095: any $p \in 2^{<\omega}$.  Therefore, for any $\Delta^1_1$-generic 
-
-- file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 1481)
-  message: Consider using \coloneqq instead of :=.
-  1479: For contradiction, suppose there were a jump hierarchy on 
-  1480: $a^\ast$ in $\Delta^1_1(G)$.  Then for some $b \in \kO$, 
-> 1481: $R(X) :=$ ``$H_b^X$ computes a jump hierarchy on $a^\ast$'' 
-  1482: is again a $\Sigma^0_{b+O(1)}$ predicate,
-  1483: where $R$ holds of $G$.  (Recall that
-
-- file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 2200)
-  message: Consider using \coloneqq instead of :=.
-  2198: Let $h$ be the name of the nice decorating 
-  2199: function mapping $b$ to 
-> 2200: $(P_b,N_b)$, and consider the code $T := \Decorate^Z(E_{a^\ast},h)$.
-  2201: Observe that since $\lambda$ in $E_{a^\ast}$ is a $\cup$, 
-  2202: we know that $\lambda$ in $T$ is a $\cup$.
-
-- file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 2508)
-  message: Consider using \coloneqq instead of :=.
-  2506: whenever $g:\omega\rightarrow \omega$ dominates the 
-  2507: increasing function
-> 2508: $$f_d(n) := \Phi_{h(d)}^{H^A_d}(n),$$ we have 
-  2509: $$\Phi_{k(d)}(A\oplus g) = H_d^A.$$
-  2510: (To get this from the proof of
-
-- file: sample\arxiv_sources\2402.06332v2\lstlean.tex (line 220)
-  message: Consider using \coloneqq instead of :=.
-   218: {\$}{{\color{symbolcolor}\$}}1
-   219: 
->  220: {:=}{{\color{symbolcolor}:=}}1
-   221: {=}{{\color{symbolcolor}=}}1
-   222: {<|>}{{\color{symbolcolor}<|>}}1
-
-- file: sample\arxiv_sources\2402.06332v2\lstlean.tex (line 220)
-  message: Consider using \coloneqq instead of :=.
-   218: {\$}{{\color{symbolcolor}\$}}1
-   219: 
->  220: {:=}{{\color{symbolcolor}:=}}1
-   221: {=}{{\color{symbolcolor}=}}1
-   222: {<|>}{{\color{symbolcolor}<|>}}1
-
-- file: sample\arxiv_sources\2402.06332v2\main.tex (line 993)
-  message: Consider using \coloneqq instead of :=.
-   991: \textcolor{blue}{Query:} Translate Schur inequality into LEAN 3: $x,y,z \ge 0, x^3+y^3+z^3+3xyz \ge xy(x+y) + yz(y+z) + xz(x+z)$ \\
-   992: \\
->  993: \textcolor{green}{Response:} (a := $\alpha$)
-   994: \begin{lstlisting}[language=LEAN]
-   995: theorem schur_inequality {a : Type*} [linear_ordered_field a] {x y z : a}
-
 - file: sample\arxiv_sources\2209.05238v2\main.tex (line 87)
   message: Consider using \coloneqq instead of :=.
     85: A \evid{$\preceq$-quark} is then a $\preceq$-non-unit $a \in \allowbreak H$ with the property that there is no $\preceq$-non-unit $b \prec a$ (i.e., $b \preceq a$ and $a \not\preceq b$); and given $s \in \mathbb N_{\ge 2} \cup \{\infty\}$, a \evid{$\preceq$-ir\-re\-duc\-i\-ble of degree $s$} (or \evid{degree-$s$ $\preceq$-ir\-red\-u\-ci\-ble}) is a $\preceq$-non-unit $a$ such that $a \ne x_1 \cdots x_k$ for every $k \in \llb 2, s \rrb$ and all $\preceq$-non-units $x_1 \prec a, \ldots, x_k \prec a$. In par\-tic\-u\-lar, we refer to a $\preceq$-ir\-re\-duc\-i\-ble of degree $2$ as a \evid{$\preceq$-ir\-re\-duc\-i\-ble} (occasionally, the term may also be used as an adjective).
@@ -1606,6 +1582,30 @@
 >  145: and $\uparrow_\mathcal{H} \bar{x} := \allowbreak \{x \in \allowbreak H \colon \bar{x} \preceq x\}$. Similarly as in the case of a poset (see, e.g., \cite[p.~45]{Dav-Pri2002}), we call  $\downarrow_\mathcal{H} \bar{x}$ and $\uparrow_\mathcal{H} \bar{x}$, resp., the \evid{principal $\preceq$-ideal} and the \evid{principal $\preceq$-filter} generated by $\bar{x}$. Note that $\uparrow_\mathcal{H} \bar{x}$ is then a principal $\preceq^{\rm op}$-ideal and $\downarrow_\mathcal{H} \bar{x}$ is a principal $\preceq^{\rm op}$-filter, where $\preceq^{\rm op}$ is the dual (see, e.g., \cite[Example 3.3(1)]{Tr20(c)}) of the preorder $\preceq$.\\
    146: 
    147: \indent{}Now, it is evident that, for all $y, z \in H$, we have $y \preceq z$ if and only if $\downarrow_\mathcal{H} y \subseteq \allowbreak {\downarrow_\mathcal{H} z}$, if and only if $\uparrow_\mathcal{H} z \subseteq \allowbreak {\uparrow_\mathcal{H} y}$. It follows that an element $\bar{x} \in H$ is $\preceq$-artinian if and only if there is no sequence $x_1, x_2, \ldots$ in $H$ with $x_1 = \bar{x}$ and $\downarrow_\mathcal{H} x_{i+1} \subsetneq \allowbreak {\downarrow_\mathcal{H} x_i}$ (resp., $\uparrow_\mathcal{H} x_i \subsetneq {\uparrow_\mathcal{H} x_{i+1}}$) for all $i \in \mathbb N^+$. This allows for an ideal-theoretic interpretation of the notions of $\preceq$-artinianity and local $\preceq$-artinianity introduced in Definition \ref{def:artinianity-and-the-like}. Most notably, the principal $\mid_H$-filter generated by $\bar{x}$ is the principal two-sided ideal $H\bar{x}H$ of the monoid $H$; whence $H$ satisfies the ACCP if and only if it is $\mid_H$-artinian (cf.~\cite[Remark 3.9.4]{Tr20(c)}).
+
+- file: sample\arxiv_sources\2402.06332v2\lstlean.tex (line 220)
+  message: Consider using \coloneqq instead of :=.
+   218: {\$}{{\color{symbolcolor}\$}}1
+   219: 
+>  220: {:=}{{\color{symbolcolor}:=}}1
+   221: {=}{{\color{symbolcolor}=}}1
+   222: {<|>}{{\color{symbolcolor}<|>}}1
+
+- file: sample\arxiv_sources\2402.06332v2\lstlean.tex (line 220)
+  message: Consider using \coloneqq instead of :=.
+   218: {\$}{{\color{symbolcolor}\$}}1
+   219: 
+>  220: {:=}{{\color{symbolcolor}:=}}1
+   221: {=}{{\color{symbolcolor}=}}1
+   222: {<|>}{{\color{symbolcolor}<|>}}1
+
+- file: sample\arxiv_sources\2402.06332v2\main.tex (line 993)
+  message: Consider using \coloneqq instead of :=.
+   991: \textcolor{blue}{Query:} Translate Schur inequality into LEAN 3: $x,y,z \ge 0, x^3+y^3+z^3+3xyz \ge xy(x+y) + yz(y+z) + xz(x+z)$ \\
+   992: \\
+>  993: \textcolor{green}{Response:} (a := $\alpha$)
+   994: \begin{lstlisting}[language=LEAN]
+   995: theorem schur_inequality {a : Type*} [linear_ordered_field a] {x y z : a}
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 212)
   message: Consider using \coloneqq instead of :=.
@@ -1678,174 +1678,6 @@
 >  486: \mathcal{L}^t := \frac{1}{L-c} \sum^{L}_{i=c} \begin{cases} 
    487: 0.5 \epsilon^2_i  & \text{if } \epsilon_i < \beta, \\
    488: |\epsilon_i| - 0.5 & \text{otherwise},
-
-- file: sample\arxiv_sources\2504.04313v2\main.tex (line 85)
-  message: Consider using \eqqcolon instead of =:.
-    83: a < b \xRightarrow{\text{multiply by } 2} 2a < 2b.
-    84: \]
->   85: In advanced mathematics, this route unit may be considered irreducible, as the reasoning is immediate within that context. However, in elementary mathematics, it could be further reduced explicitly:\footnote{Although commonly used interchangeably, this paper distinguishes carefully between ``\(=:\)'' and ``\(:=\)''. Specifically, the entity placed next to the colon (\(:\)) is always the one being newly introduced. For example, ``\(c =: 2\)'' assigns the specific value \(2\) (newly introduced) to the previously defined general variable \(c\). Conversely, ``\(c := 2\)'' would mean introducing a new variable \(c\) and explicitly defining it to be \(2\).}
-    86: \[
-    87: a < b \xRightarrow[\text{with } c =: 2 > 0]{P} 2a < 2b,
-
-- file: sample\arxiv_sources\2504.04313v2\main.tex (line 85)
-  message: Consider using \coloneqq instead of :=.
-    83: a < b \xRightarrow{\text{multiply by } 2} 2a < 2b.
-    84: \]
->   85: In advanced mathematics, this route unit may be considered irreducible, as the reasoning is immediate within that context. However, in elementary mathematics, it could be further reduced explicitly:\footnote{Although commonly used interchangeably, this paper distinguishes carefully between ``\(=:\)'' and ``\(:=\)''. Specifically, the entity placed next to the colon (\(:\)) is always the one being newly introduced. For example, ``\(c =: 2\)'' assigns the specific value \(2\) (newly introduced) to the previously defined general variable \(c\). Conversely, ``\(c := 2\)'' would mean introducing a new variable \(c\) and explicitly defining it to be \(2\).}
-    86: \[
-    87: a < b \xRightarrow[\text{with } c =: 2 > 0]{P} 2a < 2b,
-
-- file: sample\arxiv_sources\2504.04313v2\main.tex (line 85)
-  message: Consider using \eqqcolon instead of =:.
-    83: a < b \xRightarrow{\text{multiply by } 2} 2a < 2b.
-    84: \]
->   85: In advanced mathematics, this route unit may be considered irreducible, as the reasoning is immediate within that context. However, in elementary mathematics, it could be further reduced explicitly:\footnote{Although commonly used interchangeably, this paper distinguishes carefully between ``\(=:\)'' and ``\(:=\)''. Specifically, the entity placed next to the colon (\(:\)) is always the one being newly introduced. For example, ``\(c =: 2\)'' assigns the specific value \(2\) (newly introduced) to the previously defined general variable \(c\). Conversely, ``\(c := 2\)'' would mean introducing a new variable \(c\) and explicitly defining it to be \(2\).}
-    86: \[
-    87: a < b \xRightarrow[\text{with } c =: 2 > 0]{P} 2a < 2b,
-
-- file: sample\arxiv_sources\2504.04313v2\main.tex (line 85)
-  message: Consider using \coloneqq instead of :=.
-    83: a < b \xRightarrow{\text{multiply by } 2} 2a < 2b.
-    84: \]
->   85: In advanced mathematics, this route unit may be considered irreducible, as the reasoning is immediate within that context. However, in elementary mathematics, it could be further reduced explicitly:\footnote{Although commonly used interchangeably, this paper distinguishes carefully between ``\(=:\)'' and ``\(:=\)''. Specifically, the entity placed next to the colon (\(:\)) is always the one being newly introduced. For example, ``\(c =: 2\)'' assigns the specific value \(2\) (newly introduced) to the previously defined general variable \(c\). Conversely, ``\(c := 2\)'' would mean introducing a new variable \(c\) and explicitly defining it to be \(2\).}
-    86: \[
-    87: a < b \xRightarrow[\text{with } c =: 2 > 0]{P} 2a < 2b,
-
-- file: sample\arxiv_sources\2504.04313v2\main.tex (line 87)
-  message: Consider using \eqqcolon instead of =:.
-    85: In advanced mathematics, this route unit may be considered irreducible, as the reasoning is immediate within that context. However, in elementary mathematics, it could be further reduced explicitly:\footnote{Although commonly used interchangeably, this paper distinguishes carefully between ``\(=:\)'' and ``\(:=\)''. Specifically, the entity placed next to the colon (\(:\)) is always the one being newly introduced. For example, ``\(c =: 2\)'' assigns the specific value \(2\) (newly introduced) to the previously defined general variable \(c\). Conversely, ``\(c := 2\)'' would mean introducing a new variable \(c\) and explicitly defining it to be \(2\).}
-    86: \[
->   87: a < b \xRightarrow[\text{with } c =: 2 > 0]{P} 2a < 2b,
-    88: \]
-    89: where \( P \) explicitly states: ``Multiplying both sides of an inequality by a positive number \( c \) preserves the inequality.''
-
-- file: sample\arxiv_sources\2504.04313v2\main.tex (line 232)
-  message: Consider using \coloneqq instead of :=.
-   230:     Consider a symmetric simple random walk \( S \) with \( S_0 = 0 \). Recall that
-   231: \[
->  232: T_x := \inf \{ n \geq 1 : S_n = x \} \text{ (where $S_n$ is the position of the random walk at step $n$)}
-   233: \]
-   234: is the \textit{first hitting time} of state \( x \). Let \( T := T_0 \) be the first return time to the origin. Prove:
-
-- file: sample\arxiv_sources\2504.04313v2\main.tex (line 234)
-  message: Consider using \coloneqq instead of :=.
-   232: T_x := \inf \{ n \geq 1 : S_n = x \} \text{ (where $S_n$ is the position of the random walk at step $n$)}
-   233: \]
->  234: is the \textit{first hitting time} of state \( x \). Let \( T := T_0 \) be the first return time to the origin. Prove:
-   235: \begin{equation}
-   236:      \mathbb{P}(T = 2m) = \frac{1}{2m - 1} \binom{2m}{m} \left(\frac{1}{2}\right)^{2m}.
-
-- file: sample\arxiv_sources\2504.04313v2\main.tex (line 282)
-  message: Consider using \eqqcolon instead of =:.
-   280: \dfrac{\#(\text{paths from } (0,0) \to (\alpha + \beta, \alpha - \beta) \text{ without touching zero})}{\#(\text{paths from } (0,0) \to (\alpha + \beta, \alpha - \beta))}
-   281: \\
->  282: \text{Denominator\footnotemark:  } \#(\text{paths from } (0,0) \to (\alpha + \beta, \alpha - \beta)) \xlongequal[a = :0, n =: \alpha + \beta,b =: \alpha - \beta]{\eqref{eq:path-binomial}\;\text{ below with}}
-   283: \displaystyle{\binom{\alpha + \beta}{\frac{(\alpha + \beta) + (\alpha - \beta)}{2}}}
-   284: \end{rcases*}\xRightarrow[\text{by Denominator}]{\text{multiply \eqref{eq:bal-geo}}}
-
-- file: sample\arxiv_sources\2504.04313v2\main.tex (line 282)
-  message: Consider using \eqqcolon instead of =:.
-   280: \dfrac{\#(\text{paths from } (0,0) \to (\alpha + \beta, \alpha - \beta) \text{ without touching zero})}{\#(\text{paths from } (0,0) \to (\alpha + \beta, \alpha - \beta))}
-   281: \\
->  282: \text{Denominator\footnotemark:  } \#(\text{paths from } (0,0) \to (\alpha + \beta, \alpha - \beta)) \xlongequal[a = :0, n =: \alpha + \beta,b =: \alpha - \beta]{\eqref{eq:path-binomial}\;\text{ below with}}
-   283: \displaystyle{\binom{\alpha + \beta}{\frac{(\alpha + \beta) + (\alpha - \beta)}{2}}}
-   284: \end{rcases*}\xRightarrow[\text{by Denominator}]{\text{multiply \eqref{eq:bal-geo}}}
-
-- file: sample\arxiv_sources\2504.04313v2\main.tex (line 295)
-  message: Consider using \eqqcolon instead of =:.
-   293: 
-   294: \begin{equation}
->  295:     \xRightarrow{\text{let } \alpha + \beta=:p,\textbf{ }\alpha - \beta=:q}
-   296: \boxed{\#(\text{paths from } (0,0) \to (p,q) \text{ without touching zero}) = \frac{q}{p} \binom{p}{\frac{p+q}{2}}}
-   297: \tag{\makebox[0pt][r]{(}\theequation\makebox[0pt][l]{)$'$}}\quad
-
-- file: sample\arxiv_sources\2504.04313v2\main.tex (line 295)
-  message: Consider using \eqqcolon instead of =:.
-   293: 
-   294: \begin{equation}
->  295:     \xRightarrow{\text{let } \alpha + \beta=:p,\textbf{ }\alpha - \beta=:q}
-   296: \boxed{\#(\text{paths from } (0,0) \to (p,q) \text{ without touching zero}) = \frac{q}{p} \binom{p}{\frac{p+q}{2}}}
-   297: \tag{\makebox[0pt][r]{(}\theequation\makebox[0pt][l]{)$'$}}\quad
-
-- file: sample\arxiv_sources\2504.04313v2\main.tex (line 361)
-  message: Consider using \eqqcolon instead of =:.
-   359: \paragraph{\textbf{With Anchors}}  
-   360: \begin{enumerate}
->  361:     \item \textbf{Home → Father’s Office}: Using \eqref{eq:ballot-count} with \( p =: 2m-1, q =: 1 \)    \[
-   362:     \#(\text{valid paths}) = \frac{1}{2m - 1} \binom{2m-1}{m}.
-   363:     \]
-
-- file: sample\arxiv_sources\2504.04313v2\main.tex (line 361)
-  message: Consider using \eqqcolon instead of =:.
-   359: \paragraph{\textbf{With Anchors}}  
-   360: \begin{enumerate}
->  361:     \item \textbf{Home → Father’s Office}: Using \eqref{eq:ballot-count} with \( p =: 2m-1, q =: 1 \)    \[
-   362:     \#(\text{valid paths}) = \frac{1}{2m - 1} \binom{2m-1}{m}.
-   363:     \]
-
-- file: sample\arxiv_sources\2504.04313v2\main.tex (line 365)
-  message: Consider using \eqqcolon instead of =:.
-   363:     \]
-   364: 
->  365:     \item \textbf{Father’s Office → Campus Gate}: Using \eqref{eq:path-count-general} with \( a =: 0, n = :2m-1, b = :1 \), $\text{constraints}=:S_k \neq 0 \ \forall \ 1 \le k < 2m$
-   366:    \begin{equation}\label{eq:path-count-special}
-   367:         \mathbb{P}(S_{2m-1} = 1\mid S_k \neq 0 \ \forall \ 1 \le k < 2m) = \frac{1}{2m - 1} \binom{2m-1}{m} \left(\frac{1}{2}\right)^{2m-1}.
-
-- file: sample\arxiv_sources\2504.04313v2\main.tex (line 365)
-  message: Consider using \eqqcolon instead of =:.
-   363:     \]
-   364: 
->  365:     \item \textbf{Father’s Office → Campus Gate}: Using \eqref{eq:path-count-general} with \( a =: 0, n = :2m-1, b = :1 \), $\text{constraints}=:S_k \neq 0 \ \forall \ 1 \le k < 2m$
-   366:    \begin{equation}\label{eq:path-count-special}
-   367:         \mathbb{P}(S_{2m-1} = 1\mid S_k \neq 0 \ \forall \ 1 \le k < 2m) = \frac{1}{2m - 1} \binom{2m-1}{m} \left(\frac{1}{2}\right)^{2m-1}.
-
-- file: sample\arxiv_sources\2504.04313v2\main.tex (line 438)
-  message: Consider using \eqqcolon instead of =:.
-   436: ``\forall \varepsilon > 0, \exists N = \frac{\log \varepsilon}{\log |q|} > 0 \text{ such that } n \geq N \Rightarrow |q^n - 0| < \varepsilon"\]
-   437: \[
->  438: \xLeftrightarrow[\text{with } N =: \frac{\log \varepsilon}{\log |q|},\ L =: 0,\ a_n =: q^n]{\text{def}} \lim\limits_{n \to \infty} q^n = 0.
-   439: \]
-   440: 
-
-- file: sample\arxiv_sources\2504.04313v2\main.tex (line 438)
-  message: Consider using \eqqcolon instead of =:.
-   436: ``\forall \varepsilon > 0, \exists N = \frac{\log \varepsilon}{\log |q|} > 0 \text{ such that } n \geq N \Rightarrow |q^n - 0| < \varepsilon"\]
-   437: \[
->  438: \xLeftrightarrow[\text{with } N =: \frac{\log \varepsilon}{\log |q|},\ L =: 0,\ a_n =: q^n]{\text{def}} \lim\limits_{n \to \infty} q^n = 0.
-   439: \]
-   440: 
-
-- file: sample\arxiv_sources\2504.04313v2\main.tex (line 438)
-  message: Consider using \eqqcolon instead of =:.
-   436: ``\forall \varepsilon > 0, \exists N = \frac{\log \varepsilon}{\log |q|} > 0 \text{ such that } n \geq N \Rightarrow |q^n - 0| < \varepsilon"\]
-   437: \[
->  438: \xLeftrightarrow[\text{with } N =: \frac{\log \varepsilon}{\log |q|},\ L =: 0,\ a_n =: q^n]{\text{def}} \lim\limits_{n \to \infty} q^n = 0.
-   439: \]
-   440: 
-
-- file: sample\arxiv_sources\2504.04313v2\main.tex (line 448)
-  message: Consider using \coloneqq instead of :=.
-   446: |q^n - 0| < \varepsilon \quad \Leftrightarrow \quad n > \frac{\log \varepsilon}{\log |q|}.
-   447: \]
->  448: This inspires us to choose \( N := \frac{\log \varepsilon}{\log |q|} \), ensuring that for any \( n > N \), we get \( |q^n - 0| < \varepsilon \).
-   449: \end{quote}
-   450: 
-
-- file: sample\arxiv_sources\2504.04313v2\main.tex (line 480)
-  message: Consider using \coloneqq instead of :=.
-   478: Likewise, instead of first introducing the orbit in group theory as
-   479: \[
->  480: G \cdot x := \{ g \cdot x \mid g \in G \}
-   481: \]
-   482: with examples, one could begin directly with a categorical formulation:
-
-- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 293)
-  message: Consider using \coloneqq instead of :=.
-   291: While deterministic DAGs reveal structural dependencies, they often obscure the \textit{magnitude} and \textit{direction} of influence between variables. Given that we can estimate conditional distributions, we define the \textit{causal indicator} \(\mathcal{C} \in [-1, 1]\) \cite{measure_of_causal_strength_oxford, Eells_1991} between an event \(X_i\) and a label \(Y_j\) under context \(\boldsymbol{Z}\) that we assume fixed for every measurement \cite{measure_of_causal_strength_oxford} as:
-   292: \begin{equation}\label{eq:causal_indic}
->  293: \mathcal{C}(Y_j, X_i; \boldsymbol{Z}) := \mathbb{E}_{p(z)}[P(Y_j =1\mid X_i=1, \boldsymbol{Z}=z) - P(Y_j =1\mid X_i=0, \boldsymbol{Z} = z)]
-   294: \end{equation}
-   295: This enables an easy interpretation, for instance, if \(\mathcal{C} < 0\), then \(X_i\) inhibits the occurrence of \(Y_j\). We employ the term causal \textit{indicator} to separate from causal strength measures, which, if using this formulation, can be problematic \cite{quantifyingcausalinfluence}. Ours serves more as an indication of the rise in label likelihood after observing a certain event, rather than a strength. The causal strength, strictly speaking, is here the CMI since it serves as a CI-test to recover the correct DAG.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 282)
   message: Consider using \coloneqq instead of :=.
@@ -5774,4 +5606,172 @@
 >15326: with $\beta:= F(1)$,
  15327: $$f(\mu)= e^{\beta \mu}.$$ 
  15328: 
+
+- file: sample\arxiv_sources\2504.04313v2\main.tex (line 85)
+  message: Consider using \eqqcolon instead of =:.
+    83: a < b \xRightarrow{\text{multiply by } 2} 2a < 2b.
+    84: \]
+>   85: In advanced mathematics, this route unit may be considered irreducible, as the reasoning is immediate within that context. However, in elementary mathematics, it could be further reduced explicitly:\footnote{Although commonly used interchangeably, this paper distinguishes carefully between ``\(=:\)'' and ``\(:=\)''. Specifically, the entity placed next to the colon (\(:\)) is always the one being newly introduced. For example, ``\(c =: 2\)'' assigns the specific value \(2\) (newly introduced) to the previously defined general variable \(c\). Conversely, ``\(c := 2\)'' would mean introducing a new variable \(c\) and explicitly defining it to be \(2\).}
+    86: \[
+    87: a < b \xRightarrow[\text{with } c =: 2 > 0]{P} 2a < 2b,
+
+- file: sample\arxiv_sources\2504.04313v2\main.tex (line 85)
+  message: Consider using \coloneqq instead of :=.
+    83: a < b \xRightarrow{\text{multiply by } 2} 2a < 2b.
+    84: \]
+>   85: In advanced mathematics, this route unit may be considered irreducible, as the reasoning is immediate within that context. However, in elementary mathematics, it could be further reduced explicitly:\footnote{Although commonly used interchangeably, this paper distinguishes carefully between ``\(=:\)'' and ``\(:=\)''. Specifically, the entity placed next to the colon (\(:\)) is always the one being newly introduced. For example, ``\(c =: 2\)'' assigns the specific value \(2\) (newly introduced) to the previously defined general variable \(c\). Conversely, ``\(c := 2\)'' would mean introducing a new variable \(c\) and explicitly defining it to be \(2\).}
+    86: \[
+    87: a < b \xRightarrow[\text{with } c =: 2 > 0]{P} 2a < 2b,
+
+- file: sample\arxiv_sources\2504.04313v2\main.tex (line 85)
+  message: Consider using \eqqcolon instead of =:.
+    83: a < b \xRightarrow{\text{multiply by } 2} 2a < 2b.
+    84: \]
+>   85: In advanced mathematics, this route unit may be considered irreducible, as the reasoning is immediate within that context. However, in elementary mathematics, it could be further reduced explicitly:\footnote{Although commonly used interchangeably, this paper distinguishes carefully between ``\(=:\)'' and ``\(:=\)''. Specifically, the entity placed next to the colon (\(:\)) is always the one being newly introduced. For example, ``\(c =: 2\)'' assigns the specific value \(2\) (newly introduced) to the previously defined general variable \(c\). Conversely, ``\(c := 2\)'' would mean introducing a new variable \(c\) and explicitly defining it to be \(2\).}
+    86: \[
+    87: a < b \xRightarrow[\text{with } c =: 2 > 0]{P} 2a < 2b,
+
+- file: sample\arxiv_sources\2504.04313v2\main.tex (line 85)
+  message: Consider using \coloneqq instead of :=.
+    83: a < b \xRightarrow{\text{multiply by } 2} 2a < 2b.
+    84: \]
+>   85: In advanced mathematics, this route unit may be considered irreducible, as the reasoning is immediate within that context. However, in elementary mathematics, it could be further reduced explicitly:\footnote{Although commonly used interchangeably, this paper distinguishes carefully between ``\(=:\)'' and ``\(:=\)''. Specifically, the entity placed next to the colon (\(:\)) is always the one being newly introduced. For example, ``\(c =: 2\)'' assigns the specific value \(2\) (newly introduced) to the previously defined general variable \(c\). Conversely, ``\(c := 2\)'' would mean introducing a new variable \(c\) and explicitly defining it to be \(2\).}
+    86: \[
+    87: a < b \xRightarrow[\text{with } c =: 2 > 0]{P} 2a < 2b,
+
+- file: sample\arxiv_sources\2504.04313v2\main.tex (line 87)
+  message: Consider using \eqqcolon instead of =:.
+    85: In advanced mathematics, this route unit may be considered irreducible, as the reasoning is immediate within that context. However, in elementary mathematics, it could be further reduced explicitly:\footnote{Although commonly used interchangeably, this paper distinguishes carefully between ``\(=:\)'' and ``\(:=\)''. Specifically, the entity placed next to the colon (\(:\)) is always the one being newly introduced. For example, ``\(c =: 2\)'' assigns the specific value \(2\) (newly introduced) to the previously defined general variable \(c\). Conversely, ``\(c := 2\)'' would mean introducing a new variable \(c\) and explicitly defining it to be \(2\).}
+    86: \[
+>   87: a < b \xRightarrow[\text{with } c =: 2 > 0]{P} 2a < 2b,
+    88: \]
+    89: where \( P \) explicitly states: ``Multiplying both sides of an inequality by a positive number \( c \) preserves the inequality.''
+
+- file: sample\arxiv_sources\2504.04313v2\main.tex (line 232)
+  message: Consider using \coloneqq instead of :=.
+   230:     Consider a symmetric simple random walk \( S \) with \( S_0 = 0 \). Recall that
+   231: \[
+>  232: T_x := \inf \{ n \geq 1 : S_n = x \} \text{ (where $S_n$ is the position of the random walk at step $n$)}
+   233: \]
+   234: is the \textit{first hitting time} of state \( x \). Let \( T := T_0 \) be the first return time to the origin. Prove:
+
+- file: sample\arxiv_sources\2504.04313v2\main.tex (line 234)
+  message: Consider using \coloneqq instead of :=.
+   232: T_x := \inf \{ n \geq 1 : S_n = x \} \text{ (where $S_n$ is the position of the random walk at step $n$)}
+   233: \]
+>  234: is the \textit{first hitting time} of state \( x \). Let \( T := T_0 \) be the first return time to the origin. Prove:
+   235: \begin{equation}
+   236:      \mathbb{P}(T = 2m) = \frac{1}{2m - 1} \binom{2m}{m} \left(\frac{1}{2}\right)^{2m}.
+
+- file: sample\arxiv_sources\2504.04313v2\main.tex (line 282)
+  message: Consider using \eqqcolon instead of =:.
+   280: \dfrac{\#(\text{paths from } (0,0) \to (\alpha + \beta, \alpha - \beta) \text{ without touching zero})}{\#(\text{paths from } (0,0) \to (\alpha + \beta, \alpha - \beta))}
+   281: \\
+>  282: \text{Denominator\footnotemark:  } \#(\text{paths from } (0,0) \to (\alpha + \beta, \alpha - \beta)) \xlongequal[a = :0, n =: \alpha + \beta,b =: \alpha - \beta]{\eqref{eq:path-binomial}\;\text{ below with}}
+   283: \displaystyle{\binom{\alpha + \beta}{\frac{(\alpha + \beta) + (\alpha - \beta)}{2}}}
+   284: \end{rcases*}\xRightarrow[\text{by Denominator}]{\text{multiply \eqref{eq:bal-geo}}}
+
+- file: sample\arxiv_sources\2504.04313v2\main.tex (line 282)
+  message: Consider using \eqqcolon instead of =:.
+   280: \dfrac{\#(\text{paths from } (0,0) \to (\alpha + \beta, \alpha - \beta) \text{ without touching zero})}{\#(\text{paths from } (0,0) \to (\alpha + \beta, \alpha - \beta))}
+   281: \\
+>  282: \text{Denominator\footnotemark:  } \#(\text{paths from } (0,0) \to (\alpha + \beta, \alpha - \beta)) \xlongequal[a = :0, n =: \alpha + \beta,b =: \alpha - \beta]{\eqref{eq:path-binomial}\;\text{ below with}}
+   283: \displaystyle{\binom{\alpha + \beta}{\frac{(\alpha + \beta) + (\alpha - \beta)}{2}}}
+   284: \end{rcases*}\xRightarrow[\text{by Denominator}]{\text{multiply \eqref{eq:bal-geo}}}
+
+- file: sample\arxiv_sources\2504.04313v2\main.tex (line 295)
+  message: Consider using \eqqcolon instead of =:.
+   293: 
+   294: \begin{equation}
+>  295:     \xRightarrow{\text{let } \alpha + \beta=:p,\textbf{ }\alpha - \beta=:q}
+   296: \boxed{\#(\text{paths from } (0,0) \to (p,q) \text{ without touching zero}) = \frac{q}{p} \binom{p}{\frac{p+q}{2}}}
+   297: \tag{\makebox[0pt][r]{(}\theequation\makebox[0pt][l]{)$'$}}\quad
+
+- file: sample\arxiv_sources\2504.04313v2\main.tex (line 295)
+  message: Consider using \eqqcolon instead of =:.
+   293: 
+   294: \begin{equation}
+>  295:     \xRightarrow{\text{let } \alpha + \beta=:p,\textbf{ }\alpha - \beta=:q}
+   296: \boxed{\#(\text{paths from } (0,0) \to (p,q) \text{ without touching zero}) = \frac{q}{p} \binom{p}{\frac{p+q}{2}}}
+   297: \tag{\makebox[0pt][r]{(}\theequation\makebox[0pt][l]{)$'$}}\quad
+
+- file: sample\arxiv_sources\2504.04313v2\main.tex (line 361)
+  message: Consider using \eqqcolon instead of =:.
+   359: \paragraph{\textbf{With Anchors}}  
+   360: \begin{enumerate}
+>  361:     \item \textbf{Home → Father’s Office}: Using \eqref{eq:ballot-count} with \( p =: 2m-1, q =: 1 \)    \[
+   362:     \#(\text{valid paths}) = \frac{1}{2m - 1} \binom{2m-1}{m}.
+   363:     \]
+
+- file: sample\arxiv_sources\2504.04313v2\main.tex (line 361)
+  message: Consider using \eqqcolon instead of =:.
+   359: \paragraph{\textbf{With Anchors}}  
+   360: \begin{enumerate}
+>  361:     \item \textbf{Home → Father’s Office}: Using \eqref{eq:ballot-count} with \( p =: 2m-1, q =: 1 \)    \[
+   362:     \#(\text{valid paths}) = \frac{1}{2m - 1} \binom{2m-1}{m}.
+   363:     \]
+
+- file: sample\arxiv_sources\2504.04313v2\main.tex (line 365)
+  message: Consider using \eqqcolon instead of =:.
+   363:     \]
+   364: 
+>  365:     \item \textbf{Father’s Office → Campus Gate}: Using \eqref{eq:path-count-general} with \( a =: 0, n = :2m-1, b = :1 \), $\text{constraints}=:S_k \neq 0 \ \forall \ 1 \le k < 2m$
+   366:    \begin{equation}\label{eq:path-count-special}
+   367:         \mathbb{P}(S_{2m-1} = 1\mid S_k \neq 0 \ \forall \ 1 \le k < 2m) = \frac{1}{2m - 1} \binom{2m-1}{m} \left(\frac{1}{2}\right)^{2m-1}.
+
+- file: sample\arxiv_sources\2504.04313v2\main.tex (line 365)
+  message: Consider using \eqqcolon instead of =:.
+   363:     \]
+   364: 
+>  365:     \item \textbf{Father’s Office → Campus Gate}: Using \eqref{eq:path-count-general} with \( a =: 0, n = :2m-1, b = :1 \), $\text{constraints}=:S_k \neq 0 \ \forall \ 1 \le k < 2m$
+   366:    \begin{equation}\label{eq:path-count-special}
+   367:         \mathbb{P}(S_{2m-1} = 1\mid S_k \neq 0 \ \forall \ 1 \le k < 2m) = \frac{1}{2m - 1} \binom{2m-1}{m} \left(\frac{1}{2}\right)^{2m-1}.
+
+- file: sample\arxiv_sources\2504.04313v2\main.tex (line 438)
+  message: Consider using \eqqcolon instead of =:.
+   436: ``\forall \varepsilon > 0, \exists N = \frac{\log \varepsilon}{\log |q|} > 0 \text{ such that } n \geq N \Rightarrow |q^n - 0| < \varepsilon"\]
+   437: \[
+>  438: \xLeftrightarrow[\text{with } N =: \frac{\log \varepsilon}{\log |q|},\ L =: 0,\ a_n =: q^n]{\text{def}} \lim\limits_{n \to \infty} q^n = 0.
+   439: \]
+   440: 
+
+- file: sample\arxiv_sources\2504.04313v2\main.tex (line 438)
+  message: Consider using \eqqcolon instead of =:.
+   436: ``\forall \varepsilon > 0, \exists N = \frac{\log \varepsilon}{\log |q|} > 0 \text{ such that } n \geq N \Rightarrow |q^n - 0| < \varepsilon"\]
+   437: \[
+>  438: \xLeftrightarrow[\text{with } N =: \frac{\log \varepsilon}{\log |q|},\ L =: 0,\ a_n =: q^n]{\text{def}} \lim\limits_{n \to \infty} q^n = 0.
+   439: \]
+   440: 
+
+- file: sample\arxiv_sources\2504.04313v2\main.tex (line 438)
+  message: Consider using \eqqcolon instead of =:.
+   436: ``\forall \varepsilon > 0, \exists N = \frac{\log \varepsilon}{\log |q|} > 0 \text{ such that } n \geq N \Rightarrow |q^n - 0| < \varepsilon"\]
+   437: \[
+>  438: \xLeftrightarrow[\text{with } N =: \frac{\log \varepsilon}{\log |q|},\ L =: 0,\ a_n =: q^n]{\text{def}} \lim\limits_{n \to \infty} q^n = 0.
+   439: \]
+   440: 
+
+- file: sample\arxiv_sources\2504.04313v2\main.tex (line 448)
+  message: Consider using \coloneqq instead of :=.
+   446: |q^n - 0| < \varepsilon \quad \Leftrightarrow \quad n > \frac{\log \varepsilon}{\log |q|}.
+   447: \]
+>  448: This inspires us to choose \( N := \frac{\log \varepsilon}{\log |q|} \), ensuring that for any \( n > N \), we get \( |q^n - 0| < \varepsilon \).
+   449: \end{quote}
+   450: 
+
+- file: sample\arxiv_sources\2504.04313v2\main.tex (line 480)
+  message: Consider using \coloneqq instead of :=.
+   478: Likewise, instead of first introducing the orbit in group theory as
+   479: \[
+>  480: G \cdot x := \{ g \cdot x \mid g \in G \}
+   481: \]
+   482: with examples, one could begin directly with a categorical formulation:
+
+- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 293)
+  message: Consider using \coloneqq instead of :=.
+   291: While deterministic DAGs reveal structural dependencies, they often obscure the \textit{magnitude} and \textit{direction} of influence between variables. Given that we can estimate conditional distributions, we define the \textit{causal indicator} \(\mathcal{C} \in [-1, 1]\) \cite{measure_of_causal_strength_oxford, Eells_1991} between an event \(X_i\) and a label \(Y_j\) under context \(\boldsymbol{Z}\) that we assume fixed for every measurement \cite{measure_of_causal_strength_oxford} as:
+   292: \begin{equation}\label{eq:causal_indic}
+>  293: \mathcal{C}(Y_j, X_i; \boldsymbol{Z}) := \mathbb{E}_{p(z)}[P(Y_j =1\mid X_i=1, \boldsymbol{Z}=z) - P(Y_j =1\mid X_i=0, \boldsymbol{Z} = z)]
+   294: \end{equation}
+   295: This enables an easy interpretation, for instance, if \(\mathcal{C} < 0\), then \(X_i\) inhibits the occurrence of \(Y_j\). We employ the term causal \textit{indicator} to separate from causal strength measures, which, if using this formulation, can be problematic \cite{quantifyingcausalinfluence}. Ours serves more as an indication of the rise in label likelihood after observing a certain event, rather than a strength. The causal strength, strictly speaking, is here the CMI since it serves as a CI-test to recover the correct DAG.
 

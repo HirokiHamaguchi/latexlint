@@ -132,5 +132,13 @@
 	],
 	"latexlint.userDefinedRules": [
 		"f\\^a"
-	]
+	],
+	"[latex]": {
+		"editor.insertSpaces": false,
+		"editor.detectIndentation": false
+	},
+	"[tex]": {
+		"editor.insertSpaces": false,
+		"editor.detectIndentation": false
+	}
 }

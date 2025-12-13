@@ -71,14 +71,25 @@ def make_lint_tex():
     basis = re.sub(r"% AUTO_GENERATED_CONTENT", lambda m: gen_contents, basis)
     basis = "% !! AUTO_GENERATED !!\n" + basis
 
-    with open(
-        Path(__file__).parent.parent / "sample" / "lint.tex", "w", encoding="utf-8"
-    ) as f:
-        print(basis, file=f, end="")
+    lint_tex_path = Path(__file__).parent.parent / "sample" / "lint.tex"
 
-    time.sleep(1)
+    # Check if content has changed
+    existing_content = None
+    if lint_tex_path.exists():
+        with open(lint_tex_path, encoding="utf-8") as f:
+            existing_content = f.read()
 
-    compile_lint_tex()
+    content_changed = existing_content != basis
+
+    if content_changed:
+        with open(lint_tex_path, "w", encoding="utf-8") as f:
+            print(basis, file=f, end="")
+
+        time.sleep(1)
+
+        compile_lint_tex()
+    else:
+        print("No changes detected in lint.tex, skipping compilation.")
 
     # Cleanup auxiliary files
     aux_extensions = [

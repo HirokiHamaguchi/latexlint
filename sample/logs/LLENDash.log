@@ -1,4 +1,4 @@
-[CODE] LLENDash (302)
+[CODE] LLENDash (304)
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 455)
   error: Shannon-Kolmogorov-Sinai
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -271,6 +271,20 @@
   1621: from~\cite{CarstensenGallistlSchedensack:2013} 
 > 1622: is motivated by a similar idea in order to map from one Crouzeix-Raviart
   1623: space into its intersection with a finer one. 
+
+- file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1691)
+  error: Scott-Zhang
+  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
+  1690:     %   The claim holds for all $\elm\in\gridk$ and thus the properties of
+> 1691:     %   Scott-Zhang interpolation apply, i.e. in the third case of (3.3) the identity
+  1692:     %   is only guaranteed, if
+
+- file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1711)
+  error: Scott-Zhang
+  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
+  1710:   Claims~\eqref{Pik:1}--\eqref{Pik:5} follow by standard estimates for
+> 1711:   the Scott-Zhang operator~\cite{ScottZhang:90,DemlowGeorgoulis:12}. 
+  1712: 
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1958)
   error: Bramble-Hilbert

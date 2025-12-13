@@ -1,4 +1,4 @@
-[CODE] LLSI (98)
+[CODE] LLSI (92)
 - file: sample\arxiv_sources\1609.03457v1\avail-engines.tex (line 146)
   message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
    144: \section{Ready for ArXiV deployment: Needs Server Space}
@@ -222,46 +222,6 @@
 >  142: We construct the \dataset corpus from Common Crawl\footnote{\url{https://commoncrawl.org/}}, a large-scale web archive extensively used in recent LLM training \citep{dubey2024llama, hui2024qwen25codertechnicalreport, deepseekai2025deepseekv3technicalreport}. Common Crawl contains over 300B documents across more than 6M WARC files (each contains over 1GB of compressed content). Our goal is to build a pipeline that can process the technical content from Common Crawl correctly. We apply our pipeline to math domain to assemble a high-quality, large-scale corpus of mathematical content from Common Crawl. To achieve this, we designed a robust and highly scalable data processing pipeline capable of operating at the full scale of Common Crawl, as illustrated in Figure~\ref{fig:pipeline}.
    143: 
    144: Prior efforts such as OWM~\citep{paster2023openwebmath} and DeepSeekMath~\citep{shao2024deepseekmath} rely on lightweight classifiers to identify technical pages. We initially explored a similar approach but found fundamental limitations in achieving meaningful improvements: first, mathematical content constitutes $<1\%$ of Common Crawl, making manual ground truth annotation extremely difficult; second, since classifiers must run on all Common Crawl documents, only very efficient methods like FastText with simplified HTML parsing are viable. This creates an inherently high-bias setup with no straightforward path to improvement—attempts to increase recall for technical content invariably lead to drastic drops in precision. Rather than refining such classifiers for marginal gains, we leverage community-filtered datasets: extracting URLs from OWM, InfiMM-WebMath~\citep{han2024infimm}, FineMath~\citep{allal2025smollm2smolgoesbig}, and MegaMath~\citep{zhou2025megamath}, including all major subsets. This approach allows us to benefit from the diverse filtering strategies employed by different research groups while avoiding the limitations of any single classifier.
-
-- file: sample\arxiv_sources\2508.15096v1\iclr2025_conference.tex (line 686)
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
-   684: Detailed explanation of a smart solution to an algo problem beating 99.9% submission
-   685: 
->  686:    Written on January 7th, 2018 by @10000TB
-   687:    [attachments_article_algorithm_col_slide_lamparas-colgantes-algorithm-slide-03.jpg]
-   688: 
-
-- file: sample\arxiv_sources\2508.15096v1\iclr2025_conference.tex (line 839)
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
-   837: ## Detailed Explanation of a Smart Solution to an Algorithm Problem
-   838: 
->  839: *Written on January 7th, 2018 by @10000TB*
-   840: 
-   841: This post is about a coding problem and why the solution provided is smart. The problem is as follows:
-
-- file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 433)
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
-   431: \begin{figure}[!t]
-   432:     \centering
->  433:     \caption{The overview of CARGO. Phase 1 (One-shot) is on top, and Phase 2 (Adaptive Thresholding) is on the bottom. \(d\) denotes the hidden dimension, \(L\) the sequence length, \(m\) the number of samples and \(\text{MB}_1, \text{MB}_2\) the Markov Boundary of \(Y_1, Y_2\). All green and blue areas are parallelised.}
-   434:     \includegraphics[width=1\linewidth]{plots/CARGO.pdf}
-   435:     \label{fig:cargo}
-
-- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 232)
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
-   230: \begin{figure}[!t]
-   231:     \centering
->  232:     \caption{The overview of OSCAR: \uline{O}ne-\uline{S}hot multi-label \uline{C}ausal \uline{A}utoRegressive discovery. \(d\) denotes the hidden dimension, \(L\) the sequence length, \(\text{MB}_1, \text{MB}_2\) the Markov Boundary of \(Y_1, Y_2\) respectively. All green and blue areas represent parallelised operations.}
-   233:     \includegraphics[width=1\linewidth]{plots/OSCAR.drawio_cropped.pdf}
-   234:     \label{fig:oscar}
-
-- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 615)
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
-   613: 
-   614: \textbf{Inter-label Effects.}
->  615: By definition, the labels are explained solely by events. While simplifying multi-label causal discovery, this intrinsic assumption could be relaxed in future work by using the \textit{do} operator \cite{pearl_2009} to perform interventions on common causal variables of multiple labels. For example, our current framework estimates the Markov Boundaries for each label independently. However, inter-label dependencies can exist, particularly when labels share overlapping Markov Boundaries (e.g \(MB_1 =  [X_1, X_3], MB_2 = [X1, X_2]\). We propose to investigate a 'Phase 2' for OSCAR, focusing on inter-label dependencies through simulated interventions. For instance, if we consider a sequence \(S_1\) of two labels \(Y_1, Y_2\) with the MB above, we could perform counterfactual interventions by applying \(do(X_1=0), do(X_3=0)\)to \(S_1\). Then we would observe the average change in the likelihood of \(Y_1\)  which, if it is non-zero, would indicate a dependence between \(Y_1\) and \(Y_2\). \citet{learningcommoncausalvarlabel} points out that the assumptions of these inter-label dependencies are already anchored in the Markov Boundaries; we do the same here.
-   616: 
-   617: \textbf{NADEs.}
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 218)
   message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
@@ -774,12 +734,4 @@
 >  495: // 8 KiB stacks
    496: #define STACK_SIZE (8 * 1024 * 1024)
    497: 
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\review_exercises.tex (line 236)
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
-   234: The results are shown in the figure below:
-   235: \begin{center}
->  236: \FigureFullPath[A side-by-side dot plot is shown for "Torque required to loosen a rusty bolt, in foot-pounds". There are only 2 to 4 observations per option, which are roughly as follows: Heat (82, 98), WD-40 (106, 118, 129, 131), Royal Purple (108, 114, 122, 132), PB Blaster (110, 124, 127, 128), Liquid Wrench (85, 88, 98, 114), AeroKroil (107, 125, 132, 134), Acetone/ATF (105, 107, 114, 129), and "none" (110, 123, 129, 142).)]{0.8}{ch_inference_for_means/figures/eoce/torque_on_rusty_bolt/torque_on_rusty_bolt_dot_plot}
-   237: \end{center}
-   238: \begin{parts}
 

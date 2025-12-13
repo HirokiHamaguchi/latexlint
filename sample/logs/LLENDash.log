@@ -1,4 +1,4 @@
-[CODE] LLENDash (295)
+[CODE] LLENDash (302)
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 455)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
    453: 
@@ -351,6 +351,14 @@
    248: 
    249: Looking inside a body may be a difficult task. Our body is not transparent and cutting a person in order to see what's on the inside may not always be a good idea. Radiography, using X-rays, helped in seeing bones, since the rest of the body is trasparent to X-rays, but they are not a good means to inspect soft parts of our bodies.
 
+- file: sample\arxiv_sources\2105.03843v1\IsMathUseful.tex (line 253)
+  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
+   251: Medicine was in search for a tool we were appearently lacking: a way to see inside our bodies without tearing them apart. The tool was only appearently lacking. Indeed math has invented ways to transform local informations into global ones and viceversa: trasformation and antitransformation. There are several of them, and they answer to different needs, but actually what a transformation does is taking as an input a function or a series of numbers, and giving back another function or a series of numbers; the antitrasformation going the opposite direction and being an inverse to the transformation. Usually these tools work computing integrals.
+   252: 
+>  253: Sending rays through your body and see how much they were absorbed was not a new idea (indeed it was used with X-rays and radiography), but it is just in the early Seventies that a physicist (Allan Cormack) and an engineer (Godfrey Housefield) had the idea of using Radon-Nikodim transformation and its inverse in order to compute from the information of rays absorbed in the various direction a 3D model of the inside of a body. This application of math eventually led to the Nobel Prize for Medicine (in 1979) for the two and gave a huge tool of diagnosis to hospitals all around the world.
+   254: 
+   255: When Radon-Nicodim transformation was developed in 1917, it was a completely pure and "useless" tool of high mathematics. Of course, computers were far from being invented, at that time, and practical applications of the Radon antitransformation were unforeseeable. But, as we said, all mathematics is eventually applied mathematics. And you never know when something you know may actually turn useful. In any case, it is better to know more than less.
+
 - file: sample\arxiv_sources\2105.03843v1\IsMathUseful.tex (line 255)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
    253: Sending rays through your body and see how much they were absorbed was not a new idea (indeed it was used with X-rays and radiography), but it is just in the early Seventies that a physicist (Allan Cormack) and an engineer (Godfrey Housefield) had the idea of using Radon-Nikodim transformation and its inverse in order to compute from the information of rays absorbed in the various direction a 3D model of the inside of a body. This application of math eventually led to the Nobel Prize for Medicine (in 1979) for the two and gave a huge tool of diagnosis to hospitals all around the world.
@@ -486,6 +494,14 @@
 >  128: \subsection{A Vafa-Witten Invariant}
    129: VW theory is a balanced TQFT (same number of fermion pair zero
    130: modes), and the path integral localizes to a virtually zero-dimensional moduli
+
+- file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 144)
+  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
+   142: \end{equation}
+   143:  
+>  144: Notice that $\mathcal{Z}_{\text{VW},M_4}$ is a topological invariant of $M_4$ which is an algebraic count of VW solutions with corresponding weight given by  $a_k q^{m_k}$ that we elaborated on above. This defines a novel $\tau$-dependent Vafa-Witten invariant of $M_4$.\footnote{A purely algebro-geometric definition of $\mathcal{Z}_{\text{VW},M_4}$, in particular the $a_k$'s, was first given by Tanaka-Thomas in~\cite{TT17}, albeit for projective algebraic surfaces only. The novelty here is that we provide a purely differentio-geometric definition of the $a_k$'s for a more general $M_4$. }
+   145:  
+   146: 
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 144)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -1351,6 +1367,14 @@
     48: 
     49: 
 
+- file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 99)
+  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
+    97: 
+    98: \vspace{-3mm}
+>   99: % Students often struggle with math word problems (MWPs) because they do not know how to approach the problem or where to begin. According to a survey by the EdWeek Research Center, roughly 50\% of students can read the problem but cannot understand the mathematical question being asked. Even when they grasp the math concepts involved, they may find it difficult to identify key information and choose the appropriate mathematical operation to solve the problem. Schema-based instruction (SBI) is a well-established, evidence-based strategy that helps students categorize word problems based on their underlying structure or schema, enabling them to better identify relevant information and apply the correct mathematical operations.Building on this foundation, we propose a Schema-Based Retrieval-Augmented Generation (RAG) framework, incorporating a large language model (LLM). Our approach not only focuses on the correctness of solving the problem but also emphasizes step-by-step reasoning by identifying the underlying structure and generating detailed solutions. We evaluate the performance of our approach from an educational perspective on the GSM8K dataset by comparing it against responses generated by other large language models, including GPT-4 and GPT -3.5. We introduce a new method called the "reasoning score" metric to assess the quality of solutions and employ an LLM-as-a-Judge method to evaluate the generated responses. Our findings suggest that schema-based RAG improves problem-solving accuracy and reasoning clarity, offering educational benefits and providing a robust solution to the challenges students face in MWPs.
+   100: 
+   101: Many students struggle with math word problems (MWPs), often finding it difficult to identify key information and select the appropriate mathematical operations. Schema-based instruction (SBI) is an evidence-based strategy that helps students categorize problems based on their structure, improving problem-solving accuracy. Building on this, we propose a Schema-Based Instruction Retrieval-Augmented Generation (SBI-RAG) framework that incorporates a large language model (LLM). Our approach emphasizes step-by-step reasoning by leveraging schemas to guide solution generation. We evaluate its performance on the GSM8K dataset, comparing it with GPT-4 and GPT-3.5 Turbo, and introduce a "reasoning score" metric to assess solution quality. Our findings suggest that SBI-RAG enhances reasoning clarity and facilitates a more structured problem-solving process
+
 - file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 101)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
     99: % Students often struggle with math word problems (MWPs) because they do not know how to approach the problem or where to begin. According to a survey by the EdWeek Research Center, roughly 50\% of students can read the problem but cannot understand the mathematical question being asked. Even when they grasp the math concepts involved, they may find it difficult to identify key information and choose the appropriate mathematical operation to solve the problem. Schema-based instruction (SBI) is a well-established, evidence-based strategy that helps students categorize word problems based on their underlying structure or schema, enabling them to better identify relevant information and apply the correct mathematical operations.Building on this foundation, we propose a Schema-Based Retrieval-Augmented Generation (RAG) framework, incorporating a large language model (LLM). Our approach not only focuses on the correctness of solving the problem but also emphasizes step-by-step reasoning by identifying the underlying structure and generating detailed solutions. We evaluate the performance of our approach from an educational perspective on the GSM8K dataset by comparing it against responses generated by other large language models, including GPT-4 and GPT -3.5. We introduce a new method called the "reasoning score" metric to assess the quality of solutions and employ an LLM-as-a-Judge method to evaluate the generated responses. Our findings suggest that schema-based RAG improves problem-solving accuracy and reasoning clarity, offering educational benefits and providing a robust solution to the challenges students face in MWPs.
@@ -1871,6 +1895,14 @@
    111: 
    112: \noindent \textbf{Disparity of Closed-source and Open-source Models:} 
 
+- file: sample\arxiv_sources\2502.20808v6\4_EXPRIMENTS.tex (line 110)
+  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
+   108: 
+   109: \subsection{Main Results}
+>  110: \noindent \textbf{Challenging Nature of MV-MATH:} The data presented in ~\Cref{tab:main_model_performance} illustrates the inherent challenges of MV-MATH. Notably, the overall accuracy of the leading model, Claude-3.5-Sonnet, is only 33.9\%, which falls significantly short of the human level accuracy of 76.5\%. Among the open-source models, only LLaVA-OneVision-72B (LLaVA-OV-72B) achieves an accuracy above 20\% on MV-MATH, while all others fall below this threshold. Notably, Math-LLaVA, a specialized mathematical MLLM, demonstrates limited performance on the MV-MATH dataset, with an accuracy of only 3.0\%. Our analysis suggests that this underperformance stems from the distribution of its training data. Specifically, Math-LLaVA trained on the Math360K dataset do not effectively generalize to the MV-MATH dataset, underscoring a significant limitation in its generalization capabilities. This finding underscores a challenge for current mathematical MLLMs: the need to achieve robust performance on both in-distribution and out-of-distribution data. Future advancements should prioritize strengthening generalization capabilities over memorizing training data.
+   111: 
+   112: \noindent \textbf{Disparity of Closed-source and Open-source Models:} 
+
 - file: sample\arxiv_sources\2502.20808v6\X_2_evaluation.tex (line 212)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
    210:     Deepseek-chat             & Deepseek-chat & \url{https://api-docs.deepseek.com/} \\
@@ -2023,6 +2055,22 @@
    251: \RabeehTodo{Shall we say something on finemath low score on mbPP+?}
    252: 
 
+- file: sample\arxiv_sources\2508.15096v1\iclr2025_conference.tex (line 253)
+  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
+   251: \RabeehTodo{Shall we say something on finemath low score on mbPP+?}
+   252: 
+>  253: At 300B tokens, Nemotron-CC-Math-3+ extends these gains—reaching 44.2 on MATH (+9.6 vs. FineMath-3+, +12.6 vs. MegaMath-Web) and 80.06 on GMS8K (+0.6 vs. FineMath-3+, +3.6 vs. OWM). Code scores also improve substantially, with 37.16 on HumanEval+ (+3.0 vs. FineMath-3+) and 43.51 on MBPP+ (+4.6 vs. MegaMath-Web, +14.32 vs. Finemath-3+). Knowledge remains best or near-best across MMLU variants, with a top score of 64.26 on MMLU-STEM.
+   254: 
+   255: 
+
+- file: sample\arxiv_sources\2508.15096v1\iclr2025_conference.tex (line 253)
+  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
+   251: \RabeehTodo{Shall we say something on finemath low score on mbPP+?}
+   252: 
+>  253: At 300B tokens, Nemotron-CC-Math-3+ extends these gains—reaching 44.2 on MATH (+9.6 vs. FineMath-3+, +12.6 vs. MegaMath-Web) and 80.06 on GMS8K (+0.6 vs. FineMath-3+, +3.6 vs. OWM). Code scores also improve substantially, with 37.16 on HumanEval+ (+3.0 vs. FineMath-3+) and 43.51 on MBPP+ (+4.6 vs. MegaMath-Web, +14.32 vs. Finemath-3+). Knowledge remains best or near-best across MMLU variants, with a top score of 64.26 on MMLU-STEM.
+   254: 
+   255: 
+
 - file: sample\arxiv_sources\2508.15096v1\iclr2025_conference.tex (line 490)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
    488: 
@@ -2110,6 +2158,14 @@
 >  907: mistral\_24b\_instruct & mistralai/Mistral-Small-24B-Instruct-2501 & Mistral (TogetherAI) \\
    908: qwen\_235b\_instruct & Qwen/Qwen3-235B-A22B-Instruct-2507-tput & Qwen (TogetherAI) \\
    909: qwen\_235b\_thinking & Qwen/Qwen3-235B-A22B-Thinking-2507 & Qwen (TogetherAI) \\
+
+- file: sample\submodules\OpenLogic\content\computability\computability-theory\non-comp-set.tex (line 10)
+  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
+     8: 
+     9: \olfileid{cmp}{thy}{ncp}
+>   10: \olsection{There Are Non-Computable Sets}
+    11: 
+    12: 
 
 - file: sample\submodules\OpenLogic\content\first-order-logic\axiomatic-deduction\proof-theoretic-notions.tex (line 13)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".

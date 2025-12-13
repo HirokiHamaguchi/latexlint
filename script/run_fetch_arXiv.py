@@ -1,18 +1,26 @@
+import json
 import os
-import shutil
-import tarfile
 import time
 from pathlib import Path
 
 import feedparser  # type: ignore
 import requests
+from run_arxiv_utils import download_and_extract_arxiv
 
 MAX_RESULTS = 100
 SAVE_DIR = Path(os.path.dirname(__file__)).parent / "sample" / "arxiv_sources"
+ARXIV_LIST_FILE = SAVE_DIR / "arxiv_id_list.json"
 
 
 def run_fetch_arXiv():
+    """Fetch arXiv papers and save successfully extracted arxiv_ids to a list."""
     os.makedirs(SAVE_DIR, exist_ok=True)
+
+    # Load existing arxiv_ids
+    successful_ids = []
+    if ARXIV_LIST_FILE.exists():
+        with open(ARXIV_LIST_FILE, "r", encoding="utf-8") as f:
+            successful_ids = json.load(f)
 
     response = requests.get(
         "http://export.arxiv.org/api/query?"
@@ -42,59 +50,24 @@ def run_fetch_arXiv():
             print(f"Not tar.gz ({content_type}): {arxiv_id}")
             continue
 
-        # save
-        filename = SAVE_DIR / f"{arxiv_id}.tar.gz"
-        with open(filename, "wb") as f:
-            for chunk in resp_src.iter_content(chunk_size=8192):
-                f.write(chunk)
-
-        # extract
-        extract_dir = SAVE_DIR / arxiv_id
-        extract_dir.mkdir(parents=True, exist_ok=True)
-
-        try:
-            with tarfile.open(filename, "r:gz") as tar:
-                tar.extractall(path=extract_dir, filter="data")
+        # Download and extract using utility function
+        if download_and_extract_arxiv(arxiv_id, SAVE_DIR, verbose=False):
             print(f"Saved and extracted: {arxiv_id}")
-
-            # Find and move all .tex files to arxiv_id/
-            tex_files = list(extract_dir.rglob("*.tex"))
-            moved_count = 0
-            for tex_file in tex_files:
-                if tex_file.parent == extract_dir:
-                    continue
-
-                target_path = extract_dir / tex_file.name
-                if target_path.exists():
-                    counter = 1
-                    stem = tex_file.stem
-                    while target_path.exists():
-                        target_path = extract_dir / f"{stem}_({counter}).tex"
-                        counter += 1
-
-                shutil.move(str(tex_file), str(target_path))
-                moved_count += 1
-
-            # delete all other files and directories except .tex files
-            for item in extract_dir.iterdir():
-                if item.is_dir():
-                    shutil.rmtree(item)
-                elif item.is_file() and item.suffix != ".tex":
-                    item.unlink()
-
-            if moved_count > 0:
-                print(f"  Moved {moved_count} .tex file(s) to root")
-
-        except tarfile.ReadError:
-            print(f"Invalid tar, removing: {arxiv_id}")
-            filename.unlink(missing_ok=True)
-            if extract_dir.exists():
-                shutil.rmtree(extract_dir)
+            if arxiv_id not in successful_ids:
+                successful_ids.append(arxiv_id)
+        else:
+            print(f"Failed to extract: {arxiv_id}")
             continue
 
         time.sleep(0.1)
 
-    print("Done.")
+    # Save successful arxiv_ids to file
+    with open(ARXIV_LIST_FILE, "w", encoding="utf-8") as f:
+        json.dump(successful_ids, f, indent=2, ensure_ascii=False)
+
+    print(
+        f"Done. Successfully saved {len(successful_ids)} arxiv_ids to {ARXIV_LIST_FILE.name}"
+    )
 
 
 if __name__ == "__main__":

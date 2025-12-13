@@ -13,6 +13,10 @@ All notable changes to the "latexlint" extension will be documented in this file
 - Youtube, Github
 - enhance rules so that we can apply them to markdown files.
 
+## 1.6.3 - 2025-12-13
+
+- Fix bugs
+
 ## 1.6.2 - 2025-12-05
 
 - Added pre-commit setup.

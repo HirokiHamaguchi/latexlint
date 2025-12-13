@@ -1,2889 +1,2528 @@
 [CODE] LLEqnarray (361)
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 233)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   231: {\it Proof.}
    232:    Let $M$ denote Carat\'{e}odory's outer measure extending the set function $\phi$. Let $Q\subset\Sigma$ and $(A_m)_{m\leq 0}\in \Xi(Q)$. Since each $A_m$ can be written as a finite disjoint union of some cylinders $C_{1m},...,C_{n_mm}$ from $\mathcal{A}_m$,
 >  233:    \begin{eqnarray*}
    234:  \sum\limits_{m\leq 0}\phi_m(A_m) = \sum\limits_{m\leq 0}\sum\limits_{k=1}^{n_m}\phi\left(C_{km}\right)\geq M(Q).
-   235: \end{eqnarray*}
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 332)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   330:         \[\Phi(B) \leq \bar\Phi(B).\]
    331:         Let $B'\subset\Sigma$ be a Borel set. Since $\bar\Phi$ is a Borel measure and $\Phi$ is an outer measure with $\Phi(\Sigma) = \bar\Phi(\Sigma)$, by Lemma \ref{oms},
 >  332:          \begin{eqnarray*}
    333:            \bar\Phi(\Sigma\setminus B') = \bar\Phi(\Sigma) - \bar\Phi(B')
-   334:            \leq\Phi(\Sigma) - \Phi(B')
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 349)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   347:    Now, we show in  the same way that ${\Phi^*}$ is a Borel measure. Let $(A_m)_{m\leq 0}\in\mathcal{C}(Q)$.
    348:    Observer that $(S^{-i}(A_m\cap C))_{m\leq 0}\in\mathcal{C}(S^{-i}(Q\cap C))$ and $(S^{-i}(A_m\setminus C))_{m\leq 0}\in\mathcal{C}(S^{-i}(Q\setminus C))$ for all $i\geq n$. Therefore,
 >  349:   \begin{eqnarray*}
    350:      \sum\limits_{m\leq 0}\phi_{m - 2i}\left(A_m\right)
-   351:      &=& \sum\limits_{m\leq 0}\phi_{m-i}\left(S^{-i}A_m\right)\\
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 484)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   482: 
    483:    Let $m\leq 0$. Since $\Phi|_{\mathcal{F}_m}\leq \phi_m|_{\mathcal{F}_m}$, by Radon-Nikodym Theorem, there exists $\xi_m:\Sigma\longrightarrow\mathbb{R}$ $\mathcal{F}_m$-measurable such that $\Phi(A) = \int_{A}\xi_md\phi_m$ for all $A\in\mathcal{F}_m$. Therefore, by the pool-out-property of the conditional expectation,
 >  484:    \begin{eqnarray*}
    485:       \int\limits_{A}E_{\phi_m}\left(f|{\mathcal{F}_m}\right)d\Phi&=&\int\limits_{A}\xi_mfd\phi_m
-   486:       =\int\limits_{A}fd\Phi
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 548)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   546: (i) We show only the second equation, the proof of the first is the same.
    547: It is sufficient to check that the measures agree on all cylinders generating $ \mathcal{A}_m$.
 >  548: \begin{eqnarray*}
    549:    \phi_m(\nu)\left({S^{-1}}  _m[e_1,...e_n]\right) &=& \phi_m(\nu)\left(  _{m+1}[e_1,...e_n]\right)\\
-   550:    &=&\int\sum\limits_{e\in E} p_{e}(x) P^m_{w_e(x)}\left( _m[e_1,...e_n]\right) d\nu(x)\\
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 650)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   648:    \begin{Definition}
    649:     Set
 >  650:        \begin{eqnarray*} \label{cm}
    651:     F:\Sigma\longrightarrow K\nonumber
-   652:      \end{eqnarray*}
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 673)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   671: 
    672:    Let $\epsilon>0$. By Lemma 3 (iii) in \cite{Wer3}, there exist  a compact set $Q\subset  \Sigma$ with $\Phi(\nu_0)(\Sigma\setminus Q)< \epsilon$ such that  $F|_{Q}$ is continuous. Set $C:=F|_{Q}(Q)$. Then $C$ is compact and
 >  673:    \begin{eqnarray*}
    674:    F\left(\Phi(\nu_0)\right) (K\setminus C)&=&\Phi(\nu_0)\left(\Sigma\setminus F^{-1}(C)\right)\\
-   675:    &\leq&\Phi(\nu_0)\left(\Sigma\setminus (F|_{Q})^{-1}(C)\right)\\
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 695)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   693: 
    694:    Observe, that with the above notation each measure $\phi_m(F(\Lambda))$ has the following form
 >  695: \begin{eqnarray*}
    696:    \phi_m(F(\Lambda))(_m[e_1,...,e_n]) = \int\limits_{_m[e_1,...,e_n]} \exp{\sum\limits_{i=0}^{n-1}u\circ S^i }d\Lambda,
-   697: \end{eqnarray*}
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 737)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   735:    {\it Proof.}
    736:    Let $_m[e_m,...,e_0]$ be a cylinder from $\mathcal{F}_m$. Then
 >  737:    \begin{eqnarray*}
    738:        \int\limits_{_m[e_m,...,e_0]}1_{_1[e]}d\phi_m(\nu'_0) &=& \int P^m_x\left( _m[e_m,...,e_0,e]\right)d\nu'_0(x)\\
-   739:        &=& \int P^m_x\left( _m[e_m,...,e_0]\right)p_e\circ w_{e_0}\circ ... \circ w_{e_m}(x)d\nu'_0(x)\\
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 746)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   744: 
    745: For (ii), observe that, by (\ref{tPhiRel}),
 >  746:  \begin{eqnarray*}
    747:        && \int\limits_{K\times _m[e_m,...,e_0]}p_e\circ w_{\sigma_0}\circ ... \circ w_{\sigma_{m-1}}(x)d\tilde\phi_{m-1}(\nu)(x,\sigma)\\
-   748:        &=& \int\sum\limits_{e_{m-1}}P^{m-1}_{x}\left( _{m-1}[e_{m-1},...,e_0]\right)p_e\circ w_{e_0}\circ ... \circ w_{e_{m-1}}(x)d\nu(x)\\
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 771)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   769:    {\it Proof.}
    770:       By Proposition \ref{gm} (i) and Theorem \ref{gmt},
 >  771:       \begin{eqnarray*}
    772:           E_{\Phi\left(\nu'_0\right)}\left(1_{_1[e]}|\mathcal{F}\right)(\sigma) &=&\lim\limits_{m\to-\infty}p_e\circ w_{\sigma_0}\circ ... \circ w_{\sigma_m}(x_{i(\sigma_m)})\\
-   773:           &=& \bar p_e\left(\lim\limits_{m\to-\infty} w_{\sigma_0}\circ ... \circ w_{\sigma_m}(x_{i(\sigma_m)})\right)\\
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 793)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   791:    {\it Proof.}
    792:       By Proposition \ref{cmd}(i) and Lemma \ref{cecl},
 >  793:       \begin{eqnarray*}
    794:           E_{\Phi\left(\nu'_0\right)}\left(1_{_1[e]}|\mathcal{F}\right) =  \bar p_e\circ F\ \ \ \Phi(\nu'_0)\mbox{-a.e.}
-   795:       \end{eqnarray*}
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 800)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   798:   \[\sum\limits_{e\in E}\bar p_e(x)>\sum\limits_{e\in E} p_e(x) = 1\]
    799:   for all $x\in C$. However, by the above,
 >  800:   \begin{eqnarray*}
    801: 1&<&\frac{1}{F(\Phi(\nu'_0))(C)}\int\limits_{F^{-1}(C)}\sum\limits_{e\in E}\bar p_e(x)\circ F\ d\Phi(\nu'_0)\\
-   802:     &=&\frac{1}{F(\Phi(\nu'_0))(C)}\int\limits_{F^{-1}(C)}\sum\limits_{e\in E}E_{\Phi\left(\nu'_0\right)}\left(1_{_1[e]}|\mathcal{F}\right) d\Phi(\nu'_0)\\
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 821)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   819:    {\it Proof.} The claim follows from Lemma 5 in \cite{Wer6}. For completeness, we prove it here in our case.
    820:       By Theorem \ref{cec},
 >  821:       \begin{eqnarray*}
    822:           h_{\Phi\left(\nu'_0\right)}(S) &=&-\sum\limits_{e\in E}\int E_{\Phi\left(\nu'_0\right)}\left(1_{_1[e]}|\mathcal{F}\right)\log E_{\Phi\left(\nu'_0\right)}\left(1_{_1[e]}|\mathcal{F}\right)\ d\Phi(\nu'_0)\\
-   823:           &=&-\sum\limits_{e\in E}\int\limits_{_1[e]}\log p_e\circ F\ d\Phi(\nu'_0)\\
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 839)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   837: \[h_\Lambda(S) = -\sum\limits_{e\in E}\int\limits_{_1[e]}\log g_e\ d\Lambda.\]
    838: If $\Lambda(\{u=-\infty\})>0$, then $h_{\Lambda}(S) + \int u\ d\Lambda=-\infty<0$. Otherwise, observer that
 >  839: \begin{eqnarray*}
    840:    h_{\Lambda}(S) + \int u d\Lambda
-   841:    =\sum\limits_{e\in E}\int\limits_{_1[e]}\log\frac{p_e\circ F}{g_e}\ d\Lambda
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 845)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   843: \end{eqnarray*}
    844: It is not difficult to check that $1_{_1[e]}(p_e\circ F/g_e - 1)\in \mathcal{L}^1(\Lambda)$ for all $e\in E$ (e.g. Lemma 2 in \cite{Wer6}). Therefore, by the pull-out property of the conditional expectation,
 >  845: \begin{eqnarray*}
    846:     &&\sum\limits_{e\in E}\int\limits_{_1[e]}\left(\frac{p_e\circ F}{g_e} - 1\right)\ d\Lambda\\
-   847:     &=&\sum\limits_{e\in E}\int g_e\left(\frac{p_e\circ F}{g_e} - 1\right)\ d\Lambda\\
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 869)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   867:      The claim is a straightforward consequence of Theorem \ref{cec}. Observe that
    868:       $E_{\Phi\left(\nu'_0\right)}\left(1_{_1[e]}|\mathcal{F}\right)\circ S^{-n}$ is $\mathcal{F}$-measurable, for all $n\in\mathbb{N}$, since $S(\mathcal{F})\subset\mathcal{F}$. Therefore, by the shift invariance of $\Phi(\nu'_0)$ and the pull-out property of the conditional expectation,
 >  869:       \begin{eqnarray*}
    870:            &&\phi_0\left(F\left(\Phi(\nu'_0)\right)\right) \left( _0[e_1,...,e_n]\right)\\
-   871:            &=&\int P^1_{F(\sigma)}\left( _1[e_1,...,e_n]\right)\ d\Phi(\nu'_0)(\sigma)\\
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 892)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   890:    {\it Proof.}
    891:       Let $f$ be a real-valued, Borel-measurable and bounded function on $K$. Let $\bar w_e$ denote the continuous extention of $w_e|_{K_{i(e)}}$ on the closure of $K_{i(e)}$ for all $e\in E$. Then, by  Theorem \ref{cec} and the shift invariance of $\Phi(\nu'_0)$,
 >  892:       \begin{eqnarray*}
    893:           U^{*}F\left(\Phi(\nu'_0)\right)(f) &=& \int\sum\limits_{e\in E} p_e f\circ w_e\ dF\left(\Phi(\nu'_0)\right)\\
-   894:           &=& \int\sum\limits_{e\in E} p_e f\circ\bar w_e\ dF\left(\Phi(\nu'_0)\right)\\
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 900)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   898:           &=& \sum\limits_{e\in E}\int\limits_{_1[e]}f\circ F\circ S\ d\Phi(\nu'_0)\\
    899:       \end{eqnarray*}
 >  900:       \begin{eqnarray*}
    901:            &=& \int f\ dF\left(\Phi(\nu'_0)\right).
-   902:       \end{eqnarray*}
 
 - file: sample\arxiv_sources\1101.2623v9\SecondCaratheodoryGibbsMeasures4_Erratum.tex (line 177)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   175:  \begin{Definition}
    176:  Let us abbreviate $\M:=(K_{i(e)},w_e,p_e)_{e\in E}$. Set 
 >  177: \begin{eqnarray*}
    178: E(\M)&:=&\left\{\Lambda\in P_S(\Sigma)|\  \Lambda(D) = 1\mbox{ and }E_\Lambda(1_{_1[e]}|\F)=p_e\circ F\right.\\  
-   179: &&\left.\Lambda\mbox{-a.e. for all }e\in E\right\}.
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 940)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   938: For any $n\in\NN$ and functions $\gamma_{h_{1},\ell_{1}},\ldots,\gamma_{h_{n},\ell_{n}}$,
    939: writing $y=\left(y_{1},\ldots,y_{n}\right)$ we have
 >  940: \begin{eqnarray*}
    941: \prod_{j=1}^{n}\gamma_{h_{j},\ell_{j}}\left(x\right) & = & \prod_{j=1}^{n}\left(\int_{\RR}h\left(x,y_{j}\right)\left(\log|y_{j}|\right)^{\ell_{j}}\mathrm{e}^{\mathrm{i}y_{j}}\,\mathrm{d}y_{j}\right)\\
-   942:  & = & \int_{\RR^{n}}\left(\prod_{j=1}^{n}h\left(x,y_{j}\right)\left(\log|y_{j}|\right)^{\ell_j}\mathrm{e}^{\mathrm{i}y_{j}}\right)\,\mathrm{d}y,
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1567)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1565: \item \label{enu:zero-set}In the situation of the previous remark, define
   1566: the constructible functions
 > 1567: \begin{eqnarray*}
   1568: g\left(x,y\right) & = & \sum_{j\in J^{\INT}}G_{j}\left(x,y\right),\quad\text{for all \ensuremath{\left(x,y\right)\in A_{\theta}},}\\
-  1569: h\left(x\right) & = & \sum_{j\in J\setminus J^{\INT}}g_{j}^2\left(x\right),\quad\text{for all \ensuremath{x\in\Pi_{m}\left(A\right)}.}
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1816)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1814: Suppose also that $a_{j}$, $b_{j}$ and $b_{j}-a_{j}$ are $\psi$-prepared
   1815: on $A_{\theta}$ as follows:
 > 1816: \begin{eqnarray*}
   1817: a_{j}\left(x,y\right) & = & a_{j,0}\left(x\right)y^{\alpha_{j}}u_{a_{j}}\left(x,y\right),\\
-  1818: b_{j}\left(x,y\right) & = & b_{j,0}\left(x\right)y^{\beta_{j}}u_{b_{j}}\left(x,y\right),\\
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 2171)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2169: If $b_{j}\equiv+\infty$, then we may suppose that $r_{j}<-1$. \\
   2170: To see this, suppose first that $b_{j}<+\infty$. If $r_j\geq0$, then write
 > 2171: \begin{eqnarray*}
   2172: 	g_{j}\left(x,y\right)t^{r_{j}}h_{j}\left(x,y,t\right) & = & \left(g_{j}\left(x,y\right)\left(b_{j,0}\left(x\right)y^{\beta_{j}}\right)^{r_{j}}\right)\left(\left(\frac{t}{b_{j,0}\left(x\right)y^{\beta_{j}}}\right)^{r_{j}}h_{j}\left(x,y,t\right)\right)\\
-  2173: 	& = & \widetilde{g_{j}}\left(x,y\right)\widetilde{h}_{j}\left(x,y,t\right).
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 2176)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2174: \end{eqnarray*}
   2175: If $r_j<0$, then write
 > 2176: \begin{eqnarray*}
   2177: 	g_{j}\left(x,y\right)t^{r_{j}}h_{j}\left(x,y,t\right) & = & \left(g_{j}\left(x,y\right)\left(a_{j,0}\left(x\right)y^{\alpha_{j}}\right)^{r_{j}}\right)\left(\left(\frac{a_{j,0}\left(x\right)y^{\alpha_{j}}}{t}\right)^{-r_{j}}h_{j}\left(x,y,t\right)\right)\\
-  2178: 	& = & \widetilde{g_{j}}\left(x,y\right)\widetilde{h}_{j}\left(x,y,t\right).
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 2186)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2184: Suppose now that $b_{j}\equiv +\infty$. Let $n_0$  be the smallest exponent appearing in the series expansion of $h_{j}\left(x,y,t\right)$
   2185: with respect to the variable $\left(\frac{a_{j,0}\left(x\right)y^{\alpha_{j}}}{t}\right)^{1/d_{j}}$. Then we can factor out the power $\left(\frac{a_{j,0}\left(x\right)y^{\alpha_{j}}}{t}\right)^{n_0/d_{j}}$ from the expansion of $h_j$ and write
 > 2186: \begin{eqnarray*}
   2187: 	g_{j}\left(x,y\right)t^{r_{j}}h_{j}\left(x,y,t\right) & = & \left(g_{j}\left(x,y\right)\left(a_{j,0}\left(x\right)y^{\alpha_{j}}\right)^{n_0/d_j}\right)t^{r_j-n_0/d_j}\widetilde{h}_{j}\left(x,y,t\right),\\
-  2188: \end{eqnarray*}
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 2330)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2328: \]
   2329: Hence we can write
 > 2330: \begin{eqnarray*}
   2331: \Gamma_{j,-}\left(x,y,t\right) & = & \left(\frac{t}{a_{j,0}\left(x\right)}\right)^{r_{j,-}}h_{j,-}\left(x,y,t\right)\left(\log t\right)^{s_{j}}\mathrm{e}^{\mathrm{i}\sigma_{j}t},\\
-  2332: \Gamma_{j,0}\left(x,y,t\right) & = & h_{j,0}\left(x,y,t\right)\left(\log t\right)^{s_{j}}\mathrm{e}^{\mathrm{i}\sigma_{j}t},\\
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3046)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3044: \]
   3045: Let
 > 3046: \begin{eqnarray*}
   3047: g\left(x,y\right) & = & \sum_{j\in J^{\INT}}T_{j}\circ P_{\theta}^{-1}\left(x,y\right),\quad\text{for all \ensuremath{\left(x,y\right)\in A},}\\
-  3048: H & = & \bigcap_{j\in J^{\text{naive}}}\{x\in\Pi_{m}\left(A\right):\ f_{j}\left(x\right)=0\}.
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3089)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3087: \]
   3088: Write
 > 3089: \begin{eqnarray*}
   3090: F\left(x,y\right) & = & \sum_{j\in J}T_{j}\partial_{y}P_{\theta}\left(x,y\right)=\\
-  3091:  & = & \sum_{\left(\rho,s\right)\in E}y^{\rho}\left(\text{log\ \!}y\right)^{s}\left(\sum_{j\in E_{\left(\rho,s\right)}}\sigma\tau f_{j}\left(x\right)\mathrm{e}^{\mathrm{i}\phi_{j}\left(x,y\right)}\right).
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3194)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3192: is another sequence of coefficients. Supposing inductively that $a_{n}=\widetilde{a}_{n}$
   3193: for all $n<N$, we have
 > 3194: \begin{eqnarray*}
   3195: \left|\left(a_{N}\left(y\right)-\widetilde{a}_{N}\left(y\right)\right)g_{N}\left(y\right)\right| & = & \left|\sum_{n=0}^{N}a_{n}\left(y\right)g_{n}\left(y\right)-\sum_{n=0}^{N}\widetilde{a}_{n}\left(y\right)g_{n}\left(y\right)\right|\\
-  3196:  & \leq & \left|f\left(y\right)-\sum_{n=0}^{N}a_{n}\left(y\right)g_{n}\left(y\right)\right|+\left|f\left(y\right)-\sum_{n=0}^{N}\widetilde{a}_{n}\left(y\right)g_{n}\left(y\right)\right|\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 468)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   466:  $$a^2b^2=\frac{1}{12} \left((a+b)^4+(a-b)^4-2a^4-2b^4\right).$$
    467:  Hence, with $a=\log(1-x)$ and $b=\log(1+x)$, 
 >  468: {\footnotesize \begin{eqnarray*}
    469:  I&:=&\int_0^1 \frac{1}{x}\left(6 \log^2(1+x)\log^2(1-x)+\log^4(1+x)\right)dx\\
-   470:  &=&\frac{1}{2}\int_0^1 \frac{\log^4(1-x^2)}{x}dx
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 479)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   477: }
    478:  Now, due to $\sum\int=\int\sum$ (all terms are positive), and 4 times partial integration,
 >  479:  \begin{eqnarray*}
    480:  I_1&=&-\frac{3}{4}\int_0^1\frac{\log^4(1-x)}{x}dx\buildrel=_{}^{1-x=t}-\frac{3}{4}\int_0^1\frac{\log^4 t}{1-t}dt=
-   481:  -\frac{3}{4}\sum_{k=0}^\infty\int_0^1t^k\log^4 t\; dt\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 487)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   485:  Moreover, by using the transformation $t=(1-x)/(1+x)$, resp. $x= (1-t)/(1+t)$ and $dx=-2/(1+t)^2 dt$,
    486:  
 >  487:  \begin{eqnarray*}
    488:  I_2&=&\frac{1}{2} \int_0^1 \frac{1}{x}\log^4\left(\frac{1-x}{1+x}\right)dx=\frac{1}{2}\int_0^1\frac{1+t}{1-t}\log^4 t \;\frac{2}{(1+t)^2}dt\\
-   489:  &=&\int_0^1\frac{\log^4 t}{1-t^2} dt=\sum_{k=0}^\infty \int_0^1 t^{2k} \log^4 t \,dt=24 \sum_{k=0}^\infty \frac{1}{(2k+1)^5}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 540)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   538: 
    539: 
 >  540:   \begin{eqnarray*}
    541: I:=\int_0^{\pi/2} \frac{\tanh(\tan^2\theta)}{\sin(2\theta)(1+\cosh(2\tan^2\theta))}\;d\theta&\buildrel=_{=2\sin x\cos x}^{\sin(2x)}&
-   542: \frac{1}{2}\;\int_0^{\pi/2} \frac{\tanh(\tan^2\theta)}{\tan\theta (1+\cosh(2\tan^2\theta))}\frac{d\theta}{\cos^2\theta}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 571)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   569: {\bf Addendum} 
    570: We calculate the Laurent series at $z_n$: since $\cosh z_n=0$ and $\sinh z_n=i(-1)^n$, we obtain
 >  571: {\footnotesize \begin{eqnarray*}
    572: 16 f(z)&=& \frac{\sinh (z-z_n+z_n)}{(z-z_n+z_n)\cosh^3(z-z_n+z_n)}=\frac{\sinh (z-z_n) \cosh z_n+ \cosh (z-z_n)\sinh z_n}
-   573: { (z-z_n+z_n)  \Big(\cosh(z-z_n) \cosh z_n + \sinh (z-z_n)\sinh z_n\Big)^3}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 634)
+  error: \begin{eqnarray}
   message: Eqnarray is not recommended. Use align or gather instead.
-   632:   $$F(s)=\frac{\pi}{a} \csc \left( \frac{\pi}{a} (s+1)\right),$$
    633:   a function well defined on $]-1,a-1[$, that is a  neighborhood of $s=0$. To this end we use the Euler-Mittag-Leffler representation
 >  634:   \begin{eqnarray}\label{sini}
    635: \frac{\pi}{\sin (\pi z)}&=& \frac{1}{z}+\sum_{n=1}^\infty (-1)^n\frac{2z}{z^2-n^2}= 
-   636:  \frac{1}{z}+ \sum_{n=1}^\infty  (-1)^n\left(\frac{1}{z+n}+\frac{1}{z-n}\right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 643)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   641:  \sum_{k=1}^{N-1}  \frac{(-1)^{k-1}}{z-(k+1)}+\frac{1}{1-z}$.}.
    642:  Here is now the calculation:
 >  643: \begin{eqnarray*}
    644: F(s)&=&\int_0^1  \frac{x^s}{1+x^a}\;dx +\int_1^\infty  \frac{x^s}{1+x^a}\;dx\\
-   645: &\buildrel=_{x=1/u}^{}&\int_0^1  \frac{x^s}{1+x^a}\;dx + \int_0^1\frac{1}{u^{s+2}} \frac{du}{1+u^{-a}}= \int_0^1  \frac{x^s}{1+x^a}\;dx+
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 653)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   651: $$\int_0^1 \frac{t^b}{1+t}dt= \sum_{n=0}^\infty \frac{(-1)^n}{b+n+1},$$
    652: we obtain (with $z=(s+1)/a$ in (\ref{sini}))
 >  653: \begin{eqnarray*}
    654: F(s)&=&\frac{1}{a} \sum_{n=0}^\infty(-1)^n\left(\frac{1}{n+\frac{s+1}{a}}+\frac{1}{n-\frac{s+1}{a}+1}\right)\\
-   655: &=& \frac{\pi}{a} \frac{1}{\sin\left(\frac{\pi}{a}(s+1)\right)}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 723)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   721: $$\mbox{$\dis\arctan x+\arctan y= \arctan \left(\frac{x+y}{1-xy}\right)$  whenever $xy<1$},$$
    722: we have
 >  723: \begin{eqnarray*}
    724: \arctan (1/u_k)&=& \arctan \frac{(k-1)^2}{2}-\arctan v=\frac{\pi}{2}-\arctan\left(\frac{2}{(k-1)^2}\right)-\arctan v\\
-   725: &=&\frac{\pi}{2}-\arctan k+\arctan (k-2) -\arctan v.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 733)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   731: $$
    732: Hence
 >  733: \begin{eqnarray*}
    734: 4\sum_{k=1}^{6n}  \arctan u_k&=&4\sum_{k=1}^{6n}( \arctan u_k -\arctan v) +24 n \arctan v\\
-   735: &=&4 (-3\pi)+4\sum_{k=1}^{6n} (\arctan k-\arctan (k-2)) +10\,\pi n\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 740)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   738: \end{eqnarray*}
    739: Using that $\arctan x+\arctan (1/x)=\pi/2$ for  $x\geq 0$, we obtain
 >  740: \begin{eqnarray*}
    741: 4\sum_{k=1}^{6n}  \arctan u_k&=&4 \big(\pi -\arctan\frac{1}{6n} -\arctan\frac{1}{6n-1}\big)+\pi + 2\pi(5n-6).
-   742: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 744)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   742: \end{eqnarray*}
    743: Therefore, as $\sin(x+j\pi)=-\sin x$ for each odd $j\in \Z$, and $\arctan x \sim x$ and $\sin x\sim x$ for $x\to 0$,
 >  744: \begin{eqnarray*}
    745: n\sin \left(4\sum_{k=1}^{6n}  \arctan u_k\right)&=& n \sin\left(4\arctan\frac{1}{6n} +4\arctan\frac{1}{6n-1}\right)
-   746: \sim 4/6+4/6=4/3.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 811)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   809: $$\frac{n_k}{2\pi}-p_k-\frac{\arcsin \lambda}{2\pi}= \Oh(1/n_k),$$
    810: and let  $a_k:=n_k-2\pi p_k -\arcsin \lambda$. Then $a_k\to 0$ and so
 >  811: \begin{eqnarray*}
    812: \sin n_k&=&\sin(a_k+\arcsin \lambda)= \sin a_k \cos (\arcsin \lambda) +\lambda \cos a_k\\
-   813: &\to & 0+\lambda.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 844)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   842: 
    843: 
 >  844: \begin{eqnarray*}
    845: n_k\log(\sigma \sin n_k)&=&n_k(1-\sigma \sin n_k)\cdot \frac{\log(\sigma \sin n_k)}{1-\sigma\sin n_k}\\
-   846: &\to&- \log(|\lambda|) \cdot (-1) =\log(|\lambda|).
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1000)
+  error: \begin{eqnarray}
   message: Eqnarray is not recommended. Use align or gather instead.
-   998: We first derive the partial fraction: 
    999:   
 > 1000:  \begin{eqnarray}
   1001: \frac{1}{\prod_{k=0}^n \left(x^2+(2k+1)^2\right)}&=& \sum_{k=0}^n \frac{r_k^+}{x-(2k+1)i}+ \sum_{k=0}^n \frac{r_k^-}{x+(2k+1)i} \label{11}\\
-  1002: &=&\sum_{k=0}^n \frac{(r_k^++r_k^-)\; x+ (2k+1)i(r_k^+-r_k^-)}{x^2+(2k+1)^2}.\label{12}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1011)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1009:  multiply equation (\ref{11}) by $x\pm i(2j+1)$, and let $x\to \pm i(2j+1)$ to obtain
   1010:  
 > 1011:  \begin{eqnarray*}
   1012:  r_{j}^{\pm }&=&\frac{1}{2(2j+1)(\pm i)}\cdot\frac{1}{\prod\limits_{k=0,k\ne j}^{n}{({{(2k+1)}^{2}}-{{(2j+1)}^{2}})}}\\
-  1013:  &=&\frac{1}{2(2j+1)(\pm i)}\cdot\frac{1}{\prod\limits_{k=0,k\ne j}^{n}{(2k+2j+2)(2k-2j)}} \\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1026)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1024: $$I:=\int_0^\infty \frac{\log u}{u^2+1}du=0,$$
   1025: since
 > 1026: \begin{eqnarray*}
   1027: I&=&\int_0^1 \frac{\log (u)}{u^2+1}du+\int_1^\infty\frac{\log u}{u^2+1}du\\
-  1028: &\buildrel=_{u=1/x}^{}&\int_0^1 \frac{\log u}{u^2+1}du - \int_0^1\frac{ \log  x}{1+x^2}dx. 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1033)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1031: Thus
   1032: 
 > 1033: \begin{eqnarray*}
   1034: \int\limits_{0}^{\infty }{\frac{\log (ax)}{{{x}^{2}}+{{(2k+1)}^{2}}}}dx&\overset{x=(2k+1)u}=&\,\frac{1}{2k+1}\int\limits_{0}^{\infty }{\frac{\log (a(2k+1))+\log (u)}{{{u}^{2}}+1}}du\\
-  1035:  &=&\frac{\log (a(2k+1))}{2k+1}\frac{\pi }{2}+0=\frac{\log (a(2k+1))}{2k+1}\frac{\pi }{2}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1039)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1037: 
   1038: Hence, by (\ref{12}),
 > 1039: \begin{eqnarray*}
   1040:  \int\limits_{0}^{\infty }{\frac{\log (ax)}{\prod\limits_{k=0}^{n}{({{x}^{2}}+{{(2k+1)}^{2}})}}dx}&=&
-  1041:  \frac{1}{{{2}^{2n}}}\sum\limits_{k=0}^{n}{\frac{{{(-1)}^{k}}(2k+1)}{(n+k+1)!(n-k)!}\int\limits_{0}^{\infty }{\frac{\log (ax)}{{{x}^{2}}+{{(2k+1)}^{2}}}dx}}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1081)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1079:  Substituting $x/(1+x)=:t$, equivalently $x=t/(1-t)$ with $t\in ]0,1[$ yields
   1080:   
 > 1081:  \begin{eqnarray*}
   1082: I:= \int_0^\infty \left(\log\frac{x}{1+x}\right)^4 \log\left(x^3(1+x)^{17}\right)\;dx&=&\int_0^1 \frac{\log^4 t
-  1083:  \left( 3\log\left(\frac{t}{1-t}\right)+17 \log\left(\frac{1}{1-t}\right)\right)}{\frac{1}{1-t}} \; \frac{dt}{(1-t)^2}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1090)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1088:   
   1089:   Now, as the integrands have constant sign, $\int\sum=\sum\int$, and so, using 5-times integration by parts, 
 > 1090:   \begin{eqnarray*}
   1091:   I_1&=& \int_0^1\sum_{n=0}^\infty t^n \log^5 t\; dt=\sum_{n=0}^\infty \int_0^1 t^n\,\log^5 t\; dt\\
-  1092:   &=&-\sum_{n=0}^\infty \frac{5!}{(n+1)^6}= -120 \zeta(6).
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1098)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1096: we obtain
   1097: 
 > 1098: \begin{eqnarray*}
   1099: I_2&=&-\int_0^1 \log^4 t \sum_{k=1}^\infty H_k t^k \;dt=-\sum_{k=1}^\infty \int_0^1 t^k \log^4 t  \;dt\\
-  1100: &=&-4!\sum_{k=1}^\infty \frac{H_k}{(k+1)^5}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1108)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1106:  $$
   1107:   we conclude that
 > 1108:   \begin{eqnarray*}
   1109:   \sum_{k=1}^\infty \frac{H_k}{(k+1)^5}&=&\frac{1}{2}\left( 5\,\zeta(6)- \zeta(4)\zeta(2)-\zeta(3)^2-\zeta(2)\zeta(4)\right)\\
-  1110:   &=& \frac{5}{2}\zeta(6) -\zeta(4)\zeta(2)-\frac{1}{2}\zeta(3)^2.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1115)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1113:   =\frac{7}{4}\zeta(6)$, we deduce that
   1114:   
 > 1115:    \begin{eqnarray*}
   1116:    I=3I_1-20I_2&=& -360 \zeta(6)+20  \cdot 24 \Big( \frac{5}{2}\zeta(6) -\zeta(4)\zeta(2)-\frac{1}{2}\zeta(3)^2\Big)\\
-  1117:    &=&\zeta(6)\Big(-360+1200-840\Big)-240 \zeta(3)^2\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1163)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1161:  Let $m,n\in\N^*:=\N\setminus \{0\}$  and $r\in \R, r\geq0$. Then
   1162:   
 > 1163:   \begin{eqnarray*}
   1164:   \frac{1}{m^2n+mn^2+rmn}&=& \frac{1}{mn}\;\frac{1}{m+n+r}=\frac{1}{m(m+r)} \left(\frac{1}{n}-\frac{1}{n+(m+r)}\right)\\
-  1165:   &=&\frac{1}{m(m+r)}\;\int_0^1 (x^{n-1}-x^{n+m+r-1})dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1171)
+  error: \begin{eqnarray}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1169:   Since all terms considered are positive, $\int\sum=\sum\int$. Hence, by partial integration,
   1170:   
 > 1171:   \begin{eqnarray}\label{harm-num}
   1172: \sum_{n=1}^\infty \frac{1}{m^2n+mn^2+rmn} &=& \frac{1}{m(m+r)}\;\int_0^1 (1-x^{m+r}) \sum_{n=1}^\infty x^{n-1}dx\\\nonumber
-  1173: &=&  \frac{1}{m(m+r)}\;\int_0^1 \frac{1-x^{m+r}}{1-x} dx\\ \nonumber
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1179)
+  error: \begin{eqnarray}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1177: Consequently, if $r\geq 0$, $r\in \R$,
   1178: 
 > 1179: \begin{eqnarray}\label{zwisch}
   1180: S(r)&=&-\sum_{m=1}^\infty \frac{1}{m}\int_0^1 x^{m+r-1}\log(1-x)dx\nonumber\\
-  1181: &=&-\int_0^1 x^{r-1} \left(\sum_{m=1}^\infty\frac{x^m}{m}\right)\log(1-x)dx=\int_0^1  x^{r-1}\log^2(1-x) dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1186)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1184: 
   1185: Hence, if $r\in \N^*$,
 > 1186: \begin{eqnarray*}
   1187: S(r)&=&\sum_{j=0}^{r-1}  \binom{r-1}{j} (-1)^j  \int_0^1 x^j \log^2 x\;dx\\
-  1188: &=& \sum_{j=0}^{r-1}  \binom{r-1}{j} (-1)^j  \frac{2}{(j+1)^3}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1196)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1194:  If $r=0$, we have the convergent integral (two singularities), 
   1195:  
 > 1196:  \begin{eqnarray*}
   1197:  S&=&\int_0^1 (1-x)^{-1}\log^2 x\;dx=\int_0^1 \sum_{j=0}^\infty x^j \log^2 x\;dx= \sum_{j=0}^\infty \int_0^1 x^j \log^2 x\;dx\\
-  1198:  &=&  \sum_{j=0}^\infty \frac{2}{(j+1)^3}=2 \zeta(3).
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1202)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1200:  
   1201:  If $r\in\R$ and $r>0$, 
 > 1202:  \begin{eqnarray*}
   1203: S(r)&=&\sum_{j=0}^{\infty}  \binom{r-1}{j} (-1)^j  \int_0^1 x^j \log^2 x\;dx\\
-  1204: &=& \sum_{j=0}^{\infty}  \binom{r-1}{j} (-1)^j  \frac{2}{(j+1)^3}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1225)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1223:   Hence
   1224: 
 > 1225:  \begin{eqnarray*}
   1226:  G(1)&=& \lim_{a\to 1}  \int_0^1  x^{r-1} \frac{d^2}{da^2}(1-x)^{a-1}dx=   \int_0^1  x^{r-1} \lim_{a\to 1}\frac{d^2}{da^2}(1-x)^{a-1}dx\\
-  1227:  &=& \int_0^1  x^{r-1} \log^2(1-x) dx.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1234)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1232:   Now, in view of the definition of the Eulerian beta-function, $B(r,a)$,  and the fact that $ \frac{d^2}{da^2}\int= \int\frac{d^2}{da^2}$
   1233:  
 > 1234:  \begin{eqnarray*}
   1235: G(a)&= & \frac{d^2}{da^2} \int_0^1  x^{r-1}(1-x)^{a-1}dx\\
-  1236:  &=&\frac{d^2}{da^2} B(r,a)= \frac{d^2}{da^2} \frac{\Gamma(r)\Gamma(a)}{\Gamma(a+r)}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1245)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1243:   $$F(a):=\frac{B(r,a)}{(r-1)!}= e^{L(a)}.$$
   1244:   Hence
 > 1245: \begin{eqnarray*}
   1246: G(1)=(r-1)!F''(1)=(r-1)!F(1)\big((L'(1))^2+L''(1)\big)=\frac{(r-1)!}{r!} \big((H_r)^2+H_r^{(2)}\big).
-  1247: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1253)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1251: {\bf Remark}.~~
   1252: Using that for $r\in \N^*$
 > 1253: \begin{eqnarray*}
   1254:  \frac{1}{m(m+r)}\;\int_0^1 \frac{1-x^{m+r}}{1-x} dx
-  1255: &=& \frac{1}{m(m+r)}\; \int_0^1\sum_{k=0}^{m+r-1} x^k dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1293)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1291:  As $f'\geq 0$,  partial integration yields
   1292:   
 > 1293:   \begin{eqnarray*}
   1294:  I_n:= \int_0^1 \frac{\sin(2\pi nx)}{n}\,f(x)\;dx&=&-\frac{\cos(2\pi nx)}{2\pi n^2} f(x)\Bigg|^1_0 + \int_0^1 \frac{\cos(2\pi nx)}{2\pi n^2} f'(x)dx\\
-  1295:   &\leq &\frac{f(0)-f(1)}{2\pi n^2} +\frac{1}{2\pi n^2}\int_0^1 f'(x)dx=0.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1309)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1307:   
   1308: Since $f'\geq 0$, 
 > 1309: \begin{eqnarray*}
   1310: \int_0^1 S(x) f(x)dx&= &\frac{\pi}{2}\left(\int_0^1  f(x)dx-2\int_0^1  x f(x) dx\right)\\
-  1311: &=& \frac{\pi}{2}\left( x f(x)\Big|_0^1 -\int_0^1 x f'(x) dx- x^2 f(x)\Big|_0^1 +\int_0^1 x^2f'(x) dx\right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1317)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1315: 
   1316: b) Since $g''\geq 0$,
 > 1317: \begin{eqnarray*}
   1318: J_n&=& \int_0^1\cos(2\pi nx) g(x)dx=-\frac{1}{2\pi n} \int_0^1 \sin(2\pi nx) g'(x)dx\\
-  1319: &=&\frac{1}{4\pi^2 n^2} \cos(2\pi n x) g'(x)\Big|_0^1 -\frac{1}{4\pi^2 n^2}\int_0^1 \underbrace{\cos(2\pi nx)}_{\leq 1} g''(x) dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1352)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1350: 
   1351: This follows from b): Given $f$ in a), put $g(x):=\int_0^x f(t)dt$.  Then $g''\geq 0$; hence $g$ is convex. Now, by partial integration, 
 > 1352: \begin{eqnarray*}
   1353: \int_0^1 g(x)\cos(2\pi nx)dx&=& g(x)\frac{\sin(2\pi nx)}{2\pi n}\Big|^1_0-\int_0^1 \frac{\sin(2\pi nx)}{2\pi n}g'(x)dx\\
-  1354: &=&-\int_0^1  \frac{\sin(2\pi nx)}{2\pi n} f(x)dx.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1524)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1522: $$\left(-\frac{1}{2}+i\frac{\sqrt 3}{2}\right)\;\left(3-i\sqrt 3\right)=2i\sqrt 3,$$
   1523: we obtain
 > 1524: \begin{eqnarray*}
   1525: f(\alpha z)&=& e^{(-3+\sqrt 3i)z}+e^{2i\sqrt 3 z}+1\\
-  1526: &=&e^{\sqrt 3iz}\left(e^{-3z}+e^{i\sqrt 3z}\right)+1\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1617)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1615: where $s_n,r_n\in I_m$.  Since $f(s_n)=1$ and $f(r_n)=0$, and $f$ is decreasing on $[ \frac{\frac{\pi}{3}+2m\pi}{\sqrt 3},\frac{\frac{4\pi}{3}+2m\pi}{\sqrt 3}]\;\supseteq\; [s_n,p_n]$, this proof is done by showing that $f(p_n)<0$.  Now, noticing that the cosinus term is negative, 
   1616: 
 > 1617: \begin{eqnarray*}
   1618: f(p_n)&=& 2e^{\sqrt 3(\frac{\pi}{2}+n\pi+\frac{1}{16})}\cos\left(\frac{\pi}{2}+\frac{1}{16}\right)+1\\
-  1619:  &\leq& 2e^{\sqrt 3(\frac{\pi}{2}+\frac{1}{16})}\cos\left(\frac{\pi}{2}+\frac{1}{16}\right)+1\sim-1.114587\dots.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1624)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1622:    In fact, $f$ is increasing on
   1623: $[\frac{\frac{4\pi}{3}+2m\pi}{\sqrt 3}, \frac{2\pi +2m\pi}{\sqrt 3}]\;\supseteq\; [q_n, s_n]$.  So,  by noticing that the cosinus term is negative,
 > 1624: \begin{eqnarray*}
   1625: f(q_n)&=&2e^{\sqrt 3(\frac{3\pi}{2}+(n-1)\pi-\frac{1}{16})}\cos\left(\frac{3\pi}{2}-\frac{1}{16}\right)+1\\
-  1626: & \leq&  2e^{\sqrt 3(\frac{3\pi}{2}-\frac{1}{16})}\cos\left(\frac{3\pi}{2}-\frac{1}{16}\right)+1\sim -391.97708\cdots
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1700)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1698: 
   1699: $\bullet$ We know that $|\cos z|^2= (\cos x)^2 +(\sinh y)^2$, where $z=x+iy$. In fact,
 > 1700: \begin{eqnarray*}
   1701: 4|\cos z|^2&=& |e^{i(x+iy)}+e^{-i(x+iy)}|^2=|e^{-y}e^{ix}+e^ye^{-ix}|^2\\
-  1702: &=&e^{-2y}+e^{2y} +2 {\rm Re}( e^{2ix})=2 \cosh (2y)+2\cos (2x)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1716)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1714: Next we use Rouch\'e's theorem for the rectangles $R_k:=\left[\frac{2k\pi}{\sqrt 3}, \frac{2(k+1)\pi}{\sqrt 3}\right]\times [-1,1]$, $k\in \N$.
   1715: If $x=\frac{2k\pi}{\sqrt 3}$ or  $x=\frac{2(k+1)\pi}{\sqrt 3}$, then 
 > 1716: \begin{eqnarray*}
   1717: |g(z)- 2\cos(\sqrt 3 z)|&=& e^{-3x}\leq 1<2  |\cos \sqrt 3 iy|=2(\sqrt {1+ \sinh^2(\sqrt 3 y)}=2 |\cos(\sqrt 3 z)| \\
-  1718: &\leq& |g(z)|+2 |\cos(\sqrt 3 z)|.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1722)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1720: 
   1721: If $|y|=1$, then 
 > 1722: \begin{eqnarray*}
   1723: |g(z)- 2\cos(\sqrt 3 z)|&=& e^{-3x}\leq 1< 2\sinh \sqrt 3\leq 2\sqrt{\cos^2 ({\sqrt 3}x)+\sinh^2 (\sqrt 3})\leq 2|\cos(\sqrt 3 z)|\\
-  1724: &\leq&|g(z)|+2|\cos(\sqrt 3 z)|.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1772)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1770:  
   1771: Due to the residue theorem 
 > 1772: \begin{eqnarray*}
   1773: L:=\lim_{N\to\infty}\frac{1}{2\pi i }\int_{C_N}  \frac{1}{z^6}\frac{f'(z)}{f(z)} dz&=&{\rm Res} \left( \frac{1}{z^6}\frac{f'}{f},0\right) +
-  1774: \sum_{\xi\in Z} {\rm Res} \left( \frac{1}{z^6}\frac{f'}{f}, \xi\right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1853)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1851:   
   1852:   We first note that for $z=x+iy$ with $x\geq 0$ and $|y|\leq 1$, $g$ is bounded by $8$ :
 > 1853:  \begin{eqnarray*}
   1854: |g(z)|&\leq& 2|\cos(\sqrt 3 z)|+ e^{-3x}= 2 (\sqrt{\cos^2 (\sqrt 3 x)+\sinh^2 (\sqrt 3 y)})+1\leq 2 (\sqrt{1+ \sinh^2\sqrt 3})+1\\
-  1855: &=& 2 \cosh(\sqrt 3) +1\leq  e^{\sqrt 3}+2\leq 8.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1860)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1858:  $$g'(z)=-2\sqrt 3 \sin(\sqrt 3 z)-3e^{-3z},$$
   1859:  and so
 > 1860: \begin{eqnarray*}
   1861: |g'(r_k)|&=&|-2\sqrt 3 \sin(\sqrt 3 r_k)+ 6 \cos(\sqrt 3 r_k)|\to  2 \sqrt 3\sim 3.4641\cdots.
-  1862: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1907)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1905:  For $n=2m$ even, it is sufficient to prove that  $p_n^*:=s_n-\frac{1}{16\sqrt 3}<r^*_n<s_n$,
   1906: where $s_n,r^*_n\in I_m=\left[\frac{2\pi m}{\sqrt 3},\frac{2\pi m+2\pi}{\sqrt 3}\right]$.  Since $h(s_n)=-1$ and $h(r^*_n)=0$, and $h$ is decreasing on $[ \frac{\frac{\pi}{3}+2m\pi}{\sqrt 3},\frac{\frac{4\pi}{3}+2m\pi}{\sqrt 3}]\;\supseteq\; [p_n^*,s_n]$, this is done by showing that $h^*(p_n)>0$.  Now, noticing that the cosinus term is positive, 
 > 1907: \begin{eqnarray*}
   1908: h^*(p_n^*)&=& 2e^{\sqrt 3(\frac{\pi}{2}+n\pi-\frac{1}{16})}\cos\left(\frac{\pi}{2}-\frac{1}{16}\right)-1\\
-  1909:  &\geq& 2e^{\sqrt 3(\frac{\pi}{2}-\frac{1}{16})}\cos\left(\frac{\pi}{2}-\frac{1}{16}\right)-1\sim 0.7029349\dots >0.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1915)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1913: $[\frac{\frac{4\pi}{3}+2m\pi}{\sqrt 3}, \frac{2\pi +2m\pi}{\sqrt 3}]\;\supseteq\; [s_n,q_n^* ]$. 
   1914:  So,  by noticing that the cosinus term is positive,
 > 1915: \begin{eqnarray*}
   1916: h^*(q^*_n)&=&2e^{\sqrt 3(\frac{3\pi}{2}+(n-1)\pi+\frac{1}{16})}\cos\left(\frac{3\pi}{2}+\frac{1}{16}\right)-1\\
-  1917: & \geq&  2e^{\sqrt 3(\frac{3\pi}{2}+\frac{1}{16})}\cos\left(\frac{3\pi}{2}+\frac{1}{16}\right)-1\sim 486.971814\cdots
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1972)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1970:   One has to transform this into a telescoping series. 
   1971:   
 > 1972:   \begin{eqnarray*}
   1973:   \frac{\tanh 2^n}{\tanh 2^{n-1}}&=& \frac{\sinh 2^n}{\sinh 2^{n-1}}\; \frac{\cosh 2^{n-1}}{\cosh 2^n}=
-  1974:   \frac{2\; \sinh 2^{n-1}\cosh 2^{n-1}}{\sinh 2^{n-1}}\; \frac{\cosh 2^{n-1}}{\cosh 2^n}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1979)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1977: 
   1978:   Hence
 > 1979:   \begin{eqnarray*}
   1980: \frac{1}{2^n} \log\left(\frac{\tanh 2^n}{\tanh 2^{n-1}}\right)&=&\frac{1}{2^n}\Big( \log 2 +2\log(\cosh 2^{n-1})-\log\cosh 2^n\Big)\\
-  1981: &=&\frac{ \log 2}{2^n} + \frac{1}{2^{n-1}}\log(\cosh 2^{n-1})-\frac{1}{2^n}\log(\cosh 2^{n}).
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1988)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1986:     
   1987:  Consequently the series below converges and 
 > 1988:  \begin{eqnarray*}
   1989: S&=&\sum_{n=1}^\infty \frac{\log 2}{2^n} +\sum_{n=1}^\infty  \left(\frac{1}{2^{n-1}}\log(\cosh 2^{n-1})-\frac{1}{2^n}\log(\cosh 2^{n})\right)\\
-  1990: &=&1\cdot \log 2  +\log\cosh 1-\lim_n \e_n=\log 2+\log\left(\frac{e^1+e^{-1}}{2}\right)-1=\log (e^2+1)-2.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2153)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2151:  
   2152:  Since on $\gamma_j$  for $j=1,3$,  we have $|u_r(\gamma_j(t))|\leq e^{t N\log r}\leq 1$, we see that
 > 2153: \begin{eqnarray*}
   2154: \left|\int_{\gamma_1} F_{m,r}(z)dz\right| &\leq &\int_0^1 \frac{|s_N(1+it)|^m \;|e^{-s_N(1+it)/a}|\,|u_r(s_N(1+it))|}
-  2155: {|1+e^{-s_N(1+it)}|} s_N dt\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2159)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2157: \end{eqnarray*}
   2158: 
 > 2159: \begin{eqnarray*}
   2160: \left|\int_{\gamma_3} F_{m,r}(z)dz\right| &\leq &\int_0^1 \frac{|s_N(-1+it)|^m \;|e^{-s_N(-1+it)/a}| \,|u_r(s_N(-1+it))|
-  2161: }{|1+e^{-s_N(-1+it)}|} s_N dt\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2173)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2171: $$N^{m+1} e^{N\log r}= e^{(m+1)\log N  +N\log r}\to 0 \;{\rm as}\; N\to\infty.$$
   2172: Hence
 > 2173: \begin{eqnarray*}
   2174: \left|\int_{\gamma_2} F_{m,r}(z)dz\right| &\leq &\int_{-1}^1 \frac{|s_N(i+t)|^m |e^{-s_N (t+i)/a}| \,|u_r(s_N(i+t))|
-  2175: } {|1+ e^{-s_N(t+i)}|} s_Ndt\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2185)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2183: By letting $N\to\infty$, we conclude that
   2184: 
 > 2185: \begin{eqnarray*}
   2186: J_r(a)=2\pi i  \left( -\frac{\pi^2}{6a} \, \sum_{n=0}^\infty{\rm Res}\;(F_{0,r}, z_n) 
-  2187:   -\frac{1}{2a}  \,\sum_{n=0}^\infty{\rm Res}\;(F_{2,r}, z_n)       \right).
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2194)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2192: $$
   2193: Hence
 > 2194: \begin{eqnarray*}
   2195: {\rm Res}\;(F_{m,r}, z_n) &=&z_n^m \;\frac{e^{-z_n/a}}{-e^{-z_n}} u_r(z_n)= -(i\pi(1+2n))^m\frac{e^{-i\pi(1+2n)/a}}{e^{-i\pi(1+2n)}}  u_r(z_n)\\
-  2196:  %- e^{z_n(1-\frac{1}{a})}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2201)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2199: 
   2200: Let $\zeta:=e^{-i\pi/a}$. Then
 > 2201: \begin{eqnarray*}
   2202: J_r(a)
-  2203: &=&2\pi i  \left( -\frac{\pi^2}{6a}   \sum_{n=0}^\infty ( \sqrt  r\zeta)^{2n+1}  
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2228)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2226:  $$
   2227:  Consequently, by using that $\zeta^2+6+\ov{\zeta}^2= (\zeta-\ov{\zeta})^2 +8$,
 > 2228:  \begin{eqnarray*}
   2229: I&=&2\pi i  \left( -\frac{\pi^2}{6a}  \frac{\zeta}{1-\zeta^2}+\frac{\pi^2}{2a}  \,\frac{\zeta^2+6+\ov{\zeta}^2}{(\ov{\zeta}-\zeta)^3}\right)\\
-  2230: &=&2\pi i  \left( -\frac{\pi^2}{6a}  \frac{1}{\ov{\zeta}-\zeta}+\frac{\pi^2}{2a}  \,\frac{(\zeta-\ov{\zeta})^2+8}{(\ov{\zeta}-\zeta)^3}\right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2288)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2286:  $$
   2287:  Hence
 > 2288:  \begin{eqnarray*}
   2289: \exp\left(\begin{matrix}
-  2290:   A& B\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2366)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2364:  
   2365:  This is very easy, though.
 > 2366:  \begin{eqnarray*}
   2367:  P(x)&=&\prod_{k=1}^n \left( x+\co{\sin^2\left(\frac{k\pi}{2n}\right)}\right)= \prod_{k=1}^n \left( x+\co{\frac{1}{2}
-  2368:  \left(1-\cos\left(\frac{k\pi}{n}\right)\right)}\right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2431)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2429:  i) Let $z(t)=-N-it$, where $0\leq t\leq N$. Then for $n\geq N_0$,
   2430:  
 > 2431:  \begin{eqnarray*}
   2432:  |\tanh z(t)|&=& \left|\frac{e^{-2\pi N}e^{-2i \pi t}-1}{e^{-2\pi N}e^{-2i\pi t}-1}\right|\leq \frac{1+e^{-2\pi N}}{1-e^{-2\pi N}}\leq 2.
-  2433:  \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2437)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2435: 
   2436: 
 > 2437: \begin{eqnarray*}
   2438: |0.5+iz(t)|^x&=& |0.5-iN+t|^x\geq N^x.
-  2439: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2442)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2440:  
   2441:  ii) Let $z(t)=N-it$, where $0\leq t\leq N$. Then for $n\geq N_0$,
 > 2442:  \begin{eqnarray*}
   2443:   |\tanh z(t)|&=& \left|\frac{e^{2\pi N}e^{-2i\pi t}-1}{e^{2\pi N}e^{-2i\pi t}+1}\right|\leq \frac{e^{2\pi N}+1}{e^{2\pi N}-1}\leq 2.
-  2444:   \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2447)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2445:   Moreover
   2446:   
 > 2447:   \begin{eqnarray*}
   2448:   |0.5+iz(t)|^x&=&|0.5 +iN+t|^x\geq  N^x.
-  2449: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2452)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2450:   
   2451:   iii) Let $z(t)=t -iN$ where $-N\leq t\leq N$. Then
 > 2452:   \begin{eqnarray*}
   2453:    |\tanh z(t)|&=&\left|\frac{e^{2\pi t} e^{-2i\pi N}-1}{e^{2\pi t} e^{-2i\pi N}+1}\right|= \frac{e^{2\pi t}-1}{e^{2\pi t}+1}\leq 1.
-  2454: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2457)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2455: 
   2456: Moreover
 > 2457: \begin{eqnarray*}
   2458: |0.5+iz(t)|^x&=&|0.5+it+N|^x\geq (N+0.5)^x\geq N^x.
-  2459: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2462)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2460: 
   2461: Since $x>1$, we conclude that for $N\geq N_0$
 > 2462: \begin{eqnarray*}
   2463: \left|\sum_{j=1}^3\int_{\Gamma_N^j} f(z)dz\right|&\leq&\sum_{j=1}^2\int_0^N |f(z_j(t))| dt +\int_{-N}^N|f(z_3(t))| dt\\
-  2464: &\leq&2 \cdot  \frac{2N}{N^x} +  2N\frac{1}{N^x}=\frac{6}{N^{x-1}}\to 0 \; \text{as $N\to \infty$.}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2468)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2466: 
   2467: We conclude that 
 > 2468: \begin{eqnarray*}
   2469: \frac{i}{2}\int_{-\infty}^\infty \frac{\tanh (\pi t)}{(0.5+it)^x}\;dt=-\frac{i}{2} 2\pi i \sum_{k=0}^\infty \frac{1}{\pi }\; \frac{1}{(1+k)^x}=\zeta(x).
-  2470: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2514)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2512:   
   2513:  Now the partial fraction decomposition of $1/p(n)$ reads as
 > 2514:  \begin{eqnarray*}
   2515: \frac{1}{an^2+bn+c}&= & \frac{1}{a(n-r_1)(n-r_2)}= \frac{1}{a(r_1-r_2)}\left(\frac{1}{n-r_1} -\frac{1}{n-r_2}\right).
-  2516:  \end{eqnarray*} 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2518)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2516:  \end{eqnarray*} 
   2517:  Hence, for $n\geq n_0>1$ and $n_0$ chosen so that $n-r_j-1> 0$, 
 > 2518:  \begin{eqnarray*}
   2519:  S:=\sum_{n=n_0}^\infty \frac{1}{an^2+bn+c}&=&\frac{1}{a(r_2-r_1)}\sum_{n=n_0}^\infty \int_0^1 (x^{n-r_2-1}- x^{n-r_1-1})dx\\
-  2520:  &=& \frac{1}{ak}\sum_{n=n_0}^\infty\int_0^1 x^{n-1} ( x^{-r_2}-x^{-r_1}) dx
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2581)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2579:  \end{figure}
   2580:  
 > 2581: \begin{eqnarray*}
   2582: S_n&=&\sum_{k=0}^{2n}\sum_{j=k}^{2k+1} {2n+2\choose 2k+1}\;{n+1\choose 2k-j}=
-  2583: \sum_{k=0}^{2n}\left[{2n+2\choose 2k+1}\sum_{j=k}^{2k}{n+1\choose 2k-j}\right]\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2623)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2621: 
   2622: Also, 
 > 2623: \begin{eqnarray*}
   2624: \dis 2^{n+1}&=&(1+1)^{n+1}= \sum_{j=0}^{n+1} {n+1\choose j} =\sum_{j=0}^k {n+1\choose j} + \sum_{j=k+1}^{n+1} {n+1\choose j} \\
-  2625: &=&\sum_{j=0}^k {n+1\choose j} + \sum_{j=k+1}^{n+1} {n+1\choose n+1-j}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2629)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2627: \end{eqnarray*}
   2628: Hence
 > 2629: \begin{eqnarray*}
   2630: S_n&=&\sum_{k=0}^{n}{2n+2\choose 2k+1}\sum_{m=0}^k{n+1\choose m}\buildrel=_{k=n-j}^{}
-  2631: \sum_{j=0}^n{2n+2\choose 2n-2j+1} \sum_{i=0}^{n-j}{n+1\choose i}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2638)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2636: 
   2637: Addition yields
 > 2638: \begin{eqnarray*}
   2639: 2S_n&=&\sum_{k=0}^{n}{2n+2\choose 2k+1}\sum_{j=0}^k{n+1\choose j}+
-  2640: \sum_{k=0}^n{2n+2\choose 2k+1} \sum_{i=0}^{n-k}{n+1\choose i}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2665)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2663: 
   2664: Just note that
 > 2665: \begin{eqnarray*}
   2666: R_n&=&\sum_{k=0}^{2n}\sum_{j=k}^{2k} {2n+2\choose 2k+1}\;{n+1\choose 2k-j}=
-  2667: \sum_{k=0}^{2n}\sum_{j=k}^{2k+1} {2n+2\choose 2k+1}\;{n+1\choose 2k-j}=S_n
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2707)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2705: $f_r(x)$ is similar to $x^{r-1}$, where $r-1>-1$.
   2706: We make the change of the variable $x\to 1/y$. Then
 > 2707: \begin{eqnarray*}
   2708: I(r)&=& \int_0^\infty \frac{y^{1-r}}{(1+y^{-2})(1+y^{-2r})}\frac{dy}{y^2}=\int_0^\infty \frac{y^{1+r}}{(1+y^2)(1+y^{2r})}\;dy\\
-  2709: &=&\int_0^\infty\frac{(y^2+1-1)y^{r-1}}{(1+y^2)(1+y^{2r})}\;dy=\int_0^\infty \frac{y^{r-1}}{1+y^{2r}}\;dy-I(r).
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2842)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2840: $$(e^{2^n}+1)(e^{2^n}-1)=e^{2^{n+1}}-1,$$
   2841: we obtain
 > 2842: \begin{eqnarray*}
   2843: S&=&2\sum_{n=0}^\infty  \frac{1}{e^{2^n}-e^{-2^n}}=2\sum_{n=0}^\infty \frac{e^{2^n}\co{+1-1}}{e^{2^{n+1}}-1}\\
-  2844: &=&2\sum_{n=0}^\infty \left(\frac{1}{e^{2^n}-1}-\frac{1}{e^{2^{n+1}}-1}\right)=\frac{2}{e-1}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2851)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2849: $$\frac{1}{\sinh x}=\coth(x/2)-\coth x.$$
   2850: Then
 > 2851: \begin{eqnarray*}
   2852: S&=&\sum_{n=0}^\infty\left(\coth (2^{n-1})-\coth 2^n\right)=\coth(1/2)-1=\frac{2e^{-1/2}}{e^{1/2}-e^{1/2}}=\frac{2}{e-1}.
-  2853: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2895)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2893: Our tool will be the fact that for $\dis H_n:=\sum_{j=1}^n \frac{1}{j}$ we have $H_n-\log n \searrow \gamma$, where $\gamma$ is the Euler-Mascheroni constant.
   2894: First note that
 > 2895: \begin{eqnarray*}
   2896: \sum_{j=1}^\infty \frac{N}{(N+j)^2}&\leq &\sum_{j=1}^\infty \frac{N}{(N+j)(N+j-1)}\\
-  2897: &=&N\sum_{j=1}^\infty\Big( \frac{1}{N+j-1}- \frac{1}{N+j}\Big)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2906)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2904:  we obtain for 
   2905: %$0<x\leq 1/N$
 > 2906: \begin{eqnarray*}
   2907: \sum_{n=1}^\infty \frac{|\sin (nx)|}{n^2}&\leq& \sum_{n=1}^{N} \frac{nx}{n^2}+\sum_{n= N+1}^\infty \frac{1}{n^2}
-  2908: \leq x\;\sum_{n=1}^{N} \frac{1}{n}+\frac{1}{N}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2913)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2911: 
   2912: Hence, for $x$ small enough, $N$ is big, and so
 > 2913: \begin{eqnarray*}
   2914: H(x):=\frac{\sum_{n=1}^\infty \frac{|\sin (nx)|}{n^2}}{x\log (1/x)}&\leq \dis \frac{1}{\log(1/x)}+\frac{\gamma}{\log(1/x)} +
-  2915: \frac{\log \left\lfloor \frac{1}{x}\right\rfloor}{\log(1/x)}+\frac{1}{x\log(1/x) \left\lfloor \frac{1}{x}\right\rfloor}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2930)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2928: 
   2929: Hence
 > 2930: \begin{eqnarray*}
   2931: \sum_{n=1}^\infty \frac{|\sin (nx)|}{n^2}&\geq& \frac{\sin\e}{\e} \sum_{n=1}^N \frac{nx}{n^2}= 
-  2932: x\;  \frac{\sin\e}{\e}\sum_{n=1}^N \frac{1}{n}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2938)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  2936: 
   2937: We deduce that for $0<x<\e$
 > 2938: \begin{eqnarray*}
   2939: H(x)&\geq &\dis \frac{\sin\e}{\e}\; \frac{\log \left\lfloor\frac{\e}{x}\right\rfloor }{\log(1/x)}\geq \frac{\sin\e}{\e}\; 
-  2940: \frac{\log(\frac{\e}{x}-1)}{\log(1/x)}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3006)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3004: $$\frac{1}{1-2x\cos a +x^2}=\frac{A}{x- e^{ia}}- \frac{\ov A}{x- e^{-ia}},$$
   3005: where $\dis A= -\frac{i}{2\sin a}$. Hence, in that case,
 > 3006: \begin{eqnarray*}
   3007: I(a)&=&\dis 2 {\rm Re}\; \Big(\frac{\pi}{2}\; A \; \int_0^1 \frac{(\log x)^2}{x-e^{ia}}\;dx\Big)\\
-  3008: &=& \frac{\pi}{2\sin a}\;{\rm Im}\; \int_0^1 \frac{(\log x)^2}{x-e^{ia}}\;dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3104)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3102: 
   3103: {\bf Proof} 
 > 3104: \begin{eqnarray*}
   3105: G\Big(\sum_{j=1}^n t_j x_j, \sum_{j=1}^n t_jy_j\Big)&=&f\Big(\sum_{j=1}^n t_j x_j+ g\Big(\sum_{j=1}^n t_j y_j\Big)\Big)\\
-  3106: &\geq &f\Big(\sum_{j=1}^n t_j x_j+\sum_{j=1}^n t_j g(y_j)\Big)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3112)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3110: \end{eqnarray*}
   3111: Now applying this, we get
 > 3112: \begin{eqnarray*}
   3113: H(\sum_{j=1}^n t_j Q_j)&=&f\Big( \sum_{j=1}^n t_j x_j + g\Big(\sum_{j=1}^n t_jy_j+h(\sum_{j=1}^n t_jz_j)\Big)\Big)\\
-  3114: &\geq&f\Big( \sum_{j=1}^n t_j x_j + \sum_{j=1}^n t_j g(y_j+h(z_j))\Big)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3184)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3182: 
   3183: To this  end, we first note that $x^a\leq (1-x)^a$ if and only if $0\leq x\leq 1/2$. Hence, by substituting $x\to 1-x$ in the second integral
 > 3184: \begin{eqnarray*}
   3185: I&=&\int_0^{1/2} \frac{\log\big((1-x)^a-x^a\big)}{x}\;dx + \int_0^{1/2} \frac{\log\big( x^a-(1-x)^a\big)}{x}\;dx\\
-  3186: &=&\int_0^{1/2} \frac{\log\big((1-x)^a-x^a\big)}{x}\;dx +\int_0^{1/2} \frac{\log\big((1-x)^a-x^a\big)}{1-x}\;dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3193)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3191: Next we substitute $x/(1-x)=y$. Equivalently, $x=y/(1+y)$. Note that $0\to 0$ and $1/2\to 1$, $dx= \frac{1}{(1+y)^2}dy$ and
   3192: $1-x=\frac{1}{1+y}$. Hence
 > 3193: \begin{eqnarray*}
   3194: I&=& \int_0^1 \frac{\log(1-y^a)-a\;\log (1+y) }{\frac{y}{(1+y)^2}}\; \frac{1}{(1+y)^2}\; dy.
-  3195: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3208)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3206: 
   3207: 
 > 3208: \begin{eqnarray*}
   3209: I&=&0+ a\int_0^1  \left( \frac{x^{a-1}}{1-x^a} + \frac{1}{1+x}\right)\;\log x \; dx\\
-  3210: &=& a\;\int_0^1\left( \sum_{n=0}^\infty x^{a-1} x^{na} + \sum_{n=0}^\infty (-1)^n x^n\right)\; \log x\; dx.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3224)
+  error: \begin{eqnarray}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3222:  Hence
   3223:  
 > 3224: \begin{eqnarray}\label{werte1}
   3225: J/a&=&-\frac{1}{a^2} \sum_{n=0}^\infty \frac{1}{(n+1)^2} +\sum_{n=0}^\infty (-1)^{n +1} \frac{1}{(n+1)^2}\\
-  3226: &=& -\frac{1}{a^2}\; \frac{\pi^2}{6} - \frac{\pi^2}{12}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3269)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3267: Now  we "linearize" the trigonometric powers: using
   3268: $\sin^2x=(1/2)(1-\cos 2x)$, we obtain
 > 3269: \begin{eqnarray*}
   3270: J&=&\frac{1}{2} \int_{-\infty}^\infty \frac{\big(x^2-\frac{1}{2}+ \frac{1}{2} \cos(2x)\big)^n}{x^{2n+2}}\;dx\\
-  3271: &=& \frac{1}{2} \int_{-\infty}^\infty \frac{1}{x^{2n+2}}\; \sum_{j=0}^n  {n \choose j}\frac{1}{2^j}   \Big(x^2-\frac{1}{2}\Big)^{n-j}\;\cos^j (2x)\; dx.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3367)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3365: 
   3366: Now for $\e>0$, choose $\delta$ so small that $|g(x)-g(1/2)|<\e$ for $|x-1/2|\leq \delta $. Then
 > 3367: \begin{eqnarray*}
   3368: \frac{t}{2^t}\int_0^1  \frac{g(x)}{x^t+(1-x)^t}\;dx&\leq & \frac{t}{2^t}\int_{|x-1/2|\leq \delta} \frac{g(1/2)+\e}{x^t+(1-x)^t}\; dx+
-  3369: m_t\int_{|x-1/2|>\delta}g(x)\; dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3495)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3493: The case for negative arguments follows from the observation that if $f$ is a solution to (\ref{equ}), then the function
   3494: $g$ given by $g(x)=-f(-x)$ is a solution, too:
 > 3495: \begin{eqnarray*}
   3496: g(g(x))-(a+b)g(x)+ab x&=&-f(-f(-x))+(a+b) f(-x) +abx\\
-  3497: & =&-\bigg(f(f(-x))-(a+b)f(-x)+ab (-x)\bigg)=0.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3543)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3541: To see this, 
   3542: we split the integral into two parts and use two different change of variables:
 > 3543: \begin{eqnarray*}
   3544: I_n&=&\frac{n}{2^n}\int_0^{1/2} \underbrace{\frac{g(x)}{x^n+(1-x)^n}\;dx}_{x=:\frac{1}{2}-\frac{s}{2n}}
-  3545: + \frac{n}{2^n}\int_{1/2}^{1} \underbrace{\frac{g(x)}{x^n+(1-x)^n}\;dx}_{x=:\frac{1}{2}+\frac{s}{2n}}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3559)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3557: 
   3558: Hence, as $n\to\infty$,  
 > 3559: \begin{eqnarray*}
   3560: \lim_{n\to\infty} I_n&=&\frac{1}{2} 2 g(1/2)\int_0^\infty\frac{ds}{e^{-s}+e^s}\;ds\\
-  3561: &=& g(1/2)\int_0^\infty \frac{e^s}{1+(e^s)^2}\;ds\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3607)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3605: $4 xe^{-x}$.
   3606: Hence $F'(s)=G(s)$. Moreover, by considering for $x>0$ the geometric series for $(1-e^{-x})^{-1}$,
 > 3607: \begin{eqnarray*}
   3608: G(s)&=& -\int_0^\infty \frac{e^{-(s+1)x}}{1-e^{-x}}(\cos x-1)\;dx=\int_0^\infty \sum_{k=0}^\infty e^{-(s+1+k)x} (1-\cos x)\;dx.
-  3609: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3614)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3612: $$\int_0^\infty e^{-ax}\cos xdx=\frac{a}{a^2+1},$$
   3613: we obtain
 > 3614: \begin{eqnarray*}
   3615: G(s)&=&\sum_{k=0}^\infty \int_0^\infty e^{-(s+1+k)x} (1-\cos x)\;dx=\sum_{k=0}^\infty\left( \frac{1}{s+1+k}-\frac{s+1+k}{(s+k+1)^2 +1}\right)\\
-  3616: &\buildrel=_{}^{n=k+1}&\sum_{n=1}^\infty \frac{1}{(s+n)^3 +(s+n)}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3619)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3617: \end{eqnarray*}
   3618: The convergence being absolut and uniform on $[0,\infty[$ (a majorant is given by $\sum_{n=1}^\infty n^{-3}$), we can integrate termwise to re-obtain $F$. Note that a primitive $P$ of $G$ on $[0,\infty[$ is given by
 > 3619: \begin{eqnarray*}
   3620: P(s)&=&\sum_{n=1}^\infty \int \frac{1}{(s+n)^3 +(s+n)}ds =\sum_{n=1}^\infty \log \frac{s+n}{\sqrt{(s+n)^2+1}}\\
-  3621: &=&-\frac{1}{2}\sum_{n=1}^\infty\log\frac{(s+n)^2+1}{(s+n)^2}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3658)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3656: First we develop for $x>0$ the integrand into a double, absolutely convergent series (so this is independent of the  arrangement):
   3657: 
 > 3658: \begin{eqnarray*}
   3659: g(x):= \frac{\cos x -1}{x(e^x-1)}=\frac{\cos x-1}{x} \frac{e^{-x}}{1-e^{-x}}&=&\sum_{n=1}^\infty\frac{(-1)^n}{(2n)!}x^{2n-1}\; 
-  3660:  \sum_{k=1}^\infty e^{-kx}=\sum_{k=1}^\infty \sum_{n=1}^\infty\underbrace{\frac{(-1)^n}{(2n)!}x^{2n-1}\; e^{-kx}}_{:=a_{kn}}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3685)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3683: $$\int_0^\infty x^me^{-kx}dx=m! / k^{m+1}.$$
   3684: Hence
 > 3685: \begin{eqnarray*}
   3686: &&\sum_{k=1}^\infty\sum_{n=1}^\infty  \frac{(-1)^n}{(2n)! }\int_0^\infty 
-  3687: x^{2n-1}\; e^{-kx}\;dx=\sum_{k=1}^\infty\sum_{n=1}^\infty  \frac{(-1)^n}{(2n)! }\frac{(2n-1)!}{k^{2n}}=\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3782)
+  error: \begin{eqnarray}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3780:  $w(x)< 2$ for each $x>0$.  Hence,
   3781: for $x>0$,
 > 3782: \begin{eqnarray}\label{ungl}
   3783: w'(x)&=&\frac{x y'(x)-y(x)}{x^2}\geq \frac{1}{x}\left(\frac{1}{2-w(x)}-w(x)\right)\nonumber\\
-  3784: &=&\frac{1}{x}\cdot\frac{(1-w(x))^2}{2-w(x)}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3846)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3844: $$p(x)=ax(x^2-1).$$ 
   3845: Then
 > 3846: \begin{eqnarray*}
   3847: I:=\int_0^1f'p\; dx&=& fp\big|^1_0-\int_0^1 f (3ax^2-a)dx=-3a+a=-2a
-  3848: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3911)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3909: {\bf Case 2}  $f\in C(\R)$. Let $F(x):=\int_0^x f(t)dt$ be  a primitive of $f$. Then with 
   3910: $$G(x,y):=F(x+y)-F(x)-F(y)$$
 > 3911: \begin{eqnarray*}
   3912: G(x,y)&=& \int_0^{x+y} f(t) dt -\int_0^x f(t) dt-\int_0^y f(t)dt\\
-  3913: &\buildrel=_{t=y+s}^{}&\int_{-y}^x f(y+s) ds -\int_0^x f(t) dt-\int_0^y f(t)dt\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3952)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3950: Now let $h(z):=|f(z)|^2=(f \ov f)(z)$. Since  $f_x=f'$ and $ f_y=if_x=if'$, we see that $f_{xy}=(f')_y=i(f')_x=if''$. Moreover
   3951: $(\ov f)_x=\ov {f_x}$. Hence
 > 3952: \begin{eqnarray*}
   3953: h_{xy}&=&(f_x\ov f +f \ov f_x)_y= f_{xy} \ov f+f_x \ov f_{y} +f_y\ov f_x+f \ov f_{xy}\\
-  3954: &=& 2{\rm Re}( f_{xy} \ov f)+0=2{\rm Re}(i f'' \ov f)= -2{\rm Im} (f'' \ov f).
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3966)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3964: It is now easy to check that these are  solutions indeed (wlog for $k=1$):
   3965: 
 > 3966: \begin{eqnarray*}
   3967: \sin(x+iy)&=&\cos(iy)\sin x +\cos x\sin(iy)\\
-  3968: &=&\frac{e^{-y}+e^y}{2}\sin x -i  \cos x\frac{e^{-y}-e^y}{2}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3973)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  3971: 
   3972: 
 > 3973: \begin{eqnarray*}
   3974: |\sin z|^2&=& \sin^2 x \cosh^2y +\cos^2 x\sinh^2y\\
-  3975: &=& \sin^2 x \cosh^2y +(1-\sin^2 x)\sinh^2y\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6090)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6088: 
   6089: Now, for $0\leq x<1$,  
 > 6090: \begin{eqnarray*}
   6091: \frac{(1-x)(\log x)^2}{1+x^3} &=&\sum_{j=0}^\infty (-1)^j (x^3)^j (\log x)^2-\sum_{j=0}^\infty (-1)^j x(x^3)^j (\log x)^2\\
-  6092: &=& \sum_{j=0}^\infty (-1)^j x^{3j}(\log x)^2  -  \sum_{j=0}^\infty (-1)^j x^{3j+1}(\log x)^2.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6096)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6094: 
   6095: Note that we have $\int\sum=\sum\int$, since $\left|\sum_{n=1}^N (-1)^n x^{3n}\log^2 x\right|\leq \frac{\log^2x}{1+x^3}$ is an integrable majorant of both sums. Hence
 > 6096: \begin{eqnarray*}
   6097: I&=&2\sum_{n=0}^\infty   \frac{(-1)^n}{(3n+1)^3}-2\sum_{n=0}^\infty   \frac{(-1)^n}{(3n+2)^3}=: 2(T_1-T_2).
-  6098: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6151)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6149: Since the moduli of the  partial sums $\sum_{k=0}^N  e^{-nx} (-1)^k e^{-2kx} $ are bounded by the $L^1([0,\infty[)$-function $2e^{-nx}$,
   6150:  we have $\sum\int=\int\sum$, and so
 > 6151: \begin{eqnarray*}
   6152: S_n:=\frac{1}{n}-\frac{1}{n+2}+\dots &=& \sum_{k=0}^\infty \frac{(-1)^k}{n+2k}= \sum_{k=0}^\infty (-1)^k \int_0^\infty e^{-(n+2k)x} dx\\
-  6153: &=&\int_0^\infty e^{-nx}\;\sum_{k=0}^\infty (-1)^k e^{-2kx} dx= \int_0^\infty \frac{e^{-nx}}{1+e^{-2x}}dx.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6166)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6164:  by the $L^1(]0,\infty[)$-function $|\log(1-e^{-x})|$, we have $\sum\int=\int\sum$. Hence
   6165: 
 > 6166: \begin{eqnarray*}
   6167: B&=& \sum_{n=1}^\infty\frac{1}{n}\;  \int_0^\infty \frac{e^{-nx}}{1+e^{-2x}}dx=
-  6168: \int_0^\infty \frac{1}{1+e^{-2x}}\sum_{n=1}^\infty \frac{1}{n} e^{-nx} dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6180)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6178: The clue is to use that $\log(1-x)=-\int_0^1 \frac{x}{1-xt}\,dt$. Hence, by using Fubini's theorem for positive functions,
   6179: 
 > 6180: \begin{eqnarray*}
   6181: - \int_0^1 \frac{\log(1-x)}{x(1+x^2)}\;dx&=&-\int_0^1 \left( \frac{\log(1-x)}{x} - \frac{x\log(1-x)}{1+x^2}\right)dx\\
-  6182: &=&-\int_0^1 \frac{\log s}{1-s}ds -\int_0^1\left( \int_0^1\frac{x ^2 }{(1-xt)(1+x^2)} dt\right)dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6230)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6228: But $I_n-J_n\to 0$. In fact, 
   6229: 
 > 6230: \begin{eqnarray*}
   6231: I_n-J_n&=&\int_0^1 \frac{(1-x)^{2n}(1+x)^n -(1-x)^n}{x}dx\\
-  6232: &=&\int_0^1\frac{(1-x)^n\big( (1-x^2)^n-1\big)}{x} dx=:\int_0^1 L_n(x)dx.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6235)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6233: \end{eqnarray*}
   6234: and, since $0\leq x^{2j-1}\leq x^j$, 
 > 6235: \begin{eqnarray*}
   6236: \frac{\left|(1-x^2)^n-1\right|}{x}&=&\left|\sum_{j=1}^n \binom{n}{j}(-1)^j x^{2j-1}\right|\leq\co{ \sum_{j=1}^n  \binom{n}{j} x^j\leq (1+x)^n.}
-  6237: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6285)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6283: To this end, we first use that with $a_{k,n}:= (n^2+k^2)^{-1/2}$ and the substitution $x=a_{k,n}u$
   6284:  
 > 6285: \begin{eqnarray*}
   6286: S_n&=& \sum_{k=1}^n \int_0^{a_{k,n}}\frac{dx}{\sqrt{1+x^2}}=  \sum_{k=1}^n \int_0^1 \frac{a_{k,n}}{\sqrt{1+a_{k,n}^2 u^2}\;}du=
-  6287: \sum_{k=1}^n \int_0^1 \frac{du}{\sqrt{n^2+k^2+u^2}}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6291)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6289: \end{eqnarray*}
   6290: Next we use the estimates
 > 6291: \begin{eqnarray*}
   6292: 1+(k/n)^2+(u/n)^2&\leq& 1+(k/n)^2+(1/n)^2\leq 1 +\big((k+1)/n\big)^2\\
-  6293: 1+(k/n)^2+(u/n)^2&\geq& 1 +(k/n)^2.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6397)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6395: 
   6396: we obtain
 > 6397: \begin{eqnarray*}
   6398:  \cos(\cos t)\;\cosh(\sin t)&=& \cos(\cos t)\;\cos(i\sin t)\\
-  6399:  &=&\cos\left(\frac{e^{it}+e^{-it}}{2}\right)\; \cos\left(\frac{e^{it}-e^{-it}}{2}\right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6403)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6401: \end{eqnarray*}
   6402: and
 > 6403: \begin{eqnarray*}
   6404:  \sin(\cos t)\;\cosh(\sin t)&=& \sin(\cos t)\;\cos(i\sin t)\\
-  6405:  &=&\sin\left(\frac{e^{it}+e^{-it}}{2}\right)\; \cos\left(\frac{e^{it}-e^{-it}}{2}\right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6411)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6409: Now, by Cauchy's residue theorem in complex analysis,
   6410: 
 > 6411: \begin{eqnarray*}
   6412: I_1&=& \frac{1}{2}\;\int_0^{2\pi} \left(\cos(e^{it})+\cos(e^{-it})\right)\;dt\buildrel=_{}^{z=e^{it}} 
-  6413:  \frac{1}{2i}\;\ointctrclockwise \frac{\cos z+\cos (1/z)}{z}\;dz\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6419)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6417: and
   6418: 
 > 6419: \begin{eqnarray*}
   6420: I_2&=& \frac{1}{2}\;\int_0^{2\pi} \left(\sin(e^{it})+\sin(e^{-it})\right)\;dt\buildrel=_{}^{z=e^{it}} 
-  6421:  \frac{1}{2i}\;\ointctrclockwise \frac{\sin z+\sin (1/z)}{z}\;dz\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6473)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6471: $$ |\cos x-\cos (nx)|= 2 |\sin \left((n-1)(x/2)\right)\; \sin \left((n+1)(x/2)\right)|.$$
   6472: Hence
 > 6473: \begin{eqnarray*}
   6474: q(x):=2 |\sin(n-1)(x/2)\sin(n+1)(x/2)|&=&2\left(\frac{2}{\pi}-\frac{4}{\pi}\;\sum_{k=1}^\infty \frac{\cos k(n-1)x}{4k^2 -1}\right)\;
-  6475: \left(\frac{2}{\pi}-\frac{4}{\pi}\;\sum_{k=1}^\infty \frac{\cos k(n+1)x}{4k^2 -1}\right).
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6482)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6480: we deduce from the fact
   6481: that  the Fourier series  (\ref{fouriersin}) is  absolutely and uniformly convergent,  that for $n\geq 2$
 > 6482: \begin{eqnarray*}
   6483: A_n=\int_0^\pi q(x) dx&=&\frac{8}{\pi^2}\pi+\frac{32}{\pi^2} \sum_{j,k=1}^\infty \int_0^\pi \frac{\cos j(n-1)x\;\cos k(n+1)x}{(4k^2-1)(4j^2-1)}dx\\
-  6484: &=& \frac{8}{\pi }+\frac{16\pi }{\pi^2}\sum_{j,k=1\atop j(n-1)=k(n+1)}^\infty \frac{1} {(4k^2-1)(4j^2-1)}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6493)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6491: In fact, if $n$ is even, then the odd numbers $n-1$ and $n+1$ are relatively prime, since otherwise a joint divisor must also divide $2=(n+1)-(n-1)$.  Hence $k=m(n-1)$ and $j=m(n+1)$ for some $m\in \N$. And if $n$ is odd,  then $n-1$ and $n+1$ are even and $2$ then is the gcd of $n-1$ and $n+1$ since $(n+1)-(n-1)=2$. Now let $n\geq3$.
   6492: Due to $1\leq 2 (1/4) m^2(n\pm 1)^2\leq 2  r^2m^2(n+1)^2$, we finally conclude  that 
 > 6493: \begin{eqnarray*}
   6494: \frac{8}{\pi }\leq A_n&=&  \frac{8}{\pi }+\frac{16\pi }{\pi^2}\sum_{m=1}^\infty \frac{1}{(4r^2m^2(n-1)^2-1)(4r^2m^2(n+1)^2-1)}\\
-  6495: &\leq & \frac{8}{\pi }+\frac{16\pi }{\pi^2}\sum_{m=1}^\infty \frac{1}{2r^2m^2(n+1)^2}= \frac{8}{\pi }+\frac{1}{(n+1)^2}\frac{16\pi }{\pi^2} \frac{1}{2r^2}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6502)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6500: {\bf Remark.} 
   6501: Using that for $a\notin\Z$, $\dis \sum_{m=1}^\infty \frac{1}{m^2-a^2}=\frac{1-a\pi \cot(a\pi)}{2a^2}$, we obtain
 > 6502: \begin{eqnarray*}
   6503: A_n&=&  \frac{8}{\pi }+\frac{16 }{\pi} \frac{1}{16nr^2}\sum_{m=1}^\infty \left(\frac{1}{m^2-\frac{1}{4r^2(n-1)^2}}-
-  6504:  \frac{1}{m^2-\frac{1}{4r^2(n+1)^2}}\right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6622)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6620:  
   6621:  
 > 6622:  \begin{eqnarray*}
   6623:  P_k-P_{k+1}&\leq & \left(\sqrt 2+\frac{\sqrt 2}{8}\;\frac{1}{k^2}+\oh(\frac{1}{k^2})\right)
-  6624:   - \left(\sqrt 2 -\frac{7\sqrt 2}{8}\;\frac{1}{(k+1)^2}+\oh(\frac{1}{(k+1)^2})\right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6628)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6626: \end{eqnarray*}
   6627: 
 > 6628: \begin{eqnarray*}
   6629: P_k-P_{k+1}&\geq&  \left(\sqrt 2-\frac{7\sqrt 2}{8}\;\frac{1}{k^2}+\oh(\frac{1}{k^2})\right)
-  6630: -\left(\sqrt 2 +\frac{\sqrt 2}{8}\;\frac{1}{(k+1)^2}+\oh(\frac{1}{(k+1)^2})\right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6643)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6641:  We deduce from (\ref{pk-abs}) and (\ref{partisum}) that for every $n$ and $N$ chosen as above
   6642:  
 > 6643:  \begin{eqnarray*}
   6644: |S_n|&\leq & |L_N| + \sum_{j=A_{N+1}}^n \frac{1}{\sqrt j}\\
-  6645: &\leq& \sum_{j=1}^{\lfloor N/2\rfloor} |P_{2j-1}-P_{2j}|+\underbrace{P_N}_{\text{comes from the case $N$ odd}}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6703)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6701: In fact, let $k=0$. Then $\frac{\sinh 2x}{2 \sinh x}=\cosh x$. If (\ref{hil1}) is correct for some $k$, then
   6702: 
 > 6703: \begin{eqnarray*}
   6704: \prod_{n=0}^{k+1} \cosh(2^nx)&=&\left(\prod_{n=0}^k \cosh(2^nx)\right)\cdot \cosh (2^{k+1}x)=
-  6705: \frac{\sinh(2^{k+1}x)}{2^{k+1}\sinh x} \cdot  \cosh (2^{k+1}x)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6717)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6715: $$1+\frac{\cosh u}{\cosh v}=\frac{\cosh u+\cosh v}{\cosh v}=2\;\frac{\cosh(\frac{u+v}{2})\cosh(\frac{u-v}{2})}{\cosh v}.$$
   6716: Hence, with $u=2^ns$ and $v=2^nr$,
 > 6717: {\footnotesize \begin{eqnarray*}
   6718: P_k:= \prod_{n=0}^k\left(1+\frac{\cosh 2^ns}{\cosh 2^nr}\right)&=&2^{k+1}\,\prod_{n=0}^k \frac{\cosh(2^{n-1}(r+s))
-  6719:  \cosh(2^{n-1}(r-s))}{\cosh 2^nr}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6733)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6731: $\sinh x=\frac{e^x}{2}(1-e^{-2x})$
   6732: we obain
 > 6733: \begin{eqnarray*}
   6734:  \frac{\sinh 2^k(r+s)\sinh 2^k(r-s)}{\sinh 2^{k+1}r}&=&\frac{\frac{1}{4}e^{2^{k}(r+s)} e^{2^{k}(r-s)} (1-e^{-2^{k+1}(r+s)})(1-e^{-2^{k+1}(r-s)})}
-  6735:  {\frac{e^{2^{k+1}r}}{2} (1-e^{2^{k+2}r})}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6740)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6738: 
   6739: Now note that $\cosh^2 r-\sinh^2 s= \sinh(r+s)\sinh(r-s)$, and so 
 > 6740: \begin{eqnarray*}
   6741: 4 \cosh\left(\frac{r+s}{2}\right)\, \cosh\left(\frac{r-s}{2}\right)\;\frac{\sinh r}{\sinh(r+s)\sinh(r-s)}&=& 
-  6742: 2 \frac{\cosh r+\cosh s}{\sinh(r+s)\sinh(r-s)}\sinh r\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6807)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6805: $I_{2n}= \frac{2n-1}{2n} I_{2n-2}$ for $n\in \N^*$ and $I_0=\frac{\pi}{2}$, because
   6806: 
 > 6807: \begin{eqnarray*}
   6808: 2n I_{2n}- (2n-1)I_{2n-2}&=&\int_0^{\pi/2}(\sin x)^{2n-2}\left(2n \sin^2 x-(2n-1)\right)dx\\
-  6809: &=&-\int_0^{\pi/2}(\sin x)^{2n-2}\left( (2n-1) \cos ^2x-\sin^2 x\right)dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6824)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  6822: 
   6823: (1)  We make the substitution $x=\sqrt 2 \sin t$, $dx=\sqrt 2 \cos t\,dt$. Then, by using  $\int\sum=\sum\int$ (all terms are positive),
 > 6824: \begin{eqnarray*}
   6825: \dis \int_0^1 \frac{\artanh(x\sqrt{2-x^2}) }{x}\;dx&=&\int_0^{\pi/4} \frac{\artanh (\sin (2t))}{\sin t}\; \cos t\,dt\\
-  6826: &=&\int_0^{\pi/4}\sum_{n=0}^\infty \frac{1}{2n+1}\frac{(\sin(2t))^{2n+1}}{\sin t}\cos t\;dt\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7165)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7163: 
   7164: {\bf Solution}  (a) Note that
 > 7165: \begin{eqnarray*}
   7166: {m+k\choose k}\;{m+n+1\choose n-k}&=&\frac{(m+k)!}{m!k!}\; \frac{(m+n+1)!}{(m+k+1)! (n-k)!}\\
-  7167: &=& \frac{(m+n+1)!}{m!} \frac{1}{k! (m+k+1)(n-k)!}= \frac{(m+n+1)!}{m!n!}{n\choose k}\frac{1}{m+k+1} .
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7193)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7191: $\Gamma(z+1)=z\Gamma(z)$  for $z\in \C\setminus (-\N)$, and since the $\Gamma$-function has no zeros, we have
   7192: 
 > 7193: \begin{eqnarray*}
   7194:  {a+k-1\choose k}\;{a+b-1\choose b-k-1}&=& \frac{\co{\Gamma(a+k)}}{\Gamma(a)\,\Gamma(k+1)}\; 
-  7195:  \frac{\Gamma(a+b)}{\co{\Gamma(a+k+1)}\Gamma(b-k)}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7291)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7289:  
   7290:  Hence
 > 7291:  \begin{eqnarray*}
   7292: \frac{d^n}{dx^n}\left(\frac{1}{1+x^2}\right)&=& \frac{1}{2}\frac{d^n}{dx^n}\left(\frac{1}{1+ix}+\frac{1}{1-ix}\right)\\
-  7293: &=& \frac{i^n}{2}n! \; \frac{(1+ix)^{n+1}+(-1)^n(1-ix)^{n+1}}{(1+x^2)^{n+1}}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7297)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7295:  From this we get that $P_n$ is a polynomial of degree $n$ with $n+1$ as leading coefficient. We are now ready to calculate the integral:
   7296: 
 > 7297:  \begin{eqnarray*}
   7298: I_n= \int_{-1}^1 P_n(x)dx&=&\frac{(-1)^n}{2}i^n \int_{-1}^1 \left((1+ix)^{n+1}+(-1)^n(1-ix)^{n+1}\right)\; dx\\
-  7299:  &=&\frac{(-1)^n}{2}i^n \left( \frac{(1+i)^{n+2}-(1-i)^{n+2}}{i(n+2)} +(-1)^n \frac{(1-i)^{n+2}-(1+i)^{n+2}}{(-i)(n+2)}\right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7304)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7302:  
   7303:  Since 
 > 7304: \begin{eqnarray*}
   7305: (1+i)^{n+2}-(1-i)^{n+2}&=& \sqrt 2^{\;n+1} \left( \left(\frac{1+i}{\sqrt 2}\right)^{n+2} -\left(\frac{1-i}{\sqrt 2}\right)^{n+2}\right)\\
-  7306: &=&2^{\frac{n+1}{2}} \left( e^{(n+2)i\pi/4}-e^{-(n+2)i\pi/4}\right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7310)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7308: \end{eqnarray*}
   7309:  we conclude that
 > 7310: \begin{eqnarray*}
   7311: I_n&=&\frac{(-1)^n\, i^n}{n+2}\; \big(1+(-1)^n\big)\; 2^{\frac{n+2}{2}}\sin\left( (n+2)\frac{\pi}{4}\right)\\
-  7312: &=&\frac{(-1)^n\, i^n}{n+2}\; \big(1+(-1)^n\big)\; 2^{\frac{n+2}{2}}\cos\left(n\frac{\pi}{4}\right).
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7352)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7350:  \frac{1}{2m+2+k} x^{2m+2+k}$$
   7351:  converges  since for every $j\in \N$ the partial sums can be estimated as follows:
 > 7352:  \begin{eqnarray*}
   7353: \sum_{n=0}^j \sum_{m=0}^j \frac{1}{k!} \frac{1}{[2(m+1)]!}\frac{1}{2m+2+k} x^{2m+2+k}&\leq&
-  7354:  \sum_{n=0}^j  \sum_{m=0}^j  \frac{1}{k!} \frac{1}{[2(m+1)]!} x^{k} x^{2m+2}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7430)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7428: Let $I:=\dis \int_0^1\frac{\log(1+x+x^2)}{1+x^2}\;dx$.  We make the substitution $x=\tan u$, $dx/du=1+\tan^2 u=\frac{1}{\cos^2 u}$,
   7429: $x=0\to u=0$ and $x=1\to u=\pi/4$. Then
 > 7430: \begin{eqnarray*}
   7431: I&=& \int_0^{\pi/4} \frac{\log(\tan^2 u +\tan u +1)}{1+\tan^2 u}\;(1+\tan^2 u) du=\int_0^{\pi/4}\log\left(\frac{1+\cos u\sin u}{\cos^2 u}\right) du\\
-  7432: &=&\int_0^{\pi/4} \log\left(1+\frac{1}{2} \sin(2u)\right) du -2\int_0^{\pi/4}\log(\cos u)du\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7497)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7495: (1) $I_{2n}= \frac{2n-1}{2n} I_{2n-2}$ for $n\in \N^*$ and $I_0=\frac{\pi}{2}$, because
   7496: 
 > 7497: \begin{eqnarray*}
   7498: 2n I_{2n}- (2n-1)I_{2n-2}&=&\int_0^{\pi/2}(\sin x)^{2n-2}\left(2n \sin^2 x-(2n-1)\right)dx\\
-  7499: &=&-\int_0^{\pi/2}(\sin x)^{2n-2}\left( (2n-1) \cos ^2x-\sin^2 x\right)dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7505)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7503: (2) $I_{2n+1}= \frac{2n}{2n+1} I_{2n-1}$ for $n\in \N^*$ and $I_1=1$, because
   7504: 
 > 7505: \begin{eqnarray*}
   7506: (2n+1)I_{2n+1}-2nI_{2n-1}&=& \int_0^{\pi/2} (\sin x)^{2n-1}\left((2n+1)\sin ^2 x -2n\right)dx\\
-  7507: &=&-\int_0^{\pi/2}(\sin x)^{2n-1}\left(2n \cos^2 x-\sin^2x\right)dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7521)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7519: \begin{proof}
   7520: (1) Note that 
 > 7521: \begin{eqnarray*}
   7522: {-1/2\choose n}&=& \frac{(-\frac{1}{2})\cdot(- \frac{3}{2})\cdot  \cdots(-\frac{1}{2}-n+1)}{n!}=
-  7523: (-1)^n \frac{1\cdot3\cdot5\cdots (2n-1)}{2^n n!}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7536)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7534: $$
   7535: we deduce that
 > 7536: \begin{eqnarray*}
   7537: f(x)&=&  \log\left( \frac{1-\sqrt{1-4x}}{1+\sqrt{1-4x}}  \right)-\log x= \log\left( \frac{(1-\sqrt{1-4x})^2}{4x}\right)-\log x\\
-  7538: &=& \log\left( \frac{(1-\sqrt{1-4x})^2}{(2x)^2}\right)=2 \log\left(\frac{1-\sqrt{1-4x} }{2x}\right).
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7558)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7556: Hence, by Lemma \ref{sinu}
   7557: %\begin{equation}\label{rama}
 > 7558: \begin{eqnarray*}
   7559: J:=\int_0^{\pi/2}\log  \left(\frac{1+\frac{1}{2}\sin x}{1-\frac{1}{2}\sin x}\right)\;dx&=&\int_0^{\pi/2}2 \sum_{n=0}^\infty \frac{1}{2^{2n+1}} 
-  7560: \frac{(\sin x)^{2n+1}}{2n+1}\;dx
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7572)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7570: $$I(a):= \int_0^{\pi/2}\log  \left(\frac{1+\sin a\sin x}{1-\sin a\sin x}\right)\;dx.$$
   7571: Now $\frac{d}{da}\int=\int\frac{d}{da}$ (as all functions considered here  are continuously differentiable). Hence
 > 7572: \begin{eqnarray*}
   7573: I'(a)&=&\int_0^{\pi/2}\left( \frac{\cos a\sin x}{1+\sin a\sin x}+\frac{\cos a\sin x}{1-\sin a\sin x}\right)\;dx
-  7574: =\int_0^{\pi/2}\frac{2\cos a\sin x}{1-\sin^2 a\sin^2 x}\;dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7580)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7578: \end{eqnarray*}
   7579: Thus, using partial integration,  and the fact that $\tan(x/2)=\frac{\sin x}{1+\cos x}$,
 > 7580: \begin{eqnarray*}
   7581: J&=&I(\pi/6)=I(\pi/6)-I(0)=\int_0^{\pi/6} I'(a) da=\int_0^{\pi/6} \frac{2a}{\sin a} \,da\\
-  7582: &=&2 \int_0^{\pi/6} x \left( \log\Big(\tan \frac{x}{2}\Big)\right)' \;dx= 2x \log\Big(\tan \frac{x}{2}\Big)\Big|_0^{\pi/6}-
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7591)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7589: $$2\sum_{n=0}^\infty \frac{1}{2n+1} \cos(2n+1)t.$$
   7590: Since the Fourier series converges in the $L^2$-norm, hence $L^1$-norm on $]0,\pi[$, we have $\sum\int=\int\sum$. Hence
 > 7591: \begin{eqnarray*}
   7592: -\int_0^{\pi/12}\log(\tan x)dx &\buildrel=_{x=t/2}^{}& \int_0^{\pi/6} \sum_{n=0}^\infty \frac{1}{2n+1} \cos(2n+1)t \; dt=
-  7593:  \sum_{n=0}^\infty \frac{1}{2n+1}\int_0^{\pi/6} \cos(2n+1)t \; dt\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7607)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7605: $$
   7606: Hence
 > 7607: \begin{eqnarray*}
   7608: S&=& \frac{1}{2}\;\sum_{n=0}^\infty \frac{1}{(12n+1)^2} + \bl{ \sum_{n=0}^\infty \frac{1}{(12n+3)^2} }
-  7609: + \frac{1}{2}\; \sum_{n=0}^\infty \frac{1}{(12n+5)^2}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7638)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7636: $\dis(\artanh z)' =\frac{1}{1-z^2}$, and that 
   7637: $$\frac{d}{da}\left( \frac{1}{a+a^{-1}}\right)= \frac{1-a^2}{(a^2+1)^2},$$
 > 7638: \begin{eqnarray*}
   7639: Q'(a)&=&-\int_0^{\pi/12}\frac{\frac{1-a^2}{(1+a^2)^2}\;2 \cos 2x}{1-\frac{4\cos^2 (2x)}{(a+a^{-1})^2}}\;dx=
-  7640: \int_0^{\pi/12}\frac{(a^2-1)\; 2\cos 2x}{ (a^2+1)^2-4a^2\cos^2 2x}\;dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7646)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7644: $$\log(\tan x)=-\frac{1}{2} \log\left(\frac{1+\cos 2x}{1-\cos 2x}\right)=-\artanh (\cos 2x).$$
   7645: Consequently,  as $C=-\int_0^1 \frac{\arctan x}{x}dx$ (use the power series for $\arctan x$)
 > 7646: \begin{eqnarray*}
   7647: \int_0^{\pi/12}\log(\tan x)dx&=&Q(1)=\int_0^1 Q'(a) da=\int_0^1 \frac{\arctan\frac{a}{a^2-1}}{2a} da\\
-  7648: &=&- \int_0^1\left( \frac{\arctan a}{2a}+ \frac{\arctan a^3}{2a}\right)\; da\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7663)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7661: $$C=\frac{3}{4}\, L -\frac{\pi}{4}{\rm arcosh}\; 2.$$
   7662: We notice that $L=2I+2C$. In fact,
 > 7663: \begin{eqnarray*}
   7664: I&\buildrel=_{u=1/x}^{}&\int_1^\infty \frac{\log(u^2+u+1)-\log (u^2)}{1+u^2}\;du\\
-  7665: &=&\int_1^\infty \frac{\log(u^2+u+1)}{u^2+1} -2C.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7725)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7723: Hence
   7724: 
 > 7725: \begin{eqnarray*}
   7726: C(x)
-  7727: &=&\sum_{n=0}^\infty \sum_{k=n+1}^\infty (-1)^{k}\frac{x^{2k}}{(2k)!}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7740)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7738: $$S(x):=\sum_{n=0}^\infty \left(\sin x -x+\frac{x^3}{3!}-\frac{x^5}{5!}+\cdots+(-1)^{n+1}\frac{x^{2n+1}}{(2n+1)!}\right).$$
   7739: Then
 > 7740: \begin{eqnarray*}
   7741: S(x)
-  7742: &=&\sum_{n=0}^\infty \sum_{k=n+1}^\infty (-1)^{k}\frac{x^{2k+1}}{(2k+1)!}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7755)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7753: The second method is to integrate termwise and then  to interchange the sum with the integral (uniform convergence on compacta). 
   7754: 
 > 7755: \begin{eqnarray*}
   7756: S(x)&=&\sum_{n=0}^\infty \int_0^x\left( \cos t -1+\frac{t^2}{2!}-\frac{t^4}{4!}+\cdots+(-1)^{n+1} \frac{t^{2n}}{(2n)!}\right)\;dt\\
-  7757: &=& \int_0^x  \sum_{n=0}^\infty \left( \cos t -1+\frac{t^2}{2!}-\frac{t^4}{4!}+\cdots+(-1)^{n+1} \frac{t^{2n}}{(2n)!}\right)\;dt\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7797)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7795: $$
   7796: Then, by  using that  for $|x|<1$, $\dis-\log(1-x)=\sum_{k=1}^\infty \frac{1}{k} x^k$,
 > 7797: \begin{eqnarray*}
   7798: \log L&=&\frac{n}{2}+\sum_{j=2}^n j^2 +\sum_{j=2}^n j^4 \log\left(1- \frac{1}{j^2}\right)\\
-  7799: &=&\frac{n}{2}+\sum_{j=2}^n j^2-\sum_{j=2}^n \sum_{k=1}^\infty \frac{j^4}{k}\frac{1}{j^{2k}}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7827)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7825: $$
   7826: Using  again uniform convergence on $[0,1]$, the substitution $s=\sqrt x$ and integration between 0 and 1 yields
 > 7827: \begin{eqnarray*}
   7828: \sum_{n=1}^\infty\frac{\zeta(2n)-1}{n+2}&=&\frac{1}{4}-\int_0^1 \left(\frac{\pi}{2}s^3 \cot(\pi s)+\frac{s^4}{1-s^2}\right)\;2sds\\
-  7829: &=&\frac{1}{4}-\int_0^1 \left(\pi s^4 \cot(\pi s)+\frac{2s^5}{1-s^2}\right)\;ds
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7851)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7849: $$\sum_{k=1}^\infty \frac{\cos(2k\pi x)}{k}= -\log(2\sin(\pi x))=-\log 2 -\log(\sin(\pi x)),$$
   7850: where the convergence is considered in  the $L^2$-norm on $]0,1[$, which  also guarantees that $\int\sum=\sum\int$ below. 
 > 7851: \begin{eqnarray*}
   7852: \int f(x) dx&=& x^4 \log (\sin(\pi x))- 4 \int x^3\log (\sin(\pi x))\;dx\\
-  7853: &=&  x^4 \log (\sin(\pi x))+4 \int \sum_{k=1}^\infty  x^3  \frac{\cos(2k\pi x)}{k} \;dx  +4\int x^3 \log 2 \;dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7864)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7862: 
   7863:  
 > 7864: \begin{eqnarray*}
   7865: I=\int_0^1\left(\pi\;x^4\cot (\pi x)+\frac{2x^5}{1-x^2}\right)\;dx&=& \Bigg[ x^4 \log (\sin(\pi x))-\log(1-x)  -\frac{x^4}{2}
-  7866: -x^2 -\log(1+x)\Bigg]^1_0\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7877)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7875: $$
   7876: Hence
 > 7877: \begin{eqnarray*}
   7878: I&=&\log\pi -\frac{3}{2}-\log 2 +4 \sum_{k=1}^\infty \frac{3}{4k^3\pi^2}+\log 2 \\
-  7879: &=& \log\pi -\frac{3}{2}+\frac{3}{\pi^2}\,\zeta(3),
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7901)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  7899:  (2) Using  Wolframalpha's representation below of  a primitive  of $\pi\;t^4\cot (\pi t)+\frac{2t^5}{1-t^2}$ and evaluating at the boundary points, we also obtain the value of $I$. Just note  that $\zeta(2)= \pi^2/6$ and $\zeta(4)=\pi^4/90$:
   7900: 
 > 7901: \begin{eqnarray*}
   7902: I&=& 2i \frac{\zeta(2) }{\pi}+ 3\frac{\zeta(3)}{\pi^2}-3i \frac{\zeta(4)}{\pi^3}-3 \frac{\zeta(5)}{2\pi^4} +\frac{i\pi}{5}-\frac{1}{2}-1 
-  7903: +\co{\lim_{s\to 1} \big(s^4 \log(1-e^{-2\pi i s})-\log(1-s^2)\big)} \\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 8032)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  8030: 
   8031: 
 > 8032: \begin{eqnarray*}
   8033: h_1(x)&:=&x\log \left(\frac{1}{x^2}-1\right)^2+\log \left(\frac{1+x}{1-x}\right)^2\\
-  8034: &=& (x-1)\log(x-1)^2 +2(x+1)\log(1+x)-4x\log x
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 8102)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  8100: 
   8101: 
 > 8102: \begin{eqnarray*}
   8103: L&=&\lim_{m\to\infty}\frac{\dis\frac{1}{1-b^m}(-b^m)\log b}{a^m(1+m\log a)}=-\log b\lim_{m\to\infty}\left(\frac{b}{a}\right)^m\frac{1}{1+m\log a}\\
-  8104: &=&-\frac{\log b}{\log a}\lim_{m\to\infty}\left(\frac{b}{a}\right)^m\frac{1}{m}=-\infty.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 8110)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  8108: Moreover
   8109: 
 > 8110: \begin{eqnarray*}
   8111: R&=&\lim_{m\to\infty}\frac{\dis\frac{1}{1-a^m}(-a^m)\log a}{a^m(1+m\log a)}=-\log a\lim_{m\to\infty} \frac{1}{m\log a}=0.
-  8112: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 8824)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  8822:    $$\frac{n}{T_n(x)}=\sum_{k=1}^n \frac{c_k}{x-x_k},$$
   8823:    where the residues/coefficients $c_k$ are given by
 > 8824: \begin{eqnarray*}
   8825: c_k&=&\lim_{x\to c_k} n\frac{x-x_k}{T_n(x)}\buildrel=_{x=\cos t}^{}\lim_{t\to (2k-1)\pi/2n} n\frac{\cos t-x_k}{T_n(\cos t)}=
-  8826: \lim_{t\to (2k-1)\pi/2n} n\; \frac{\cos t-x_k}{\cos(n t)}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 8870)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  8868:   $$
   8869:   Consequently, since $\int\sum\sum=\sum\sum\int$ (note that all terms are positive)
 > 8870:   \begin{eqnarray*}
   8871:   I:=\int_0^\infty \left( \frac{\coth(\pi x)}{x}-\frac{1}{\pi x^2}\right)^2 \;dx&=& \frac{4}{\pi^2}\int_0^\infty \left(\sum_{k=1}^\infty\frac{1}{k^2+x^2}\right)^2\;dx\\
-  8872:   &=&\frac{4}{\pi^2}\int_0^\infty \sum_{n=1}^\infty \sum_{k=1}^\infty \frac{1}{k^2+x^2}\;\frac{1}{n^2+x^2}\;dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 8880)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  8878:   $$
   8879:   Using that $\dis\int_0^\infty \frac{1}{k^2+x^2}\;dx= \frac{\pi}{2k}$ and $\dis \int_0^\infty \frac{1}{(n^2+x^2)^2}\;dx=\frac{\pi}{4n^3}$, we obtain
 > 8880:   \begin{eqnarray*}
   8881:   I&=&\frac{4}{\pi^2}\;\sum_{n=1}^\infty  \left(\sum_{k=1\atop k\not=n}^\infty  \frac{\pi}{2} \frac{1}{n^2-k^2} 
-  8882:    \left(\frac{1}{k}-\frac{1}{n}\right) +\frac{\pi}{4n^3}\right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 8894)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  8892:   {\it Remark}  Note that $(*)$ can be verified as follows: put $a_k:=1/k$, $H_n=\sum_{k=1}^n a_k$  and let $N>n$. We use that
   8893:   $H_n-\log n\to \gamma$, where $\gamma$ is the Euler-Mascheroni constant. Then
 > 8894:   \begin{eqnarray*}
   8895:   \sum_{k=1}^N (a_k-a_{n+k})&=& H_N-\sum_{k=n+1}^{n+N}a_k =\left(H_N-\sum_{k=1}^{n+N} a_k \right) +H_n\\
-  8896:   &=& H_N-H_{n+N}+H_n=(H_N-\log N)- (H_{n+N}-\log(n+N))+\log\frac{N}{N+n}+H_n\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 8911)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  8909:   $$
   8910:   Consider the rectangle $R_n:=[-n,n]\times [0, n+\frac{1}{2}]$. Then
 > 8911:  \begin{eqnarray*}
   8912: \int_{\partial R_n} f(z) dz&=&\int_{-n}^n f(x) dx +\int_0^{n+\frac{1}{2} }f(n+it) idt- \int_{-n}^n f(t+i(n+\frac{1}{2})) dt- 
-  8913:   \int_0^{n+\frac{1}{2}} f(-n+it) i dt \\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 8921)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  8919:   
   8920:   Here are the estimates:
 > 8921:   \begin{eqnarray*}
   8922:   |I_2(n)|&\leq &(n+\frac{1}{2}) \left(\frac{e^{2\pi n}+1}{e^{2\pi n}-1} \frac{1}{n} +\frac{1}{n^2}\right)^2\leq
-  8923:   2n \left(\frac{3}{n}+\frac{1}{n^2}\right)^2\leq \frac{32}{n}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 8928)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  8926: \end{eqnarray*}
   8927:   Moreover, by using that $|\tanh x|\leq 1$,
 > 8928:   \begin{eqnarray*}
   8929:   |I_3(n)|&=&\left|\int_{-n}^n \left(\frac{e^{2\pi (t+i(n+\frac{1}{2})}+1}{(e^{2\pi (t+i(n+\frac{1}{2}))}-1) (t+i(n+\frac{1}{2})}-
-  8930:   \frac{1}{\pi (t+i(n+\frac{1}{2})^2}\right)^2 dt\right|\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 8936)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  8934:   Finally, we show that  $\dis {\rm Res}\,(f, z_k)=-\frac{4i}{\pi^2 k^3}$. Fix $k\in \N^*$ and consider the variable $w:=z-ki$. 
   8935:   The auxiliary function $g$ is defined as follows:
 > 8936: \begin{eqnarray*}
   8937: g(w)=f(w+ki)&=& \frac{e^{2\pi w}+1}{e^{2\pi w}-1}\frac{1}{w+ki}-\frac{1}{\pi(w+ki)^2}\\
-  8938: &=& \frac{\coth (\pi w)}{w+ki}-\frac{1}{\pi(w+ki)^2}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 8947)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  8945:   $$
   8946:   and
 > 8947:   \begin{eqnarray*}
   8948:   b_0&=&\lim_{w\to 0}\left( \frac{\coth(\pi w)}{w+ki}-\frac{1}{\pi(w+ki)^2}-\frac{b_{-1}}{w}\right)\\
-  8949:   &=&\lim_{w\to 0} \frac{w\cosh(\pi w)-\sinh(\pi w)b_{-1}(w+ki)}{\sinh(\pi w)(w+ki)w}+\frac{1}{\pi k^2}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 8956)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  8954: 
   8955: Now
 > 8956: \begin{eqnarray*}
   8957: (g(w))^2&=&\left(\frac{b_{-1}}{w} +b_0+ \oh(w)\right)^2=\frac{(b_{-1}+b_0w+\Oh(w^2))^2}{w^2}\\
-  8958: &=&\frac{b_{-1}^2+2b_0b_{-1}w +\Oh(w^2)}{w^2}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 8965)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  8963: We conclude that
   8964: 
 > 8965: \begin{eqnarray*}
   8966: &I&=i\pi \sum_{k=1}^\infty {\rm Res}\,(f, z_k)=i\pi \sum_{k=1}^\infty \left(-\frac{4i}{\pi^2k^3}\right) 
-  8967: =\frac{4}{\pi}\sum_{k=1}^\infty \frac{1}{k^3}=\frac{4 \zeta(3)}{\pi}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9013)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  9011: 
   9012: In fact, using Gauss's classroom formula $\sum_{k=1}^n k =n(n+1)/2$, we immediately obtain  that 
 > 9013: \begin{eqnarray*}
   9014: L_n&=&\left(\frac{2}{n^2}\sum_{k=1}^n k\right)^n= \left(\frac{2}{n^2} \frac{n(n+1)}{2}\right)^n=\left(\frac{n+1}{n}\right)^n =
-  9015: \left(1+\frac{1}{n}\right)^n.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9116)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  9114: $$\int_0^1 (1-t^2)t f(t)=0.$$
   9115: In fact, using Fubini's theorem, and noticing that $0\leq t\leq x\leq 1$,
 > 9116: \begin{eqnarray*}
   9117: \int_0^1 h(x) dx&=& \int_0^1 \int_0^x \left(xt f(t)- t^2f(t)\right)dt dx
-  9118: =\int_0^1 \int_t^1 \left(xt f(t)- t^2f(t)\right)dxdt\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9198)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  9196:    die  "\"ubliche" Schreibweise   $\lambda\, \vec x$ der Multiplikation eines Vektors mit einem Skalar durch
   9197:    $\vec x\, \lambda$ ersetzt)), so erh\"alt man:
 > 9198:    \begin{eqnarray*}
   9199:    a+b+c=a\times (b\times c)& \iff & a+b+c=b(a\cdot c)-c(a\cdot b)\\
-  9200:    &\iff& a+ b(1-a\cdot c) +c\underbrace{(1+a\cdot b)}_{\not=0}=0\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9245)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  9243:      Now we compute  the Fourier series for $\log\tan t$:
   9244:      
 > 9245:    \begin{eqnarray*}
   9246: \log\tan t&=&\log \cos t -\log \sin t =\log(\co{2} \cos t)-\log(\co{2}\sin t)\\
-  9247: &=&\left(\cos(2t)-\frac{\cos(4t)}{2}+\frac{\cos(6t)}{3}-\cdots\right) - \left(-\cos(2t)-\frac{\cos(4t)}{2}-\frac{\cos(6t)}{3}-\cdots\right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9277)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  9275:    
   9276:    In fact, using partial integration $\int uv'=uv-\int u'v$ with $u=\log x$ and $v'=\frac{\arctan x}{1+x^2}$ we obtain
 > 9277:    \begin{eqnarray*}
   9278:    \int_0^1 \frac{(\arctan x)(\log x)}{1+x^2}dx&=&\frac{1}{2}\, \log x( \arctan x)^2)\Big|_0^1- \frac{1}{2}\, \int_0^1 \frac{(\arctan x)^2}{x} dx\\
-  9279:    &=&- \frac{1}{2}\, \int_0^1 \frac{(\arctan x)^2}{x} dx.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9285)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  9283:    Or vice versa, using partial integration with  $u=(\arctan x)^2$ and $v'=1/x$,
   9284:    
 > 9285:    \begin{eqnarray*}
   9286:     \int_0^1 \frac{(\arctan x)^2}{x} dx&=& (\arctan x)^2\log x\Big|_0^1-\int_0^1 2\frac{\arctan x}{1+x^2}\log x dx\\
-  9287:     &=& -2   \int_0^1 \frac{(\arctan x)(\log x)}{1+x^2}dx.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9326)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  9324: 
   9325: This is entirely trivial.  First we have that
 > 9326: \begin{eqnarray*}
   9327: \left(1-\frac{1}{x}\right)^n\leq 1-\frac{n}{x+n-1}=\frac{x-1}{x+n-1}=x\;\frac{1-\frac{1}{x}}{x+n-1}&\iff&
-  9328: \ovalbox{$\dis\left(1-\frac{1}{x}\right)^{n-1}\leq \frac{x}{x+n-1}$}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9337)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  9335: $n\to n+1$:
   9336: 
 > 9337: \begin{eqnarray*}
   9338: \left(1-\frac{1}{x}\right)^n&\buildrel\leq_{}^{{\rm  ind. hyp}}& \frac{x}{x+n-1}\left(1-\frac{1}{x}\right)= \frac{x}{x+n-1}\frac{x-1}{x}=
-  9339: \frac{x\co{+n}-1 \co{-n}}{x+n-1}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9377)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  9375:  Nun berechnen wir die Laurentreihe und deren zweite Ableitung:
   9376:  $$f(x)=\sum_{k=0}^{2n+1} {2n+1\choose k} x^{k-1}.$$
 > 9377: \begin{eqnarray*}
   9378: f''(x)&=&\sum_{k=0}^{2n+1}{2n+1\choose k}  (k-1)(k-2)  x^{k-3}\\
-  9379: &=&2\;\sum_{k=0}^{2n+1}{2n+1\choose k}  {k-1 \choose 2}  x^{k-3}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9382)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  9380: \end{eqnarray*}
   9381:  Auswertung an $x=-2$ ergibt:
 > 9382: \begin{eqnarray*}
   9383: f''(-2)&=&2\;\sum_{k=0}^{2n+1} (-1)^{k-1}{2n+1\choose k}  {k-1 \choose 2}  2^{k-3}\\
-  9384: &=& 2 (-1)^1 {2n+1\choose 0}{-1 \choose 2} 2^{-3} + 2A\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9560)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  9558: (4) Es sei $M:=(z(s),z(t))$ dieser eindeutige Schnittpunkt mit $s<0$ und $t>0$.
   9559: Diese Kurven $\Gamma^-$ und $\Gamma^+$ schneiden sich nun senkrecht in $M$ genau dann wenn  gilt
 > 9560: \begin{eqnarray*}
   9561: 0&=&\left<\dot z(s), \dot z(t)\right> = \dot x(s)\; \dot x(t)+ \dot y(s)\; \dot y(t)\\
-  9562: &\iff&\left(1+\frac{a}{s^2}\right)\; \left(1+\frac{a}{t^2}\right)=- \left( 2s-\frac{b}{s^2}\right)\; \left( 2t-\frac{b}{t^2}\right).
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9568)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  9566: $$-\left(1-\frac{t}{s}\right)\;\left(1-\frac{s}{t}\right)=\left(2s-\frac{t(t+s)}{s}\right)\; \left(2t-\frac{s(t+s)}{t}\right).$$
   9567: Multiplikation mit $st$ liefert
 > 9568: \begin{eqnarray*}
   9569: -(s-t)(t-s)&=&\big(2s^2-t(t+s)\big)\;\big(2t^2-s(t+s)\big)\\
-  9570: &=&(s-t)(t+2s)\; (t-s)(s+2t)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9884)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  9882: (a)
   9883: First note that $f(x)=-\int_0^1 (1-x)^s\;ds$. In fact
 > 9884: \begin{eqnarray*}
   9885: -\int_0^1 (1-x)^s\;ds&=& -\int_0^1e^{s\log(1-x)}\;ds=-\left[ \frac{e^{s\log(1-x)}}{\log(1-x)}\right]^1_0\\
-  9886: &=&-\left( \frac{1-x}{\log(1-x)}-\frac{1}{\log(1-x)}\right)=\frac{x}{\log(1-x)}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9897)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  9895: 
   9896: Hence
 > 9897: \begin{eqnarray*}
   9898: a_k&=&(-1)^{k+1}\int_0^1  {s\choose k} \;ds= (-1)^{k+1} \int_0^1 \frac{s(s-1)(s-2)\cdots(s-k+1)}{k!}\;ds\\
-  9899: &=&\int_0^1 \frac{s(1-s)(2-s)\cdots(k-1-s)}{k!}\;ds\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9927)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  9925: (b) We first show that $(a_k)$ is decreasing (to $0$):
   9926: 
 > 9927: \begin{eqnarray*}
   9928: a_{k+1}&=& \frac{1}{k+1}\int_0^1 s \left(1- \frac{s}{1}\right)\left(1-\frac{s}{2}\right)\cdots\left(1-\frac{s}{k-1}\right)
-  9929: \underbrace{\left(1-\frac{s}{k}\right)}_{\leq 1}\;ds\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9937)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  9935: 
   9936: Next we show that $ka_k\to 0 $. In fact, due to $1-x\leq e^{-x}$ for $x\geq 0$, 
 > 9937: \begin{eqnarray*}
   9938: ka_k&=& \int_0^1 s \left(1- \frac{s}{1}\right)\left(1-\frac{s}{2}\right)\cdots\left(1-\frac{s}{k-1}\right)\;ds\\
-  9939: &\leq&\int_0^1 \exp\left(-s \sum_{j=1}^{k-1} \frac{1}{j}\right)\; ds= -\left[\frac{\dis\exp\left(-s \sum_{j=1}^{k-1} \frac{1}{j}\right)}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9993)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  9991: 
   9992: On the other hand,
 > 9993: \begin{eqnarray*}
   9994: S_1-T_1&=&\sum_{n=0}^\infty \frac{1-(-1)^n}{(3n+1)^3}\rel=_{n=2k+1}^{}2\; \sum_{k=0}^\infty\frac{2}{(3(2k+1)+1)^3}\\
-  9995: &=&2\;\sum_{k=0}^\infty \frac{1}{(6k+4)^3}=\frac{1}{4}\;\sum_{k=0}^\infty \frac{1}{(3k+2)^3}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9999)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  9997: \end{eqnarray*}
   9998: Moreover,
 > 9999: \begin{eqnarray*}
  10000: S_2+T_2&=&\sum_{n=0}^\infty \frac{1+(-1)^n}{(3n+2)^3}\rel=_{n=2k}^{}2\;\sum_{k=0}^\infty \frac{1}{(6k+2)^3} \\
- 10001: &=&=\frac{1}{4}\;\sum_{k=0}^\infty \frac{1}{(3k+1)^3}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10237)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10235: $$
  10236: Then, by using that $\frac{2xy}{x+y}\leq \sqrt{xy}\leq \frac{x+y}{2}$, 
 >10237: \begin{eqnarray*}
  10238: f(a,b,c)&=&\frac{1}{a^2+b^2+c^2}\left( a\;  \frac{bc}{b+c}+ b\;  \frac{ca}{c+a} + c\;  \frac{ab}{a+b}\right)+1\\
- 10239: &\leq& \frac{1}{a^2+b^2+c^2} \left(a\; \frac{b+c}{4}+  b\; \frac{c+a}{4}+ c\; \frac{a+b}{4}\right)+1\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10291)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10289:     Let $0<\alpha\leq 1$. Then 
  10290:  
 >10291: \begin{eqnarray*}
  10292: \sigma(\alpha)&:=& \dis\sup\left\{\frac{|(1-z)^\alpha-(1-w)^\alpha|}{|z-w|^\alpha}: |z|,|w|\leq 1, z\not=w\right\}\\
- 10293: &=& \max\{1, 2^{1-\alpha}\sin(\alpha\pi/2)\}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10517)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10515: This is done using twice partial integration:
  10516: 
 >10517: \begin{eqnarray*}
  10518: I_N&=&-N+N^2\left[-\frac{e^{-Nt}}{N} \frac{t }{e^t-1}\Bigg|_0^\infty+\frac{1}{N}\int_0^\infty e^{-Nt} \;\frac{e^t-1-te^t}{(e^t-1)^2}\;dt\right]\\
- 10519: &=&-N+N^2\left[ \frac{1}{N}+\frac{1}{N}\int_0^\infty e^{-Nt}  \;\frac{e^t-1-te^t}{(e^t-1)^2}\;dt\right] =N\int_0^\infty e^{-Nt} 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10572)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10570: Since the moduli of the  partial sums $\sum_{k=0}^N  e^{-nx} (-1)^k e^{-2kx} $ are bounded by the $L^1([0,\infty[)$-function $2e^{-nx}$,
  10571:  we have $\sum\int=\int\sum$, and so
 >10572: \begin{eqnarray*}
  10573: S_n:=\frac{1}{n}-\frac{1}{n+2}+\dots &=& \sum_{k=0}^\infty \frac{(-1)^k}{n+2k}= \sum_{k=0}^\infty (-1)^k \int_0^\infty e^{-(n+2k)x} dx\\
- 10574: &=&\int_0^\infty e^{-nx}\;\sum_{k=0}^\infty (-1)^k e^{-2kx} dx= \int_0^\infty \frac{e^{-nx}}{1+e^{-2x}}dx.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10590)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10588: 
  10589: %alternating series $e^{-x}\sum_{n=1}^N \frac{(-1)^{n-1}}{n} e^{-(n-1)x}$ by $2e^{-x}$ again(Abel-Dirichlet)
 >10590: \begin{eqnarray*}
  10591: B&=& \sum_{n=1}^\infty\frac{1}{n}\;  \int_0^\infty \frac{e^{-nx}}{1+e^{-2x}}dx=
- 10592: \int_0^\infty \frac{1}{1+e^{-2x}}\sum_{n=1}^\infty \frac{1}{n} e^{-nx} dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10596)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10594: \end{eqnarray*}
  10595: 
 >10596: \begin{eqnarray*}
  10597: A&=& \sum_{n=1}^\infty\frac{(-1)^{n-1}}{n}\;  \int_0^\infty \frac{e^{-nx}}{1+e^{-2x}}dx=
- 10598: \int_0^\infty \frac{1}{1+e^{-2x}}\sum_{n=1}^\infty \frac{(-1)^{n-1}}{n} e^{-nx} dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10606)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10604: To evaluate the integrals, we calculate $I:=A+B$ and $J:=A-B$ giving $A=(I+J)/2$ and $B=(I-J)/2$.
  10605: 
 >10606: \begin{eqnarray*}
  10607: I&=& \bigintss_0^1 \frac{\log\left(\frac{1+x}{1-x}\right)}{x(1+x^2)} dx \buildrel=_{x=\frac{1-t}{1+t}} ^{ \frac{1-x}{1+x}=t} 
- 10608: \bigintss_0^1\frac{-\log t}{\dis \left(\frac{1-t}{1+t} \right)\Big(1+ \left(\frac{1-t}{1+t}\right)^2\Big)} \frac{2dt}{(1+t)^2}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10614)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10612: \end{eqnarray*}
  10613: 
 >10614: \begin{eqnarray*}
  10615: J&= &\int_0^1 \frac{\log(1-x^2)}{x(1+x^2)}dx\buildrel=_{}^{x^2=s} \frac{1}{2}\int_0^1\frac{\log(1-s)}{s(1+s)}ds\\
- 10616: &=&\frac{1}{2} \int_0^1 \frac{\log (1-s)}{s} ds -\frac{1}{2} \int_0^1 \frac{\log (1-s)}{1+s}ds\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10622)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10620: 
  10621: Now
 >10622: \begin{eqnarray*}
  10623: \int_0^1 \frac{\log t}{2-t}dt&\buildrel=_{}^{t=2u}&\int_0^{1/2} \frac{\log(2u)}{2-2u} 2du=\int_0^{1/2} \frac{\log 2+\log u}{1-u} du\\
- 10624: &=& -(\log 2 )\Big[\log(1-u)\Big]_0^{1/2}+\int_0^{1/2} \frac{\log u}{1-u}\,du\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10630)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10628: Hence, by using that  for $0<u\leq 1$, $\dis -\int_0^u \frac{\log (1-x)}{x}dx={\rm Li}_2(u)=\sum_{n=1}^\infty \frac{u^n}{n^2}$ (di-logarithm),
  10629: we obtain with $0< v<1$,
 >10630: \begin{eqnarray*}
  10631: \int_0^v \frac{\log x}{1-x} dx&\buildrel=_{x=1-s}^{}&\int_{1-v}^1 \frac{\log(1- s) }{s}ds=\int_0^1  \frac{\log(1- s) }{s}ds- 
- 10632: \int_0^{1-v}\frac{\log(1- s) }{s}ds\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10639)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10637:  -\frac{\pi^2}{12},$$
  10638: 
 >10639: \begin{eqnarray*}
  10640: 2A= I+J&=&\left[ -\int_0^1 \frac{\log x}{1-x}dx  -\frac{1}{4}\int_0^1 \frac{\log x}{1+x} dx \right]+
- 10641: \left[ \frac{1}{2} \int_0^1 \frac{\log x}{1-x} dx -\frac{1}{2} \left( \log^2 2 +\int_0^{1/2} \frac{\log x}{1-x}\right)\right]\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10649)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10647: and
  10648: 
 >10649: \begin{eqnarray*}
  10650: 2B=I-J&=&\left[ -\int_0^1 \frac{\log x}{1-x}dx  -\frac{1}{4}\int_0^1 \frac{\log x}{1+x} dx \right]-
- 10651: \left[ \frac{1}{2} \int_0^1 \frac{\log x}{1-x} dx -\frac{1}{2} \left( \log^2 2 +\int_0^{1/2} \frac{\log x}{1-x}\right)\right]\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10697)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10695:   function $f(x)=x^{\alpha}$. This formula tells us that for $n\geq m$,
  10696:  
 >10697: \begin{eqnarray*}
  10698: \sum_{i=m}^n f(i) -\int_m^n f(x) dx
- 10699: &=& \frac{f(m)+f(n)}{2}+\frac{1}{6} \frac{f'(n)-f'(m)}{2!}-\int_m^n f''(x) \frac{P_2(x)}{2!}dx
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10712)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10710: Let us first rewrite $S_n$, splitting the sum into odd and even indices:
  10711: 
 >10712: \begin{eqnarray*}
  10713: S_n=\sum_{k=1}^{2n}(-1)^k\left(\frac{k}{2n}\right)^\alpha&=&\sum_{j=1}^n \left(\frac{j}{n}\right)^\alpha-\sum_{j=1}^n \left(\frac{2j-1}{2n}\right)^\alpha\\
- 10714: &=&\frac{1}{n^\alpha} \sum_{j=1}^n j^\alpha-\frac{1}{(2n)^{\alpha}}\sum_{j=1}^n (2j-1)^\alpha.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10719)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10717: 
  10718: {\bf Case 1} $\alpha=1$.  Then
 >10719: \begin{eqnarray*}
  10720: S_n&=&\sum_{k=1}^{2n}(-1)^k \frac{k}{2n}=\frac{1}{n}\sum_{j=1} ^n j -\frac{1}{2n}\sum_{j=1}^n(2j-1)\\
- 10721: &=&\frac{1}{n}\sum_{j=1} ^n j -\frac{1}{n}\sum_{j=1} ^n j + \frac{1}{2n}\cdot n=\frac{1}{2}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10743)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10741: $$
  10742: Hence
 >10743: \begin{eqnarray*}
  10744: \frac{1}{n^\alpha} \sum_{j=1}^n j^\alpha&=&\left(\frac{n}{\alpha+1}+\frac{1}{2}+\frac{\alpha}{12} \frac{1}{n} \right)+\Oh(n^{-\alpha})+\co{\begin{cases}\Oh(n^{-1})&\text{if $\alpha>1$}\\ \Oh(n^{-\alpha})&\text{if $0<\alpha<1$}\end{cases}}
- 10745: \\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10750)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10748: 
  10749: Using, additionally, the formula
 >10750: \begin{eqnarray*}
  10751: \frac{1}{(2n)^\alpha}\sum_{j=1}^n (2j-1)^\alpha&=&\frac{1}{(2n)^\alpha}\left(\sum_{j=1}^{2n} j^\alpha - 
- 10752: 2^\alpha\sum_{j=1}^n j^\alpha\right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10757)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10755: we conclude that 
  10756: 
 >10757: \begin{eqnarray*}
  10758: S_n&=&\left(\frac{n}{\alpha+1}+\frac{1}{2} \right) -\left(\frac{2n}{\alpha+1}+\frac{1}{2}-\left(\frac{n}{\alpha+1}+\frac{1}{2}\right)
- 10759: \right)+\oh(1)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10800)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10798: 
  10799: Note that if $a=3$, then $f(x)=x^2$ is  a solution since
 >10800: \begin{eqnarray*}
  10801: (x+y)^3-x^3-y^3 -3 yx^2-3x y^2=0.
- 10802: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10862)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10860: {\bf Remark} What happens for $a=0$ or $a=1$? If $a=0$, then  the solutions $f$ are those functions for which $xf$ is additive.  If $a=1$ then the solutions are exactly the additive functions: in fact, by (\ref{form22}), $(x+y)f(x+y)= f(x)(x+y)+f(y)(y+x)$. Hence, if $x+y\not=0$,
  10861: $f(x+y)=f(x)+f(y)$. Now let $x+y=0$. Since $f(2x)=f(x+x)=f(x)+f(x)=2f(x)$ we conclude that for $x\not=0$,
 >10862: \begin{eqnarray*}
  10863: f(x)+f(-x)&=&f((x-1)+1)+ f((-1-x)+1)=f(x-1) +f(1) +f(-1-x) +f(1)\\
- 10864: & =&f((x-1)+(-1-x)) +2f(1)= f(-2) + 2f(1)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10906)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10904: Let $$P_1(x):=\sum_{k=1}^n \frac{(-1)^{k-1}}{k}\binom{n}{k-1}x^{k-1}.$$
  10905: To be calculated is $P_1(1)$.  To this end, note that
 >10906: \begin{eqnarray*}
  10907: (xP_1(x))'&=&\sum_{k=1}^n(-1)^{k-1}\binom{n}{k-1}x^{k-1}=\sum_{j=0}^{n-1}(-1)^j\binom{n}{j}x^j\\
- 10908: &=&-(-x)^n+\sum_{j=0}^n \binom{n}{j} (-x)^j=(1-x)^n-(-x)^n.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10919)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10917: $$\frac{1}{k}{\binom{n}{k}}^{-1}=\beta(k,n-k+1)=\int_0^1 (1-x)^{k-1}x^{n-k}dx=:I.$$
  10918: Hence
 >10919: \begin{eqnarray*}
  10920: P_2&=& \int_0^1 \sum_{k=1}^n (x-1)^{k-1}x^{n-k}dx=\int_0^1 \sum_{j=0}^{n-1}(x-1)^j x^{n-j-1}dx\\
- 10921: &=& -\int_0^1\big((x-1)^n-x^n\big)dx=\frac{1+(-1)^{n+1}}{n+1}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10927)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10925: $$\frac{\Gamma(\mu+1)\;\Gamma(\nu+1)}{\Gamma\big((\mu+1)+(\nu+1)\big)}=\beta(\mu+1, \nu+1):=\dis \int_0^1 (1-x)^\mu x^\nu dx= \frac{\mu! \;\nu!}{(\mu+\nu+1)!}.$$
  10926: Hence, for $\mu=k-1$ and  $\nu=n-k$,
 >10927: \begin{eqnarray*}
  10928: I=\beta(k, n-k+1)&=& \frac{(k-1)!\; (n-k)!}{n!}=\frac{1}{k}\frac{k!\;(n-k)!}{n!}=\frac{1}{k}{\binom{n}{k}}^{-1}.
- 10929: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10967)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 10965:  
  10966: Using the transformation $x+y=t$ with $y\leq t\leq a+y$, we obtain for $\delta>0$ close to $0$,
 >10967: \begin{eqnarray*}
  10968: \int_\delta^b \left(\int_0^a \frac{f(x+y)}{x+y}dx\right)dy&=&\int_\delta^b\left(\int_y^{a+y} \frac{f(t)}{t}dt\right)dy
- 10969: =\int_\delta^b \left(F(a+y)-F(y)\right) dy\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11023)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11021: $\bullet$~ $n\geq 2$. We show the assertion above  via induction on $n$. So let $n=2$.
  11022: 
 >11023: \begin{eqnarray*}
  11024: L_2-R_2&=&  1+\frac{2}{B}-\left(1+\frac{1}{B}\right)\left(1+\frac{1}{B+x}\right)\\
- 11025: &=&\frac{x-1}{B(B+x)}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11030)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11028: 
  11029: $\bullet $ $n\to n+1$.  Assume that the assertion is correct for some $n\in \N$. Then, for $x\geq 1$, $L_n\geq R_n$, and so
 >11030: \begin{eqnarray*}
  11031: L_{n+1}-R_{n+1}&=&  1+\frac{n+1}{B}-\prod_{j=0}^{n}\left(1+ \frac{1}{B+jx}\right)\\
- 11032: &\geq& 1+\frac{n+1}{B}- \left(1+\frac{n}{B}\right) \left(1+\frac{1}{B+nx}\right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11076)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11074: $\sum_{j=1}^n\e_j=1$, $\e_j\geq 0$.
  11075: Hence
 >11076: \begin{eqnarray*}
  11077: \frac{b}{a+b+c}\log a+\frac{c}{a+b+c}\log b+\frac{a}{a+b+c}\log c
- 11078: &\leq & \log\left( \frac{b}{a+b+c} a + \frac{c}{a+b+c}b +\frac{a}{a+b+c}c\right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11179)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11177: $$\ovalbox{$\dis I:= \int_0^1 \frac{\log(1+\sqrt{1-u^2})}{1+u}\; du=\frac{\pi^2}{24}\sim 0.4112335167\cdots$}.$$
  11178: In fact, 
 >11179: \begin{eqnarray*}
  11180: I&=& \int_0^1 \log\left(1+\sqrt{1-u^2}\right)\sum_{n=0}^\infty (-1)^n u^n\; du=\sum_{n=0}^\infty (-1)^n\int_0^1 \log\left(1+\sqrt{1-u^2}\right) u^n\; du,
- 11181: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11193)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11191: $$
  11192: Hence
 >11193: \begin{eqnarray*}
  11194: I_n&=& -\frac{1}{n+1}\int_0^1  \left(u^n-\frac{u^n}{\sqrt{1-u^2}}\right)\;du\\
- 11195: &\buildrel=_{u=\sin t}^{}& -\frac{1}{(n+1)^2}+\frac{1}{n+1}\int_0^{\pi/2} \sin^n t \,dt:=  -\frac{1}{(n+1)^2}+J_n.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11203)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11201: By Lemma \ref{intsinu} below,
  11202: 
 >11203: \begin{eqnarray*}
  11204: I=-\sum_{n=0}^\infty (-1)^n \frac{1}{(n+1)^2}+\sum_{n=0}^\infty (-1)^n J_n&=&-\frac{\pi^2}{12}+\sum_{m=0}^\infty J_{2m} -\sum_{m=0}^\infty J_{2m+1}\\
- 11205: &=&-\frac{\pi^2}{12} +\sum_{m=0}^\infty \frac{{2m\choose m} }{(2m+1)4^m}\cdot \frac{\pi}{2}-
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11213)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11211: 
  11212: $$\arcsin x=\sum_{n=0}^\infty   \frac{{2n\choose n}}{4^n}\frac{x^{2n+1}}{2n+1}$$
 >11213: \begin{eqnarray*}
  11214: \arcsin^2 x&=&2 \sum_{n=0}^\infty \frac{4^n x^{2n+2}}{(2n+1)(2n+2){2n\choose n}}\\
- 11215: &=& \sum_{n=0}^\infty \frac{2^{2n+1}(n!)^2}{(2n+2)!} x^{2n+2}= \sum_{n=1}^\infty \frac{2^{2n-1}}{n^2 {2n\choose n}}x^{2n}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11231)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11229: (1) $I_{2n}= \frac{2n-1}{2n} I_{2n-2}$ for $n\in \N^*$ and $I_0=\frac{\pi}{2}$, because
  11230: 
 >11231: \begin{eqnarray*}
  11232: 2n I_{2n}- (2n-1)I_{2n-2}&=&\int_0^{\pi/2}(\sin x)^{2n-2}\left(2n \sin^2 x-(2n-1)\right)dx\\
- 11233: &=&-\int_0^{\pi/2}(\sin x)^{2n-2}\left( (2n-1) \cos ^2x-\sin^2 x\right)dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11239)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11237: (2) $I_{2n+1}= \frac{2n}{2n+1} I_{2n-1}$ for $n\in \N^*$ and $I_1=1$, because
  11238: 
 >11239: \begin{eqnarray*}
  11240: (2n+1)I_{2n+1}-2nI_{2n-1}&=& \int_0^{\pi/2} (\sin x)^{2n-1}\left((2n+1)\sin ^2 x -2n\right)dx\\
- 11241: &=&-\int_0^{\pi/2}(\sin x)^{2n-1}\left(2n \cos^2 x-\sin^2x\right)dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11267)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11265: $$
  11266: Then, with $0<x<1$,
 >11267: \begin{eqnarray*}
  11268:  \frac{\arcsin x}{\sqrt{1-x^2}}&=& I\left(\frac{\pi}{2}\right)-I(0)=\int_0^{\frac{\pi}{2}} \frac{\partial I}{\partial t} dt=
- 11269:  \int_0^{\frac{\pi}{2}} \frac{x\cos t}{1-x^2\cos^2 t}\;dt\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11282)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11280: Note that
  11281: 
 >11282: \begin{eqnarray*}
  11283: I=-\sum_{n=0}^\infty (-1)^n \frac{1}{(n+1)^2}+\sum_{n=0}^\infty (-1)^n J_n.
- 11284: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11289)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11287: $$h(x)=\sum_{n=0}^\infty \left( \int_0^{\frac{\pi}{2}} \frac{(\sin t)^n}{n+1}\,dt \right)(-1)^nx^{n+1}.$$
  11288: Then 
 >11289: \begin{eqnarray*}
  11290: h'(x)&=&\sum_{n=0}^\infty \left( \int_0^{\frac{\pi}{2}} (\sin t)^n\,dt \right) (-1)^n x^n\\
- 11291: &=&\int_0^{\frac{\pi}{2}} \sum_{n=0}^\infty (- x\sin t )^n\; dt =
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11305)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11303:  To prove (*), just use the transformation $\tan(t/2)=y$ to get
  11304:  
 >11305:  \begin{eqnarray*}
  11306:  \int_0^{\frac{\pi}{2}} \frac{1}{1+x\sin t}\;dt&=&2 \int_0^1 \frac{1}{1+y^2+2xy}dy=
- 11307:  \frac{2}{1-x^2}\int_0^1 \frac{1}{1+\frac{(y+x)^2}{1-x^2}}dy\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11319)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11317: 
  11318: 
 >11319: \begin{eqnarray*}
  11320:  f(1)&=&\int_0^{1}\int_0^{\frac{\pi}{2}} \frac{1}{1+\xi\sin t}\;dt d\xi= \int_0^{\frac{\pi}{2}}\int_0^1  \frac{1}{1+\xi\sin t} d\xi dt\\
- 11321:  &=&\int_0^{\frac{\pi}{2}} \frac{\log (1+\sin t)}{\sin t}dt\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11376)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11374: $$\log(1-x)=-\sum_{j=1}^\infty \frac{x^j}{j},\quad |x|<1.$$
  11375: So, if $0<x<1$ we have
 >11376: \begin{eqnarray*}
  11377: f(x):=\frac{\log(1+x^k+x^{2k}+\cdots+x^{nk})}{x}&=&\frac{1}{x}\;\log\left(  \frac{1-x^{k(n+1)}}{1-x^k}        \right)\\
- 11378: &=&-\sum_{j=1}^\infty \frac{x^{k(n+1)j-1}}{j} + \sum_{j=1}^\infty \frac{x^{kj-1}}{j}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11385)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11383: $$
  11384: We conclude that
 >11385: \begin{eqnarray*}
  11386: I=\int_0^1 f(x) dx&=&\sum_{j=1}^\infty \left(-\frac{1}{k(n+1)} \frac{1}{j^2}+ \frac{1}{k} \frac{1}{j^2}\right)\\
- 11387: &=& \frac{\pi^2}{6} \left(\frac{1}{k}-\frac{1}{k(n+1)} \right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11422)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11420: 
  11421: a) Suppose that $a\leq x<b$. Then for $a\leq t\leq b$ we have  $1\geq t/b$, and so, for $\lambda>1$, 
 >11422: \begin{eqnarray*}
  11423: 0\leq I(\lambda):=\frac{\lambda^{x^2}}{\int_a^b \lambda^{t^2}dt}&\leq & \frac{b\lambda^{x^2}}{\int_a^b t\lambda^{t^2}dt}
- 11424: =\frac{2b(\log\lambda)\, \lambda^{x^2}}{\lambda^{b^2}-\lambda^{a^2} }=
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11432)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11430: 
  11431: b) Suppose that $x=b$. Then for $a\leq t\leq b$ we have  $1\leq t/a$ and so 
 >11432: \begin{eqnarray*}I(\lambda)=\frac{\lambda^{b^2}}{\int_a^b \lambda^{t^2}dt}&\geq &
  11433:  \frac{a\lambda^{b^2}}{\int_a^b t\lambda^{t^2}dt}
- 11434: =\frac{2a(\log\lambda)\, \lambda^{b^2}}{\lambda^{b^2}-\lambda^{a^2} }\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11470)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11468: 
  11469:   %$$\frac{1}{n+1} \int_0^1 \frac{1-x^n}{1+x} dx -\frac{1}{(n+1)^2}$$
 >11470:   \begin{eqnarray*}
  11471:  {{S}_{n}}:=\sum\limits_{k=1}^{\infty }{\frac{{{(-1)}^{k+1}}}{k(k+n+1)}}&=&\frac{1}{n+1}\sum\limits_{k=1}^{\infty }{{{(-1)}^{k+1}}\frac{n+1+k-k}{k(k+n+1)}}\\
- 11472:  &=&\frac{1}{n+1}\sum\limits_{k=1}^{\infty }{{{(-1)}^{k+1}}\left( \frac{1}{k}-\frac{1}{n+k+1} \right)} \\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11490)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11488: Hence \footnote{ Here $\Oh$ and $\oh$ denote the Landau symbols: $\Oh (1/n)$ is a function 
  11489: $n\mapsto h(n)$ satisfying $\frac{|h(n)|}{ 1/n}\leq C$  and $\oh(1)$ is a function $n\mapsto g(n)$ with $\lim_{n\to\infty} g(n)=0$. In particular, $\Oh(1/n)$ implies $\oh(1)$.}
 >11490: \begin{eqnarray*}
  11491:  {{n}^{3}}{{S}_{n}}&=&\frac{{{n}^{3}}}{n+1}\log (2)-\frac{{{n}^{3}}(2n+7)}{4(n+1)(n+2)(n+3)}-\underbrace{\frac{2{{n}^{3}}}{(n+1)(n+2)(n+3)}}_{\le 2}\underbrace{\int\limits_{0}^{1}{\frac{{{x}^{n+2}}}{{{(1+x)}^{3}}}}dx}_{\le 1/(n+3)} \\
- 11492: & =&({{n}^{2}}-n+1+\Oh(1/n))\log (2)-\frac{n}{2}+\frac{5}{4}+\Oh(1/n)+\Oh(1/n) \\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11583)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11581: due to the following reason: since for $y\geq 1$, $f(y-1)=f(y)-1$, 
  11582: 
 >11583: \begin{eqnarray*}
  11584: f(u) +f(v)&= &f(u)+f \big((v+1)-1\big)=f(u) + f(v+1) -1\\
- 11585: &\buildrel=_{(\ref{zw})}^{}&f(u+(v+1))  -1=f(u+v)+1-1\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11624)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11622: {\bf Proof.}
  11623: Using for $x\not=0$ the linear substitution $t\to u$ with  $u:=tx^2a^{-1}$ and $dt= a x^{-2} du$, we obtain
 >11624: \begin{eqnarray*}
  11625: I_f(x,a)&=&a x^{-2}\;\int_0^{x^3} f(u) du.
- 11626: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11675)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11673: $\int uv' =uv-\int u'v$ with $u=f$ and $v'= x^{-m-2}$ yields:
  11674: 
 >11675: \begin{eqnarray*}
  11676: I(m)=\frac{1}{m+1}\int_0^\infty \frac{f'(x)}{x^{m+1}}dx,
- 11677: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11679)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11677: \end{eqnarray*}
  11678: since  $\dis\lim_{x\to 0} \frac{f(x)}{x^{m+1}}=0$ (and $\dis\lim_{x\to \infty} \frac{f(x)}{x^{m+1}}=0$) because
 >11679: \begin{eqnarray*}
  11680: \Big| \frac{f(x)}{x^{m+1}}\Big|&\leq &m \frac{|S-1|}{x}= mx\left(\frac{1}{6}+\oh(x)\right) \quad {\rm as}\quad x\to 0.
- 11681: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11696)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11694: Now $f^{(m+1)}(x)=\frac{d^{m+1}}{dx} (\sin x)^m-0$. Next we "linearize" the sinus-power:
  11695: 
 >11696: \begin{eqnarray*}
  11697: (\sin x)^m&=&\left(\frac{e^{ix}-e^{-ix}}{2i}\right)^m=\left(\frac{1}{2i}\right)^m\,\sum_{j=0}^m (-1)^{m-j}{m\choose j}e^{ijx} e^{-i(m-j)x}\\
- 11698: &=& (-1)^m \frac{1}{(2i)^m} \sum_{j=0}^m (-1)^{-j}{m\choose j} e^{ix(2j-m)}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11701)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11699: \end{eqnarray*}
  11700: Since the "constant" term (appearing for $j=m/2$ when $m$ is even) is annihilated by the derivative, we find
 >11701: \begin{eqnarray*}
  11702: \frac{d^{m+1}}{dx} (\sin x)^m&=&(-1)^m  (-i)^{m+1}\frac{1}{(2i)^m} \sum_{0\leq j<\frac{m}{2}}  (m-2j)^{m+1}(-1)^{j}{m\choose j} e^{-ix(m-2j)}\\
- 11703: &&+(-1)^m i^{m+1} \frac{1}{(2i)^m} \sum_{\frac{m}{2}< j\leq m}(2j-m)^{m+1} (-1)^{j}{m\choose j} e^{ix(2j-m)}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11706)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11704: \end{eqnarray*}
  11705: As the left hand side is real, we may take the real part on the right hand side and get (by observing ${\rm Re}\, iz=-{\rm Im}\, z)$
 >11706: \begin{eqnarray*}
  11707: \frac{d^{m+1}}{dx} (\sin x)^m&=&-\frac{1}{2^m} \sum_{0\leq j<\frac{m}{2}}  (m-2j)^{m+1}(-1)^{j}{m\choose j} \sin((m-2j)x)\\
- 11708: &&+ (-1)^{m+1}\frac{1}{2^m} \sum_{\frac{m}{2}< j\leq m}  (2j-m)^{m+1}(-1)^{j}{m\choose j} \sin((2j-m)x).
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11713)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11711: Finally,  as $$\int_0^\infty \frac{\sin (px)}{x}dx= \int_0^\infty \frac{\sin (x)}{x}dx=\frac{\pi}{2}$$
  11712: whenever $p>0$,  we deduce that
 >11713: \begin{eqnarray*}
  11714: I(m)=\frac{1}{(m+1)!} \int_0^\infty \frac{f^{(m+1)}(x)}{x}dx&=
- 11715: &\frac{\pi}{2} \frac{1}{(m+1)!}\Bigg[-\frac{1}{2^m} \sum_{0\leq j<\frac{m}{2}}  (m-2j)^{m+1}(-1)^{j}{m\choose j} \\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11754)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11752:  
  11753: First we note that $P_n$ is continuous on $[0,\infty[$, $P_n(0)=1$ and that $\lim_{n\to\infty} P_n(x)=\infty$. Now
 >11754: \begin{eqnarray*}
  11755: P_n'(x)&=& x(x-1)^{2n} \Big((2n+3) x- (4n^2+6n+4)\Big)\\
- 11756: &=& x(x-1)^{2n}(2n+3) \Big( x-\big(2n+\frac{4}{2n+3}\big)\Big).
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11764)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11762: 
  11763: $\bullet$~  As
 >11764: \begin{eqnarray*}
  11765: 1=P_n(x_n)&=& (x_n-1)^{2n+1}(x_n^2-(2n+1)x_n-1)\\
- 11766: &=&x_n(x_n-1)^{2n+1} (x_n-2n-1 -x_n^{-1})
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11778)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11776: 
  11777: $\bullet$~ By (\ref{rela}),
 >11778: \begin{eqnarray*}
  11779: n\,(x_n-2n-1)&=&\frac{n}{x_n}+ \frac{n}{x_n(x_n-1)^{2n+1}}\\
- 11780: &=& \frac{n}{x_n}\left( 1+ \frac{1}{(x_n-1)^{2n+1}}\right)\to \frac{1}{2} ( 1+ 0)=\frac{1}{2}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11854)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11852:  suppose that $x+y$ is prime whenever $x$ and $y $ are prime, $y\leq x$.  Since the sum of two odd prime numbers is even, 
  11853: it cannot be prime. Hence $y=2$. Let $n:=x$ \footnote{ The symbol $x$ for a natural number hurts my eyes \Smiley.}. Then we have to discuss the property $4+n^n$ is divisible by $2+n$.
 >11854: \begin{eqnarray*}
  11855: \frac{4+n^n}{2+n}&=&\frac{4 +((n+2)-2)^n}{2+n}=\frac{4+\dis \sum_{j=0}^n (n+2)^j {n\choose j} (-1)^{n-j} 2^{n-j}}{n+2}\\
- 11856: &=&\frac{4+(-1)^n 2^n + \dis \sum_{j=1}^n (n+2)^j {n\choose j} (-1)^{n-j} 2^{n-j}}{n+2}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11915)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11913: $$\mbox{$\dis u'= x^{2n-2}$ and $v=(1+x^2)^{-1}$}$$
  11914:  yields
 >11915: \begin{eqnarray*}
  11916: \int_0^1 \frac{x^{2n-2}}{1+x^2}\;dx&=& \frac{x^{2n-1}}{2n-1}\;\frac{1}{1+x^2}\Big|^1_0+\frac{1}{2n-1}\;\int_0^1 x^{2n-1} \frac{2x}{(1+x^2)^2}\;dx\\
- 11917: &=&\frac{1}{2(2n-1)}+\frac{2}{2n-1}\int_0^1 \frac{x^{2n}}{(1+x^2)^2}\;dx.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11924)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11922: =\frac{1}{2} \lim_{N\to\infty} \sum_{j=1}^{2N}\frac{(-1)^{j-1}}{j}=\frac{\log 2}{2},$$
  11923: we obtain
 >11924: \begin{eqnarray*}
  11925: S&=& \sum_{n=1}^\infty \left(\frac{1}{2(2n-1)}-\frac{1}{4n}\right) + 2\;\int_0^1 \left( \sum_{n=1}^\infty \frac{x^{2n-1}}{2n-1}\right)
- 11926:  \frac{x}{(1+x^2)^2}\;dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11933)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11931: To calculate a primitive of $I(x)$, we use partial integration with $u=\log\left(\frac{1+x}{1-x}\right)$ and $v'= \frac{x}{(1+x^2)^2}$. Hence
  11932: 
 >11933: \begin{eqnarray*}
  11934: \int I(x) dx&=&-\frac{1}{2}\frac{1}{1+x^2}\log\left(\frac{1+x}{1-x}\right) + \int \frac{1}{1-x^4}dx\\
- 11935: &=&-\frac{1}{2}\frac{1}{1+x^2}\log\left(\frac{1+x}{1-x}\right) + \frac{1}{4}\log\left(\frac{1+x}{1-x}\right)+ \frac{1}{2}\arctan x\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11978)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11976: 
  11977: In fact, if $1=p=q$, then nothing has to be shown. So let us assume that $q\geq 2$. Then
 >11978: \begin{eqnarray*}
  11979: 1+H_{pq}&=&1+H_p+\bl{\left(\frac{1}{p+1}+\cdots+ \frac{1}{2p}\right)} + \left(\frac{1}{2p+1}+\cdots+\frac{1}{3p}\right)
- 11980: +\cdots+ \bl{\left( \frac{1}{(q-1)p+1}+\cdots+ \frac{1}{qp}\right)}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11987)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 11985: Now let $1\leq m\leq n\leq p\leq q$ (of course this is without loss of generality). Then by (\ref{harmo2}),
  11986: 
 >11987: \begin{eqnarray*}
  11988: (H_m+H_n)+(H_p+H_q)&\leq& (1+ H_{mn})+(1+H_{pq})= 2+ H_{mn} + H_{pq} \\
- 11989: &\leq& 2 + 1+ H_{(mn)(pq)}=3 + H_{mnpq}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12002)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 12000: {\bf Remark 3} A different proof of  $H_p+H_q\leq 1+H_{pq}$, $p,q \in \N=\{1,2,\dots\}$,   can be given via induction on $q$: for $q=1$, 
  12001: $H_p+H_1=H_p+1\leq 1 + H_{p\cdot 1}$. Now for $q\to q+1$, we use that
 >12002: \begin{eqnarray*}
  12003: H_{p(q+1)}&=&H_{pq}+\frac{1}{pq+1}+\cdots +\frac{1}{pq+p}\geq H_{pq}+ \frac{p}{pq+p}= H_{pq}+\frac{1}{1+q}.
- 12004: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12087)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 12085: For the proof we shall decompose the series into several telescoping series. 
  12086: 
 >12087: \begin{eqnarray*}
  12088: \frac{H_{n-1} H_{n+1}}{n(n+1)}&=&\frac{H_{n-1} H_{n+1}}{n}-\frac{H_{n-1} H_{n+1}}{n+1}=\frac{H_{n-1} H_{n+1}}{n}-
- 12089: \frac{(H_n-\frac{1}{n}) (H_{n+2}-\frac{1}{n+2})}{n+1}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12094)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 12092: \end{eqnarray*}
  12093: Now 
 >12094: \begin{eqnarray*}
  12095: \frac{H_{n+2}}{n(n+1)}&=&\left(\frac{H_{n+1}}{n} +\frac{\frac{1}{n+2}}{n}\right) -\frac{H_{n+2}}{n+1}= 
- 12096: \left(\frac{H_{n+1}}{n}-\frac{H_{n+2}}{n+1}\right) +\frac{1}{n(n+2)}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12099)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 12097: \end{eqnarray*}
  12098: and
 >12099: \begin{eqnarray*}
  12100: \frac{H_{n}}{(n+1)(n+2)}&=&\left(\frac{H_{n-1}}{n+1} +\frac{\frac{1}{n}}{n+1}\right) -\frac{H_{n}}{n+2}= \left(\frac{H_{n-1}}{n+1}-
- 12101: \frac{H_{n}}{n+2}\right) +\frac{1}{n(n+1)}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12104)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 12102: \end{eqnarray*}
  12103: Moreover,
 >12104: \begin{eqnarray*}
  12105: \frac{2}{n(n+2)}&=&\frac{1}{n}-\frac{1}{n+2}=\left(\frac{1}{n}-\frac{1}{n+1}\right)+\left(\frac{1}{n+1}-\frac{1}{n+2}\right)\\
- 12106: \frac{2}{n(n+1)(n+2)}&=&\frac{1}{n(n+1)}-\frac{1}{(n+1)(n+2)}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12109)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 12107: \end{eqnarray*}
  12108: Hence %\footnotesize{
 >12109: \begin{eqnarray*}
  12110: \frac{H_{n-1} H_{n+1}}{n(n+1)}&=&\left(\frac{H_{n-1} H_{n+1}}{n} -\frac{H_nH_{n+2}}{n+1}\right) +
- 12111: \bl{\left(\frac{H_{n+1}}{n}-\frac{H_{n+2}}{n+1}\right) }+\left(\frac{H_{n-1}}{n+1}-\frac{H_{n}}{n+2}\right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12117)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 12115: Consequently
  12116: 
 >12117: \begin{eqnarray*}
  12118: \lim_{N\to\infty}\sum_{n=1}^N \frac{H_{n-1} H_{n+1}}{n(n+1)}&=&\left(H_0H_2- \lim_{N\to\infty}\frac{H_N H_{N+2}}{N+1}\right)
- 12119: +\bl{\left(H_2-\lim_{N\to\infty}\frac{H_{N+2}}{N+1}\right)}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12293)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 12291: $$f(y+x)=xf'(y)+ f(y).$$
  12292: Now
 >12293: \begin{eqnarray*}
  12294: f'(y+x)&=&\frac{\partial }{\partial y} f(y+x)= xf''(y)+f'(y)\\
- 12295: f'(y+x)&=&\frac{\partial }{\partial x} f(y+x) =f'(y).
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12337)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 12335: 
  12336: To this end, note that
 >12337: \begin{eqnarray*}
  12338: {m+k\choose k}\;{m+n+1\choose n-k}&=&\frac{(m+k)!}{m!k!}\; \frac{(m+n+1)!}{(m+k+1)! (n-k)!}\\
- 12339: &=& \frac{(m+n+1)!}{m!} \frac{1}{k! (m+k+1)(n-k)!}= \frac{(m+n+1)!}{m!n!}{n\choose k}\frac{1}{m+k+1} .
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12364)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 12362: 
  12363: 
 >12364: \begin{eqnarray*}
  12365: R_n&=& \left[ x^m 2 \left(\frac{1+x}{2}\right)^{n+1}\right]^1_0-
- 12366: \int_0^1 mx^{m-1} 2  \left(\frac{1+x}{2}\right)^{n+1}\;dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12376)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 12374: 
  12375: Together with (\ref{lux}), this finally yields  that
 >12376: \begin{eqnarray*}
  12377: L_m(n)&=& \frac{1}{n^m}\frac{(m+n+1)!}{m!n!}\;\int_0^1 x^m\left(\frac{1+x}{2}\right)^n\;dx\\
- 12378: &=& \frac{1}{m!}\; \frac{(m+n+1) (m+n)\dots(n+2)}{n^m} \; (n+1) \;\int_0^1 x^m \left(\frac{1+x}{2}\right)^{n}\;dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12447)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 12445: 
  12446: 
 >12447: \begin{eqnarray*}
  12448: \sum_{k=1}^n \frac{1}{\dis c^2+\frac{2}{q}(k-1)}&=& \frac{1}{c^2} +\sum_{k=1}^{n-1} f(k)\leq 
- 12449: \frac{1}{c^2} +\int_0^{n-1} f(x)dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12464)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 12462: 
  12463: Hence
 >12464: \begin{eqnarray*}
  12465: \Delta_n:=\left|a_{n+1}- \sqrt{\frac{2}{q} n}\right|&=&\frac{\Big|a_{n+1}^2- \frac{2}{q}n\Big|}{a_{n+1}+ \sqrt{\frac{2}{q} n}}\\
- 12466: &\leq&\frac{c^2+\frac{1}{q^2}\;\frac{1}{c^2}+\frac{1}{2q}\log\left( 1+ \frac{2}{qc^2}(n-1)\right)}{\sqrt{c^2 +\frac{2}{q}\, n}+
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12472)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 12470: 
  12471: Finally
 >12472: \begin{eqnarray*}
  12473: \left|a_{n}- \sqrt{\frac{2}{q} n}\right|&\leq& \left|a_{n}- \sqrt{\frac{2}{q} (n-1)}\right|+ \left|\sqrt{\frac{2}{q} (n-1)}-\sqrt{\frac{2}{q} n}\right| \\
- 12474: &=&\Delta_{n-1}+\sqrt{\frac{2}{q} }\cdot \frac{1}{\sqrt{n-1}+\sqrt n}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12573)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 12571: Now the function $f(x):=2x\log x$ is convex on $]0,\infty[$, since $f''(x)=2/x\geq 0$.
  12572: Hence
 >12573: \begin{eqnarray*}
  12574: 2a\log a +2b\log b+2c\log c &=&f(a)+f(b)+f(c) \geq 3 f\left(\frac{a+b+c}{3}\right)\\
- 12575: &=&3 f\left(\frac{1}{2}\right)=-3\log2.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12689)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 12687: Thus (\ref{cos1}) holds.  If  $\rho$ is odd,  then, by putting $t=\rho\pi/(n+1)$ in (\ref{hauptung}), we obtain
  12688: 
 >12689: \begin{eqnarray*}
  12690: \sum_{j=1}^n e^{i j \frac{\rho\pi}{n+1}}&=&\frac{e^{i \frac{\rho \pi}{n+1}}+1}{1-e^{i \frac{\rho\pi}{n+1}}}=
- 12691: i\; \cot\left( \frac{1}{2}\;\frac{\rho \pi}{n+1}\right).
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12706)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 12704: 
  12705: In fact, using  that $\sin^2 x=\frac{1-\cos 2x}{2}$, we obtain from (\ref{cos1})
 >12706: \begin{eqnarray*}
  12707: \sum_{j=1}^n \sin^2 \left(j \frac{r\pi}{n+1}\right)&=& \sum_{j=1}^n \frac{1-\cos \left(j \dis \frac{2 r\pi }{n+1}\right)}{2}\\
- 12708: &=&\frac{n}{2} -\frac{1}{2}\;\sum_{j=1}^n \cos \left(j \dis \frac{2 r\pi }{n+1}\right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12715)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 12713: 
  12714: $\bullet$ {\it Case 1}  \ovalbox{$r=s$.}  Then 
 >12715: \begin{eqnarray*}
  12716: S=\sum_{j=1}^n \left(\sin\left( j \frac{r\pi}{n+1}\right)+ \sin\left( j \frac{r\pi}{n+1}\right)\right)^2&=&
- 12717: 4 \sum_{j=1}^n \sin^2\left( j \frac{r\pi}{n+1}\right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12731)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 12729: Hence
  12730: 
 >12731: \begin{eqnarray*}
  12732: S&=& \sum_{j=1}^n \sin^2\left( j  \frac{r\pi}{n+1}\right)+ \sum_{j=1}^n \sin^2\left( j  \frac{s\pi}{n+1}\right)+
- 12733: \sum_{j=1}^n \cos\left(j \pi\frac{r-s}{n+1}\right)-\sum_{j=1}^n \cos\left(j \pi\frac{r+s}{n+1}\right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12815)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 12813: \end{equation}
  12814: So, with $m=n-k-1$,
 >12815: \begin{eqnarray*}
  12816: I_n&=&\sum_{k=0}^{n-1}  {2k\choose k} \frac{1}{2^{2k}(n-k-1)!}\;\int_0^\infty x^{(n-k-1/2)-1} e^{-x}\; dx\\
- 12817: &=&\sum_{k=0}^{n-1}  {2k\choose k} \frac{1}{2^{2k}(n-k-1)!}\; \Gamma(n-k-1/2)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13034)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 13032: $\dis \lim_{n\to\infty}   \frac{n^n e^{-n} \sqrt{2\pi n}}{n!}=1.$
  13033: 
 >13034: \begin{eqnarray*}
  13035: P_N:= \prod_{n=1}^N \frac{4n(n+1)}{(2n+1)^2}&=& \frac{4^N\; N! (N+1)!}{\left(\frac{(2N+1)!}{ \prod_{n=1}^N (2n) }\right)^2}
- 13036: =\frac{4^N N! (N+1)!}{(2N+1)!^2}\; \frac{\left(2^N N!\right)^2}{1}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13054)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 13052: 
  13053: For $z\in \mathbb C$ we have
 >13054: \begin{eqnarray*}
  13055: \sin(\pi z)&=&\pi z \prod_{n=1}^\infty \left(1-\frac{z^2}{n^2}\right)=\pi z\prod_{n=1}^\infty  \left(1-\frac{z}{n}\right) e^{\frac{z}{n}} \;\prod_{n=1}^\infty  \left(1+\frac{z}{n}\right) e^{-\frac{z}{n}} \\
- 13056: &=& \pi z(1-z) e^z \prod_{n=1}^\infty  \left(1-\frac{z}{n+1}\right) e^{\frac{z}{n+1}}\;\prod_{n=1}^\infty  \left(1+\frac{z}{n}\right) e^{-\frac{z}{n}}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13065)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 13063: 
  13064: Hence
 >13065: \begin{eqnarray*}
  13066: P&=&\prod_{n=1}^\infty \frac{4n(n+1)}{(2n+1)^2}= \prod_{n=1}^\infty\frac{2n}{2n+1}   \frac{2n+2}{2n+1}\\
- 13067: &=&\prod_{n=1}^\infty  \frac{1}{1+\frac{1}{2n}}\; \frac{1}{1-\frac{1}{2(n+1)}}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13112)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 13110: $$\cos(x+y)\;\cos(x-y)=\cos^2y-\sin^2 x,$$
  13111: we obtain
 >13112: \begin{eqnarray*}
  13113: I(x)&=&\cos x \int_0^{\pi/4}\frac{\cos y}{(1-\sin^2 x)-\sin^2 y}\;dy\\
- 13114: \tiny{\text{$u:=\sin y$}}&=& \cos x \int_0^{\sqrt 2/2} \frac{du}{\cos^2 x-u^2}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13129)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 13127: $\cos(a-b)=-2 \sin\frac{a+b}{2} \sin \frac{a-b}{2}$,  we obtain
  13128: 
 >13129: \begin{eqnarray*}
  13130: \log\left(\frac{\sqrt 2\cos x+1}{\sqrt 2 \cos x-1}\right) &=&\log\left(\frac{\cos x+\cos\pi/4}{\cos x-\cos\pi/4}\right) \\
- 13131:  &=&-\log \tan\left( \frac{x+\pi/4}{2}\right)-\log \tan\left( \frac{-x+\pi/4}{2}\right).
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13250)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 13248: $$\ovalbox{$\dis S=\frac{\pi^2}{12}-\frac{1}{2}$}.$$  
  13249: Just write
 >13250: \begin{eqnarray*}
  13251: \frac{H_k}{k(k+1)(k+2)}&=& \frac{1}{2} \left(H_k\Big(\frac{1}{k(k+1)}-\frac{1}{(k+1)(k+2)}\Big)\right)\\
- 13252: &=&\frac{1}{2} \left( \frac{H_k}{k(k+1)}- \frac{H_{k+1}}{(k+1)(k+2)} + \frac{1}{(k+1)^2 (k+2)}\right).
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13258)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 13256: $$
  13257: Since the Cesaro means of the sequences $(1/k)$  converge to 0, that is $H_k/k\to 0$, we conclude that
 >13258: \begin{eqnarray*}
  13259: S&=&\frac{1}{2}\frac{H_1}{2} -\frac{1}{2} \frac{1}{1+1}+\frac{1}{2}\sum_{k=1}^\infty \frac{1}{(k+1)^2}=\frac{\pi^2}{12}-\frac{1}{2}.
- 13260: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13306)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 13304: $\dis S:=\sum_{n=1}^\infty \frac{1}{(2n+1)(n+1)}$ can be determined as follows:
  13305: 
 >13306: \begin{eqnarray*}
  13307: \sum_{n=1}^N \frac{1}{(2n+1)(n+1)}&=&\sum_{n=1}^N \Big(\frac{2}{2n+1}-\frac{1}{n+1}\Big)\\
- 13308: \text{\footnotesize  splitting into even an odd} &=& \sum_{n=1}^N \Big(\frac{1}{2n+1}-\frac{1}{2n+1}\Big) + \sum_{n=1}^{N}\Big(\frac{1}{2n+1}-\frac{1}{2n}\Big) +\sum_{n=N+1}^{2N+1} \frac{1}{n}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13359)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 13357: Substituting  $x=\cosh t $ we obtain $T_n(\cosh t)=\cosh(nt)$. In particular, $T_n$ has no zeros on $ [1,\infty[$. Hence
  13358: 
 >13359: \begin{eqnarray*}
  13360: I:=\int_1^\infty \frac{dx}{T_n(x)^{2/n}}&=&\int_0^\infty \frac{\sinh t}{\big(\cosh (nt)\big)^{2/n}}\; dt= \int_0^\infty 
- 13361: \frac{e^t-e^{-t}}{2 \dis \left(\frac{e^{nt}+e^{-nt}}{2}\right)^{2/n}}\;dt\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13366)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 13364: 
  13365: Hence
 >13366: \begin{eqnarray*}
  13367: I&<&2^{-1+2/n}\int_0^\infty \frac{1-e^{-2t}}{e^t}\;dt =2^{-1+2/n}\left[ -e^{-t}+\frac{1}{3}e^{-3t}\right]^\infty_0\\
- 13368: &=& 2^{-1+2/n} \frac{2}{3}= \frac{1}{3} \sqrt[n]{4}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13371)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 13369: \end{eqnarray*}
  13370: Moreover
 >13371: \begin{eqnarray*}
  13372: I&>& 2^{-1+2/n} \int_0^\infty \frac{1-e^{-2t}}{e^t(1+1)^{2/n}}\;dt= 2^{-1} \int_0^\infty \frac{1-e^{-2t}}{e^t}\;dt= 2^{-1} \frac{2}{3}=\frac{1}{3}.
- 13373: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13427)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 13425:   $$
  13426:   Consequently, 
 >13427: \begin{eqnarray*}
  13428: \int_0^1 f_n(x)dx&= &\int_0^1 d_n(x)dx + \sqrt b \;\int_0^1 n x^{k-1/2}x^{n+1/2}dx\\
- 13429: &=& \int_0^1 d_n(x)dx+ \sqrt b\,\frac{n}{k+n+1}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13479)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 13477: We have to show that $H(x_0,y_0)\geq 0$.
  13478: Since $0\leq f\leq 1$,  $F(x)\leq \int_0^x 1 \;dt = x$. Hence
 >13479: \begin{eqnarray*}
  13480: \frac{\partial H}{\partial x}(x,y)=-2\big(F(x)+x f(x)\big) +2 F(x)+2 F(x)f(x)= 2 \big(F(x)-x\big) f(x)\leq 0.
- 13481: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13536)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 13534:  we deduce that $f''(x)\geq 0$ on $[0,2/3]$, too. 
  13535: Due to Jensen's inequality, for $(a,b,c)\in L$
 >13536: \begin{eqnarray*}
  13537: H(a,b,c)&=& f(a) +f(b)+f(c) = 3 \;\frac{f(a)+f(b)+f(c)}{3}\geq 3\;f\Big(\frac{a+b+c}{3}\Big)
- 13538: \end{eqnarray*} 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13631)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 13629: In fact, using Cauchy-Schwarz, we immediately obtain
  13630: 
 >13631: \begin{eqnarray*}
  13632: \frac{\dis\sum^n_{j=1 \atop j\not=i}a_j^2}{\dis\Big(\sum^n_{j=1 \atop j\not=i} a_j\Big)^3}\geq 
- 13633: \frac{\dis\sum^n_{j=1 \atop j\not=i}a_j^2}{\dis\Big(\big(\sum^n_{j=1 \atop j\not=i}a_j^2\big) (n-1)\Big)^{3/2}}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13760)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 13758: Let $M:=\max\{|f(x)|: 0\leq x\leq 1\}$. Given $\e$ with $0<\e<\frac{1}{2}\min\{f(1),g(1)\}$, choose $\delta>0$ so that $|f(x)-f(1)|\leq \e$ for $\delta\leq x\leq 1$. Moreover, let $n_0$ be so large that $\delta^{k+1}\leq \e/(2M)$ for $k\geq n_0$.  Then
  13759: 
 >13760: \begin{eqnarray*}
  13761: \left|\int_0^1 x^k f(x)\,dx-\frac{1}{k+1} f(1)\right|&=& \left|\int_0^1 x^k (f(x)-f(1))\,dx\right|\\
- 13762: & \leq& 2M\;\int_0^\delta x^k +\int_\delta^1 x^k |f(x)-f(1)|\,dx  \\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13773)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 13771: 
  13772: We conclude that
 >13773: \small\begin{eqnarray*}
  13774:  \sum_{k=n_0}^n \frac{k+1}{f(1)+2\e}\;\frac{k+1}{g(1)+2\e}
- 13775: \leq \sum_{k=n_0}^n   \left(\int_0^1 x^k f(x)\,dx\right) ^{-1}\;  \left(\int_0^1 x^k g(x)\,dx\right) ^{-1} &\leq&
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13904)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 13902: 
  13903: $\bullet$ It is straightforward to check that these are solutions:
 >13904: \begin{eqnarray*}
  13905: f\left(x+\frac{1}{y}\right)= \frac{c}{1+ x+\frac{1}{y}}=\frac{cy}{y+yx+1}= y f(xy+y).
- 13906: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 14108)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 14106: Applying this to (\ref{equ2}) yields
  14107: 
 >14108: \begin{eqnarray*}
  14109: \frac{n+1}{f(1)^{2n+1}} \int_s^1 f(x)^{2n+1}\;dx&\leq& \frac{n+1}{f(1)^{2n+1}} \frac{(f'(s)+f(1)-f'(s))^{2n+2}-
- 14110: (f'(s)s+f(1)-f'(s))^{2n+2}}{f'(s)(2n+2)}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 14117)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 14115: because $0\leq  1-\frac{f'(s)}{f(1)}(1-s)<1$ for $s\in [s_1,1]$. Similarily,
  14116: 
 >14117: \begin{eqnarray*}
  14118: \frac{n+1}{f(1)^{2n+1}} \int_s^1 f(x)^{2n+1}\;dx&\geq& \frac{n+1}{f(1)^{2n+1}} \frac{(f'(1)+f(1)-f'(1))^{2n+2}-
- 14119: (f'(1)s+f(1)-f'(1))^{2n+2}}{f'(1)(2n+2)}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 14595)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 14593: Expansion yields:
  14594: 
 >14595: \begin{eqnarray*}\label{haupt}
  14596: (a^2+b^2 +2ab)(f(a) +f(b))&= &f(a^3)+3 f(a^2b)+3 f(ab^2)+f(b^3)\iff\nonumber\\
- 14597: \underline{a^2f(a)}+b^2 f(a)+2ab f(a)+ a^2f(b) +\underline{b^2 f(b)}+2ab f(b)&=&  \underline{f(a^3)}+3 f(a^2b)+3 f(ab^2)+\underline{f(b^3)}\iff\nonumber\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 14936)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 14934: $$g(x)=\frac{8}{\pi}\sum_{n=1\atop n\;{\rm odd} }^\infty \frac{\sin(nx)}{n^3}.$$
  14935: Hence
 >14936: \begin{eqnarray*}
  14937: I_1:=\int_0^\pi \frac{x(\pi-x)}{\sin x}dx&=&\frac{8}{\pi} \sum_{n=1\atop n\;{\rm odd} }^\infty \frac{1}{n^3}\;\int_0^{\pi} \frac{\sin (nx)}{\sin x}dx\\
- 14938: &=&\frac{8}{\pi} \sum_{n=1\atop n\;{\rm odd} }^\infty \frac{1}{n^3} \pi =8 \frac{7}{8}\xi(3) =7\zeta(3).
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 14944)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 14942: $$J_n:=\int_0^{\pi} \frac{\sin (nx)}{\sin x}dx=\pi$$
  14943:  (a well known result),  it suffices to show that $J_{n}=J_{n+2}$. This holds, though,  since
 >14944: \begin{eqnarray*}
  14945: J_{n+2} =\int_0^{\pi} \frac{\sin (nx) \cos 2x+\cos (nx) \sin 2x}{\sin x}dx&=&\int_0^{\pi} \left(\frac{\sin (nx)}{\sin x} (1-2\sin^2 x) +2\cos nx  \cos x \right)dx\\
- 14946: &=& J_n + 2\int_0^\pi  \left(-\sin(nx) \sin x + \cos( nx ) \cos x \right)dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 14954)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 14952: (b) We shall work with suitable variable substitutions to regain the integral in (a). We use $\arctan x$ instead of  the ambiguous notation $\tan^{-1}x$. Note that $\arctan(1/y)+\arctan y=\pi/2$ for $y>0$.
  14953: 
 >14954: \begin{eqnarray*}
  14955: I_2:= \int_{-\infty}^\infty \arctan(e^x)\arctan(e^{-x}) dx&\buildrel=_{x=\log y}^{e^x=y}&\int_0^\infty \frac{\arctan y \;\arctan \frac{1}{y}}{y} dy\\
- 14956: &\buildrel=_{\arctan y =s}^{y=\tan s}&\int_0^{\pi/2} \frac{s (\frac{\pi}{2}-s)}{\tan s}\; \frac{1}{\cos^2 s}ds\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 15006)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 15004: $$\lim_{x\to\infty}\frac{\Gamma(x) }{ \sqrt{\frac{2\pi}{x}} \left(\frac{x}{e}\right)^x}=1,$$
  15005: we obtain with $\Gamma\left(\frac{n}{2}+1\right)=\frac{n}{2}\,\Gamma\left(\frac{n}{2}\right)$ that
 >15006: \begin{eqnarray*}
  15007: S_n&\sim&\frac{\pi}{4} \frac{n}{\left(\frac{n}{2}\; \sqrt{\frac{2\pi}{n/2}} \left(\frac{n/2}{e}\right)^{n/2}           \right)^{2/n}}
- 15008: = \frac{\pi}{4}  \frac{n}{\left(\frac{n}{2}\right)^{2/n}\left(\frac{4\pi}{n}\right)^{1/n}\frac{n}{2e}}\to\frac{\pi}{2} e.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 15040)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 15038: $|z-r|+|z+r|=2c$ for some positive constant $c$. Hence, as $ |z^2-r^2|= |w^2|$, respectively   $|w^2-r^2|= |z^2|$, and  through squaring,
  15039: 
 >15040: \begin{eqnarray*}
  15041: |z-r|^2+|z+r|^2 +2 |z-r|\;|z+r|&=& 2|z|^2 +2r^2+2 |z^2-r^2|\\
- 15042: &=&2|z|^2 +2r^2+2|w|^2\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 15120)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 15118: {\bf (a1)} This is done via the Laplace transform $F(s):=\mathcal L[f](s):=\int_0^\infty f(t)e^{-st}dt$ for certain admissible functions $f$.
  15119: First note that $\dis\frac{1-e^{-2x}}{x}=\int_{s=0}^2  e^{-sx} ds.$ Then, due to the convergence of the integrals, and Fubini's theorem,
 >15120: \begin{eqnarray*}
  15121: I:=\int_0^\infty(1-e^{-2x})\frac{\sin^2 x}{x^3}dx&=&\int_0^\infty \frac{1-e^{-2x}}{x}\; \frac{\sin^2 x}{x^2}dx=
- 15122: \int_{x=0}^\infty \int_{s=0}^2 e^{-sx} \frac{\sin^2 x}{x^2}ds dx\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 15156)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 15154: Observe that $\int_{\Gamma(r,R)} f(z)dz =0$.
  15155: Since
 >15156: \begin{eqnarray*}
  15157: \int_{\gamma^-_3(r,R)} f(z) dz&=&\int_r^R f(it) i dt=\int_r^R\frac{(1-e^{-2it})(1-e^{-2t})}{(-i)t^3} idt\\
- 15158: &=&-\overline{\int_{\gamma_1(r,R)} f(z)dz},
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 15167)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 15165: Now $I(R):=\dis\int_{\gamma_2(R)} f(z)dz\to 0$ as $R\to\infty$. In fact,
  15166: 
 >15167: \begin{eqnarray*}
  15168: |I(R)|&=&\left| \int_0^{\pi/2} f(Re^{it}) iR e^{it}dt\right|\leq \int_0^{\pi/2} \frac{(1+e^{-2R\cos t})(1+e^{-2R\sin t})}{R^2}dt\leq \frac{4 \;\dis\frac{\pi}{2}}{R^2}.
- 15169: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 15175)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 15173: $$ -4i +(4+4i)z-4z^2+\Oh(z^3),$$
  15174: we have
 >15175: \begin{eqnarray*}
  15176: J(r)&=& -\int_0^{\pi/2} \frac{(1-e^{-2 re^{it}})(1-e^{2ire^{it}})}{r^2e^{3it}} i e^{it} dt \;\buildrel\longrightarrow_{}^{r\to 0}\; -(-4i) i  \; \int_0^{\pi/2} 1\,dt =-2\pi
- 15177: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 15180)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 15178: (note that $\lim_{r\to 0} \int=\int\lim_{r\to 0}$ since the integrand is uniformly continuous for $(r,t)\in \;]0,1]\times [0,2\pi]$.)
  15179: Now
 >15180: \begin{eqnarray*}
  15181: 0&=&\lim_{R\to\infty\atop r\to 0} \int_{\Gamma(r,R)} f(z) dz\\
- 15182: &=& \lim_{R\to\infty\atop r\to 0} \left(\int_{\gamma_1(r,R)} f(z)dz+ \int_{\gamma_3(r,R)} f(z)dz\right) +  \lim_{R\to\infty} \int_{\gamma_2(R)}  f(z)dz+  \lim_{ r\to 0} \int_{\gamma_4(r)} f(z)dz\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 15196)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 15194: $$\int_0^\infty f(x)\frac{\sin^2 x}{x^2}dx=\int_0^{\pi/2} f(x) dx$$
  15195: (see e.g. \cite{jo} \footnote{ The proof there is also valid for the case of all even  Riemann-integrable $\pi$-periodic functions.}) to conclude that
 >15196: \begin{eqnarray*}
  15197: \int_{{-\infty}}^\infty \cos^2 (\tan x)\frac{\sin^2 x}{x^2}dx&=&2\int_0^{\pi/2} \cos^2 (\tan x)dx\\
- 15198: &\buildrel=_{dx=\frac{ds}{1+s^2}}^{s:=\tan x}&2\int_{s=0}^\infty \frac{\cos^2 s}{1+s^2}ds= \int_{s=0}^\infty \frac{1+\cos(2s)}{1+s^2}ds\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 15224)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
- 15222: $$\frac{1}{\sin^2 x}=\sum_{k=-\infty}^\infty \frac{1}{(k\pi +x)^2}$$
  15223: that
 >15224: \begin{eqnarray*}
  15225: \int_{{-\infty}}^\infty\frac{\sin^2 (\tan x)}{x^2} dx&=&\sum_{k=-\infty}^\infty \int_{-\frac{\pi}{2}+k\pi}^{\frac{\pi}{2} +k\pi} \frac{\sin^2 (\tan x)}{x^2} dx\\
- 15226: &\buildrel=_{}^{x=-\frac{\pi}{2}+k\pi +u}&\sum_{k=-\infty}^\infty \int_0^\pi \frac{\sin^2(\tan(u-\frac{\pi}{2}))}{(-\frac{\pi}{2}+k\pi +u)^2} du\\
 
 - file: sample\submodules\OpenLogic\content\computability\recursive-functions\non-pr-functions.tex (line 21)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-    19: \]
     20: is computable. But then so is the function
 >   21: \begin{eqnarray*}
     22: h(x) & = & g(x,x) + 1 \\
-    23: & = & f_x(x) +1.
 
 - file: sample\submodules\OpenLogic\content\computability\recursive-functions\non-pr-functions.tex (line 34)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-    32: denote $g(g(\dots g(x)))$, with $n$ $g$'s in all; and define a
     33: sequence $g_0,g_1,\dots$ of functions by
 >   34: \begin{eqnarray*}
     35: g_0(x) & = & x+1 \\
-    36: g_{n + 1}(x) & = & g_n^x(x)
 
 - file: sample\submodules\OpenLogic\content\computability\recursive-functions\non-pr-functions.tex (line 50)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-    48: notations. We can assign a natural number $\#(F)$ to each notation $F$,
     49: recursively, as follows:
 >   50: \begin{eqnarray*}
     51: \#(0) & = & \langle 0 \rangle \\
-    52: \#(S) & = & \langle 1 \rangle \\
 
 - file: sample\submodules\OpenLogic\content\computability\recursive-functions\pr-functions-computable.tex (line 13)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-    11: 
     12: Suppose a function $h$ is defined by primitive recursion
 >   13: \begin{eqnarray*}
     14: h(\vec x, 0)     & = & f(\vec x) \\
-    15: h(\vec x, y + 1) & = & g(\vec x, y, h(\vec x, y))
 
 - file: sample\submodules\OpenLogic\content\incompleteness\representability-in-q\c-representable.tex (line 117)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   115: The proof is, as usual, by induction on $n$. In the base case, $n =
    116: 0$, we need to show that $\Th{Q}$ proves $\eq[(x'+0)][(x+0)']$. But we have:
 >  117: \begin{eqnarray*}
    118: & & \eq[(x' + 0)][x'] \quad \text{from axiom 4} \\
-   119: & & \eq[(x + 0)][x] \quad \text{from axiom 4} \\
 
 - file: sample\submodules\OpenLogic\content\incompleteness\representability-in-q\c-representable.tex (line 127)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   125: n'$, we need to show that $\Th{Q}$ proves $\eq[(x' + \num n')][(x + \num
    126: n')']$. The following chain of equalities can be derived in $\Th{Q}$:
 >  127: \begin{eqnarray*}
    128: (x' + \num n') & \eq & (x' + \num n)' \quad \text{axiom 5} \\
-   129: & \eq & (x + \num n')' \quad \text{from the inductive hypothesis}
 
 - file: sample\submodules\OpenLogic\content\incompleteness\theories-computability\extensions-of-q-not-decidable.tex (line 59)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-    57: it is representable in $\Th{Q}$ (and hence $\Th{T}$) by a formula
     58: $!D_S(u)$. Then for every $n$, we have
 >   59: \begin{eqnarray*}
     60: S(\num n) & \lif & T \vdash !D_S(\num n) \\
-    61: & \lif & R(\Gn{!D_S(u)}, n)
 
 - file: sample\submodules\OpenLogic\content\incompleteness\theories-computability\extensions-of-q-not-decidable.tex (line 64)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-    62: \end{eqnarray*}
     63: and
 >   64: \begin{eqnarray*}
     65: \lnot S(\num n) & \lif & T \vdash \lnot !D_S(\num n) \\
-    66: & \lif & T \not\vdash !D_S(\num n) \quad \text{(since $\Th{T}$ is
 
 - file: sample\submodules\OpenLogic\content\incompleteness\theories-computability\inseparability.tex (line 35)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-    33: 
     34: Suppose $S(y)$ is computable, represented by $!D_S(u)$ in $\Th{Q}$. Then
 >   35: \begin{eqnarray*}
     36: S(\num n) & \lif & \Th{Q} \Proves !D_S(\num n) \\
-    37: & \lif & !D_S(\num n) \in C
 
 - file: sample\submodules\OpenLogic\content\incompleteness\theories-computability\inseparability.tex (line 40)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-    38: \end{eqnarray*}
     39: and 
 >   40: \begin{eqnarray*}
     41: \lnot S(\num n) & \lif & \Th{Q} \Proves \lnot !D_S(\num n) \\
-    42: & \lif & !D_S(\num n) \in \Th{\bar Q} \\
 
 - file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 1091)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1089: The general 95\% confidence interval for a point estimate
   1090: that follows a normal distribution is
 > 1091: \begin{eqnarray*}
   1092: \text{point estimate}\ \pm\ 1.96 \times SE
-  1093: \end{eqnarray*}
 
 - file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 1312)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-  1310:   the point estimate \wsjebolapollprop{}, and $z^{\star} = 1.96$
   1311:   for a 95\% confidence level, the confidence interval is
 > 1312:   \begin{eqnarray*}
   1313:   \text{point estimate} \ \pm\ z^{\star} \times SE
-  1314:     \quad\to\quad \wsjebolapollprop{} \ \pm\ 1.96\times \wsjebolapollse{}
 
 - file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 171)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   169:   Guided Practice~\ref{seOfPropOfPDBorrowersSupportReg},
    170:   the confidence interval is
 >  171:   \begin{eqnarray*}
    172:   \text{point estimate} \ \pm\ z^{\star} \times SE
-   173:       \quad\to\quad
 
 - file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 617)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   615:   the standard error of $\hat{p}_1 - \hat{p}_2$ is
    616:   \index{standard error (SE)!difference in proportions}
 >  617:   \begin{eqnarray*}
    618:   SE %_{\hat{p}_1 - \hat{p}_2}
-   619:     %= \sqrt{SE_{\hat{p}_1}^2 + SE_{\hat{p}_2}^2}
 
 - file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 988)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   986:   to verify the
    987:   success-failure condition and estimate the standard error:
 >  988:   \begin{eqnarray*}
    989:   \hat{p}_{\textit{pooled}}
-   990:     = \frac{\text{number of ``successes''}}
 
 - file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 996)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   994:   Here $\hat{p}_1 n_1$ represents the number of successes in
    995:   sample 1 since
 >  996:   \begin{eqnarray*}
    997:   \hat{p}_1
-   998:     = \frac{\text{number of successes in sample 1}}{n_1}
 
 - file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 45)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-    43: relationship can be modeled perfectly with a straight line.
     44: The equation for the line is
 >   45: \begin{eqnarray*}
     46: y = 5 + 64.96 x
-    47: \end{eqnarray*}
 
 - file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 309)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   307: \begin{onebox}{Residual: difference between observed and expected}
    308: The residual of the $i^{th}$ observation $(x_i, y_i)$ is the difference of the observed response ($y_i$) and the response we would predict based on the model fit ($\hat{y}_i$):
 >  309: \begin{eqnarray*}
    310: e_i = y_i - \hat{y}_i
-   311: \end{eqnarray*}
 
 - file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 319)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   317: Check it against the earlier visual estimate,~-1.}
    318: We first compute the predicted value of point ``$\times$'' based on the model:
 >  319: \begin{eqnarray*}
    320: \hat{y}_{\times} = 41+0.59x_{\times} = 41+0.59\times 77.0 = 86.4
-   321: \end{eqnarray*}
 
 - file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 323)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   321: \end{eqnarray*}
    322: Next we compute the difference of the actual head length and the predicted head length:
 >  323: \begin{eqnarray*}
    324: e_{\times} = y_{\times} - \hat{y}_{\times} = 85.3 -  86.4 = -1.1
-   325: \end{eqnarray*}
 
 - file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 728)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   726: 
    727: For the Elmhurst data, we could write the equation of the least squares regression line as
 >  728: \begin{eqnarray*}
    729: \widehat{aid} = \beta_0 + \beta_{1}\times
-   730:     \textit{family\us{}income}
 
 - file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 803)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   801: \end{exercisewrap}
    802: \footnotetext{Compute the slope using the summary statistics from Figure~\ref{summaryStatsElmhurstRegr}:
 >  803: \begin{eqnarray*}
    804: b_1
-   805:   = \frac{s_y}{s_x} R
 
 - file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 888)
+  error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
-   886:   of the box in a box plot.
    887:   It is computed as
 >  888:   \begin{eqnarray*}
    889:   IQR = Q_3 - Q_1
-   890:   \end{eqnarray*}
 

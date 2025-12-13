@@ -1,2721 +1,2381 @@
 [CODE] LLBracketMissing (340)
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 232)
+  error: _mm
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   230: 
    231: {\it Proof.}
 >  232:    Let $M$ denote Carat\'{e}odory's outer measure extending the set function $\phi$. Let $Q\subset\Sigma$ and $(A_m)_{m\leq 0}\in \Xi(Q)$. Since each $A_m$ can be written as a finite disjoint union of some cylinders $C_{1m},...,C_{n_mm}$ from $\mathcal{A}_m$,
    233:    \begin{eqnarray*}
-   234:  \sum\limits_{m\leq 0}\phi_m(A_m) = \sum\limits_{m\leq 0}\sum\limits_{k=1}^{n_m}\phi\left(C_{km}\right)\geq M(Q).
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 302)
+  error: ^mQ
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   300:    {\it Proof.}
    301:    We start with $\Phi$.  By Lemma \ref{oms}, we can define
 >  302:    \[\bar\Phi(Q) := \lim\limits_{m\to-\infty}\Phi\left(S^mQ\right)\]
    303:    for all $Q\subset\Sigma$.
-   304:    It is easy to check that $\bar\Phi$ is an outer measure on $\Sigma$. Also, it is  clear that it is shift invariant.
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 483)
+  error: _md
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   481:    Though the theorem appears to be a generalization of Doob's Martingale Theorem, the proof of it reduces to the truth of latter (just as the result in \cite{LR} does).
    482: 
 >  483:    Let $m\leq 0$. Since $\Phi|_{\mathcal{F}_m}\leq \phi_m|_{\mathcal{F}_m}$, by Radon-Nikodym Theorem, there exists $\xi_m:\Sigma\longrightarrow\mathbb{R}$ $\mathcal{F}_m$-measurable such that $\Phi(A) = \int_{A}\xi_md\phi_m$ for all $A\in\mathcal{F}_m$. Therefore, by the pool-out-property of the conditional expectation,
    484:    \begin{eqnarray*}
-   485:       \int\limits_{A}E_{\phi_m}\left(f|{\mathcal{F}_m}\right)d\Phi&=&\int\limits_{A}\xi_mfd\phi_m
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 485)
+  error: _mf
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   483:    Let $m\leq 0$. Since $\Phi|_{\mathcal{F}_m}\leq \phi_m|_{\mathcal{F}_m}$, by Radon-Nikodym Theorem, there exists $\xi_m:\Sigma\longrightarrow\mathbb{R}$ $\mathcal{F}_m$-measurable such that $\Phi(A) = \int_{A}\xi_md\phi_m$ for all $A\in\mathcal{F}_m$. Therefore, by the pool-out-property of the conditional expectation,
    484:    \begin{eqnarray*}
 >  485:       \int\limits_{A}E_{\phi_m}\left(f|{\mathcal{F}_m}\right)d\Phi&=&\int\limits_{A}\xi_mfd\phi_m
    486:       =\int\limits_{A}fd\Phi
-   487:   \end{eqnarray*}
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 517)
+  error: _ex
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   515: A Markov system is called {\it contractive} iff there exists $0<a<1$ such that
    516:  \begin{equation}\label{cac}
 >  517:  \sum\limits_{e\in E}p_e(x)d(w_ex,w_ey)<ad(x,y)\\\\\mbox{ for all }x,y\in K_i, i=1,...,N.
    518:  \end{equation}
-   519: Let $\mathcal{B}(K)$ denote the Borel $\sigma$-algebra  and $P(K)$ the set of all Borel probability measures on $K$. Let $U$ be the Markov operator acting on real-valued functions $f$ on $K$ by
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 517)
+  error: _ey
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   515: A Markov system is called {\it contractive} iff there exists $0<a<1$ such that
    516:  \begin{equation}\label{cac}
 >  517:  \sum\limits_{e\in E}p_e(x)d(w_ex,w_ey)<ad(x,y)\\\\\mbox{ for all }x,y\in K_i, i=1,...,N.
    518:  \end{equation}
-   519: Let $\mathcal{B}(K)$ denote the Borel $\sigma$-algebra  and $P(K)$ the set of all Borel probability measures on $K$. Let $U$ be the Markov operator acting on real-valued functions $f$ on $K$ by
 
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 520)
+  error: _ef
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   518:  \end{equation}
    519: Let $\mathcal{B}(K)$ denote the Borel $\sigma$-algebra  and $P(K)$ the set of all Borel probability measures on $K$. Let $U$ be the Markov operator acting on real-valued functions $f$ on $K$ by
 >  520: \[Uf = \sum\limits_{e\in E}p_ef\circ w_e\] and
    521: $U^*$ be its adjoint operator acting on Borel probability measures $\nu$ on $K$ by $U^*\nu(B) = \int U(1_B)d\nu$ for all $B\in \mathcal{B}(K)$.
-   522: 
 
 - file: sample\arxiv_sources\1101.2623v9\SecondCaratheodoryGibbsMeasures4_Erratum.tex (line 119)
+  error: ^mA
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   117:   
    118: For $Q\subset\Sigma$, let $\dot\xi(Q)$ be the class of all  disjoint covers $(A_m)_{m\leq 0}\in\C(Q)$ with at most finitely many non-empty sets where each $A_m$ is a finite union of cylinder sets from $\A_m$.
 >  119:  Set \[\dot\Phi(Q):=\inf\limits_{(A_m)_{m\leq 0}\in\dot\xi(Q)}\sum\limits_{m\leq 0}\phi_0\left(S^mA_m\right).\]
    120:    \begin{Lemma} Let $Q\subset\Sigma$ be compact. Then
-   121:        \[\Phi(Q)=\dot\Phi(Q).\]
 
 - file: sample\arxiv_sources\1101.2623v9\SecondCaratheodoryGibbsMeasures4_Erratum.tex (line 126)
+  error: ^mA
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   124: 
    125:     1. Step.  Let $\tilde\xi(Q)$ be the set of all $(A_m)_{m\leq 0}\in\C(Q)$ such that each $A_m$ is an at most countable union of cylinder sets from $\A_m $. Set
 >  126:    \[\tilde\Phi(Q):=\inf\limits_{(A_m)_{m\leq 0}\in\tilde\xi(Q)}\sum\limits_{m\leq 0}\phi_0\left(S^mA_m\right).\]
    127:  Then, obviously, $\tilde\Phi(Q)\geq \Phi(Q)$.
-   128: Let $\left((A^n_m)_{m\leq 0}\right)_{n\in\mathbb{N}}\subset\mathcal{C}(Q)$ such that
 
 - file: sample\arxiv_sources\1101.2623v9\SecondCaratheodoryGibbsMeasures4_Erratum.tex (line 142)
+  error: ^mA
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   140: 
    141: 2. Step. Let $\xi'(Q)$ be the set of all $(A_m)_{m\leq 0}\in\tilde\xi(Q)$ such at most finitely many $A_m$'s are not empty and each $A_m$ is a finite union of cylinder sets. Set
 >  142:   \[\Phi'(Q):=\inf\limits_{(A_m)_{m\leq 0}\in\xi'(Q)}\sum\limits_{m\leq 0}\phi_0\left(S^mA_m\right).\]
    143:  Then, clearly, $\Phi'(Q)\geq \tilde\Phi(Q)$. By the compactness of $Q$, for every $(A_m)_{m\leq 0}\in\tilde\xi(Q)$ there exists $(A'_m)_{m\leq 0}\in\xi'(Q)$ such that $A'_m\subset A_m$ for all $m\leq 0$, and therefore,
-   144: \[\sum\limits_{m\leq 0}\phi_0\left(S^mA_m\right)\geq\sum\limits_{m\leq 0}\phi_0\left(S^mA'_m\right)\geq\Phi'(Q).\]
 
 - file: sample\arxiv_sources\1101.2623v9\SecondCaratheodoryGibbsMeasures4_Erratum.tex (line 144)
+  error: ^mA
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   142:   \[\Phi'(Q):=\inf\limits_{(A_m)_{m\leq 0}\in\xi'(Q)}\sum\limits_{m\leq 0}\phi_0\left(S^mA_m\right).\]
    143:  Then, clearly, $\Phi'(Q)\geq \tilde\Phi(Q)$. By the compactness of $Q$, for every $(A_m)_{m\leq 0}\in\tilde\xi(Q)$ there exists $(A'_m)_{m\leq 0}\in\xi'(Q)$ such that $A'_m\subset A_m$ for all $m\leq 0$, and therefore,
 >  144: \[\sum\limits_{m\leq 0}\phi_0\left(S^mA_m\right)\geq\sum\limits_{m\leq 0}\phi_0\left(S^mA'_m\right)\geq\Phi'(Q).\]
    145: Hence $\tilde\Phi(Q)\geq\Phi'(Q)$. Thus \[\tilde\Phi(Q)=\Phi'(Q).\]
-   146: 
 
 - file: sample\arxiv_sources\1101.2623v9\SecondCaratheodoryGibbsMeasures4_Erratum.tex (line 144)
+  error: ^mA
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   142:   \[\Phi'(Q):=\inf\limits_{(A_m)_{m\leq 0}\in\xi'(Q)}\sum\limits_{m\leq 0}\phi_0\left(S^mA_m\right).\]
    143:  Then, clearly, $\Phi'(Q)\geq \tilde\Phi(Q)$. By the compactness of $Q$, for every $(A_m)_{m\leq 0}\in\tilde\xi(Q)$ there exists $(A'_m)_{m\leq 0}\in\xi'(Q)$ such that $A'_m\subset A_m$ for all $m\leq 0$, and therefore,
 >  144: \[\sum\limits_{m\leq 0}\phi_0\left(S^mA_m\right)\geq\sum\limits_{m\leq 0}\phi_0\left(S^mA'_m\right)\geq\Phi'(Q).\]
    145: Hence $\tilde\Phi(Q)\geq\Phi'(Q)$. Thus \[\tilde\Phi(Q)=\Phi'(Q).\]
-   146: 
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1698)
+  error: ^ru
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  1696: the coordinate transformation $y_{1}\mapsto\sigma y_{1}$, the one-variable
   1697: integral in (\ref{eq: double star}) is of the form $\gamma_{h,l}$
 > 1698: with $l=s$ and $h\left(x,y_{1}\right)=y_1^ru\left(x,y_{1}\right)\chi_{B_{x}}\left(y_{1}\right)$,
   1699: where $\chi_{B_{x}}$ is the characteristic function of the subanalytic
-  1700: set $B_{x}$. This concludes the proof of Proposition \ref{prop:integGen-1}.
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 2112)
+  error: _kY
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2110:     &:=
   2111:     \tld{H}_j\left(
 > 2112:     \left(X_kY_{1}^{\nu_{j,k}}V_{j,k}(W)\right)_{k\in K_{j}^{-}}, \left(X_kY_{2}^{\nu_{j,k}}V_{j,k}(W)\right)_{k\in K_{j}^{+}},
   2113:     \right.
-  2114:     \\
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 2112)
+  error: _kY
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2110:     &:=
   2111:     \tld{H}_j\left(
 > 2112:     \left(X_kY_{1}^{\nu_{j,k}}V_{j,k}(W)\right)_{k\in K_{j}^{-}}, \left(X_kY_{2}^{\nu_{j,k}}V_{j,k}(W)\right)_{k\in K_{j}^{+}},
   2113:     \right.
-  2114:     \\
 
 - file: sample\arxiv_sources\1609.01657v1\main.tex (line 226)
+  error: _al
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   224: \bibitem{imaginary} \url{https://imaginary.org}
    225: 
 >  226: \bibitem{todfer} \url{www.toonz.com/personal/todesco/superfici_algebriche/}
    227: 
-   228: \end{thebibliography}
 
 - file: sample\arxiv_sources\1609.03457v1\extent-abilities.tex (line 136)
+  error: _nC
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   134: Based on experimentation with the online version, equations which are considered ``similar'' to one another can have interchanged variables and constants, differently named variables, constants of differing values, and terms added or removed. \cite{TangentSE} For example, searching for ``g(z) = 0'' returns results which include the following: $g(z) = 0$, $g(E) = 0$, $g(0) = 0$, and $h(z) = 0$.  \cite{Tangent-pub-2015, TangentSE} The latter three of these results all share the same ``score'' - that is, they are considered to have the same degree of similarity to the input equation. \cite{TangentSE}
    135: 
 >  136: The web-available demo version of Tangent is an old version of the software (v0.1).  Developers have now released version 0.3.1, which is available for download and use; that version was used for a recent competition in math-aware information retrieval. \cite{dprl-descriptions, ntcir12tangent}  Its upgrades include better discovery of ``similar'' equations, broader wildcard support (including allowing a single wildcard to represent a subexpression, instead of just one symbol), keywords alongside equations in a query, and scalability. \cite{ntcir12tangent, tangent2016sigir, Tangent-technical-v0.3, tangent2014ntcir}  It allows subexpressions to be subsitituted for other subexpressions, regardless of their mathematical meaning or size - for example, $\sin(a + b)$ has the subexpression $(a+b)$, which can be substituted for any other expression inside parenthesis when retrieving results. \cite{ntcir12tangent} Notationally, this updated engine can also query matrices, prefix subscripts (e.g. $_nC$), and prefix superscripts (e.g. $^rC$). \cite{tangent2014ntcir}  Possible upcoming features indicated by the developers include incorporating textual context into equation matching \cite{tangent2016sigir}, improving keyword-vs-equation weighting when ranking results \cite{ntcir12tangent}, and adjusting the weight which is given to matching variables (versus allowing them to vary) when retrieving and ranking results \cite{ntcir12tangent}.
    137: 
-   138: 
 
 - file: sample\arxiv_sources\1609.03457v1\extent-abilities.tex (line 136)
+  error: ^rC
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   134: Based on experimentation with the online version, equations which are considered ``similar'' to one another can have interchanged variables and constants, differently named variables, constants of differing values, and terms added or removed. \cite{TangentSE} For example, searching for ``g(z) = 0'' returns results which include the following: $g(z) = 0$, $g(E) = 0$, $g(0) = 0$, and $h(z) = 0$.  \cite{Tangent-pub-2015, TangentSE} The latter three of these results all share the same ``score'' - that is, they are considered to have the same degree of similarity to the input equation. \cite{TangentSE}
    135: 
 >  136: The web-available demo version of Tangent is an old version of the software (v0.1).  Developers have now released version 0.3.1, which is available for download and use; that version was used for a recent competition in math-aware information retrieval. \cite{dprl-descriptions, ntcir12tangent}  Its upgrades include better discovery of ``similar'' equations, broader wildcard support (including allowing a single wildcard to represent a subexpression, instead of just one symbol), keywords alongside equations in a query, and scalability. \cite{ntcir12tangent, tangent2016sigir, Tangent-technical-v0.3, tangent2014ntcir}  It allows subexpressions to be subsitituted for other subexpressions, regardless of their mathematical meaning or size - for example, $\sin(a + b)$ has the subexpression $(a+b)$, which can be substituted for any other expression inside parenthesis when retrieving results. \cite{ntcir12tangent} Notationally, this updated engine can also query matrices, prefix subscripts (e.g. $_nC$), and prefix superscripts (e.g. $^rC$). \cite{tangent2014ntcir}  Possible upcoming features indicated by the developers include incorporating textual context into equation matching \cite{tangent2016sigir}, improving keyword-vs-equation weighting when ranking results \cite{ntcir12tangent}, and adjusting the weight which is given to matching variables (versus allowing them to vary) when retrieving and ranking results \cite{ntcir12tangent}.
    137: 
-   138: 
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1646)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1644: For all $\ell\ge k$, we define $\Pi_k:L^1(\Omega)\to L^1(\Omega)$ by 
   1645: \begin{align}\label{df:Pik}
 > 1646:   \Pi_kv:=\sum_{\elm\in\gridk}\sum_{z\in\nodes_k(\elm)}
   1647:   (\Pi_kv)|_\elm(z) \,\Phi_z^\elm,
-  1648: \end{align}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1647)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1645: \begin{align}\label{df:Pik}
   1646:   \Pi_kv:=\sum_{\elm\in\gridk}\sum_{z\in\nodes_k(\elm)}
 > 1647:   (\Pi_kv)|_\elm(z) \,\Phi_z^\elm,
   1648: \end{align}
-  1649: where for $z\in\nodes_k(\elm)$ we have that 
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1651)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1649: where for $z\in\nodes_k(\elm)$ we have that 
   1650: \begin{align}\label{df:Pikz}
 > 1651:   (\Pi_kv)|_\elm(z):=
   1652:   \begin{cases}
-  1653:     \int_\elm
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1679)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1677:     bounded projection for all $1\le p\le\infty$. In particular, we have that 
   1678:     \begin{align*}
 > 1679:       \norm[L^p(\elm)]{\Pi_kv}\Cleq \norm[L^p(\omegak(\elm))]{v},
   1680:     \end{align*}
-  1681:     where the constant solely depends on $p$, $r$, $d$, and  the shape regularity
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1683)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1681:     where the constant solely depends on $p$, $r$, $d$, and  the shape regularity
   1682:     of $\grid_0$. 
 > 1683:   \item\label{Pik:2} $\Pi_kv\in\Vk$ for all $v\in L^1(\Omega)$;
   1684:      \item\label{Pik:5} $\Pi_kv|_\elm=v|_\elm$, if $\elm\in\gridk$ and
-  1685:     $v|_{\omegak(\elm)}\in\P_r(\omega_k(\elm))$;
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1684)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1682:     of $\grid_0$. 
   1683:   \item\label{Pik:2} $\Pi_kv\in\Vk$ for all $v\in L^1(\Omega)$;
 > 1684:      \item\label{Pik:5} $\Pi_kv|_\elm=v|_\elm$, if $\elm\in\gridk$ and
   1685:     $v|_{\omegak(\elm)}\in\P_r(\omega_k(\elm))$;
-  1686:     % \todoin{Do we really mean $\P_r(\omega_k(\elm))$ here, i.e., one
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1697)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1695:     %   condition (continuity) between elements.
   1696:     % }
 > 1697:   \item\label{Pik:4} $\Pi_kv|_\elm=v|_\elm$, if $\elm\in\gridk^{++}$ and
   1698:     $v|_\elm\in\P_r(\elm)$; if moreover $v\in\Vk$, then also
-  1699:     $\jump{v-\Pi_kv}|_S\equiv0$ for all $\side\in\sides_k^{++}$. 
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1699)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1697:   \item\label{Pik:4} $\Pi_kv|_\elm=v|_\elm$, if $\elm\in\gridk^{++}$ and
   1698:     $v|_\elm\in\P_r(\elm)$; if moreover $v\in\Vk$, then also
 > 1699:     $\jump{v-\Pi_kv}|_S\equiv0$ for all $\side\in\sides_k^{++}$. 
   1700:   \item\label{Pik:3} $\Pi_kv|_{\Omega\setminus\Omega_k^{+}}\in
-  1701:     C(\overline{\Omega\setminus\Omega_k^{+}})$ and $\jump{\Pi_kv
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1700)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1698:     $v|_\elm\in\P_r(\elm)$; if moreover $v\in\Vk$, then also
   1699:     $\jump{v-\Pi_kv}|_S\equiv0$ for all $\side\in\sides_k^{++}$. 
 > 1700:   \item\label{Pik:3} $\Pi_kv|_{\Omega\setminus\Omega_k^{+}}\in
   1701:     C(\overline{\Omega\setminus\Omega_k^{+}})$ and $\jump{\Pi_kv
-  1702:       }=0$ on $\partial(\Omega\setminus\Omega^+_k)$;
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1701)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1699:     $\jump{v-\Pi_kv}|_S\equiv0$ for all $\side\in\sides_k^{++}$. 
   1700:   \item\label{Pik:3} $\Pi_kv|_{\Omega\setminus\Omega_k^{+}}\in
 > 1701:     C(\overline{\Omega\setminus\Omega_k^{+}})$ and $\jump{\Pi_kv
   1702:       }=0$ on $\partial(\Omega\setminus\Omega^+_k)$;
-  1703:   \item \label{Pik:4a} $\Pi_k v=v$, for all $v\in\V_k$ with $v|_{\Omega\setminus\Omega_k^{++}}\in
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1705)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1703:   \item \label{Pik:4a} $\Pi_k v=v$, for all $v\in\V_k$ with $v|_{\Omega\setminus\Omega_k^{++}}\in
   1704:     C(\Omega\setminus\Omega_k^{++})$;
 > 1705:   \item \label{Pik:5a} $\Pi_kv\in \V_\infty$, and we have $\enorm[k]{\Pi_kv}=\enorm[\infty]{\Pi_kv}$.
   1706:   \end{enumerate}
-  1707: \end{lem}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1705)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1703:   \item \label{Pik:4a} $\Pi_k v=v$, for all $v\in\V_k$ with $v|_{\Omega\setminus\Omega_k^{++}}\in
   1704:     C(\Omega\setminus\Omega_k^{++})$;
 > 1705:   \item \label{Pik:5a} $\Pi_kv\in \V_\infty$, and we have $\enorm[k]{\Pi_kv}=\enorm[\infty]{\Pi_kv}$.
   1706:   \end{enumerate}
-  1707: \end{lem}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1705)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1703:   \item \label{Pik:4a} $\Pi_k v=v$, for all $v\in\V_k$ with $v|_{\Omega\setminus\Omega_k^{++}}\in
   1704:     C(\Omega\setminus\Omega_k^{++})$;
 > 1705:   \item \label{Pik:5a} $\Pi_kv\in \V_\infty$, and we have $\enorm[k]{\Pi_kv}=\enorm[\infty]{\Pi_kv}$.
   1706:   \end{enumerate}
-  1707: \end{lem}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1727)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1725:   \neighk(\elm')$, which implies $\elm\in\gridk^+$, thanks to the
   1726:   definition of $\gridk^{++}$. Therefore, \eqref{df:Pikz} implies    
 > 1727:   that $\Pi_kv$ is continuous on 
   1728:   $\Omega\setminus\Omega_k^+$. Moreover, for $z\in
-  1729:     \nodes_k(\elm)\cap\Omega\setminus\Omega^+_k$, definition~\eqref{df:Pikz} is
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1730)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1728:   $\Omega\setminus\Omega_k^+$. Moreover, for $z\in
   1729:     \nodes_k(\elm)\cap\Omega\setminus\Omega^+_k$, definition~\eqref{df:Pikz} is
 > 1730:     independent of $\elm$ and thus $\Pi_kv$ does not jump across the
   1731:     boundary $\Omega\setminus\Omega_k^+$.  
-  1732:     This completes the proof of~\eqref{Pik:3}.
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1736)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1734:   On the one hand, if $v\in\V_k$ with $v|_{\Omega\setminus\Omega_k^+}\in
   1735:   C(\overline{\Omega\setminus\Omega_k^{++}})$ then we have clearly
 > 1736:   $\Pi_kv|_{\Omega\setminus\Omega_k^+}=v|_{\Omega\setminus\Omega_k^+}$.
   1737:   On the other hand, we can
-  1738:   conclude $\Pi_kv|_{\Omega_k^{++}}=v|_{\Omega_k^{++}}$
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1738)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1736:   $\Pi_kv|_{\Omega\setminus\Omega_k^+}=v|_{\Omega\setminus\Omega_k^+}$.
   1737:   On the other hand, we can
 > 1738:   conclude $\Pi_kv|_{\Omega_k^{++}}=v|_{\Omega_k^{++}}$
   1739:   from~\eqref{Pik:4}. This yields~\eqref{Pik:4a}.
-  1740: 
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1750)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1748:     \ell\in\N_0\cup\{\infty\}$. Then for all $\elm\in\gridk$, we have 
   1749:     \begin{multline*}
 > 1750:     \int_\elm\abs{\nabla\Pi_kv}^2\dx+\int_{\partial\elm}h_k^{-1}\jump{\Pi_kv}^2\ds
   1751:     \\\Cleq
-  1752:     \int_{\omegak(\elm)}\abs{\nablaG v}^2\dx+\sum_{\elm'\in\gridk[\ell], \elm'\subset
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1750)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1748:     \ell\in\N_0\cup\{\infty\}$. Then for all $\elm\in\gridk$, we have 
   1749:     \begin{multline*}
 > 1750:     \int_\elm\abs{\nabla\Pi_kv}^2\dx+\int_{\partial\elm}h_k^{-1}\jump{\Pi_kv}^2\ds
   1751:     \\\Cleq
-  1752:     \int_{\omegak(\elm)}\abs{\nablaG v}^2\dx+\sum_{\elm'\in\gridk[\ell], \elm'\subset
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1773)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1771:   $\elm\in\gridk^{++}\subset\gridk[\ell]^{++}$. Then, thanks to
   1772:   Lemma~\ref{lem:Pik}\eqref{Pik:4}, we have  
 > 1773:   $\Pi_kv|_\elm=v|_\elm$. Moreover, let $\elm'\in\gridk$ such that
   1774:   $\elm\cap\elm'\in\sides_k$; then $\neighk(z)\ni\elm\in \gridk^{++}$
-  1775:   and thus $(\Pi_kv)|_{\elm'}(z)=v|_{\elm'}(z)$, for all
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1775)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1773:   $\Pi_kv|_\elm=v|_\elm$. Moreover, let $\elm'\in\gridk$ such that
   1774:   $\elm\cap\elm'\in\sides_k$; then $\neighk(z)\ni\elm\in \gridk^{++}$
 > 1775:   and thus $(\Pi_kv)|_{\elm'}(z)=v|_{\elm'}(z)$, for all
   1776:   $z\in\nodes_k(\elm)\cap\nodes_k(\elm')$.  Consequently, we have
-  1777:   $\jump{\Pi_kv}=\jump{v}$
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1777)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1775:   and thus $(\Pi_kv)|_{\elm'}(z)=v|_{\elm'}(z)$, for all
   1776:   $z\in\nodes_k(\elm)\cap\nodes_k(\elm')$.  Consequently, we have
 > 1777:   $\jump{\Pi_kv}=\jump{v}$
   1778:   on $\partial\elm$, in other words
-  1779:   \begin{align}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1780)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1778:   on $\partial\elm$, in other words
   1779:   \begin{align}
 > 1780:     \int_\elm\abs{\nabla\Pi_kv}^2\dx+\int_{\partial\elm}h_k^{-1}\jump{\Pi_kv}^2\ds 
   1781:     = \int_\elm\abs{\nabla v}^2\dx+\int_{\partial\elm}h_k^{-1}\jump{v}^2\ds .
-  1782:   \end{align}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1780)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1778:   on $\partial\elm$, in other words
   1779:   \begin{align}
 > 1780:     \int_\elm\abs{\nabla\Pi_kv}^2\dx+\int_{\partial\elm}h_k^{-1}\jump{\Pi_kv}^2\ds 
   1781:     = \int_\elm\abs{\nabla v}^2\dx+\int_{\partial\elm}h_k^{-1}\jump{v}^2\ds .
-  1782:   \end{align}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1789)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1787:   \begin{align}\label{eq:localstab}
   1788:     \begin{aligned}
 > 1789:       \int_\elm\abs{\nabla\Pi_kv}^2\dx&\Cleq
   1790:       \int_\elm h_k^{-2}\abs{\Pi_k(v-v_\elm)}^2\dx\Cleq
-  1791:       \int_{\omegak(\elm)}h_k^{-2}\abs{v-v_\elm}^2\dx
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1806)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1804:   implies $\elm\in\gridk\setminus\gridk^{++}$. Then,
   1805:   thanks to Lemma~\ref{lem:Pik}\eqref{Pik:3}, we
 > 1806:   have that $\Pi_kv$ is continuous across $\partial\elm$, i.e.,
   1807:   $\jump{\Pi_kv}|_{\partial\elm}=0$. 
-  1808:   On the contrary, assuming that there exists $\elm'\in\gridk^{++}$,
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1807)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1805:   thanks to Lemma~\ref{lem:Pik}\eqref{Pik:3}, we
   1806:   have that $\Pi_kv$ is continuous across $\partial\elm$, i.e.,
 > 1807:   $\jump{\Pi_kv}|_{\partial\elm}=0$. 
   1808:   On the contrary, assuming that there exists $\elm'\in\gridk^{++}$,
-  1809:   with $\elm'\in\neighk(\elm)$, we conclude that
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1816)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1814:   Let $z\in \nodes_k(\elm)$; then, according to \eqref{df:Pikz}, we have that
   1815:   \begin{align*}
 > 1816:     \jump{\Pi_kv}|_{\partial\elm}(z)=
   1817:     \begin{cases}
-  1818:       \jump{v}|_{\partial\elm}(z),\quad&\text{if}~\exists 
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1861)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1859:   Using standard scaling arguments, this implies
   1860:   \begin{align*}
 > 1861:     \int_{\partial\elm}\jump{\Pi_kv}^2\ds&\eqsim
   1862:     |\partial\elm|\sum_{z\in\nodes_k\cap\partial\elm}
-  1863:     \big(\jump{\Pi_kv}|_{\partial\elm}(z)\big)^2
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1863)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1861:     \int_{\partial\elm}\jump{\Pi_kv}^2\ds&\eqsim
   1862:     |\partial\elm|\sum_{z\in\nodes_k\cap\partial\elm}
 > 1863:     \big(\jump{\Pi_kv}|_{\partial\elm}(z)\big)^2
   1864:                                            = 
-  1865:     |\partial\elm|\sum_{z\in\nodes_k\cap\partial\elm}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1966)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1964:     \begin{aligned}
   1965:       &\Cleq \int_{\gridk^-}|\nabla v_\epsilon-\nabla
 > 1966:       \Pi_kv_\epsilon|^2+|\nablaG (v- v_\epsilon)-\nabla
   1967:       \Pi_k(v-v_\epsilon)|^2\dx
-  1968:       \\
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1993)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1991: 
   1992:   The second claim follows similarly by replacing $\sides_k$ by
 > 1993:   $\sides^+$ and noting that $\enorm[k]{\Pi_kv}=\enorm[\infty]{\Pi_k v}$,
   1994:   since $\Pi_k v$ is continuous in $\Omega\setminus\Omega^+$.
-  1995: \end{proof}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2072)
+  error: _mv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2070:   restriction of a function from $H_0^1(\Omega)$ to $\Omega^-$. To
   2071:   this end, for each $\ell,m\in\N$, we
 > 2072:   define $v^\ell_m:=\Pi_mv^\ell\in\V_m$ for $\ell\ge m\in\N$ and since $v^\ell_m\in
   2073:   C(\Omega\setminus\Omega^{+}_k)\subset
-  2074:   C(\Omega\setminus\Omega^{+}_m)$ (see
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2207)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2205:     % \bilin[\infty]{v}{\Pi_kw}\Cleq \enorm[k]{\Pi_kv}\enorm[k]{\Pi_kw}=\enorm[\infty]{\Pi_kv}\enorm[\infty]{\Pi_kw}
   2206:     % \intertext{and}
 > 2207:     \enorm[\infty]{\Pi_kv}^2=
   2208:     \enorm[k]{\Pi_kv}^2\Cleq \bilin[k]{\Pi_kv}{\Pi_kv}=\bilin[\infty]{\Pi_kv}{\Pi_kv}
-  2209:   \end{align*}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2208)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2206:     % \intertext{and}
   2207:     \enorm[\infty]{\Pi_kv}^2=
 > 2208:     \enorm[k]{\Pi_kv}^2\Cleq \bilin[k]{\Pi_kv}{\Pi_kv}=\bilin[\infty]{\Pi_kv}{\Pi_kv}
   2209:   \end{align*}
-  2210:   and Lemma~\ref{lem:Pik2}.
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2208)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2206:     % \intertext{and}
   2207:     \enorm[\infty]{\Pi_kv}^2=
 > 2208:     \enorm[k]{\Pi_kv}^2\Cleq \bilin[k]{\Pi_kv}{\Pi_kv}=\bilin[\infty]{\Pi_kv}{\Pi_kv}
   2209:   \end{align*}
-  2210:   and Lemma~\ref{lem:Pik2}.
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2208)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2206:     % \intertext{and}
   2207:     \enorm[\infty]{\Pi_kv}^2=
 > 2208:     \enorm[k]{\Pi_kv}^2\Cleq \bilin[k]{\Pi_kv}{\Pi_kv}=\bilin[\infty]{\Pi_kv}{\Pi_kv}
   2209:   \end{align*}
-  2210:   and Lemma~\ref{lem:Pik2}.
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2208)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2206:     % \intertext{and}
   2207:     \enorm[\infty]{\Pi_kv}^2=
 > 2208:     \enorm[k]{\Pi_kv}^2\Cleq \bilin[k]{\Pi_kv}{\Pi_kv}=\bilin[\infty]{\Pi_kv}{\Pi_kv}
   2209:   \end{align*}
-  2210:   and Lemma~\ref{lem:Pik2}.
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2208)
+  error: _kv
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2206:     % \intertext{and}
   2207:     \enorm[\infty]{\Pi_kv}^2=
 > 2208:     \enorm[k]{\Pi_kv}^2\Cleq \bilin[k]{\Pi_kv}{\Pi_kv}=\bilin[\infty]{\Pi_kv}{\Pi_kv}
   2209:   \end{align*}
-  2210:   and Lemma~\ref{lem:Pik2}.
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2242)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2240: \end{lem}
   2241: \begin{proof}
 > 2242:   Assume that $u_k\neq\Pi_ku_\infty\in \Vk\cap\V_\infty$ and set $\psi=u_k-\Pi_ku_\infty$. Then, we have from~\eqref{eq:coercive} that
   2243:   \begin{align*}
-  2244:     \alpha\enorm[k]{u_k-\Pi_ku_\infty}^2&\le\bilin[k]{u_k-\Pi_ku_\infty}{\psi}=\scp{f}{\psi}-\bilin[k]{\Pi_ku_\infty}{\psi}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2242)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2240: \end{lem}
   2241: \begin{proof}
 > 2242:   Assume that $u_k\neq\Pi_ku_\infty\in \Vk\cap\V_\infty$ and set $\psi=u_k-\Pi_ku_\infty$. Then, we have from~\eqref{eq:coercive} that
   2243:   \begin{align*}
-  2244:     \alpha\enorm[k]{u_k-\Pi_ku_\infty}^2&\le\bilin[k]{u_k-\Pi_ku_\infty}{\psi}=\scp{f}{\psi}-\bilin[k]{\Pi_ku_\infty}{\psi}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2244)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2242:   Assume that $u_k\neq\Pi_ku_\infty\in \Vk\cap\V_\infty$ and set $\psi=u_k-\Pi_ku_\infty$. Then, we have from~\eqref{eq:coercive} that
   2243:   \begin{align*}
 > 2244:     \alpha\enorm[k]{u_k-\Pi_ku_\infty}^2&\le\bilin[k]{u_k-\Pi_ku_\infty}{\psi}=\scp{f}{\psi}-\bilin[k]{\Pi_ku_\infty}{\psi}
   2245:     \\
-  2246:     &=\scp{f}{\Pi_k\psi}+\scp{f}{\psi-\Pi_k\psi}-\bilin[k]{\Pi_ku_\infty}{\psi}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2244)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2242:   Assume that $u_k\neq\Pi_ku_\infty\in \Vk\cap\V_\infty$ and set $\psi=u_k-\Pi_ku_\infty$. Then, we have from~\eqref{eq:coercive} that
   2243:   \begin{align*}
 > 2244:     \alpha\enorm[k]{u_k-\Pi_ku_\infty}^2&\le\bilin[k]{u_k-\Pi_ku_\infty}{\psi}=\scp{f}{\psi}-\bilin[k]{\Pi_ku_\infty}{\psi}
   2245:     \\
-  2246:     &=\scp{f}{\Pi_k\psi}+\scp{f}{\psi-\Pi_k\psi}-\bilin[k]{\Pi_ku_\infty}{\psi}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2244)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2242:   Assume that $u_k\neq\Pi_ku_\infty\in \Vk\cap\V_\infty$ and set $\psi=u_k-\Pi_ku_\infty$. Then, we have from~\eqref{eq:coercive} that
   2243:   \begin{align*}
 > 2244:     \alpha\enorm[k]{u_k-\Pi_ku_\infty}^2&\le\bilin[k]{u_k-\Pi_ku_\infty}{\psi}=\scp{f}{\psi}-\bilin[k]{\Pi_ku_\infty}{\psi}
   2245:     \\
-  2246:     &=\scp{f}{\Pi_k\psi}+\scp{f}{\psi-\Pi_k\psi}-\bilin[k]{\Pi_ku_\infty}{\psi}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2246)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2244:     \alpha\enorm[k]{u_k-\Pi_ku_\infty}^2&\le\bilin[k]{u_k-\Pi_ku_\infty}{\psi}=\scp{f}{\psi}-\bilin[k]{\Pi_ku_\infty}{\psi}
   2245:     \\
 > 2246:     &=\scp{f}{\Pi_k\psi}+\scp{f}{\psi-\Pi_k\psi}-\bilin[k]{\Pi_ku_\infty}{\psi}
   2247:       \\
-  2248:     &=\big(\bilin[\infty]{u_\infty}{\Pi_k\psi}-\bilin[k]{\Pi_ku_\infty}{\Pi_k\psi}\big)
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2248)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2246:     &=\scp{f}{\Pi_k\psi}+\scp{f}{\psi-\Pi_k\psi}-\bilin[k]{\Pi_ku_\infty}{\psi}
   2247:       \\
 > 2248:     &=\big(\bilin[\infty]{u_\infty}{\Pi_k\psi}-\bilin[k]{\Pi_ku_\infty}{\Pi_k\psi}\big)
   2249:       \\
-  2250:     &\quad
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2251)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2249:       \\
   2250:     &\quad
 > 2251:       +\big(\scp{f}{\psi-\Pi_k\psi}-\bilin[k]{\Pi_ku_\infty}{\psi-\Pi_k\psi}\big)\equiv (I)+(II),
   2252:   \end{align*}
-  2253:  using that $\Pi_k\psi\in \V_k\cap\V_\infty$ from Lemma~\ref{lem:Pik}\eqref{Pik:5a}. 
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2283)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2281:       s
   2282:       \\
 > 2283:       &\quad-\int_{\Omega}\nablaG \Pi_ku_\infty\cdot\nablaG \Pi_k\psi\,\ud x
   2284:       +\int_{\sides_k}\big(\mean{\nabla
-  2285:         \Pi_ku_\infty}\cdot\jump{\Pi_k\psi}+\theta \mean{\nabla
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2285)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2283:       &\quad-\int_{\Omega}\nablaG \Pi_ku_\infty\cdot\nablaG \Pi_k\psi\,\ud x
   2284:       +\int_{\sides_k}\big(\mean{\nabla
 > 2285:         \Pi_ku_\infty}\cdot\jump{\Pi_k\psi}+\theta \mean{\nabla
   2286:         \Pi_k\psi}\cdot\jump{\Pi_ku_\infty}\big)\ds
-  2287:       \\
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2286)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2284:       +\int_{\sides_k}\big(\mean{\nabla
   2285:         \Pi_ku_\infty}\cdot\jump{\Pi_k\psi}+\theta \mean{\nabla
 > 2286:         \Pi_k\psi}\cdot\jump{\Pi_ku_\infty}\big)\ds
   2287:       \\
-  2288:        &\quad -\int_{\mathring\sides^+}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2289)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2287:       \\
   2288:        &\quad -\int_{\mathring\sides^+}
 > 2289:        \big(\vec{\beta}\cdot\jump{\Pi_ku_\infty}\jump{\nabla \Pi_k\psi}+\jump{\nabla
   2290:          \Pi_ku_\infty}\vec{\beta}\cdot\jump{\Pi_k\psi}\big)\ds
-  2291:        \\
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2290)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2288:        &\quad -\int_{\mathring\sides^+}
   2289:        \big(\vec{\beta}\cdot\jump{\Pi_ku_\infty}\jump{\nabla \Pi_k\psi}+\jump{\nabla
 > 2290:          \Pi_ku_\infty}\vec{\beta}\cdot\jump{\Pi_k\psi}\big)\ds
   2291:        \\
-  2292:        &\quad - \int_\Omega \gamma
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2293)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2291:        \\
   2292:        &\quad - \int_\Omega \gamma
 > 2293:          \big(\riftG[k](\jump{\Pi_ku_\infty})+\liftG[k](\vec{\beta}\cdot\jump{\Pi_ku_\infty})\big)\cdot
   2294:          \big(\riftG[k](\jump{\Pi_k\psi})+\liftG[k](\vec{\beta}\cdot\jump{\Pi_k\psi})\big)\dx 
-  2295:       \\
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2293)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2291:        \\
   2292:        &\quad - \int_\Omega \gamma
 > 2293:          \big(\riftG[k](\jump{\Pi_ku_\infty})+\liftG[k](\vec{\beta}\cdot\jump{\Pi_ku_\infty})\big)\cdot
   2294:          \big(\riftG[k](\jump{\Pi_k\psi})+\liftG[k](\vec{\beta}\cdot\jump{\Pi_k\psi})\big)\dx 
-  2295:       \\
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2296)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2294:          \big(\riftG[k](\jump{\Pi_k\psi})+\liftG[k](\vec{\beta}\cdot\jump{\Pi_k\psi})\big)\dx 
   2295:       \\
 > 2296:       &\quad-\int_{\sides^+}\frac{\sigma}{\hG[k]}\jump{\Pi_ku_\infty}\cdot\jump{\Pi_k\psi}\,\ud
   2297:       s
-  2298:       \\
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2311)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2309:       % s 
   2310:       % \\
 > 2311:       &=\int_{\Omega}\nablaG (u_\infty-\Pi_ku_\infty)\cdot\nablaG \Pi_k\psi\,\ud x
   2312:       \\
-  2313:       &\quad -\int_{\sides^+_k}\mean{\nabla
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2314)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2312:       \\
   2313:       &\quad -\int_{\sides^+_k}\mean{\nabla
 > 2314:         (u_\infty-\Pi_ku_\infty)}\cdot\jump{\Pi_k\psi}
   2315:       \ds-\theta\int_{\sides^+}\mean{\nabla
-  2316:         \Pi_k\psi}\cdot\jump{u_\infty-\Pi_ku_\infty}\ds
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2316)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2314:         (u_\infty-\Pi_ku_\infty)}\cdot\jump{\Pi_k\psi}
   2315:       \ds-\theta\int_{\sides^+}\mean{\nabla
 > 2316:         \Pi_k\psi}\cdot\jump{u_\infty-\Pi_ku_\infty}\ds
   2317:        \\
-  2318:       &\quad +\int_{\mathring\sides^+}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2319)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2317:        \\
   2318:       &\quad +\int_{\mathring\sides^+}
 > 2319:        \big(\vec{\beta}\cdot\jump{u_\infty-\Pi_ku_\infty}\jump{\nabla
   2320:          \Pi_k\psi}+\jump{\nabla u_\infty-\nabla
-  2321:          \Pi_ku_\infty}\vec{\beta}\cdot\jump{\Pi_k\psi}\big)\ds
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2321)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2319:        \big(\vec{\beta}\cdot\jump{u_\infty-\Pi_ku_\infty}\jump{\nabla
   2320:          \Pi_k\psi}+\jump{\nabla u_\infty-\nabla
 > 2321:          \Pi_ku_\infty}\vec{\beta}\cdot\jump{\Pi_k\psi}\big)\ds
   2322:       \\
-  2323:       &\quad+ \int_\Omega \gamma
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2324)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2322:       \\
   2323:       &\quad+ \int_\Omega \gamma
 > 2324:         \big(\riftG[\infty](\jump{u_\infty-\Pi_ku_\infty})+\liftG[\infty](\vec{\beta}\cdot\jump{u_\infty-\Pi_ku_\infty})\big)
   2325:         \\
-  2326:     &\qquad\cdot \big(\riftG[\infty](\jump{\Pi_k\psi})+\liftG[\infty](\vec{\beta}\cdot\jump{\Pi_k\psi})\big)\dx
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2324)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2322:       \\
   2323:       &\quad+ \int_\Omega \gamma
 > 2324:         \big(\riftG[\infty](\jump{u_\infty-\Pi_ku_\infty})+\liftG[\infty](\vec{\beta}\cdot\jump{u_\infty-\Pi_ku_\infty})\big)
   2325:         \\
-  2326:     &\qquad\cdot \big(\riftG[\infty](\jump{\Pi_k\psi})+\liftG[\infty](\vec{\beta}\cdot\jump{\Pi_k\psi})\big)\dx
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2328)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2326:     &\qquad\cdot \big(\riftG[\infty](\jump{\Pi_k\psi})+\liftG[\infty](\vec{\beta}\cdot\jump{\Pi_k\psi})\big)\dx
   2327:     \\
 > 2328:       &\quad+\int_{\sides^+_k}\frac{\sigma}{\hG[k]}\jump{u_\infty-\Pi_ku_\infty}
   2329:       \cdot\jump{\Pi_k\psi}\,\ud
-  2330:       s
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2333)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2331:       \\
   2332:       &\Cleq \enorm[\infty]{u_\infty
 > 2333:         -\Pi_ku_\infty}\enorm[\infty]{\Pi_k\psi}=\enorm[\infty]{u_\infty
   2334:         -\Pi_ku_\infty}\enorm[k]{\Pi_k\psi}
-  2335:       \\
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2334)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2332:       &\Cleq \enorm[\infty]{u_\infty
   2333:         -\Pi_ku_\infty}\enorm[\infty]{\Pi_k\psi}=\enorm[\infty]{u_\infty
 > 2334:         -\Pi_ku_\infty}\enorm[k]{\Pi_k\psi}
   2335:       \\
-  2336:       &\Cleq \enorm[\infty]{u_\infty
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2337)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2335:       \\
   2336:       &\Cleq \enorm[\infty]{u_\infty
 > 2337:         -\Pi_ku_\infty}\enorm[k]{u_k-\Pi_ku_\infty};
   2338:    % \end{split}
-  2339:   \end{align*}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2337)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2335:       \\
   2336:       &\Cleq \enorm[\infty]{u_\infty
 > 2337:         -\Pi_ku_\infty}\enorm[k]{u_k-\Pi_ku_\infty};
   2338:    % \end{split}
-  2339:   \end{align*}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2340)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2338:    % \end{split}
   2339:   \end{align*}
 > 2340:   here we used that $\Pi_ku_\infty,\Pi_k\psi\in\Vk\cap\V_\infty$, $h_\infty=h_k$
   2341:   on $\sides_k^+$ and that $\Pi_ku_\infty$
-  2342:   and $\Pi_k\psi$ are continuous on $\Omega\setminus\Omega^+_k$, i.e.,
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2341)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2339:   \end{align*}
   2340:   here we used that $\Pi_ku_\infty,\Pi_k\psi\in\Vk\cap\V_\infty$, $h_\infty=h_k$
 > 2341:   on $\sides_k^+$ and that $\Pi_ku_\infty$
   2342:   and $\Pi_k\psi$ are continuous on $\Omega\setminus\Omega^+_k$, i.e.,
-  2343:   $\jump{\Pi_ku_\infty}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2343)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2341:   on $\sides_k^+$ and that $\Pi_ku_\infty$
   2342:   and $\Pi_k\psi$ are continuous on $\Omega\setminus\Omega^+_k$, i.e.,
 > 2343:   $\jump{\Pi_ku_\infty}
   2344:   =\jump{\Pi_k\psi}=0$ on $\sides^+\setminus\sides_k^+$, 
-  2345:   which follows from
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2347)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2345:   which follows from
   2346:   Lemma~\ref{lem:Pik}. 
 > 2347:   Note that this and $\jump{\Pi_ku_\infty}
   2348:   =\jump{\Pi_k\psi}=0$ on 
-  2349:   $\partial(\Omega\setminus\Omega_k^+)$ from Lemma~\ref{lem:Pik}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2352)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2350:   also implies that
   2351:   $\liftG[k](\Pi_k\psi)=\liftG[\infty](\Pi_k\psi)$ and
 > 2352:   $\liftG[k](\Pi_ku_\infty)=\liftG[\infty](\Pi_ku_\infty)$ as well as
   2353:   the corresponding relations between $\riftG[k]$ and $\riftG[\infty]$;
-  2354:   compare with~\eqref{eq:lift-inf}. Thus, the above estimate follows
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2352)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2350:   also implies that
   2351:   $\liftG[k](\Pi_k\psi)=\liftG[\infty](\Pi_k\psi)$ and
 > 2352:   $\liftG[k](\Pi_ku_\infty)=\liftG[\infty](\Pi_ku_\infty)$ as well as
   2353:   the corresponding relations between $\riftG[k]$ and $\riftG[\infty]$;
-  2354:   compare with~\eqref{eq:lift-inf}. Thus, the above estimate follows
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2365)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2363:   \begin{align*}
   2364:     \enorm[k]{u_\infty-\uk}&\leq
 > 2365:     \enorm[k]{u_\infty-\Pi_ku_\infty}+\enorm[k]{\uk-\Pi_ku_\infty}
   2366:     \\
-  2367:     &\Cleq
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2365)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2363:   \begin{align*}
   2364:     \enorm[k]{u_\infty-\uk}&\leq
 > 2365:     \enorm[k]{u_\infty-\Pi_ku_\infty}+\enorm[k]{\uk-\Pi_ku_\infty}
   2366:     \\
-  2367:     &\Cleq
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2368)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2366:     \\
   2367:     &\Cleq
 > 2368:     \enorm[k]{u_\infty-\Pi_ku_\infty}+\enorm[\infty]{u_\infty-\Pi_ku_\infty}
   2369:       \\
-  2370:     &\qquad+
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2368)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2366:     \\
   2367:     &\Cleq
 > 2368:     \enorm[k]{u_\infty-\Pi_ku_\infty}+\enorm[\infty]{u_\infty-\Pi_ku_\infty}
   2369:       \\
-  2370:     &\qquad+
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2371)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2369:       \\
   2370:     &\qquad+
 > 2371:     \frac{\scp{f}{\psi-\Pi_k\psi}-\bilin[k]{\Pi_ku_\infty}{\psi-\Pi_k\psi}}{\enorm[k]{u_k-\Pi_ku_\infty}}. 
   2372:   \end{align*}
-  2373:   Thanks to $\enorm[k]{u_\infty-\Pi_ku_\infty}\le\enorm[\infty]{u_\infty-\Pi_ku_\infty}$,
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2371)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2369:       \\
   2370:     &\qquad+
 > 2371:     \frac{\scp{f}{\psi-\Pi_k\psi}-\bilin[k]{\Pi_ku_\infty}{\psi-\Pi_k\psi}}{\enorm[k]{u_k-\Pi_ku_\infty}}. 
   2372:   \end{align*}
-  2373:   Thanks to $\enorm[k]{u_\infty-\Pi_ku_\infty}\le\enorm[\infty]{u_\infty-\Pi_ku_\infty}$,
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2373)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2371:     \frac{\scp{f}{\psi-\Pi_k\psi}-\bilin[k]{\Pi_ku_\infty}{\psi-\Pi_k\psi}}{\enorm[k]{u_k-\Pi_ku_\infty}}. 
   2372:   \end{align*}
 > 2373:   Thanks to $\enorm[k]{u_\infty-\Pi_ku_\infty}\le\enorm[\infty]{u_\infty-\Pi_ku_\infty}$,
   2374:   this proves the assertion.
-  2375: \end{proof}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2373)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2371:     \frac{\scp{f}{\psi-\Pi_k\psi}-\bilin[k]{\Pi_ku_\infty}{\psi-\Pi_k\psi}}{\enorm[k]{u_k-\Pi_ku_\infty}}. 
   2372:   \end{align*}
 > 2373:   Thanks to $\enorm[k]{u_\infty-\Pi_ku_\infty}\le\enorm[\infty]{u_\infty-\Pi_ku_\infty}$,
   2374:   this proves the assertion.
-  2375: \end{proof}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2389)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2387:     \frac{\scp{f}{u_k-\Pi_ku_k}-\bilin[k]{\Pi_ku_\infty}{u_k-\Pi_ku_k}}{\enorm[k]{u_k-\Pi_ku_\infty}}
   2388:     \Cleq 
 > 2389:     \Big(\sum_{\elm\in\grid_k\setminus\grid_k^{3+}}\est_k(\Pi_ku_\infty,\elm)^2\Big)^{1/2},
   2390:   \end{align*}
-  2391:   where $\gridk^{3+}:=\{\elm\in\gridk:\neighk(\elm)\subset \gridk^{++}\}$.
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2395)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2393: 
   2394: \begin{proof}
 > 2395:   Let $v_k:=\Pi_ku_\infty$ and $\phi:=u_k-\Pi_k
   2396:   u_k=u_k-\Pi_ku_\infty-\Pi_k(u_k-\Pi_ku_\infty)$. Then, using
-  2397:   integration by parts, we have
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2396)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2394: \begin{proof}
   2395:   Let $v_k:=\Pi_ku_\infty$ and $\phi:=u_k-\Pi_k
 > 2396:   u_k=u_k-\Pi_ku_\infty-\Pi_k(u_k-\Pi_ku_\infty)$. Then, using
   2397:   integration by parts, we have
-  2398:   \begin{align*}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2396)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2394: \begin{proof}
   2395:   Let $v_k:=\Pi_ku_\infty$ and $\phi:=u_k-\Pi_k
 > 2396:   u_k=u_k-\Pi_ku_\infty-\Pi_k(u_k-\Pi_ku_\infty)$. Then, using
   2397:   integration by parts, we have
-  2398:   \begin{align*}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2447)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2445:   for the first two terms we use the interpolation estimates from
   2446:   Corollary~\ref{cor:PikIpol} for 
 > 2447:     $\phi=\psi-\Pi_k\psi$ with $\psi=u_k-\Pi_ku_\infty\in\V_k$ as to
   2448:     obtain 
-  2449:     \begin{multline*}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2458)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2456:       v_k|^2\dx\Big)^{1/2}
   2457:       + \Big(\int_{\sides_k\setminus\sides_k^{++}} h_k\jump{\nabla
 > 2458:       v_k}^2\ds\Big)^{1/2}\Bigg]\enorm[k]{u_k-\Pi_ku_\infty}. 
   2459:     \end{multline*}
-  2460:     Moreover, from $\phi|_\elm\equiv0$, $\elm\in\gridk^{++}$, we have
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2744)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2742:     &=\lim_{k\to\infty}\sum_{\elm\in\grid_k\setminus\grid_k^{3+}}\est_k(v_k,\elm)^2,
   2743:   \end{align*}
 > 2744:   where $v_k:=\Pi_ku_\infty$.
   2745:   % It is
-  2746:   % proved in \cite[(4.15)]{MorinSiebertVeeser:08}???? that 
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2827)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2825:     \begin{align*}
   2826:       \norm[\Omega]{u_\infty-u_k}&\le \norm[\Omega]{u_\infty-\Pi_k
 > 2827:                                    u_\infty}+\norm[\Omega]{\Pi_ku_\infty-u_k}
   2828:       \\
-  2829:                                  &\Cleq \enorm[\infty]{u_\infty-\Pi_k
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2830)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2828:       \\
   2829:                                  &\Cleq \enorm[\infty]{u_\infty-\Pi_k
 > 2830:       u_\infty}+\enorm[k]{\Pi_ku_\infty-u_k},
   2831:     \end{align*}
-  2832:   which vanishes due to the above observations.
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2884)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2882:   \begin{align*}
   2883:     \int_{\sides(\gridk^0)}h_k^{-1}\jump{\uk}^2\ds&=
 > 2884:     \int_{\sides(\gridk^0)}h_k^{-1}\jump{\uk-\Pi_ku_\infty}^2\ds
   2885:                                                     \le \enorm[k]{\uk-\Pi_ku_\infty}\to0
-  2886:   \end{align*}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2885)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2883:     \int_{\sides(\gridk^0)}h_k^{-1}\jump{\uk}^2\ds&=
   2884:     \int_{\sides(\gridk^0)}h_k^{-1}\jump{\uk-\Pi_ku_\infty}^2\ds
 > 2885:                                                     \le \enorm[k]{\uk-\Pi_ku_\infty}\to0
   2886:   \end{align*}
-  2887:   as $k\to\infty$; see Lemma~\ref{lem:Pik2} and Theorem~\ref{Thm:uk->u8}.
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2935)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2933:   \begin{align*}
   2934:    \int_{\sides(\gridk^\star)}h_k^{-1}\jump{\uk}^2\ds&=
 > 2935:     \int_{\sides(\gridk^\star)}h_k^{-1}\jump{\uk-\Pi_ku_\infty}^2\ds+\int_{\sides(\gridk^\star)}h_k^{-1}\jump{\Pi_ku_\infty}^2\ds
   2936:     \\
-  2937:     &\le \frac1{\bar\sigma}\enorm[k]{\uk-\Pi_ku_\infty}^2+\int_{\sides(\gridk^\star)}h_k^{-1}\jump{\Pi_ku_\infty}^2\ds.
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2935)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2933:   \begin{align*}
   2934:    \int_{\sides(\gridk^\star)}h_k^{-1}\jump{\uk}^2\ds&=
 > 2935:     \int_{\sides(\gridk^\star)}h_k^{-1}\jump{\uk-\Pi_ku_\infty}^2\ds+\int_{\sides(\gridk^\star)}h_k^{-1}\jump{\Pi_ku_\infty}^2\ds
   2936:     \\
-  2937:     &\le \frac1{\bar\sigma}\enorm[k]{\uk-\Pi_ku_\infty}^2+\int_{\sides(\gridk^\star)}h_k^{-1}\jump{\Pi_ku_\infty}^2\ds.
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2937)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2935:     \int_{\sides(\gridk^\star)}h_k^{-1}\jump{\uk-\Pi_ku_\infty}^2\ds+\int_{\sides(\gridk^\star)}h_k^{-1}\jump{\Pi_ku_\infty}^2\ds
   2936:     \\
 > 2937:     &\le \frac1{\bar\sigma}\enorm[k]{\uk-\Pi_ku_\infty}^2+\int_{\sides(\gridk^\star)}h_k^{-1}\jump{\Pi_ku_\infty}^2\ds.
   2938:   \end{align*}
-  2939:   As in the proof of Lemma~\ref{lem:Gk0}, we have that the first term
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2937)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2935:     \int_{\sides(\gridk^\star)}h_k^{-1}\jump{\uk-\Pi_ku_\infty}^2\ds+\int_{\sides(\gridk^\star)}h_k^{-1}\jump{\Pi_ku_\infty}^2\ds
   2936:     \\
 > 2937:     &\le \frac1{\bar\sigma}\enorm[k]{\uk-\Pi_ku_\infty}^2+\int_{\sides(\gridk^\star)}h_k^{-1}\jump{\Pi_ku_\infty}^2\ds.
   2938:   \end{align*}
-  2939:   As in the proof of Lemma~\ref{lem:Gk0}, we have that the first term
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2948)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2946:   Therefore, we conclude from Lemma~\ref{lem:Pik2} that
   2947:   \begin{align*}
 > 2948:     \sigma\int_{\sides(\gridk^\star)}h_k^{-1}\jump{\Pi_ku_\infty}^2\ds&=\sigma\int_{\sides(\gridk^\star)}h_k^{-1}\jump{\Pi_ku_\infty-\Pi_\ell
   2949:     u_\infty}^2\ds
-  2950:     \\
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2948)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2946:   Therefore, we conclude from Lemma~\ref{lem:Pik2} that
   2947:   \begin{align*}
 > 2948:     \sigma\int_{\sides(\gridk^\star)}h_k^{-1}\jump{\Pi_ku_\infty}^2\ds&=\sigma\int_{\sides(\gridk^\star)}h_k^{-1}\jump{\Pi_ku_\infty-\Pi_\ell
   2949:     u_\infty}^2\ds
-  2950:     \\
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 2951)
+  error: _ku
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2949:     u_\infty}^2\ds
   2950:     \\
 > 2951:     &\Cleq \enorm[k]{\Pi_ku_\infty-
   2952:     u_\infty}^2+\enorm[\ell]{u_\infty-\Pi_\ell
-  2953:     u_\infty}^2\to0,
 
 - file: sample\arxiv_sources\2103.03874v2\6-appendix.tex (line 95)
+  error: _gc
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    93:   ];
     94:   p = RandomChoice[\{p,Expand[q*p]\}];
 >   95:   Export["/amps/mathematica/algebra/polynomial_gcd/"<>ToString[i]<>".txt",
     96: \{"Problem:\textbackslash{}nFind the greatest common divisor of \$"
-    97: <>ToString[TeXForm[p//TraditionalForm]]<> "\$ and \$"
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 502)
+  error: ^LG
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   500: i.e., we have, up to a possible phase factor of modular weights that is just a constant, a duality of VW partition functions
    501: \begin{equation}\label{vwdual}
 >  502:    \mathcal{Z}_{\text{VW},M_4}(\tau, G) \longleftrightarrow \mathcal{Z}_{\text{VW},M_4}\Big(-\frac{1}{n_{\mathfrak{g}}\tau},\, ^LG \Big)
    503: \end{equation}
-   504: In other words, we have a Langlands duality of VW invariants of $M_4$, given by \eqref{vwdual}.
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 513)
+  error: ^LG
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   511: Note that if $M_4 = \Sigma \times C$, from \eqref{vwdual} and \eqref{VW=GW}, 4d $S$-duality would mean that we have the 2d duality 
    512: \begin{equation}\label{ZGW=ZGW}
 >  513:     \mathcal{Z}_{\text{GW},\Sigma}\big(\tau, \mathcal{M}^{G}_{\text{Higgs}}(C)\big) 	\longleftrightarrow \mathcal{Z}_{\text{GW},\Sigma}\Big(-\frac{1}{n_{\mathfrak{g}}\tau}, \,\mathcal{M}^{^LG}_{\text{Higgs}}(C)\Big)
    514: \end{equation}
-   515:  where $\mathcal{M}^{G}_{\text{Higgs}}$ and $\mathcal{M}^{^LG}_{\text{Higgs}}$ are mirror manifolds. 
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 515)
+  error: ^LG
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   513:     \mathcal{Z}_{\text{GW},\Sigma}\big(\tau, \mathcal{M}^{G}_{\text{Higgs}}(C)\big) 	\longleftrightarrow \mathcal{Z}_{\text{GW},\Sigma}\Big(-\frac{1}{n_{\mathfrak{g}}\tau}, \,\mathcal{M}^{^LG}_{\text{Higgs}}(C)\Big)
    514: \end{equation}
 >  515:  where $\mathcal{M}^{G}_{\text{Higgs}}$ and $\mathcal{M}^{^LG}_{\text{Higgs}}$ are mirror manifolds. 
    516:  In other words, we have a Langlands duality of GW invariants %of genus $g \geq 1$, 
-   517:  that can be interpreted as a mirror symmetry of Higgs bundles, given by \eqref{ZGW=ZGW}.  
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 525)
+  error: ^LG
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   523: If $M_4 = M_3 \times \mathbb{R}^+$, from \eqref{4d3dpartitionfinal} and \eqref{vwdual}, we have the duality 
    524: \begin{equation}\label{ZFL to ZFLG}
 >  525:   \mathcal{Z}^{\text{Floer}}_{\text{VW},M_3}(\tau, G) \longleftrightarrow \mathcal{Z}^{\text{Floer}}_{\text{VW},M_3}\Big(-\frac{1}{n_{\mathfrak{g}}\tau},\, ^LG \Big).
    526: \end{equation}
-   527: In turn, from \eqref{4d3dpartitionfinal}, this means that we have the duality
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 529)
+  error: ^LG
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   527: In turn, from \eqref{4d3dpartitionfinal}, this means that we have the duality
    528: \begin{equation}\label{HFVWG to HFVWLG}
 >  529:   \text{HF}^{\text{VW}}_*(M_3, G, \tau) \longleftrightarrow \text{HF}^{\text{VW}}_*(M_3, {^LG}, -1/n_{\mathfrak{g}}\tau)
    530: \end{equation}
-   531: 
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 539)
+  error: ^LG
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   537: \begin{equation}\label{ZAL to ZAL}
    538:    \mathcal{Z}_{A,L}\big(\tau, \mathcal{M}^G_{\text{Higgs}}(C)\big)
 >  539:  \longleftrightarrow \mathcal{Z}_{A,L}\Big(-\frac{1}{n_{\mathfrak{g}}\tau},\, ^LG \Big).
    540: \end{equation}
-   541: Then, from the RHS of the VW Atiyah-Floer correspondence in \eqref{atconj}, which defines the state spectrum of $\mathcal{Z}_{A,L}$, we have the duality
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 543)
+  error: ^LG
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   541: Then, from the RHS of the VW Atiyah-Floer correspondence in \eqref{atconj}, which defines the state spectrum of $\mathcal{Z}_{A,L}$, we have the duality
    542: \begin{equation} \label{HFL to HFL}
 >  543: \text{HF}_{*}^{\text{Lagr}}\big(\mathcal{M}^G_{\text{Higgs}}(C), L_0, L_1, \tau\big) \longleftrightarrow \text{HF}_{*}^{\text{Lagr}}\big(\mathcal{M}^{^LG}_{\text{Higgs}}(C), L_0, L_1, -1/n_{\mathfrak{g}}\tau\big)
    544: \end{equation} 
-   545: 
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 554)
+  error: ^LG
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   552: From \eqref{AB-Mano conj generalized}, the fact that its RHS can be identified with $\text{HF}^{\text{VW}}_*(M_3, G, \tau)$, and the relation \eqref{HFVWG to HFVWLG}, we have the duality
    553: \begin{equation} \label{Abou-Mano Langlands}
 >  554:    \text{HP}^*(M_3, G_\mathbb{C}, \tau) \longleftrightarrow \text{HP}^*(M_3, ^LG_\mathbb{C}, - 1/n_\mathfrak g\tau) 
    555: \end{equation}
-   556: 
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 565)
+  error: ^LG
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   563: \begin{equation}\label{dualcata}
    564:    \text{Cat}_{\text{$A$-branes}}\big(\tau, \mathcal{M}^{G}_{\text{Higgs}}(C)\big) \longleftrightarrow
 >  565:     \text{Cat}_{\text{$A$-branes}}\Big(-\frac{1}{n_{\mathfrak{g}}\tau}, \,\mathcal{M}^{^LG}_{\text{Higgs}}(C)\Big) 
    566: \end{equation}
-   567: where $\mathcal{M}^{G}_{\text{Higgs}}$ and $\mathcal{M}^{^LG}_{\text{Higgs}}$ are mirror manifolds. 
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 567)
+  error: ^LG
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   565:     \text{Cat}_{\text{$A$-branes}}\Big(-\frac{1}{n_{\mathfrak{g}}\tau}, \,\mathcal{M}^{^LG}_{\text{Higgs}}(C)\Big) 
    566: \end{equation}
 >  567: where $\mathcal{M}^{G}_{\text{Higgs}}$ and $\mathcal{M}^{^LG}_{\text{Higgs}}$ are mirror manifolds. 
    568: 
-   569: For $\theta=0$ (Re$(\tau)=0$), the category of $\tau$-dependent $A$-branes can be identified with a category of twisted $D$-modules on $\text{Bun}_{G_{\mathbb{C}}}(C)$ with parameter $q$. Thus, this mirror symmetry would mean that we have 
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 571)
+  error: ^Lh
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   569: For $\theta=0$ (Re$(\tau)=0$), the category of $\tau$-dependent $A$-branes can be identified with a category of twisted $D$-modules on $\text{Bun}_{G_{\mathbb{C}}}(C)$ with parameter $q$. Thus, this mirror symmetry would mean that we have 
    570: \begin{equation}\label{dualdmod}
 >  571:     {\mathcal D}^{\textbf{c}}_{-h^\vee}\text{-mod}\big(q, {\text{Bun}_{G_{\mathbb{C}}}}\big) \longleftrightarrow {\mathcal D}^{\textbf{c}}_{-^Lh^\vee}\text{-mod}\Big(-\frac{1}{n_{\mathfrak{g}}q}, \,{\text{Bun}_{{^LG}_{\mathbb{C}}}}\Big)
    572: \end{equation}
-   573: This is a quantum geometric Langlands correspondence for $G_{\mathbb{C}}$ with complex curve $C$ and purely imaginary parameter $q$ \cite[eqn.~(6.4)]{F05}. 
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 571)
+  error: ^LG
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   569: For $\theta=0$ (Re$(\tau)=0$), the category of $\tau$-dependent $A$-branes can be identified with a category of twisted $D$-modules on $\text{Bun}_{G_{\mathbb{C}}}(C)$ with parameter $q$. Thus, this mirror symmetry would mean that we have 
    570: \begin{equation}\label{dualdmod}
 >  571:     {\mathcal D}^{\textbf{c}}_{-h^\vee}\text{-mod}\big(q, {\text{Bun}_{G_{\mathbb{C}}}}\big) \longleftrightarrow {\mathcal D}^{\textbf{c}}_{-^Lh^\vee}\text{-mod}\Big(-\frac{1}{n_{\mathfrak{g}}q}, \,{\text{Bun}_{{^LG}_{\mathbb{C}}}}\Big)
    572: \end{equation}
-   573: This is a quantum geometric Langlands correspondence for $G_{\mathbb{C}}$ with complex curve $C$ and purely imaginary parameter $q$ \cite[eqn.~(6.4)]{F05}. 
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 576)
+  error: ^LG
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   574: 
    575: On the other hand, in the zero-coupling, `classical' limit of the 4d theory in $G$ where $\text{Im}(\tau) \to \infty$, we have $q \to \infty$. In this limit, the LHS of \eqref{dualdmod} can be identified with the category $\text{Cat}_{\text{coh}}\big (\mathcal{M}_{\text{flat}}^{G_{\mathbb{C}}}(C) \big )$ of coherent sheaves on $\mathcal{M}_{\text{flat}}^{G_{\mathbb{C}}}(C)$~\cite{F05}.     
 >  576: This `classical' limit corresponds to the `ultra-quantum' limit of the $S$-dual 4d theory in $^LG$, where $^Lq = -\frac{1}{n_{\mathfrak{g}}q} \to 0$. In this limit, the RHS of \eqref{dualdmod} can be identified with the category ${\mathcal D}^{\textbf{c}}_{-{^Lh}^\vee}\text{-mod}\big(0, {\text{Bun}_{{^LG}_{\mathbb{C}}}}\big) $ of critically-twisted $D$-modules on $\text{Bun}_{{^LG}_{\mathbb{C}}}(C)$, giving us
    577: \begin{equation}\label{classical GL}
-   578:     \text{Cat}_{\text{coh}}\big (\mathcal{M}_{\text{flat}}^{G_{\mathbb{C}}}(C) \big ) \longleftrightarrow {\mathcal D}^{\textbf{c}}_{-^Lh^\vee}\text{-mod}\Big(0, \,{\text{Bun}_{{^LG}_{\mathbb{C}}}}\Big)
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 576)
+  error: ^Lq
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   574: 
    575: On the other hand, in the zero-coupling, `classical' limit of the 4d theory in $G$ where $\text{Im}(\tau) \to \infty$, we have $q \to \infty$. In this limit, the LHS of \eqref{dualdmod} can be identified with the category $\text{Cat}_{\text{coh}}\big (\mathcal{M}_{\text{flat}}^{G_{\mathbb{C}}}(C) \big )$ of coherent sheaves on $\mathcal{M}_{\text{flat}}^{G_{\mathbb{C}}}(C)$~\cite{F05}.     
 >  576: This `classical' limit corresponds to the `ultra-quantum' limit of the $S$-dual 4d theory in $^LG$, where $^Lq = -\frac{1}{n_{\mathfrak{g}}q} \to 0$. In this limit, the RHS of \eqref{dualdmod} can be identified with the category ${\mathcal D}^{\textbf{c}}_{-{^Lh}^\vee}\text{-mod}\big(0, {\text{Bun}_{{^LG}_{\mathbb{C}}}}\big) $ of critically-twisted $D$-modules on $\text{Bun}_{{^LG}_{\mathbb{C}}}(C)$, giving us
    577: \begin{equation}\label{classical GL}
-   578:     \text{Cat}_{\text{coh}}\big (\mathcal{M}_{\text{flat}}^{G_{\mathbb{C}}}(C) \big ) \longleftrightarrow {\mathcal D}^{\textbf{c}}_{-^Lh^\vee}\text{-mod}\Big(0, \,{\text{Bun}_{{^LG}_{\mathbb{C}}}}\Big)
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 576)
+  error: ^Lh
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   574: 
    575: On the other hand, in the zero-coupling, `classical' limit of the 4d theory in $G$ where $\text{Im}(\tau) \to \infty$, we have $q \to \infty$. In this limit, the LHS of \eqref{dualdmod} can be identified with the category $\text{Cat}_{\text{coh}}\big (\mathcal{M}_{\text{flat}}^{G_{\mathbb{C}}}(C) \big )$ of coherent sheaves on $\mathcal{M}_{\text{flat}}^{G_{\mathbb{C}}}(C)$~\cite{F05}.     
 >  576: This `classical' limit corresponds to the `ultra-quantum' limit of the $S$-dual 4d theory in $^LG$, where $^Lq = -\frac{1}{n_{\mathfrak{g}}q} \to 0$. In this limit, the RHS of \eqref{dualdmod} can be identified with the category ${\mathcal D}^{\textbf{c}}_{-{^Lh}^\vee}\text{-mod}\big(0, {\text{Bun}_{{^LG}_{\mathbb{C}}}}\big) $ of critically-twisted $D$-modules on $\text{Bun}_{{^LG}_{\mathbb{C}}}(C)$, giving us
    577: \begin{equation}\label{classical GL}
-   578:     \text{Cat}_{\text{coh}}\big (\mathcal{M}_{\text{flat}}^{G_{\mathbb{C}}}(C) \big ) \longleftrightarrow {\mathcal D}^{\textbf{c}}_{-^Lh^\vee}\text{-mod}\Big(0, \,{\text{Bun}_{{^LG}_{\mathbb{C}}}}\Big)
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 576)
+  error: ^LG
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   574: 
    575: On the other hand, in the zero-coupling, `classical' limit of the 4d theory in $G$ where $\text{Im}(\tau) \to \infty$, we have $q \to \infty$. In this limit, the LHS of \eqref{dualdmod} can be identified with the category $\text{Cat}_{\text{coh}}\big (\mathcal{M}_{\text{flat}}^{G_{\mathbb{C}}}(C) \big )$ of coherent sheaves on $\mathcal{M}_{\text{flat}}^{G_{\mathbb{C}}}(C)$~\cite{F05}.     
 >  576: This `classical' limit corresponds to the `ultra-quantum' limit of the $S$-dual 4d theory in $^LG$, where $^Lq = -\frac{1}{n_{\mathfrak{g}}q} \to 0$. In this limit, the RHS of \eqref{dualdmod} can be identified with the category ${\mathcal D}^{\textbf{c}}_{-{^Lh}^\vee}\text{-mod}\big(0, {\text{Bun}_{{^LG}_{\mathbb{C}}}}\big) $ of critically-twisted $D$-modules on $\text{Bun}_{{^LG}_{\mathbb{C}}}(C)$, giving us
    577: \begin{equation}\label{classical GL}
-   578:     \text{Cat}_{\text{coh}}\big (\mathcal{M}_{\text{flat}}^{G_{\mathbb{C}}}(C) \big ) \longleftrightarrow {\mathcal D}^{\textbf{c}}_{-^Lh^\vee}\text{-mod}\Big(0, \,{\text{Bun}_{{^LG}_{\mathbb{C}}}}\Big)
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 576)
+  error: ^LG
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   574: 
    575: On the other hand, in the zero-coupling, `classical' limit of the 4d theory in $G$ where $\text{Im}(\tau) \to \infty$, we have $q \to \infty$. In this limit, the LHS of \eqref{dualdmod} can be identified with the category $\text{Cat}_{\text{coh}}\big (\mathcal{M}_{\text{flat}}^{G_{\mathbb{C}}}(C) \big )$ of coherent sheaves on $\mathcal{M}_{\text{flat}}^{G_{\mathbb{C}}}(C)$~\cite{F05}.     
 >  576: This `classical' limit corresponds to the `ultra-quantum' limit of the $S$-dual 4d theory in $^LG$, where $^Lq = -\frac{1}{n_{\mathfrak{g}}q} \to 0$. In this limit, the RHS of \eqref{dualdmod} can be identified with the category ${\mathcal D}^{\textbf{c}}_{-{^Lh}^\vee}\text{-mod}\big(0, {\text{Bun}_{{^LG}_{\mathbb{C}}}}\big) $ of critically-twisted $D$-modules on $\text{Bun}_{{^LG}_{\mathbb{C}}}(C)$, giving us
    577: \begin{equation}\label{classical GL}
-   578:     \text{Cat}_{\text{coh}}\big (\mathcal{M}_{\text{flat}}^{G_{\mathbb{C}}}(C) \big ) \longleftrightarrow {\mathcal D}^{\textbf{c}}_{-^Lh^\vee}\text{-mod}\Big(0, \,{\text{Bun}_{{^LG}_{\mathbb{C}}}}\Big)
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 578)
+  error: ^Lh
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   576: This `classical' limit corresponds to the `ultra-quantum' limit of the $S$-dual 4d theory in $^LG$, where $^Lq = -\frac{1}{n_{\mathfrak{g}}q} \to 0$. In this limit, the RHS of \eqref{dualdmod} can be identified with the category ${\mathcal D}^{\textbf{c}}_{-{^Lh}^\vee}\text{-mod}\big(0, {\text{Bun}_{{^LG}_{\mathbb{C}}}}\big) $ of critically-twisted $D$-modules on $\text{Bun}_{{^LG}_{\mathbb{C}}}(C)$, giving us
    577: \begin{equation}\label{classical GL}
 >  578:     \text{Cat}_{\text{coh}}\big (\mathcal{M}_{\text{flat}}^{G_{\mathbb{C}}}(C) \big ) \longleftrightarrow {\mathcal D}^{\textbf{c}}_{-^Lh^\vee}\text{-mod}\Big(0, \,{\text{Bun}_{{^LG}_{\mathbb{C}}}}\Big)
    579:     \end{equation}
-   580: This is a classical geometric Langlands correspondence for $G_{\mathbb{C}}$ with complex curve $C$ \cite[eqn.~(6.4)]{F05}.
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 578)
+  error: ^LG
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   576: This `classical' limit corresponds to the `ultra-quantum' limit of the $S$-dual 4d theory in $^LG$, where $^Lq = -\frac{1}{n_{\mathfrak{g}}q} \to 0$. In this limit, the RHS of \eqref{dualdmod} can be identified with the category ${\mathcal D}^{\textbf{c}}_{-{^Lh}^\vee}\text{-mod}\big(0, {\text{Bun}_{{^LG}_{\mathbb{C}}}}\big) $ of critically-twisted $D$-modules on $\text{Bun}_{{^LG}_{\mathbb{C}}}(C)$, giving us
    577: \begin{equation}\label{classical GL}
 >  578:     \text{Cat}_{\text{coh}}\big (\mathcal{M}_{\text{flat}}^{G_{\mathbb{C}}}(C) \big ) \longleftrightarrow {\mathcal D}^{\textbf{c}}_{-^Lh^\vee}\text{-mod}\Big(0, \,{\text{Bun}_{{^LG}_{\mathbb{C}}}}\Big)
    579:     \end{equation}
-   580: This is a classical geometric Langlands correspondence for $G_{\mathbb{C}}$ with complex curve $C$ \cite[eqn.~(6.4)]{F05}.
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 607)
+  error: ^LT
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   605:     {\mathcal A} \to {^L{\mathcal A}} = {\frac{4 \pi^2}  {\mathcal A}},
    606: \end{equation}
 >  607: where ${^L{\mathcal A}}$ is the symplectic area of a torus $^LT^2$ that can be obtained from $T^2$ by inverting the radii of its two circles from $R \to {\alpha'/ R}$ for some constant $\alpha'$. In other words, $^LT^2$ is the $T$-dual torus to $T^2$, and FF-cat($T^2$), which is realized by a 2d open $A$-model with target $T^2$, will be invariant under $T$-duality of the target, i.e., FF-cat($T^2$) $\cong$ FF-cat($^LT^2$). Thus, we have
    608: \begin{equation} \label{2- Cat to 2-Cat}
-   609:   \text{2-Cat}_{\text{mod-cat}} \big({\text{FF-cat}}(T^2)\big) \longleftrightarrow \text{2-Cat}_{\text{mod-cat}} \big({\text{FF-cat}}(^LT^2)\big) .
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 607)
+  error: ^LT
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   605:     {\mathcal A} \to {^L{\mathcal A}} = {\frac{4 \pi^2}  {\mathcal A}},
    606: \end{equation}
 >  607: where ${^L{\mathcal A}}$ is the symplectic area of a torus $^LT^2$ that can be obtained from $T^2$ by inverting the radii of its two circles from $R \to {\alpha'/ R}$ for some constant $\alpha'$. In other words, $^LT^2$ is the $T$-dual torus to $T^2$, and FF-cat($T^2$), which is realized by a 2d open $A$-model with target $T^2$, will be invariant under $T$-duality of the target, i.e., FF-cat($T^2$) $\cong$ FF-cat($^LT^2$). Thus, we have
    608: \begin{equation} \label{2- Cat to 2-Cat}
-   609:   \text{2-Cat}_{\text{mod-cat}} \big({\text{FF-cat}}(T^2)\big) \longleftrightarrow \text{2-Cat}_{\text{mod-cat}} \big({\text{FF-cat}}(^LT^2)\big) .
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 607)
+  error: ^LT
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   605:     {\mathcal A} \to {^L{\mathcal A}} = {\frac{4 \pi^2}  {\mathcal A}},
    606: \end{equation}
 >  607: where ${^L{\mathcal A}}$ is the symplectic area of a torus $^LT^2$ that can be obtained from $T^2$ by inverting the radii of its two circles from $R \to {\alpha'/ R}$ for some constant $\alpha'$. In other words, $^LT^2$ is the $T$-dual torus to $T^2$, and FF-cat($T^2$), which is realized by a 2d open $A$-model with target $T^2$, will be invariant under $T$-duality of the target, i.e., FF-cat($T^2$) $\cong$ FF-cat($^LT^2$). Thus, we have
    608: \begin{equation} \label{2- Cat to 2-Cat}
-   609:   \text{2-Cat}_{\text{mod-cat}} \big({\text{FF-cat}}(T^2)\big) \longleftrightarrow \text{2-Cat}_{\text{mod-cat}} \big({\text{FF-cat}}(^LT^2)\big) .
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 609)
+  error: ^LT
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   607: where ${^L{\mathcal A}}$ is the symplectic area of a torus $^LT^2$ that can be obtained from $T^2$ by inverting the radii of its two circles from $R \to {\alpha'/ R}$ for some constant $\alpha'$. In other words, $^LT^2$ is the $T$-dual torus to $T^2$, and FF-cat($T^2$), which is realized by a 2d open $A$-model with target $T^2$, will be invariant under $T$-duality of the target, i.e., FF-cat($T^2$) $\cong$ FF-cat($^LT^2$). Thus, we have
    608: \begin{equation} \label{2- Cat to 2-Cat}
 >  609:   \text{2-Cat}_{\text{mod-cat}} \big({\text{FF-cat}}(T^2)\big) \longleftrightarrow \text{2-Cat}_{\text{mod-cat}} \big({\text{FF-cat}}(^LT^2)\big) .
    610: \end{equation}
-   611: 
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 624)
+  error: ^LG
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   622: \arrow[rrr, leftrightarrow, dashed, "\substack{\text{Lagrangian Floer}\\\text{Langlands}\\\text{ duality}}"]
    623: \arrow[dr, leftrightarrow,  " \substack{\text{VW Atiyah-Floer}\\\text{correspondence}}", " \substack{\textbf{d}:\\\text{ Heegaard split}\\ \text{of $M_3$ along $C$,}\\C\to 0}"']
 >  624: &&&\boxed{\footnotesize{\text{HF}^{\text{Lagr}}_\ast \Big(\mathcal{M}^{^LG}_{\text{Higgs}}(C),  \frac{-1}{n_{\mathfrak{g}}\tau}\Big)}} 
    625: \arrow[dr, leftrightarrow,  " \substack{\text{VW Atiyah-Floer}\\\text{correspondence}}", "\textbf{d}"']
-   626: \\
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 631)
+  error: ^LG
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   629: \arrow[rrr, leftrightarrow, dashed,"\substack{\text{VW-Floer}\\\text{Langlands duality}}"]
    630: \arrow[dl, leftrightarrow, "\textbf{b: }M_4=M_3 \times \mathbb{R}^+"]
 >  631: &&&\boxed{\footnotesize{\text{HF}^{\text{VW}}_\ast \Big(M_3,\, ^LG, \frac{-1}{n_{\mathfrak{g}}\tau}\Big)}} 
    632: \arrow[dl, leftrightarrow, "\textbf{b }"]\\
-   633: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 637)
+  error: ^LG
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   635: \arrow[rrr, leftrightarrow, dashed, "\textbf{Langlands dual}"]
    636: \arrow[dr, leftrightarrow, "\substack{\textbf{a: }\text{$M_4=\Sigma \times C$,}\\ \text{$C\to 0$}}"]
 >  637: &&&\boxed{\footnotesize{\bf{\boldsymbol{\mathcal{Z}}_{\textbf{VW},M_4}\Big(\frac{-1}{n_{\mathfrak{g}}\boldsymbol{\tau}},\, ^LG \Big)} }}
    638: \arrow[dr, leftrightarrow, "\textbf{a }"]\\
-   639: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 642)
+  error: ^LG
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   640: &\boxed{\footnotesize{\mathcal{Z}_{\text{GW},\Sigma}(\tau, \mathcal{M}^G_{\text{Higgs}})}}
    641: \arrow[rrr, leftrightarrow, dashed, "\substack{\text{Mirror symmetry}\\\text{of Higgs bundles}}", crossing over]
 >  642: &&&\boxed{\footnotesize{\mathcal{Z}_{\text{GW},\Sigma}\Big(\frac{-1}{n_{\mathfrak{g}}\tau},\,\mathcal{M}^{^LG}_{\text{Higgs}}\Big)}}  \\
    643: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-   644: \boxed{\text{Cat}_{\text{$A$-branes}}\big(\tau, \mathcal{M}^{G}_{\text{Higgs}}(C)\big)}
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 649)
+  error: ^LG
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   647: \arrow[uu, leftrightarrow,  " \substack{{\textbf{c: }M_4=I\times\mathbb{R}^+\times C,}\\{ C\to 0}}"] 
    648: \arrow[rrr, leftrightarrow, dashed, "\substack{\text{Homological}\\\text{ mirror symmetry }\\\text{of Higgs}\\\text{ bundles}}", crossing over]
 >  649: &&&\boxed{\text{Cat}_{\text{$A$-branes}}\Big(\frac{-1}{n_{\mathfrak{g}}\tau}, \,\mathcal{M}^{^LG}_{\text{Higgs}}(C)\Big)}
    650: \arrow[uu, leftrightarrow, "\substack{\\\\\\\\\\\textbf{c }}"]
-   651: \arrow[dd, leftrightarrow, "\substack{\\\\\\\\\\\\\\\\\text{Re}(\tau) = 0}"']
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 656)
+  error: ^LT
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   654: &\boxed{\text{2-Cat}_{\footnotesize{\text{mod-cat}}} \big({\text{FF-cat}}(T^2)\big)}
    655: \arrow[rrr, leftrightarrow, dashed, "\substack{{\text{Langlands duality}}\\{\text{ of }}\\{\text{2-categories}}}"]
 >  656: &&&\boxed{\text{2-Cat}_{\text{mod-cat}} \big({\text{FF-cat}}({^LT}^2)\big)}\\
    657: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-   658: \boxed{{\mathcal D}^{\textbf{c}}_{-h^\vee}\text{-mod}\big(q, {\text{Bun}_{G_{\mathbb{C}}}}\big)}
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 661)
+  error: ^Lh
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   659: \arrow[rrr, leftrightarrow, dashed, "\substack{{\text{Quantum geometric}}\\{\text{ Langlands}}\\{\text{ corres-}}\\\text{pondence}}"]
    660: \arrow[d, leftrightarrow, "\tau \to \infty"]
 >  661: &&&\boxed{{\mathcal D}^{\textbf{c}}_{-^Lh^\vee}\text{-mod}\Big(\frac{-1}{n_{\mathfrak{g}}q}, \,{\text{Bun}_{^L{G_{\mathbb{C}}}}}\Big)}
    662: \arrow[d, leftrightarrow, "\tau \to \infty"]\\
-   663: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 666)
+  error: ^Lh
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   664: \boxed{\text{Cat}_{\text{coh}}\big (\mathcal{M}_{\text{flat}}^{G_{\mathbb{C}}}(C) \big )}
    665: \arrow[rrr, leftrightarrow, dashed, "\substack{{\text{Classical geometric}}\\{\text{ Langlands}}\\{\text{ corres-}}\\\text{pondence}}"]
 >  666: &&&\boxed{{\mathcal D}^{\textbf{c}}_{-^Lh^\vee}\text{-mod}\Big(0, \,{\text{Bun}_{{^LG}_{\mathbb{C}}}}\Big)}
    667: \end{tikzcd}
-   668: \caption{A novel web of mathematical relations stemming from Vafa-Witten theory that also involves higher categories.}
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 666)
+  error: ^LG
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-   664: \boxed{\text{Cat}_{\text{coh}}\big (\mathcal{M}_{\text{flat}}^{G_{\mathbb{C}}}(C) \big )}
    665: \arrow[rrr, leftrightarrow, dashed, "\substack{{\text{Classical geometric}}\\{\text{ Langlands}}\\{\text{ corres-}}\\\text{pondence}}"]
 >  666: &&&\boxed{{\mathcal D}^{\textbf{c}}_{-^Lh^\vee}\text{-mod}\Big(0, \,{\text{Bun}_{{^LG}_{\mathbb{C}}}}\Big)}
    667: \end{tikzcd}
-   668: \caption{A novel web of mathematical relations stemming from Vafa-Witten theory that also involves higher categories.}
 
 - file: sample\arxiv_sources\2307.16112v1\0-abstract.tex (line 8)
+  error: _id
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-     6: <ccs2012>
      7:    <concept>
 >    8:        <concept_id>10003120.10003121.10003124.10010392</concept_id>
      9:        <concept_desc>Human-centered computing~Mixed / augmented reality</concept_desc>
-    10:        <concept_significance>500</concept_significance>
 
 - file: sample\arxiv_sources\2307.16112v1\0-abstract.tex (line 8)
+  error: _id
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-     6: <ccs2012>
      7:    <concept>
 >    8:        <concept_id>10003120.10003121.10003124.10010392</concept_id>
      9:        <concept_desc>Human-centered computing~Mixed / augmented reality</concept_desc>
-    10:        <concept_significance>500</concept_significance>
 
 - file: sample\arxiv_sources\2307.16112v1\0-abstract.tex (line 9)
+  error: _de
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-     7:    <concept>
      8:        <concept_id>10003120.10003121.10003124.10010392</concept_id>
 >    9:        <concept_desc>Human-centered computing~Mixed / augmented reality</concept_desc>
     10:        <concept_significance>500</concept_significance>
-    11:    </concept>
 
 - file: sample\arxiv_sources\2307.16112v1\0-abstract.tex (line 9)
+  error: _de
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-     7:    <concept>
      8:        <concept_id>10003120.10003121.10003124.10010392</concept_id>
 >    9:        <concept_desc>Human-centered computing~Mixed / augmented reality</concept_desc>
     10:        <concept_significance>500</concept_significance>
-    11:    </concept>
 
 - file: sample\arxiv_sources\2307.16112v1\0-abstract.tex (line 10)
+  error: _si
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-     8:        <concept_id>10003120.10003121.10003124.10010392</concept_id>
      9:        <concept_desc>Human-centered computing~Mixed / augmented reality</concept_desc>
 >   10:        <concept_significance>500</concept_significance>
     11:    </concept>
-    12:  </ccs2012>
 
 - file: sample\arxiv_sources\2307.16112v1\0-abstract.tex (line 10)
+  error: _si
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-     8:        <concept_id>10003120.10003121.10003124.10010392</concept_id>
      9:        <concept_desc>Human-centered computing~Mixed / augmented reality</concept_desc>
 >   10:        <concept_significance>500</concept_significance>
     11:    </concept>
-    12:  </ccs2012>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 114)
+  error: _id
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   112: <ccs2012>
    113:  <concept>
 >  114:   <concept_id>10010520.10010553.10010562</concept_id>
    115:   <concept_desc>Computer systems organization~Embedded systems</concept_desc>
-   116:   <concept_significance>500</concept_significance>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 114)
+  error: _id
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   112: <ccs2012>
    113:  <concept>
 >  114:   <concept_id>10010520.10010553.10010562</concept_id>
    115:   <concept_desc>Computer systems organization~Embedded systems</concept_desc>
-   116:   <concept_significance>500</concept_significance>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 115)
+  error: _de
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   113:  <concept>
    114:   <concept_id>10010520.10010553.10010562</concept_id>
 >  115:   <concept_desc>Computer systems organization~Embedded systems</concept_desc>
    116:   <concept_significance>500</concept_significance>
-   117:  </concept>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 115)
+  error: _de
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   113:  <concept>
    114:   <concept_id>10010520.10010553.10010562</concept_id>
 >  115:   <concept_desc>Computer systems organization~Embedded systems</concept_desc>
    116:   <concept_significance>500</concept_significance>
-   117:  </concept>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 116)
+  error: _si
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   114:   <concept_id>10010520.10010553.10010562</concept_id>
    115:   <concept_desc>Computer systems organization~Embedded systems</concept_desc>
 >  116:   <concept_significance>500</concept_significance>
    117:  </concept>
-   118:  <concept>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 116)
+  error: _si
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   114:   <concept_id>10010520.10010553.10010562</concept_id>
    115:   <concept_desc>Computer systems organization~Embedded systems</concept_desc>
 >  116:   <concept_significance>500</concept_significance>
    117:  </concept>
-   118:  <concept>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 119)
+  error: _id
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   117:  </concept>
    118:  <concept>
 >  119:   <concept_id>10010520.10010575.10010755</concept_id>
    120:   <concept_desc>Computer systems organization~Redundancy</concept_desc>
-   121:   <concept_significance>300</concept_significance>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 119)
+  error: _id
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   117:  </concept>
    118:  <concept>
 >  119:   <concept_id>10010520.10010575.10010755</concept_id>
    120:   <concept_desc>Computer systems organization~Redundancy</concept_desc>
-   121:   <concept_significance>300</concept_significance>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 120)
+  error: _de
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   118:  <concept>
    119:   <concept_id>10010520.10010575.10010755</concept_id>
 >  120:   <concept_desc>Computer systems organization~Redundancy</concept_desc>
    121:   <concept_significance>300</concept_significance>
-   122:  </concept>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 120)
+  error: _de
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   118:  <concept>
    119:   <concept_id>10010520.10010575.10010755</concept_id>
 >  120:   <concept_desc>Computer systems organization~Redundancy</concept_desc>
    121:   <concept_significance>300</concept_significance>
-   122:  </concept>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 121)
+  error: _si
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   119:   <concept_id>10010520.10010575.10010755</concept_id>
    120:   <concept_desc>Computer systems organization~Redundancy</concept_desc>
 >  121:   <concept_significance>300</concept_significance>
    122:  </concept>
-   123:  <concept>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 121)
+  error: _si
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   119:   <concept_id>10010520.10010575.10010755</concept_id>
    120:   <concept_desc>Computer systems organization~Redundancy</concept_desc>
 >  121:   <concept_significance>300</concept_significance>
    122:  </concept>
-   123:  <concept>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 124)
+  error: _id
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   122:  </concept>
    123:  <concept>
 >  124:   <concept_id>10010520.10010553.10010554</concept_id>
    125:   <concept_desc>Computer systems organization~Robotics</concept_desc>
-   126:   <concept_significance>100</concept_significance>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 124)
+  error: _id
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   122:  </concept>
    123:  <concept>
 >  124:   <concept_id>10010520.10010553.10010554</concept_id>
    125:   <concept_desc>Computer systems organization~Robotics</concept_desc>
-   126:   <concept_significance>100</concept_significance>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 125)
+  error: _de
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   123:  <concept>
    124:   <concept_id>10010520.10010553.10010554</concept_id>
 >  125:   <concept_desc>Computer systems organization~Robotics</concept_desc>
    126:   <concept_significance>100</concept_significance>
-   127:  </concept>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 125)
+  error: _de
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   123:  <concept>
    124:   <concept_id>10010520.10010553.10010554</concept_id>
 >  125:   <concept_desc>Computer systems organization~Robotics</concept_desc>
    126:   <concept_significance>100</concept_significance>
-   127:  </concept>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 126)
+  error: _si
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   124:   <concept_id>10010520.10010553.10010554</concept_id>
    125:   <concept_desc>Computer systems organization~Robotics</concept_desc>
 >  126:   <concept_significance>100</concept_significance>
    127:  </concept>
-   128:  <concept>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 126)
+  error: _si
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   124:   <concept_id>10010520.10010553.10010554</concept_id>
    125:   <concept_desc>Computer systems organization~Robotics</concept_desc>
 >  126:   <concept_significance>100</concept_significance>
    127:  </concept>
-   128:  <concept>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 129)
+  error: _id
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   127:  </concept>
    128:  <concept>
 >  129:   <concept_id>10003033.10003083.10003095</concept_id>
    130:   <concept_desc>Networks~Network reliability</concept_desc>
-   131:   <concept_significance>100</concept_significance>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 129)
+  error: _id
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   127:  </concept>
    128:  <concept>
 >  129:   <concept_id>10003033.10003083.10003095</concept_id>
    130:   <concept_desc>Networks~Network reliability</concept_desc>
-   131:   <concept_significance>100</concept_significance>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 130)
+  error: _de
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   128:  <concept>
    129:   <concept_id>10003033.10003083.10003095</concept_id>
 >  130:   <concept_desc>Networks~Network reliability</concept_desc>
    131:   <concept_significance>100</concept_significance>
-   132:  </concept>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 130)
+  error: _de
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   128:  <concept>
    129:   <concept_id>10003033.10003083.10003095</concept_id>
 >  130:   <concept_desc>Networks~Network reliability</concept_desc>
    131:   <concept_significance>100</concept_significance>
-   132:  </concept>
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 131)
+  error: _si
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   129:   <concept_id>10003033.10003083.10003095</concept_id>
    130:   <concept_desc>Networks~Network reliability</concept_desc>
 >  131:   <concept_significance>100</concept_significance>
    132:  </concept>
-   133: </ccs2012>  
 
 - file: sample\arxiv_sources\2312.01661v2\sample-sigconf.tex (line 131)
+  error: _si
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   129:   <concept_id>10003033.10003083.10003095</concept_id>
    130:   <concept_desc>Networks~Network reliability</concept_desc>
 >  131:   <concept_significance>100</concept_significance>
    132:  </concept>
-   133: </ccs2012>  
 
 - file: sample\arxiv_sources\2402.06332v2\lstlean.tex (line 20)
+  error: _tr
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    18: open, as, export, override, axiom, axioms, inductive, with,
     19: structure, record, universe, universes,
 >   20: alias, help, precedence, reserve, declare_trace, add_key_equivalence,
     21: match, infix, infixl, infixr, notation, postfix, prefix, instance,
-    22: eval, reduce, check, end, this,
 
 - file: sample\arxiv_sources\2402.06332v2\lstlean.tex (line 24)
+  error: _op
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    22: eval, reduce, check, end, this,
     23: using, using_well_founded, namespace, section,
 >   24: attribute, local, set_option, extends, include, omit, class,
     25: raw, replacing,
-    26: calc, have, show, suffices, by, in, at, let, forall, Pi, fun,
 
 - file: sample\arxiv_sources\2402.06332v2\lstlean.tex (line 28)
+  error: _cm
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    26: calc, have, show, suffices, by, in, at, let, forall, Pi, fun,
     27: exists, if, dif, then, else, assume, obtain, from, register_simp_ext, unless, break, continue,
 >   28: mutual, do, def, run_cmd, const,
     29: partial, mut, where, macro, syntax, deriving,
-    30: return, try, catch, for, macro_rules, declare_syntax_cat, abbrev},
 
 - file: sample\arxiv_sources\2402.06332v2\lstlean.tex (line 30)
+  error: _ru
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    28: mutual, do, def, run_cmd, const,
     29: partial, mut, where, macro, syntax, deriving,
 >   30: return, try, catch, for, macro_rules, declare_syntax_cat, abbrev},
     31: 
-    32: % Sorts
 
 - file: sample\arxiv_sources\2402.06332v2\lstlean.tex (line 41)
+  error: _al
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    39: generalize, clear, revert, done, exact,
     40: refine, repeat, cases, rewrite, rw,
 >   41: simp, simp_all, contradiction,
     42: constructor, injection,
-    43: induction,
 
 - file: sample\arxiv_sources\2409.02834v3\00_www_main.tex (line 279)
+  error: _id
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   277: <ccs2012>
    278:    <concept>
 >  279:        <concept_id>10002951.10003260</concept_id>
    280:        <concept_desc>Information systems~World Wide Web</concept_desc>
-   281:        <concept_significance>500</concept_significance>
 
 - file: sample\arxiv_sources\2409.02834v3\00_www_main.tex (line 279)
+  error: _id
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   277: <ccs2012>
    278:    <concept>
 >  279:        <concept_id>10002951.10003260</concept_id>
    280:        <concept_desc>Information systems~World Wide Web</concept_desc>
-   281:        <concept_significance>500</concept_significance>
 
 - file: sample\arxiv_sources\2409.02834v3\00_www_main.tex (line 280)
+  error: _de
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   278:    <concept>
    279:        <concept_id>10002951.10003260</concept_id>
 >  280:        <concept_desc>Information systems~World Wide Web</concept_desc>
    281:        <concept_significance>500</concept_significance>
-   282:        </concept>
 
 - file: sample\arxiv_sources\2409.02834v3\00_www_main.tex (line 280)
+  error: _de
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   278:    <concept>
    279:        <concept_id>10002951.10003260</concept_id>
 >  280:        <concept_desc>Information systems~World Wide Web</concept_desc>
    281:        <concept_significance>500</concept_significance>
-   282:        </concept>
 
 - file: sample\arxiv_sources\2409.02834v3\00_www_main.tex (line 281)
+  error: _si
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   279:        <concept_id>10002951.10003260</concept_id>
    280:        <concept_desc>Information systems~World Wide Web</concept_desc>
 >  281:        <concept_significance>500</concept_significance>
    282:        </concept>
-   283:    <concept>
 
 - file: sample\arxiv_sources\2409.02834v3\00_www_main.tex (line 281)
+  error: _si
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   279:        <concept_id>10002951.10003260</concept_id>
    280:        <concept_desc>Information systems~World Wide Web</concept_desc>
 >  281:        <concept_significance>500</concept_significance>
    282:        </concept>
-   283:    <concept>
 
 - file: sample\arxiv_sources\2409.02834v3\00_www_main.tex (line 284)
+  error: _id
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   282:        </concept>
    283:    <concept>
 >  284:        <concept_id>10010147.10010178.10010179</concept_id>
    285:        <concept_desc>Computing methodologies~Natural language processing</concept_desc>
-   286:        <concept_significance>500</concept_significance>
 
 - file: sample\arxiv_sources\2409.02834v3\00_www_main.tex (line 284)
+  error: _id
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   282:        </concept>
    283:    <concept>
 >  284:        <concept_id>10010147.10010178.10010179</concept_id>
    285:        <concept_desc>Computing methodologies~Natural language processing</concept_desc>
-   286:        <concept_significance>500</concept_significance>
 
 - file: sample\arxiv_sources\2409.02834v3\00_www_main.tex (line 285)
+  error: _de
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   283:    <concept>
    284:        <concept_id>10010147.10010178.10010179</concept_id>
 >  285:        <concept_desc>Computing methodologies~Natural language processing</concept_desc>
    286:        <concept_significance>500</concept_significance>
-   287:        </concept>
 
 - file: sample\arxiv_sources\2409.02834v3\00_www_main.tex (line 285)
+  error: _de
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   283:    <concept>
    284:        <concept_id>10010147.10010178.10010179</concept_id>
 >  285:        <concept_desc>Computing methodologies~Natural language processing</concept_desc>
    286:        <concept_significance>500</concept_significance>
-   287:        </concept>
 
 - file: sample\arxiv_sources\2409.02834v3\00_www_main.tex (line 286)
+  error: _si
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   284:        <concept_id>10010147.10010178.10010179</concept_id>
    285:        <concept_desc>Computing methodologies~Natural language processing</concept_desc>
 >  286:        <concept_significance>500</concept_significance>
    287:        </concept>
-   288:    <concept>
 
 - file: sample\arxiv_sources\2409.02834v3\00_www_main.tex (line 286)
+  error: _si
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   284:        <concept_id>10010147.10010178.10010179</concept_id>
    285:        <concept_desc>Computing methodologies~Natural language processing</concept_desc>
 >  286:        <concept_significance>500</concept_significance>
    287:        </concept>
-   288:    <concept>
 
 - file: sample\arxiv_sources\2409.02834v3\00_www_main.tex (line 289)
+  error: _id
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   287:        </concept>
    288:    <concept>
 >  289:        <concept_id>10003033.10003068</concept_id>
    290:        <concept_desc>Networks~Network algorithms</concept_desc>
-   291:        <concept_significance>500</concept_significance>
 
 - file: sample\arxiv_sources\2409.02834v3\00_www_main.tex (line 289)
+  error: _id
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   287:        </concept>
    288:    <concept>
 >  289:        <concept_id>10003033.10003068</concept_id>
    290:        <concept_desc>Networks~Network algorithms</concept_desc>
-   291:        <concept_significance>500</concept_significance>
 
 - file: sample\arxiv_sources\2409.02834v3\00_www_main.tex (line 290)
+  error: _de
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   288:    <concept>
    289:        <concept_id>10003033.10003068</concept_id>
 >  290:        <concept_desc>Networks~Network algorithms</concept_desc>
    291:        <concept_significance>500</concept_significance>
-   292:        </concept>
 
 - file: sample\arxiv_sources\2409.02834v3\00_www_main.tex (line 290)
+  error: _de
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   288:    <concept>
    289:        <concept_id>10003033.10003068</concept_id>
 >  290:        <concept_desc>Networks~Network algorithms</concept_desc>
    291:        <concept_significance>500</concept_significance>
-   292:        </concept>
 
 - file: sample\arxiv_sources\2409.02834v3\00_www_main.tex (line 291)
+  error: _si
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   289:        <concept_id>10003033.10003068</concept_id>
    290:        <concept_desc>Networks~Network algorithms</concept_desc>
 >  291:        <concept_significance>500</concept_significance>
    292:        </concept>
-   293:  </ccs2012>
 
 - file: sample\arxiv_sources\2409.02834v3\00_www_main.tex (line 291)
+  error: _si
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   289:        <concept_id>10003033.10003068</concept_id>
    290:        <concept_desc>Networks~Network algorithms</concept_desc>
 >  291:        <concept_significance>500</concept_significance>
    292:        </concept>
-   293:  </ccs2012>
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 422)
+  error: _ju
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   420:  This exercise is a special case of example (5.43) in \cite[p. 190]{GKP} or Example (6.30) in \cite[p. 72]{QG}.
    421:    It is based on Euler's finite difference theorem: if
 >  422:   $p(u)=\sum_{j=0}^d a_ju^j$ is a polynomial of degree $d$, then
    423:   $$\sum_{k=0}^n (-1)^k \binom{n}{k} p(k)=\begin{cases} 0&\text{if $0\leq d<n$}\\ (-1)^n n! a_n&\text{if $d=n$}.
-   424:   \end{cases}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1701)
+  error: ^ye
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  1699: $\bullet$ We know that $|\cos z|^2= (\cos x)^2 +(\sinh y)^2$, where $z=x+iy$. In fact,
   1700: \begin{eqnarray*}
 > 1701: 4|\cos z|^2&=& |e^{i(x+iy)}+e^{-i(x+iy)}|^2=|e^{-y}e^{ix}+e^ye^{-ix}|^2\\
   1702: &=&e^{-2y}+e^{2y} +2 {\rm Re}( e^{2ix})=2 \cosh (2y)+2\cos (2x)\\
-  1703: &=&2(\cosh^2 y+\sinh^2 y)+ 2(\cos^2 x-\sin^2 x)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2022)
+  error: _ng
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2020: 
   2021:   (2) $\imp$ (1): If $f(x)=mx+c$ and $g(x)=m$, then trivially 
 > 2022:   $$S(n):=f(a_n)+b_ng(b_n)=ma_n+c+b_n m= m(a_n+b_n)+c$$
   2023:   and so $S(n)$ converges whenever $a_n+b_n$ converges.
-  2024:   
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2055)
+  error: _ng
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2053:   let $h(x)=f(x)-f(0)$. Then $h(a+x)=h(x)+h(a)$, that is, $h$ is a continuous additive function. By a classical result due to Cauchy, $h$ is linear; that is $h(x)=mx$ for some $m\in \R$. Consequently $f(x)=mx+f(0)$.  Let $c:=f(0)$.
   2054:   Then the condition on $f$ and $g$ has the form
 > 2055:   $$S_n=f(a_n)+b_ng(b_n)=m a_n+c +b_n g(b_n)= c+ m(a_n+b_n)+ b_n(g(b_n)-m).$$
   2056:  
-  2057:  
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2175)
+  error: _Nd
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2173: \begin{eqnarray*}
   2174: \left|\int_{\gamma_2} F_{m,r}(z)dz\right| &\leq &\int_{-1}^1 \frac{|s_N(i+t)|^m |e^{-s_N (t+i)/a}| \,|u_r(s_N(i+t))|
 > 2175: } {|1+ e^{-s_N(t+i)}|} s_Ndt\\
   2176: &\leq&C N^{m+1} e^{N\log r} \int_{-1}^1  \frac{e^{-s_N t/a}}{1+e^{-t s_N}}dt\\
-  2177: &\leq&CN^{m+1} e^{N\log r}\left(\int_0^1  \underbrace{e^{-s_Nt/a}}_{\leq 1} dt +\int_{-1}^0 \underbrace{e^{s_Nt\left(1-\frac{1}{a}\right)}}_{\leq 1} dt\right)\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2177)
+  error: _Nt
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2175: } {|1+ e^{-s_N(t+i)}|} s_Ndt\\
   2176: &\leq&C N^{m+1} e^{N\log r} \int_{-1}^1  \frac{e^{-s_N t/a}}{1+e^{-t s_N}}dt\\
 > 2177: &\leq&CN^{m+1} e^{N\log r}\left(\int_0^1  \underbrace{e^{-s_Nt/a}}_{\leq 1} dt +\int_{-1}^0 \underbrace{e^{s_Nt\left(1-\frac{1}{a}\right)}}_{\leq 1} dt\right)\\
   2178: &&\to 0\cdot  0\;{\rm as}\; N\to\infty,
-  2179: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2177)
+  error: _Nt
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2175: } {|1+ e^{-s_N(t+i)}|} s_Ndt\\
   2176: &\leq&C N^{m+1} e^{N\log r} \int_{-1}^1  \frac{e^{-s_N t/a}}{1+e^{-t s_N}}dt\\
 > 2177: &\leq&CN^{m+1} e^{N\log r}\left(\int_0^1  \underbrace{e^{-s_Nt/a}}_{\leq 1} dt +\int_{-1}^0 \underbrace{e^{s_Nt\left(1-\frac{1}{a}\right)}}_{\leq 1} dt\right)\\
   2178: &&\to 0\cdot  0\;{\rm as}\; N\to\infty,
-  2179: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 2653)
+  error: _jb
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2651: $$S_n\buildrel=_{j=k-m}^{}\sum_{k=0}^{n}\left[{2n+2\choose 2k+1}\sum_{j=0}^k{n+1\choose k-j}\right]$$
   2652: This has the form  $\dis \sum_{k=0}^\infty a_k\sum_{j=0}^k b_{k-j}$, which is  a little bit different from the Cauchy product
 > 2653: $$\left(\sum_{k=0}^\infty a_k\right)\; \left(\sum_{k=0}^\infty b_k\right)= \sum_{k=0}^\infty\sum_{j=0}^k a_jb_{k-j}.$$
   2654: 
-  2655: (2) Replacing  $\lfloor j/2\rfloor$ by $\lceil j/2\rceil$ yields the same result
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3095)
+  error: ^nt
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  3093: $$G(M_2):=G(x,y):=f(x +g(y))$$
   3094: also satisfies
 > 3095: $$G\Big(\sum_{j=1}^nt_j P_j\Big)\geq \sum_{j=1}^nt_j G(P_j),$$
   3096: Similarily, if $M_3, Q_j\in [0,\infty[\times [0,\infty[\times [0,\infty[$, then 
-  3097:  the  function  $H$ given by
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3095)
+  error: ^nt
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  3093: $$G(M_2):=G(x,y):=f(x +g(y))$$
   3094: also satisfies
 > 3095: $$G\Big(\sum_{j=1}^nt_j P_j\Big)\geq \sum_{j=1}^nt_j G(P_j),$$
   3096: Similarily, if $M_3, Q_j\in [0,\infty[\times [0,\infty[\times [0,\infty[$, then 
-  3097:  the  function  $H$ given by
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3099)
+  error: ^nt
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  3097:  the  function  $H$ given by
   3098:  $$H(M_3):=H(x,y,z):=f(x+g(y+h(z)))$$ satisfies
 > 3099:  $$H\Big(\sum_{j=1}^nt_j Q_j\Big)\geq \sum_{j=1}^nt_j H(Q_j).$$
   3100: 
-  3101: \medskip
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3099)
+  error: ^nt
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  3097:  the  function  $H$ given by
   3098:  $$H(M_3):=H(x,y,z):=f(x+g(y+h(z)))$$ satisfies
 > 3099:  $$H\Big(\sum_{j=1}^nt_j Q_j\Big)\geq \sum_{j=1}^nt_j H(Q_j).$$
   3100: 
-  3101: \medskip
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3107)
+  error: ^nt
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  3105: G\Big(\sum_{j=1}^n t_j x_j, \sum_{j=1}^n t_jy_j\Big)&=&f\Big(\sum_{j=1}^n t_j x_j+ g\Big(\sum_{j=1}^n t_j y_j\Big)\Big)\\
   3106: &\geq &f\Big(\sum_{j=1}^n t_j x_j+\sum_{j=1}^n t_j g(y_j)\Big)\\
 > 3107: &=&f\Big(\sum_{j=1}^nt_j(x_j+g(y_j))\Big)\\
   3108: &\geq&\sum_{j=1}^n t_jf(x_j+g(y_j))\\
-  3109: &=&\sum_{j=1}^n t_j G(P_j).
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3108)
+  error: _jf
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  3106: &\geq &f\Big(\sum_{j=1}^n t_j x_j+\sum_{j=1}^n t_j g(y_j)\Big)\\
   3107: &=&f\Big(\sum_{j=1}^nt_j(x_j+g(y_j))\Big)\\
 > 3108: &\geq&\sum_{j=1}^n t_jf(x_j+g(y_j))\\
   3109: &=&\sum_{j=1}^n t_j G(P_j).
-  3110: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3117)
+  error: _jH
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  3115: &=& f\Big(\sum_{j=1}^n t_j (x_j+ g(y_j+h(z_j))\Big)\\
   3116: &\geq&\sum_{j=1}^n t_j f(x_j+ g(y_j+h(z_j)))\\
 > 3117: &=&\sum_{j=1}^n t_jH(Q_j).
   3118: \end{eqnarray*}
-  3119: 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3683)
+  error: ^me
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  3681:  
   3682:  To complete the calculations, we use  that for $m\in \N$ and $k\in \N\setminus\{0\}$,
 > 3683: $$\int_0^\infty x^me^{-kx}dx=m! / k^{m+1}.$$
   3684: Hence
-  3685: \begin{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3893)
+  error: ^iy
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  3891: 
   3892: {\bf Case 1} $f\in C^1(\R)$.
 > 3893: Write $p(x,y)=\sum a_{i,j}x^iy^j$ with  symmetrical coefficients and $a_{0,0}=-f(0)$ (the sum being finite of course)
   3894: If we take $y=0$, then for all $x$
-  3895: $$-f(0)=f(x+0)-f(x)-f(0)=a_{0,0}+\sum  a_{i,0}x^i.$$
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3898)
+  error: ^iy
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  3896: Hence $a_{i,0}=0$ for all $i\geq 1$. Due to symmetry, we also have $a_{0,j}=0$ for all $j\geq 1$. Thus we have only coefficients $a_{i,j}$ for $i,j\geq 1$.
   3897: Consequenlty
 > 3898: $$\frac{f(x+y)-f(x)-(f(y)-f(0)))}{y}=\sum_{i, j\geq 1}a_{i,j}x^iy^{j-1}.$$
   3899: As $f$ is assumed to be differentiable, we may take $y\to 0$ and get
-  3900: 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 4352)
+  error: _nC
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  4350: so that $q_n:=||x||+\epsilon_n$ is rational. Then, $||x/q_n||\leq 1$. Since $f$ is
   4351:  $\mathbb Q$-linear, we obtain
 > 4352: $$||f(x)||=q_n ||f(x/q_n)||\leq q_nC.$$
   4353: Letting $n$ tend to infinity, we get 
-  4354: $$||f(x)||\leq C ||x||.$$
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 4645)
+  error: _jx
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  4643:  
   4644: Let $h(x)=\prod_{j=1}^n (1-x^{a_j})$. Then 
 > 4645: $h'(x)/h(x)=-\sum_{j=1}^n \frac{a_jx^{a_j-1}}{1-x^{a_j}}$
   4646: and hence $$h'(x)=-\sum_{j=1}^n a_j x^{a_j-1}\prod_{k\not=j}(1-x^{a_k}).$$
-  4647:  Clearly  $h'(0)=h'(1)=0$.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 4657)
+  error: _jx
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  4655: 
   4656: Now, $f'(x)/f(x)=\frac{1}{1-x}+h'(x)/h(x)$. In particular, $f'(0)=1$. Thus we have to look for  $x\in ]0,1[$
 > 4657: so that  $g(x):=\sum_{j=1}^n a_jx^{a_j-1}\frac{1-x}{1-x^{a_j}}=1$. But $g(0)=0$,
   4658: and, by de l'Hopital's rule, $\lim_{x\to 1} g(x)=n$.  The intermediate value theorem 
-  4659: yields the existence of $x$. 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 4746)
+  error: ^na
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  4744: The assertion is an immediate consequence of H\"older's inequality:
   4745: Wlog let $0\leq a_j\leq 1$ and let $q\in ]0,1[$ be such that $p+q=1$ (note that $p\in\, ]0,1[$.)
 > 4746: $$n^{p-1}\sum_{j=1}^na_j^p=n^{p-1}\left(\sum_{j=1}^N a_j^p+\sum_{j=N+1}^n a_j^p\,\cdot 1\right)\leq$$
   4747: $$
-  4748: \frac{N}{n^{1-p}}+\left(\sum_{j=N+1}^n (a_j^p)^{1/p}\right)^p
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 4991)
+  error: ^jk
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  4989: 
   4990: where $k=(k_1,k_2,\dots,k_j)\in\N^j$ is an ordered multi-index with $k_1\leq k_2\leq\cdots\leq k_j$,
 > 4991: $|k|=\sum_{i=1}^jk_i,\sp g^{(k)}=g^{(k_1)}g^{(k_2)}\dots g^{(k_j)}$ and
   4992: $\dis C_k^n=\frac{1}{~\prod_i[A_k(i)!]~}{n\choose k}$. Here $A_k(i)$ denotes the cardinal of how often
-  4993: $i$ appears within the ordered index $k$ and ${n\choose k}=\frac{n!}{ k_1!k_2!\dots k_j!}$.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 5460)
+  error: ^nw
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  5458: In fact let $w_1,\cdots, w_n\in\C$. Then 
   5459: 
 > 5460: $$p(z)= \sum_{k=1}^nw_k{\prod_{j=1, j\ne k}^n(z-z_j)\over
   5461: \prod_{j=1, j\ne k}^n(z_k-z_j)} $$
-  5462: 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 5470)
+  error: ^nz
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  5468: \sum_{k=1}^n{\prod_{j=1,j\ne k}^n z_j\over \prod_{j=1,j\ne k}^n(z_k-z_j)}.$$
   5469: 
 > 5470: Dividing by $\prod_{j=1}^nz_j$, yields the assertion
   5471: 
-  5472: $$\sum_{k=1}^n{1\over z_k}\prod_{{j=1\atop j\ne k}}^n{1\over z_k-z_j}={(-1)^{n-1}\over \prod_{j=1}^nz_j}.$$
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 5472)
+  error: ^nz
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  5470: Dividing by $\prod_{j=1}^nz_j$, yields the assertion
   5471: 
 > 5472: $$\sum_{k=1}^n{1\over z_k}\prod_{{j=1\atop j\ne k}}^n{1\over z_k-z_j}={(-1)^{n-1}\over \prod_{j=1}^nz_j}.$$
   5473: 
-  5474:  
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 5634)
+  error: _nw
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  5632: $${d^n\over (dw)^n}f^{-1}(w)= {n!\over 2\pi i}\intop_{|z|=\delta} z\;{(z+1)e^z\over (ze^z-w)^{n+1}}\;dz.$$
   5633: 
 > 5634: Thus, for the power series $f^{-1}(w)=\sum_{n=0}^\infty a_nw^n$ we have $a_0=0$ and for $n\geq 1$:
   5635: 
-  5636: $$a_n={1\over 2\pi i}\intop_{|z|=\delta} {z+1\over z^n} e^{-nz}\;dz= {1\over 2\pi i}\sum_{k=0}^\infty(-1)^k
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 5637)
+  error: ^nk
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  5635: 
   5636: $$a_n={1\over 2\pi i}\intop_{|z|=\delta} {z+1\over z^n} e^{-nz}\;dz= {1\over 2\pi i}\sum_{k=0}^\infty(-1)^k
 > 5637: \intop_{|z|=\delta}{z(nz)^k+(nz)^k\over z^nk!}\;dz= (-1)^{n-1}{n^{n-1}\over n!}.$$
   5638: 
-  5639: By d'Alembert's rule it is easy to check that the radius of convergence is $1/e$.\hfill $\bigcirc$\vs 0,3cm
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 5641)
+  error: ^mS
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  5639: By d'Alembert's rule it is easy to check that the radius of convergence is $1/e$.\hfill $\bigcirc$\vs 0,3cm
   5640: 
 > 5641: {\bf Proposition} {\sl For $0<\lambda<1$ and $m\in \Z$,  let $g_m(\lambda)=\lambda^mS_m(\lambda)$, where
   5642: 
-  5643: $$S_m(\lambda)=\dis\sum_{n=1}^\infty e^{-\lambda n}(\lambda n)^{n-m}/n!.\eqno (1)$$
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6692)
+  error: ^ns
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  6690: We claim that for $r>s\geq 0$,
   6691: 
 > 6692: $$\ovalbox{$\dis P:=\prod_{n=0}^\infty \left(1+\frac{\cosh(2^ns)}{\cosh(2^nr)}\right)= \frac{\sinh r}{\cosh r-\cosh s}$}.$$
   6693: \\
-  6694: 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6692)
+  error: ^nr
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  6690: We claim that for $r>s\geq 0$,
   6691: 
 > 6692: $$\ovalbox{$\dis P:=\prod_{n=0}^\infty \left(1+\frac{\cosh(2^ns)}{\cosh(2^nr)}\right)= \frac{\sinh r}{\cosh r-\cosh s}$}.$$
   6693: \\
-  6694: 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6698)
+  error: ^nx
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  6696: 
   6697: \begin{equation}\label{hil1}
 > 6698: \prod_{n=0}^k \cosh(2^nx)=\frac{\sinh(2^{k+1}x)}{2^{k+1}\sinh x}.
   6699: \end{equation}
-  6700: 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6704)
+  error: ^nx
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  6702: 
   6703: \begin{eqnarray*}
 > 6704: \prod_{n=0}^{k+1} \cosh(2^nx)&=&\left(\prod_{n=0}^k \cosh(2^nx)\right)\cdot \cosh (2^{k+1}x)=
   6705: \frac{\sinh(2^{k+1}x)}{2^{k+1}\sinh x} \cdot  \cosh (2^{k+1}x)\\
-  6706: &=& \frac{\sinh (2^{k+2}x)}{2^{k+2}\sinh x}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6704)
+  error: ^nx
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  6702: 
   6703: \begin{eqnarray*}
 > 6704: \prod_{n=0}^{k+1} \cosh(2^nx)&=&\left(\prod_{n=0}^k \cosh(2^nx)\right)\cdot \cosh (2^{k+1}x)=
   6705: \frac{\sinh(2^{k+1}x)}{2^{k+1}\sinh x} \cdot  \cosh (2^{k+1}x)\\
-  6706: &=& \frac{\sinh (2^{k+2}x)}{2^{k+2}\sinh x}.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6716)
+  error: ^ns
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  6714: Now 
   6715: $$1+\frac{\cosh u}{\cosh v}=\frac{\cosh u+\cosh v}{\cosh v}=2\;\frac{\cosh(\frac{u+v}{2})\cosh(\frac{u-v}{2})}{\cosh v}.$$
 > 6716: Hence, with $u=2^ns$ and $v=2^nr$,
   6717: {\footnotesize \begin{eqnarray*}
-  6718: P_k:= \prod_{n=0}^k\left(1+\frac{\cosh 2^ns}{\cosh 2^nr}\right)&=&2^{k+1}\,\prod_{n=0}^k \frac{\cosh(2^{n-1}(r+s))
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6716)
+  error: ^nr
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  6714: Now 
   6715: $$1+\frac{\cosh u}{\cosh v}=\frac{\cosh u+\cosh v}{\cosh v}=2\;\frac{\cosh(\frac{u+v}{2})\cosh(\frac{u-v}{2})}{\cosh v}.$$
 > 6716: Hence, with $u=2^ns$ and $v=2^nr$,
   6717: {\footnotesize \begin{eqnarray*}
-  6718: P_k:= \prod_{n=0}^k\left(1+\frac{\cosh 2^ns}{\cosh 2^nr}\right)&=&2^{k+1}\,\prod_{n=0}^k \frac{\cosh(2^{n-1}(r+s))
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6718)
+  error: ^ns
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  6716: Hence, with $u=2^ns$ and $v=2^nr$,
   6717: {\footnotesize \begin{eqnarray*}
 > 6718: P_k:= \prod_{n=0}^k\left(1+\frac{\cosh 2^ns}{\cosh 2^nr}\right)&=&2^{k+1}\,\prod_{n=0}^k \frac{\cosh(2^{n-1}(r+s))
   6719:  \cosh(2^{n-1}(r-s))}{\cosh 2^nr}\\
-  6720:  &=&2^{k+1} \frac{ \cosh(\frac{r+s}{2})\, \cosh(\frac{r-s}{2})\;\prod_{j=0}^{k-1} \cosh 2^j(r+s) \prod_{j=0}^{k-1} \cosh 2^j(r-s)}{\prod_{n=0}^k \cosh 2^nr}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6718)
+  error: ^nr
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  6716: Hence, with $u=2^ns$ and $v=2^nr$,
   6717: {\footnotesize \begin{eqnarray*}
 > 6718: P_k:= \prod_{n=0}^k\left(1+\frac{\cosh 2^ns}{\cosh 2^nr}\right)&=&2^{k+1}\,\prod_{n=0}^k \frac{\cosh(2^{n-1}(r+s))
   6719:  \cosh(2^{n-1}(r-s))}{\cosh 2^nr}\\
-  6720:  &=&2^{k+1} \frac{ \cosh(\frac{r+s}{2})\, \cosh(\frac{r-s}{2})\;\prod_{j=0}^{k-1} \cosh 2^j(r+s) \prod_{j=0}^{k-1} \cosh 2^j(r-s)}{\prod_{n=0}^k \cosh 2^nr}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6719)
+  error: ^nr
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  6717: {\footnotesize \begin{eqnarray*}
   6718: P_k:= \prod_{n=0}^k\left(1+\frac{\cosh 2^ns}{\cosh 2^nr}\right)&=&2^{k+1}\,\prod_{n=0}^k \frac{\cosh(2^{n-1}(r+s))
 > 6719:  \cosh(2^{n-1}(r-s))}{\cosh 2^nr}\\
   6720:  &=&2^{k+1} \frac{ \cosh(\frac{r+s}{2})\, \cosh(\frac{r-s}{2})\;\prod_{j=0}^{k-1} \cosh 2^j(r+s) \prod_{j=0}^{k-1} \cosh 2^j(r-s)}{\prod_{n=0}^k \cosh 2^nr}\\
-  6721:  &=&2^{k+1} \cosh\left(\frac{r+s}{2}\right)\, \cosh\left(\frac{r-s}{2}\right)\; \frac{\sinh 2^k(r+s)}{2^{k}\sinh (r+s)} \; 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6720)
+  error: ^nr
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  6718: P_k:= \prod_{n=0}^k\left(1+\frac{\cosh 2^ns}{\cosh 2^nr}\right)&=&2^{k+1}\,\prod_{n=0}^k \frac{\cosh(2^{n-1}(r+s))
   6719:  \cosh(2^{n-1}(r-s))}{\cosh 2^nr}\\
 > 6720:  &=&2^{k+1} \frac{ \cosh(\frac{r+s}{2})\, \cosh(\frac{r-s}{2})\;\prod_{j=0}^{k-1} \cosh 2^j(r+s) \prod_{j=0}^{k-1} \cosh 2^j(r-s)}{\prod_{n=0}^k \cosh 2^nr}\\
   6721:  &=&2^{k+1} \cosh\left(\frac{r+s}{2}\right)\, \cosh\left(\frac{r-s}{2}\right)\; \frac{\sinh 2^k(r+s)}{2^{k}\sinh (r+s)} \; 
-  6722:   \frac{\sinh 2^k(r-s)}{2^{k}\sinh (r-s)} \; \frac{2^{k+1}\sinh r}{\sinh 2^{k+1}r}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7387)
+  error: ^me
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-  7385: $$\buildrel=_{}^{!}\sum_{n=1}^\infty \frac{(-1)^n}{(2n)!}\int_0^\infty x^{2n-1}e^{-x}dx$$
   7386: Since for  $m\in \N$ and $k\in \N\setminus\{0\}$,
 > 7387: $$\int_0^\infty x^me^{-kx}dx=m! / k^{m+1},$$
   7388: we {\it would} obtain
-  7389: $$J= \sum_{n=1}^\infty \frac{(-1)^n}{(2n)!} (2n-1)!=\sum_{n=1}^\infty \frac{(-1)^n}{2n}=- \frac{1}{2}\log 2.
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 8160)
+  error: _ne
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  8158: This is an immediate consequence to Abel's theorem telling us that if $(a_n)$ is a sequence of positive numbers with
   8159:  $a_n\searrow 0$, then the trigonometric series
 > 8160: $S(t):=\sum_{n=0}^\infty a_ne^{int}$ converges for all $t\not\in\{2k\pi: k\in \mathbb Z\}$
   8161: (see i.e. Appendix 4 in my encyclopedic monograph: R. Mortini, R. Rupp,  Extension Problems  and Stable Ranks, A Space Odyssey, Birkh\"auser 2021, ca 2150 pages):
-  8162: 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11083)
+  error: ^bb
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
- 11081: 
  11082: Hence
 >11083: $$a^bb^cc^a\leq  \left(\frac{a^2+b^2+c^2}{a+b+c}\right)^{a+b+c}.$$
  11084: 
- 11085: 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11083)
+  error: ^cc
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
- 11081: 
  11082: Hence
 >11083: $$a^bb^cc^a\leq  \left(\frac{a^2+b^2+c^2}{a+b+c}\right)^{a+b+c}.$$
  11084: 
- 11085: 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11287)
+  error: ^nx
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
- 11285: %%%%%%%
  11286: Consider the auxiliary function
 >11287: $$h(x)=\sum_{n=0}^\infty \left( \int_0^{\frac{\pi}{2}} \frac{(\sin t)^n}{n+1}\,dt \right)(-1)^nx^{n+1}.$$
  11288: Then 
- 11289: \begin{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12090)
+  error: _nH
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
- 12088: \frac{H_{n-1} H_{n+1}}{n(n+1)}&=&\frac{H_{n-1} H_{n+1}}{n}-\frac{H_{n-1} H_{n+1}}{n+1}=\frac{H_{n-1} H_{n+1}}{n}-
  12089: \frac{(H_n-\frac{1}{n}) (H_{n+2}-\frac{1}{n+2})}{n+1}\\
 >12090: &=&\frac{H_{n-1} H_{n+1}}{n}-\frac{H_nH_{n+2}-\frac{1}{n}H_{n+2} - \frac{1}{n+2}H_n+ \frac{1}{n(n+2)}}{n+1}\\ 
  12091: &=&\left(\frac{H_{n-1} H_{n+1}}{n} -\frac{H_nH_{n+2}}{n+1}\right) + \frac{H_{n+2}}{n(n+1)}+ \frac{H_n}{(n+1)(n+2)}-\frac{1}{n(n+1)(n+2)}.
- 12092: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12091)
+  error: _nH
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
- 12089: \frac{(H_n-\frac{1}{n}) (H_{n+2}-\frac{1}{n+2})}{n+1}\\
  12090: &=&\frac{H_{n-1} H_{n+1}}{n}-\frac{H_nH_{n+2}-\frac{1}{n}H_{n+2} - \frac{1}{n+2}H_n+ \frac{1}{n(n+2)}}{n+1}\\ 
 >12091: &=&\left(\frac{H_{n-1} H_{n+1}}{n} -\frac{H_nH_{n+2}}{n+1}\right) + \frac{H_{n+2}}{n(n+1)}+ \frac{H_n}{(n+1)(n+2)}-\frac{1}{n(n+1)(n+2)}.
  12092: \end{eqnarray*}
- 12093: Now 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12110)
+  error: _nH
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
- 12108: Hence %\footnotesize{
  12109: \begin{eqnarray*}
 >12110: \frac{H_{n-1} H_{n+1}}{n(n+1)}&=&\left(\frac{H_{n-1} H_{n+1}}{n} -\frac{H_nH_{n+2}}{n+1}\right) +
  12111: \bl{\left(\frac{H_{n+1}}{n}-\frac{H_{n+2}}{n+1}\right) }+\left(\frac{H_{n-1}}{n+1}-\frac{H_{n}}{n+2}\right)\\
- 12112: &&+\bl{\frac{3}{2} \,\left(\frac{1}{n}-\frac{1}{n+1}\right)+\frac{1}{2}\,\left(\frac{1}{n+1}-\frac{1}{n+2}\right)}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12223)
+  error: ^nx
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
- 12221: $$g(x)=2^n x^{2^n-1}g(x^{2^n}).$$
  12222: Now, for $0\leq x<1$ we may let $n\to \infty$ and conclude (due to the continuity of $g$ at $0$ and $my^m\to 0$ for $0\leq y<1$) 
 >12223: that $g(x)=\lim_{n\to\infty}2^nx^{2^n-1} \; g(0)= 0$. As $g$ is continuous at $1$, we deduce that $g\equiv 0$  on $[0,1]$, hence on $[-1,1]$, and so $f(x)=2x$ for $x\in [-1,1]$ whenever $f$ satisfies (\ref{int-feq}) on $X$.  Now it is straightforward to show that $2x$ also satisfies
  12224: (\ref{int-feq0}), that is
- 12225: $$\lim_{x\to0} \left(x^2+\int_1^{1/x} f(x^2t) dt\right)=1.$$
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12570)
+  error: ^bc
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
- 12568: $$\log\left(\frac{A+B+C}{3}\right)\geq \frac{\log A+\log B+\log C}{3}=:R.$$
  12569: Here we take
 >12570: $$A:=a^a b^b, B:=b^bc^c, C=c^ca^a.$$
  12571: Now the function $f(x):=2x\log x$ is convex on $]0,\infty[$, since $f''(x)=2/x\geq 0$.
- 12572: Hence
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12570)
+  error: ^ca
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
- 12568: $$\log\left(\frac{A+B+C}{3}\right)\geq \frac{\log A+\log B+\log C}{3}=:R.$$
  12569: Here we take
 >12570: $$A:=a^a b^b, B:=b^bc^c, C=c^ca^a.$$
  12571: Now the function $f(x):=2x\log x$ is convex on $]0,\infty[$, since $f''(x)=2/x\geq 0$.
- 12572: Hence
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12580)
+  error: ^ab
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
- 12578: $A+B+C\geq 3/2$.
  12579: In other words
 >12580: $$a^ab^b+b^bc^c+c^ca^a\geq \frac{3}{2}.$$
  12581: 
- 12582: 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12580)
+  error: ^bc
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
- 12578: $A+B+C\geq 3/2$.
  12579: In other words
 >12580: $$a^ab^b+b^bc^c+c^ca^a\geq \frac{3}{2}.$$
  12581: 
- 12582: 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12580)
+  error: ^ca
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
- 12578: $A+B+C\geq 3/2$.
  12579: In other words
 >12580: $$a^ab^b+b^bc^c+c^ca^a\geq \frac{3}{2}.$$
  12581: 
- 12582: 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12824)
+  error: ^nx
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
- 12822: 
  12823: This is related to  the coefficient in the Cauchy product of 
 >12824: $$\sum_{n=0}^\infty {2n \choose n} x^n= \sum_{n=0}^\infty {-1/2\choose n} (-1)^n 4^nx^n=\frac{1}{\sqrt{1-4x }},$$
  12825: with itself  and which converges for $|x|<1/4$, or if we take $x=y/4$,
- 12826: $$\sum_{n=0}^\infty \frac{1}{4^n} {2n \choose n} y^n=\frac{1}{\sqrt{1-y}}.$$
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13646)
+  error: _jf
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
- 13644: In fact, consider the convex function $f(x)= \frac{1}{\sqrt{1-x}}$.
  13645: By Jensen's inequality (or one of the possible defintions of convexity), if $\sum_{j=1}^n t_j=1$  where $(0\leq t_j\leq 1$), then
 >13646: $$f\Big(\sum_{j=1}^n t_jx_j\Big)\leq \sum_{j=1}^n t_jf(x_j).$$
  13647: Here  we choose   $x_i=a_i^2$, and $t_j=1/n$. Note that  $\frac{\sum_{i=1}^n a_i^2}{n}=1/n$.
- 13648: Hence
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13763)
+  error: ^kd
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
- 13761: \left|\int_0^1 x^k f(x)\,dx-\frac{1}{k+1} f(1)\right|&=& \left|\int_0^1 x^k (f(x)-f(1))\,dx\right|\\
  13762: & \leq& 2M\;\int_0^\delta x^k +\int_\delta^1 x^k |f(x)-f(1)|\,dx  \\
 >13763: &\leq & 2M \frac{\delta^{k+1}}{k+1} +\e \int_0^1 x^kdx \\
  13764: &\leq& \frac{\e}{k+1}+  \frac{\e}{k+1}.
- 13765: \end{eqnarray*}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 14205)
+  error: ^af
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
- 14203: \begin{exemple}
  14204: Let $a>0$ and $f\in C^1[-a,a]$. If $f(0)=0$, then 
 >14205: $$\int_{-a}^a (f'(x))^2\;dx \geq \frac{3}{2a^3}\left(\int_{-a}^af(x)\,dx\right)^2.$$
  14206: \end{exemple}
- 14207: 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 14213)
+  error: ^bf
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
- 14211: \begin{exemple}
  14212: Let $0<a,b<\infty$ and $f\in C^1[a,b]$. If $f((a+b)/2)=0$, then, with $C=\frac{12}{(b-a)^3}$,
 >14213: $$\int_{a}^b (f'(x))^2\;dx \geq C\left(\int_{a}^bf(x)\,dx\right)^2.$$
  14214: %The constant $C$ is best possible and is obtained for the continuous function 
- 14215: %$$q(x)=\begin{cases} \displaystyle \frac{(x-a)^2}{2} & \text{if $a\leq x\leq (a+b)/2$}\\
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 14233)
+  error: ^af
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
- 14231: If we choose $p(x)=x+a$, then $p(-a)=0$, and we similarily obtain the appropriate estimation for   $\int_{-a}^0 f(x)dx$.
  14232: Hence, using that $(x+y)^2\leq 2(x^2+y^2)$, 
 >14233: $$\left(\int_{-a}^af(x)\,dx\right)^2 \leq \frac{2}{3} a^3 \int_{-a}^a (f'(x))^2\;dx$$
  14234: \end{proof}
- 14235: 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 14683)
+  error: ^nf
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
- 14681:  
  14682:  b) Define the function $f:\mathbb R^+\to \mathbb R$ by $f(0)=0$, $f(x)=1$ if $1\leq x<2$ and $x$ rational, $f(x)=-1$  if $1<x<2$ and $x$ irrational.
 >14683:   If $n\in \mathbb N$ and $2^n\leq x<2^{n+1}$, put $f(x)=(-1)^nf(x/2^n)$. If $\frac{1}{2^{n+1}}\leq x< \frac{1}{2^n}$, put $f(x)=(-1)^nf(2^nx)$.
  14684:  If $x<0$, then let $f(x)=f(-x)$. Then $f$ is discontinuous everywhere and, by construction, $f(x)+f(2x)=0$.
- 14685: \bigskip
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 14683)
+  error: ^nf
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
- 14681:  
  14682:  b) Define the function $f:\mathbb R^+\to \mathbb R$ by $f(0)=0$, $f(x)=1$ if $1\leq x<2$ and $x$ rational, $f(x)=-1$  if $1<x<2$ and $x$ irrational.
 >14683:   If $n\in \mathbb N$ and $2^n\leq x<2^{n+1}$, put $f(x)=(-1)^nf(x/2^n)$. If $\frac{1}{2^{n+1}}\leq x< \frac{1}{2^n}$, put $f(x)=(-1)^nf(2^nx)$.
  14684:  If $x<0$, then let $f(x)=f(-x)$. Then $f$ is discontinuous everywhere and, by construction, $f(x)+f(2x)=0$.
- 14685: \bigskip
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 14683)
+  error: ^nx
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
- 14681:  
  14682:  b) Define the function $f:\mathbb R^+\to \mathbb R$ by $f(0)=0$, $f(x)=1$ if $1\leq x<2$ and $x$ rational, $f(x)=-1$  if $1<x<2$ and $x$ irrational.
 >14683:   If $n\in \mathbb N$ and $2^n\leq x<2^{n+1}$, put $f(x)=(-1)^nf(x/2^n)$. If $\frac{1}{2^{n+1}}\leq x< \frac{1}{2^n}$, put $f(x)=(-1)^nf(2^nx)$.
  14684:  If $x<0$, then let $f(x)=f(-x)$. Then $f$ is discontinuous everywhere and, by construction, $f(x)+f(2x)=0$.
- 14685: \bigskip
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 14693)
+  error: ^ng
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
- 14691: $$f(x)=\begin{cases}  0 &\text{ if $x=0$}\\ 
  14692: (-1)^n g(x/2^n) &\text{if  $2^n \leq |x|< 2^{n+1}$}\\
 >14693:  (-1)^ng(2^nx) &\text{if $\frac{1}{2^{n+1}}\leq |x|< \frac{1}{2^n}$}.
  14694: \end{cases}
- 14695: $$
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 14693)
+  error: ^nx
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
- 14691: $$f(x)=\begin{cases}  0 &\text{ if $x=0$}\\ 
  14692: (-1)^n g(x/2^n) &\text{if  $2^n \leq |x|< 2^{n+1}$}\\
 >14693:  (-1)^ng(2^nx) &\text{if $\frac{1}{2^{n+1}}\leq |x|< \frac{1}{2^n}$}.
  14694: \end{cases}
- 14695: $$
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 15321)
+  error: ^nx
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
- 15319: We conclude that  for every $x>0$, and $n,k\in \N:=\{0,1,2,\dots\}$,
  15320: $$F\left(\frac{2^n}{3^k} x\right)=\frac{2^n}{3^k} F(x),$$
 >15321: since, by induction, $F(2^nx)=2^nF(x)$ and $F(x/3^k)= \frac{1}{3^k} F(x)$. Now replace $x$ by $2^nx$.
  15322: \\
- 15323: 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 15321)
+  error: ^nF
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
- 15319: We conclude that  for every $x>0$, and $n,k\in \N:=\{0,1,2,\dots\}$,
  15320: $$F\left(\frac{2^n}{3^k} x\right)=\frac{2^n}{3^k} F(x),$$
 >15321: since, by induction, $F(2^nx)=2^nF(x)$ and $F(x/3^k)= \frac{1}{3^k} F(x)$. Now replace $x$ by $2^nx$.
  15322: \\
- 15323: 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 15321)
+  error: ^nx
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
- 15319: We conclude that  for every $x>0$, and $n,k\in \N:=\{0,1,2,\dots\}$,
  15320: $$F\left(\frac{2^n}{3^k} x\right)=\frac{2^n}{3^k} F(x),$$
 >15321: since, by induction, $F(2^nx)=2^nF(x)$ and $F(x/3^k)= \frac{1}{3^k} F(x)$. Now replace $x$ by $2^nx$.
  15322: \\
- 15323: 
 
 - file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 895)
+  error: _lP
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   893:     \end{cases}
    894: \]
 >  895: The joint distribution \(P_{\theta_x, \theta_y}\) can then be constructed using the chain rule \(P_{\theta_x, \theta_y}(X_1, \cdots, X_i, Y_1, \cdots, Y_c) = \prod^i_{k=0}P(X_k|Pa(X_k)) \prod^c_lP(Y_l|\text{Pa}(Y_l)\).
    896: By the faithfulness assumption \cite{pearl_1998_bn}, if the conditional independencies hold in the data, they must also hold in the causal graph \(\mathbb{G}\): 
-   897: \[X_i \perp Y_j | \boldsymbol{Z} \implies X_i \perp_{\mathbb{G}} Y_j | \boldsymbol{Z}\]
 
 - file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 430)
+  error: _lP
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   428:     \end{cases}
    429: \]
 >  430: The joint distribution \(P_{\theta_x, \theta_y}\) can then be constructed using the chain rule \(P_{\theta_x, \theta_y}(X_1, \cdots, X_i, Y_1, \cdots, Y_c) = \prod^i_{k=0}P(X_k|Pa(X_k)) \prod^c_lP(Y_l|\text{Pa}(Y_l)\).
    431: By the faithfulness assumption \cite{pearl_1998_bn}, if the conditional independencies hold in the data, they must also hold in the causal graph \(\mathbb{G}\): 
-   432: \[X_i \perp Y_j | \boldsymbol{Z} \implies X_i \perp_{\mathbb{G}} Y_j | \boldsymbol{Z}\]
 
 - file: sample\submodules\OpenLogic\content\lambda-calculus\lambda-definability\arithmetical-functions.tex (line 30)
+  error: ^nx
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-    28:    \lambd[fx][f ({\num{n}} f x)].
     29:    \intertext{The embedded term $\num{n}fx$ is a redex, since
 >   30:      $\num{n}$ is $\lambd[fx][f^nx]$. So $\num{n}fx \redone f^nx$ and
     31:      so, for the entire term we have}
-    32:    \fn{Succ}\, \num n & \red \lambd[fx][f(f^n(x))],
 
 - file: sample\submodules\OpenLogic\content\lambda-calculus\lambda-definability\arithmetical-functions.tex (line 30)
+  error: ^nx
   message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-    28:    \lambd[fx][f ({\num{n}} f x)].
     29:    \intertext{The embedded term $\num{n}fx$ is a redex, since
 >   30:      $\num{n}$ is $\lambd[fx][f^nx]$. So $\num{n}fx \redone f^nx$ and
     31:      so, for the entire term we have}
-    32:    \fn{Succ}\, \num n & \red \lambd[fx][f(f^n(x))],
 
 - file: sample\submodules\OpenLogic\content\lambda-calculus\lambda-definability\fixpoints.tex (line 172)
+  error: _Cg
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   170:   g(Y_C g) & \ident g((\lambd[g][VV])g) \red g(VV).
    171: \end{align*}
 >  172: In other words, $Y_Cg$ and $g(Y_Cg)$ reduce to a common term $g(VV)$; so $Y_Cg
    173: \equal[\beta] g(Y_Cg)$. This is often enough for applications.
-   174: 
 
 - file: sample\submodules\OpenLogic\content\lambda-calculus\lambda-definability\fixpoints.tex (line 172)
+  error: _Cg
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   170:   g(Y_C g) & \ident g((\lambd[g][VV])g) \red g(VV).
    171: \end{align*}
 >  172: In other words, $Y_Cg$ and $g(Y_Cg)$ reduce to a common term $g(VV)$; so $Y_Cg
    173: \equal[\beta] g(Y_Cg)$. This is often enough for applications.
-   174: 
 
 - file: sample\submodules\OpenLogic\content\lambda-calculus\lambda-definability\fixpoints.tex (line 172)
+  error: _Cg
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   170:   g(Y_C g) & \ident g((\lambd[g][VV])g) \red g(VV).
    171: \end{align*}
 >  172: In other words, $Y_Cg$ and $g(Y_Cg)$ reduce to a common term $g(VV)$; so $Y_Cg
    173: \equal[\beta] g(Y_Cg)$. This is often enough for applications.
-   174: 
 
 - file: sample\submodules\OpenLogic\content\lambda-calculus\lambda-definability\fixpoints.tex (line 173)
+  error: _Cg
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   171: \end{align*}
    172: In other words, $Y_Cg$ and $g(Y_Cg)$ reduce to a common term $g(VV)$; so $Y_Cg
 >  173: \equal[\beta] g(Y_Cg)$. This is often enough for applications.
    174: 
-   175: \end{document}
 
 - file: sample\submodules\OpenLogic\content\set-theory\story\cumulative-approach.tex (line 39)
+  error: _he
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    37: \begin{center}
     38: 	\begin{tikzpicture}[scale=0.6]
 >   39: 	\tikzset{cut_here/.style={densely dotted}}
     40: 	\draw (-4,6) -- (-1, 0)-- (2,6); 
-    41: 	\draw[cut_here] (-5,8)--(-4,6);
 
 - file: sample\submodules\OpenLogic\content\set-theory\story\cumulative-approach.tex (line 41)
+  error: _he
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    39: 	\tikzset{cut_here/.style={densely dotted}}
     40: 	\draw (-4,6) -- (-1, 0)-- (2,6); 
 >   41: 	\draw[cut_here] (-5,8)--(-4,6);
     42: 	\draw[cut_here] (2,6)--(3,8);
-    43: 	\draw(-1.5, 1)--(-0.5, 1);
 
 - file: sample\submodules\OpenLogic\content\set-theory\story\cumulative-approach.tex (line 42)
+  error: _he
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    40: 	\draw (-4,6) -- (-1, 0)-- (2,6); 
     41: 	\draw[cut_here] (-5,8)--(-4,6);
 >   42: 	\draw[cut_here] (2,6)--(3,8);
     43: 	\draw(-1.5, 1)--(-0.5, 1);
-    44: 	\draw(-2, 2)--(0, 2);
 
 - file: sample\submodules\OpenLogic\content\set-theory\story\urelements.tex (line 22)
+  error: _he
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    20: \begin{center}
     21: 	\begin{tikzpicture}[scale=0.6]
 >   22: 	\tikzset{cut_here/.style={densely dotted}}
     23: 	\draw (-4,6) -- (-1, 0) -- (1,0) -- (4,6); 
-    24: 	\draw[cut_here] (-5,8)--(-4,6);
 
 - file: sample\submodules\OpenLogic\content\set-theory\story\urelements.tex (line 24)
+  error: _he
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    22: 	\tikzset{cut_here/.style={densely dotted}}
     23: 	\draw (-4,6) -- (-1, 0) -- (1,0) -- (4,6); 
 >   24: 	\draw[cut_here] (-5,8)--(-4,6);
     25: 	\draw[cut_here] (5,8)--(4,6);
-    26: 	\draw(-1.5, 1)--(1.5, 1);
 
 - file: sample\submodules\OpenLogic\content\set-theory\story\urelements.tex (line 25)
+  error: _he
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    23: 	\draw (-4,6) -- (-1, 0) -- (1,0) -- (4,6); 
     24: 	\draw[cut_here] (-5,8)--(-4,6);
 >   25: 	\draw[cut_here] (5,8)--(4,6);
     26: 	\draw(-1.5, 1)--(1.5, 1);
-    27: 	\draw(-2, 2)--(2, 2);
 
 - file: sample\submodules\openintro-statistics\ch_distributions\TeX\binomial_distribution.tex (line 104)
+  error: _BY
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   102: {\footnotesize Photo by Staccabees, cropped \\
    103:   (\oiRedirect{textbook-flickr_staccabees_dreidels}{http://flic.kr/p/7gLZTf}) \\
 >  104:   \oiRedirect{textbook-CC_BY_2}{CC~BY~2.0~license}} \\
    105: \end{minipage}
-   106: }{}
 
 - file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 11)
+  error: _di
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-     9:   \chaptersection{poisson}
     10: \end{chapterpage}
 >   11: \renewcommand{\chapterfolder}{ch_distributions}
     12: 
-    13: 
 
 - file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 370)
+  error: _vi
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   368:     OpenIntro video library:
    369:     \begin{center}
 >  370:     \oiRedirect{textbook-openintro_videos}
    371:         {www.openintro.org/videos}
-   372:     \end{center}
 
 - file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1425)
+  error: _nC
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1423: The quantity ${n\choose k}$ is read
   1424: \term{n choose k}.\footnote{Other notation for
 > 1425:   $n$ choose $k$ includes $_nC_k$, $C_n^k$, and $C(n,k)$.}
   1426: The exclamation point notation (e.g. $k!$) denotes
-  1427: a \term{factorial} expression.\label{factorial_defined}
 
 - file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 419)
+  error: _10
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   417: \begin{figure}[h]
    418:    \centering
 >  419:    \Figure[A histogram is shown for 10,000 sample proportions where each sample is taken from a population where the population proportion is \pewsolarparprop{} and the sample size is $n = \pewsolarpollsize{}$. The distribution is bell-shaped (appears nearly normal), is centered at 0.88 and has a standard deviation of about 0.01.]{0.8}{sampling_10k_prop_88p}
    420:    %\Figure{0.8}{sampling_10k_prop_887p}
-   421:    \caption{A histogram of 10,000 sample proportions,
 
 - file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 419)
+  error: _pr
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   417: \begin{figure}[h]
    418:    \centering
 >  419:    \Figure[A histogram is shown for 10,000 sample proportions where each sample is taken from a population where the population proportion is \pewsolarparprop{} and the sample size is $n = \pewsolarpollsize{}$. The distribution is bell-shaped (appears nearly normal), is centered at 0.88 and has a standard deviation of about 0.01.]{0.8}{sampling_10k_prop_88p}
    420:    %\Figure{0.8}{sampling_10k_prop_887p}
-   421:    \caption{A histogram of 10,000 sample proportions,
 
 - file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 419)
+  error: _88
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   417: \begin{figure}[h]
    418:    \centering
 >  419:    \Figure[A histogram is shown for 10,000 sample proportions where each sample is taken from a population where the population proportion is \pewsolarparprop{} and the sample size is $n = \pewsolarpollsize{}$. The distribution is bell-shaped (appears nearly normal), is centered at 0.88 and has a standard deviation of about 0.01.]{0.8}{sampling_10k_prop_88p}
    420:    %\Figure{0.8}{sampling_10k_prop_887p}
-   421:    \caption{A histogram of 10,000 sample proportions,
 
 - file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 755)
+  error: _10
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   753: \begin{figure}[h]
    754:    \centering
 >  755:    \Figure[There are two plots. The first plot is a histogram of 10,000 simulations of p-hat when the sample size is n equals 10 and the population proportion is p equals 0.25. The possible values are 0.0, 0.1, 0.2, and so on up to 1.0, though the graph only shows values up to 0.8. The distribution is centered at about 0.25, and is slightly right-skewed. The frequencies are about 500 for 0.0, 1900 for 0.1, 2800 for 0.2, 2400 for 0.3, 1500 for 0.4, 500 for 0.5, 100 for 0.6, and the bin heights for the remaining values have bin heights that are not visually distinguishable from zero. The second plot shows a normal distribution centered at 0.25 with a standard deviation of 0.137. The plot has a vertical line located at 0.0, which makes it more visually evident that a portion of the area under the normal distribution -- about 5\% of this area -- represents values below 0.0.]{0.97}{sampling_10_prop_25p}
    756:    \caption{Left: simulations of $\hat{p}$ when the sample size
-   757:        is $n = 10$ and the population proportion is $p = 0.25$.
 
 - file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 755)
+  error: _pr
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   753: \begin{figure}[h]
    754:    \centering
 >  755:    \Figure[There are two plots. The first plot is a histogram of 10,000 simulations of p-hat when the sample size is n equals 10 and the population proportion is p equals 0.25. The possible values are 0.0, 0.1, 0.2, and so on up to 1.0, though the graph only shows values up to 0.8. The distribution is centered at about 0.25, and is slightly right-skewed. The frequencies are about 500 for 0.0, 1900 for 0.1, 2800 for 0.2, 2400 for 0.3, 1500 for 0.4, 500 for 0.5, 100 for 0.6, and the bin heights for the remaining values have bin heights that are not visually distinguishable from zero. The second plot shows a normal distribution centered at 0.25 with a standard deviation of 0.137. The plot has a vertical line located at 0.0, which makes it more visually evident that a portion of the area under the normal distribution -- about 5\% of this area -- represents values below 0.0.]{0.97}{sampling_10_prop_25p}
    756:    \caption{Left: simulations of $\hat{p}$ when the sample size
-   757:        is $n = 10$ and the population proportion is $p = 0.25$.
 
 - file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 755)
+  error: _25
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   753: \begin{figure}[h]
    754:    \centering
 >  755:    \Figure[There are two plots. The first plot is a histogram of 10,000 simulations of p-hat when the sample size is n equals 10 and the population proportion is p equals 0.25. The possible values are 0.0, 0.1, 0.2, and so on up to 1.0, though the graph only shows values up to 0.8. The distribution is centered at about 0.25, and is slightly right-skewed. The frequencies are about 500 for 0.0, 1900 for 0.1, 2800 for 0.2, 2400 for 0.3, 1500 for 0.4, 500 for 0.5, 100 for 0.6, and the bin heights for the remaining values have bin heights that are not visually distinguishable from zero. The second plot shows a normal distribution centered at 0.25 with a standard deviation of 0.137. The plot has a vertical line located at 0.0, which makes it more visually evident that a portion of the area under the normal distribution -- about 5\% of this area -- represents values below 0.0.]{0.97}{sampling_10_prop_25p}
    756:    \caption{Left: simulations of $\hat{p}$ when the sample size
-   757:        is $n = 10$ and the population proportion is $p = 0.25$.
 
 - file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 1516)
+  error: _fa
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1514: The following question comes from a book written by
   1515: Hans Rosling, Anna Rosling R{\"o}nnlund, and Ola Rosling
 > 1516: called \emph{\oiRedirect{amazon_factfulness}{Factfulness}}:
   1517: \begin{quote}
-  1518:   {\em How many of the world's 1~year old children today
 
 - file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 1962)
+  error: _fa
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1960: This topic is discussed in much greater detail in
   1961: the Roslings' book,
 > 1962: \emph{\oiRedirect{amazon_factfulness}{Factfulness}}.
   1963: 
-  1964: 
 
 - file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 660)
+  error: _co
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   658:    \caption[rissosDolphinPic]{A Risso's dolphin.\vspace{-1mm} \\
    659:    -----------------------------\vspace{-2mm}\\
 >  660:    {\footnotesize Photo by Mike Baird (\oiRedirect{textbook-bairdphotos_com}{www.bairdphotos.com}). \oiRedirect{textbook-CC_BY_2}{CC~BY~2.0~license}.}\vspace{-8mm}}
    661:    \label{rissosDolphin}
-   662: \end{minipage}
 
 - file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 660)
+  error: _BY
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   658:    \caption[rissosDolphinPic]{A Risso's dolphin.\vspace{-1mm} \\
    659:    -----------------------------\vspace{-2mm}\\
 >  660:    {\footnotesize Photo by Mike Baird (\oiRedirect{textbook-bairdphotos_com}{www.bairdphotos.com}). \oiRedirect{textbook-CC_BY_2}{CC~BY~2.0~license}.}\vspace{-8mm}}
    661:    \label{rissosDolphin}
-   662: \end{minipage}
 
 - file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 1827)
+  error: _to
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1825:   offenses of the tobacco industry.
   1826:   Please be aware that there is some adult language:
 > 1827:   \oiRedirect{textbook-johnoliver_tobacco}{youtu.be/6UsHHOCH4q8}.}
   1828: % Resource on this topic:
-  1829: % http://archive.tobacco.org/Documents/documentquotes.html
 
 - file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 2366)
+  error: _nu
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2364:   and alternative distribution are shown below: \\
   2365:   \indent%
 > 2366:   \Figures[A normal distribution is shown for "x-bar-sub-treatment minus x-bar-sub-control", where the distribution is centered at zero and has a standard deviation of about 0.76 (note that this is a much smaller than in earlier plots). The distribution is labeled as "Null distribution". A second normal distribution is also shown centered at -3 with a standard deviation of about 0.76, and this distribution is labeled "Distribution with mu-sub-treatment minus mu-sub-control equals -3". The overlap of these two normal distributions is much smaller than in the last plot. Lines are shown demarking "reject" regions for the null distribution are shown at about -1.5 and positive 1.5, and the region of the second distribution centered at -3 that is below the lower demarkation line at about -1.5 is shaded, representing a bit over 95\% of the distribution.]{0.7}{power_null_0_0-76}
   2367:       {power_null_0_0-76_with_alt_at_3_and_shaded} \\
-  2368:   The rejection regions are the areas on the outside of the
 
 - file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 2889)
+  error: _fa
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2887: reading about the
   2888: \term{prosecutor's fallacy}.\footnote{See, for example,
 > 2889:   \oiRedirect{textbook-prosecutors_fallacy}
   2890:       {statmodeling.stat.columbia.edu/2007/05/18/the\_prosecutors}.}
-  2891: 
 
 - file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1181)
+  error: _BY
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1179:    (\oiRedirect{textbook-quadcopter_david_j}
   1180:        {http://flic.kr/p/oiWLNu}).
 > 1181:    \oiRedirect{textbook-CC_BY_2}{CC-BY 2.0 license.}
   1182:    This photo has been cropped and a border has been added.}}
-  1183: \label{quadcopter_david_j}
 
 - file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\testing_for_goodness_of_fit_using_chi-square.tex (line 96)
+  error: _BY
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    94: \begin{center}
     95: \Figures[A photo of a barking deer, which has pronged horns and a reddish brown color, looking out through leaves and foliage.]{0.7}{eoce/barking_deer_chisq_GOF}{barking_deer.jpg} \\
 >   96: {\footnotesize Photo by Shrikant Rao (\oiRedirect{textbook-flickr_shrikant_rao_barking_deer}{http://flic.kr/p/4Xjdkk}) \oiRedirect{textbook-CC_BY_2}{CC~BY~2.0~license}}
     97: \end{center}
-    98: \end{minipage}
 
 - file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 1139)
+  error: _st
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1137:   \Figures
   1138:     [Two figures are shown, one positioned above the other. The first is a large rectangle containing many points, where 18 of those points are circled and are a different color than the other points. The lower figure is also a large rectangle, but this rectangle contains 6 larger circles that are labeled "Stratum 1" through "Stratum 6". In each of these circles are many points, and 3 points have been circled and are in a different color within each of the six circles, specially calling out those 3 points in each of the stratum circles in a similar way to how the 18 points were being called out in the upper figure.]
 > 1139:     {}{samplingMethodsFigure}{simple_stratified}
   1140:   \caption{
-  1141:       Examples of simple random\index{sample!simple random sampling}
 
 - file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 1187)
+  error: _mu
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1185:   \Figures
   1186:     [Two figures are shown, one positioned above the other. The first is a large rectangle containing 8 large circles with labels "Cluster 1" through "Cluster 8". All of these large circles contain points. However, three of the large circles (Cluster 3, Cluster 4, and Cluster 8) are colored differently than the other large circles and their contained points are also colored differently. The lower figure is the same as the upper figure, except that only 5 of the points are colored differently in each of the 3 large circles that have been colored differently.]
 > 1187:     {}{samplingMethodsFigure}{cluster_multistage}
   1188:   \caption{Examples of cluster\index{sample!cluster sampling}
-  1189:   and multistage sampling\index{sample!multistage sampling}.
 
 - file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 11)
+  error: _pr
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-     9:   \chaptersection{contDist}
     10: \end{chapterpage}
 >   11: \renewcommand{\chapterfolder}{ch_probability}
     12: 
-    13: \index{probability|(}
 
 - file: sample\submodules\openintro-statistics\ch_probability\TeX\defining_probability.tex (line 45)
+  error: _BY
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    43: {\footnotesize Photo by H\r{a}kan Dahlstr\"{o}m \\
     44:   (\oiRedirect{textbook-flickr_hakan_dahlstrom_roulette_wheel}{http://flic.kr/p/93fEzp}) \\
 >   45:   \oiRedirect{textbook-CC_BY_2}{CC~BY~2.0~license}}
     46: \end{center}
-    47: \end{minipage}
 
 - file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 172)
+  error: _BY
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   170:       (\oiRedirect{textbook-flickr_com_schechter_brushtail_possum_5653697137}
    171:           {https://flic.kr/p/9BAFbR}).
 >  172:       \oiRedirect{textbook-CC_BY_2}
    173:           {CC~BY~2.0~license}.}}
-   174:   \label{brushtail_possum}
 
 - file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 1011)
+  error: _ex
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1009: 
   1010: \noindent\hspace{\textwidth}\hspace{-40mm}April 6th,
 > 1011: 2010\footnote{\oiRedirect{textbook-colbert_extrapolation}
   1012:     {www.cc.com/video-clips/l4nkoq}} \\
-  1013: 
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 75)
+  error: _go
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    73:     as of what was available in late 2018.
     74:     Data prior to 2011 is all from
 >   75:     \oiRedirect{census_gov}{census.gov},
     76:     where the specific Quick Facts page providing the data
-    77:     is no longer available.
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 83)
+  error: _go
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    81:         {USDA (ers.usda.gov)},
     82:     \oiRedirect
 >   83:         {bls_gov-lau}
     84:         {Bureau of Labor Statistics (bls.gov/lau)},
-    85:     \oiRedirect
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 86)
+  error: _go
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    84:         {Bureau of Labor Statistics (bls.gov/lau)},
     85:     \oiRedirect
 >   86:         {census_gov-did-www-saipe}
     87:         {SAIPE (census.gov/did/www/saipe)},
-    88:     and
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 90)
+  error: _go
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    88:     and
     89:     \oiRedirect
 >   90:         {census_gov-programs_surveys-acs}
     91:         {American Community Survey
-    92:             (census.gov/programs-surveys/acs)}.
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 90)
+  error: _su
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    88:     and
     89:     \oiRedirect
 >   90:         {census_gov-programs_surveys-acs}
     91:         {American Community Survey
-    92:             (census.gov/programs-surveys/acs)}.
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 174)
+  error: _20
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   172:     The probabilities reported were obtained using studies
    173:     reported at
 >  174:     \oiRedirect{textbook-breastCancerDotOrg_20090831b}
    175:         {www.breastcancer.org}
-   176:     and \oiRedirect{textbook-ncbi_nih_breast_cancer}
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 220)
+  error: _sa
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   218:     which is provided at \\
    219:     {\small
 >  220:     \oiRedirect{textbook-collegeboard_sat_2018_score_distribution}
    221:         {reports.collegeboard.org/pdf/2018-total-group-sat-suite-assessments-annual-report.pdf}} \\
-   222:     The ACT score data is available at \\
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 220)
+  error: _20
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   218:     which is provided at \\
    219:     {\small
 >  220:     \oiRedirect{textbook-collegeboard_sat_2018_score_distribution}
    221:         {reports.collegeboard.org/pdf/2018-total-group-sat-suite-assessments-annual-report.pdf}} \\
-   222:     The ACT score data is available at \\
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 220)
+  error: _sc
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   218:     which is provided at \\
    219:     {\small
 >  220:     \oiRedirect{textbook-collegeboard_sat_2018_score_distribution}
    221:         {reports.collegeboard.org/pdf/2018-total-group-sat-suite-assessments-annual-report.pdf}} \\
-   222:     The ACT score data is available at \\
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 220)
+  error: _di
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   218:     which is provided at \\
    219:     {\small
 >  220:     \oiRedirect{textbook-collegeboard_sat_2018_score_distribution}
    221:         {reports.collegeboard.org/pdf/2018-total-group-sat-suite-assessments-annual-report.pdf}} \\
-   222:     The ACT score data is available at \\
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 224)
+  error: _20
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   222:     The ACT score data is available at \\
    223:     {\footnotesize
 >  224:     \oiRedirect{textbook-act_2018_score_distribution}
    225:         {act.org/content/dam/act/unsecured/documents/cccr2018/P\_99\_999999\_N\_S\_N00\_ACT-GCPR\_National.pdf}} \\
-   226:     We also acknowledge that the actual ACT score distribution
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 224)
+  error: _sc
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   222:     The ACT score data is available at \\
    223:     {\footnotesize
 >  224:     \oiRedirect{textbook-act_2018_score_distribution}
    225:         {act.org/content/dam/act/unsecured/documents/cccr2018/P\_99\_999999\_N\_S\_N00\_ACT-GCPR\_National.pdf}} \\
-   226:     We also acknowledge that the actual ACT score distribution
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 224)
+  error: _di
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   222:     The ACT score data is available at \\
    223:     {\footnotesize
 >  224:     \oiRedirect{textbook-act_2018_score_distribution}
    225:         {act.org/content/dam/act/unsecured/documents/cccr2018/P\_99\_999999\_N\_S\_N00\_ACT-GCPR\_National.pdf}} \\
-   226:     We also acknowledge that the actual ACT score distribution
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 293)
+  error: _go
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   291:     Prevention website, which reports a value of 14\%
    292:     as of the 2017 estimate: \\
 >  293:     \oiRedirect{cdc_gov-tobacco-data_statistics}
    294:         {cdc.gov/tobacco/data\_statistics/fact\_sheets/adult\_data/cig\_smoking/index.htm}
-   295: 
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 293)
+  error: _st
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   291:     Prevention website, which reports a value of 14\%
    292:     as of the 2017 estimate: \\
 >  293:     \oiRedirect{cdc_gov-tobacco-data_statistics}
    294:         {cdc.gov/tobacco/data\_statistics/fact\_sheets/adult\_data/cig\_smoking/index.htm}
-   295: 
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 356)
+  error: _eb
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   354:     This poll included responses of 1,042
    355:     New York adults between Oct 26th and~28th, 2014.
 >  356:     \oiRedirect{textbook-maristpoll_ebola_201410}
    357:         {Poll ID NY141026 on maristpoll.marist.edu}.
-   358: 
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 356)
+  error: _20
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   354:     This poll included responses of 1,042
    355:     New York adults between Oct 26th and~28th, 2014.
 >  356:     \oiRedirect{textbook-maristpoll_ebola_201410}
    357:         {Poll ID NY141026 on maristpoll.marist.edu}.
-   358: 
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 367)
+  error: _fa
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   365:     We noted much smaller samples than the Roslings'
    366:     describe in their book,
 >  367:     \oiRedirect{amazon_factfulness}{Factfulness},
    368:     The samples we describe are similar but not
-   369:     the same as the actual rates.
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 373)
+  error: _fa
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   371:     two questions for (sometimes different) populations
    372:     discussed in the book, as reported in
 >  373:     \oiRedirect{amazon_factfulness}{Factfulness},
    374:     are
-   375:     \begin{itemize}
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 427)
+  error: _fa
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   425:     \end{itemize}
    426:     For more information, check out the book,
 >  427:     \oiRedirect{amazon_factfulness}{Factfulness}.
    428: \item[\ref{hypothesisTesting}]
-   429:     \datawrap{\datalink{pew\_energy\_2018}}
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 504)
+  error: _fi
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   502:     \datawrap{\datalink{sp500\_1950\_2018}}
    503:     Data is sourced from
 >  504:     \oiRedirect{yahoo_finance}
    505:         {finance.yahoo.com}.
-   506: 
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 555)
+  error: _or
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   553: \item[\ref{oneSampleMeansWithTDistribution}]
    554:     \datawrap{\datalink{run17}}
 >  555:     \oiRedirect{textbook-cherryblossom_org}{www.cherryblossom.org}
    556: 
-   557: \item[\ref{pairedData}]
 
 - file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 568)
+  error: _ve
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   566:     \oiRedirect{ucla_class_schedule}
    567:         {sa.ucla.edu/ro/public/soc},
 >  568:     \oiRedirect{ucla_verbacompare}{ucla.verbacompare.com},
    569:     and \oiRedirect{amazon}{amazon.com}.
-   570: 
 
 - file: sample\submodules\openintro-statistics\extraTeX\preamble\copyright.tex (line 15)
+  error: _so
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    13: \oiRedirect{license}{Creative Commons license},
     14: with the source files hosted on
 >   15: \oiRedirect{os_source}{Github}. \\
     16: 
-    17: \printlocation
 
 - file: sample\submodules\openintro-statistics\extraTeX\preamble\preface.tex (line 220)
+  error: _op
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   218:     {\color{black}\textbf{openintro.org/data}}
    219: and through a
 >  220: \oiRedirect{textbook-github_openintro}
    221:     {companion R~package}.
-   222: % Official:
 
 - file: sample\submodules\openintro-statistics\extraTeX\preamble\preface.tex (line 232)
+  error: _ty
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   230: typos through the website.
    231: A short-link to report a new typo or review known typos is
 >  232: \oiRedirect{os_typos}
    233:     {\color{black}\textbf{openintro.org/os/typos}}. \vspace{3mm}
-   234: 
 
 - file: sample\submodules\openintro-statistics\extraTeX\preamble\preface.tex (line 250)
+  error: _ab
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   248: dedication of many more people beyond those on the author list.
    249: The authors would like to thank the
 >  250: \oiRedirect{textbook-openintro_about}{OpenIntro Staff}
    251: for their involvement and ongoing contributions.
-   252: We~are also very grateful to the hundreds of students
 
 - file: sample\submodules\openintro-statistics\extraTeX\preamble\preface.tex (line 262)
+  error: _ak
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   260: \oiRedirect{matthew_e_aiello-lammens}
    261:     {Matthew E. Aiello-Lammens},
 >  262: \oiRedirect{jonathan_akin}{Jonathan Akin},
    263: Stacey C. Behrensmeyer,
-   264: Juan Gomez,
 
 - file: sample\submodules\openintro-statistics\extraTeX\preamble\preface.tex (line 266)
+  error: _ho
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   264: Juan Gomez,
    265: Jo Hardin,
 >  266: \oiRedirect{nicholas_horton}{Nicholas Horton},
    267: \oiRedirect{danish_khan}{Danish Khan},
-   268: \oiRedirect{peter_hm_klaren}{Peter H.M. Klaren},
 
 - file: sample\submodules\openintro-statistics\extraTeX\preamble\preface.tex (line 267)
+  error: _kh
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   265: Jo Hardin,
    266: \oiRedirect{nicholas_horton}{Nicholas Horton},
 >  267: \oiRedirect{danish_khan}{Danish Khan},
    268: \oiRedirect{peter_hm_klaren}{Peter H.M. Klaren},
-   269: Jesse Mostipak,
 

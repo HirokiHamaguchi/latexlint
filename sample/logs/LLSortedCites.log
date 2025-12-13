@@ -1,40 +1,36 @@
 [CODE] LLSortedCites (5)
 - file: sample\arxiv_sources\2103.03874v2\main.tex (line 181)
+  error: \bibliography{
   message: Consider automatically sorting citations. See the link for details.
-   179: 
    180: 
 >  181: \bibliography{main}
    182: \bibliographystyle{plainnat}
-   183: 
 
 - file: sample\arxiv_sources\2310.09590v2\Pseudo-Dual.tex (line 354)
+  error: \bibliography{
   message: Consider automatically sorting citations. See the link for details.
-   352: 
    353: 
 >  354: \bibliography{Pseudo-Dual}
    355: 
-   356: 
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 680)
+  error: \bibliography{
   message: Consider automatically sorting citations. See the link for details.
-   678: The CPMW Area Under the Curve or CPMWAUC of a given metric function $\zeta$ is given by its integral within the CPMW.
    679: where $\zeta(x)$ continuous and integrable metric function.
 >  680: \bibliography{aaai25}{}
    681: \end{document}
 
 - file: sample\arxiv_sources\2502.17387v1\main.tex (line 741)
+  error: \bibliography{
   message: Consider automatically sorting citations. See the link for details.
-   739: \clearpage
    740: 
 >  741: \bibliography{main}
    742: \bibliographystyle{plainnat}
-   743: 
 
 - file: sample\arxiv_sources\2507.20527v3\neurips_2025.tex (line 685)
+  error: \bibliography{
   message: Consider automatically sorting citations. See the link for details.
-   683: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    684: \bibliographystyle{unsrtnat}
 >  685: \bibliography{custom}
    686: 
-   687: \appendix
 

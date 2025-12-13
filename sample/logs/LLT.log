@@ -1,145 +1,127 @@
 [CODE] LLT (18)
 - file: sample\arxiv_sources\1912.00839v1\AAAI-YuanK.6564.tex (line 327)
+  error: ^T
   message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
-   325: \begin{aligned}
    326:   &  \quad\quad\quad \alpha_{t} = \rm softmax(e_t) \\
 >  327:   & \rm e_{it} = \upsilon^T \rm tanh(W_{h}h_i+W_{h^{'}}h^{'}_t+b_{attn})
    328: \end{aligned}
-   329: \end{equation}
 
 - file: sample\arxiv_sources\2103.12048v3\4_models_2unk.tex (line 10)
+  error: ^T
   message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
-     8: A context vector, $ {\bm {c}}_i$, is generated from $Q_i$, and  a sentence vector, $\bm{x}_{i,j}$ is generated from $s_{i,j}$.  The two vectors are concatenated to compute  $p_{u}$ as follows:
      9: $$\label{eq:yunk}
 >   10:     p_{u} = \sigma(\bm{w}^T [\bm{c}_i; \bm{x}_{i,j}] + b),
     11: $$
-    12: where  $\sigma$ is the sigmoid function,  $\bm{w}$ and $b$ are learned via the cross entropy  loss  $$ \sum( y_{u} \log p_{u})$$.
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 254)
+  error: ^T
   message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
-   252: \begin{equation}
    253: \label{eq:vanillattention}
 >  254:  \mathbf{A} = \text{softmax}(\mathbf{Q}\mathbf{K}^T/\sqrt{d}) 
    255: \end{equation}
-   256: \begin{equation}
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 385)
+  error: ^T
   message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
-   383: {\small
    384: \begin{align}\label{eq:qkproduct}
 >  385:      \mathbf{q}^T_m \mathbf{k}_n &= (\mathbf{R}^d_{\Theta, m}(\mathbf{W}_q \mathbf{e}_m + \mathbf{CE}_m))^T 
    386:     \mathbf{R}^d_{\Theta, n} (\mathbf{W}_k \mathbf{e}_n + \mathbf{CE}_n) \nonumber \\
-   387:     &= \mathbf{e}^T_m \mathbf{W}_q \mathbf{R}^d_{\Theta, n-m} \mathbf{W}_k \mathbf{e}_n + 
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 385)
+  error: ^T
   message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
-   383: {\small
    384: \begin{align}\label{eq:qkproduct}
 >  385:      \mathbf{q}^T_m \mathbf{k}_n &= (\mathbf{R}^d_{\Theta, m}(\mathbf{W}_q \mathbf{e}_m + \mathbf{CE}_m))^T 
    386:     \mathbf{R}^d_{\Theta, n} (\mathbf{W}_k \mathbf{e}_n + \mathbf{CE}_n) \nonumber \\
-   387:     &= \mathbf{e}^T_m \mathbf{W}_q \mathbf{R}^d_{\Theta, n-m} \mathbf{W}_k \mathbf{e}_n + 
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 387)
+  error: ^T
   message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
-   385:      \mathbf{q}^T_m \mathbf{k}_n &= (\mathbf{R}^d_{\Theta, m}(\mathbf{W}_q \mathbf{e}_m + \mathbf{CE}_m))^T 
    386:     \mathbf{R}^d_{\Theta, n} (\mathbf{W}_k \mathbf{e}_n + \mathbf{CE}_n) \nonumber \\
 >  387:     &= \mathbf{e}^T_m \mathbf{W}_q \mathbf{R}^d_{\Theta, n-m} \mathbf{W}_k \mathbf{e}_n + 
    388:     \mathbf{e}^T_m \mathbf{W}_q \mathbf{R}^d_{\Theta, n-m} \mathbf{CE}_n + \nonumber \\
-   389:     &\quad \mathbf{CE}^T_m \mathbf{R}^d_{\Theta, n-m} \mathbf{W}_k \mathbf{e}_n + 
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 388)
+  error: ^T
   message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
-   386:     \mathbf{R}^d_{\Theta, n} (\mathbf{W}_k \mathbf{e}_n + \mathbf{CE}_n) \nonumber \\
    387:     &= \mathbf{e}^T_m \mathbf{W}_q \mathbf{R}^d_{\Theta, n-m} \mathbf{W}_k \mathbf{e}_n + 
 >  388:     \mathbf{e}^T_m \mathbf{W}_q \mathbf{R}^d_{\Theta, n-m} \mathbf{CE}_n + \nonumber \\
    389:     &\quad \mathbf{CE}^T_m \mathbf{R}^d_{\Theta, n-m} \mathbf{W}_k \mathbf{e}_n + 
-   390:     \mathbf{CE}^T_m \mathbf{R}^d_{\Theta, n-m} \mathbf{CE}_n \nonumber \\
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 389)
+  error: ^T
   message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
-   387:     &= \mathbf{e}^T_m \mathbf{W}_q \mathbf{R}^d_{\Theta, n-m} \mathbf{W}_k \mathbf{e}_n + 
    388:     \mathbf{e}^T_m \mathbf{W}_q \mathbf{R}^d_{\Theta, n-m} \mathbf{CE}_n + \nonumber \\
 >  389:     &\quad \mathbf{CE}^T_m \mathbf{R}^d_{\Theta, n-m} \mathbf{W}_k \mathbf{e}_n + 
    390:     \mathbf{CE}^T_m \mathbf{R}^d_{\Theta, n-m} \mathbf{CE}_n \nonumber \\
-   391:     &= \text{(1): query-to-key} + \text{(2): query-to-ce} \nonumber \\
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 390)
+  error: ^T
   message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
-   388:     \mathbf{e}^T_m \mathbf{W}_q \mathbf{R}^d_{\Theta, n-m} \mathbf{CE}_n + \nonumber \\
    389:     &\quad \mathbf{CE}^T_m \mathbf{R}^d_{\Theta, n-m} \mathbf{W}_k \mathbf{e}_n + 
 >  390:     \mathbf{CE}^T_m \mathbf{R}^d_{\Theta, n-m} \mathbf{CE}_n \nonumber \\
    391:     &= \text{(1): query-to-key} + \text{(2): query-to-ce} \nonumber \\
-   392:     &\quad \text{(3): ce-to-key} + \text{(4): ce-to-ce}\nonumber \\
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 394)
+  error: ^T
   message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
-   392:     &\quad \text{(3): ce-to-key} + \text{(4): ce-to-ce}\nonumber \\
    393: \end{align}}
 >  394: where $\mathbf{R}^d_{\Theta, n-m} = (\mathbf{R}^d_{\Theta, m})^T\mathbf{R}^d_{\Theta, n}$ is a sparse orthogonal matrix. The additional terms (2), (3), (4) provide richer query and key representations when computing the attention scores.
    395: Thus modifying Equation~\ref{eq:vanillattention}:
-   396: 
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 399)
+  error: ^T
   message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
-   397: {\small
    398: \[
 >  399: \mathbf{A} = \text{softmax}\left( \frac{(\mathbf{R}_{\Theta}^d (\mathbf{W}^Q \mathbf{E}+ \mathbf{CE})) (\mathbf{R}_{\Theta}^d (\mathbf{W}^K \mathbf{E} + \mathbf{CE}))^T}{\sqrt{3d}}\right)
    400: \]
-   401: }
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 588)
+  error: ^T
   message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
-   586:   \item [rot]: A RoPE \cite{Roformer} is applied to $\mathbf{Q,K}$ such as $\mathbf{Q} = \mathbf{R}^d_{\Theta}\mathbf{W}^Q\mathbf{E}$,  $\mathbf{K} =\mathbf{R}^d_{\Theta}\mathbf{W}^Q\mathbf{E}$
    587:   \item [ce]: We add a context embedding $\mathbf{CE} = \mathbf{T} + \mathbf{M}$ to $\mathbf{Q,K}$ such as $\mathbf{Q = U W}^Q \mathbf{ + CE}$ to every attention layers.
 >  588:   \item [m2c, c2m]: Inspired by the Disentangled Attention mechanism from DeBerta \cite{Deberta}. Attention score $\mathbf{A}_{i,j}$ between tokens $i$ and $j$ is computed from hidden states vector $\{\mathbf{H}_i\}$ at event step $i$ and a mileage vector  $\{\mathbf{M}_i\}$ at event step $i$ such as: $\mathbf{A}_{i,j} = \{\mathbf{H}_i, \mathbf{M}_{i} \} \times \{\mathbf{H}_j, \mathbf{M}_{j} \}^T = \mathbf{H}_i\mathbf{H}^T_j + \mathbf{H}_i\mathbf{M}^T_{j} + \mathbf{M}_{i}\mathbf{H}^T_j + \mathbf{M}_{i}\mathbf{M}^T_{j}$ = \textit{"content-to-content"} + \textit{"content-to-mileage"} + \textit{"mileage-to-content"} + \textit{"mileage-to-mileage"} = \textit{"c2c"} + \textit{"c2m"} + \textit{"m2c"} + \textit{"m2m"}. 
    589: \end{description}
-   590: \subsection{A.2 Random Event Injection}
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 588)
+  error: ^T
   message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
-   586:   \item [rot]: A RoPE \cite{Roformer} is applied to $\mathbf{Q,K}$ such as $\mathbf{Q} = \mathbf{R}^d_{\Theta}\mathbf{W}^Q\mathbf{E}$,  $\mathbf{K} =\mathbf{R}^d_{\Theta}\mathbf{W}^Q\mathbf{E}$
    587:   \item [ce]: We add a context embedding $\mathbf{CE} = \mathbf{T} + \mathbf{M}$ to $\mathbf{Q,K}$ such as $\mathbf{Q = U W}^Q \mathbf{ + CE}$ to every attention layers.
 >  588:   \item [m2c, c2m]: Inspired by the Disentangled Attention mechanism from DeBerta \cite{Deberta}. Attention score $\mathbf{A}_{i,j}$ between tokens $i$ and $j$ is computed from hidden states vector $\{\mathbf{H}_i\}$ at event step $i$ and a mileage vector  $\{\mathbf{M}_i\}$ at event step $i$ such as: $\mathbf{A}_{i,j} = \{\mathbf{H}_i, \mathbf{M}_{i} \} \times \{\mathbf{H}_j, \mathbf{M}_{j} \}^T = \mathbf{H}_i\mathbf{H}^T_j + \mathbf{H}_i\mathbf{M}^T_{j} + \mathbf{M}_{i}\mathbf{H}^T_j + \mathbf{M}_{i}\mathbf{M}^T_{j}$ = \textit{"content-to-content"} + \textit{"content-to-mileage"} + \textit{"mileage-to-content"} + \textit{"mileage-to-mileage"} = \textit{"c2c"} + \textit{"c2m"} + \textit{"m2c"} + \textit{"m2m"}. 
    589: \end{description}
-   590: \subsection{A.2 Random Event Injection}
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 588)
+  error: ^T
   message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
-   586:   \item [rot]: A RoPE \cite{Roformer} is applied to $\mathbf{Q,K}$ such as $\mathbf{Q} = \mathbf{R}^d_{\Theta}\mathbf{W}^Q\mathbf{E}$,  $\mathbf{K} =\mathbf{R}^d_{\Theta}\mathbf{W}^Q\mathbf{E}$
    587:   \item [ce]: We add a context embedding $\mathbf{CE} = \mathbf{T} + \mathbf{M}$ to $\mathbf{Q,K}$ such as $\mathbf{Q = U W}^Q \mathbf{ + CE}$ to every attention layers.
 >  588:   \item [m2c, c2m]: Inspired by the Disentangled Attention mechanism from DeBerta \cite{Deberta}. Attention score $\mathbf{A}_{i,j}$ between tokens $i$ and $j$ is computed from hidden states vector $\{\mathbf{H}_i\}$ at event step $i$ and a mileage vector  $\{\mathbf{M}_i\}$ at event step $i$ such as: $\mathbf{A}_{i,j} = \{\mathbf{H}_i, \mathbf{M}_{i} \} \times \{\mathbf{H}_j, \mathbf{M}_{j} \}^T = \mathbf{H}_i\mathbf{H}^T_j + \mathbf{H}_i\mathbf{M}^T_{j} + \mathbf{M}_{i}\mathbf{H}^T_j + \mathbf{M}_{i}\mathbf{M}^T_{j}$ = \textit{"content-to-content"} + \textit{"content-to-mileage"} + \textit{"mileage-to-content"} + \textit{"mileage-to-mileage"} = \textit{"c2c"} + \textit{"c2m"} + \textit{"m2c"} + \textit{"m2m"}. 
    589: \end{description}
-   590: \subsection{A.2 Random Event Injection}
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 588)
+  error: ^T
   message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
-   586:   \item [rot]: A RoPE \cite{Roformer} is applied to $\mathbf{Q,K}$ such as $\mathbf{Q} = \mathbf{R}^d_{\Theta}\mathbf{W}^Q\mathbf{E}$,  $\mathbf{K} =\mathbf{R}^d_{\Theta}\mathbf{W}^Q\mathbf{E}$
    587:   \item [ce]: We add a context embedding $\mathbf{CE} = \mathbf{T} + \mathbf{M}$ to $\mathbf{Q,K}$ such as $\mathbf{Q = U W}^Q \mathbf{ + CE}$ to every attention layers.
 >  588:   \item [m2c, c2m]: Inspired by the Disentangled Attention mechanism from DeBerta \cite{Deberta}. Attention score $\mathbf{A}_{i,j}$ between tokens $i$ and $j$ is computed from hidden states vector $\{\mathbf{H}_i\}$ at event step $i$ and a mileage vector  $\{\mathbf{M}_i\}$ at event step $i$ such as: $\mathbf{A}_{i,j} = \{\mathbf{H}_i, \mathbf{M}_{i} \} \times \{\mathbf{H}_j, \mathbf{M}_{j} \}^T = \mathbf{H}_i\mathbf{H}^T_j + \mathbf{H}_i\mathbf{M}^T_{j} + \mathbf{M}_{i}\mathbf{H}^T_j + \mathbf{M}_{i}\mathbf{M}^T_{j}$ = \textit{"content-to-content"} + \textit{"content-to-mileage"} + \textit{"mileage-to-content"} + \textit{"mileage-to-mileage"} = \textit{"c2c"} + \textit{"c2m"} + \textit{"m2c"} + \textit{"m2m"}. 
    589: \end{description}
-   590: \subsection{A.2 Random Event Injection}
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 588)
+  error: ^T
   message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
-   586:   \item [rot]: A RoPE \cite{Roformer} is applied to $\mathbf{Q,K}$ such as $\mathbf{Q} = \mathbf{R}^d_{\Theta}\mathbf{W}^Q\mathbf{E}$,  $\mathbf{K} =\mathbf{R}^d_{\Theta}\mathbf{W}^Q\mathbf{E}$
    587:   \item [ce]: We add a context embedding $\mathbf{CE} = \mathbf{T} + \mathbf{M}$ to $\mathbf{Q,K}$ such as $\mathbf{Q = U W}^Q \mathbf{ + CE}$ to every attention layers.
 >  588:   \item [m2c, c2m]: Inspired by the Disentangled Attention mechanism from DeBerta \cite{Deberta}. Attention score $\mathbf{A}_{i,j}$ between tokens $i$ and $j$ is computed from hidden states vector $\{\mathbf{H}_i\}$ at event step $i$ and a mileage vector  $\{\mathbf{M}_i\}$ at event step $i$ such as: $\mathbf{A}_{i,j} = \{\mathbf{H}_i, \mathbf{M}_{i} \} \times \{\mathbf{H}_j, \mathbf{M}_{j} \}^T = \mathbf{H}_i\mathbf{H}^T_j + \mathbf{H}_i\mathbf{M}^T_{j} + \mathbf{M}_{i}\mathbf{H}^T_j + \mathbf{M}_{i}\mathbf{M}^T_{j}$ = \textit{"content-to-content"} + \textit{"content-to-mileage"} + \textit{"mileage-to-content"} + \textit{"mileage-to-mileage"} = \textit{"c2c"} + \textit{"c2m"} + \textit{"m2c"} + \textit{"m2m"}. 
    589: \end{description}
-   590: \subsection{A.2 Random Event Injection}
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 654)
+  error: ^T
   message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
-   652:     \item[rot]: Applies RoPE (Rotary Position Embeddings) to query ($\mathbf{Q}$) and key ($\mathbf{K}$) matrices as described in Section \ref{section:embeddings}.
    653:     
 >  654:     \item[speed]: Adds a relative speed matrix to the attention scores. Defines matrices $T_r$ and $M_r \in \mathbb{R}^L$ containing time and mileage features, forming $S = \frac{M}{T}$ and $S_{rel} = S - S^T \in \mathbb{R}^{L \times L}$. The attention scores are modified as $\mathbf{A} = \text{softmax}((\textbf{Q}\textbf{K}^T + \mathbf{S}_{rel})/\sqrt{2d})$. This model explores if incorporating relative speed information improves predictive performance.
    655: \end{description}
-   656: 
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 654)
+  error: ^T
   message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
-   652:     \item[rot]: Applies RoPE (Rotary Position Embeddings) to query ($\mathbf{Q}$) and key ($\mathbf{K}$) matrices as described in Section \ref{section:embeddings}.
    653:     
 >  654:     \item[speed]: Adds a relative speed matrix to the attention scores. Defines matrices $T_r$ and $M_r \in \mathbb{R}^L$ containing time and mileage features, forming $S = \frac{M}{T}$ and $S_{rel} = S - S^T \in \mathbb{R}^{L \times L}$. The attention scores are modified as $\mathbf{A} = \text{softmax}((\textbf{Q}\textbf{K}^T + \mathbf{S}_{rel})/\sqrt{2d})$. This model explores if incorporating relative speed information improves predictive performance.
    655: \end{description}
-   656: 
 

@@ -76,13 +76,25 @@ function processFile(filePath, enumerateDiagnostics, createMockTextDocument, Uri
         const languageId = absPath.toLowerCase().endsWith('.md') ? 'markdown' : 'latex';
         const doc = createMockTextDocument(text, Uri.file(absPath), languageId);
         const diagnostics = enumerateDiagnostics(doc) || [];
-        const payload = diagnostics.map((d) => ({
-            message: d.message,
-            severity: d.severity,
-            start: { line: d.range.start.line, character: d.range.start.character },
-            end: { line: d.range.end.line, character: d.range.end.character },
-            code: d.code,
-        }));
+        const payload = diagnostics.map((d) => {
+            // Extract the text at the error location (up to first newline)
+            let errorText = doc.getText(d.range);
+            const newlineIndex = errorText.indexOf('\n');
+            if (newlineIndex !== -1) {
+                const remainingLines = (errorText.match(/\n/g) || []).length;
+                errorText = errorText.substring(0, newlineIndex);
+                if (remainingLines > 0)
+                    errorText += ` (and ${remainingLines} more line${remainingLines > 1 ? 's' : ''}...)`;
+            }
+            return {
+                message: d.message,
+                severity: d.severity,
+                start: { line: d.range.start.line, character: d.range.start.character },
+                end: { line: d.range.end.line, character: d.range.end.character },
+                code: d.code,
+                errorText: errorText,
+            };
+        });
         return { ok: true, file: absPath, diagnostics: payload };
     } catch (err) {
         return { ok: false, file: absPath, error: err.message };
@@ -115,21 +127,18 @@ function main() {
         let filePaths;
 
         // Check if batch mode (reading file paths from JSON file)
-        if (args[0] === '--batch' && args[1]) {
+        if (args[0] === '--batch' && args[1])
             try {
                 const batchContent = fs.readFileSync(args[1], 'utf8');
                 filePaths = JSON.parse(batchContent);
-                if (!Array.isArray(filePaths)) {
+                if (!Array.isArray(filePaths))
                     throw new Error('Batch file must contain an array of file paths');
-                }
             } catch (err) {
                 console.error(JSON.stringify({ ok: false, error: `batch read failed: ${err.message}` }));
                 process.exit(1);
             }
-        } else {
-            // Individual files mode
+        else
             filePaths = args;
-        }
 
         // Process all files
         const results = filePaths.map((fp) => processFile(fp, enumerateDiagnostics, createMockTextDocument, Uri));

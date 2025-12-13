@@ -1,1113 +1,974 @@
 [CODE] LLRefEq (139)
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 491)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   489: 
    490: Note that the existence of $\mathcal{E}$ is guaranteed by the fact
 >  491: that the collection on the left side of (\ref{eq:E}) is contained
    492: in the class of all complex-valued measurable functions, a class stable
-   493: under parameterized integration.
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 590)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   588: Similarly, in this paper, we estimate and compare the asymptotics
    589: at infinity of different terms appearing in our parameterized integrals,
 >  590: namely integrals as in (\ref{eq:paramInteg}), and in this situation
    591: the preparation theorem for constructible functions (Proposition \ref{prop:prepSubConstr})
-   592: appears as the counterpart of Hironaka's theorem. Of course in our
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 607)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   605: which plays a role in approximating the solutions of a large class
    606: of PDEs (for example, the wave equation). A natural question arises:
 >  607: how to describe the nature of (\ref{eq:second kind}), according to
    608: the nature of the amplitude and of the phase?
-   609: 
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 610)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   608: the nature of the amplitude and of the phase?
    609: 
 >  610: Note that in (\ref{eq:second kind}) the parameters $x$ are \textquotedblleft{}intertwined\textquotedblright{}
    611: with the integration variables $y$ in the expressions for the amplitude
-   612: $f$ and the phase $\Phi$. If we consider oscillatory integrals of
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 912)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   910: \end{equation}
    911: might not be defined on all of $X\times\RR^{n-1}$; all we know is
 >  912: that (\ref{eq:iterateInteg}) is defined for all $x\in X$ and almost
    913: all $\left(y_{1},\ldots,y_{n-1}\right)\in\RR^{n-1}$. So in order to have a stable
-   914: framework that considers (\ref{eq:iterateInteg}) to be a ``parameterized
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 914)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   912: that (\ref{eq:iterateInteg}) is defined for all $x\in X$ and almost
    913: all $\left(y_{1},\ldots,y_{n-1}\right)\in\RR^{n-1}$. So in order to have a stable
 >  914: framework that considers (\ref{eq:iterateInteg}) to be a ``parameterized
    915: integral'' as well, it is useful to consider the more general situation
-   916: from the start where one drops the assumption that $f\left(x,y\right)$ is integrable
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 958)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   956: Moreover, $\C^{\exp}$ is closed under taking Fourier transforms
    957: (over $\mathbb{R}^{m}$ and over $\mathbb{R}$ with parameters, as
 >  958: in Equation (\ref{eq: fourier tranf param})).
    959: \item \label{enu:fourier}$\mathcal{C}^{\exp}\left( X \right)$ can also be
-   960: described as the smallest $\mathbb{C}$-algebra $\mathcal{A}\left(X\right)$
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 964)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   962: with subanalytic functions (the operation defined in Remark \ref{rem: table under right composition with sa},
    963: where we take $n=m$) and by taking parametric Fourier transform (the
 >  964: operation defined in Equation (\ref{eq: fourier tranf param})). To
    965: see this, notice that Remark \ref{rem: table under right composition with sa}
-   966: and the previous remark imply that $\mathcal{A}\left(X\right)\subseteq\mathcal{C}^{\exp}\left(X\right)$.
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1007)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1005: \begin{rem}
   1006: \label{rem: presentation of generators}The function $f$ given in
 > 1007: (\ref{eq:generator}) is determined by the data $\left(g,\phi,h,l\right)$. However,
   1008: the choice of underlying data is not uniquely determined by the function
-  1009: $f$ itself (see Remark \ref{rem: gamma subanalytic}). In what follows,
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1020)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1018: Theorem.
   1019: \begin{defn}
 > 1020: \label{abs} To the function (\ref{eq:generator}) we associate the
   1021: function $f^{\abs}\colon X\to[0,+\infty)$ defined by
-  1022: \[
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1031)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1029: 
   1030: \end{defn}
 > 1031: For $f$ as in (\ref{eq:generator}), note that for any $x\in X$
   1032: we have $|\gamma\left(x\right)|\leq\gamma^{\text{abs}}\left(x\right)$, so $\left|f\left(x\right)\right|\leq f^{\text{abs}}\left(x\right)$,
-  1033: and these inequalities can be strict. Observe that for any given generator
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1035)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1033: and these inequalities can be strict. Observe that for any given generator
   1034: $f$ for $\mathcal{C}^{\exp}\left(X\right)$, $f^{\text{abs}}$ is uniquely determined
 > 1035: by the underlying data used to define $f$ as in (\ref{eq:generator}),
   1036: not by the function $f$ itself.
-  1037: \begin{defn}
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1357)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1355: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   1356: \begin{defn}
 > 1357: \label{def:prepared} Consider the cell $A$ in (\ref{eq:cellCenter})
   1358: and a bounded, analytic, subanalytic map $\psi$, defined on
-  1359: $A$, of the form
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1406)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1404: on $A_{\theta}$, where:
   1405: \begin{enumerate}
 > 1406: \item  $A_{\theta}$ is as in Equation (\ref{eq:Atheta});
   1407: \item $P_{\theta}$ is as in Equation (\ref{eq:Ptheta});
-  1408: \item the functions $h_{j}$ are $\psi$-functions (see Definition \ref{def:psiFunction}),
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1407)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1405: \begin{enumerate}
   1406: \item  $A_{\theta}$ is as in Equation (\ref{eq:Atheta});
 > 1407: \item $P_{\theta}$ is as in Equation (\ref{eq:Ptheta});
   1408: \item the functions $h_{j}$ are $\psi$-functions (see Definition \ref{def:psiFunction}),
-  1409: where $\psi$ is as in Equation (\ref{eq:psiTheta}) for some analytic functions
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1409)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1407: \item $P_{\theta}$ is as in Equation (\ref{eq:Ptheta});
   1408: \item the functions $h_{j}$ are $\psi$-functions (see Definition \ref{def:psiFunction}),
 > 1409: where $\psi$ is as in Equation (\ref{eq:psiTheta}) for some analytic functions
   1410: $c_{1},\ldots,c_{N}$ and some integer $d>0$;
-  1411: \item $s_{j}\in\NN$ and the $r_{j}$ are integer multiples of $1/d$;
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1418)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1416: We apply \cite[Corollary 3.5]{cluckers_miller:loci_integrability}
   1417: and we obtain a cell decomposition $\mathcal{A}$ such that Equation
 > 1418: (\ref{eq:prepConstr}) holds, with Conditions (1) and (2) satisfied.
   1419: Up to refining $\mathcal{A}$, we may assume that (5) also holds. 
-  1420: We must now show that, up to some refinement of $\mathcal{A}$, we may
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1458)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1456: \label{rem: prep subana with center}We have stated Proposition \ref{prop:prepSubConstr}
   1457: in the transformed coordinates (via $P_{\theta}$) out of convenience.
 > 1458: In the original coordinates, (\ref{eq:prepConstr}) becomes
   1459: \[
-  1460: f\left(x,y\right)=\sum_{j\in J}\tld{g}_{j}\left(x\right)\left|y-\theta\left(x\right)\right|^{\tld{r}_{j}}\left(\log|y-\theta\left(x\right)|\right)^{s_{j}}\tld{h}_{j}\left(x,y\right)
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1473)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1471: shows that for each $f\in\F$,
   1472: on $A_{\theta}$ we can write $f\circ P_{\theta}$ in the $\psi$-prepared
 > 1473: form in Equation (\ref{eq:psi-prepared}).
   1474: %%
-  1475: %
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1477)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1475: %
   1476: %
 > 1477: In addition, it follows from the proof of the subanalytic preparation theorem in \cite{lr:gabriel} that if $\varepsilon\in(0,1)$ is given beforehand, then the preparation can be constructed so that each $\psi$-unit $u$, as given in Equation  (\ref{eq:psi-prepared}), is within $\varepsilon$ of $1$, by which we mean that $u = U\circ\psi$ for some $r\in(0,\infty)^M$ (where $M = N+2$ when $b < +\infty$, and $M = N+1$ when $b \equiv +\infty)$ such that $\psi(A_\theta) \subseteq B_r(\RR)$ and some real analytic function $U$ on $B_r(\RR)$ that extends to a complex analytic function on a neighbourhood of $B_r(\CC)$ in $\CC^M$ such that $|U(z) - 1| < \varepsilon$ for all $z\in B_r(\CC)$.
   1478: %
-  1479: %
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1503)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1501: r_{j}-\frac{n_{j}}{d}<-1,
   1502: \]
 > 1503: and write the $j$-th term of (\ref{eq:prepConstr}) as
   1504: \[
-  1505: \sum_{k=0}^{n_{j}-1}g_{j}\left(x\right)h_{j,k}\left(x\right)a\left(x\right)^{k/d}y^{r_{j}-k/d}\left(\log y\right)^{s_{j}}+R_{j}\left(x,y\right),
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1511)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1509: R_{j}\left(x,y\right)=g_{j}\left(x\right)a\left(x\right)^{n_{j}/d}y^{r_{j}-n_{j}/d}\left(\log y\right)^{s_{j}}\left(\sum_{k=n_{j}}^{+\infty}h_{j,k}\left(x\right)\left(\frac{a\left(x\right)}{y}\right)^{\left(k-n_{j}\right)/d}\right).
   1510: \]
 > 1511: To obtain Property (\ref{enu:property 2}), simply sum up terms in (\ref{eq:prepConstr})
   1512: for $j\in J_{1}$ with equal powers $r_{j}$ and $s_{j}$.
-  1513: \end{rem}
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1515)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1513: \end{rem}
   1514: We now study the integrability properties of the prepared form given
 > 1515: in (\ref{eq:prepConstr}). The following remarks will be useful in
   1516: Sections \ref{s:integGen} and \ref{s: proof of main results}.
-  1517: \begin{rems}
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1658)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1656: The fact that $\C$ is stable under integration \cite{cluckers-miller:stability-integration-sums-products,cluckers_miller:loci_integrability}
   1657: shows that the integral of $g$ with respect to $y$ is in $\C\left(\Pi_{m}\left(A\right)\right)$.
 > 1658: Hence, (\ref{eq:constantPhase}) is in $\C_{\naive}^{\exp}\left(\Pi_{m}\left(A\right)\right)$.
   1659: 
-  1660: In the other case, by pulling back by the inverse of the map $\left(x,y\right)\mapsto\left(x,\phi\left(x,y\right),y_{<j},y_{>j}\right)$
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1690)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1688: given by the preparation on $\tld{B}$. Thus for some $\sigma\in\{-1,1\}$, by applying
   1689: the coordinate change $\left(x,y_{1}\right)\mapsto\left(x,\sigma y_{1}+\theta\left(x\right)\right)$
 > 1690: we may write (\ref{eq: star}) as
   1691: \begin{equation}
-  1692: \sigma g_{0}\left(x\right)\mathrm{e}^{\mathrm{i}\theta\left(x\right)}\int_{B_{x}}y_{1}^{r}\left(\log y_{1}\right)^{s}u\left(x,y_{1}\right)\mathrm{e}^{\mathrm{i}\sigma y_{1}}\,\mathrm{d}y_{1},\label{eq: double star}
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1697)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1695: and $\tld{u}$ by this coordinate change. Note that up to performing
   1696: the coordinate transformation $y_{1}\mapsto\sigma y_{1}$, the one-variable
 > 1697: integral in (\ref{eq: double star}) is of the form $\gamma_{h,l}$
   1698: with $l=s$ and $h\left(x,y_{1}\right)=y_1^ru\left(x,y_{1}\right)\chi_{B_{x}}\left(y_{1}\right)$,
-  1699: where $\chi_{B_{x}}$ is the characteristic function of the subanalytic
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1724)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1722: 
   1723: Notice that, if $T$ is naive in $y$, then the function $\gamma$
 > 1724: appearing in the expression (\ref{eq:generator}) for $T$ does not
   1725: depend on $y$.
-  1726: \end{defn}
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1783)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1781: \end{equation}
   1782: Moreover, if $j\in J^{\text{Int}}$, then $r_{j}<-1$, and if $j\in J^{\text{naive}}$,
 > 1783: then, in the notation of Equation (\ref{eq:naive}), we have $g_{j}\left(x,y\right)=f_{j}\left(x\right)\mathrm{e}^{\mathrm{i}\phi_{j}\left(x,y\right)}$.
   1784: \end{rem}
-  1785: The proof of the above theorem will be broken down into several propositions
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1872)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1870: and analytic subanalytic functions $a_{j},b_{j}$ as in Definition
   1871: \ref{notation for prep}, and for some $\psi_{j}$-function $h_{j}$
 > 1872: (where $\psi_{j}$ is as in Equation (\ref{eq: psi_j}), for some
   1873: $d,\psi,d_{j}$).
-  1874: 
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1908)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1906: \]
   1907: where $\Theta$ is the centre given by the preparation of the collection
 > 1908: in Equation (\ref{eq:hlogPrep}). We fix an element of this collection
   1909: and we focus on one summand of the preparation of such an element. This
-  1910: will have the form
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1933)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1931: or $\left(1,+\infty\right)$.
   1932: 
 > 1933: Suppose first that (\ref{eq:t-theta(x)}) is contained in either $\left(-1,0\right)$
   1934: or $\left(0,1\right)$. Then $\mathrm{e}^{\mathrm{i}\left(t-\Theta\left(x,y\right)\right)}$ is a complex-valued
-  1935: subanalytic function on $A$ (see Definition \ref{def complex valued}),
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1936)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1934: or $\left(0,1\right)$. Then $\mathrm{e}^{\mathrm{i}\left(t-\Theta\left(x,y\right)\right)}$ is a complex-valued
   1935: subanalytic function on $A$ (see Definition \ref{def complex valued}),
 > 1936: so the integral in (\ref{eq:prepGamma}) is a complex-valued constructible
   1937: function on $A$. This implies that (\ref{eq:prepGamma}) is in $\C_{\naive}^{\exp}\left(A\right)$
-  1938: (because $\mathcal{C}$ is stable under integration), hence we can
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1937)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1935: subanalytic function on $A$ (see Definition \ref{def complex valued}),
   1936: so the integral in (\ref{eq:prepGamma}) is a complex-valued constructible
 > 1937: function on $A$. This implies that (\ref{eq:prepGamma}) is in $\C_{\naive}^{\exp}\left(A\right)$
   1938: (because $\mathcal{C}$ is stable under integration), hence we can
-  1939: apply Proposition \ref{prop:prepSubConstr} to the constructible part
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1940)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1938: (because $\mathcal{C}$ is stable under integration), hence we can
   1939: apply Proposition \ref{prop:prepSubConstr} to the constructible part
 > 1940: of (\ref{eq:prepGamma}), preparing it with respect to the variable
   1941: $y$. Now, we can view the $\psi$-function obtained in this preparation
-  1942: as a $\gamma$-function of the form (\ref{eq: form of gamma}) (see
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1942)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1940: of (\ref{eq:prepGamma}), preparing it with respect to the variable
   1941: $y$. Now, we can view the $\psi$-function obtained in this preparation
 > 1942: as a $\gamma$-function of the form (\ref{eq: form of gamma}) (see
   1943: Remark \ref{rem: gamma subanalytic}), and we are done.
-  1944: 
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1945)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1943: Remark \ref{rem: gamma subanalytic}), and we are done.
   1944: 
 > 1945: Now suppose that (\ref{eq:t-theta(x)}) is contained in $\left(-\infty,-1\right)$
   1946: or $\left(1,+\infty\right)$. Then by applying the change of coordinates $t\mapsto\sigma t+\Theta\left(x,y\right)$
-  1947: for an appropriate choice of $\sigma\in\{-1,1\}$, and adjusting the
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1949)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1947: for an appropriate choice of $\sigma\in\{-1,1\}$, and adjusting the
   1948: definitions of $\widetilde{a}$, $\widetilde{b}$ and $h$ accordingly, we
 > 1949: may assume that $1\leq\widetilde{a}\left(x,y\right)<\widetilde{b}\left(x,y\right)$ and that (\ref{eq:prepGamma})
   1950: is of the form
-  1951: \[
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 2163)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  2161: \begin{defn}
   2162: \label{def prepared generator}We call a generator for $\C^{\exp}\left(A_{\theta}\right)$
 > 2163: of the form (\ref{eq:Tform-1}) a \textbf{\emph{prepared generator}}.\end{defn}
   2164: \begin{rems}
-  2165: \label{rem: bounded cells}Fix a prepared generator $T_{j}$ as in
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 2204)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  2202: %
   2203: \begin{proof}
 > 2204: Apply Proposition \ref{lem: supercontinuous} to $f$ (except we now omit the variable $y$ since we are working on $X$ rather than on $X\times\RR$), and let $\A$ be the partition of $X$ so obtained.  Consider an open set $A\in\A$.  For each $j\in J$, $\gamma_j\restriction{A}$ is analytic because it is the integral of an analytic function with analytic limits of integration.  (Namely, basic facts about power series show that the antiderivative in $t$ of integrand $\Gamma_j(x,t)$ is analytic, and evaluating this antiderivative at analytic limits of integration in $x$ gives in an analytic function in $x$.)  It therefore follows from equations (\ref{eq:prepExpConstr1}) and (\ref{eq:Tform-1}) that $f\restriction{A}$ is analytic.
   2205: \end{proof}
-  2206: %
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 2204)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  2202: %
   2203: \begin{proof}
 > 2204: Apply Proposition \ref{lem: supercontinuous} to $f$ (except we now omit the variable $y$ since we are working on $X$ rather than on $X\times\RR$), and let $\A$ be the partition of $X$ so obtained.  Consider an open set $A\in\A$.  For each $j\in J$, $\gamma_j\restriction{A}$ is analytic because it is the integral of an analytic function with analytic limits of integration.  (Namely, basic facts about power series show that the antiderivative in $t$ of integrand $\Gamma_j(x,t)$ is analytic, and evaluating this antiderivative at analytic limits of integration in $x$ gives in an analytic function in $x$.)  It therefore follows from equations (\ref{eq:prepExpConstr1}) and (\ref{eq:Tform-1}) that $f\restriction{A}$ is analytic.
   2205: \end{proof}
-  2206: %
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 2219)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  2217: we can focus our attention on cells which are unbounded above. For
   2218: such cells, our next goal is to reduce to the case where each of the
 > 2219: generators in Equation (\ref{eq:prepExpConstr1}) is either superintegrable,
   2220: or in $\C_{\naive}^{\exp}\left(A_{\theta}\right)$, or is such that the variable
-  2221: $y$ does not appear in the integration limits $a_{j}$ and $b_{j}$
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 2308)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  2306: \frac{a_{j,0}\left(x\right)}{b_{j,0}\left(x\right)y^{\beta_{j}}}=\left[\frac{a_{j,0}\left(x\right)}{b_{j,0}\left(x\right)a\left(x\right)^{\beta_{j}}}\right]\left(\frac{a\left(x\right)}{y}\right)^{\beta_{j}}.\label{eq:presplit}
   2307: \end{equation}
 > 2308: The quotient on left side of (\ref{eq:presplit}) is bounded, since
   2309: it is equal to the bounded quotient $\frac{a_{j}}{b_{j}}$ multiplied
-  2310: by a unit. Moreover, for each $x$ we may take $y$ to be arbitrarily
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 2313)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  2311: close to $a\left(x\right)$, thereby making $\frac{a\left(x\right)}{y}$ arbitrarily close
   2312: to $1$. It follows that the function in square brackets on the right
 > 2313: side of (\ref{eq:presplit}), which does not depend on $y$, is also
   2314: bounded and therefore can be included in the list of functions $c_{1}\left(x\right),\ldots,c_{N}\left(x\right)$
-  2315: in $\psi$.
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 2324)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  2322: h_{j,-}=\sum_{k\geq d_{j}+1}g_{j,k}\left(x,y\right)\left(\frac{a_{j,0}\left(x\right)}{t}\right)^{\frac{k}{d_{j}}-1-\frac{1}{d_{j}}},\ h_{j,+}=\sum_{k\geq d_{j}n_{j}}\widetilde{g}_{j,k}\left(x,y\right)\left(\frac{t}{b_{j,0}\left(x\right)y^{\beta_{j}}}\right)^{\frac{k}{d_{j}}-n_{j}},
   2323: \]
 > 2324: we obtain Equation (\ref{eq:h}) with $r_{j,-}=-1-\frac{1}{d_{j}}$
   2325: and
-  2326: \[
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 2366)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  2364: \left(\frac{t}{b_{j,0}\left(x\right)y^{\beta_{j}}}\right)^{n_{j}}h_{j,+}\left(x,y,t\right)\left(\log t\right)^{s_{j}}=\left(\sum_{k=n_{j}d_{j}}^{+\infty}\widetilde{g}_{j,k}\left(x,y\right)\left(\frac{t}{b_{j,0}\left(x\right)y^{\beta_{j}}}\right)^{k/d_{j}}\right)\left(\log t\right)^{s_{j}}.\label{eq:h+}
   2365: \end{equation}
 > 2366: Differentiating the right side of (\ref{eq:h+}) with respect to $t$
   2367: gives
-  2368: \[
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 2377)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  2375: Therefore, if we compute $\int_{a_{j}\left(x,y\right)}^{b_{j}\left(x,y\right)}\Gamma_{j,+}\left(x,y,t\right)\,\mathrm{d}t$
   2376: by integrating by parts $n_{j}$ times, where one begins by differentiating
 > 2377: the left side of (\ref{eq:h+}) and integrating $\mathrm{e}^{\mathrm{i}\sigma_{j}t}$
   2378: as before, one reduces to studying prepared generators for $\C^{\exp}\left(A_{\theta}\right)$
-  2379: of the form
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 2392)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  2390: T^{\abs}\left(x,y\right)\leq C\left(x\right)y^{p_{j}-n_{j}\beta_{j}+\delta_{j}}\left(\log y\right)^{q_{j}+s}.
   2391: \]
 > 2392: Hence, by (\ref{eq:nj}) we can conclude that $T$ is superintegrable.
   2393: \end{proof}
-  2394: 
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 2460)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  2458: \gamma_{j}^{\abs}\left(x,y\right)\leq M\int_{1}^{+\infty}t^{r_{j}}\left(\log t\right)^{s_{j}}\,\mathrm{d}t<+\infty,
   2459: \]
 > 2460: where $|h_{j}|\leq M$, this shows that the analogue of (\ref{eq:TsuperO})
   2461: is now
-  2462: \[
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 2566)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  2564: since $\alpha_{j}=\beta_{j}=0$, the variable $y$ now only appears
   2565: in the component $\left(\frac{a\left(x\right)}{y}\right)^{1/d}$ of
 > 2566: $\psi_{j}$ (see Equations (\ref{eq: psi}) and (\ref{eq: psi_j})).
   2567: %
-  2568: %
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 2566)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  2564: since $\alpha_{j}=\beta_{j}=0$, the variable $y$ now only appears
   2565: in the component $\left(\frac{a\left(x\right)}{y}\right)^{1/d}$ of
 > 2566: $\psi_{j}$ (see Equations (\ref{eq: psi}) and (\ref{eq: psi_j})).
   2567: %
-  2568: %
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 2663)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  2661: can be expanded as a power series $F$ in the variable $y^{-1/d}$
   2662: with analytic functions of $x$ as coefficients. Let $K_{j}\in\mathbb{N}$
 > 2663: be such that, in the notation of Equation (\ref{eq:naive gen}), $r_{j}-\frac{K_{j}}{d}<-1$.
   2664: We split the power series $F$ into a polynomial part, by summing
-  2665: up to $K_{j}$, and a rest $G$. Therefore, we can replace $T_{j}$
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 2666)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  2664: We split the power series $F$ into a polynomial part, by summing
   2665: up to $K_{j}$, and a rest $G$. Therefore, we can replace $T_{j}$
 > 2666: by a finite sum of terms of the form appearing in Equation (\ref{eq:naive gen}),
   2667: but with the further property that $\phi_{j}\in\mathcal{S}\left(\Pi_{m}\left(A\right)\right)[y^{1/d}]$,
-  2668: plus a final superintegrable term (corresponding to the rest $G$
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 2674)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  2672: where $T_{j}$ is superintegrable for every $j\in J^{\text{int}}$
   2673: and for all $j\in J^{\text{naive}}$, $T_{j}$ is of the form in Equation
 > 2674: (\ref{eq:naive gen}) with $\phi_{j}\in\mathcal{S}\left(\Pi_{m}\left(A\right)\right)[y^{1/d}]$.
   2675: Now, by writing
-  2676: \[
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3028)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  3026: \INT\left(T_{j}\circ P_{\theta}^{-1},\Pi_{m}\left(A\right)\right)=\INT\left(T_{j}\partial_{y}P_{\theta},\Pi_{m}\left(A\right)\right)\ \forall j\in J.
   3027: \]
 > 3028: For every $j\in J^{\text{naive}}$, in the notation of Equation (\ref{eq:naive}),
   3029: we have:
-  3030: \begin{equation}
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3079)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  3077: 
   3078: Fix $x\in\Pi_{m}\left(A\right)\setminus H$. Then the set $J:=\{ j\in J^{\text{naive}}:\ f_{j}\left(x\right)\not=0\} \subseteq J^{\text{naive}}$
 > 3079: is nonempty (see Equation (\ref{eq:t_j Jac})). Recall that the tuples
   3080: $\{ \left(r_{j}-\tau-1,s_{j},\phi_{j}\left(x,y\right)\right)\} _{j\in J}$
-  3081: are distinct and that $\rho_{j}:=r_{j}-\tau-1\geq-1$ for all $j\in J$.
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3243)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  3241: 
   3242: By Remark \ref{rem: lojas}, if $g\in\mathcal{S}\left(\mathbb{R}\right)$,
 > 3243: then, in the notation of Equation (\ref{eq: poly + rest}), we have
   3244: \[
-  3245: \mathrm{e}^{\mathrm{i}g\left(y\right)}=G\left(y\right)\mathrm{e}^{\mathrm{i}p\left(y^{\frac{1}{d}}\right)},
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3249)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  3247: where $G\left(y\right)=\mathrm{e}^{\mathrm{i}g_0\left(y\right)}$ is a complex-valued subanalytic
   3248: function (see Definition \ref{def complex valued}), since $g_{0}$
 > 3249: is bounded. Moreover, in the notation of Equation (\ref{eq:loja}),
   3250: \[
-  3251: \log g\left(y\right)=\log c+r\log y+h\left(y\right),
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3389)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  3387: expansion, with $\mathcal{G}$ and $\mathcal{A}$ as in the statement
   3388: of Proposition \ref{prop: esympt expansion of naive}. However, in
 > 3389: the notation of Equation (\ref{eq: coeff converg}), the series $F_{1}\left(y\right)=\sum_{k\in\mathbb{N}}\left(-1\right)^{k}\frac{\left(2k\right)!}{y^{2k+1}}$
   3390: and $F_{2}\left(y\right)=\sum_{k\in\mathbb{N}}\left(-1\right)^{k}\frac{\left(2k+1\right)!}{y^{2k+2}}$
-  3391: are divergent. Therefore, by Lemma \ref{lem:uniqueness asympt exps}
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3560)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  3558: \label{cor:Plancherel} Let $\widetilde{\hbox{\calli F}\ }$ be the
   3559: Fourier-Plancherel extension of the Fourier transform to $L^{2}\left(\mathbb{R}^{n}\right)$,
 > 3560: as in (\ref{eq: F tilda}). Then, the image of $\C^{\exp}\left(\RR^{n}\right)\cap L^{2}\left(\RR^{n}\right)$
   3561: under $\widetilde{\hbox{\calli F}\ }$ is $\C^{\exp}\left(\RR^{n}\right)\cap L^{2}\left(\RR^{n}\right)$. \end{thm}
-  3562: \begin{proof}
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3592)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  3590: into $\C^{\exp}\left(\RR^{n}\right)\cap L^{2}\left(\RR^{n}\right)$. A completely symmetric
   3591: argument, where one simply replaces $\mathrm{i}$ with $-\mathrm{i}$
 > 3592: in (\ref{eq:Plancherel}), shows that the inverse extended Fourier
   3593: transform maps $\C^{\exp}\left(\RR^{n}\right)\cap L^{2}\left(\RR^{n}\right)$ into $\C^{\exp}\left(\RR^{n}\right)\cap L^{2}\left(\RR^{n}\right)$
-  3594: as well, so $\C^{\exp}\left(\RR^{n}\right)\cap L^{2}\left(\RR^{n}\right)$ is in fact the
 
 - file: sample\arxiv_sources\1609.03457v1\extent-abilities.tex (line 115)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   113: 	\label{eq:holders-limitations-sec}
    114: \end{equation}
 >  115: Searching for $\int_D |f(x)g(x)|dx$ could bring up equation \ref{eq:holders-limitations-sec}, if it was in the database. \cite{MWS-05-2012} In addition, a search for $\int_R |sin(x)cos(x)|dx$ could also find equation \ref{eq:holders-limitations-sec}. \cite{MWS-05-2012} However, searching for $\int_R |sin(x) cos(2x)| dx$ will not identify equation \ref{eq:holders-limitations-sec} as a match: the algorithms of MWS interpret the $x$ and $2x$ to be the arguments of the function, causing it to parse this equation's generalization as $\int_D |f(x)g(y)|dx$ and not $\int_D |f(x)h(x)|dx$. \cite{MWS-05-2012}
    116: 
-   117: 
 
 - file: sample\arxiv_sources\1609.03457v1\extent-abilities.tex (line 115)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   113: 	\label{eq:holders-limitations-sec}
    114: \end{equation}
 >  115: Searching for $\int_D |f(x)g(x)|dx$ could bring up equation \ref{eq:holders-limitations-sec}, if it was in the database. \cite{MWS-05-2012} In addition, a search for $\int_R |sin(x)cos(x)|dx$ could also find equation \ref{eq:holders-limitations-sec}. \cite{MWS-05-2012} However, searching for $\int_R |sin(x) cos(2x)| dx$ will not identify equation \ref{eq:holders-limitations-sec} as a match: the algorithms of MWS interpret the $x$ and $2x$ to be the arguments of the function, causing it to parse this equation's generalization as $\int_D |f(x)g(y)|dx$ and not $\int_D |f(x)h(x)|dx$. \cite{MWS-05-2012}
    116: 
-   117: 
 
 - file: sample\arxiv_sources\1609.03457v1\extent-abilities.tex (line 115)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   113: 	\label{eq:holders-limitations-sec}
    114: \end{equation}
 >  115: Searching for $\int_D |f(x)g(x)|dx$ could bring up equation \ref{eq:holders-limitations-sec}, if it was in the database. \cite{MWS-05-2012} In addition, a search for $\int_R |sin(x)cos(x)|dx$ could also find equation \ref{eq:holders-limitations-sec}. \cite{MWS-05-2012} However, searching for $\int_R |sin(x) cos(2x)| dx$ will not identify equation \ref{eq:holders-limitations-sec} as a match: the algorithms of MWS interpret the $x$ and $2x$ to be the arguments of the function, causing it to parse this equation's generalization as $\int_D |f(x)g(y)|dx$ and not $\int_D |f(x)h(x)|dx$. \cite{MWS-05-2012}
    116: 
-   117: 
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 100)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-    98: In particular, $\scr{G}_{t}\ket{h, c}$ for a certain highest weight vector $\ket{h,c}$ of conformal weight $h$ and central charge $c$ is a random process on
     99: the corresponding highest weight Verma module.
 >  100: The SLE/CFT correspondence in the sense of Bauer and Bernard states that, if the family of germs $\{g_{t}(z)\}_{t\ge 0}$ satisfies Eq. (\ref{eq:sle}), then
    101: the random process $\scr{G}_{t}\ket{h,c}$ is a martingale for a certain choice of the highest weight because of the existence of a null vector of conformal weight $h+2$
-   102: in the irreducible representation $L(h,c)$.
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 199)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   197: \end{equation}
    198: where the coefficients $X_{n}\in\mrm{End}(V_{\mfrak{g},k})$ are thought of as the action of $X_{n}\in\what{\mfrak{g}}$ on $V_{\mfrak{g},k}$.
 >  199: From the definition of the affine Lie algebra, Eq. (\ref{eq:def_of_affine}), two fields satisfy the commutation relation
    200: \begin{equation}
-   201: 	[X(z),Y(w)]=[X,Y](w)\delta(z-w)+k(X|Y)\del_{w}\delta(z-w),
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 317)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   315: Although we assumed that the Lie group $G$ is finite dimensional above,
    316: an Ito process on an infinite-dimensional Lie group is significant in the context of SLE/CFT correspondence.
 >  317: We assume that the expression in Eq. (\ref{eq:increment_fin_dim}) makes sense on some representations
    318: even if the Lie group is infinite dimensional in the following discussion.
-   319: 
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 331)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   329: \end{align}
    330: for $m,n\in\mbb{Z}_{<0}$.
 >  331: The commutation relation in Eq. (\ref{eq:primary_aff_field}) suggests that
    332: the state space $V_{\mfrak{g},k}$ is indeed a representation of this Lie algebra.
-   333: 
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 337)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   335: labeled by a certain finite set $I_{B}$
    336: and that the variance of each $B_{t}^{(i)}$ is $\kappa_{i}>0$.
 >  337: Then, analogously to the expression in Eq. (\ref{eq:increment_fin_dim}), the increment of $\scr{G}_{t}$ can be written in the form
    338: \begin{equation}
-   339: 	\scr{G}_{t}^{-1}d\scr{G}_{t}=\left(\mu+\frac{1}{2}\sum_{i\in I_{B}}\kappa_{i}\sigma_{i}^{2}\right)dt+\sum_{i\in I_{B}}\sigma_{i}dB_{t}^{(i)},
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 346)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   344: As is explained in the previous section,
    345: for a vector $v\in (L_{\mfrak{g},k}(\Lambda))_{h_{\Lambda}}$ in the top space of $L_{\mfrak{g},k}(\Lambda)$,
 >  346: the corresponding field $\mcal{Y}(v,z)$ satisfies the primary field conditions given by Eqs. (\ref{eq:primary_cond1}) and (\ref{eq:primary_cond2}).
    347: This implies that the adjoint action of $\scr{G}\in \what{G}_{\mrm{Vir}}^{<0}$ transforms the primary field $\mcal{Y}(v,z)$ so that
-   348: \begin{equation}
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 346)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   344: As is explained in the previous section,
    345: for a vector $v\in (L_{\mfrak{g},k}(\Lambda))_{h_{\Lambda}}$ in the top space of $L_{\mfrak{g},k}(\Lambda)$,
 >  346: the corresponding field $\mcal{Y}(v,z)$ satisfies the primary field conditions given by Eqs. (\ref{eq:primary_cond1}) and (\ref{eq:primary_cond2}).
    347: This implies that the adjoint action of $\scr{G}\in \what{G}_{\mrm{Vir}}^{<0}$ transforms the primary field $\mcal{Y}(v,z)$ so that
-   348: \begin{equation}
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 388)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   386: with $\overline{\theta}_{r,t}(z)$ and $\theta_{r,t}^{i}(z)$ being $\mbb{C}[[z^{-1}]]$-valued random processes.
    387: 
 >  388: Our strategy is to compare the increments of both sides of Eq. (\ref{eq:random_transformation_primary})
    389: and to establish stochastic differential equations on $f_{t}(z)$ and $\theta_{r,t}(z)$ for a given Ito process $\scr{G}_{t}$
-   390: on $\what{G}_{\mrm{Vir}}^{<0}$.
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 396)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   394: 	(d\scr{G}_{t}^{-1})\scr{G}_{t}=\left(-\mu+\frac{1}{2}\sum_{i\in I_{B}}\kappa_{i}\sigma_{i}^{2}\right)dt-\sum_{i\in I_{B}}\sigma_{i}dB_{t}^{(i)}.
    395: \end{equation}
 >  396: Using this formula, we find that the increment of the left-hand side of Eq. (\ref{eq:random_transformation_primary}) yields
    397: \begin{align}
-   398: 	\label{eq:increment_lhs}
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 403)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   401: 	&\hspace{11pt}-(\pr{f}_{t}(z))^{h_{\Lambda}}\sum_{i\in I_{B}}[\sigma_{i},\mcal{Y}(\Theta_{t}(z)v,f_{t}(z))]dB_{t}^{(i)}. \notag
    402: \end{align}
 >  403: The increment of the right-hand side of Eq. (\ref{eq:random_transformation_primary}) is computed by standard Ito calculus as
    404: \begin{align}
-   405: 	\label{eq:increment_rhs}
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 416)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   414: 	&\hspace{90pt}+\sum_{r\in I_{\mfrak{g}}}\theta_{r,t}^{i}(z)\mcal{Y}(X_{r}\Theta_{t}(z)v,f_{t}(z))\Bigg\}dB_{t}^{(i)}. \notag
    415: \end{align}
 >  416: Comparing the coefficients of each $dB_{t}^{(i)}$ in Eqs. (\ref{eq:increment_lhs}) and (\ref{eq:increment_rhs}), we find
    417: \begin{align}
-   418: 	[\sigma_{i},\mcal{Y}(\Theta_{t}(z)v,f_{t}(z))]
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 416)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   414: 	&\hspace{90pt}+\sum_{r\in I_{\mfrak{g}}}\theta_{r,t}^{i}(z)\mcal{Y}(X_{r}\Theta_{t}(z)v,f_{t}(z))\Bigg\}dB_{t}^{(i)}. \notag
    415: \end{align}
 >  416: Comparing the coefficients of each $dB_{t}^{(i)}$ in Eqs. (\ref{eq:increment_lhs}) and (\ref{eq:increment_rhs}), we find
    417: \begin{align}
-   418: 	[\sigma_{i},\mcal{Y}(\Theta_{t}(z)v,f_{t}(z))]
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 422)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   420: 	&\hspace{11pt}-\sum_{r\in I_{\mfrak{g}}}\theta_{r,t}^{i}(z)\mcal{Y}(X_{r}\Theta_{t}(z)v,f_{t}(z)). \notag
    421: \end{align}
 >  422: The primary field conditions, Eqs. (\ref{eq:primary_cond1}) and (\ref{eq:primary_cond2}), help us
    423: determine $f_{t}^{i}(z)$ and $\theta_{r,t}^{i}(z)$ for a given $\sigma_{i}$.
-   424: For example, if $\sigma_{i}=L_{n}$, we have
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 422)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   420: 	&\hspace{11pt}-\sum_{r\in I_{\mfrak{g}}}\theta_{r,t}^{i}(z)\mcal{Y}(X_{r}\Theta_{t}(z)v,f_{t}(z)). \notag
    421: \end{align}
 >  422: The primary field conditions, Eqs. (\ref{eq:primary_cond1}) and (\ref{eq:primary_cond2}), help us
    423: determine $f_{t}^{i}(z)$ and $\theta_{r,t}^{i}(z)$ for a given $\sigma_{i}$.
-   424: For example, if $\sigma_{i}=L_{n}$, we have
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 436)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   434: \end{align}
    435: These give part of stochastic differential equations on $f_{t}(z)$ and $\theta_{r,t}(z)$.
 >  436: Comparing the coefficients of $dt$ in Eqs. (\ref{eq:increment_lhs}) and (\ref{eq:increment_rhs}),
    437: we can fully determine these stochastic differential equations, in principle.
-   438: In the next section, we complete this program for a certain choice of $\mu$, $\sigma_{i}$.
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 436)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   434: \end{align}
    435: These give part of stochastic differential equations on $f_{t}(z)$ and $\theta_{r,t}(z)$.
 >  436: Comparing the coefficients of $dt$ in Eqs. (\ref{eq:increment_lhs}) and (\ref{eq:increment_rhs}),
    437: we can fully determine these stochastic differential equations, in principle.
-   438: In the next section, we complete this program for a certain choice of $\mu$, $\sigma_{i}$.
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 463)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   461: 	&f_{t}^{r}(z)=0,\ \ \theta_{r,t}^{r}(z)=(f_{t}(z))^{-n},\ \ \theta_{s,t}^{r}(z)=0, \ \ r\in I_{\mfrak{g}},\ s \neq r.
    462: \end{align}
 >  463: These results simplify Eq. (\ref{eq:increment_rhs}) to
    464: \begin{align}
-   465: 	&d\left((\pr{f}_{t}(z))^{h_{\Lambda}}\mcal{Y}(\Theta_{t}(z)v,f(z))\right) \\
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 473)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   471: 	&\hspace{11pt}+(\mbox{terms proportional to }dB_{t}^{(i)}). \notag
    472: \end{align}
 >  473: The increment in Eq. (\ref{eq:increment_lhs}) becomes
    474: \begin{align}
-   475: 	&d(\scr{G}_{t}^{-1}\mcal{Y}(v,z)\scr{G}_{t}) \\
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 494)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   492: 	d\theta_{r,t}(z)&=(f_{t}(z))^{-n}dB_{t}^{(r)},\ \ r\in I_{\mfrak{g}}.
    493: \end{align}
 >  494: If $n=1$, the differential equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
    495: reduce to the ones considered in \cite{AlekseevBytskoIzyurov2011}.
-   496: Therefore, one can regard the set of equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 494)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   492: 	d\theta_{r,t}(z)&=(f_{t}(z))^{-n}dB_{t}^{(r)},\ \ r\in I_{\mfrak{g}}.
    493: \end{align}
 >  494: If $n=1$, the differential equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
    495: reduce to the ones considered in \cite{AlekseevBytskoIzyurov2011}.
-   496: Therefore, one can regard the set of equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 496)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   494: If $n=1$, the differential equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
    495: reduce to the ones considered in \cite{AlekseevBytskoIzyurov2011}.
 >  496: Therefore, one can regard the set of equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
    497: as generalization of the SLE-type growth process obtained in \cite{AlekseevBytskoIzyurov2011}.
-   498: 
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 496)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   494: If $n=1$, the differential equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
    495: reduce to the ones considered in \cite{AlekseevBytskoIzyurov2011}.
 >  496: Therefore, one can regard the set of equations (\ref{eq:growth_process_geom}) and (\ref{eq:growth_process_alg})
    497: as generalization of the SLE-type growth process obtained in \cite{AlekseevBytskoIzyurov2011}.
-   498: 
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 509)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   507: 	d\theta_{r,t}(z)&=\frac{dB_{t}^{(r)}}{g_{t}(z)-nB_{t}^{(0)}},\ \ r\in I_{\mfrak{g}}.
    508: \end{align}
 >  509: It is remarkable that Eq. (\ref{eq:sle_rescaled}) is nothing but the stochastic Loewner equation (\ref{eq:sle}) with a rescaled time variable,
    510: but we have to comment that here the introduced $g_{t}(z)$ cannot be a uniformizing map in the sense of \cite{BauerBernard2003a} unless $n=1$, while $f_{t}(z)$ can be.
-   511: To see this, let us consider the automorphism group of an algebra of formal power series.
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 509)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   507: 	d\theta_{r,t}(z)&=\frac{dB_{t}^{(r)}}{g_{t}(z)-nB_{t}^{(0)}},\ \ r\in I_{\mfrak{g}}.
    508: \end{align}
 >  509: It is remarkable that Eq. (\ref{eq:sle_rescaled}) is nothing but the stochastic Loewner equation (\ref{eq:sle}) with a rescaled time variable,
    510: but we have to comment that here the introduced $g_{t}(z)$ cannot be a uniformizing map in the sense of \cite{BauerBernard2003a} unless $n=1$, while $f_{t}(z)$ can be.
-   511: To see this, let us consider the automorphism group of an algebra of formal power series.
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 538)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   536: Here we take $v_{i}\in (L_{\mfrak{g},k}(\Lambda_{i}))_{h_{\Lambda_{i}}}$ and
    537: we let $\bra{0}$ be the dual of the vacuum vector $\ket{0}\in L_{\mfrak{g},k}$.
 >  538: From the transformation rule of primary fields, Eqs. (\ref{eq:primary_cond1}) and (\ref{eq:primary_cond2}),
    539: and the translation invariance of the vacuum vector,
-   540: the above function is the same as
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 538)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   536: Here we take $v_{i}\in (L_{\mfrak{g},k}(\Lambda_{i}))_{h_{\Lambda_{i}}}$ and
    537: we let $\bra{0}$ be the dual of the vacuum vector $\ket{0}\in L_{\mfrak{g},k}$.
 >  538: From the transformation rule of primary fields, Eqs. (\ref{eq:primary_cond1}) and (\ref{eq:primary_cond2}),
    539: and the translation invariance of the vacuum vector,
-   540: the above function is the same as
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 545)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   543: 	\prod_{i=1}^{N}(\pr{f}_{t}(z_{i}))^{h_{\Lambda_{i}}}\braket{0|\mcal{Y}(\Theta_{t}(z)v_{1},f_{t}(z_{1}))\cdots\mcal{Y}(\Theta_{t}(z)v_{N},f_{t}(z_{N}))w}
    544: \end{equation}
 >  545: As is demonstrated in \cite{BauerBernard2003a}, the expectation value of Eq. (\ref{eq:correlation_function2})
    546: has a probability theoretical interpretation.
-   547: If $\scr{G}_{t}w$ is a martingale, the expectation value of Eq. (\ref{eq:correlation_function1})
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 547)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   545: As is demonstrated in \cite{BauerBernard2003a}, the expectation value of Eq. (\ref{eq:correlation_function2})
    546: has a probability theoretical interpretation.
 >  547: If $\scr{G}_{t}w$ is a martingale, the expectation value of Eq. (\ref{eq:correlation_function1})
    548: does not depend on time, yielding
-   549: \begin{equation}
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 556)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   554: Therefore, the martingale property of $\scr{G}_{t}$ is significant in bridging probability theory to CFT via SLE/CFT correspondence.
    555: 
 >  556: For our $\scr{G}_{t}$ designed in Eq. (\ref{eq:stochastic_dif_specific}),
    557: the random process $\scr{G}_{t}w$ on $L_{\mfrak{g},k}(\Lambda)$ is a martingale if and only if the vector
-   558: \begin{equation}
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 629)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   627: is a martingale.
    628: 
 >  629: We can also look for a null vector of the form of Eq. (\ref{eq:specific_null_vector}) in $L_{\mfrak{sl}_{3},1}$ by similar computation.
    630: An orthonormal basis of $\mfrak{sl}_{3}$ is taken as
-   631: \begin{align}
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 698)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   696: 
    697: The situation is more subtle for a spin representation of level $1$.
 >  698: It may be impossible to construct a null vector of the form of Eq. (\ref{eq:specific_null_vector}) in $L_{\mfrak{g},1}(\Lambda)$
    699: other than $\Lambda=0$.
-   700: Indeed, we have confirmed that there does not exist such a null vector in the spin-$\frac{1}{2}$ representation $L_{\mfrak{sl}_{2},1}(\Lambda_{1})$
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 145)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   143: and $z_{t}$ is the tip of the SLE slit defined by $z_{t}=\rho_{t}^{-1}(0)$, where $\rho_{t}(z)=g_{t}(z)+B_{t}$ satisfies $d\rho_{t}(z)=\frac{2dt}{\rho_{t}(z)}-dB_{t}$
    144: with $B_{t}$ being the Brownian motion of variance $\kappa$.
 >  145: The numerator of Eq.(\ref{eq:corr_func_martingale}) takes a value in the $\mfrak{g}$-invariant subspace of $L(\Lambda)\otimes L(\lambda_{1})\otimes\cdots\otimes L(\Lambda)^{\ast}$,
    146: where $L(\lambda)$ is the irreducible representation of $\mfrak{g}$ of highest weight $\lambda$.
-   147: The denominator of Eq.(\ref{eq:corr_func_martingale}) takes  a value in the $\mfrak{g}$-invariant subspace of $L(\Lambda)\otimes L(\Lambda)^{\ast}$,
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 147)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   145: The numerator of Eq.(\ref{eq:corr_func_martingale}) takes a value in the $\mfrak{g}$-invariant subspace of $L(\Lambda)\otimes L(\lambda_{1})\otimes\cdots\otimes L(\Lambda)^{\ast}$,
    146: where $L(\lambda)$ is the irreducible representation of $\mfrak{g}$ of highest weight $\lambda$.
 >  147: The denominator of Eq.(\ref{eq:corr_func_martingale}) takes  a value in the $\mfrak{g}$-invariant subspace of $L(\Lambda)\otimes L(\Lambda)^{\ast}$,
    148: which is one dimensional due to Schur's Lemma.
-   149: 
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 168)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   166: The claim by Ref. \cite{BettelheimGruzbergLudwigWiegmann2005} and Ref. \cite{AlekseevBytskoIzyurov2011} is that the random process $\mcal{M}_{t}$
    167: is a local martingale for a certain choice of $\kappa$ and $\tau$,
 >  168: and Eq. (\ref{eq:sle_wzw_correlation_function}) is a generalization of the stochastic Loewner equation so as to correspond to a WZW theory.
    169: Their formulation has been extended to multiple SLEs\cite{Sakai2013} and to coset WZW theories.\cite{Nazarov2012,Fukusumi2017}
-   170: 
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 466)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   464: The infinite series in $z\mbb{C}[[z^{-1}]]$ that is identified with an automorphism $\rho$ will be denoted by $\rho(z)$.
    465: In the following, we regard formal variables $z$ and $w$ as formal {{coordinates}} at $0$ and infinity, respectively,
 >  466: and $\rho(z)$ and $\rho(w)$ as infinite series identified with an automorphism $\rho$ via Eq.(\ref{eq:aut_at_infty}) and Eq.(\ref{eq:aut_at_zero}), respectively.
    467: 
-   468: Under realization Eq.(\ref{eq:aut_at_zero}) of the group $\mrm{Aut}\mcal{O}$, its subgroup $\mrm{Aut}_{+}\mcal{O}$ consists of formal series
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 466)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   464: The infinite series in $z\mbb{C}[[z^{-1}]]$ that is identified with an automorphism $\rho$ will be denoted by $\rho(z)$.
    465: In the following, we regard formal variables $z$ and $w$ as formal {{coordinates}} at $0$ and infinity, respectively,
 >  466: and $\rho(z)$ and $\rho(w)$ as infinite series identified with an automorphism $\rho$ via Eq.(\ref{eq:aut_at_infty}) and Eq.(\ref{eq:aut_at_zero}), respectively.
    467: 
-   468: Under realization Eq.(\ref{eq:aut_at_zero}) of the group $\mrm{Aut}\mcal{O}$, its subgroup $\mrm{Aut}_{+}\mcal{O}$ consists of formal series
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 468)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   466: and $\rho(z)$ and $\rho(w)$ as infinite series identified with an automorphism $\rho$ via Eq.(\ref{eq:aut_at_infty}) and Eq.(\ref{eq:aut_at_zero}), respectively.
    467: 
 >  468: Under realization Eq.(\ref{eq:aut_at_zero}) of the group $\mrm{Aut}\mcal{O}$, its subgroup $\mrm{Aut}_{+}\mcal{O}$ consists of formal series
    469: $z+b_{0}+b_{-1}z^{-1}+\cdots$ with $b_{i}\in \mbb{C}$ for $i\le 0$,
-   470: and Lie algebras are realized as $\mrm{Der}_{+}\mcal{O}=\mbb{C}[[z^{-1}]]\del_{z}$ and $\mrm{Der}_{0}\mcal{O}=z\mbb{C}[[z^{-1}]]\del_{z}$.
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 659)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   657: In the following, we call this VOA the affine VOA of $\mfrak{g}$ with level $k$ and denote it by $L_{\mfrak{g},k}$.
    658: Simple modules over $L_{\mfrak{g},k}$ are realized as highest weight representations $L_{\mfrak{g}}(\Lambda,k)$ of the same level.
 >  659: For an $L_{\mfrak{g},k}$-module $M$, the invariance in Eq.(\ref{eq:invariant_form}) of a nondegenerate bilinear form $\braket{\cdot|\cdot}:M\times M\to\mbb{C}$ is rephrased as
    660: $\braket{X(n)u|v}=-\braket{u|X(-n)v}$ for $u,v \in M$, $X\in\mfrak{g}$ and $n\in\mbb{Z}$.
-   661: Such an invariant bilinear form is specified on an irreducible representation $L_{\mfrak{g}}(\Lambda,k)$ by the normalization $\braket{v_{\Lambda}|v_{\Lambda}}=1$
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 784)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   782: \subsection{{{Formulas}} in {{the}} case of commutative $\mfrak{g}$}
    783: 
 >  784: Let us {{note the formilas}} in Eq.(\ref{eq:internal_twist_field}) and Eq.(\ref{eq:internal_twist_algebra}) in a more explicit way in {{the case when}} $\mfrak{g}$ is commutative.
    785: {{Now,}} we have $[A,X]=0$ for any $A, X\in \mfrak{g}$, which implies that
-   786: \begin{align}
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 784)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   782: \subsection{{{Formulas}} in {{the}} case of commutative $\mfrak{g}$}
    783: 
 >  784: Let us {{note the formilas}} in Eq.(\ref{eq:internal_twist_field}) and Eq.(\ref{eq:internal_twist_algebra}) in a more explicit way in {{the case when}} $\mfrak{g}$ is commutative.
    785: {{Now,}} we have $[A,X]=0$ for any $A, X\in \mfrak{g}$, which implies that
-   786: \begin{align}
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 795)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   793: \label{subsect:formulae_sl2}
    794: We now {{focus}} our attention on the case of $\mfrak{g}=\mfrak{sl}_{2}$ and explicitly {{note the formulas in}}
 >  795: Eq.(\ref{eq:internal_twist_field}) and Eq.(\ref{eq:internal_twist_algebra}).
    796: We take as a standard basis of $\mfrak{sl}_{2}$
-   797: \begin{align}
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 795)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   793: \label{subsect:formulae_sl2}
    794: We now {{focus}} our attention on the case of $\mfrak{g}=\mfrak{sl}_{2}$ and explicitly {{note the formulas in}}
 >  795: Eq.(\ref{eq:internal_twist_field}) and Eq.(\ref{eq:internal_twist_algebra}).
    796: We take as a standard basis of $\mfrak{sl}_{2}$
-   797: \begin{align}
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 907)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   905: \begin{prop}
    906: \label{prop:martingale_affine}
 >  907: Assume that the highest weight vector $v_{\Lambda}$ of $L_{\mfrak{g}}(\Lambda,k)$ is annihilated by the operator in Eq.(\ref{eq:annihilator_affine}).
    908: Then for a random process $\scr{G}_{t}$ on $\mrm{Aut}_{+}\mcal{O}\ltimes G_{+}(\mcal{O})$ satisfying Eq.(\ref{eq:random_process_affine}),
-   909: the random process $\scr{G}_{t}v_{\Lambda}$ in $\overline{L_{\mfrak{g}}(\Lambda,k)}$ is a local martingale.
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 908)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   906: \label{prop:martingale_affine}
    907: Assume that the highest weight vector $v_{\Lambda}$ of $L_{\mfrak{g}}(\Lambda,k)$ is annihilated by the operator in Eq.(\ref{eq:annihilator_affine}).
 >  908: Then for a random process $\scr{G}_{t}$ on $\mrm{Aut}_{+}\mcal{O}\ltimes G_{+}(\mcal{O})$ satisfying Eq.(\ref{eq:random_process_affine}),
    909: the random process $\scr{G}_{t}v_{\Lambda}$ in $\overline{L_{\mfrak{g}}(\Lambda,k)}$ is a local martingale.
-   910: \end{prop}
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 934)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   932: \end{proof}
    933: 
 >  934: {{Equation}} (\ref{eq:sde_internal_sym}) has already appeared in an equivalent form in the correlation function formulation of SLEs corresponding to WZW models. \cite{BettelheimGruzbergLudwigWiegmann2005, AlekseevBytskoIzyurov2011}
    935: Let $\mcal{Y}(-,z)$ be an intertwining operator of type $\binom{L_{\mfrak{g}}(\Lambda_{3},k)}{L_{\mfrak{g}}(\Lambda_{1},k)\ \ L_{\mfrak{g}}(\Lambda_{2},k)}$,
-   936: and $v\in L(\Lambda_{1})$ be a primary vector in the top space of $L_{\mfrak{g}}(\Lambda_{1},k)$.
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 948)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   946: 	d\Theta_{t}^{-1}(z)\Theta_{t}(z)=\frac{\tau}{2}\sum_{r=1}^{\dim\mfrak{g}}(\rho_{t}(z)^{-1}X_{r})^{2}-\sum_{r=1}^{\dim\mfrak{g}}\rho_{t}(z)^{-1}X_{r}dB_{t}^{(r)}.
    947: \end{equation}
 >  948: Apart from the Jacobian part, the {{right-hand}} side of Eq.(\ref{eq:random_transformation_affine}) is
    949: the random transformation of a primary field in Eq.(\ref{eq:sle_wzw_correlation_function}) considered in the correlation function formulation of SLEs,
-   950: \cite{BettelheimGruzbergLudwigWiegmann2005, AlekseevBytskoIzyurov2011} which seemed to be {\it ad hoc},
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 949)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   947: \end{equation}
    948: Apart from the Jacobian part, the {{right-hand}} side of Eq.(\ref{eq:random_transformation_affine}) is
 >  949: the random transformation of a primary field in Eq.(\ref{eq:sle_wzw_correlation_function}) considered in the correlation function formulation of SLEs,
    950: \cite{BettelheimGruzbergLudwigWiegmann2005, AlekseevBytskoIzyurov2011} which seemed to be {\it ad hoc},
-   951: while it naturally appears in the group theoretical formulation presented here.
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 953)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   951: while it naturally appears in the group theoretical formulation presented here.
    952: 
 >  953: The SDE in Eq.(\ref{eq:sde_internal_sym}) {{for}} the random process along {{the}} internal symmetry
    954: is still not {{sufficient}} to compute matrix elements like $\braket{u|\scr{G}_{t}|v_{\Lambda}}$.
-   955: In the following two subsections, we construct the random process $\Theta_{t}$ in the most explicit way
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 989)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   987: Since $X(n)$ with $n<0$ are mutually commutative for a fixed $X\in\mfrak{sl}_{2}$,
    988: the increment of the random process $\Theta_{t}$ is computed by the standard Ito calculus,
 >  989: and we can determine data $\overline{x}_{t}(\zeta)$ and $x_{t}^{(r)}(\zeta)$ so the increment of $\Theta_{t}$ {{is in}} the desired form in Eq.(\ref{eq:sde_internal_sym}).
    990: After {{the}} computation that is presented in Appendix \ref{sect:app_SDE}, we obtain the following {{proposition}}
-   991: \begin{prop}
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 994)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   992: \label{prop:sde_internal_sl2}
    993: Under the ansatz  $\Theta_{t}=e^{{\bf e}_{t}}e^{{\bf h}_{t}}e^{{\bf f}_{t}}$ described above,
 >  994: the SDE in Eq.(\ref{eq:sde_internal_sym}) implies the following set of SDEs:
    995: \begin{align}
-   996: 	de_{t}(\zeta)=&-\frac{e^{2h_{t}(\zeta)}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(2)}-\frac{ie^{2h_{t}(\zeta)}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(3)}, \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1007)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1005: \label{sect:annihilator}
   1006: We have assumed in Sect.\ref{sect:random_process} that the highest weight vector $v_{\Lambda}$ of $L_{\mfrak{g}}(\Lambda,k)$
 > 1007: is annihilated by an operator of the form in Eq.(\ref{eq:annihilator_affine}) with finely tuned parameters $\kappa$ and $\tau$.
   1008: In this section we see examples of such annihilating operators.
-  1009: As we have already seen, the vacuum vector $\ket{0}$ is annihilated by the operator in Eq.(\ref{eq:annihilator_affine})
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1009)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1007: is annihilated by an operator of the form in Eq.(\ref{eq:annihilator_affine}) with finely tuned parameters $\kappa$ and $\tau$.
   1008: In this section we see examples of such annihilating operators.
 > 1009: As we have already seen, the vacuum vector $\ket{0}$ is annihilated by the operator in Eq.(\ref{eq:annihilator_affine})
   1010: for $\tau=\frac{2}{k+h_{\mfrak{g}}^{\vee}}$ and arbitrary $\kappa$.
-  1011: Thus we shall search for an example acting on a ``charged" representation.
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1015)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1013: \subsection{{{Case when}} $\mfrak{g}$ is commutative}
   1014: We first compute vectors $L_{-2}v_{\Lambda}$ and $L_{-1}^{2}v_{\Lambda}$.
 > 1015: By the expression of $L_{n}$ via the Segal-Sugawara construction in Eq.(\ref{eq:segal_sugawara}), they {{can be}} computed as
   1016: \begin{align}
-  1017: 	L_{-2}v_{\Lambda}&=\left(\frac{1}{2}\sum_{i=1}^{\ell}H_{i}(-1)^{2}+\Lambda(-2)\right)v_{\Lambda}, \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1063)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1061: \end{equation}
   1062: 
 > 1063: We show that both $v_{0}$ and $v_{1}$ {{are}} annihilated by an operator of the form in Eq.(\ref{eq:annihilator_affine}).
   1064: Let $\mcal{Y}(-,z)$ be the intertwining operator of type $\binom{L_{\mfrak{sl}_{2}}(\Lambda,1)}{L_{\mfrak{sl}_{2}}(\Lambda,1)\ \ L_{\mfrak{sl}_{2},1}}$.
-  1065: Then we have $\mcal{Y}(e^{\pm\Lambda},z)=\Gamma_{\pm \Lambda}(z)$, where $\Gamma_{\pm \Lambda}(z)$ are generalized vertex operators associated with $\pm\Lambda$.
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1114)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1112: when we take the inner product of it with any vectors in $L_{\mfrak{g}}(\Lambda,1)$.
   1113: To describe them explicitly, we first investigate how a current field $H(z)$ and the Virasoro field $L(z)$ are transformed under the adjoint action by $\scr{G}_{t}$.
 > 1114: First a current field $H(z)$ transforms under the adjoint action by $e^{-{\bf h}^{1}_{t}}$ as in Eq.(\ref{eq:current_internal_commutative}),
   1115: which implies
-  1116: \begin{equation}
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1126)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1124: 
   1125: \begin{thm}
 > 1126: Let $g_{t}(z)=\rho_{t}(z)+B_{t}$ be the SLE$(\kappa)$ and $h^{i}_{t}(\zeta)$ be the solutions of Eq.(\ref{eq:sde_internal_Heisenbeg}).
   1127: Then the following quantity is a local martingale:
-  1128: \begin{equation}
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1135)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1133: 
   1134: We move on to derive the transformation rule for the Virasoro field $L(z)$.
 > 1135: The formula in Eq.(\ref{eq:virasoro_internal}) implies
   1136: \begin{equation}
-  1137: 	e^{-H\otimes h(\zeta)}L(z)e^{H\otimes h(\zeta)}=L(z)-\del h(z) H(z)+\frac{1}{2}(H|H)\del h(z)^{2}.
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1152)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1150: This relation again helps us {{to formulate}} a local martingale $\braket{v_{\Lambda}|L(z)\scr{G}_{t}|v_{\Lambda}}$ associated with the random processes $\rho_{t}(z)$ and $h^{i}_{t}(z)$.
   1151: \begin{thm}
 > 1152: Let $g_{t}(z)=\rho_{t}(z)+B_{t}$ be the SLE$(\kappa)$ and $h^{i}_{t}(\zeta)$ be the solutions of Eq.(\ref{eq:sde_internal_Heisenbeg}).
   1153: Then the following quantity is a local martingale:
-  1154: \begin{align}
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1315)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1313: Then for a vector $v\in L_{\mfrak{g}}(\Lambda,k)$, we have $\mcal{Y}(v,z)\ket{0}=e^{zL_{-1}}v$.
   1314: This implies that for a vector $v \in L(\Lambda)$ in the top space of $L_{\mfrak{g}}(\Lambda,k)$
 > 1315: that is annihilated by an operator of the form of Eq.(\ref{eq:annihilator_affine}),
   1316: \begin{equation}
-  1317: 	\label{eq:affine_martingale_vector}
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1392)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1390: 
   1391: \begin{thm}
 > 1392: Assume that we have an operator of the form in Eq.(\ref{eq:annihilator_affine}) that annihilates the highest weight vector of $L_{\mfrak{sl}_{2}}(\Lambda,k)$.
   1393: Let $\mcal{U}$ be the subspace of $\mcal{F}_{\mrm{aff}}(\Lambda)$ that is obtained by applying operators $\scr{X}_{\ell}$ for $\scr{X}=\scr{E},\scr{H},\scr{F}$ and $\ell\in\mbb{Z}$
-  1394: to elements of the form $\braket{u|-}\in L(\Lambda)^{\ast}$ for $u\in\L(\Lambda)$.
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1738)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1736: for $\alpha,\beta\in L$.
   1737: Here we denote $|\alpha|^{2}=(\alpha|\alpha)$.
 > 1738: Notice that conditions Eq. (\ref{eq:lattice_2_cocycle_1}) and Eq. (\ref{eq:lattice_2_cocycle_2}) 
   1739: are independent of the choice of a representative $\epsilon$ of $[\epsilon]$.
-  1740: It can be shown that we can choose a 2-cocycle $\epsilon\in[\epsilon]$ so that
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1738)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1736: for $\alpha,\beta\in L$.
   1737: Here we denote $|\alpha|^{2}=(\alpha|\alpha)$.
 > 1738: Notice that conditions Eq. (\ref{eq:lattice_2_cocycle_1}) and Eq. (\ref{eq:lattice_2_cocycle_2}) 
   1739: are independent of the choice of a representative $\epsilon$ of $[\epsilon]$.
-  1740: It can be shown that we can choose a 2-cocycle $\epsilon\in[\epsilon]$ so that
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1854)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1852: Then on the vector space $V$, an action of $G$ is defined by exponentiating the action of $\mfrak{g}$.
   1853: In the following, we do not distinguish an element of $\mfrak{g}$ from its action on $V$.
 > 1854: When we expand the exponential function in Eq. (\ref{eq:McKean_Gangolli_injection}) and notice that quadratic terms in $dx^{i}_{t}$ may give contributions proportional to $dt$,
   1855: we obtain an SDE
-  1856: \begin{equation}
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1872)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1870: thus it is, in general, nontrivial whether the action of $\mfrak{g}$ on $V$ is exponentiated to an action of $G$, but we assume that it is.
   1871: The validity of this assumption can be verified for each example.
 > 1872: We also assume that the infinite sum that appears in Eq.(\ref{eq:McKean_Gangolli_injection}) in the case of $\dim\mfrak{g}=\infty$ makes sense.
   1873: Then the McKean-Gangolli injection works to construct a random process on the Lie group $G$ from an Ito process on $\mfrak{g}$,
-  1874: and an SDE of the form Eq.(\ref{eq:sde_lie_group}) characterizes the random process.
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1874)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  1872: We also assume that the infinite sum that appears in Eq.(\ref{eq:McKean_Gangolli_injection}) in the case of $\dim\mfrak{g}=\infty$ makes sense.
   1873: Then the McKean-Gangolli injection works to construct a random process on the Lie group $G$ from an Ito process on $\mfrak{g}$,
 > 1874: and an SDE of the form Eq.(\ref{eq:sde_lie_group}) characterizes the random process.
   1875: 
-  1876: %app_derivation_SDE
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2052)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-  2050: \end{lem}
   2051: \begin{proof}
 > 2052: As an example, we show Eq.(\ref{eq:divide_F}).
   2053: The other two equalities are shown in a similar way.
-  2054: We divide a Leurant series $\theta(\zeta)=\sum_{n\in\mbb{Z}}\theta_{n}\zeta^{n}$ into the negative power part and the non-negative power part as
 
 - file: sample\arxiv_sources\2308.07921v1\iclr2023_conference.tex (line 862)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   860: 
    861: This matrix is very helpful for measuring more than just straightforward accuracy, based on which Precision and Recall are two important metrics. 
 >  862: They are defined in Eq.~\ref{eq:pr} and their meanings are as follows: 
    863: \begin{itemize}
-   864: \item Precision is the fraction of relevant instances among the retrieved instances. It is a measure of the accuracy of the classifier when it predicts the positive class.
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 395)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   393: \end{align}}
    394: where $\mathbf{R}^d_{\Theta, n-m} = (\mathbf{R}^d_{\Theta, m})^T\mathbf{R}^d_{\Theta, n}$ is a sparse orthogonal matrix. The additional terms (2), (3), (4) provide richer query and key representations when computing the attention scores.
 >  395: Thus modifying Equation~\ref{eq:vanillattention}:
    396: 
-   397: {\small
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 404)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   402: 
    403: Adding \(\mathbf{CE}\) after the projection to query and key can be seen as a refinement of 
 >  404: \(\mathbf{Q}\), \(\mathbf{K}\) by \(\mathbf{T}\), \(\mathbf{M}\), providing additional context to the attention scores. We also add a scaling factor of 3 to compensate for the additional terms in Equation \ref{eq:qkproduct}.
    405: \subsection{Multi-task Learning}
-   406: \begin{figure}[t]
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 549)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   547: \subsection{Ablation II: EPredictor Architecture \& CPMW}
    548: We explored several architectural changes and their impact on the CPMW: 
 >  549: we applied a RoPE (\textit{rot}), a cross attention with \textit{query} or \textit{key} or \textit{value} to the second multi-head attention block (\textit{cross}), added the context embedding $\mathbf{CE}$ (\textit{ce}) to layer \textit{1} and/or \textit{2}, applied a scaling factor of $\sqrt{3d}$ to $\mathbf{Q, K}$ as shown in Equation \ref{eq:vanillattention} (\textit{scale}), injected a relative matrix $\mathbf{S}_{rel}$ into the attention scores (\textit{speed}),
    550: and applied a mixed feed-forward network (\textit{mixffn}) \cite{NEURIPS2021_64f1f27b} to the mileage embedding. The \textit{time} model refers to $\mathbf{T}$ which is also added to $\mathbf{E}$. Finally, we trained a model with and without the \textit{Random Event Head}. 
-   551: Our experiments revealed several key insights:
 
 - file: sample\arxiv_sources\2501.04519v1\appendix.tex (line 5)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-     3: \subsection{Additional Experiments and Details}
      4: \label{sec:appendexp}
 >    5: \noindent\textbf{Data Generation Details}. As detailed in Sec.~\ref{sec:selfevolution}, each round starts by  self-generating step-by-step verified trajectories for 747k math word problems. The maximum tree depth $d$ is set to 16, with 16 MCTS rollouts conducted per problem by default. At each step, we allow to explore 8 candidate nodes, and the constant $c$ in Eq.~\ref{eq:uct} is set to 2 to promote greater exploration. In the bootstrap round, due to the large size of the initial policy model (236B), we used smaller parameters: 8 rollouts and 5 candidate nodes per step. To improve the accuracy of solving challenging problems in round 4, we increase the number of candidate nodes to 16 and conduct 2 MCTS tree expansions per problem using different random seeds.  Detailed prompts are available in Appendix~\ref{sec:prompt}. 
      6: 
-     7: 
 
 - file: sample\arxiv_sources\2501.04519v1\method.tex (line 59)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-    57: 
     58: 
 >   59: \noindent\textbf{Extensive Rollouts for Q-value Annotation}. Accurate Q-value $Q(s)$ annotation in Eq.~\ref{eq:uct} is crucial for guiding MCTS node selection towards correct problem-solving paths and identifying high-quality steps within trajectories. 
     60: To improve Q-value reliability, we draw inspiration from Go players, who  retrospectively evaluate the reward of each move based on game outcomes. Although initial estimates may be imprecise, repeated gameplay refines these evaluations over time. Similarly, in each rollout, we update the Q-value of each step based on its contribution to achieving the correct final answer. After extensive MCTS rollouts, steps consistently leading to correct answers achieve higher Q-values, occasional successes yield moderate Q-values, and consistently incorrect steps receive low Q-values. Specifically,  we introduce two self-annotation methods to obtain these step-level Q-values.  Fig.~\ref{fig:method}(c) shows the detailed setting in the four rounds of self-evolution.  
-    61: 
 
 - file: sample\arxiv_sources\2501.04519v1\method.tex (line 76)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-    74: 	q (s_i)^0=PPM(x\oplus s_1\oplus s_2\oplus ...\oplus s_{i-1}\oplus s_i)    
     75: \end{gather}
 >   76: This $q$ value will be updated based on terminal node's $q(s_d)$ value through MCTS \textit{back-propagation} in Eq.~\ref{eq:rollout}.
     77:  For terminal node $s_d$, we do not use  PRM for scoring during training data generation. Instead, we assign a more accurate score based on ground truth labels as terminal-guided rewarding.  
-    78: 
 
 - file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 928)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   926: \end{equation}
    927: 
 >  928: Assuming that P is faithful (A\ref{def:bn_faithfulness}) to \(\mathbb{G}\), no hidden confounders bias the estimate (A\ref{assumption:causal_sufficiency}) and temporal precedence (A\ref{assumption:temporal_precedence}), we can estimate the CMI \ref{eq:cmi_theorique} such that iif \(I(X_1, Y_j)|\emptyset) > 0 \Leftrightarrow Y_j \not\perp_{\theta_x, \theta_y} X_1 \implies Y_j \not\perp_{\mathbb{G}} X_1\) (Lemma \ref{lemma:oracle_identifiability}).
    929: 
-   930: Since we assume temporal precedence A\ref{assumption:temporal_precedence}, we can orient the edge such that \(X_1\) must be a parent of \(Y_j\) in \(\mathbb{G}\). Using Lemma \ref{lemma:mb_par}, we know that \(Par(Y_j) = \textbf{MB}(Y_j) \implies X_{1} \in \textbf{MB}(Y_j)\), thus we must include \(X_1\) in \(M^1_j \), otherwise not. 
 
 - file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 288)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   286: \textbf{Computation.}
    287: A key advantage of our approach is its scalability. Unlike traditional methods whose complexity depends on the event and label cardinality \(|\mathbb{X}|\) and \(|\mathbb{Y}|\) \cite{feature_selection_review}, \emph{our method is agnostic to both}. 
 >  288: Fig.~\ref{fig:oscar} shows all parallelised steps on GPUs. CMI estimations are independently performed for all positions \(i \in [c, L]\), with the sampling pushed into the batch dimension and results averaged across particles using Eq.~\ref{eq:cmi_approx}. This transitions the time complexity from \(\mathcal{O}(\text{BS} \times N \times L)\) to \(\mathcal{O}(1)\) per batch. A Pytorch \cite{pytorch} implementation is given in Appendix~\ref{lst:oscar}.
    289: 
-   290: \textbf{Causal Indicator.}
 
 - file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 464)
+  error: \ref{eq:
   message: Consider using \eqref instead of \ref for equations.
-   462: \end{equation}
    463: 
 >  464: Assuming that P is faithful (A\ref{def:bn_faithfulness}) to \(\mathbb{G}\), no hidden confounders bias the estimate (A\ref{assumption:causal_sufficiency}) and temporal precedence (A\ref{assumption:temporal_precedence}), we can estimate the CMI \ref{eq:cmi_theorique} such that iif \(I(X_1, Y_j)|\emptyset) > 0 \Leftrightarrow Y_j \not\perp_{\theta_x, \theta_y} X_1 \implies Y_j \not\perp_{\mathbb{G}} X_1\) (Lemma \ref{lemma:oracle_identifiability}).
    465: 
-   466: Since we assume temporal precedence A\ref{assumption:temporal_precedence}, we can orient the edge such that \(X_1\) must be a parent of \(Y_j\) in \(\mathbb{G}\). Using Lemma \ref{lemma:mb_par}, we know that \(Par(Y_j) = \textbf{MB}(Y_j) \implies X_{1} \in \textbf{MB}(Y_j)\), thus we must include \(X_1\) in \(M^1_j \), otherwise not. 
 

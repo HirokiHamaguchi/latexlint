@@ -54,7 +54,9 @@ def run_node_batch(tex_paths: List[Path]) -> Dict[str, Any]:
 
     try:
         cmd = ["node", str(NODE_RUNNER), "--batch", tmp_path]
-        result = subprocess.run(cmd, capture_output=True, text=True, check=False)
+        result = subprocess.run(
+            cmd, capture_output=True, text=True, encoding="utf-8", check=False
+        )
         stdout = result.stdout.strip()
         stderr = result.stderr.strip()
 
@@ -87,7 +89,7 @@ def run_node_batch(tex_paths: List[Path]) -> Dict[str, Any]:
             pass
 
 
-def format_context(tex_path: Path, start_line: int, context: int = 2) -> str:
+def format_context(tex_path: Path, start_line: int, context: int = 1) -> str:
     try:
         lines = tex_path.read_text(encoding="utf-8", errors="ignore").splitlines()
     except OSError as exc:  # noqa: BLE001
@@ -174,9 +176,6 @@ def run_diagnose() -> None:
 
             for result in results:
                 file_path = Path(result.get("file", ""))
-                print(
-                    f"Processed {file_path.relative_to(BASE_DIR) if file_path else 'unknown'}"
-                )
 
                 if not result.get("ok"):
                     failures += 1
@@ -200,12 +199,14 @@ def run_diagnose() -> None:
                         line = int(start.get("line", 0)) + 1
                         code = diag.get("code", {}).get("value", "unknown")
                         message = diag.get("message", "")
+                        error_text = diag.get("errorText", "")
                         diagnostics_by_code.setdefault(code, []).append(
                             {
                                 "file": file_path,
                                 "line": line,
                                 "message": message,
-                                "context": format_context(file_path, line, context=2),
+                                "error_text": error_text,
+                                "context": format_context(file_path, line, context=1),
                             }
                         )
 
@@ -233,6 +234,8 @@ def run_diagnose() -> None:
             parts.append(
                 f"- file: {Path(entry['file']).relative_to(BASE_DIR)} (line {entry['line']})"
             )
+            if entry.get("error_text"):
+                parts.append(f"  error: {entry['error_text']}")
             parts.append(f"  message: {entry['message']}")
             parts.append(entry["context"])
             parts.append("")

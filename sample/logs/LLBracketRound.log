@@ -1,9 +1,8 @@
 [CODE] LLBracketRound (1)
 - file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 939)
+  error: \sqrt(
   message: Did you mean "\sqrt{...}" instead of "\sqrt(...)"?
-   937: \textbf{Original Problem} & \textbf{Variant Problem} & \textbf{Variant Type} \\
    938: \midrule
 >  939:  Real numbers $x$ and $y$ satisfy the following system:  $x^2 + y^2 = 25$ \\ $(x + y + 5)(-x + y + 5)(x - y + 5)(x + y - 5) = 100$  and $x + y = \sqrt(m)$. Determine $m$. &  & Positive control (no variant) \\
    940: \midrule
-   941:  What is $28 + 13$? &  & Negative control (no variant) \\
 

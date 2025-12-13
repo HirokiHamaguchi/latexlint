@@ -1,289 +1,253 @@
 [CODE] LLBig (36)
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 178)
+  error: \otimes_
   message: Consider using \bigotimes for subscripts and superscripts.
-   176: Then a representation $\what{M}_{k}$ of the affine Lie algebra is obtained by induction:
    177: \begin{equation}
 >  178: 	\what{M}_{k}:=\mrm{Ind}_{\what{\mfrak{p}}}^{\what{\mfrak{g}}}M_{k}=U(\what{\mfrak{g}})\otimes_{U(\what{\mfrak{p}})}M_{k}.
    179: \end{equation}
-   180: By the Poincar\'{e}--Birkhoff--Witt theorem, it is isomorphic to $U(\mfrak{g}\otimes t^{-1}\mbb{C}[t^{-1}])\otimes_{\mbb{C}}M_{k}$ as a vector space.
 
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 180)
+  error: \otimes_
   message: Consider using \bigotimes for subscripts and superscripts.
-   178: 	\what{M}_{k}:=\mrm{Ind}_{\what{\mfrak{p}}}^{\what{\mfrak{g}}}M_{k}=U(\what{\mfrak{g}})\otimes_{U(\what{\mfrak{p}})}M_{k}.
    179: \end{equation}
 >  180: By the Poincar\'{e}--Birkhoff--Witt theorem, it is isomorphic to $U(\mfrak{g}\otimes t^{-1}\mbb{C}[t^{-1}])\otimes_{\mbb{C}}M_{k}$ as a vector space.
    181: For a finite-dimensional irreducible representation $L(\Lambda)$ of $\mfrak{g}$, $\what{L(\Lambda)}_{k}$, called a Weyl module,
-   182: may be reducible for specific levels.
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 220)
+  error: \otimes_
   message: Consider using \bigotimes for subscripts and superscripts.
-   218: For a pair $(c,h)\in\mbb{C}^{2}$, let $\mbb{C}_{(c,h)}=\mbb{C}{\bf 1}_{(c,h)}$ be a {{one-dimensional}} representation of $\mrm{Vir}_{\ge 0}$
    219: on which $C$ and $L_{0}$ act as multiplication by $c$ and $h$, respectively.
 >  220: The highest weight Verma module $M(c,h)$ of highest weight $(c,h)$ is defined by induction $M(c,h)=U(\mrm{Vir})\otimes_{U(\mrm{Vir}_{\ge 0})}\mbb{C}_{(c,h)}$,
    221: which is isomorphic to $U(\mrm{Vir}_{<0})\otimes \mbb{C}_{(c,h)}$ as a vector space or a $\mrm{Vir}_{<0}$-module.
-   222: The numbers $c$ and $h$ in the highest weight are called the central charge and the conformal weight of the highest weight Verma module $M(c,h)$, respectively.
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 603)
+  error: \otimes_
   message: Consider using \bigotimes for subscripts and superscripts.
-   601: Then we obtain a representation $\what{M}_{k}$ of the affine Lie algebra $\what{\mfrak{g}}$ by
    602: \begin{equation}
 >  603: 	\what{M}_{k}=\mrm{Ind}_{\mfrak{g}\otimes\mbb{C}[\zeta]\oplus\mbb{C}K}^{\what{\mfrak{g}}}M=U(\what{\mfrak{g}})\otimes_{U(\mfrak{g}\otimes\mbb{C}[\zeta]\oplus\mbb{C}K)}M.
    604: \end{equation}
-   605: Here {{the}} introduced complex number $k$ is called the level of the representation.
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 606)
+  error: \otimes_
   message: Consider using \bigotimes for subscripts and superscripts.
-   604: \end{equation}
    605: Here {{the}} introduced complex number $k$ is called the level of the representation.
 >  606: By the Poincar\'{e}-Birkhoff-Witt theorem, $\what{M}_{k}$ is isomorphic to $U(\mfrak{g}\otimes \zeta^{-1}\mbb{C}[\zeta^{-1}])\otimes_{\mbb{C}}M$ as a vector space
    607: or a $U(\mfrak{g}\otimes \zeta^{-1}\mbb{C}[\zeta^{-1}])$-module.
-   608: 
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1054)
+  error: \otimes_
   message: Consider using \bigotimes for subscripts and superscripts.
-  1052: The spin-$\frac{1}{2}$ representation $L_{\mfrak{g}}(\Lambda,1)$ corresponding to $\Lambda$ is also realized as a module of the lattice VOA $V_{Q}$ by $V_{Q+\Lambda}${{, which}} is defined by
   1053: \begin{equation}
 > 1054: 	V_{Q+\Lambda}= \bigoplus_{\beta\in Q}L_{\mbb{C}\otimes_{\mbb{Z}}Q}(0,1)\otimes e^{\beta+\Lambda}.
   1055: \end{equation}
-  1056: Here $L_{\mbb{C}\otimes_{\mbb{Z}}Q}(0,1)$ is the vacuum Fock space introduced in Sect.\ref{sect:rep_aff_alg}.
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1056)
+  error: \otimes_
   message: Consider using \bigotimes for subscripts and superscripts.
-  1054: 	V_{Q+\Lambda}= \bigoplus_{\beta\in Q}L_{\mbb{C}\otimes_{\mbb{Z}}Q}(0,1)\otimes e^{\beta+\Lambda}.
   1055: \end{equation}
 > 1056: Here $L_{\mbb{C}\otimes_{\mbb{Z}}Q}(0,1)$ is the vacuum Fock space introduced in Sect.\ref{sect:rep_aff_alg}.
   1057: Let the top space of $L_{\mfrak{sl}_{2}}(\Lambda,1)$ be realized as  $L(\Lambda)=\mbb{C}v_{0}\oplus\mbb{C}v_{1}$ so that $Ev_{0}=0$.
-  1058: Then the isomorphism $L_{\mfrak{sl}_{2}}(\Lambda,1)\simeq V_{Q+\Lambda}$ is determined by
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1753)
+  error: \otimes_
   message: Consider using \bigotimes for subscripts and superscripts.
-  1751: for $\alpha,\beta\in L$.
   1752: 
 > 1753: We set $\mfrak{h}=\mbb{C}\otimes_{\mbb{Z}}L$ and extend the symmetric $\mbb{Z}$-bilinear form $(\cdot|\cdot)$ on $L$
   1754: to a symmetric $\mbb{C}$-bilinear form on $\mfrak{h}$.
-  1755: Then we obtain the corresponding Heisenberg algebra $\widehat{\mfrak{h}}$ and its vacuum representation $L_{\mfrak{h}}(0,1)$ of level $1$.
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 744)
+  error: \cap_
   message: Consider using \bigcap for subscripts and superscripts.
-   742:   That is, there are open sets $U$ and $\{D_n\}_{n\in\omega}$ such that
    743: each $D_n$ is dense,
 >  744: and for all $X \in \cap_n D_n$, $X \in U \Leftrightarrow X \in A$.
    745: A basic proposition is that
-   746: every Borel set has the property of Baire, but what is the 
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 762)
+  error: \cap_
   message: Consider using \bigcap for subscripts and superscripts.
-   760: If $T$ is a Borel code and $U,V,\{D_n\}$ is a Baire code, we say that 
    761: $U,V,\{D_n\}$ is a \emph{Baire approximation} to $T$ if
 >  762: for all $X \in \cap_n D_n$,
    763:   $X \in U \Rightarrow X \in \makeset T$ and
-   764:   $X \in V \Rightarrow X \in \makeset{T^c}$.
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 925)
+  error: \cap_
   message: Consider using \bigcap for subscripts and superscripts.
-   923: as well as a uniform sequence 
    924: of $\Sigma^0_a$
 >  925: codes for dense open sets $D_n$ such that for all $X \in \cap_k D_k$, 
    926: we have $X \in A$ if and only if $X \in U$.  
-   927: \end{proposition}
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 934)
+  error: \cup_
   message: Consider using \bigcup for subscripts and superscripts.
-   932: The result is is immediate if $a$ is the 0 ordinal 
    933: (in which case all sets described are clopen).  Suppose that it holds
 >  934: for all $b<_\ast a$.  We have $A = \cup_n A_n$ where each 
    935: $A_n$ is $\Pi^0_{b_n}$ for some $b_n <_\ast a$.  Apply the 
-   936: induction hypothesis to the complements $A_n^c$ to 
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 939)
+  error: \cap_
   message: Consider using \bigcap for subscripts and superscripts.
-   937: get a sequence of open sets $U_n$ and a double sequence 
    938: of dense open sets $D_{n,k}$, where each $U_n$ and $D_{n,k}$
 >  939: have a $\Sigma^0_{b_n}$ code, and any $X \in \cap_k D_{n,k}$ 
    940: is in $A_n^c$ if and only if it is in $U_n$.  Define $V_n$ to be the 
-   941: interior of $U_n^c$.  Then each $V_n$ is uniformly 
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 943)
+  error: \cup_
   message: Consider using \bigcup for subscripts and superscripts.
-   941: interior of $U_n^c$.  Then each $V_n$ is uniformly 
    942: $\Sigma^0_{b_n+1}$ and thus $\Sigma^0_a$.  We can let 
 >  943: $U = \cup_n V_n$ and let the sequence of dense open sets 
    944: include all sets $D_{n,k}$, as well as sets of the form $U_n \cup V_n$.
-   945: Suppose that $X$ meets all these dense sets. The $X \in A$ 
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 1222)
+  error: \cup_
   message: Consider using \bigcup for subscripts and superscripts.
-  1220: these remains completely determined because each $X$ 
   1221: passes through at most one of these sets.  Any Baire 
 > 1222: approximation to $\cup_{k : \phi_k \text{ is true }} [0^k1]$
   1223: computes $\{k : \phi_k \text{ is true}\}$.
-  1224: \end{proof}
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 1321)
+  error: \cup_
   message: Consider using \bigcup for subscripts and superscripts.
-  1319: For property (3), 
   1320: letting $\sigma$ be a union node and $p \in 2^{<\omega}$, we will show 
 > 1321: that $U_\sigma$ is dense in $[p]$ if and only if $\cup_n U_{\sigma\concat n}$ 
   1322: is dense in $[p]$.
-  1323: Suppose that $\cup_n U_{\sigma\concat n}$ is not dense in $[p]$.  
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 1323)
+  error: \cup_
   message: Consider using \bigcup for subscripts and superscripts.
-  1321: that $U_\sigma$ is dense in $[p]$ if and only if $\cup_n U_{\sigma\concat n}$ 
   1322: is dense in $[p]$.
 > 1323: Suppose that $\cup_n U_{\sigma\concat n}$ is not dense in $[p]$.  
   1324: Let $q$ extend $p$ such that for all $n$, 
-  1325: $U_{\sigma\concat n} \cap [q] = \emptyset$.  Then define $Y$ 
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 1329)
+  error: \cap_
   message: Consider using \bigcap for subscripts and superscripts.
-  1327: \begin{enumerate}[(i)]
   1328: \item For all $n$, $Y \in V_{\sigma\concat n}$
 > 1329: \item\label{i2} For all $n$, $0^{\ceil {\sigma\concat n}}1\concat Y \in \cap_k D_k$
   1330: \item $Y \in U_\sigma \cup V_\sigma$
-  1331: \item\label{i4} $0^{\ceil \sigma}1\concat Y \in \cap_k D_k$
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 1331)
+  error: \cap_
   message: Consider using \bigcap for subscripts and superscripts.
-  1329: \item\label{i2} For all $n$, $0^{\ceil {\sigma\concat n}}1\concat Y \in \cap_k D_k$
   1330: \item $Y \in U_\sigma \cup V_\sigma$
 > 1331: \item\label{i4} $0^{\ceil \sigma}1\concat Y \in \cap_k D_k$
   1332: \end{enumerate}
-  1333: The first comeager event guarantees that $Y \in V_{\sigma\concat n}$ for 
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 1342)
+  error: \cup_
   message: Consider using \bigcup for subscripts and superscripts.
-  1340: that $Y \in V_\sigma$, and so $U_\sigma$ is not dense in $[p]$. 
   1341: On the other hand, if $U_\sigma$ is not dense in $[p]$, 
 > 1342: then assuming $\cup_n U_{\sigma\concat n}$ is dense in $[p]$ 
   1343: leads to a contradiction, for we may similarly define $Y$ 
-  1344: to meet $V_\sigma\cap [p]$ and $\cup_n U_{\sigma\concat n}$, 
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 1344)
+  error: \cup_
   message: Consider using \bigcup for subscripts and superscripts.
-  1342: then assuming $\cup_n U_{\sigma\concat n}$ is dense in $[p]$ 
   1343: leads to a contradiction, for we may similarly define $Y$ 
 > 1344: to meet $V_\sigma\cap [p]$ and $\cup_n U_{\sigma\concat n}$, 
   1345: while also satisfying (\ref{i2}) and (\ref{i4}).
-  1346: 
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 1371)
+  error: \cap_
   message: Consider using \bigcap for subscripts and superscripts.
-  1369: The properties of a Baire decomposition suffice to ensure that 
   1370: $(U_\lambda, V_\lambda,  \{D_n\}_{n\in\omega})$ is a Baire code.  
 > 1371: We must show that if $X \in \cap_n D_n$, then $X \in U_\lambda \implies 
   1372: X\in \makeset{T}$ and $X \in V_\lambda \implies X \in \makeset T^c$.
-  1373: Fix $X\in \cap_n D_n$.  We prove by arithmetic transfinite induction 
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 1373)
+  error: \cap_
   message: Consider using \bigcap for subscripts and superscripts.
-  1371: We must show that if $X \in \cap_n D_n$, then $X \in U_\lambda \implies 
   1372: X\in \makeset{T}$ and $X \in V_\lambda \implies X \in \makeset T^c$.
 > 1373: Fix $X\in \cap_n D_n$.  We prove by arithmetic transfinite induction 
   1374: that for all $\sigma \in T$, if $X \in U_\sigma$ then 
-  1375: $X \in \makeset{T_\sigma}$ and if $X \in V_\sigma$ then 
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 1387)
+  error: \cup_
   message: Consider using \bigcup for subscripts and superscripts.
-  1385: On the other hand, if $X \in V_\sigma$, let $p \prec X$ be such that $p \in V_\sigma$.
   1386: Then $U_\sigma \cap [p] = \emptyset$, so 
 > 1387: $\cup_n U_{\sigma\concat n} \cap [p] =\emptyset$.  Recall that $U_{\sigma\concat n} \cup V_{\sigma\concat n}$ is dense by definition.  So for each $n$, 
   1388: $V_{\sigma \concat n}$ is dense in $[p]$.  Therefore, $X$ meets 
-  1389: each $V_{\sigma\concat n}$, so by induction 
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 1558)
+  error: \cap_
   message: Consider using \bigcap for subscripts and superscripts.
-  1556: Proposition \ref{prop:9},
   1557: $(D_{m,\tau})_m \in \Delta^1_1$.  Therefore, for all 
 > 1558: $p \in 2^{<\omega}$, we have $p\concat G_i, p\concat G_j \in \cap_m D_{m,\tau}$.
   1559: Therefore, if $p\concat G_i \in U_\tau$, then 
-  1560: $p\concat G_i \in \makeset{T_\tau}$, and if 
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 2223)
+  error: \cap_
   message: Consider using \bigcap for subscripts and superscripts.
-  2221: For any $p \in 2^{<\omega}$, define 
   2222: $D_{i,p} = \{q : p\concat q \in D_i\}$.
 > 2223: We claim that any $G \in \cap_{i,p} D_{i,p}$ 
   2224: is $\Delta^1_1(Z)$-generic.  For this we argue that
-  2225: every dense open $B \in \Delta^1_1(Z)$ actually contains
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 2236)
+  error: \cup_
   message: Consider using \bigcup for subscripts and superscripts.
-  2234: Let $p = 0^e1$.
   2235: We claim that $D_{\ell,p} \subseteq B$, where 
 > 2236: $D_\ell = \cup_m U_{\sigma\concat m}\cup V_{\sigma}$.
   2237: Let $q$ be such that $p\concat q \in D_\ell$.
-  2238: To finish the proof, we need to show that $[q] \subseteq B$.
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 2244)
+  error: \cap_
   message: Consider using \bigcap for subscripts and superscripts.
-  2242: will be called \emph{sufficiently generic}:
   2243: \begin{itemize}
 > 2244: \item $X \in \cap_i D_i$, and
   2245: \item $X$ is 1-generic relative to $H_{b+O(1)}^Z$
-  2246: \end{itemize}
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 2334)
+  error: \cup_
   message: Consider using \bigcup for subscripts and superscripts.
-  2332: way to formulate the hypotheses of the above theorem is roughly
   2333: ``Whenever there are Borel codes $T_1,\dots T_\ell$ such that 
 > 2334: for every $X \in k^\omega$, we have $X \in \makeset{\cup_{i<\ell} T_i}$, 
   2335: ...''
-  2336: (See below for a precise formalization).
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 2467)
+  error: \cap_
   message: Consider using \bigcap for subscripts and superscripts.
-  2465: an evaluation map for $X$ in $R$ may safely put zeros 
   2466: at every node of $R$ except for the root and the nodes 
 > 2467: of the distinguished subtree $\cap_{s>b} C_{a,b,s}$.  The leaves of 
   2468: that subtree can be $X\oplus A$-computably filled out. 
-  2469: Then the root of $R$ and the root of the subtree 
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 2470)
+  error: \cap_
   message: Consider using \bigcap for subscripts and superscripts.
-  2468: that subtree can be $X\oplus A$-computably filled out. 
   2469: Then the root of $R$ and the root of the subtree 
 > 2470: $\cap_{s>b} C_{a,b,s}$ may 
   2471: be non-uniformly supplied with their unique correct values.
-  2472: 
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 2532)
+  error: \cap_
   message: Consider using \bigcap for subscripts and superscripts.
-  2530: any evaluation map for $X$ in $R$ can safely fill in zeros 
   2531: everywhere except for the root of $R$ and the distinguished 
 > 2532: subtree rooted at $\cap_{i\leq a}C_{a,b,d_i}$.  This subtree has well-founded 
   2533: rank $d_a + O(1)$, so the unique evaluation map on it is 
-  2534: $H_{d_a + O(1)}^A$-computable.  Because $H_d^A \in M$ for all 
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 2573)
+  error: \cup_
   message: Consider using \bigcup for subscripts and superscripts.
-  2571: 
   2572: The subtle difference lies in the fact that if 
 > 2573: $X \in \makeset{\cup_{i<\ell} T_i}$, the evaluation map 
   2574: for $X$ in that code must also prove that 
-  2575: $X \in \makeset{T_i}$ or $X \in \makeset{T_i^c}$ for 
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 283)
+  error: \cup_
   message: Consider using \bigcup for subscripts and superscripts.
-   281: 
    282: \section{A Novel Floer Homology from Boundary Vafa-Witten Theory}\label{vwsqm}
 >  283: In this section, we will show how we can physically derive a novel Floer homology by considering boundary VW theory on $M_4 = M_3 \times \mathbb{R}^+$ to physically derive a VW Floer homology assigned to $M_3$.\footnote{To be precise, VW theory is still being defined on an $M_4$ with no boundary. However, to make contact with Floer theory, we will need to examine a hyper-slice of $M_4$, which we can topologically regard as $M_3 \times \mathbb{R}^- \cup_{M_3} M_3 \times \mathbb{R}^+$. 
    284: %We have exploited the topological invariance of the theory to formally bring the $-\infty$ end of $\mathbb{R}$ to zero, 
-   285: As there is no time-evolution in our topological theory, it is sufficient to examine only $M_3 \times \mathbb{R}^+$, where $M_3$ can then be regarded as a boundary. %because expressing $M_4$ as $M_4=M_3 \times \mathbb{R}^+$ 
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 382)
+  error: \cup_
   message: Consider using \bigcup for subscripts and superscripts.
-   380: \section{A Vafa-Witten Atiyah-Floer Correspondence}\label{vwafconj}
    381: In this section, we continue with a Heegaard split of $M_3$ into $M'_3$ and $M''_3$ along a Riemann surface $C$, as shown in Fig.~\ref{fig:heegaardsplit} (left), allowing us to relate Vafa-Witten Floer homology obtained in the previous section to Lagrangian Floer homology, in what is a novel Vafa-Witten version of the Atiyah-Floer correspondence~\cite{A81} based on instantons. In doing so, we would be able to physically prove and generalize a conjecture by mathematicians Abouzaid-Manolescu about the hypercohomology of a perverse sheaf of vanishing cycles in the moduli space of irreducible flat $SL(2, \mathbb{C})$-connections on $M_3$.  
 >  382:  We can thus write $M_4=\big(\mathbb{R}^+ \times I'\times C\big) \cup_{C} \big(\mathbb{R}^+ \times I''\times C\big)$, where $M'_3=I'\times C$ and $M''_3 = I''\times C$. This is illustrated in Fig.~\ref{fig:heegaardsplit} (right), where taking $C \to 0$, we indeed have $\mathbb{R}^+ \times I'$ and $\mathbb{R}^+ \times I''$.
    383:  \begin{figure}
-   384:     \centering
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 450)
+  error: \cup_
   message: Consider using \bigcup for subscripts and superscripts.
-   448: 
    449: A hypercohomology $\text{HP}^*(M_3)$ was constructed by Abouzaid-Manolescu in \cite{AM20}, where it was conjectured to be isomorphic to instanton Floer homology assigned to $M_3$ for the complex gauge group $SL(2,\mathbb{C})$.  
 >  450: Its construction  was via a Heegaard split of $M_3=M'_3 \cup_{C}M''_3$ along $C$ of genus $g$, and the intersection of the two associated Lagrangians in the moduli space $X_{\text{irr}}(C)$  of irreducible flat $SL(2, \mathbb{C})$-connections on $C$ (that represent solutions extendable to $M'_3$ and $M''_3$, respectively), to which one can associate a perverse sheaf of vanishing cycles. $\text{HP}^*(M_3)$ is then the hypercohomology of this perverse sheaf of vanishing cycles in $X_{\text{irr}}(M_3)$, where it is an invariant of $M_3$ independent of the Heegaard split. 
    451: 
-   452: Based on the mathematical construction of $\text{HP}^*(M_3)$ described above, it would mean that a physical realization of (the dual of) $\text{HP}^*(M_3)$ ought to be via an open $A$-model with Lagrangian branes $L_0$ and $L_1$ in the target $X_{\text{irr}}(C)$, where the observables contributing to the partition function can be interpreted as classes in the Lagrangian Floer homology $ \text{HF}_{*}^{\text{Lagr}}\big(X_{\text{irr}}(C), L_0, L_1, \tau\big)$.
 

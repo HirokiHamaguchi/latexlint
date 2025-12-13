@@ -24,17 +24,17 @@ export default function LLSortedCites(
   const natbibMatches = [
     ...txt.text.matchAll(/\\usepackage(\[[^\]]*\])?\{natbib\}/g),
   ];
-  if (natbibMatches.length === 0) return [];
 
+  let haveNatbib = false;
   let hasNatbibSort = false;
   for (const match of natbibMatches) {
     const idx = match.index;
     if (idx === null || !txt.isValid(idx)) continue;
+    haveNatbib = true;
     const options = match[1];
-    if (!options) continue;
-    if (options.includes("sort")) hasNatbibSort = true;
+    if (options && options.includes("sort")) hasNatbibSort = true;
   }
-  if (hasNatbibSort) return [];
+  if (!haveNatbib || hasNatbibSort) return [];
 
   const citePackagePattern = /\\usepackage(\[[^\]]*\])?\{cite\}/;
   const biblatexPattern = /\\usepackage(\[[^\]]*\])?\{biblatex\}/;

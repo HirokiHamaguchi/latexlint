@@ -1,12 +1,4 @@
-[CODE] LLSortedCites (7)
-- file: sample\arxiv_sources\1912.00839v1\AAAI-YuanK.6564.tex (line 519)
-  message: Consider automatically sorting citations. See the link for details.
-   517: and the National Science Foundation.
-   518: \bibliographystyle{aaai}
->  519: \bibliography{ref}
-   520: 
-   521: 
-
+[CODE] LLSortedCites (5)
 - file: sample\arxiv_sources\2103.03874v2\main.tex (line 181)
   message: Consider automatically sorting citations. See the link for details.
    179: 
@@ -45,12 +37,4 @@
 >  685: \bibliography{custom}
    686: 
    687: \appendix
-
-- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 350)
-  message: Consider automatically sorting citations. See the link for details.
-   348: We pointed out limitations, notably the oracle assumption, which might not hold for rare labels. Nevertheless, by combining pretrained autoregressive Transformers with vectorized CI-testing, OSCAR delivers, for the first time, interpretable causal graphs with quantified causal indicators for thousands of different events. This brings causal discovery closer to large-scale reasoning, making it practical for real-world sequential data.
-   349: 
->  350: \bibliography{math}
-   351: \appendix
-   352: 
 

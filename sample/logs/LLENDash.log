@@ -1,4 +1,4 @@
-[CODE] LLENDash (334)
+[CODE] LLENDash (295)
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 455)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
    453: 
@@ -38,14 +38,6 @@
 >  120: It is a well know fact that for any positive shift-invariant Borel measures $\Lambda$ and $M$,  absolute continuity relation $\Lambda\ll M$ implies that $E_{M}(1_{_1[e]}|\mathcal{F})=E_{\Lambda}(1_{_1[e]}|\mathcal{F})$ $\Lambda$-a.e. (as  the shift-invariance of the measures implies that  $d\Lambda/dM \circ S =  d\Lambda/dM$ $M$-a.e., where  $d\Lambda/dM$ is the Radon-Nikodym derivative, which in turn implies that $E_{M}(d\Lambda/dM|\mathcal{F}) \circ S = E_{M}(d\Lambda/dM|\mathcal{F})$ $M$-a.e., and this implies the fact). Therefore, 
    121: \[E_{\Phi\left(\nu'_0\right)}\left(1_{_1[e]}|\mathcal{F}\right) = E_{\Phi\left(\mu\right)}\left(1_{_1[e]}|\mathcal{F}\right)\ \ \  \Phi(\nu'_0)\mbox{-a.e.}.\] 
    122: Furthermore, by Lemma 6 in \cite{Wer6} or Theorem 1 (iii) in \cite{Wer12},
-
-- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 355)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   353: 
-   354: \author[Rolin]{Jean-Philippe Rolin}
->  355: \address{Universit\'e de Bourgogne Franche-Comt\'e, IMB,
-   356: CNRS UMR 5584,
-   357: 9 Avenue Savary
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 378)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -126,22 +118,6 @@
 > 3570: (by the Cauchy-Schwartz inequality, since $\vol_{n}\left(B_{y}\right)<+\infty$).
   3571: So we may define $F\colon \RR^{n+1}\to\CC$ by
   3572: \begin{equation}
-
-- file: sample\arxiv_sources\1609.01657v1\main.tex (line 140)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   138: \end{figure}
-   139: 
->  140: This `wire` is based on the leitmotif of mathematical models but touches on history of mathematics, applied mathematics, projective geometry and so on. Alternatively, one can select various contributions of some Italian mathematicians, e.g., those from the beginning of the XXth century, and tell the mathematical notions developed through their life: from Guido Castelnuovo (1865-1952) to Federigo Enriques (1871-1946) from Bruno de Finetti (1906-1985) to Tullio Levi-Civita (1873-1941), etc. {\it MadeInMath} is also an exhibition aimed at the present and the future, rich in historical references that serve to better understand how Mathematics is evolving and will evolve in our times. Two installations are dedicated to the present and the future. Finally, some young researchers, who talk about their dreams and their hopes, give meaning to the concerns expressed by the {\it Mappa dei matematici italiani all'estero} (Maps of the Italian Mathematicians abroad) designed by the Unione Matematica Italiana \cite{map} and give substance to the description of the places where research is done and taught.
-   141: 
-   142: \begin{figure}[ht]
-
-- file: sample\arxiv_sources\1609.03457v1\examples-screenshots.tex (line 124)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   122: \begin{figure}[H]
-   123: 	\centering
->  124: 	\makebox[\linewidth]{\includegraphics[width=14cm,frame]{Wolfram-Alpha_erfc_search}}
-   125: 	\caption{A Wolfram Alpha search, using a LaTeX-encoded query, for the integral representation of the $\erfc(z)$.}
-   126: 	\label{fig:WolframAlpha-screen}
 
 - file: sample\arxiv_sources\1609.03457v1\tables_for-avail-engines-chapter.tex (line 275)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -255,14 +231,6 @@
   1492: a parallel construction to ours presented in this paper will be possible for a twisted affine Lie algebra.
   1493: We consider the case that internal symmetry is encoded in a more complicated Lie algebra to be nontrivial.
 
-- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1716)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-  1714: Indeed, we have the following example.
-  1715: 
-> 1716: \begin{thm}[Frenkel-Zhu \cite{FrenkelZhu1992}]
-  1717: Let $\mfrak{g}$ be a finite-dimensional simple Lie algebra and $k\in\mbb{Z}_{>0}$.
-  1718: The simple $L_{\mfrak{g},k}$-modules are exhausted by $L_{\mfrak{g}}(\Lambda,k)$ with $\Lambda\in P_{+}^{k}$,
-
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1800)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
   1798: It is also clear that $V_{L+\varpi}$ depends only on the equivalence class $[\varpi]$ of $\varpi$ in $L^{\ast}/L$.
@@ -318,14 +286,6 @@
 >   14: The Galois theory today is based on automorphisms of a field extension that leave the basic field invariant. Central in this theory is the well-known correspondence theorem usually proven with an Artin-Dedekind lemma. This article will provide a proof of this theorem which is inspired by ideas you can find in the \textit {M\'{e}moire sur les conditions de r\'{e}solubilit\'{e} des \'{e}quations par radicaux.} For translations see \cite{1,2,4}, for the original manuscript see \cite{3}.  The article also refers to the main theorem of the symmetric polynomials wich Galois also often uses. This article therefore shows that the motto \textit{"Read the masters"}$\footnote[1]{Edwards and Tignol support this motto.}$ works.\\\
     15: 
     16: \begin{figure}[h!]
-
-- file: sample\arxiv_sources\1905.00894v1\hoofdstellingmodernengels.tex (line 55)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-    53: 
-    54:      \bibitem{4} Harold M. Edwards \textit{Galois for 21st-century readers}. Notices Amer. Math. Soc., 59(7):912-923.
->   55:      \bibitem{5} Ben Blum-Smith and Samuel Coskey https://arxiv.org/abs/1301.7116
-    56:      \bibitem{6} Jean-Pierre Tignol,\textit{ Galois' Theory of Algebraic Equations}, second edition, World Scientific, 2016.
-    57: 	
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 353)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -391,14 +351,6 @@
    248: 
    249: Looking inside a body may be a difficult task. Our body is not transparent and cutting a person in order to see what's on the inside may not always be a good idea. Radiography, using X-rays, helped in seeing bones, since the rest of the body is trasparent to X-rays, but they are not a good means to inspect soft parts of our bodies.
 
-- file: sample\arxiv_sources\2105.03843v1\IsMathUseful.tex (line 253)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   251: Medicine was in search for a tool we were appearently lacking: a way to see inside our bodies without tearing them apart. The tool was only appearently lacking. Indeed math has invented ways to transform local informations into global ones and viceversa: trasformation and antitransformation. There are several of them, and they answer to different needs, but actually what a transformation does is taking as an input a function or a series of numbers, and giving back another function or a series of numbers; the antitrasformation going the opposite direction and being an inverse to the transformation. Usually these tools work computing integrals.
-   252: 
->  253: Sending rays through your body and see how much they were absorbed was not a new idea (indeed it was used with X-rays and radiography), but it is just in the early Seventies that a physicist (Allan Cormack) and an engineer (Godfrey Housefield) had the idea of using Radon-Nikodim transformation and its inverse in order to compute from the information of rays absorbed in the various direction a 3D model of the inside of a body. This application of math eventually led to the Nobel Prize for Medicine (in 1979) for the two and gave a huge tool of diagnosis to hospitals all around the world.
-   254: 
-   255: When Radon-Nicodim transformation was developed in 1917, it was a completely pure and "useless" tool of high mathematics. Of course, computers were far from being invented, at that time, and practical applications of the Radon antitransformation were unforeseeable. But, as we said, all mathematics is eventually applied mathematics. And you never know when something you know may actually turn useful. In any case, it is better to know more than less.
-
 - file: sample\arxiv_sources\2105.03843v1\IsMathUseful.tex (line 255)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
    253: Sending rays through your body and see how much they were absorbed was not a new idea (indeed it was used with X-rays and radiography), but it is just in the early Seventies that a physicist (Allan Cormack) and an engineer (Godfrey Housefield) had the idea of using Radon-Nikodim transformation and its inverse in order to compute from the information of rays absorbed in the various direction a 3D model of the inside of a body. This application of math eventually led to the Nobel Prize for Medicine (in 1979) for the two and gave a huge tool of diagnosis to hospitals all around the world.
@@ -406,46 +358,6 @@
 >  255: When Radon-Nicodim transformation was developed in 1917, it was a completely pure and "useless" tool of high mathematics. Of course, computers were far from being invented, at that time, and practical applications of the Radon antitransformation were unforeseeable. But, as we said, all mathematics is eventually applied mathematics. And you never know when something you know may actually turn useful. In any case, it is better to know more than less.
    256: 
    257: 
-
-- file: sample\arxiv_sources\2209.05238v2\biblio.tex (line 5)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-     3: \bibitem{Be-Br-Na-Sm22} J.\,P.~Bell, K.~Brown, Z.~Nazemian, and D.~Smertnig, \emph{On noncommutative bounded factorization domains and prime rings}, J.~Algebra \textbf{622} (May 2023), 404--449.
-     4: %
->    5: \bibitem{Boy-Coy2019} J.\,G.~Boynton and J.~Coykendall, \emph{An example of an atomic pullback without the ACCP}, J.~Pure Appl.~Algebra \textbf{223} (2019), 619--625. 
-     6: %
-     7: \bibitem{Chap-2014} S.\,T.~Chapman, \emph{A Tale of Two Monoids: A Friendly Introduction to Nonunique Factorizations}, Math.~Mag.~\textbf{87} (2014), No.~3, 163--173.
-
-- file: sample\arxiv_sources\2209.05238v2\biblio.tex (line 27)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-    25: \bibitem{Co-Tr-22(a)} L.~Cossu and S.~Tringali, \emph{Factorization under Local Finiteness Conditions}, to appear in J.~Algebra (\url{https://arxiv.org/abs/2208.05869}). 
-    26: %
->   27: \bibitem{Coy-Go2019} J.~Coykendall and F.~Gotti, \emph{On the atomicity of monoid algebras}, J.~Algebra \textbf{539} (2019), 138--151. 
-    28: %
-    29: \bibitem{Dav-Pri2002} B.\,A.~Davey and H.\,A.~Priestley, \emph{Introduction to Lattices and Order}, Cambridge Univ.~Press, 2002 (2nd ed.).
-
-- file: sample\arxiv_sources\2209.05238v2\biblio.tex (line 29)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-    27: \bibitem{Coy-Go2019} J.~Coykendall and F.~Gotti, \emph{On the atomicity of monoid algebras}, J.~Algebra \textbf{539} (2019), 138--151. 
-    28: %
->   29: \bibitem{Dav-Pri2002} B.\,A.~Davey and H.\,A.~Priestley, \emph{Introduction to Lattices and Order}, Cambridge Univ.~Press, 2002 (2nd ed.).
-    30: %
-    31: %\bibitem{Fac-Fas18} A.~Facchini and M.~Fassina, \emph{Factorization of elements in noncommutative rings, II}, Comm.~Algebra \textbf{46} (2018), No.~7, 2928--2946.
-
-- file: sample\arxiv_sources\2209.05238v2\biblio.tex (line 35)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-    33: \bibitem{Fa-Tr18} Y.~Fan and S.~Tringali, \emph{Power monoids: A bridge between Factorization Theory and Arithmetic Combinatorics}, J.~Algebra \textbf{512} (Oct.~2018), 252--294.
-    34: %
->   35: \bibitem{GeHK06} A.~Geroldinger and F.~Halter-Koch, \emph{Non-Unique Factorizations. Algebraic, Combinatorial and Analytic Theory}, Pure Appl.~Math.~\textbf{278}, Chapman \& Hall/CRC, Boca Raton (FL), 2006.
-    36: %
-    37: \bibitem{Ger-Zho2020} A.~Geroldinger and Q.~Zhong, \emph{Factorization theory in commutative monoids}, Semigroup Forum \textbf{100} (2020), 22--51.
-
-- file: sample\arxiv_sources\2209.05238v2\biblio.tex (line 37)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-    35: \bibitem{GeHK06} A.~Geroldinger and F.~Halter-Koch, \emph{Non-Unique Factorizations. Algebraic, Combinatorial and Analytic Theory}, Pure Appl.~Math.~\textbf{278}, Chapman \& Hall/CRC, Boca Raton (FL), 2006.
-    36: %
->   37: \bibitem{Ger-Zho2020} A.~Geroldinger and Q.~Zhong, \emph{Factorization theory in commutative monoids}, Semigroup Forum \textbf{100} (2020), 22--51.
-    38: %
-    39: \bibitem{Gil84} R.~Gilmer, \emph{Commutative Semigroup Rings}, Chicago Lect.~Math., Univ.~of Chicago
 
 - file: sample\arxiv_sources\2209.05238v2\main.tex (line 44)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -486,22 +398,6 @@
 >   73: \author{Meng-Chwan~Tan}
     74: \address{Department of Physics, National University of Singapore}
     75: \curraddr{}
-
-- file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 88)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-    86: 
-    87: \begin{abstract}
->   88: We revisit Vafa-Witten theory in the more general setting whereby the underlying moduli space is not that of instantons, but of the full Vafa-Witten equations. We physically derive (i) a novel Vafa-Witten four-manifold invariant associated with this moduli space, (ii) their relation to Gromov-Witten invariants, (iii) a novel Vafa-Witten Floer homology assigned to three-manifold boundaries, (iv) a novel Vafa-Witten Atiyah-Floer correspondence, (v) a proof and generalization of a conjecture by Abouzaid-Manolescu %in~\cite{AM} 
-    89:  about the hypercohomology of a perverse sheaf of vanishing cycles, (vi) a Langlands duality of these invariants, Floer homologies and hypercohomology, and (vii) a quantum geometric Langlands correspondence with purely imaginary parameter that specializes to the classical correspondence in the zero-coupling limit, where Higgs bundles feature in (ii), (iv), (vi) and (vii). We also explain how these invariants and homologies will be categorified in the process, and discuss their higher categorification. We thereby relate differential and enumerative geometry, topology and geometric representation theory in mathematics, via a maximally-supersymmetric topological quantum field theory with electric-magnetic duality in physics.
-    90: \end{abstract}
-
-- file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 88)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-    86: 
-    87: \begin{abstract}
->   88: We revisit Vafa-Witten theory in the more general setting whereby the underlying moduli space is not that of instantons, but of the full Vafa-Witten equations. We physically derive (i) a novel Vafa-Witten four-manifold invariant associated with this moduli space, (ii) their relation to Gromov-Witten invariants, (iii) a novel Vafa-Witten Floer homology assigned to three-manifold boundaries, (iv) a novel Vafa-Witten Atiyah-Floer correspondence, (v) a proof and generalization of a conjecture by Abouzaid-Manolescu %in~\cite{AM} 
-    89:  about the hypercohomology of a perverse sheaf of vanishing cycles, (vi) a Langlands duality of these invariants, Floer homologies and hypercohomology, and (vii) a quantum geometric Langlands correspondence with purely imaginary parameter that specializes to the classical correspondence in the zero-coupling limit, where Higgs bundles feature in (ii), (iv), (vi) and (vii). We also explain how these invariants and homologies will be categorified in the process, and discuss their higher categorification. We thereby relate differential and enumerative geometry, topology and geometric representation theory in mathematics, via a maximally-supersymmetric topological quantum field theory with electric-magnetic duality in physics.
-    90: \end{abstract}
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 88)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -599,14 +495,6 @@
    145:  
    146: 
 
-- file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 144)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   142: \end{equation}
-   143:  
->  144: Notice that $\mathcal{Z}_{\text{VW},M_4}$ is a topological invariant of $M_4$ which is an algebraic count of VW solutions with corresponding weight given by  $a_k q^{m_k}$ that we elaborated on above. This defines a novel $\tau$-dependent Vafa-Witten invariant of $M_4$.\footnote{A purely algebro-geometric definition of $\mathcal{Z}_{\text{VW},M_4}$, in particular the $a_k$'s, was first given by Tanaka-Thomas in~\cite{TT17}, albeit for projective algebraic surfaces only. The novelty here is that we provide a purely differentio-geometric definition of the $a_k$'s for a more general $M_4$. }
-   145:  
-   146: 
-
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 150)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
    148: 
@@ -679,14 +567,6 @@
    381: In this section, we continue with a Heegaard split of $M_3$ into $M'_3$ and $M''_3$ along a Riemann surface $C$, as shown in Fig.~\ref{fig:heegaardsplit} (left), allowing us to relate Vafa-Witten Floer homology obtained in the previous section to Lagrangian Floer homology, in what is a novel Vafa-Witten version of the Atiyah-Floer correspondence~\cite{A81} based on instantons. In doing so, we would be able to physically prove and generalize a conjecture by mathematicians Abouzaid-Manolescu about the hypercohomology of a perverse sheaf of vanishing cycles in the moduli space of irreducible flat $SL(2, \mathbb{C})$-connections on $M_3$.  
    382:  We can thus write $M_4=\big(\mathbb{R}^+ \times I'\times C\big) \cup_{C} \big(\mathbb{R}^+ \times I''\times C\big)$, where $M'_3=I'\times C$ and $M''_3 = I''\times C$. This is illustrated in Fig.~\ref{fig:heegaardsplit} (right), where taking $C \to 0$, we indeed have $\mathbb{R}^+ \times I'$ and $\mathbb{R}^+ \times I''$.
 
-- file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 380)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   378: Here, the subscript `$(k)$' denotes that they are the $k^{\text{th}}$ fixed solution to the VW equations on $M_3 \times \mathbb{R}^+$ restricted to $M_3$.
-   379: 
->  380: \section{A Vafa-Witten Atiyah-Floer Correspondence}\label{vwafconj}
-   381: In this section, we continue with a Heegaard split of $M_3$ into $M'_3$ and $M''_3$ along a Riemann surface $C$, as shown in Fig.~\ref{fig:heegaardsplit} (left), allowing us to relate Vafa-Witten Floer homology obtained in the previous section to Lagrangian Floer homology, in what is a novel Vafa-Witten version of the Atiyah-Floer correspondence~\cite{A81} based on instantons. In doing so, we would be able to physically prove and generalize a conjecture by mathematicians Abouzaid-Manolescu about the hypercohomology of a perverse sheaf of vanishing cycles in the moduli space of irreducible flat $SL(2, \mathbb{C})$-connections on $M_3$.  
-   382:  We can thus write $M_4=\big(\mathbb{R}^+ \times I'\times C\big) \cup_{C} \big(\mathbb{R}^+ \times I''\times C\big)$, where $M'_3=I'\times C$ and $M''_3 = I''\times C$. This is illustrated in Fig.~\ref{fig:heegaardsplit} (right), where taking $C \to 0$, we indeed have $\mathbb{R}^+ \times I'$ and $\mathbb{R}^+ \times I''$.
-
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 390)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
    388: \end{figure}
@@ -702,14 +582,6 @@
 >  390: \subsection{A Vafa-Witten Version of the Atiyah-Floer Correspondence} \label{subsec: VW AF Correspondence}
    391: 
    392: If $C \to 0$, we end up with an open $A$-model in complex structure $I$ on $\mathbb{R}^+\times I'$ and $\mathbb{R}^+\times I''$, respectively, with target space $\mathcal{M}^G_{\text{Higgs}}(C)$.
-
-- file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 442)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   440: 
-   441: 
->  442: We thus have a degree-by-degree isomorphism of the VW Floer homology and the Lagrangian Floer homology, whence we would have a Vafa-Witten Atiyah-Floer correspondence 
-   443: \begin{equation}\label{atconj}
-   444:    \text{HF}_{*}^{\text{VW}}(M_3, G, \tau) \cong \text{HF}_{*}^{\text{Lagr}}\big(\mathcal{M}^G_{\text{Higgs}}(C), L_0, L_1, \tau\big).
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 442)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -855,14 +727,6 @@
    669: \label{fig:equimath - cat}
    670: \end{figure}
 
-- file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 683)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   681: The mathematical heritage of Hermann Weyl, 48, 1981, 285-299.
-   682: 
->  683: \bibitem [AF81]{AF81} L. Alvarez-Gaume, and D.Z. Freedman, \textit{Geometrical structure and ultraviolet finiteness in the supersymmetric $\sigma$-model},
-   684: Communications in Mathematical Physics, 80(3), 1981, 443--451.
-   685: 
-
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 716)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
    714: \bibitem [KW06]{KW06} A. Kapustin, and E. Witten, \textit{Electric-magnetic duality and the geometric Langlands program}, Commun. Number Theory Phys. 1 (2007), no. 1, 1–236. arXiv:hep-th/0604151. 
@@ -918,14 +782,6 @@
 >   97: InternLM-Math series models achieve open-sourced state-of-the-art performance on multiple benchmarks \footnote{This work is concurrent with Deepseek-Math.} and score more than 90\% relative to GPT-4 \citep{gpt4}. 
     98: % Specifically, InternLM-Math achieve 34.6 and 37.7 on MATH with sizes of 7B and 20B.
     99: % With the help of PRM ability, we can achieve 50.0 on MATH by our 20B model.
-
-- file: sample\arxiv_sources\2402.06332v2\main.tex (line 357)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   355: Model & GSM8K & MATH \\
-   356: \midrule
->  357: MetaMath-Llama2-7B \citep{llama2} $\dagger$ & 66.5 & 19.8 \\
-   358: MetaMath-Mistral-7B \citep{jiang2023mistral} $\dagger$     & \textbf{77.7}   & 28.2       \\
-   359: MetaMath-Llemma-7B \citep{llemma} $\dagger$       & 69.2   & 30.0        \\
 
 - file: sample\arxiv_sources\2402.06332v2\main.tex (line 358)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -1015,14 +871,6 @@
    464: 
    465: \begin{table}[h]
 
-- file: sample\arxiv_sources\2402.06332v2\main.tex (line 476)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   474: \textbf{InternLM-MATH-20B} & \textbf{37.7} & PRM K=100 & \textbf{50.0} \\
-   475: \midrule
->  476: MetaMath-Llemma-34B & 34.8 & PRM K=256 & 47.3 \\
-   477: MetaMath-DeepSeek-67B & 36.8 & PRM K=256 & 48.1 \\
-   478: \midrule
-
 - file: sample\arxiv_sources\2402.06332v2\main.tex (line 477)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
    475: \midrule
@@ -1030,14 +878,6 @@
 >  477: MetaMath-DeepSeek-67B & 36.8 & PRM K=256 & 48.1 \\
    478: \midrule
    479: GPT-4-MathMix & - & ORM K=100 & 71.0 \\
-
-- file: sample\arxiv_sources\2402.06332v2\main.tex (line 577)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   575: Model                  & GSM8K    & MATH \\
-   576: \midrule
->  577: DeepSeek-Coder-Instruct-7B \citep{guo2024deepseekcoder} & 62.8 & 28.6  \\
-   578: MathCODER-CL-7B \citep{wang2023mathcoder} & 67.8 & 30.2 \\
-   579: DeepSeek-Coder-Instruct-1.5-7B \citep{guo2024deepseekcoder} & 72.6 & 34.1 \\
 
 - file: sample\arxiv_sources\2402.06332v2\main.tex (line 579)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -1383,14 +1223,6 @@
    433: 
    434: %This also explains the previous observation that smaller models within the same family, observe larger drops (see Appendix~\ref{app:expts} for further discussion). We hypothesize that this relationship can be explained by the fact that the questions in the generated dataset consist of two skills at a time, as compared to questions in MATH, which consist of one skill.
 
-- file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 432)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   430: that genuinely required applying two very distinct skills (as opposed to, say,  requiring primarily skill $i$, and mildly using  skill $j$). The discovered relationship suggests further that if we could create questions where each combines $k$ skills, we might see the relationship $Y \approx X^k$, which would tend to further magnify performance differences between models. 
-   431: 
->  432: While minor deviations from $Y = X^2$ maybe attributed to noise and factors such as non-similar distribution of skills in MATH and MATH$^2$, it is noteworthy that three out of five of the recent ``thinking" models, namely o1-preview, DeepSeek-R1-Distill-Qwen-32B, and DeepSeek-R1-Distill-Llama-8B show non-trivial positive deviations from this trend. DeepSeek-R1-Distill-Llama-8B shows the highest positive deviation of all models ($\sim10.5\%$ higher than what would be predicted by the trend). This suggests that the pre-dominantly RL-based post-training used in these models elicits more powerful reasoning and generalization capabilities. Claude-3.5 Sonnet and the MetaMath and MAmmoTH models on the other hand show the highest negative deviations from the trend suggesting overfitting.
-   433: 
-   434: %This also explains the previous observation that smaller models within the same family, observe larger drops (see Appendix~\ref{app:expts} for further discussion). We hypothesize that this relationship can be explained by the fact that the questions in the generated dataset consist of two skills at a time, as compared to questions in MATH, which consist of one skill.
-
 - file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 1981)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
   1979: MetaMath-70B &   2.39\%     &  22.86\%   & 89.54\% \\
@@ -1430,14 +1262,6 @@
 > 2018:     \caption{Relation between the performance of models on MATH$^2$ ($Y$) vs the square of their performances on MATH ($X^2$). As can be seen from the plot, $Y \approx X^2$. DeepSeek-R1-Distill-Llama-8B shows the largest positive deviation from the trend, whereas Claude-3.5 Sonnet shows the largest negative deviation.%We think this can simply be explained by the fact that the questions in the generated dataset consist of two skills at a time, as compared to questions in MATH, which consist of one skill.
   2019:     }
   2020:     \label{fig:perf_relation}
-
-- file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 2045)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-  2043: that genuinely required applying two very distinct skills (as opposed to, say,  requiring primarily skill $i$, and mildly using  skill $j$). The discovered relationship suggests further that if we could create questions where each combines $k$ skills, we might see the relationship $Y \approx X^k$, which would tend to further magnify performance differences between models. 
-  2044: 
-> 2045: While minor deviations from $Y = X^2$ maybe attributed to noise and factors such as non-similar distribution of skills in MATH and MATH$^2$, it is noteworthy that three out of five of the recent ``thinking" models, namely o1-preview, DeepSeek-R1-Distill-Qwen-32B, and DeepSeek-R1-Distill-Llama-8B show non-trivial positive deviations from this trend. DeepSeek-R1-Distill-Llama-8B shows the highest positive deviation of all models ($\sim10.5\%$ higher than what would be predicted by the trend). This suggests that the pre-dominantly RL-based post-training used in these models elicits more powerful reasoning and generalization capabilities. Claude-3.5 Sonnet and the MetaMath and MAmmoTH models on the other hand show the highest negative deviations from the trend suggesting overfitting.
-  2046: 
-  2047: %This also explains the previous observation that smaller models within the same family, observe larger drops (see Appendix~\ref{app:expts} for further discussion). We hypothesize that this relationship can be explained by the fact that the questions in the generated dataset consist of two skills at a time, as compared to questions in MATH, which consist of one skill.
 
 - file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 2045)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -1510,22 +1334,6 @@
 >  426: While minor deviations from $Y = X^2$ maybe attributed to noise and factors such as non-similar distribution of skills in MATH and MATH$^2$, it is noteworthy that three out of five of the recent ``thinking" models, namely o1-preview, DeepSeek-R1-Distill-Qwen-32B, and DeepSeek-R1-Distill-Llama-8B show non-trivial positive deviations from this trend. DeepSeek-R1-Distill-Llama-8B shows the highest positive deviation of all models ($\sim10.5\%$ higher than what would be predicted by the trend). This suggests that the pre-dominantly RL-based post-training used in these models elicits more powerful reasoning and generalization capabilities. Claude-3.5 Sonnet and the MetaMath and MAmmoTH models on the other hand show the highest negative deviations from the trend suggesting overfitting.
    427: 
    428: %This also explains the previous observation that smaller models within the same family, observe larger drops (see Appendix~\ref{app:expts} for further discussion). We hypothesize that this relationship can be explained by the fact that the questions in the generated dataset consist of two skills at a time, as compared to questions in MATH, which consist of one skill.
-
-- file: sample\arxiv_sources\2407.21009v4\example_paper.tex (line 426)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   424: that genuinely required applying two very distinct skills (as opposed to, say,  requiring primarily skill $i$, and mildly using  skill $j$). The discovered relationship suggests further that if we could create questions where each combines $k$ skills, we might see the relationship $Y \approx X^k$, which would tend to further magnify performance differences between models. 
-   425: 
->  426: While minor deviations from $Y = X^2$ maybe attributed to noise and factors such as non-similar distribution of skills in MATH and MATH$^2$, it is noteworthy that three out of five of the recent ``thinking" models, namely o1-preview, DeepSeek-R1-Distill-Qwen-32B, and DeepSeek-R1-Distill-Llama-8B show non-trivial positive deviations from this trend. DeepSeek-R1-Distill-Llama-8B shows the highest positive deviation of all models ($\sim10.5\%$ higher than what would be predicted by the trend). This suggests that the pre-dominantly RL-based post-training used in these models elicits more powerful reasoning and generalization capabilities. Claude-3.5 Sonnet and the MetaMath and MAmmoTH models on the other hand show the highest negative deviations from the trend suggesting overfitting.
-   427: 
-   428: %This also explains the previous observation that smaller models within the same family, observe larger drops (see Appendix~\ref{app:expts} for further discussion). We hypothesize that this relationship can be explained by the fact that the questions in the generated dataset consist of two skills at a time, as compared to questions in MATH, which consist of one skill.
-
-- file: sample\arxiv_sources\2409.02834v3\00_www_main.tex (line 206)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   204: % \author{Valerie B\'eranger}
-   205: % \affiliation{%
->  206: %   \institution{Inria Paris-Rocquencourt}
-   207: %   \city{Rocquencourt}
-   208: %   \country{France}
 
 - file: sample\arxiv_sources\2409.02834v3\comparison_mathvista.tex (line 28)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -1615,14 +1423,6 @@
    303: 
    304: \begin{thebibliography}{10}
 
-- file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 307)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   305: 
-   306: \bibitem{amini2019mathqa}
->  307: Aida Amini, Saadia Gabriel, Peter Lin, Rik Koncel-Kedziorski, Yejin Choi, and Hannaneh Hajishirzi.
-   308: \newblock Mathqa: Towards interpretable math word problem solving with operation-based formalisms.
-   309: \newblock {\em arXiv preprint arXiv:1905.13319}, 2019.
-
 - file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 317)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
    315: 
@@ -1663,14 +1463,6 @@
    351: \newblock Autotutor: A simulation of a human tutor.
    352: \newblock {\em Cognitive Systems Research}, 1(1):35--51, 1999.
 
-- file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 350)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   348: 
-   349: \bibitem{graesser1999autotutor}
->  350: Arthur~C Graesser, Katja Wiemer-Hastings, Peter Wiemer-Hastings, Roger Kreuz, Tutoring~Research Group, et~al.
-   351: \newblock Autotutor: A simulation of a human tutor.
-   352: \newblock {\em Cognitive Systems Research}, 1(1):35--51, 1999.
-
 - file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 360)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
    358: 
@@ -1678,14 +1470,6 @@
 >  360: Joy He-Yueya, Gabriel Poesia, Rose~E Wang, and Noah~D Goodman.
    361: \newblock Solving math word problems by combining language models with symbolic solvers.
    362: \newblock {\em arXiv preprint arXiv:2304.09102}, 2023.
-
-- file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 393)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   391: 
-   392: \bibitem{nadkarni2011natural}
->  393: Prakash~M Nadkarni, Lucila Ohno-Machado, and Wendy~W Chapman.
-   394: \newblock Natural language processing: an introduction.
-   395: \newblock {\em Journal of the American Medical Informatics Association}, 18(5):544--551, 2011.
 
 - file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 428)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -1743,14 +1527,6 @@
    168: 			 \midrule
    169: \multirow{3}{*}{\makecell{Self-generation\\ by policy SLM-r3}}			&	Random sample & 72.4 &10.0  & 45.0&41.0 &48.0 &87.5 &57.1 \\
 
-- file: sample\arxiv_sources\2501.04519v1\method.tex (line 125)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   123: 	\small 
-   124: 	\centering
->  125: 	\caption{Percentage of the 747k math problems  correctly solved in each round. Only problems have correct solutions are included in the  training set.   The first round uses DeepSeek-Coder-Instruct as the policy LLM, while later rounds use our fine-tuned 7B policy SLM.}
-   126: 	\label{tbl:solveratio}
-   127: 		\begin{tabular}
-
 - file: sample\arxiv_sources\2501.04519v1\method.tex (line 132)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
    130: 			\#&models in MCTS&GSM-level&MATH-level&Olympiad-level &All\\
@@ -1766,14 +1542,6 @@
 >  152: 	\makecell{DeepSeek-Coder-V2-Instruct\\(bootstrap model)} & 75.3&13.3 & 57.5	& 37.6&46.2& 94.9& 64.7 \\
    153: 			\midrule
    154: 				Base (Qwen2.5-Math-7B) & 58.8&0.0&22.5&21.8&41.6&91.6&51.7\\
-
-- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 633)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   631:   The value we are looking for therefore coincides with $F^{(m)}(0)$. We are going to show that
-   632:   $$F(s)=\frac{\pi}{a} \csc \left( \frac{\pi}{a} (s+1)\right),$$
->  633:   a function well defined on $]-1,a-1[$, that is a  neighborhood of $s=0$. To this end we use the Euler-Mittag-Leffler representation
-   634:   \begin{eqnarray}\label{sini}
-   635: \frac{\pi}{\sin (\pi z)}&=& \frac{1}{z}+\sum_{n=1}^\infty (-1)^n\frac{2z}{z^2-n^2}= 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1451)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -2031,22 +1799,6 @@
  15509: 
  15510: \bibitem{ga}
 
-- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 15687)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
- 15685: 
- 15686: 
->15687: \bibitem{ca-lo} Carter, P., Lowry-Duda, D.
- 15688: On functions whose mean value abscissas are midpoints, with connections to harmonic functions,
- 15689: Amer. Math. Monthly 124  (2017), 535--542.
-
-- file: sample\arxiv_sources\2502.17387v1\main.tex (line 24)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-    22: 
-    23: \newcommand{\bigmath}{\textsc{Big-Math}}
->   24: \newcommand{\bigmathmc}{\textsc{Big-Math-Reformulated}}
-    25: 
-    26: \newcommand{\alon}[1]{\textcolor{orange}{(Alon: #1)}}
-
 - file: sample\arxiv_sources\2502.17387v1\main.tex (line 291)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
    289: % -- MATH
@@ -2054,14 +1806,6 @@
 >  291: % -- Orca-Math
    292: % -- olypmiads
    293: % -- aops_forum
-
-- file: sample\arxiv_sources\2502.17387v1\main.tex (line 318)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   316: \textbf{Subset} & \textbf{Choice} & & & & & \textbf{Duplicates} & \textbf{Matching} \\
-   317: \midrule
->  318: Orca-Math & 1,277 & 5 & 12 & 18,375 & 5 & 8,286 & 26,487 \\
-   319: cn\_k12 & 96,804 & 420 & 384 & 38,625 & 5,233 & 2,098 & 123,809 \\
-   320: olympiads & 12,688 & 311 & 4,615 & 22,116 & 30,357 & 1,362 & 53,102 \\
 
 - file: sample\arxiv_sources\2502.17387v1\main.tex (line 365)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -2110,14 +1854,6 @@
 >  690: %     \item 40.7\% of final data is from synthetic source (Orca-Math) remainder is human-written but mostly scraped.
    691: %     \item ``Diversity'' of data in our dataset vs. the diversity in each subset or other existing datasets.
    692: % \end{itemize}
-
-- file: sample\arxiv_sources\2502.17387v1\main.tex (line 764)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   762: \textbf{Subset} &(R) & (L) & (R)&(L)&(R)&(L)&(R)&(L)&(R)&(L)& \textbf{Deduplication}&\\
-   763: \midrule
->  764: Orca-Math & 1174 & 111 & 5 & 0 & 12 & 0 & 16345 & 2298 & 2 & 5 & 8286 & 26,487 \\
-   765: cn\_k12 & 94888 & 94932 & 420 & 0 & 384 & 0 & 20358 & 19428 & 3969 & 5185 & 2098 & 123,809 \\
-   766: olympiads & 12123 & 9507 & 311 & 0 & 4615 & 0 & 13509 & 6981 & 23210 & 30315 & 1362 & 53,102 \\
 
 - file: sample\arxiv_sources\2502.17387v1\main.tex (line 802)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -2263,14 +1999,6 @@
    224: 
    225: \vspace{-0.5em}
 
-- file: sample\arxiv_sources\2508.15096v1\iclr2025_conference.tex (line 232)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   230: 
-   231: \item \textbf{100B Token Ablation:}
->  232: This setting targets compact, high-quality math datasets, typically below 30B tokens. For each run, the mathematical portion of the blend is replaced with a single candidate dataset—such as FineMath-4+, MegaMath-Pro, or OWM—enabling direct comparison with \datasethigh\hspace{-0.3em}. The modified blends are trained for 100B tokens to evaluate performance under a consistent compute budget.
-   233: 
-   234: 
-
 - file: sample\arxiv_sources\2508.15096v1\iclr2025_conference.tex (line 236)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
    234: 
@@ -2294,22 +2022,6 @@
 >  250: At 100B tokens, Nemotron-CC-Math-4+ achieves the top results in every math task—e.g., 40.6 on MATH (+4.8 vs. FineMath-4+, +6.6 vs. MegaMath-Pro) and 76.27 on GMS8K (+0.3 vs. FineMath-4+, +4.85 vs. OWM). It also leads most code benchmarks (e.g., 34.82 on HumanEval+, +2.3 vs. OWM) and all knowledge tasks (e.g., 38.49 on MMLU-Pro, +2.1 vs. MegaMath-Pro). %Finemath interestingly, gets a low score on MBPP+, we assign it to losing code formatting during content extraction. 
    251: \RabeehTodo{Shall we say something on finemath low score on mbPP+?}
    252: 
-
-- file: sample\arxiv_sources\2508.15096v1\iclr2025_conference.tex (line 253)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   251: \RabeehTodo{Shall we say something on finemath low score on mbPP+?}
-   252: 
->  253: At 300B tokens, Nemotron-CC-Math-3+ extends these gains—reaching 44.2 on MATH (+9.6 vs. FineMath-3+, +12.6 vs. MegaMath-Web) and 80.06 on GMS8K (+0.6 vs. FineMath-3+, +3.6 vs. OWM). Code scores also improve substantially, with 37.16 on HumanEval+ (+3.0 vs. FineMath-3+) and 43.51 on MBPP+ (+4.6 vs. MegaMath-Web, +14.32 vs. Finemath-3+). Knowledge remains best or near-best across MMLU variants, with a top score of 64.26 on MMLU-STEM.
-   254: 
-   255: 
-
-- file: sample\arxiv_sources\2508.15096v1\iclr2025_conference.tex (line 253)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   251: \RabeehTodo{Shall we say something on finemath low score on mbPP+?}
-   252: 
->  253: At 300B tokens, Nemotron-CC-Math-3+ extends these gains—reaching 44.2 on MATH (+9.6 vs. FineMath-3+, +12.6 vs. MegaMath-Web) and 80.06 on GMS8K (+0.6 vs. FineMath-3+, +3.6 vs. OWM). Code scores also improve substantially, with 37.16 on HumanEval+ (+3.0 vs. FineMath-3+) and 43.51 on MBPP+ (+4.6 vs. MegaMath-Web, +14.32 vs. Finemath-3+). Knowledge remains best or near-best across MMLU variants, with a top score of 64.26 on MMLU-STEM.
-   254: 
-   255: 
 
 - file: sample\arxiv_sources\2508.15096v1\iclr2025_conference.tex (line 490)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -2559,14 +2271,6 @@
    227: dimensions. We leave this as an exercise for the reader.
    228: 
 
-- file: sample\submodules\OpenLogic\content\set-theory\ordinals\basic.tex (line 146)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   144: following result:
-   145: 
->  146: \begin{thm}[Burali-Forti Paradox]\ollabel{buraliforti}
-   147: There is no set of all the ordinals
-   148: \end{thm}
-
 - file: sample\submodules\OpenLogic\content\set-theory\ordinals\basic.tex (line 163)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
    161: Heijenoort explains:
@@ -2623,14 +2327,6 @@
   1179: We highly recommend checking out the books if you are interested.
   1180: The proofs are intuitive for people who don't have a background in queueing theory.
 
-- file: sample\submodules\coursebook\introc\introc.tex (line 3)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-     1: \chapter{The C Programming Language}
-     2: 
->    3: \epigraph{If you want to teach systems, don't drum up the programmers, sort the issues, and make PRs. Instead, teach them to yearn for the vast and endless C.}{Antoine de Saint-Exup\'{e}ry (With edits)}
-     4: 
-     5: Note: This chapter is long and goes into a lot of detail. Feel free to gloss over parts with which you have experience in.
-
 - file: sample\submodules\coursebook\networking\networking.tex (line 4)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
      2: 
@@ -2646,14 +2342,6 @@
 >  349: the \term{Clopper-Pearson interval}.
    350: The details are beyond the scope of this book.
    351: However, there are many internet resources covering
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1353)
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-  1351: However, this information is not provided, and it is not obvious how to calculate these probabilities. Since we aren't sure how to proceed, it is useful to organize the information into a tree diagram:
-  1352: \begin{center}
-> 1353: \Figure[A tree diagram with a primary branch "Midterm" and a secondary branch "Final". The Midterm primary branching leads to two options: "A" with a probability of 0.13 and "Other" with a probability of 0.87. Each of these branches has secondary branches with conditional probabilities for the "Final" conditional on "Midterm". The Midterm-A branch breaks into branches for "A", with a conditional probability of 0.47 with an A-and-A final probability of 0.0611, and an "other" secondary branch, with a conditional probability of 0.53 with an other-and-other final probability of 0.0689. Next, turning our attention to the Midterm-Other primary branch, it also has secondary branches of Final-A with a conditional probability of 0.11 and final probability of 0.0957, and an "Final-other" branch with a conditional probability of 0.89 and final probability of 0.7743.]{0.85}{testTree}
-  1354: \end{center}
-  1355: When constructing a tree diagram, variables provided with marginal probabilities are often used to create the tree's primary branches; in this case, the marginal probabilities are provided for midterm grades. The final grades, which correspond to the conditional probabilities provided, will be shown on the secondary branches.
 
 - file: sample\submodules\openintro-statistics\extraTeX\preamble\copyright_derivative.tex (line 6)
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".

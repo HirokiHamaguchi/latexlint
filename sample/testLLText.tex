@@ -1,0 +1,46 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{listings}     % \begin{lstlisting}
+
+% define my command
+\newcommand{\verbx}[1]{\texttt{#1}}
+
+\begin{document}
+
+\title{localTest}
+\author{Hiroki Hamaguchi}
+\date{\today}
+\maketitle
+
+``With Errors'':
+$<<$
+\verbx{$<<$}
+\verb|<<\verb|<<\verb|<<\verb|
+\% << % << \% <<
+\\\% <<
+
+``No Errors'':
+\verb|<<|
+\verb0<<0
+\verb$<<$
+\verb%<<%
+\\% <<
+\begin{lstlisting}
+  <<
+  % \verb|<<|
+\end{lstlisting}
+\begin{lstlisting}
+  \verb|<<|
+\end{lstlisting}
+
+``Appendix'':
+% \verb|
+% \verb|
+<<
+% |
+% \begin{lstlisting}
+% \begin{lstlisting}
+<<
+% \end{lstlisting}
+
+\end{document}

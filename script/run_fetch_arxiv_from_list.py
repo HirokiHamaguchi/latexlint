@@ -9,7 +9,7 @@ SAVE_DIR = Path(os.path.dirname(__file__)).parent / "sample" / "arxiv_sources"
 ARXIV_LIST_FILE = SAVE_DIR / "arxiv_id_list.json"
 
 
-def fetch_arxiv_from_list():
+def run_fetch_arxiv_from_list():
     """Fetch arXiv papers from the saved list."""
     os.makedirs(SAVE_DIR, exist_ok=True)
 
@@ -48,4 +48,4 @@ def fetch_arxiv_from_list():
 
 
 if __name__ == "__main__":
-    fetch_arxiv_from_list()
+    run_fetch_arxiv_from_list()

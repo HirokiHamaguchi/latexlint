@@ -6,9 +6,8 @@ from pathlib import Path
 from typing import Any, Dict, List
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-NODE_RUNNER = BASE_DIR / "script" / "run_enumerate.js"
+NODE_RUNNER = BASE_DIR / "script" / "run_diagnose.js"
 LOG_DIR = BASE_DIR / "sample" / "logs"
-LOG_PATH = LOG_DIR / "submodule_diagnostics.log"
 SUBMODULES = [
     BASE_DIR / "submodules" / "openintro-statistics",
     BASE_DIR / "submodules" / "OpenLogic",
@@ -74,7 +73,7 @@ def format_context(tex_path: Path, start_line: int, context: int = 2) -> str:
     return "\n".join(view)
 
 
-def main() -> None:
+def run_diagnose() -> None:
     tex_files = find_tex_files()
     LOG_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -87,16 +86,16 @@ def main() -> None:
 
     # Parallel execution: use ThreadPoolExecutor to run node subprocesses concurrently.
     max_workers = min(32, (os.cpu_count() or 1) * 4)
-    future_to_tex = {}
+    future_to_tex: Dict[Any, Path] = {}
 
     with ThreadPoolExecutor(max_workers=max_workers) as ex:
         for tex in tex_files:
-            print(f"Processing {tex}...")
             future = ex.submit(run_node, tex)
             future_to_tex[future] = tex
 
         for future in as_completed(future_to_tex):
             tex = future_to_tex[future]
+            print(f"Processed {tex.relative_to(BASE_DIR)}")
             try:
                 result = future.result()
             except Exception as exc:  # unexpected error from run_node
@@ -156,12 +155,14 @@ def main() -> None:
     for code in sorted(diagnostics_by_code):
         entries = diagnostics_by_code[code]
         safe_code = sanitize_code(code or "unknown")
-        code_path = LOG_DIR / f"submodule_diagnostics_{safe_code}.log"
+        code_path = LOG_DIR / f"{safe_code}.log"
         code_files.append(code_path.name)
 
         parts = [f"[CODE] {code} ({len(entries)})"]
         for entry in entries:
-            parts.append(f"- file: {entry['file']} (line {entry['line']})")
+            parts.append(
+                f"- file: {Path(entry['file']).relative_to(BASE_DIR)} (line {entry['line']})"
+            )
             parts.append(f"  message: {entry['message']}")
             parts.append(entry["context"])
             parts.append("")
@@ -174,7 +175,7 @@ def main() -> None:
     if error_blocks:
         blocks.extend(error_blocks)
 
-    with LOG_PATH.open("w", encoding="utf-8") as fh:
+    with (LOG_DIR / "summary.log").open("w", encoding="utf-8") as fh:
         fh.write(summary + "\n")
         if code_files:
             fh.write("Per-code logs:\n")
@@ -189,4 +190,4 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    run_diagnose()

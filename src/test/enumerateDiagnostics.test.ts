@@ -29,10 +29,8 @@ async function testEnumerateDiagnosticsOther() {
   assert.strictEqual(diagnostics.length, 2);
 }
 
-async function testEnumerateDiagnosticsLocalTestTex() {
-  const diagnostics = await testEnumerateDiagnostics(
-    "sample/localTest.LLText.tex"
-  );
+async function testLLTextTex() {
+  const diagnostics = await testEnumerateDiagnostics("sample/testLLText.tex");
   const positions = [];
   for (const diag of diagnostics) {
     const line = diag.range.start.line + 1;
@@ -50,10 +48,8 @@ async function testEnumerateDiagnosticsLocalTestTex() {
   ]);
 }
 
-async function testEnumerateDiagnosticsLocalTestMd() {
-  const diagnostics = await testEnumerateDiagnostics(
-    "sample/localTest.LLText.md"
-  );
+async function testLLTextMd() {
+  const diagnostics = await testEnumerateDiagnostics("sample/testLLText.md");
   const lines = [];
   for (const diag of diagnostics) {
     const line = diag.range.start.line + 1;
@@ -65,12 +61,6 @@ async function testEnumerateDiagnosticsLocalTestMd() {
 suite("Extension Test Suite", () => {
   test("Test enumerateDiagnosticsTex", testEnumerateDiagnosticsTex);
   test("Test enumerateDiagnosticsOther", testEnumerateDiagnosticsOther);
-  test(
-    "Test enumerateDiagnosticsLocalTestTex",
-    testEnumerateDiagnosticsLocalTestTex
-  );
-  test(
-    "Test enumerateDiagnosticsLocalTestMd",
-    testEnumerateDiagnosticsLocalTestMd
-  );
+  test("Test TestLLText", testLLTextTex);
+  test("Test TestLLTextMd", testLLTextMd);
 });

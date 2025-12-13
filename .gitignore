@@ -8,7 +8,6 @@ node_modules
 
 other/azurePersonalAccessToken.txt
 
-sample/localTest.*
 sample/arxiv_sources
 **/**.dvi
 **/**.out
@@ -16,5 +15,7 @@ sample/arxiv_sources
 **/**.aux
 **/**.log
 **/**.synctex.gz
+
+!sample/logs/**.log
 
 TODO.md

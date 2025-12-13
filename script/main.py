@@ -9,6 +9,9 @@ from make_readme_md import make_readme_md
 from make_rules_ts import make_rules_ts
 from make_web_readme import make_web_readme
 from make_web_svg import make_web_svg
+from run_diagnose import run_diagnose
+from run_fetch_arXiv import run_fetch_arXiv
+from run_fetch_arxiv_from_list import run_fetch_arxiv_from_list
 from test_file_content import test_file_content
 from test_is_for_md import test_is_for_md
 from test_mark_down_png import test_mark_down_png
@@ -17,7 +20,8 @@ from test_rule_names import test_rule_names
 from test_rule_ts_file import test_rule_ts_file
 from test_web_config import test_web_config
 
-if __name__ == "__main__":
+
+def main():
     make_constants_ts()
     make_lint_tex()
     make_package_json()
@@ -42,8 +46,18 @@ if __name__ == "__main__":
             continue
         if f.startswith("make_") or f.startswith("test_"):
             functions.append(f[:-3])
-
-    for func in functions:
-        if func not in globals():
-            raise ValueError(f"{func} is not defined")
     print("All done!")
+
+
+def run():
+    # only once
+    if False:
+        run_fetch_arXiv()
+        run_fetch_arxiv_from_list()
+
+    run_diagnose()
+
+
+if __name__ == "__main__":
+    # main()
+    run()

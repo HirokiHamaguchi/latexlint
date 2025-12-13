@@ -8,16 +8,28 @@ from typing import Any, Dict, List
 BASE_DIR = Path(__file__).resolve().parent.parent
 NODE_RUNNER = BASE_DIR / "script" / "run_diagnose.js"
 LOG_DIR = BASE_DIR / "sample" / "logs"
-SUBMODULES = [
-    BASE_DIR / "submodules" / "openintro-statistics",
-    BASE_DIR / "submodules" / "OpenLogic",
-    BASE_DIR / "submodules" / "coursebook",
-]
+SAMPLE_SUBMODULES_DIR = BASE_DIR / "sample" / "submodules"
+ARXIV_SOURCES_DIR = BASE_DIR / "sample" / "arxiv_sources"
+
+
+def get_source_dirs() -> List[Path]:
+    """Return list of directories to scan for .tex files."""
+    dirs: List[Path] = []
+
+    # Add all subdirectories in sample/submodules
+    if SAMPLE_SUBMODULES_DIR.exists():
+        dirs.extend([d for d in SAMPLE_SUBMODULES_DIR.iterdir() if d.is_dir()])
+
+    # Add all subdirectories in sample/arxiv_sources (excluding json files)
+    if ARXIV_SOURCES_DIR.exists():
+        dirs.extend([d for d in ARXIV_SOURCES_DIR.iterdir() if d.is_dir()])
+
+    return dirs
 
 
 def find_tex_files() -> List[Path]:
     files: List[Path] = []
-    for root in SUBMODULES:
+    for root in get_source_dirs():
         if root.exists():
             files.extend(sorted(root.rglob("*.tex")))
     return files

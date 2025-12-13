@@ -21,4 +21,6 @@ repos:
         args:
           - "--python-version=3.13"
           - "--ignore-missing-imports"
+        additional_dependencies:
+          - types-requests>=2.32.4.20250913
         exclude: ^submodules/

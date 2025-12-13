@@ -7,7 +7,7 @@ from typing import Any, Dict, List
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 NODE_RUNNER = BASE_DIR / "script" / "run_enumerate.js"
-LOG_DIR = BASE_DIR / "logs"
+LOG_DIR = BASE_DIR / "sample" / "logs"
 LOG_PATH = LOG_DIR / "submodule_diagnostics.log"
 SUBMODULES = [
     BASE_DIR / "submodules" / "openintro-statistics",

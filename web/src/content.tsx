@@ -65,6 +65,16 @@ export function Content() {
         editorRef.current.revealLineInCenter(lineNumber);
     };
 
+    const handleDisableRule = (ruleId: string) => {
+        if (!ruleId || config.disabledRules.includes(ruleId)) return;
+        const updatedConfig = {
+            ...config,
+            disabledRules: [...config.disabledRules, ruleId],
+        };
+        updateConfig(updatedConfig);
+        runLint(text, docType, true);
+    };
+
     useEffect(() => {
         preloadTextLintDictionary();
     }, []);
@@ -117,6 +127,7 @@ export function Content() {
                         diagnostics={diagnostics}
                         onOpenAboutWithHash={handleOpenAboutWithHash}
                         onDiagnosticClick={handleDiagnosticClick}
+                        onDisableRule={handleDisableRule}
                     />
                 </SimpleGrid>
             </VStack>

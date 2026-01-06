@@ -1,9 +1,33 @@
 \section{LLFootnote}
 
-When we use footnotes in a new line.
-\footnote{This is a footnote.}
-The footnote marker position is incorrect.
+\subsection{Bad Examples}
 
-When we added a percentage sign.%
-\footnote{This is a footnote.}
-The footnote marker position is correct.
+Space before \footnote{bad footnote}
+
+Tab before	\footnote{bad footnote}
+
+Line break before
+\footnote{bad footnote}
+
+Line break before with comment
+% comment
+\footnote{bad footnote}
+
+Space before percent sign %
+% comment
+\footnote{bad footnote}
+
+\subsection{Good Examples}
+
+Correct attach\footnote{good footnote}.
+
+Phrase attach\footnote{good footnote} ok.
+
+Line break suppressed%
+\footnote{good footnote}
+
+Inserted comment%
+% comment
+\footnote{good footnote}
+
+Emphasis \emph{text}\footnote{good footnote}.

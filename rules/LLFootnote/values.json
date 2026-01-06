@@ -1,5 +1,5 @@
 {
-  "message": "Consider adding \\% after the period for the \\\\footnote command.",
+  "message": "The footnote marker will appear after unnecessary space. Consider moving the command position or %1",
   "severity": "WARN",
-  "lint_test_count": 1
+  "lint_test_count": 5
 }

@@ -41,7 +41,7 @@ Here is the list of rules we detect.
 12. [LLDoubleQuotes](#lldoublequotes) (detect `“`, `”` and `"` )
 13. [LLENDash](#llendash) (detect the dubious use of `-`)
 14. [LLEqnarray](#lleqnarray) (detect `eqnarray` environment)
-15. [LLFootnote](#llfootnote) (detect `.` + newline + `\footnote`)
+15. [LLFootnote](#llfootnote) (detect space before `\footnote`)
 16. [LLHeading](#llheading) (detect heading level jumps)
 17. [LLJapaneseSpace](#lljapanesespace) (detect the lack of space, disabled by default)
 18. [LLLlGg](#llllgg) (detect `<<` and `>>`)
@@ -221,10 +221,20 @@ It is known that the `eqnarray` environment is [not recommended](https://texfaq.
 
 ### LLFootnote
 
-Detect `.` + newline + `\footnote` in `.tex` files.
-You should likely add `%` after `.` to avoid spacing issues.
+Detect unnecessary space before `\footnote` command in `.tex` files.
+You should likely remove the space before `\footnote`, or add a percentage sign `%` at the end of the previous line to avoid unwanted space in the output.
 
 ![rules/LLFootnote](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLFootnote/LLFootnote.png)
+
+Whether putting footnote markers before or after punctuation marks is a style choice, and thus we do not enforce a specific style.
+[Where do I place a note number in relation to punctuation? (MLA Style Center)](https://style.mla.org/note-numbers-punctuation)
+
+References:
+
+[Best practice for source editing of footnotes (Stack Exchange)](https://tex.stackexchange.com/questions/329589/best-practice-for-source-editing-of-footnotes)
+
+[How to properly typeset footnotes/superscripts after punctuation marks? (Stack Exchange)](https://tex.stackexchange.com/questions/56063/how-to-properly-typeset-footnotes-superscripts-after-punctuation-marks)
+
 
 ### LLHeading
 

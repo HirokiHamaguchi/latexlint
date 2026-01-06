@@ -1,0 +1,364 @@
+[CODE] LLFootnote (52)
+- file: sample\arxiv_sources\1609.03457v1\appendix-nifty-tools.tex (line 16)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+    15: \label{sec:inverse-symbolic-calc}
+>   16: Enter a decimal number.  The tool tries to find combinations of mathematical constants which could make up that number.  It ignores factors of 10; why this is so is not stated on the webpage. \footnote{It is not clear to me why having 10 of something should be special, as opposed to having, say 8 of it: why are factors of 10 more important than are factors of 8, or 4, or 3?  However, perhaps the factor of 10 is special, given our base-10 number system, from number theory.} \cite{inverse-symb-calc}
+    17:  
+
+- file: sample\arxiv_sources\1609.03457v1\avail-engines.tex (line 65)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+    64: 
+>   65: Covering physics and math journal articles, ranging from quantum theory to energy, \linebreak Springer's LaTeXSearch enables presentation-based equation retrieval.  A subset of their articles are included, but Springer does not specify which subset \footnote{Springer specifies that 120,000 peer-reviewed articles are covered by LaTeXSearch.  However, Springer's main webpage states that the size of their entire collection is over 5 million articles. \cite{Springer-LatexSearch-post, LatexSearchAbout, Springer-main-page}}. \cite{LatexSearchAbout, Springer-main-page}
+    66: 
+
+- file: sample\arxiv_sources\1609.03457v1\avail-engines.tex (line 71)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+    70: 
+>   71: The language of query is LaTeX.  Equation terms which are entered into the query box are all considered to be part of a single equation: multiple equations can not be searched for \footnote{This was found from experimentation.  Specifically, a paper was found which contained at least two equations, and the two equations were searched for independently (to make sure they were found) and then together, in the format (without the \textlangle \  \textrangle \  brackets): \textlangle \ ``equation1'' AND ``equation2'' \  \textrangle \  When they were searched for together, no results were found.  Searching for pieces of a single equation, in the format \textlangle \ ``piece1'' AND ``piece2'' \ \textrangle, does work to bring up individual equations which contain both pieces.}.  Advanced search options allow subject, publication, and year to be added to the equation search. \cite{LaTeXSearch-search-page}  Alternatively, a single article's equations can all be recalled by entering the DOI or title keywords of that publication.  \cite{Springer-LatexSearch-post}  
+    72: 
+
+- file: sample\arxiv_sources\1609.03457v1\avail-engines.tex (line 158)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+   157: 
+>  158: Meaning-based search is used: equations are parsed for comparisons using \emph{Mathematica}.  The ``Simplify'' and ``FullSimplify'' commands, in Mathmatica, are used to normalize every equation in the database, and every query, so that they can be compared based on their mathematical meaning rather than their syntax (or ``presentation''). \cite{Oviedo-Th, Oviedo-5e-2pg}.  These commands in \emph{Mathematica} can re-arrange the equations to a standardized form, using special function definitions, elementary function definitions, and of course simple rules including associativity and distributivity (which the other search engines only approximate).  \footnote{Another, currently-available math-aware search engine is investigating including \emph{Mathematica}-like systems for performing the mathematical comparisons: MIaS, which has its present state discussed in sections \ref{sec:MIaS-meaning-abilities} and \ref{sec:MIaS-descrip-Avail-engines}. \cite{Liska-PhD-Prop}}
+   159: 
+
+- file: sample\arxiv_sources\1609.03457v1\avail-engines.tex (line 204)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+   203: 
+>  204: The github versions of MIaS \cite{MIaS-github} and WebMIaS \cite{WebMIaS-github, WebMIaS-descr-pub-2014} use Lucene to index and search a local database of files; math in the files must be written in MathML. \footnote{For arXiv-interested users, note that a partial version of the arXiv.org documents is available in MathML: it is called arXMLiv. \cite{XML-arxiv}}  A plug-in to Solr and Lucene is also available, called MIaSMath. \cite{MIaSMath-github}  Instructions for use are provided on the github webpages (\cite{MIaS-github, MIaSMath-github}).
+
+- file: sample\arxiv_sources\1609.03457v1\extent-abilities.tex (line 90)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+    89: \end{equation}
+>   90: \cite{Erfc-WF} and the DLMF \footnote{The DLMF was not included for the Cheb-I experiment because it defined Cheb-I in terms of a few other functions, which were defined across many of its webpages, in such a way that no formula for Cheb-I was actually written in its database. \cite{Cheb-I-DLMF}},
+    91: \begin{equation}
+
+- file: sample\arxiv_sources\1609.03457v1\extent-abilities.tex (line 106)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+   105: 
+>  106: Variable names can either be preserved (for ``non-query'' variables) or ignored (for \linebreak ``query'', or ``wildcard'' variables). \cite{MWS-thesis-hasegan} This means that a user can enforce commutativity to hold (although it may be encoded into MathWebSearch already - the literature does not mention commutativity) simply by writing their equation using query variables. It supports the use of ``named'' query variables, so that a user can specify both that certain variables should have the same name (as in $ab + a$) and that the actual variable used is irrelevant (so $xy + x$ would also match) \cite{MWS-0.5-fgwm, zbMATH-search-page}. Based upon experimentation with zbMATH \cite{zbMATH-engine}, query variables in MWS are allowed to be replaced with subscripted variables, non-subscript variables, or numbers: $(?x)^2 + (?y)^2$ can retrieve $a^2+b^2$, $x_1^2 + x_2^2$, and $8^1 + 1^2$. Furthermore, when non-query variables are used, the variable names are not allowed to vary at all \footnote{To test whether non-query variables were allowed to vary, the expression ``c\textasciicircum{}2 + d\textasciicircum{}2'' was searched on zbMATH's formula-oriented search page, \cite{zbMATH-engine}. Only two pages of results were found, all of which used exactly the formula $c^2 + d^2$. However, searching for the query variable form of this equation, ``(?c)\textasciicircum{}2 + (?d)\textasciicircum{}2'', brought up 497 results, which included those using variables other than ``c'' and ``d''; examples included $x_1^2 + x_2^2$, $x^2 + y^2$, and $8^2 + 1^2$.}.
+   107: 
+
+- file: sample\arxiv_sources\1609.03457v1\physics-applications.tex (line 10)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+     9: 
+>   10: Equations encapsulate a crucial part of the knowledge in physics \footnote{Although some researchers think we could eventually do physics without using any math, as discussed in submissions (including winning entries) for the 2015 FQXi essay contest, ``Trick or Truth: the Mysterious Connection Between Physics and Mathematics''. \cite{fqxi-essays-2015}}.  When applied to physical systems, they enable prediction and description of phenomena.
+    11: 
+
+- file: sample\arxiv_sources\1912.00839v1\AAAI-YuanK.6564.tex (line 166)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+   165:     \item novel math datasets%via GitHub
+>  166:     \footnote{https://github.com/yuankepku/MathSum}. To the best of our knowledge, these are the first mathematical content/question datasets associated with headline information.
+   167: \end{itemize}
+
+- file: sample\arxiv_sources\2103.12048v3\main.tex (line 128)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or adding % at the end of the previous line.
+   127: \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+>  128: \footnote{#1}
+   129: \let\thefootnote=\oldthefootnote
+
+- file: sample\arxiv_sources\2402.06332v2\main.tex (line 97)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+    96: During supervised fine-tuning, we supervise InternLM-Math not only on solving math problems using chain-of-thought and code interpreters but also many tasks for developing math LLMs which include reward modeling and augment helper. We also introduce using LEAN for translating between natural languages and LEAN statements \citep{pact}, solving easy math problems, and proving math statements.
+>   97: InternLM-Math series models achieve open-sourced state-of-the-art performance on multiple benchmarks \footnote{This work is concurrent with Deepseek-Math.} and score more than 90\% relative to GPT-4 \citep{gpt4}. 
+    98: % Specifically, InternLM-Math achieve 34.6 and 37.7 on MATH with sizes of 7B and 20B.
+
+- file: sample\arxiv_sources\2402.06332v2\main.tex (line 371)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+   370: 
+>  371: To show the formal math reasoning ability of our model, we conduct ICL\footnote{The setting is following \url{https://github.com/wellecks/llemma_formal2formal}} on MiniF2F benchmark \citep{zheng2021minif2f} which includes different level math problems in language LEAN. LEAN can check whether the generated formal proof completes the statement's goals. We compare InternLM2-Math-Base with other pre-trained language models in Table~\ref{table:minif2f}. InternLM2-Math-7B-Base solves 74 of 244 problems and achieves 30.3 which yields a new state-of-the-art performance. InternLM2-Math-7B-Base and InternLM2-Math-20B-Base find 25 and 24 new proofs respectively which do not appear in the official MiniF2F repository \footnote{\url{https://github.com/openai/miniF2F/blob/main/LEAN/src/test.LEAN}}. Like \cite{gloeckle2023temperature,llemma}, we do not find the formal reasoning performances scale with model parameter sizes. We leave it to the future work of how data and parameter sizes influence formal reasoning performances.
+   372: 
+
+- file: sample\arxiv_sources\2402.06332v2\main.tex (line 405)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+   404: \subsubsection{COT Reasoning}
+>  405: We evaluate SFT models on GSM8K \citep{gsm8k}, MATH \citep{MATHbenchmark}, Hungary math exam, and MathBench-ZH \footnote{\url{https://github.com/open-compass/MathBench}} using zero-shot chain-of-thought reasoning. We use the Hungary math exam to test the model generalization ability and use MathBench-ZH to examine Chinese math ability.
+   406: MathBench-ZH contains 600 Chinese math problems from primary school, middle school, high school, or university level. For each choice problem in MathBench-ZH, we will shuffle the choice order 4 times. A model gives a correct answer 4 times can be considered as correct.
+
+- file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 394)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+   393: 
+>  394: We evaluate the generated set of questions on a variety of language models, both small and large. Specifically, we assess the MetaMath \citep{yu2023metamath}, MAmmoTH \citep{yue2023mammoth}, Gemma \citep{team2024gemma}, Llama-3.1 series~\citep{dubey2024llama}, Phi-3~\citep{abdin2024phi}, deepseek-math~\citep{shao2024deepseekmath}, one Mixture-of-Experts model Mixtral-8$\times$7B-Instruct~\citep{jiang2024mixtral} as well as some of the new ``thinking" models in the form of DeepSeek-R1~\cite{guo2025deepseek} distilled models (specifically, DeepSeek-R1 distilled, Qwen2.5-Math-7B, Qwen2.5-14B, Qwen2.5-32B~\cite{yang2024qwen2} and Llama-3.1-8B models). Additionally, we include evaluations of proprietary models such as the proprietary ``thinking" model o1-preview~\cite{@o1}, GPT-4o, GPT-4 Turbo\footnote{\texttt{gpt-4-turbo-2024-04-09} at the time of writing} \citep{openai2023gpt4}, Gemini-1.5-Pro~\citep{team2024gemini}, Claude 3.5 Sonnet \footnote{\texttt{claude-3-5-sonnet-20240620} at the time of writing} and Claude-3 Opus\footnote{\texttt{claude-3-opus-20240229} at the time of writing}~\citep{anthropic2024claude3_5}. We compare the performances of these models on our generated questions (MATH$^2$) against their performance on the MATH dataset \citep{hendrycks2021measuring}. We further report several ablation studies on MATH$^2$ in Appendix~\ref{app:expts}. 
+   395: 
+
+- file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 2007)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+  2006: 
+> 2007: We evaluate the generated set of questions on a variety of language models, both small and large. Specifically, we assess the MetaMath \citep{yu2023metamath}, MAmmoTH \citep{yue2023mammoth}, Gemma \citep{team2024gemma}, Llama-3.1 series~\citep{dubey2024llama}, Phi-3~\citep{abdin2024phi}, deepseek-math~\citep{shao2024deepseekmath}, one Mixture-of-Experts model Mixtral-8$\times$7B-Instruct~\citep{jiang2024mixtral} as well as some of the new ``thinking" models in the form of DeepSeek-R1~\cite{guo2025deepseek} distilled models (specifically, DeepSeek-R1 distilled, Qwen2.5-Math-7B, Qwen2.5-14B, Qwen2.5-32B~\cite{yang2024qwen2} and Llama-3.1-8B models). Additionally, we include evaluations of proprietary models such as the proprietary ``thinking" model o1-preview~\cite{@o1}, GPT-4o, GPT-4 Turbo\footnote{\texttt{gpt-4-turbo-2024-04-09} at the time of writing} \citep{openai2023gpt4}, Gemini-1.5-Pro~\citep{team2024gemini}, Claude 3.5 Sonnet \footnote{\texttt{claude-3-5-sonnet-20240620} at the time of writing} and Claude-3 Opus\footnote{\texttt{claude-3-opus-20240229} at the time of writing}~\citep{anthropic2024claude3_5}. We compare the performances of these models on our generated questions (MATH$^2$) against their performance on the MATH dataset \citep{hendrycks2021measuring}. We further report several ablation studies on MATH$^2$ in Appendix~\ref{app:expts}. 
+  2008: 
+
+- file: sample\arxiv_sources\2407.21009v4\example_paper.tex (line 388)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+   387: 
+>  388: We evaluate the generated set of questions on a variety of language models, both small and large. Specifically, we assess the MetaMath \citep{yu2023metamath}, MAmmoTH \citep{yue2023mammoth}, Gemma \citep{team2024gemma}, Llama-3.1 series~\citep{dubey2024llama}, Phi-3~\citep{abdin2024phi}, deepseek-math~\citep{shao2024deepseekmath}, one Mixture-of-Experts model Mixtral-8$\times$7B-Instruct~\citep{jiang2024mixtral} as well as some of the new ``thinking" models in the form of DeepSeek-R1~\cite{guo2025deepseek} distilled models (specifically, DeepSeek-R1 distilled, Qwen2.5-Math-7B, Qwen2.5-14B, Qwen2.5-32B~\cite{yang2024qwen2} and Llama-3.1-8B models). Additionally, we include evaluations of proprietary models such as the proprietary ``thinking" model o1-preview~\cite{@o1}, GPT-4o, GPT-4 Turbo\footnote{\texttt{gpt-4-turbo-2024-04-09} at the time of writing} \citep{openai2023gpt4}, Gemini-1.5-Pro~\citep{team2024gemini}, Claude 3.5 Sonnet \footnote{\texttt{claude-3-5-sonnet-20240620} at the time of writing} and Claude-3 Opus\footnote{\texttt{claude-3-opus-20240229} at the time of writing}~\citep{anthropic2024claude3_5}. We compare the performances of these models on our generated questions (MATH$^2$) against their performance on the MATH dataset \citep{hendrycks2021measuring}. We further report several ablation studies on MATH$^2$ in Appendix~\ref{app:expts}. 
+   389: 
+
+- file: sample\arxiv_sources\2409.02834v3\04-Methods.tex (line 34)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or adding % at the end of the previous line.
+    33: , and Vietnamese-microsoft-orca-math-word-problems-200k-gg-translated
+>   34: \footnote{\tiny \url{https://huggingface.co/datasets/5CD-AI}}
+    35: % \footnote{\tiny \url{https://huggingface.co/datasets/5CD-AI/Vietnamese-microsoft-orca-math-word-problems-200k-gg-translated}}
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 333)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+   332: We first show the hypotheses imply that that $f\geq 0$ on $[0,\infty[$.
+>  333: If not, let $\xi>0$ be such that $f(\xi)<0$ and let $\eta\geq 0$ be the first zero \footnote{ At this point we used the hypothesis that $f(0)\geq 0$.} of $f$ when moving to the left (note that 
+   334: $\eta=0$ may be possible). In particular we have $f<0$ on $I:=]\eta, \xi]$. Now, on $I$, 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 346)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+   345: Suppose that for some $x_0$ we have  $f>0$  on  $I=[x_0,b[$, where $b$ is maximal. Then either $f(b)=0$ or 
+>  346: $b=\infty$ \footnote{ Actually, only the second case occurs: in fact, for $x\in I$,
+   347: $f'(x)\geq f(x)^3>0$; hence $f$ is increasing on $I$ and so $f(b)=\lim_{x\to b^-} f(x) \geq f(x_0)>0$. We do not need this observation, though.}.
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 354)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+   353: $$f^{-2}(x)-f^{-2}(x_0)\leq -2(x-x_0).$$
+>  354: Noticing that on $I$,  $f(x_0)^{-2}-2(x-x_0)\geq  f^{-2}(x)>0$, we deduce that \footnote{ Note that 
+   355: $u$ is the unique solution to $u'=u^3, u(x_0)=f(x_0)$.}.
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 627)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+   626:     Since the  integral
+>  627:   $I(s):=\int_0^\infty \frac{ x^s \log s}{1+x^a} dx$ is uniformly convergent with respect to the parameter $s$ \footnote{ This means that
+   628:   $\forall\e>0\;\exists  c>0\; \forall    s\in S\; \forall u,v\in [c,\infty[: \left|\int_u^v f_s(x) dx\right|<\e$.},
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 640)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+   639: where the latter identity follows through an index change in the previous finite sum representation
+>  640:  \footnote{ $\dis\sum_{|n|\leq N} \frac{(-1)^n}{z-n}\buildrel=_{m=-n}^{k=n-1}\sum_{m=0}^N\frac{(-1)^m}{z+m} +
+   641:  \sum_{k=1}^{N-1}  \frac{(-1)^{k-1}}{z-(k+1)}+\frac{1}{1-z}$.}.
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 820)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+   819: Let $C$ be the set of cluster points of $(\sin n)^n$. Since $C$ is closed,  it is sufficient to prove that every number 
+>  820: $\lambda\in\; ]-1,1[$, $\lambda\not=0$,  belongs to $C$. \footnote{ The case $\lambda=0$, though is very easy: by Kronecker's  result there exists a subsequence $(n_k)$ with $\sin n_k\to 0$. 
+   821: Hence $(\sin n_k)^{n_k}\to 0.$}. Towards  a proof of this, 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1566)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+  1565: Since $ a_n<\frac{\frac{\pi}{3}+2n\pi}{\sqrt 3}<b_n< \frac{\pi+2n\pi}{\sqrt 3}=c_n< \frac{\frac{4\pi}{3}+2n\pi}{\sqrt 3}<
+> 1566: \frac{\frac{3\pi}{2}+2n\pi}{\sqrt 3}=d_n$, we see that there are exactly two zeros on $[a_n,e_n]$, namely one between $b_n$ and $c_n$ and one between $c_n$ and $d_n$  \footnote{Using only the information $f(a_n)>0, f(c_n)<0$ and $f(e_n)>0$  (so without
+  1567:  studying the variation of $f$), allows us  to conclude that $f$ has at least two zeros in $I_n=[a_n,e_n]$. Using Rouch\'es theorem  and the additional information that in the right half-plane the complex zeros of $\cos(\sqrt 3 z)$, all simple,   are exactly the real zeros $\frac{\frac{\pi}{2}+2n\pi}{\sqrt 3}$ 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1660)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+  1659: 
+> 1660: {\bf Property 5}  {\it The elements of $Z$ are simple zeros for $f$ (hence for  $g$)} \footnote{Also note here, that Rouch\'e's theorem (applied as in the proof of Property 6) automatically yields this fact, too. We preferred though a straightforward elementary proof.}.
+  1661: \\
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1748)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+  1747: 
+> 1748: Observe that \footnote{ Obtained e.g. with wolframalpha.}
+  1749: $$\frac{f'(z)}{f(z)}= 2-4z^2-\frac{24}{5}z^5-\frac{212}{35}z^8-\frac{14736}{1925}z^{11}-\frac{1694832}{175175}z^{14}-\cdots$$
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 1809)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+  1808: 
+> 1809: Related problems are given in \cite[p. 279] {ray} and \cite{LJ} ($\cos x \cosh x+1=0$) and  \cite{li} ($\tan x=kx$) \footnote{ Communicated to us by A. Sasane.} .
+  1810: 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3449)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+  3448: 
+> 3449: \co {\Large v)} Let $f_n:=\underbrace{f\circ \cdots\circ f}_{n\text{-times}}$ be the $n$-th iterate of $f$ \footnote{ We never use the exponent $n$ to designate the $n$-th iterate when working with functions, as the risk to mix it up with the $n$-th power is too   big.}.
+  3450: 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 3787)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+  3786: 
+> 3787:  Thus we may  deduce from  (\ref{ungl}) that  $w'\geq 0$; that is $w$ is increasing \footnote{ \;in the weak sense; or funnily called nondecreasing, a very ambiguous word.}.
+  3788: 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6145)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+  6144: 
+> 6145: {\bf Step 1} {\it Reduction to the computation of an integral \footnote{ This stems from  sol. to CRUX 4965 by B. Chakraborty, R. Mortini and R. Rupp. }}.\\
+  6146: 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6886)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+  6885:  graph $G:=\{(x,f(x)): x\in \R\}$ of $f$
+> 6886: in exactly one point is given by the "exterior"   $E$ \footnote{ This is the unbounded component of the complement of the curve.}   of the closed Jordan curve  (displayed in red below)
+  6887: 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7018)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+  7017: 
+> 7018: \item[(3)] The line $L:s\mapsto as+b$ is tangent to the graph $G$ of $f$ at the point $(x,f(x))$  for some \footnote{
+  7019: Later we shall see that $x$ is uniquely determined; so a line $L$ can be tangent to  $G$ at at most one point.}
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7064)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+  7063:  
+> 7064:  The two components determined by the closure $J:=\Gamma(\R)\union \{(0,0)\}$ of this Jordan arc (which is a closed Jordan curve)  coincide with  \footnote{ Take  e.g. two points in the exterior complemented component of $J$, denoted by  $\Omega$.  Join those with an arc inside $\Omega$. Then 
+  7065:  $\tilde D$ must have the same sign at both points; otherwise this arc would meet the set where  $\tilde D$ is zero. As this set coincides
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7068)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+  7067:  $$\mbox{$\tilde D(a,b)^{-1}(\;]0,\infty[\,)$ and $\tilde D(a,b)^{-1}(\,]-\infty,0[\,)$},$$
+> 7068:  respectively, where \footnote{ In order to have continuity of $\tilde D$, we need to add the factor $b^2$.}
+  7069:  $$\tilde D(a,b)=\begin{cases} D(a,b)&\text{if $a\not=0$}\\
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7211)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+  7210: $$
+> 7211:  which is continuous  \footnote{ Note that ${\rm Re}\;a>0$ and so $0^a:=0$ is the correct value if one wants continuity:
+  7212:  $|x^a|\leq \exp({{\rm Re}\, a }\;\log x)\to \exp(-\infty)=0$ as $x\to 0^+$. Also, as usual in the realm of power series, $0^0:=1$.} on $[0,1]$.
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 7587)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+  7586: 
+> 7587: Now we follow \cite{ms5} \footnote{ We thank Roberto Tauraso for providing us this link.}.
+  7588: Recall that on $]0,\pi[$  the Fourier series for $-\log\tan (t/2)$ is 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9255)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+  9254:   $$
+> 9255:   This  converges uniformly on $[0,\pi/4]$ \footnote{ Abel-Dirichlet rule \cite[p. 2002]{moru} for $\sum a_n \cdot b_n(t)$
+  9256:    with $|\sum_{n=0}^m b_n(t)|\leq M$, 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9272)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+  9271:    
+> 9272:    As  a corollary we obtain  the following known result (\cite{ko}) \footnote{ Which we stumbled upon accidentally  when we googled to check whether our result was new or not. It turned out that, coincidentally, the proofs are similar,}:
+  9273:    
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9511)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or adding % at the end of the previous line.
+  9510: in einen topologischen Raum  ist. Deshalb liegen hier zwei Kurven vor und wir werden folgendes zeigen
+> 9511: \footnote{Die Schreibweise mit $-A$ und $B$, anstatt $A$ und $B$, l\"asst uns vermuten, dass bloss nichtnegative Zahlen gemeint waren mit der Bezeichnung "ganzzahlig". Im zweiten Abschnitt  betrachten wir auch den Fall wo $a,b$ beliebig sind.}:
+  9512: 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11488)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+ 11487:    are bounded.
+>11488: Hence \footnote{ Here $\Oh$ and $\oh$ denote the Landau symbols: $\Oh (1/n)$ is a function 
+ 11489: $n\mapsto h(n)$ satisfying $\frac{|h(n)|}{ 1/n}\leq C$  and $\oh(1)$ is a function $n\mapsto g(n)$ with $\lim_{n\to\infty} g(n)=0$. In particular, $\Oh(1/n)$ implies $\oh(1)$.}
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11547)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+ 11546:  $\bullet$ Next we note that $f$ is right-continuous at $x_1=1$. In fact, since 
+>11547: $f$ is increasing, $f$ is bounded in a right-neighborhood of $x_0=0$ \footnote{For this,  it is  important that $f$ is defined at $0$.}. Hence, if $x\to 0$, we have that $xf(x)\to 0$.
+ 11548: Consequently, by  the second identity in (\ref{4914-1})
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11684)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or adding % at the end of the previous line.
+ 11683: Similarily, since $0$ is a zero of order $1$ of the analytic   
+>11684: \footnote{ Note that $J(z)= z\frac{\phantom{\Big|}\left( \frac{\sin z}{z}\right)^{m}-1}{\phantom {\big|}z^2}= z
+ 11685: \left(-\frac{1}{3!}+ \frac{z^2}{5!}+\cdots\right) R(z)$, where
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11851)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+ 11850:  
+>11851:  This problem has no solution \footnote{ Under the usual assumption that the number 1 is not considered as a prime number.}. In fact,
+ 11852:  suppose that $x+y$ is prime whenever $x$ and $y $ are prime, $y\leq x$.  Since the sum of two odd prime numbers is even, 
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 11853)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+ 11852:  suppose that $x+y$ is prime whenever $x$ and $y $ are prime, $y\leq x$.  Since the sum of two odd prime numbers is even, 
+>11853: it cannot be prime. Hence $y=2$. Let $n:=x$ \footnote{ The symbol $x$ for a natural number hurts my eyes \Smiley.}. Then we have to discuss the property $4+n^n$ is divisible by $2+n$.
+ 11854: \begin{eqnarray*}
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 12849)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+ 12848:  
+>12849: \centerline {\bf Solution to problem 4850  Crux Math. 49 (5) 2023, 274, first version \footnote{ This was  tacitly replaced by another problem later on.}} \bigskip
+ 12850:  
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 13948)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+ 13947: 
+>13948: We claim that for $a>0$, all solutions $f:\R^+\to\R^+$ of \footnote{ We prefer to use the letter $a$ instead of $k$, as for us $k$ always belongs to $\mathbb N$.}
+ 13949: \begin{equation}\label{fgle}
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 14080)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+ 14079:  Since $f$ is assumed to be  increasing, we see that $f'(x)\geq 0$ for $0\leq x\leq 1$. To exclude that for some points
+>14080:   $x_0\in\; ]0,1]$, $f'(x_0)=0$, we need the convexity \footnote{ Note that $f$ merely being strictly increasing, does not exclude the existence of zeros of $f'$: $f(x)=(x-1/2)^3$.}  of $f$: in fact, let $T$ be the tangent to the graph of $f$ at $(x_0,f(x_0))$; then $T(x)=f(x_0)+f'(x_0)(x-x_0)$. The convexity of $f$ implies that the graph of $f$ lies above $T$. In particular, if $f'(x_0)=0$,
+ 14081:   then, due to $f$ being strictly increasing,  $f(x_0-\e)< f(x_0)<f(x_0+\e)$ would contradict this fact.  We conclude that $f'(x)>0$ for every $x\in\;]0,1]$.
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 14133)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+ 14132: $$f(x)=f(0)+f'(c_x) x\leq f(0)+f'(1) x\leq f(0)+f'(1)$$
+>14133: (note that $f'$ is increasing). Using that $0\leq f'(1)< 2 f(1)$ \footnote{ It is only here that we use this assumption.}, we obtain $f(1)< f(0)+2 f(1)$. Hence $f(0)> -f(1)$. As $f$ is strictly increasing, we also have $f(0)<f(1)$, and so $|f(0)|<f(1)$. Moreover,
+ 14134:  $|f(x)|\not= f(1)$ for any $x\in \;[0,1[$.
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 15082)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or adding % at the end of the previous line.
+ 15081: \underline{{\it Case 1}} ~ $a_0=1$. Then $n+14$ is not prime since $n+14=5+ (a_1+1)10+\sum_{k=1}^m a_k10^k$ is divisible by $5$
+>15082: \footnote{Note that $a_1+1$ may be equal to $10$; that does not alter the divisibility property, though.
+ 15083: }.
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 15195)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+ 15194: $$\int_0^\infty f(x)\frac{\sin^2 x}{x^2}dx=\int_0^{\pi/2} f(x) dx$$
+>15195: (see e.g. \cite{jo} \footnote{ The proof there is also valid for the case of all even  Riemann-integrable $\pi$-periodic functions.}) to conclude that
+ 15196: \begin{eqnarray*}
+
+- file: sample\arxiv_sources\2508.15096v1\iclr2025_conference.tex (line 90)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+    89: 
+>   90: We present the first pipeline to reliably extract scientific content—including math—from noisy web-scale data, yielding measurable gains in math, code, and general reasoning, and setting a new state of the art among open math pretraining corpora. To support open-source efforts, we release our code\footnote{Code will be released as a part of Nemo-curator: \url{https://github.com/NVIDIA-NeMo/Curator}} and datasets \footnote{\datasetlocation.}.
+    91: \end{abstract} % under a permissive license
+
+- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 303)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+   302: %\textbf{Settings.}
+>  303: We used a \(g4dn.12xlarge\) instance from AWS Sagemaker to run comparisons, containing 4 T4 GPUs. We used a combination of F1-Score, Precision, and Recall with different averaging \cite{reviewmultilabellearning} (Appendix ~\ref{appendix:eval}) to perform the comparisons. The code for OSCAR, \(\text{Tf}_x, \text{Tf}_y\) and the evaluation are provided anonymously \footnote{\url{https://github.com/Mathugo/OSCAR-One-Shot-Causal-AutoRegressive-discovery.git}} as well as the anonymised version of the dataset for reproducibility purposes. An Ablation of the NADEs quality is given in \ref{appendix:nades}.
+   304: 
+

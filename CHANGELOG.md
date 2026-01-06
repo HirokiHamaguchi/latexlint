@@ -15,6 +15,7 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 ## 1.6.3 - 2025-12-13
 
+- Improved `LLFootnote` rule to detect all unnecessary whitespace (space, tab, line break) before `\footnote` command.
 - Fix bugs
 
 ## 1.6.2 - 2025-12-05

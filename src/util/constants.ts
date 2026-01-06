@@ -55,7 +55,7 @@ export const messages: Record<LLCode, string> = {
     LLDoubleQuotes: 'For double quotes, use ``...\'\'.',
     LLENDash: 'If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".',
     LLEqnarray: 'Eqnarray is not recommended. Use align or gather instead.',
-    LLFootnote: 'Consider adding \% after the period for the \\footnote command.',
+    LLFootnote: 'The footnote marker will appear after unnecessary space. Consider moving the command position or %1',
     LLHeading: 'Found \\%1 without a preceding \\%2.',
     LLJapaneseSpace: 'Consider adding a space at here.',
     LLLlGg: 'Consider using %1 instead of %2.',

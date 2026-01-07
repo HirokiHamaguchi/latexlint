@@ -1,7 +1,4 @@
 <!-- markdownlint-disable MD041 -->
-<!-- detect `<<` and `>>` -->
-
-### LLLlGg
 
 Detect `<<` and `>>` in `.tex` and `.md` files.
 You should likely use `\ll` and `\gg` instead.

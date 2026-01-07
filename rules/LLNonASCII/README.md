@@ -1,7 +1,4 @@
 <!-- markdownlint-disable MD041 -->
-<!-- detect fullwidth ASCII characters, disabled by default -->
-
-### LLNonASCII
 
 Detect all fullwidth ASCII characters in `.tex` and `.md` files.
 

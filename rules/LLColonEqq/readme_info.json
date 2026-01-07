@@ -1,0 +1,7 @@
+{
+  "description": "<!-- detect `:=`, `=:`,`::=`, and `=::` -->",
+  "references": [
+    "[How to typeset $:=$ correctly? (Stack Exchange)](https://tex.stackexchange.com/questions/4216/how-to-typeset-correctly)",
+    "[What is the latex code for the symbol \"two colons and equals sign\"? (Stack Exchange)](https://tex.stackexchange.com/questions/121363/what-is-the-latex-code-for-the-symbol-two-colons-and-equals-sign)"
+  ]
+}

@@ -1,7 +1,4 @@
 <!-- markdownlint-disable MD041 -->
-<!-- detect the dubious use of `-` -->
-
-### LLENDash
 
 Detect the dubious use of hyphens in `.tex` and `.md` files.
 You should likely use `--` for en-dash and `---` for em-dash.

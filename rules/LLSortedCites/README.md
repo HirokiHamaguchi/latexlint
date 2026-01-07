@@ -1,7 +1,4 @@
 <!-- markdownlint-disable MD041 -->
-<!-- detect unsorted cites -->
-
-### LLSortedCites
 
 Detect unsorted multiple citations in `.tex` files.
 

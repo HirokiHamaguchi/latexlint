@@ -1,7 +1,4 @@
 <!-- markdownlint-disable MD041 -->
-<!-- simplified text lint -->
-
-### LLTextLint
 
 Detect dubious text in `.tex` and `.md` files.
 

@@ -1,7 +1,4 @@
 <!-- markdownlint-disable MD041 -->
-<!-- detect wrong article usage -->
-
-### LLArticle
 
 Detect wrong article usage in `.tex` and `.md` files.
 For example, `A $n$-dimensional` should be `An $n$-dimensional` (We might add more patterns in the future).

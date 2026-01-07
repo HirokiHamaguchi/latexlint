@@ -1,10 +1,7 @@
 <!-- markdownlint-disable MD041 -->
-<!-- detect `KB`, `MB`, `GB`, etc. without `\SI` -->
-
-### LLSI
 
 Detect `KB`, `MB`, `GB`, `TB`, `PB`, `EB`, `ZB`, `YB`, `KiB`, `MiB`, `GiB`, `TiB`, `PiB`, `EiB`, `ZiB`, and `YiB` without `\SI` in `.tex` files.
-You should likely use `\SI` instead, like `\SI{1}{\kilo\byte}`(10^3 byte) and `\SI{1}{\kibi\byte}`(2^{10} byte).
+You should likely use `\SI` instead, like `\SI{1}{\kilo\byte}`(10^3 byte) and `\SI{1}{\kibi\byte}`(2^{10} byte) in the [siunitx](https://ctan.org/pkg/siunitx) package.
 
 ![rules/LLSI](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLSI/LLSI.png)
 
@@ -20,5 +17,3 @@ You should likely use `\SI` instead, like `\SI{1}{\kilo\byte}`(10^3 byte) and `\
 |  yotta  |  \yotta  |    Y    |  24   |
 
 It would be better to use `\SI` for units such as `m`, `s`, `kg`, `A`, `K`, `mol`, and `rad`.
-
-[CTAN: siunitx](https://ctan.org/pkg/siunitx)

@@ -5,7 +5,7 @@ from make_enumerate_diagnostics_test import make_enumerate_diagnostics_test
 from make_lint_tex import make_lint_tex
 from make_package_json import make_package_json
 from make_png_files import make_png_files
-from make_readme_md import make_readme_md
+from make_readme_en import make_readme_en
 from make_rules_ts import make_rules_ts
 from make_web_readme import make_web_readme
 from make_web_svg import make_web_svg
@@ -38,7 +38,7 @@ def main():
     make_lint_tex()
     make_package_json()
     make_png_files()
-    make_readme_md()
+    make_readme_en()
     make_rules_ts()
     make_web_readme()
     make_web_svg()

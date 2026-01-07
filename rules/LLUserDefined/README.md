@@ -1,7 +1,4 @@
 <!-- markdownlint-disable MD041 -->
-<!-- detect Regexes in `latexlint.userDefinedRules` -->
-
-### LLUserDefined
 
 You can define your own regular expressions to detect in `.tex` and `.md` files.
 

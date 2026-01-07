@@ -1,7 +1,4 @@
 <!-- markdownlint-disable MD041 -->
-<!-- detect unnecessary info in URLs -->
-
-### LLURL
 
 Detect URLs containing query strings in `.tex` and `.md` files.
 

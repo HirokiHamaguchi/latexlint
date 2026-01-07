@@ -1,7 +1,4 @@
 <!-- markdownlint-disable MD041 -->
-<!-- detect `align` environment without `\\` -->
-
-### LLAlignSingleLine
 
 Detect `align` environment without `\\` in `.tex` and `.md` files.
 You should likely use the `equation` environment.

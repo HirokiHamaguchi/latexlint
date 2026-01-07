@@ -28,10 +28,7 @@ def make_package_json():
         with open(tex_path, encoding="utf-8") as f:
             tex_content = f.read()
 
-        is_disabled_md = (
-            "By default, this rule is disabled by `latexlint.disabledRules` in `settings.json`."
-            in md_content
-        )
+        is_disabled_md = "This rule is disabled by default." in md_content
         is_disabled_tex = (
             "Disabled by default." in tex_content
             or "デフォルトでは非検出です" in tex_content

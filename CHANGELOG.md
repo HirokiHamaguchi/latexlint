@@ -13,8 +13,9 @@ All notable changes to the "latexlint" extension will be documented in this file
 - Youtube, Github
 - enhance rules so that we can apply them to markdown files.
 
-## 1.6.3 - 2025-12-13
+## 1.6.3 - 2026-1-7
 
+- Update README.md.
 - Improved `LLFootnote` rule to detect all unnecessary whitespace (space, tab, line break) before `\footnote` command.
 - Fix bugs
 

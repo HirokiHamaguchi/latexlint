@@ -1,7 +1,4 @@
 <!-- markdownlint-disable MD041 -->
-<!-- detect the lack of space, disabled by default -->
-
-### LLJapaneseSpace
 
 Detect the lack of space between Japanese characters and math equations in `.tex` and `.md` files.
-By default, this rule is disabled by `latexlint.disabledRules` in `settings.json`.
+This rule is disabled by default.

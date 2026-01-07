@@ -38,7 +38,7 @@ Here is the list of rules we detect.
 9. [LLColonEqq](#llcoloneqq) (detect `:=`, `=:`,`::=`, and `=::`)
 10. [LLColonForMapping](#llcolonformapping) (detect `:` for mapping)
 11. [LLCref](#llcref) (detect `\ref`, disabled by default)
-12. [LLDoubleQuotes](#lldoublequotes) (detect `“`, `”` and `"` )
+12. [LLDoubleQuotes](#lldoublequotes) (detect `“`, `”` and `"`)
 13. [LLENDash](#llendash) (detect the dubious use of `-`)
 14. [LLEqnarray](#lleqnarray) (detect `eqnarray` environment)
 15. [LLFootnote](#llfootnote) (detect space before `\footnote`)
@@ -71,7 +71,9 @@ Use `&=` or `={}&` in the `align` environment to avoid relation spacing error.
 
 We also detect `\neq&`, `\leq&`, `\geq&`, `\le&`, `\ge&`, `<&`, and `>&`.
 
-[Ref by Stack Exchange](https://tex.stackexchange.com/questions/41074/relation-spacing-error-using-in-aligned-equations).
+References:
+
+[Relation spacing error using =& in aligned equations (Stack Exchange)](https://tex.stackexchange.com/questions/41074/relation-spacing-error-using-in-aligned-equations)
 
 ### LLAlignEnd
 
@@ -110,7 +112,9 @@ You should likely use `\bigcap`, `\bigcup`, `\bigodot`, `\bigoplus`, `\bigotimes
 
 ![rules/LLBig](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLBig/LLBig.png)
 
-[Ref by Stack Exchange](https://tex.stackexchange.com/questions/205125/formatting-the-union-of-sets).
+References:
+
+[Formatting the union of sets (Stack Exchange)](https://tex.stackexchange.com/questions/205125/formatting-the-union-of-sets)
 
 ### LLBracketCurly
 
@@ -121,12 +125,10 @@ You should likely use `\max(` and `\min(` instead, or add a space after `\max` o
 
 ### LLBracketMissing
 
-Detect cases such as `^23`, `_23`, `^ab`, and `_ab` in `.tex` files.
-Clarify the scope of the superscript and subscript by adding `{}` or a space.
+Detect cases such as `^23`, `_23`, `^ab`, and `_ab` in `.tex` files.  Clarify the scope of the superscript and subscript by adding `{}` or a space.
+This rule is disabled by default.
 
 Filenames / URLs / labels are ignored, such as in `\includegraphics{figure_23}` or `\url{http://example.com/abc_123}`.
-
-Custom commands that take an argument including `^` or `_` can yield false positives; disable this rule if your document defines and uses such macros heavily.
 
 ![rules/LLBracketMissing](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLBracketMissing/LLBracketMissing.png)
 
@@ -144,9 +146,13 @@ You should likely use `\coloneqq`, `\eqqcolon`, `\Coloneqq`, and `\Eqqcolon` in 
 
 ![rules/LLColonEqq](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLColonEqq/LLColonEqq.png)
 
-The colon is slightly too low in `:=`, but vertically centered in `\coloneqq` according to [this](https://tex.stackexchange.com/questions/4216/how-to-typeset-correctly).
+The colon is slightly too low in `:=`, but vertically centered in `\coloneqq`.
 
-[Ref by Stack Exchange](https://tex.stackexchange.com/questions/121363/what-is-the-latex-code-for-the-symbol-two-colons-and-equals-sign).
+References:
+
+[How to typeset $:=$ correctly? (Stack Exchange)](https://tex.stackexchange.com/questions/4216/how-to-typeset-correctly)
+
+[What is the latex code for the symbol "two colons and equals sign"? (Stack Exchange)](https://tex.stackexchange.com/questions/121363/what-is-the-latex-code-for-the-symbol-two-colons-and-equals-sign)
 
 ### LLColonForMapping
 
@@ -155,18 +161,20 @@ You likely want to use `\colon` instead.
 
 ![rules/LLColonForMapping](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLColonForMapping/LLColonForMapping.png)
 
-`\colon` is [recommended](https://tex.stackexchange.com/questions/37789/using-colon-or-in-formulas) for the mapping symbol. `:` is used for ratios, such as `1:2`.
+`\colon` is recommended for the mapping symbol. `:` is used for ratios, such as `1:2`.
 When `\to`, `\mapsto`, or `\rightarrow` appear, the rule looks back up to 10 words for the nearest `:`, using some heuristics to suppress false positives.
+
+References:
+
+[Using \colon or : in formulas? (Stack Exchange)](https://tex.stackexchange.com/questions/37789/using-colon-or-in-formulas)
 
 ### LLCref
 
 Detect `\ref` in `.tex` files.
 You should likely use `\cref` or `\Cref` in the [cleveref](https://ctan.org/pkg/cleveref) package instead.
-By default, this rule is disabled by `latexlint.disabledRules` in `settings.json`.
+This rule is disabled by default.
 
 We prefer this package because it can automatically add prefixes like "Sec." or "Fig.". We can keep the consistency of the reference format.
-
-For the cleveref package, you can also refer to [this page by opt-cp](https://web.archive.org/web/20220616140841/https://opt-cp.com/latex-packages/).
 
 ### LLDoubleQuotes
 
@@ -181,7 +189,9 @@ As for “XXX”, there is no problem in most cases. We prefer to use ``XXX'' fo
 
 You can also use `\enquote{XXX}` with the [csquotes](https://ctan.org/pkg/csquotes) package.
 
-[Ref by Stack Exchange](https://tex.stackexchange.com/questions/531/what-is-the-best-way-to-use-quotation-mark-glyphs).
+References:
+
+[What is the best way to use quotation mark glyphs? (Stack Exchange)](https://tex.stackexchange.com/questions/531/what-is-the-best-way-to-use-quotation-mark-glyphs)
 
 ### LLENDash
 
@@ -217,7 +227,11 @@ We assume that this represents someone's name.
 Detect `eqnarray` environment in `.tex` and `.md` files.
 You should likely use the `align` environment instead.
 
-It is known that the `eqnarray` environment is [not recommended](https://texfaq.org/FAQ-eqnarray) because it has some spacing issues.
+It is known that the `eqnarray` environment is not recommended because it has some spacing issues.
+
+References:
+
+[Why not use eqnarray? (TeX FAQ)](https://texfaq.org/FAQ-eqnarray)
 
 ### LLFootnote
 
@@ -227,14 +241,14 @@ You should likely remove the space before `\footnote`, or add a percentage sign 
 ![rules/LLFootnote](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLFootnote/LLFootnote.png)
 
 Whether putting footnote markers before or after punctuation marks is a style choice, and thus we do not enforce a specific style.
-[Where do I place a note number in relation to punctuation? (MLA Style Center)](https://style.mla.org/note-numbers-punctuation)
 
 References:
+
+[Where do I place a note number in relation to punctuation? (MLA Style Center)](https://style.mla.org/note-numbers-punctuation)
 
 [Best practice for source editing of footnotes (Stack Exchange)](https://tex.stackexchange.com/questions/329589/best-practice-for-source-editing-of-footnotes)
 
 [How to properly typeset footnotes/superscripts after punctuation marks? (Stack Exchange)](https://tex.stackexchange.com/questions/56063/how-to-properly-typeset-footnotes-superscripts-after-punctuation-marks)
-
 
 ### LLHeading
 
@@ -251,7 +265,7 @@ The rule checks the following heading levels (in order):
 ### LLJapaneseSpace
 
 Detect the lack of space between Japanese characters and math equations in `.tex` and `.md` files.
-By default, this rule is disabled by `latexlint.disabledRules` in `settings.json`.
+This rule is disabled by default.
 
 ### LLLlGg
 
@@ -321,33 +335,36 @@ This rule detects the following notations:
 
 These symbols are not generally used in formal writing.
 
-Reference: [Wikipedia's "Therefore sign"](https://en.wikipedia.org/wiki/Therefore_sign)
-
-> While it is not generally used in formal writing, it is used in mathematics and shorthand.
-
 #### The word "iff"
 
 While commonly used in informal mathematical writing, "iff" (if and only if) should be written out fully in formal academic papers.
 
-Reference: [河東泰之「数学英語」](https://www.ms.u-tokyo.ac.jp/~yasuyuki/english2.htm).
-
 #### \fallingdotseq and \risingdotseq commands
 
-These are nonstandard notation symbols. \approx is preferred in formal writing.
-
-Reference: [河東泰之「数学英語」](https://www.ms.u-tokyo.ac.jp/~yasuyuki/english2.htm).
+These are nonstandard notation symbols. `\approx` is preferred in formal writing.
 
 #### {}_n C_k notation for combinations
 
-The notation `{}_n C_k` for combinations is often used in Japan, but not standard in international academic writing. According to the [Japanese Wikipedia article on combinations](https://ja.wikipedia.org/wiki/%E7%B5%84%E5%90%88%E3%81%9B_(%E6%95%B0%E5%AD%A6)):
-
-> ピエール・エリゴン（フランス語版）が1634年の『実用算術』で nCk の記号を定義した。ただし、この数は数学のあらゆる分野に頻繁に現れ、大抵の場合 $\binom{n}{k}$ と書かれる。
-
-(Pierre Hérigone defined the nCk notation in his 1634 work "Practical Arithmetic". However, this number appears frequently in all areas of mathematics and is usually written as $\binom{n}{k}$.)
-
-Use the standard binomial notation $\binom{n}{k}$ instead.
+The notation `{}_n C_k` for combinations is often used in Japan, but not standard in international academic writing. We recommend the standard binomial notation $\binom{n}{k}$ instead.
 
 This rule only detects exact matches to avoid false positives.
+
+References:
+
+[Therefore sign (Wikipedia)](https://en.wikipedia.org/wiki/Therefore_sign):
+
+> While it is not generally used in formal writing, it is used in mathematics and shorthand.
+
+[数学英語 (河東泰之, Japanese article)](https://www.ms.u-tokyo.ac.jp/~yasuyuki/english2.htm):
+
+> また ∀ や ∃ の記号は数理論理学でない限り，黒板などに書く時の略記法なので論文では使わないとされている．実は私の論文で ∀ が使われている例がいくつかあるのだが，それは共著者が書いたものを直し切れなかったのだ．これと同様のものとして，if and only if の意味の iff も略記法であって論文には不適切とされているが，私の論文中には共著者が書いたものが残っている例がある．
+
+> ∵という記号は今ここに書いている通り JIS コードにもあるし，TeX でも \because という名前がついているのだが，私の知っている限り欧米ではほとんど使わない．(∴のほうはこれよりは使われている．) これを日本人が黒板に書いて，「それは何か」と聞かれているところを見たことが何度もある．同じく欧米で使わない数学記号として≒がある．「大体等しい」ことを表すのによく使われる記号は≈である．
+
+[組合せ (数学) (Japanese Wikipedia)](https://ja.wikipedia.org/wiki/%E7%B5%84%E5%90%88%E3%81%9B_(%E6%95%B0%E5%AD%A6)):
+
+> ピエール・エリゴン（フランス語版）が1634年の『実用算術』で ${}_n C_k$ の記号を定義した。ただし、この数は数学のあらゆる分野に頻繁に現れ、大抵の場合 $\binom{n}{k}$ と書かれる。
+> (Pierre Hérigone defined the ${}_n C_k$ notation in his 1634 work "Practical Arithmetic". However, this number appears frequently in all areas of mathematics and is usually written as $\binom{n}{k}$.)
 
 ### LLPeriod
 
@@ -358,7 +375,9 @@ This rule also flags `i.e.` in the same way.
 
 ![rules/LLPeriod](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLPeriod/LLPeriod.png)
 
-[Ref by Stack Exchange](https://tex.stackexchange.com/questions/2229/is-a-period-after-an-abbreviation-the-same-as-an-end-of-sentence-period)
+References:
+
+[Is a period after an abbreviation the same as an end of sentence period? (Stack Exchange)](https://tex.stackexchange.com/questions/2229/is-a-period-after-an-abbreviation-the-same-as-an-end-of-sentence-period)
 
 ### LLRefEq
 
@@ -379,7 +398,7 @@ You should likely use `\#` instead for the [number sign](https://en.wikipedia.or
 ### LLSI
 
 Detect `KB`, `MB`, `GB`, `TB`, `PB`, `EB`, `ZB`, `YB`, `KiB`, `MiB`, `GiB`, `TiB`, `PiB`, `EiB`, `ZiB`, and `YiB` without `\SI` in `.tex` files.
-You should likely use `\SI` instead, like `\SI{1}{\kilo\byte}`(10^3 byte) and `\SI{1}{\kibi\byte}`(2^{10} byte).
+You should likely use `\SI` instead, like `\SI{1}{\kilo\byte}`(10^3 byte) and `\SI{1}{\kibi\byte}`(2^{10} byte) in the [siunitx](https://ctan.org/pkg/siunitx) package.
 
 ![rules/LLSI](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLSI/LLSI.png)
 
@@ -395,8 +414,6 @@ You should likely use `\SI` instead, like `\SI{1}{\kilo\byte}`(10^3 byte) and `\
 |  yotta  |  \yotta  |    Y    |  24   |
 
 It would be better to use `\SI` for units such as `m`, `s`, `kg`, `A`, `K`, `mol`, and `rad`.
-
-[CTAN: siunitx](https://ctan.org/pkg/siunitx)
 
 ### LLSortedCites
 
@@ -415,12 +432,15 @@ This rule only applies when:
 
 Detect `^T` in `.tex` and `.md` files.
 You likely want to use `^\top` or `^\mathsf{T}` instead to represent the transpose of a matrix or a vector.
+This rule is disabled by default.
 
 ![rules/LLT](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLT/LLT.png)
 
 Otherwise, we cannot distinguish between the transpose and the power by a variable `T` (you can use `^{T}` for the power).
 
-[Ref by BrownieAlice](https://blog.browniealice.net/post/latex_transpose/).
+References:
+
+[What is the best symbol for vector/matrix transpose? (Stack Exchange)](https://tex.stackexchange.com/questions/30619/what-is-the-best-symbol-for-vector-matrix-transpose)
 
 ### LLTextLint
 
@@ -431,11 +451,13 @@ Currently, it only checks japanese texts, and full features are available only i
 ### LLThousands
 
 Detect wrongly used commas as thousands separators, such as `1,000` in `.tex` files.
-You should likely use `1{,}000` or use the package [icomma](https://ctan.org/pkg/icomma?lang=en).
+You should likely use `1{,}000` or use the package [icomma](https://ctan.org/pkg/icomma).
 
 ![rules/LLThousands](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLThousands/LLThousands.png)
 
-[Ref by Stack Exchange](https://tex.stackexchange.com/questions/303110/avoid-space-after-commas-used-as-thousands-separator-in-math-mode).
+References:
+
+[avoid space after commas used as thousands separator in math mode (Stack Exchange)](https://tex.stackexchange.com/questions/303110/avoid-space-after-commas-used-as-thousands-separator-in-math-mode)
 
 ### LLTitle
 
@@ -455,9 +477,9 @@ It is very difficult to detect all non-title cases because of the many exception
 
 We test the string inside the `{}` is invariant by the function `toTitleCase` implemented based on [to-title-case](https://github.com/gouch/to-title-case/tree/master), JavaScript library. There might be some false positives and negatives.
 
-[APA Style](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case).
+References:
 
-[Ref by WORDVICE](https://blog.wordvice.jp/title-capitalization-rules-for-research-papers/).
+[Title Case Capitalization (APA Style)](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case)
 
 ### LLUnRef
 

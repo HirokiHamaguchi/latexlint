@@ -161,8 +161,10 @@
             "uniqueItems": true
           },
           "default": [
+            "LLBracketMissing",
             "LLCref",
-            "LLJapaneseSpace"
+            "LLJapaneseSpace",
+            "LLT"
           ],
           "description": "Disabled rules"
         }

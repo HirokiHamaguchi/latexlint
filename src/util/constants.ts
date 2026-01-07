@@ -44,7 +44,7 @@ export const messages: Record<LLCode, string> = {
     LLAlignAnd: 'Use &%1 or %1{}& instead of %1& to avoid spacing issues in align environments.',
     LLAlignEnd: '\\\\ at the enf of align-like environments might be unnecessary.',
     LLAlignSingleLine: 'For single-line equations, use the equation environment instead of align-like environments.',
-    LLArticle: 'Did you mean "an" instead of "a"?',
+    LLArticle: 'Did you mean "%1" instead?',
     LLBig: 'Consider using \\big%1 for subscripts and superscripts.',
     LLBracketCurly: 'Did you mean "%1(...)" instead of "%1{...}"? Add a space if intentional.',
     LLBracketMissing: 'Did you mean "%1{...}"? For example, write "x%1{23}" or "x%12 3" instead of "x%123".',

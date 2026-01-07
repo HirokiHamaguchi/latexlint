@@ -1,5 +1,5 @@
 {
-  "description": "<!-- detect nonstandard mathematical notations -->",
+  "description": "detect nonstandard mathematical notations",
   "references": [
     "[Therefore sign (Wikipedia)](https://en.wikipedia.org/wiki/Therefore_sign):\n\n> While it is not generally used in formal writing, it is used in mathematics and shorthand.",
     "[数学英語 (河東泰之, Japanese article)](https://www.ms.u-tokyo.ac.jp/~yasuyuki/english2.htm):\n\n> また ∀ や ∃ の記号は数理論理学でない限り，黒板などに書く時の略記法なので論文では使わないとされている．実は私の論文で ∀ が使われている例がいくつかあるのだが，それは共著者が書いたものを直し切れなかったのだ．これと同様のものとして，if and only if の意味の iff も略記法であって論文には不適切とされているが，私の論文中には共著者が書いたものが残っている例がある．\n\n> ∵という記号は今ここに書いている通り JIS コードにもあるし，TeX でも \\because という名前がついているのだが，私の知っている限り欧米ではほとんど使わない．(∴のほうはこれよりは使われている．) これを日本人が黒板に書いて，「それは何か」と聞かれているところを見たことが何度もある．同じく欧米で使わない数学記号として≒がある．「大体等しい」ことを表すのによく使われる記号は≈である．",

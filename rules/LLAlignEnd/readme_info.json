@@ -1,3 +1,4 @@
 {
-  "description": "<!-- detect `align` environment ends with `\\\\` -->"
+  "description": "detect `align` environment ends with `\\\\`",
+  "references": []
 }

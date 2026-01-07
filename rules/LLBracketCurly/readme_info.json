@@ -1,3 +1,4 @@
 {
-  "description": "<!-- detect `\\max{` and `\\min{` -->"
+  "description": "detect `\\max{` and `\\min{`",
+  "references": []
 }

@@ -1,6 +1,6 @@
 {
-  "description": "<!-- detect `:` for mapping -->",
+  "description": "detect `:` for mapping",
   "references": [
-   "[Using \\colon or : in formulas? (Stack Exchange)](https://tex.stackexchange.com/questions/37789/using-colon-or-in-formulas)"
+    "[Using \\colon or : in formulas? (Stack Exchange)](https://tex.stackexchange.com/questions/37789/using-colon-or-in-formulas)"
   ]
 }

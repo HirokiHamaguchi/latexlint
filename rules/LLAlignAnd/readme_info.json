@@ -1,5 +1,5 @@
 {
-  "description": "<!-- detect `=&`, `\\leq&`, `\\geq&`, etc. -->",
+  "description": "detect `=&`, `\\leq&`, `\\geq&`, etc.",
   "references": [
     "[Relation spacing error using =& in aligned equations (Stack Exchange)](https://tex.stackexchange.com/questions/41074/relation-spacing-error-using-in-aligned-equations)"
   ]

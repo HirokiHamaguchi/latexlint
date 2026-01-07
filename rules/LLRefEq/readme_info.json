@@ -1,3 +1,4 @@
 {
-  "description": "<!-- detect `\\ref{eq:` -->"
+  "description": "detect `\\ref{eq:`",
+  "references": []
 }

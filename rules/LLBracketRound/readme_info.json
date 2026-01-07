@@ -1,3 +1,4 @@
 {
-  "description": "<!-- detect `\\sqrt(`, `^(`, and `_(` -->"
+  "description": "detect `\\sqrt(`, `^(`, and `_(`",
+  "references": []
 }

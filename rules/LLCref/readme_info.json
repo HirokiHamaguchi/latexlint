@@ -1,3 +1,4 @@
 {
-  "description": "<!-- detect `\\ref`, disabled by default -->"
+  "description": "detect `\\ref`, disabled by default",
+  "references": []
 }

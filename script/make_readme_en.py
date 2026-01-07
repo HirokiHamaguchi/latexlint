@@ -22,9 +22,7 @@ def make_readme_en():
         assert readme_path.exists(), f"{rule} does not have README.md"
         with open(readme_path, encoding="utf-8") as f:
             lines = f.readlines()
-        assert lines[0].startswith("<!--"), (
-            f"{rule}/README.md: 1st line must be a comment"
-        )
+        assert lines[0].strip() == "<!-- markdownlint-disable MD041 -->"
 
         # Load description and references from readme_info.json
         description = ""
@@ -32,28 +30,20 @@ def make_readme_en():
         if readme_info_path.exists():
             with open(readme_info_path, encoding="utf-8") as f:
                 readme_info = json.load(f)
-                description = readme_info.get("description", "")
+                description = readme_info.get("description", "").strip()
                 references = readme_info.get("references", [])
                 assert all(
                     not ref.endswith(".") or "\n\n>" in ref for ref in references
                 ), references
 
-        # Extract description from the comment (e.g., "<!-- ... -->")
-        description_text = description.strip()
-        if description_text.startswith("<!--") and description_text.endswith("-->"):
-            description_text = description_text[5:-4].strip()
+        LIST.append(f"{i}. [{rule}](#{rule.lower()}) ({description})")
 
-        LIST.append(f"{i}. [{rule}](#{rule.lower()}) ({description_text})")
-
-        rule_output = f"### {rule}\n"  # 4th line: ### rulename
-        rule_output += "".join(lines[1:])  # 5th+ lines: the rest
-
-        # Add references if they exist
+        rule_output = f"### {rule}\n"
+        rule_output += "".join(lines[1:])
         if references:
             rule_output = rule_output.rstrip() + "\n\n"
             rule_output += "References:\n\n"
             rule_output += "\n\n".join(references) + "\n"
-
         RULES.append(rule_output)
 
     gen_list = "\n".join(LIST)

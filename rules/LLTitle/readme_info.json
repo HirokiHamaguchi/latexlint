@@ -1,5 +1,5 @@
 {
-  "description": "<!-- detect dubious title case in `\\title{}`, `\\section{}`, etc. -->",
+  "description": "detect dubious title case in `\\title{}`, `\\section{}`, etc.",
   "references": [
     "[Title Case Capitalization (APA Style)](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case)"
   ]

@@ -1,3 +1,4 @@
 {
-  "description": "<!-- detect `\\sharp`, not `\\#` -->"
+  "description": "detect `\\sharp`, not `\\#`",
+  "references": []
 }

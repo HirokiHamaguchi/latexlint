@@ -1,5 +1,5 @@
 {
-  "description": "<!-- detect `e.g.` -->",
+  "description": "detect `e.g.`",
   "references": [
     "[Is a period after an abbreviation the same as an end of sentence period? (Stack Exchange)](https://tex.stackexchange.com/questions/2229/is-a-period-after-an-abbreviation-the-same-as-an-end-of-sentence-period)"
   ]

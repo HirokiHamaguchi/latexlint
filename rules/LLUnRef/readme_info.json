@@ -1,3 +1,4 @@
 {
-  "description": "<!-- detect unreferenced figure and table labels -->"
+  "description": "detect unreferenced figure and table labels",
+  "references": []
 }

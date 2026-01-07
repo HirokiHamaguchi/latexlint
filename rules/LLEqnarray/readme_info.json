@@ -1,5 +1,5 @@
 {
-  "description": "<!-- detect `eqnarray` environment -->",
+  "description": "detect `eqnarray` environment",
   "references": [
     "[Why not use eqnarray? (TeX FAQ)](https://texfaq.org/FAQ-eqnarray)"
   ]

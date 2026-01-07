@@ -1,3 +1,4 @@
 {
-  "description": "<!-- detect the dubious use of `-` -->"
+  "description": "detect the dubious use of `-`",
+  "references": []
 }

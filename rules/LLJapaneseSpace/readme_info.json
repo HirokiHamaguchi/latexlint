@@ -1,3 +1,4 @@
 {
-  "description": "<!-- detect the lack of space, disabled by default -->"
+  "description": "detect the lack of space, disabled by default",
+  "references": []
 }

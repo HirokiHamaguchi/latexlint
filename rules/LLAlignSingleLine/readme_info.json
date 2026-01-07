@@ -1,3 +1,4 @@
 {
-  "description": "<!-- detect `align` environment without `\\\\` -->"
+  "description": "detect `align` environment without `\\\\`",
+  "references": []
 }

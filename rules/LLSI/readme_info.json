@@ -1,3 +1,4 @@
 {
-  "description": "<!-- detect `KB`, `MB`, `GB`, etc. without `\\SI` -->"
+  "description": "detect `KB`, `MB`, `GB`, etc. without `\\SI`",
+  "references": []
 }

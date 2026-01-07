@@ -1,3 +1,4 @@
 {
-  "description": "<!-- detect Regexes in `latexlint.userDefinedRules` -->"
+  "description": "detect Regexes in `latexlint.userDefinedRules`",
+  "references": []
 }

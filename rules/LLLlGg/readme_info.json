@@ -1,3 +1,4 @@
 {
-  "description": "<!-- detect `<<` and `>>` -->"
+  "description": "detect `<<` and `>>`",
+  "references": []
 }

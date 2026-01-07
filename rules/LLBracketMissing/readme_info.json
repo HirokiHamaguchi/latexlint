@@ -1,3 +1,4 @@
 {
-  "description": "<!-- detect `^23`, `_23`, etc. -->"
+  "description": "detect `^23`, `_23`, etc.",
+  "references": []
 }

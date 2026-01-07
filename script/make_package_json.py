@@ -43,9 +43,13 @@ def make_package_json():
         json.dump(package_data, f, indent=2, ensure_ascii=False)
         f.write("\n")
 
-    # Update web/src/assets/config.json
+    # Update web/src/assets/auto_generated_config.json
     web_config_path = (
-        Path(__file__).parent.parent / "web" / "src" / "assets" / "config.json"
+        Path(__file__).parent.parent
+        / "web"
+        / "src"
+        / "assets"
+        / "auto_generated_config.json"
     )
     with open(web_config_path, encoding="utf-8") as f:
         web_config_data = json.load(f)

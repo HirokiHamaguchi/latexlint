@@ -19,3 +19,5 @@ sample/arxiv_sources
 !sample/logs/**.log
 
 TODO.md
+
+.env

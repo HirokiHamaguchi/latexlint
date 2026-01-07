@@ -1,5 +1,6 @@
 {
   "description": "detect dubious title case in `\\title{}`, `\\section{}`, etc.",
+  "description_ja": "`\\title{}`、`\\section{}`などでの疑わしいタイトルケースを検出",
   "references": [
     "[Title Case Capitalization (APA Style)](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case)"
   ]

@@ -1,4 +1,7 @@
 {
   "description": "detect `align` environment without `\\\\`",
-  "references": []
+  "description_ja": "`\\\\`のない`align`環境を検出",
+  "references": [
+    "[What is the difference between align and equation environment when I only want to display one line of equation? (Stack Exchange)](https://tex.stackexchange.com/questions/239550/what-is-the-difference-between-align-and-equation-environment-when-i-only-want-t)"
+  ]
 }

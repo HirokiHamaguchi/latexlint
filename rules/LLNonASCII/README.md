@@ -28,17 +28,3 @@ We do not detect the following characters because they are often used in Japanes
 * U+FF09 `）`
 * U+FF0C `，`
 * U+FF0E `．`
-
-If you want to detect all non-ASCII characters, use the following Regex with [LaTeX Lint: Add Custom Detection Rule](#latex-lint-add-custom-detection-rule).
-
-```txt
-[^\x00-\x7F]
-```
-
-`\x00` to `\x7F` are ASCII characters.
-
-For example, you can detect the following Japanese characters.
-
-```txt
-あア亜、。
-```

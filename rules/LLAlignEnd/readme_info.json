@@ -1,4 +1,5 @@
 {
   "description": "detect `align` environment ends with `\\\\`",
+  "description_ja": "`align`環境が`\\\\`で終わる場合を検出",
   "references": []
 }

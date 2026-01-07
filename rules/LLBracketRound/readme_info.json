@@ -1,4 +1,5 @@
 {
   "description": "detect `\\sqrt(`, `^(`, and `_(`",
+  "description_ja": "`\\sqrt(`、`^(`、`_(`を検出",
   "references": []
 }

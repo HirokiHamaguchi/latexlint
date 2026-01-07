@@ -1,4 +1,5 @@
 {
   "description": "detect `\\ref{eq:`",
+  "description_ja": "`\\ref{eq:`を検出",
   "references": []
 }

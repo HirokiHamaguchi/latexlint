@@ -1,5 +1,6 @@
 {
   "description": "detect `\\cap_`, `\\cup_`, etc.",
+  "description_ja": "`\\cap_`、`\\cup_`などを検出",
   "references": [
     "[Formatting the union of sets (Stack Exchange)](https://tex.stackexchange.com/questions/205125/formatting-the-union-of-sets)"
   ]

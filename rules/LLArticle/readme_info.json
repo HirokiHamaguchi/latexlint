@@ -1,4 +1,5 @@
 {
   "description": "detect wrong article usage",
+  "description_ja": "冠詞の誤用を検出",
   "references": []
 }

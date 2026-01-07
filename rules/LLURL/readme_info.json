@@ -1,4 +1,5 @@
 {
   "description": "detect unnecessary info in URLs",
+  "description_ja": "URLの不要な情報を検出",
   "references": []
 }

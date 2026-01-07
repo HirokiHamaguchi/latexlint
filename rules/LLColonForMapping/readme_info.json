@@ -1,5 +1,6 @@
 {
   "description": "detect `:` for mapping",
+  "description_ja": "写像に使われた`:`を検出",
   "references": [
     "[Using \\colon or : in formulas? (Stack Exchange)](https://tex.stackexchange.com/questions/37789/using-colon-or-in-formulas)"
   ]

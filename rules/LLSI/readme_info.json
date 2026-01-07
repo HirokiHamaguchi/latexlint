@@ -1,4 +1,5 @@
 {
   "description": "detect `KB`, `MB`, `GB`, etc. without `\\SI`",
+  "description_ja": "`\\SI`なしの`KB`、`MB`、`GB`などを検出",
   "references": []
 }

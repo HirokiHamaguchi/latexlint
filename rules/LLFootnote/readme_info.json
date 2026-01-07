@@ -1,5 +1,6 @@
 {
   "description": "detect space before `\\footnote`",
+  "description_ja": "`\\footnote`の前の空白を検出",
   "references": [
     "[Where do I place a note number in relation to punctuation? (MLA Style Center)](https://style.mla.org/note-numbers-punctuation)",
     "[Best practice for source editing of footnotes (Stack Exchange)](https://tex.stackexchange.com/questions/329589/best-practice-for-source-editing-of-footnotes)",

@@ -1,4 +1,5 @@
 {
-  "description": "detect the dubious use of `-`",
+  "description": "detect the dubious use of `-`(hyphen)",
+  "description_ja": "疑わしい`-`(ハイフン)の使用を検出",
   "references": []
 }

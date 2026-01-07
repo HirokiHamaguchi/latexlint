@@ -1,4 +1,5 @@
 {
   "description": "detect heading level jumps",
+  "description_ja": "見出しレベルのジャンプを検出",
   "references": []
 }

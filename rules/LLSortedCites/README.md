@@ -2,7 +2,7 @@
 
 Detect unsorted multiple citations in `.tex` files.
 
-Multiple citations like `\cite{b,a}` will be displayed as `[2,1]` instead of the sorted order `[1,2]`. This rule detects such cases and suggests adding the `sort` option to natbib or using `\usepackage{cite}`.
+Multiple citations like `\cite{b,a}` can be displayed as `[2,1]` instead of the sorted order `[1,2]`. This rule detects such cases and suggests adding the `sort` option to natbib or using `\usepackage{cite}`.
 
 This rule only applies when:
 

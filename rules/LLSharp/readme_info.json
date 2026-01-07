@@ -1,4 +1,5 @@
 {
-  "description": "detect `\\sharp`, not `\\#`",
+  "description": "detect `\\sharp` likely to be a misuse of `\\#`",
+  "description_ja": "`\\#`の誤用とおぼしき`\\sharp`を検出",
   "references": []
 }

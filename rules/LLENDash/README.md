@@ -23,6 +23,3 @@ However, we do not detect the following as an exception.
 * (We might add more exceptions later.)
 
 We also should use `--` instead of `-` to indicate a range of pages, e.g., `123--456` instead of `123-456`. A lot of BibTeX files follow this rule. We do not detect this because it might be just a subtraction.
-
-We use the Regex `[A-Z][a-zA-Z]*[a-z]`, consisting of an uppercase letter, zero or more letters, and a lowercase letter.
-We assume that this represents someone's name.

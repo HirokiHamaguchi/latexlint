@@ -1,4 +1,5 @@
 {
   "description": "detect unsorted cites",
+  "description_ja": "ソートされていない引用を検出",
   "references": []
 }

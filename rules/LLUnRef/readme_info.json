@@ -1,4 +1,5 @@
 {
   "description": "detect unreferenced figure and table labels",
+  "description_ja": "参照されていない図表ラベルを検出",
   "references": []
 }

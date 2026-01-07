@@ -28,4 +28,4 @@ For example, if you use `\Box` as a [infimal convolution](https://en.wikipedia.o
 
 ![rules/LLUserDefined](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLUserDefined/LLUserDefined2.png)
 
-Then, you can use `\infConv` instead of `\Box`.
+Then, you can use `\infConv` instead of `\Box`, and you can define `\\Box` as a regular expression to detect this pattern.

@@ -1,5 +1,6 @@
 {
   "description": "detect `eqnarray` environment",
+  "description_ja": "`eqnarray`環境を検出",
   "references": [
     "[Why not use eqnarray? (TeX FAQ)](https://texfaq.org/FAQ-eqnarray)"
   ]

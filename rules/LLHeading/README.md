@@ -3,7 +3,7 @@
 Detect improper heading hierarchy in `.tex` files.
 This rule warns when there are jumps in heading levels, such as going directly from `\section` to `\subsubsection` without an intermediate `\subsection`.
 
-The rule checks the following heading levels (in order):
+The rule checks the following heading levels:
 
 1. `\chapter`
 2. `\section`

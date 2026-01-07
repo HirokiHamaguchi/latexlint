@@ -1,4 +1,5 @@
 {
   "description": "detect Regexes in `latexlint.userDefinedRules`",
+  "description_ja": "`latexlint.userDefinedRules`内の正規表現を検出",
   "references": []
 }

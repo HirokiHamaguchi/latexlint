@@ -5,13 +5,14 @@ from make_enumerate_diagnostics_test import make_enumerate_diagnostics_test
 from make_lint_tex import make_lint_tex
 from make_package_json import make_package_json
 from make_png_files import make_png_files
-from make_readme_en import make_readme_en
+from make_readme import make_readme
 from make_rules_ts import make_rules_ts
 from make_web_readme import make_web_readme
 from make_web_svg import make_web_svg
 from run_diagnose import run_diagnose
 from run_fetch_arXiv import run_fetch_arXiv
 from run_fetch_arxiv_from_list import run_fetch_arxiv_from_list
+from run_qiita_api import maybe_update_qiita_from_readme
 from test_file_content import test_file_content
 from test_is_for_md import test_is_for_md
 from test_mark_down_png import test_mark_down_png
@@ -38,7 +39,7 @@ def main():
     make_lint_tex()
     make_package_json()
     make_png_files()
-    make_readme_en()
+    make_readme()
     make_rules_ts()
     make_web_readme()
     make_web_svg()
@@ -50,6 +51,9 @@ def main():
     test_rule_names()
     test_rule_ts_file()
     test_web_config()
+
+    # Optionally update Qiita article if README_ja.md was updated recently
+    maybe_update_qiita_from_readme()
 
     files = os.listdir(os.path.dirname(__file__))
     functions = []

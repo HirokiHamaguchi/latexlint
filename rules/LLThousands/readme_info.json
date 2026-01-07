@@ -1,5 +1,6 @@
 {
   "description": "detect `1,000` etc.",
+  "description_ja": "`1,000`などを検出",
   "references": [
     "[avoid space after commas used as thousands separator in math mode (Stack Exchange)](https://tex.stackexchange.com/questions/303110/avoid-space-after-commas-used-as-thousands-separator-in-math-mode)"
   ]

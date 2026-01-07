@@ -3,7 +3,7 @@
 
 <div align="center">
 
-<img src="images/mainIcon512.png" alt="mainIcon" width="150">
+<img src="https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/mainIcon512.png" alt="mainIcon" width="150">
 
 </div>
 
@@ -39,7 +39,7 @@ Here is the list of rules we detect.
 10. [LLColonForMapping](#llcolonformapping) (detect `:` for mapping)
 11. [LLCref](#llcref) (detect `\ref`, disabled by default)
 12. [LLDoubleQuotes](#lldoublequotes) (detect `“`, `”` and `"`)
-13. [LLENDash](#llendash) (detect the dubious use of `-`)
+13. [LLENDash](#llendash) (detect the dubious use of `-`(hyphen))
 14. [LLEqnarray](#lleqnarray) (detect `eqnarray` environment)
 15. [LLFootnote](#llfootnote) (detect space before `\footnote`)
 16. [LLHeading](#llheading) (detect heading level jumps)
@@ -49,11 +49,11 @@ Here is the list of rules we detect.
 20. [LLNonstandardNotation](#llnonstandardnotation) (detect nonstandard mathematical notations)
 21. [LLPeriod](#llperiod) (detect `e.g.`)
 22. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
-23. [LLSharp](#llsharp) (detect `\sharp`, not `\#`)
+23. [LLSharp](#llsharp) (detect `\sharp` likely to be a misuse of `\#`)
 24. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
 25. [LLSortedCites](#llsortedcites) (detect unsorted cites)
 26. [LLT](#llt) (detect `^T`)
-27. [LLTextLint](#lltextlint) (simplified text lint)
+27. [LLTextLint](#lltextlint) (part of textlint features)
 28. [LLThousands](#llthousands) (detect `1,000` etc.)
 29. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
 30. [LLUnRef](#llunref) (detect unreferenced figure and table labels)
@@ -64,12 +64,12 @@ Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint
 
 ### LLAlignAnd
 
-Detect `=&` in `.tex` and `.md` files.
-Use `&=` or `={}&` in the `align` environment to avoid relation spacing error.
+Detect `=&` of `align` environments in `.tex` and `.md` files.
+Use `&=` or `={}&` to avoid extra spaces.
 
 ![rules/LLAlignAnd](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLAlignAnd/LLAlignAnd.png)
 
-We also detect `\neq&`, `\leq&`, `\geq&`, `\le&`, `\ge&`, `<&`, and `>&`.
+We also detect `\neq&`, `\leq&`, `\geq&`, etc.
 
 References:
 
@@ -78,22 +78,24 @@ References:
 ### LLAlignEnd
 
 Detect `align`, `gather`, and other environments end with `\\` in `.tex` and `.md` files.
-This `\\` can be unnecessary.
+This `\\` would be unnecessary.
 
 ![rules/LLAlignEnd](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLAlignEnd/LLAlignEnd.png)
 
 ### LLAlignSingleLine
 
 Detect `align` environment without `\\` in `.tex` and `.md` files.
-You should likely use the `equation` environment.
+Single-line equations are recommended to use the `equation` environment.
 
 ![rules/LLAlignSingleLine](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLAlignSingleLine/LLAlignSingleLine.png)
 
-The spacing of the `align` environment is [different](https://tex.stackexchange.com/questions/239550/what-is-the-difference-between-align-and-equation-environment-when-i-only-want-t) from the `equation` environment with only one equation.
+The spacing of the `align` environment is different from the `equation` environment with only one equation. [Official documentation of `amsmath` package](https://ctan.org/pkg/amsmath) suggests using the `equation` environment for only one equation.
 
-It is up to you which one to use, but `amsmath` [official documentation](https://ctan.org/pkg/amsmath) suggests using the `equation` environment for only one equation.
+To rewrite `\begin{align} ... \end{align}` to `\begin{equation} ... \end{equation}`, you can rename the command by [LaTeX Lint: Rename Command or Label](#latex-lint-rename-command-or-label).
 
-You can rename the command by [LaTeX Lint: Rename Command or Label](#latex-lint-rename-command-or-label).
+References:
+
+[What is the difference between align and equation environment when I only want to display one line of equation? (Stack Exchange)](https://tex.stackexchange.com/questions/239550/what-is-the-difference-between-align-and-equation-environment-when-i-only-want-t)
 
 ### LLArticle
 
@@ -101,8 +103,6 @@ Detect wrong article usage in `.tex` and `.md` files.
 For example, `A $n$-dimensional` should be `An $n$-dimensional` (We might add more patterns in the future).
 
 ![rules/LLArticle](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLArticle/LLArticle.png)
-
-Such error cannot be detected by grammar checkers such as Grammarly, since it contains a math equation.
 
 ### LLBig
 
@@ -119,7 +119,7 @@ References:
 ### LLBracketCurly
 
 Detect `\max{` and `\min{` in `.tex` and `.md` files.
-You should likely use `\max(` and `\min(` instead, or add a space after `\max` or `\min` to clarify.
+You should likely use `\max(` and `\min(` instead, or add a space　like `\max {` or `\min {` to make it clear.
 
 ![rules/LLBracketCurly](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLBracketCurly/LLBracketCurly.png)
 
@@ -162,7 +162,7 @@ You likely want to use `\colon` instead.
 ![rules/LLColonForMapping](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLColonForMapping/LLColonForMapping.png)
 
 `\colon` is recommended for the mapping symbol. `:` is used for ratios, such as `1:2`.
-When `\to`, `\mapsto`, or `\rightarrow` appear, the rule looks back up to 10 words for the nearest `:`, using some heuristics to suppress false positives.
+When `\to`, `\mapsto`, or `\rightarrow` appear, the rule looks back up to 10 words to find the nearest `:`, using some heuristics to suppress false positives.
 
 References:
 
@@ -179,13 +179,11 @@ We prefer this package because it can automatically add prefixes like "Sec." or 
 ### LLDoubleQuotes
 
 Detect `“`, `”` and `"` in `.tex` files.
-These might be used as "XXX" or “XXX”.
-
-Use ``XXX'' instead for double quotation.
+Use ` ``XXX'' ` instead for double quotation.
 
 ![rules/LLDoubleQuotes](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLDoubleQuotes/LLDoubleQuotes.png)
 
-As for “XXX”, there is no problem in most cases. We prefer to use ``XXX'' for consistency.
+As for “XXX”, there is no problem in most cases. We prefer to use ` ``XXX'' ` for consistency.
 
 You can also use `\enquote{XXX}` with the [csquotes](https://ctan.org/pkg/csquotes) package.
 
@@ -218,9 +216,6 @@ However, we do not detect the following as an exception.
 * (We might add more exceptions later.)
 
 We also should use `--` instead of `-` to indicate a range of pages, e.g., `123--456` instead of `123-456`. A lot of BibTeX files follow this rule. We do not detect this because it might be just a subtraction.
-
-We use the Regex `[A-Z][a-zA-Z]*[a-z]`, consisting of an uppercase letter, zero or more letters, and a lowercase letter.
-We assume that this represents someone's name.
 
 ### LLEqnarray
 
@@ -255,7 +250,7 @@ References:
 Detect improper heading hierarchy in `.tex` files.
 This rule warns when there are jumps in heading levels, such as going directly from `\section` to `\subsubsection` without an intermediate `\subsection`.
 
-The rule checks the following heading levels (in order):
+The rule checks the following heading levels:
 
 1. `\chapter`
 2. `\section`
@@ -311,19 +306,6 @@ We do not detect the following characters because they are often used in Japanes
 * U+FF0C `，`
 * U+FF0E `．`
 
-If you want to detect all non-ASCII characters, use the following Regex with [LaTeX Lint: Add Custom Detection Rule](#latex-lint-add-custom-detection-rule).
-
-```txt
-[^\x00-\x7F]
-```
-
-`\x00` to `\x7F` are ASCII characters.
-
-For example, you can detect the following Japanese characters.
-
-```txt
-あア亜、。
-```
 
 ### LLNonstandardNotation
 
@@ -337,7 +319,7 @@ These symbols are not generally used in formal writing.
 
 #### The word "iff"
 
-While commonly used in informal mathematical writing, "iff" (if and only if) should be written out fully in formal academic papers.
+While commonly used in informal mathematical writing, "iff" (if and only if) is preferred to be written out fully in formal academic writing.
 
 #### \fallingdotseq and \risingdotseq commands
 
@@ -369,9 +351,7 @@ References:
 ### LLPeriod
 
 Detect `e.g.` in `.tex` and `.md` files.
-You should likely add a comma like `e.g.,` or use `e.g.\` to avoid spacing issues.
-
-This rule also flags `i.e.` in the same way.
+You should likely add a comma like `e.g.,` or use `e.g.\` to avoid spacing issues.　`i.e.` is treated similarly.
 
 ![rules/LLPeriod](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLPeriod/LLPeriod.png)
 
@@ -393,8 +373,7 @@ You should likely use `\#` instead for the [number sign](https://en.wikipedia.or
 
 ![rules/LLSharp](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLSharp/LLSharp.png)
 
-`\sharp` is used for the musical symbol. This rule reports it only when it is not used as a superscript nor subscript, and when followed by an uppercase letter or `{...}`; other cases are ignored.
-
+`\sharp` is used for the musical symbol. We only report it when some heuristic conditions are met.
 ### LLSI
 
 Detect `KB`, `MB`, `GB`, `TB`, `PB`, `EB`, `ZB`, `YB`, `KiB`, `MiB`, `GiB`, `TiB`, `PiB`, `EiB`, `ZiB`, and `YiB` without `\SI` in `.tex` files.
@@ -419,7 +398,7 @@ It would be better to use `\SI` for units such as `m`, `s`, `kg`, `A`, `K`, `mol
 
 Detect unsorted multiple citations in `.tex` files.
 
-Multiple citations like `\cite{b,a}` will be displayed as `[2,1]` instead of the sorted order `[1,2]`. This rule detects such cases and suggests adding the `sort` option to natbib or using `\usepackage{cite}`.
+Multiple citations like `\cite{b,a}` can be displayed as `[2,1]` instead of the sorted order `[1,2]`. This rule detects such cases and suggests adding the `sort` option to natbib or using `\usepackage{cite}`.
 
 This rule only applies when:
 
@@ -534,7 +513,7 @@ For example, if you use `\Box` as a [infimal convolution](https://en.wikipedia.o
 
 ![rules/LLUserDefined](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLUserDefined/LLUserDefined2.png)
 
-Then, you can use `\infConv` instead of `\Box`.
+Then, you can use `\infConv` instead of `\Box`, and you can define `\\Box` as a regular expression to detect this pattern.
 
 ## Other Features
 
@@ -606,15 +585,9 @@ You can see the result on the Wolfram Alpha page. We remove some unnecessary com
 
 As stated in the [Rules](#rules), false positives and false negatives may occur. We apologize for the inconvenience. If you find any errors, please report them via [GitHub Issues](https://github.com/hari64boli64/latexlint/issues).
 
-**We always welcome any kind of feedback, suggestions, and pull requests!**
-
 When writing papers, please ensure you follow the style specified by the academic society or publisher.
 
-We hope our extension will help you write papers.
-
-## Change Log
-
-Refer to [CHANGELOG.md](CHANGELOG.md).
+We hope our extension would be helpful for your academic writing.
 
 ## License
 

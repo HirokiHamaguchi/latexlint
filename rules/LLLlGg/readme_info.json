@@ -1,4 +1,5 @@
 {
   "description": "detect `<<` and `>>`",
+  "description_ja": "`<<`と`>>`を検出",
   "references": []
 }

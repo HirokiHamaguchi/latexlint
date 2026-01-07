@@ -16,7 +16,7 @@ svg_size = 400
 icon = Image.open("mainIcon512.png").resize(
     (svg_size, svg_size), Image.Resampling.LANCZOS
 )
-# 左端に配置（上下中央）
+# 左端に配置
 icon_x = 80
 icon_y = (height - svg_size) // 2
 img.paste(icon, (icon_x, icon_y), icon if icon.mode == "RGBA" else None)
@@ -40,7 +40,7 @@ draw.text(
     font=font,
 )
 
-# "Lint"を描画（2段目）
+# "Lint"を描画
 text_lint = "Lint"
 draw.text((text_x, text_y_base - font_size * 0.1), text_lint, fill="#333333", font=font)
 

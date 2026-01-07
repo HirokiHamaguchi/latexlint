@@ -10,7 +10,7 @@ These symbols are not generally used in formal writing.
 
 #### The word "iff"
 
-While commonly used in informal mathematical writing, "iff" (if and only if) should be written out fully in formal academic papers.
+While commonly used in informal mathematical writing, "iff" (if and only if) is preferred to be written out fully in formal academic writing.
 
 #### \fallingdotseq and \risingdotseq commands
 

@@ -1,4 +1,5 @@
 {
   "description": "detect `\\max{` and `\\min{`",
+  "description_ja": "`\\max{`と`\\min{`を検出",
   "references": []
 }

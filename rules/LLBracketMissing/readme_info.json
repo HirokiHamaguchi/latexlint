@@ -1,4 +1,5 @@
 {
   "description": "detect `^23`, `_23`, etc.",
+  "description_ja": "`^23`、`_23`などを検出",
   "references": []
 }

@@ -5,4 +5,4 @@ You should likely use `\#` instead for the [number sign](https://en.wikipedia.or
 
 ![rules/LLSharp](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLSharp/LLSharp.png)
 
-`\sharp` is used for the musical symbol. This rule reports it only when it is not used as a superscript nor subscript, and when followed by an uppercase letter or `{...}`; other cases are ignored.
+`\sharp` is used for the musical symbol. We only report it when some heuristic conditions are met.

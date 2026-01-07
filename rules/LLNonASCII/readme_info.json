@@ -1,4 +1,5 @@
 {
   "description": "detect fullwidth ASCII characters, disabled by default",
+  "description_ja": "全角ASCII文字を検出 (デフォルトで無効)",
   "references": []
 }

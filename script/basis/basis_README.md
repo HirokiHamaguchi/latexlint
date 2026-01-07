@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="images/mainIcon512.png" alt="mainIcon" width="150">
+<img src="https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/mainIcon512.png" alt="mainIcon" width="150">
 
 </div>
 
@@ -102,15 +102,9 @@ You can see the result on the Wolfram Alpha page. We remove some unnecessary com
 
 As stated in the [Rules](#rules), false positives and false negatives may occur. We apologize for the inconvenience. If you find any errors, please report them via [GitHub Issues](https://github.com/hari64boli64/latexlint/issues).
 
-**We always welcome any kind of feedback, suggestions, and pull requests!**
-
 When writing papers, please ensure you follow the style specified by the academic society or publisher.
 
-We hope our extension will help you write papers.
-
-## Change Log
-
-Refer to [CHANGELOG.md](CHANGELOG.md).
+We hope our extension would be helpful for your academic writing.
 
 ## License
 

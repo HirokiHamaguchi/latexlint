@@ -6,7 +6,6 @@ dist
 docs
 node_modules
 
-other/azurePersonalAccessToken.txt
 
 sample/arxiv_sources
 **/**.dvi
@@ -18,6 +17,6 @@ sample/arxiv_sources
 
 !sample/logs/**.log
 
-TODO.md
-
 .env
+azurePersonalAccessToken.txt
+TODO.md

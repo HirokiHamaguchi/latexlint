@@ -1,6 +1,6 @@
 # https://github.com/first20hours/google-10000-english/blob/master/20k.txt
 
-with open("other/20k.txt", "r") as f:
+with open("src/util/20k.txt", "r") as f:
     words_list = f.read().splitlines()
 
 ts_file = "src/util/wordSet.ts"

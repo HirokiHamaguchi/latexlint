@@ -23,17 +23,10 @@ from test_web_config import test_web_config
 
 
 def main():
-    only_run = input("Do you want to only run diagnose? (y/N): ").strip().lower() == "y"
-
     # only once
     if False:
         run_fetch_arXiv()
         run_fetch_arxiv_from_list()
-
-    run_diagnose()
-
-    if only_run:
-        return
 
     make_constants_ts()
     make_lint_tex()
@@ -51,6 +44,7 @@ def main():
     test_rule_names()
     test_rule_ts_file()
     test_web_config()
+    run_diagnose()
 
     # Optionally update Qiita article if README_ja.md was updated recently
     maybe_update_qiita_from_readme()

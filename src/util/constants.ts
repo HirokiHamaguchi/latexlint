@@ -71,7 +71,7 @@ export const messages: Record<LLCode, string> = {
     LLThousands: 'Consider using "%1{,}%2" instead of "%1,%2".',
     LLTitle: 'Should this be "%1"? Follow your preferred style guide and register as an exception if necessary.',
     LLUnRef: 'Label "%1" is defined but never referenced.',
-    LLURL: 'UTM parameters (?utm_*) might be unnecessary and could be removed for cleaner URLs.',
+    LLURL: 'Query parameter "?%1=" might be unnecessary and could be removed for cleaner URLs.',
     LLUserDefined: 'This violates your defined rule: %1',
 };
 

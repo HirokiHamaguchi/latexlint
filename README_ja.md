@@ -369,6 +369,7 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 ![rules/LLSharp](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLSharp/LLSharp.png)
 
 `\sharp`は音楽記号に使用されます。このルールはいくつかのヒューリスティックな条件を満たす場合にのみ報告します。
+
 ### LLSI
 
 `.tex`ファイルで`\SI`なしの`KB`、`MB`、`GB`、`TB`、`PB`、`EB`、`ZB`、`YB`、`KiB`、`MiB`、`GiB`、`TiB`、`PiB`、`EiB`、`ZiB`、`YiB`を検出します。
@@ -467,7 +468,7 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 
 以下のクエリ文字列は不要とみなします:
 
-* ?utm_...（[Wikipedia](https://en.wikipedia.org/wiki/UTM_parameters)参照）
+* ?utm_...=（[Wikipedia](https://en.wikipedia.org/wiki/UTM_parameters)参照）
 * ?sessionid=...
 * ?user=...
 * ?email=...

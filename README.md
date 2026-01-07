@@ -306,7 +306,6 @@ We do not detect the following characters because they are often used in Japanes
 * U+FF0C `，`
 * U+FF0E `．`
 
-
 ### LLNonstandardNotation
 
 Detect nonstandard mathematical notations in `.tex` and `.md` files that are not commonly used in formal academic writing.
@@ -374,6 +373,7 @@ You should likely use `\#` instead for the [number sign](https://en.wikipedia.or
 ![rules/LLSharp](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLSharp/LLSharp.png)
 
 `\sharp` is used for the musical symbol. We only report it when some heuristic conditions are met.
+
 ### LLSI
 
 Detect `KB`, `MB`, `GB`, `TB`, `PB`, `EB`, `ZB`, `YB`, `KiB`, `MiB`, `GiB`, `TiB`, `PiB`, `EiB`, `ZiB`, and `YiB` without `\SI` in `.tex` files.
@@ -472,7 +472,7 @@ Detect URLs containing query strings in `.tex` and `.md` files.
 
 The following query strings are considered unnecessary:
 
-* ?utm_... (see [Wikipedia](https://en.wikipedia.org/wiki/UTM_parameters))
+* ?utm_...= (see [Wikipedia](https://en.wikipedia.org/wiki/UTM_parameters))
 * ?sessionid=...
 * ?user=...
 * ?email=...

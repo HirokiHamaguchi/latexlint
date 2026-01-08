@@ -22,7 +22,9 @@ export function useLinting() {
             console.error('Linting error:', error);
             setDiagnostics([]);
         } finally {
-            setLintingState('complete');
+            setTimeout(() => {
+                setLintingState('complete');
+            }, 100);
         }
     }, []);
 

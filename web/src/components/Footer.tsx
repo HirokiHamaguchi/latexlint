@@ -9,10 +9,10 @@ import {
 
 const BASE_URL = import.meta.env.BASE_URL;
 
-const ExternalLink = ({ href, children, icon }: { href: string; children: React.ReactNode; icon: string; }) => (
+const ExternalLink = ({ href, children, icon, roundIcon }: { href: string; children: React.ReactNode; icon: string; roundIcon?: boolean }) => (
     <Link href={href} target="_blank" rel="noopener noreferrer">
         <HStack align="center" gap={2}>
-            <Image src={`${BASE_URL}${icon}`} alt="" boxSize="1.2em" />
+            <Image src={`${BASE_URL}${icon}`} alt="" boxSize="1.8em" borderRadius={roundIcon ? "full" : undefined} />
             <Text fontSize="sm">{children}</Text>
         </HStack>
     </Link>
@@ -22,11 +22,8 @@ export function Footer() {
     return (
         <Box
             as="footer"
-            borderTop="1px solid"
-            borderColor="gray.300"
             py={4}
             px={6}
-            bg="gray.50"
         >
             <VStack gap={3}>
                 <HStack gap={5} flexWrap="wrap" justifyContent="center">
@@ -44,7 +41,8 @@ export function Footer() {
                     </ExternalLink>
                     <ExternalLink
                         href="https://hirokihamaguchi.github.io/"
-                        icon="lintIconLight_copied.svg"
+                        icon="profile_icon256.webp"
+                        roundIcon={true}
                     >
                         Developer's Website
                     </ExternalLink>

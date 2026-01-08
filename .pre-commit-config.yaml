@@ -24,3 +24,11 @@ repos:
         additional_dependencies:
           - types-requests>=2.32.4.20250913
         exclude: ^submodules/
+
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v9.39.1
+    hooks:
+      - id: eslint
+        files: \.(ts|tsx|js|jsx)$
+        args: ["--fix"]
+        exclude: ^submodules/|sample/logs/

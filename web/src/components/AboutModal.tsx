@@ -5,7 +5,6 @@ import {
     Dialog,
     Grid,
     Heading,
-    HStack,
     Image,
     Link,
     Table,
@@ -26,14 +25,6 @@ import readmeContent from '../assets/README.md?raw';
 const BASE_URL = import.meta.env.BASE_URL;
 const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/';
 
-const ExternalLink = ({ href, children, icon }: { href: string; children: React.ReactNode; icon?: string }) => (
-    <Link href={href} target="_blank" rel="noopener noreferrer">
-        <HStack align="center" gap={2}>
-            {icon && <Image src={`${BASE_URL}${icon}`} alt="" boxSize="1.5em" />}
-            <Text>{children}</Text>
-        </HStack>
-    </Link>
-);
 
 const SampleImage = ({ src, alt, color }: { src: string; alt: string; color: string }) => (
     <VStack>
@@ -104,23 +95,6 @@ const VocabularyRow = ({ entry }: { entry: VocabularyEntry }) => {
 
 function OverviewTab() {
     return <VStack align="stretch">
-        <VStack align="stretch">
-            <Heading size="lg">Links</Heading>
-            <HStack gap={5} flexWrap="wrap">
-                <ExternalLink
-                    href="https://github.com/HirokiHamaguchi/latexlint/tree/master"
-                    icon="mark-github-24.svg"
-                >
-                    GitHub Repository
-                </ExternalLink>
-                <ExternalLink
-                    href="https://marketplace.visualstudio.com/items?itemName=hari64boli64.latexlint"
-                    icon="Visual_Studio_Code_1.35_icon.svg"
-                >
-                    Marketplace of VS Code Extension
-                </ExternalLink>
-            </HStack>
-        </VStack>
         <VStack align="stretch">
             <Heading size="lg">Privacy</Heading>
             <Text fontSize="sm">

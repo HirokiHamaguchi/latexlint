@@ -3,7 +3,7 @@ import type * as monaco from 'monaco-editor';
 import { useEffect, useRef, useState } from 'react';
 import sampleMdBefore from '../sample/sample_before.md?raw';
 import sampleTexBefore from '../sample/sample_before.tex?raw';
-import { AboutModal, ConfigurationSection, EditorSection, Header } from './components';
+import { AboutModal, ConfigurationSection, EditorSection, Footer, Header } from './components';
 import { DiagnosticsSection } from './components/DiagnosticsSection';
 import { useConfig, useLinting } from './hooks';
 import { DocType, LintingState } from './types';
@@ -142,6 +142,8 @@ export function Content() {
                 readmeLink={modals.about.hash}
                 onTabChange={(tab) => setModals(prev => ({ ...prev, about: { ...prev.about, tab } }))}
             />
+
+            <Footer />
         </Container>
     );
 }

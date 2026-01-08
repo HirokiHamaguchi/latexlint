@@ -27,6 +27,7 @@ export function Content() {
     const [text, setText] = useState(sampleTexBefore);
     const [modals, setModals] = useState({ about: { isOpen: false, tab: 'overview', hash: '' }, config: { isOpen: false } });
     const [isEditorReady, setIsEditorReady] = useState(false);
+    const [editorHeight, setEditorHeight] = useState<number | undefined>(undefined);
     const editorRef = useRef<monaco.editor.IStandaloneCodeEditor | null>(null);
 
     const { lintingState, diagnostics, runLint, runLintWithDelay } = useLinting();
@@ -92,17 +93,6 @@ export function Content() {
                     onAboutClick={handleAboutClick}
                 />
 
-                <ConfigurationSection
-                    isOpen={modals.config.isOpen}
-                    onToggle={(isOpen) => setModals(prev => ({ ...prev, config: { isOpen } }))}
-                    config={config}
-                    onConfigChange={updateConfig}
-                    onRunLint={runLint}
-                    text={text}
-                    docType={docType}
-                    onOpenAboutWithHash={handleOpenAboutWithHash}
-                />
-
                 <HStack color="gray.700">
                     <Text as="span" fontWeight="medium">
                         {docType === 'latex' ? 'LaTeX' : 'Markdown'} Editor
@@ -121,6 +111,7 @@ export function Content() {
                         onEditorReady={() => setIsEditorReady(true)}
                         onOpenAboutWithHash={handleOpenAboutWithHash}
                         onEditorRef={(ref) => { editorRef.current = ref.current; }}
+                        onEditorHeightChange={setEditorHeight}
                     />
 
                     <DiagnosticsSection
@@ -128,8 +119,20 @@ export function Content() {
                         onOpenAboutWithHash={handleOpenAboutWithHash}
                         onDiagnosticClick={handleDiagnosticClick}
                         onDisableRule={handleDisableRule}
+                        height={editorHeight}
                     />
                 </SimpleGrid>
+
+                <ConfigurationSection
+                    isOpen={modals.config.isOpen}
+                    onToggle={(isOpen) => setModals(prev => ({ ...prev, config: { isOpen } }))}
+                    config={config}
+                    onConfigChange={updateConfig}
+                    onRunLint={runLint}
+                    text={text}
+                    docType={docType}
+                    onOpenAboutWithHash={handleOpenAboutWithHash}
+                />
             </VStack>
 
             <AboutModal

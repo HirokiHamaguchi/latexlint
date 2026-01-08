@@ -11,7 +11,7 @@ import {
     VStack,
 } from '@chakra-ui/react';
 import type * as monaco from 'monaco-editor';
-import { LuBan, LuExternalLink, LuMenu } from 'react-icons/lu';
+import { LuBan, LuExternalLink, LuSettings } from 'react-icons/lu';
 
 const SEVERITY = { ERROR: 8, WARNING: 4, INFO: 2, HINT: 1 } as const;
 
@@ -94,7 +94,8 @@ const RuleActions = ({ diagnostic, onOpenAboutWithHash, onDisableRule }: {
                         size="xs"
                         variant="ghost"
                     >
-                        <LuMenu />
+                        <LuSettings size={16} />
+                        {ruleId}
                     </IconButton>
                 </Menu.Trigger>
                 <Portal>
@@ -185,11 +186,12 @@ const DiagnosticItem = ({ diagnostic, onOpenAboutWithHash, onDiagnosticClick, on
     );
 };
 
-export function DiagnosticsSection({ diagnostics, onOpenAboutWithHash, onDiagnosticClick, onDisableRule }: {
+export function DiagnosticsSection({ diagnostics, onOpenAboutWithHash, onDiagnosticClick, onDisableRule, height }: {
     diagnostics: monaco.editor.IMarkerData[];
     onOpenAboutWithHash: (hash: string) => void;
     onDiagnosticClick: (lineNumber: number, column: number) => void;
     onDisableRule: (ruleId: string) => void;
+    height?: number;
 }) {
     const counts = getDiagnosticCounts(diagnostics);
     const color = getDiagnosticColor(counts);
@@ -197,7 +199,15 @@ export function DiagnosticsSection({ diagnostics, onOpenAboutWithHash, onDiagnos
     const hasProblems = diagnostics.length > 0;
 
     return (
-        <Box border="1px" borderColor={color + '.200'} borderRadius="md" p={4} bg={color + '.50'}>
+        <Box
+            border="1px"
+            borderColor={color + '.200'}
+            borderRadius="md"
+            p={4}
+            bg={color + '.50'}
+            height={height ? `${height}px` : undefined}
+            overflowY={height ? 'auto' : undefined}
+        >
             <VStack align="stretch" gap={4}>
                 <HStack justify="space-between" align="center">
                     <Text fontSize="lg" fontWeight="bold">Diagnostics</Text>

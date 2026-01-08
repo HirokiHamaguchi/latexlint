@@ -44,6 +44,13 @@ def make_package_json():
         f.write("\n")
 
     # Update web/src/assets/auto_generated_config.json
+    web_config_data = package_data["contributes"]["configuration"]["properties"]
+    # replace "latexlint." prefix to ""
+    web_config_data = {
+        key.replace("latexlint.", ""): value for key, value in web_config_data.items()
+    }
+    # clear default values in disabledRules
+    web_config_data["disabledRules"]["default"] = []
     web_config_path = (
         Path(__file__).parent.parent
         / "web"
@@ -51,12 +58,6 @@ def make_package_json():
         / "assets"
         / "auto_generated_config.json"
     )
-    with open(web_config_path, encoding="utf-8") as f:
-        web_config_data = json.load(f)
-
-    web_disabled_rules_config = web_config_data["disabledRules"]
-    web_disabled_rules_config["items"]["enum"] = rule_names
-    web_disabled_rules_config["default"] = disabled_by_default
     with open(web_config_path, "w", encoding="utf-8") as f:
         json.dump(web_config_data, f, indent=4, ensure_ascii=False)
         f.write("\n")

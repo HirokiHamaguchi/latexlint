@@ -1,14 +1,13 @@
 import {
     Box,
     Checkbox,
-    Collapsible,
     IconButton,
     Input,
     SimpleGrid,
     Text,
-    VStack,
+    VStack
 } from '@chakra-ui/react';
-import { LuChevronRight, LuCircleHelp } from "react-icons/lu";
+import { LuCircleHelp } from "react-icons/lu";
 import { configMetadata, type LintConfig } from '../config';
 import { DocType } from '../types';
 
@@ -95,40 +94,23 @@ type ConfigurationSectionProps = {
 
 export function ConfigurationSection(props: ConfigurationSectionProps) {
     return (
-        <Box as="section" aria-label="Configuration">
-            <Collapsible.Root open={props.isOpen} onOpenChange={(e) => props.onToggle(e.open)}>
-                <Collapsible.Trigger
-                    display="flex"
-                    gap="2"
-                    alignItems="center"
-                    cursor="pointer"
-                >
-                    <Collapsible.Indicator transition="transform 0.2s" _open={{ transform: "rotate(90deg)" }}>
-                        <LuChevronRight />
-                    </Collapsible.Indicator>
-                    Setting
-                </Collapsible.Trigger>
-                <Collapsible.Content>
-                    <Box mt={4} p={4} borderWidth="1px" borderRadius="md" bg="gray.50">
-                        <VStack align="stretch" gap={4}>
-                            {(Object.keys(props.config) as Array<keyof LintConfig>).map((key) => {
-                                return (
-                                    <ConfigField
-                                        key={key}
-                                        keyName={key}
-                                        config={props.config}
-                                        updateConfig={(newConfig: LintConfig) => {
-                                            props.onConfigChange(newConfig);
-                                            props.onRunLint(props.text, props.docType, true);
-                                        }}
-                                        onOpenAboutWithHash={props.onOpenAboutWithHash}
-                                    />
-                                );
-                            })}
-                        </VStack>
-                    </Box>
-                </Collapsible.Content>
-            </Collapsible.Root>
+        <Box mt={4} p={4} borderWidth="1px" borderRadius="md" bg="gray.50">
+            <VStack align="stretch" gap={4}>
+                {(Object.keys(props.config) as Array<keyof LintConfig>).map((key) => {
+                    return (
+                        <ConfigField
+                            key={key}
+                            keyName={key}
+                            config={props.config}
+                            updateConfig={(newConfig: LintConfig) => {
+                                props.onConfigChange(newConfig);
+                                props.onRunLint(props.text, props.docType, true);
+                            }}
+                            onOpenAboutWithHash={props.onOpenAboutWithHash}
+                        />
+                    );
+                })}
+            </VStack>
         </Box>
     );
 }

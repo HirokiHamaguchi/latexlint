@@ -13,9 +13,11 @@
 	},
 	"editor.codeActionsOnSave": {
 		"source.organizeImports": "explicit",
+		"source.fixAll.eslint": "explicit"
 	},
 	// Turn off tsc task auto detection since we have the necessary tasks as npm scripts
 	"typescript.tsc.autoDetect": "off",
+	"editor.formatOnSave": true,
 	"cSpell.words": [
 		"'enyi",
 		"alignat",
@@ -137,6 +139,12 @@
 	"latexlint.userDefinedRules": [
 		"f\\^a"
 	],
+	"[typescript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
 	"[latex]": {
 		"editor.insertSpaces": false,
 		"editor.detectIndentation": false

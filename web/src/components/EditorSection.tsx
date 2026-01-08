@@ -19,13 +19,13 @@ type EditorSectionProps = {
 };
 
 export function EditorSection(props: EditorSectionProps) {
-    const value=props.text;
-    const diagnostics=props.diagnostics;
-    const onChange=props.onTextChange;
-    const onEditorReady=props.onEditorReady;
-    const onOpenAboutWithHash=props.onOpenAboutWithHash;
-    const onEditorRef=props.onEditorRef;
-    const onHeightChange=props.onEditorHeightChange;
+    const value = props.text;
+    const diagnostics = props.diagnostics;
+    const onChange = props.onTextChange;
+    const onEditorReady = props.onEditorReady;
+    const onOpenAboutWithHash = props.onOpenAboutWithHash;
+    const onEditorRef = props.onEditorRef;
+    const onHeightChange = props.onEditorHeightChange;
 
     const editorRef = useRef<Monaco.editor.IStandaloneCodeEditor | null>(null);
     const monacoRef = useRef<typeof Monaco | null>(null);

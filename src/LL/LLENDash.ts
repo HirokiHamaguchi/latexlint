@@ -30,7 +30,7 @@ export default function LLENDash(
       let k = i - 2;
       while (k >= 0 && /[a-zA-Z]/.test(txt.text[k])) k--;
       const precedingWord = txt.text.slice(k + 1, i - 1);
-      console.log(`Preceding word: "${precedingWord}"`);
+      // console.log(`Preceding word: "${precedingWord}"`);
       if (precedingWord.length > 1 && !wordSet.has(precedingWord.toLowerCase()))
         continue;
     }

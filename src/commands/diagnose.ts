@@ -6,6 +6,7 @@ export default function diagnose(
   diagnosticCollection: vscode.DiagnosticCollection,
   showMessage: boolean
 ) {
+  console.log(`Diagnosing ${doc.uri.toString()}`);
   const diagnostics = enumerateDiagnostics(doc);
   diagnosticCollection.set(doc.uri, diagnostics);
   const num = diagnostics.length;

@@ -8,7 +8,7 @@ export default function computeValidRanges(
     invalidRanges = computeLaTeXInvalidRanges(text, invalidRanges);
   else if (languageId === "markdown")
     invalidRanges = computeMarkdownCodeBlockRanges(text);
-  else console.log(`Unknown languageId ${languageId} in computeValidRanges.`);
+  else console.warn(`Unknown languageId ${languageId} in computeValidRanges.`);
 
   const mergedInvalidRanges = mergeRanges(invalidRanges);
   const validRanges = invertRanges(mergedInvalidRanges, text.length);

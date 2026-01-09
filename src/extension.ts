@@ -115,38 +115,26 @@ export function activate(context: vscode.ExtensionContext) {
 
   // Register events.
   let debounceTimeout: NodeJS.Timeout | undefined = undefined;
-  vscode.workspace.onDidSaveTextDocument(() => {
+  vscode.workspace.onDidSaveTextDocument(doc => {
     clearTimeout(debounceTimeout);
+    if (doc.languageId !== 'latex' && doc.languageId !== 'markdown') return;
+    if (!isEnabled) return;
     debounceTimeout = setTimeout(() => {
-      const editor = getEditor(false, isEnabled);
-      if (!editor) return;
-      diagnose(editor.document, diagnosticsCollection, false);
+      diagnose(doc, diagnosticsCollection, false);
     }, 1000);
   });
 
-  // vscode.workspace.onDidCloseTextDocument and
-  // vscode.workspace.onDidCloseNotebookDocument
-  // will not work as expected. Thus, we use the following event.
-  vscode.window.onDidChangeVisibleTextEditors(() => {
-    const validURIs = [];
-    for (const editor of vscode.window.visibleTextEditors)
-      if (
-        editor.document.languageId === "latex" ||
-        editor.document.languageId === "markdown"
-      )
-        validURIs.push(editor.document.uri);
-    for (const [uri, _] of diagnosticsCollection) {
-      if (uri.scheme !== "file") continue;
-      if (!validURIs.includes(uri)) diagnosticsCollection.delete(uri);
-    }
-    for (const editor of vscode.window.visibleTextEditors) {
-      if (
-        editor.document.languageId !== "latex" &&
-        editor.document.languageId !== "markdown"
-      )
-        continue;
-      diagnose(editor.document, diagnosticsCollection, false);
-    }
+  vscode.workspace.onDidOpenTextDocument(doc => {
+    clearTimeout(debounceTimeout);
+    if (doc.languageId !== 'latex' && doc.languageId !== 'markdown') return;
+    if (!isEnabled) return;
+    debounceTimeout = setTimeout(() => {
+      diagnose(doc, diagnosticsCollection, false);
+    }, 1000);
+  });
+
+  vscode.workspace.onDidCloseTextDocument(doc => {
+    diagnosticsCollection.delete(doc.uri);
   });
 }
 

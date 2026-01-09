@@ -88,8 +88,7 @@ export function displayPerformanceReport(timings: PerformanceTiming[]): void {
   const topTimings = sortedTimings.slice(0, topN);
 
   // Display results in table format
-  console.log("\n=== Latexlint Performance Report ===");
-  console.log(`Total execution time: ${totalTime.toFixed(2)} ms`);
+  console.log(`\n=== LatexLint Performance (Total: ${totalTime.toFixed(2)} ms) ===`);
   console.table(
     topTimings.map((t) => ({
       Name: t.name,

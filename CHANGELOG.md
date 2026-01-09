@@ -13,6 +13,10 @@ All notable changes to the "latexlint" extension will be documented in this file
 - Youtube, Github
 - enhance rules so that we can apply them to markdown files.
 
+## 1.6.4 - 2026-1-7
+
+- Fix bugs about diagnostics not being cleared when closing documents.
+
 ## 1.6.3 - 2026-1-7
 
 - Update README.md.

@@ -5,3 +5,4 @@ You should likely use `\cref` or `\Cref` in the [cleveref](https://ctan.org/pkg/
 This rule is disabled by default.
 
 We prefer this package because it can automatically add prefixes like "Sec." or "Fig.". We can keep the consistency of the reference format.
+This rule is disabled in the preamble (only if `\begin{document}` exists, before that).

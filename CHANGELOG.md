@@ -2,16 +2,10 @@
 
 All notable changes to the "latexlint" extension will be documented in this file.
 
-## [Unreleased]
+## 1.6.5 - 2026-1-11
 
-- Make a tab containing latex tips:
-  - `LLSetBar`: Detect `mid` in `\left` and `\right`.
-  - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. Disabled by default.
-- et. al. is incorrect. Use `\emph{et al.}` instead.
-- my_vocabulary.jsonをgoogle spreadsheetで管理するように変更。
-- https://salon.mainichi-kotoba.jp/archives/95 圧倒的に弱いなど
-- Youtube, Github
-- enhance rules so that we can apply them to markdown files.
+- Add `isPreamble()` method to LLText for checking if a position is before `\begin{document}`.
+- Update `LLBracketMissing` and `LLCref` to skip preamble content using the new `isPreamble()` method.
 
 ## 1.6.4 - 2026-1-7
 

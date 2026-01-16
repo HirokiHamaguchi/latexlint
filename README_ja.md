@@ -125,6 +125,7 @@ LaTeX Lintは、`.tex`および`.md`ファイル用のLaTeXリンターです。
 このルールはデフォルトで無効です。
 
 `\includegraphics{figure_23}`や`\url{http://example.com/abc_123}`のようなファイル名/URL/ラベルは無視されます。
+このルールはプリアンブル（`\begin{document}`より前、存在する場合のみ）の部分では無効です。
 
 ![rules/LLBracketMissing](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLBracketMissing/LLBracketMissing.png)
 
@@ -171,6 +172,7 @@ LaTeX Lintは、`.tex`および`.md`ファイル用のLaTeXリンターです。
 このルールはデフォルトで無効です。
 
 このパッケージが推奨される理由は、「Sec.」や「Fig.」のようなプレフィックスを自動的に追加でき、参照形式の一貫性を保つことができるからです。
+このルールはプリアンブル（`\begin{document}`より前、存在する場合のみ）の部分では無効です。
 
 ### LLDoubleQuotes
 

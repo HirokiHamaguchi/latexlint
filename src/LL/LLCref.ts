@@ -12,6 +12,7 @@ export default function LLCref(doc: vscode.TextDocument, txt: LLText, exceptions
     const ranges: vscode.Range[] = [];
 
     for (const match of txt.text.matchAll(/\\ref\{([^}]*)/g)) {
+        if (txt.isPreamble(match.index)) continue;
         if (!txt.isValid(match.index)) continue;
         const refContent = match[1];
         if (exceptions.some(exception => refContent.startsWith(exception))) continue;

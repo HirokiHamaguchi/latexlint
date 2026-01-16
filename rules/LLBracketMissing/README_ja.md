@@ -4,5 +4,6 @@
 このルールはデフォルトで無効です。
 
 `\includegraphics{figure_23}`や`\url{http://example.com/abc_123}`のようなファイル名/URL/ラベルは無視されます。
+このルールはプリアンブル（`\begin{document}`より前、存在する場合のみ）の部分では無効です。
 
 ![rules/LLBracketMissing](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLBracketMissing/LLBracketMissing.png)

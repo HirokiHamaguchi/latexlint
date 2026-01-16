@@ -16,11 +16,14 @@ export default function createLLText(
     validRanges,
     computeLinePos
   );
+  const idxOfBeginDocument = text.indexOf("\\begin{document}");
   return {
     text: text,
     alignLikeEnvs: alignLikeEnvs,
     validRanges: validRanges,
+    idxOfBeginDocument: idxOfBeginDocument,
     isValid: (idx: number) => isPositionValid(idx, validRanges),
+    isPreamble: (idx: number) => idxOfBeginDocument !== -1 && idx < idxOfBeginDocument,
   };
 }
 

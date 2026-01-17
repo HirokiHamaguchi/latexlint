@@ -1,5 +1,5 @@
 import type * as vscode from "vscode";
-import createLLText from "../LLText/createLLText";
+import createLLTextVSCode from "../LLText/createLLTextVSCode";
 import { configuredRules, standardRules } from "./rules";
 
 export interface PerformanceTiming {
@@ -23,17 +23,11 @@ export function lintWithPerformanceTracking(options: LintOptions): {
   timings: PerformanceTiming[];
 } {
   const { doc, disabledRules, getConfigValue, onRuleError } = options;
-  const diagnostics: vscode.Diagnostic[] = [];
   const timings: PerformanceTiming[] = [];
 
   // Create LLText object with all computed metadata
   const createLLTextStart = performance.now();
-  const txt = createLLText(
-    doc.getText(),
-    doc.languageId,
-    diagnostics,
-    doc.positionAt
-  );
+  const [txt, diagnostics] = createLLTextVSCode(doc);
   const createLLTextEnd = performance.now();
   timings.push({
     name: "createLLText",

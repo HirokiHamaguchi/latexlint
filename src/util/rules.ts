@@ -16,7 +16,6 @@ import LLENDash from '../LL/LLENDash';
 import LLEqnarray from '../LL/LLEqnarray';
 import LLFootnote from '../LL/LLFootnote';
 import LLHeading from '../LL/LLHeading';
-import LLJapaneseSpace from '../LL/LLJapaneseSpace';
 import LLLlGg from '../LL/LLLlGg';
 import LLNonASCII from '../LL/LLNonASCII';
 import LLNonstandardNotation from '../LL/LLNonstandardNotation';
@@ -25,6 +24,8 @@ import LLRefEq from '../LL/LLRefEq';
 import LLSharp from '../LL/LLSharp';
 import LLSI from '../LL/LLSI';
 import LLSortedCites from '../LL/LLSortedCites';
+import LLSpaceEnglish from '../LL/LLSpaceEnglish';
+import LLSpaceJapanese from '../LL/LLSpaceJapanese';
 import LLT from '../LL/LLT';
 import LLTextLint from '../LL/LLTextLint';
 import LLThousands from '../LL/LLThousands';
@@ -54,7 +55,6 @@ export const standardRules: Record<string, StandardRuleFunction> = {
     LLEqnarray,
     LLFootnote,
     LLHeading,
-    LLJapaneseSpace,
     LLLlGg,
     LLNonASCII,
     LLNonstandardNotation,
@@ -63,6 +63,8 @@ export const standardRules: Record<string, StandardRuleFunction> = {
     LLSharp,
     LLSI,
     LLSortedCites,
+    LLSpaceEnglish,
+    LLSpaceJapanese,
     LLT,
     LLTextLint,
     LLThousands,

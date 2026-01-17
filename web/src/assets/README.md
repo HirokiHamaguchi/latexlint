@@ -33,7 +33,7 @@ Here is the list of rules we detect.
 4. [LLArticle](#llarticle) (detect wrong article usage)
 5. [LLBig](#llbig) (detect `\cap_`, `\cup_`, etc.)
 6. [LLBracketCurly](#llbracketcurly) (detect `\max{` and `\min{`)
-7. [LLBracketMissing](#llbracketmissing) (detect `^23`, `_23`, etc.)
+7. [LLBracketMissing](#llbracketmissing) (detect `^23`, `_23`, disabled by default)
 8. [LLBracketRound](#llbracketround) (detect `\sqrt(`, `^(`, and `_(`)
 9. [LLColonEqq](#llcoloneqq) (detect `:=`, `=:`,`::=`, and `=::`)
 10. [LLColonForMapping](#llcolonformapping) (detect `:` for mapping)
@@ -43,22 +43,23 @@ Here is the list of rules we detect.
 14. [LLEqnarray](#lleqnarray) (detect `eqnarray` environment)
 15. [LLFootnote](#llfootnote) (detect space before `\footnote`)
 16. [LLHeading](#llheading) (detect heading level jumps)
-17. [LLJapaneseSpace](#lljapanesespace) (detect the lack of space, disabled by default)
-18. [LLLlGg](#llllgg) (detect `<<` and `>>`)
-19. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters, disabled by default)
-20. [LLNonstandardNotation](#llnonstandardnotation) (detect nonstandard mathematical notations)
-21. [LLPeriod](#llperiod) (detect `e.g.`)
-22. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
-23. [LLSharp](#llsharp) (detect `\sharp` likely to be a misuse of `\#`)
-24. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
-25. [LLSortedCites](#llsortedcites) (detect unsorted cites)
-26. [LLT](#llt) (detect `^T`)
-27. [LLTextLint](#lltextlint) (part of textlint features)
-28. [LLThousands](#llthousands) (detect `1,000` etc.)
-29. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
-30. [LLUnRef](#llunref) (detect unreferenced figure and table labels)
-31. [LLURL](#llurl) (detect unnecessary info in URLs)
-32. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
+17. [LLLlGg](#llllgg) (detect `<<` and `>>`)
+18. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters)
+19. [LLNonstandardNotation](#llnonstandardnotation) (detect nonstandard mathematical notations)
+20. [LLPeriod](#llperiod) (detect `e.g.`)
+21. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
+22. [LLSharp](#llsharp) (detect `\sharp` likely to be a misuse of `\#`)
+23. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
+24. [LLSortedCites](#llsortedcites) (detect unsorted cites)
+25. [LLSpaceEnglish](#llspaceenglish) (detect the lack of space for English)
+26. [LLSpaceJapanese](#llspacejapanese) (detect the lack of space for Japanese, disabled by default)
+27. [LLT](#llt) (detect `^T`, disabled by default)
+28. [LLTextLint](#lltextlint) (part of textlint features)
+29. [LLThousands](#llthousands) (detect `1,000` etc.)
+30. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
+31. [LLUnRef](#llunref) (detect unreferenced figure and table labels)
+32. [LLURL](#llurl) (detect unnecessary info in URLs)
+33. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
 
 Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
@@ -259,11 +260,6 @@ The rule checks the following heading levels:
 3. `\subsection`
 4. `\subsubsection`
 
-### LLJapaneseSpace
-
-Detect the lack of space between Japanese characters and math equations in `.tex` and `.md` files.
-This rule is disabled by default.
-
 ### LLLlGg
 
 Detect `<<` and `>>` in `.tex` and `.md` files.
@@ -408,6 +404,15 @@ This rule only applies when:
 2. The document does NOT use `\usepackage{cite}` or `\usepackage{biblatex}`
 
 (This rule might not be accurate.)
+
+### LLSpaceEnglish
+
+Detect the lack of space between English text and inline math in `.tex` and `.md` files.
+
+### LLSpaceJapanese
+
+Detect the lack of space between Japanese characters and math equations in `.tex` and `.md` files.
+This rule is disabled by default.
 
 ### LLT
 

@@ -1,5 +1,5 @@
 {
-  "description": "detect `^23`, `_23`, etc.",
-  "description_ja": "`^23`、`_23`などを検出",
+  "description": "detect `^23`, `_23`, disabled by default",
+  "description_ja": "`^23`、`_23`などを検出 (デフォルトで無効)",
   "references": []
 }

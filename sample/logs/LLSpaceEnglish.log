@@ -1,0 +1,15 @@
+[CODE] LLSpaceEnglish (2)
+- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 359)
+  error: r\(
+  message: Consider adding a space at here.
+   358: \begin{definition}[Bayesian Network]\label{def:bn} \citet{pearl_1998_bn}
+>  359: Let \(P\) denote the joint distribution over a variable set \(\boldsymbol{U}\) of a directed acyclic graph (DAG) \(\mathbb{G}\). The triplet \(<\boldsymbol{U}, \mathbb{G}, P>\) constitutes a BN if the triplet \(<\boldsymbol{U}, \mathbb{G}, P>\) satisfies the Markov condition: every random variable is independent of its non-descendant variables given its parents in \(\mathbb{G}\). Each node \(X_i \in \boldsymbol{U}\) represents a random variable. The directed edge \((X_i \rightarrow X_j)\) encodes a probabilistic dependence. The joint probability distribution can be factorized \(P(X_1, \cdots, X_n) = \prod^n_{i=1} P(X_i|X_1, \cdots, X_{i-1})\). If a variable does not depend on all of its predecessors, we can write: \(P(X_i|X_1, \cdots, X_{i-1}) = P(X_i|\text{par}(X_i))\) with 'par' the parents of node \(X_i\) such that: par\((X_i) = \{ X_1, \cdots, X_{i-1}\}\).
+   360: \end{definition}
+
+- file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 615)
+  error: \)t
+  message: Consider adding a space at here.
+   614: \textbf{Inter-label Effects.}
+>  615: By definition, the labels are explained solely by events. While simplifying multi-label causal discovery, this intrinsic assumption could be relaxed in future work by using the \textit{do} operator \cite{pearl_2009} to perform interventions on common causal variables of multiple labels. For example, our current framework estimates the Markov Boundaries for each label independently. However, inter-label dependencies can exist, particularly when labels share overlapping Markov Boundaries (e.g \(MB_1 =  [X_1, X_3], MB_2 = [X1, X_2]\). We propose to investigate a 'Phase 2' for OSCAR, focusing on inter-label dependencies through simulated interventions. For instance, if we consider a sequence \(S_1\) of two labels \(Y_1, Y_2\) with the MB above, we could perform counterfactual interventions by applying \(do(X_1=0), do(X_3=0)\)to \(S_1\). Then we would observe the average change in the likelihood of \(Y_1\)  which, if it is non-zero, would indicate a dependence between \(Y_1\) and \(Y_2\). \citet{learningcommoncausalvarlabel} points out that the assumptions of these inter-label dependencies are already anchored in the Markov Boundaries; we do the same here.
+   616: 
+

@@ -382,7 +382,7 @@ The difference is quite subtle, but the vertical position of the colon is differ
 \begin{itembox}{We do NOT detect any of : in the following}
 	Here are examples of `:' we do not detect.
 	\begin{itemize}
-		\item $f\colon X \to Y$, the correct use of $\backslash$colon.
+		\item $f\colon X \to Y$, the correct use of \textbackslash{}colon.
 		\item $A:B:C = 1:2:3$, the colon for ratio.
 		\item $A:B = 1:2$ and $X \to Y$, separated by dollar sign.
 		\item $g: (\text{some very very very very very long long long long words}) \to \mathbb{R}$, the false negative.
@@ -517,16 +517,6 @@ Emphasis \emph{text}\footnote{good footnote}.
 \subsection{First Subsection}
 \subsubsection{Second Subsubsection}
 
-\section{LLJapaneseSpace}
-
-\begin{CJK}{UTF8}{ipxm}
-	日本語の文章で$x=1$と数式を書くと、スペースが欠如します。
-
-	日本語の文章で $x=1$ と数式を書くと、スペースが生まれます。
-
-	尤も、フォーマルな文章では非推奨な場合もあり、その為デフォルトでは非検出です。
-\end{CJK}
-
 \section{LLLlGg}
 
 \begin{table}[H]
@@ -639,6 +629,24 @@ If you really want to use $\sharp$, you can disable this rule.
 \section{LLSortedCites}
 
 Unsorted citations: \cite{hari2000,boli2000}.
+
+\section{LLSpaceEnglish}
+
+Space between text and inline math like\(x=1\) and \(y=2\)lacks a space.
+No spaces before commas, such as \(z=3\), we do not detect them.
+
+We exclude cases like H\({}_2\)O and C\({}_{n}\)H\({}_{2n+2}\).
+% todo: detect for the cases like $...$. This is quite hard.
+
+\section{LLSpaceJapanese}
+
+\begin{CJK}{UTF8}{ipxm}
+	日本語の文章で$x=1$と数式を書くと、スペースが欠如します。
+
+	日本語の文章で $x=1$ と数式を書くと、スペースが生まれます。
+
+	尤も、フォーマルな文章では非推奨な場合もあり、その為デフォルトでは無効です。
+\end{CJK}
 
 \section{LLT}
 

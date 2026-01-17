@@ -4,6 +4,7 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 ## 1.6.5 - 2026-1-11
 
+- Add `LLSpaceJapanese` and `LLSpaceEnglish` rules to detect missing spaces.
 - Add `isPreamble()` method to LLText for checking if a position is before `\begin{document}`.
 - Update `LLBracketMissing` and `LLCref` to skip preamble content using the new `isPreamble()` method.
 

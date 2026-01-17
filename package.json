@@ -141,7 +141,6 @@
               "LLEqnarray",
               "LLFootnote",
               "LLHeading",
-              "LLJapaneseSpace",
               "LLLlGg",
               "LLNonASCII",
               "LLNonstandardNotation",
@@ -150,6 +149,8 @@
               "LLSharp",
               "LLSI",
               "LLSortedCites",
+              "LLSpaceEnglish",
+              "LLSpaceJapanese",
               "LLT",
               "LLTextLint",
               "LLThousands",
@@ -163,7 +164,7 @@
           "default": [
             "LLBracketMissing",
             "LLCref",
-            "LLJapaneseSpace",
+            "LLSpaceJapanese",
             "LLT"
           ],
           "description": "Disabled rules"

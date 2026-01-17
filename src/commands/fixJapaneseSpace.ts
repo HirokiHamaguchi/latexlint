@@ -1,31 +1,27 @@
 import * as vscode from 'vscode';
+import createLLTextVSCode from '../LLText/createLLTextVSCode';
+import detectMathSpace from '../util/detectMathSpace';
 import getEditor from '../util/getEditor';
-import { JAPANESE_SPACE_REGEX } from '../util/japaneseSpaceRegex';
 
 export default async function fixJapaneseSpaceCommand() {
     const editor = getEditor(true, true);
     if (!editor) return;
 
     const document = editor.document;
-    const text = document.getText();
+    const [txt, _diagnostics] = createLLTextVSCode(document);
 
-    console.assert(JAPANESE_SPACE_REGEX.flags.includes('g'), 'JAPANESE_SPACE_REGEX should have the global flag set.');
-    const re = new RegExp(JAPANESE_SPACE_REGEX.source, JAPANESE_SPACE_REGEX.flags);
-
-    const matches = [...text.matchAll(re)];
-    if (matches.length === 0) {
+    const ranges = detectMathSpace(document, txt, 'ja');
+    if (ranges.length === 0) {
         vscode.window.showInformationMessage('No Japanese spacing issues found.');
         return;
     }
 
     await editor.edit(editBuilder => {
-        for (let i = matches.length - 1; i >= 0; i--) {
-            const m = matches[i];
-            const matchText = m[0];
-            const start = m.index ?? 0;
-            const end = start + matchText.length;
+        for (let i = ranges.length - 1; i >= 0; i--) {
+            const range = ranges[i];
+            const matchText = document.getText(range);
 
-            let replacement = matchText;
+            let replacement: string;
             if (matchText.startsWith('$'))
                 replacement = `$ ${matchText.slice(1)}`;
             else if (matchText.endsWith('$'))
@@ -35,9 +31,9 @@ export default async function fixJapaneseSpaceCommand() {
                 continue;
             }
 
-            editBuilder.replace(new vscode.Range(document.positionAt(start), document.positionAt(end)), replacement);
+            editBuilder.replace(range, replacement);
         }
     });
 
-    vscode.window.showInformationMessage(`Fixed ${matches.length} Japanese spacing issue(s).`);
+    vscode.window.showInformationMessage(`Fixed ${ranges.length} Japanese spacing issue(s).`);
 }

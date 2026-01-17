@@ -1,4 +1,4 @@
-Checked 1041 files. Diagnostics: 6967. Files with diagnostics: 467. Codes: 23. Failures: 0.
+Checked 1041 files. Diagnostics: 6969. Files with diagnostics: 467. Codes: 24. Failures: 0.
 Per-code logs:
 - LLAlignAnd.log
 - LLAlignEnd.log
@@ -19,6 +19,7 @@ Per-code logs:
 - LLRefEq.log
 - LLSI.log
 - LLSortedCites.log
+- LLSpaceEnglish.log
 - LLT.log
 - LLThousands.log
 - LLTitle.log

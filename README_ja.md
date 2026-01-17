@@ -29,7 +29,7 @@ LaTeX Lintは、`.tex`および`.md`ファイル用のLaTeXリンターです。
 4. [LLArticle](#llarticle) (冠詞の誤用を検出)
 5. [LLBig](#llbig) (`\cap_`、`\cup_`などを検出)
 6. [LLBracketCurly](#llbracketcurly) (`\max{`と`\min{`を検出)
-7. [LLBracketMissing](#llbracketmissing) (`^23`、`_23`などを検出)
+7. [LLBracketMissing](#llbracketmissing) (`^23`、`_23`などを検出 (デフォルトで無効))
 8. [LLBracketRound](#llbracketround) (`\sqrt(`、`^(`、`_(`を検出)
 9. [LLColonEqq](#llcoloneqq) (`:=`、`=:`、`::=`、`=::`を検出)
 10. [LLColonForMapping](#llcolonformapping) (写像に使われた`:`を検出)
@@ -39,22 +39,23 @@ LaTeX Lintは、`.tex`および`.md`ファイル用のLaTeXリンターです。
 14. [LLEqnarray](#lleqnarray) (`eqnarray`環境を検出)
 15. [LLFootnote](#llfootnote) (`\footnote`の前の空白を検出)
 16. [LLHeading](#llheading) (見出しレベルのジャンプを検出)
-17. [LLJapaneseSpace](#lljapanesespace) (空白の不足を検出 (デフォルトで無効))
-18. [LLLlGg](#llllgg) (`<<`と`>>`を検出)
-19. [LLNonASCII](#llnonascii) (全角ASCII文字を検出 (デフォルトで無効))
-20. [LLNonstandardNotation](#llnonstandardnotation) (非標準的な数学記号を検出)
-21. [LLPeriod](#llperiod) (`e.g.`を検出)
-22. [LLRefEq](#llrefeq) (`\ref{eq:`を検出)
-23. [LLSharp](#llsharp) (`\#`の誤用とおぼしき`\sharp`を検出)
-24. [LLSI](#llsi) (`\SI`なしの`KB`、`MB`、`GB`などを検出)
-25. [LLSortedCites](#llsortedcites) (ソートされていない引用を検出)
-26. [LLT](#llt) (`^T`を検出)
-27. [LLTextLint](#lltextlint) (textlintの一部機能)
-28. [LLThousands](#llthousands) (`1,000`などを検出)
-29. [LLTitle](#lltitle) (`\title{}`、`\section{}`などでの疑わしいタイトルケースを検出)
-30. [LLUnRef](#llunref) (参照されていない図表ラベルを検出)
-31. [LLURL](#llurl) (URLの不要な情報を検出)
-32. [LLUserDefined](#lluserdefined) (`latexlint.userDefinedRules`内の正規表現を検出)
+17. [LLLlGg](#llllgg) (`<<`と`>>`を検出)
+18. [LLNonASCII](#llnonascii) (全角ASCII文字を検出)
+19. [LLNonstandardNotation](#llnonstandardnotation) (非標準的な数学記号を検出)
+20. [LLPeriod](#llperiod) (`e.g.`を検出)
+21. [LLRefEq](#llrefeq) (`\ref{eq:`を検出)
+22. [LLSharp](#llsharp) (`\#`の誤用とおぼしき`\sharp`を検出)
+23. [LLSI](#llsi) (`\SI`なしの`KB`、`MB`、`GB`などを検出)
+24. [LLSortedCites](#llsortedcites) (ソートされていない引用を検出)
+25. [LLSpaceEnglish](#llspaceenglish) (英語での空白の不足を検出)
+26. [LLSpaceJapanese](#llspacejapanese) (日本語での空白の不足を検出 (デフォルトで無効))
+27. [LLT](#llt) (`^T`を検出 (デフォルトで無効))
+28. [LLTextLint](#lltextlint) (textlintの一部機能)
+29. [LLThousands](#llthousands) (`1,000`などを検出)
+30. [LLTitle](#lltitle) (`\title{}`、`\section{}`などでの疑わしいタイトルケースを検出)
+31. [LLUnRef](#llunref) (参照されていない図表ラベルを検出)
+32. [LLURL](#llurl) (URLの不要な情報を検出)
+33. [LLUserDefined](#lluserdefined) (`latexlint.userDefinedRules`内の正規表現を検出)
 
 必要に応じて、[sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf)も参照してください。
 
@@ -255,11 +256,6 @@ LaTeX Lintは、`.tex`および`.md`ファイル用のLaTeXリンターです。
 3. `\subsection`
 4. `\subsubsection`
 
-### LLJapaneseSpace
-
-`.tex`と`.md`ファイルの日本語文字と数式の間の空白の不足を検出します。
-このルールはデフォルトで無効です。
-
 ### LLLlGg
 
 `.tex`と`.md`ファイルの`<<`と`>>`を検出します。
@@ -404,6 +400,16 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 2. `\usepackage{cite}`または`\usepackage{biblatex}`を使用していない場合
 
 （このルールは完全でない可能性があります。）
+
+### LLSpaceEnglish
+
+`.tex`と`.md`ファイルの日本語・英語の文字とインライン数式の間の空白の不足を検出します。
+このルールはデフォルトで無効です。
+
+### LLSpaceJapanese
+
+`.tex`と`.md`ファイルの日本語文字と数式の間の空白の不足を検出します。
+このルールはデフォルトで無効です。
 
 ### LLT
 

@@ -2,3 +2,5 @@
 
 `.tex`と`.md`ファイルの日本語・英語の文字とインライン数式の間の空白の不足を検出します。
 このルールはデフォルトで無効です。
+
+![rules/LLSpaceEnglish](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLSpaceEnglish/LLSpaceEnglish.png)

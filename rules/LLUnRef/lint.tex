@@ -1,18 +1,24 @@
 \section{LLUnRef}
 
 \begin{figure}[htbp]
-	\begin{minipage}{0.5\columnwidth}
+	\begin{minipage}{0.33\columnwidth}
 		\centering
 		\includegraphics[width=0.8\columnwidth]{example-image}
 		\caption{Referenced Figure}
 		\label{fig:referenced}
 	\end{minipage}%
-	\begin{minipage}{0.5\columnwidth}
+	\begin{minipage}{0.33\columnwidth}
 		\centering
 		\includegraphics[width=0.8\columnwidth]{example-image}
 		\caption{Unreferenced Figure}
 		\label{fig:unreferenced}
+	\end{minipage}%
+	\begin{minipage}{0.33\columnwidth}
+		\centering
+		\includegraphics[width=0.8\columnwidth]{example-image}
+		\caption{Referenced Figure 2}
+		\label{fig:referenced2}
 	\end{minipage}
 \end{figure}
 
-\Cref{fig:referenced} is referenced in the text, while the other figure is not.
+\Cref{fig:referenced,fig:referenced2} are referenced in the text, while the other figure is not.

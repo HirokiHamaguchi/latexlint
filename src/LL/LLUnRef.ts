@@ -17,7 +17,8 @@ export default function LLUnRef(doc: vscode.TextDocument, txt: LLText): vscode.D
         const refRegex = /\\[cC]?ref\{([^}]*)\}/g;
         for (const refMatch of txt.text.matchAll(refRegex)) {
             if (!txt.isValid(refMatch.index!)) continue;
-            foundRefs.add(refMatch[1]);
+            const refNames = refMatch[1].split(',').map(name => name.trim());
+            for (const refName of refNames) foundRefs.add(refName);
         }
         return foundRefs;
     };

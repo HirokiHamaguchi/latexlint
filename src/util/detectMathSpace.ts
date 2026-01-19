@@ -20,7 +20,7 @@ export default function detectMathSpace(doc: vscode.TextDocument, txt: LLText, l
     matches = [...text.matchAll(re)];
 
     if (matches.length === 0) {
-        vscode.window.showInformationMessage('No Japanese spacing issues found.');
+        console.log('No math spacing issues detected.');
         return ranges;
     }
 

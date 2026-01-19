@@ -2,6 +2,10 @@
 
 All notable changes to the "latexlint" extension will be documented in this file.
 
+## 1.6.6 - 2026-1-19
+
+- Rename `LLNonstandardNotation` to `LLNonstandard`.
+
 ## 1.6.5 - 2026-1-18
 
 - Fix bug of `LLUnRef`.

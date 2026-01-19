@@ -18,7 +18,7 @@ import LLFootnote from '../LL/LLFootnote';
 import LLHeading from '../LL/LLHeading';
 import LLLlGg from '../LL/LLLlGg';
 import LLNonASCII from '../LL/LLNonASCII';
-import LLNonstandardNotation from '../LL/LLNonstandardNotation';
+import LLNonstandard from '../LL/LLNonstandard';
 import LLPeriod from '../LL/LLPeriod';
 import LLRefEq from '../LL/LLRefEq';
 import LLSharp from '../LL/LLSharp';
@@ -57,7 +57,7 @@ export const standardRules: Record<string, StandardRuleFunction> = {
     LLHeading,
     LLLlGg,
     LLNonASCII,
-    LLNonstandardNotation,
+    LLNonstandard,
     LLPeriod,
     LLRefEq,
     LLSharp,

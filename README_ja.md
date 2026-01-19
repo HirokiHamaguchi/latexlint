@@ -41,7 +41,7 @@ LaTeX Lintは、`.tex`および`.md`ファイル用のLaTeXリンターです。
 16. [LLHeading](#llheading) (見出しレベルのジャンプを検出)
 17. [LLLlGg](#llllgg) (`<<`と`>>`を検出)
 18. [LLNonASCII](#llnonascii) (全角ASCII文字を検出)
-19. [LLNonstandardNotation](#llnonstandardnotation) (非標準的な数学記号を検出)
+19. [LLNonstandard](#llnonstandard) (非標準的な数学記号を検出)
 20. [LLPeriod](#llperiod) (`e.g.`を検出)
 21. [LLRefEq](#llrefeq) (`\ref{eq:`を検出)
 22. [LLSharp](#llsharp) (`\#`の誤用とおぼしき`\sharp`を検出)
@@ -300,7 +300,7 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 * U+FF0C `，`
 * U+FF0E `．`
 
-### LLNonstandardNotation
+### LLNonstandard
 
 `.tex`と`.md`ファイルの、正式な学術文献では一般的に使用されない非標準的な数学記号を検出します。
 

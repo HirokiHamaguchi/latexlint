@@ -3,7 +3,7 @@ import type { LLText } from '../LLText/LLText';
 import { messages } from '../util/constants';
 import ranges2diagnostics from '../util/ranges2diagnostics';
 
-export default function LLNonstandardNotation(doc: vscode.TextDocument, txt: LLText): vscode.Diagnostic[] {
+export default function LLNonstandard(doc: vscode.TextDocument, txt: LLText): vscode.Diagnostic[] {
     const ranges: vscode.Range[] = [];
 
     const regexList = [
@@ -28,7 +28,7 @@ export default function LLNonstandardNotation(doc: vscode.TextDocument, txt: LLT
             ranges.push(new vscode.Range(startPos, endPos));
         }
 
-    const code = "LLNonstandardNotation";
+    const code = "LLNonstandard";
     const message = messages[code];
     return ranges2diagnostics(code, message, ranges);
 }

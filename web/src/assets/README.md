@@ -45,7 +45,7 @@ Here is the list of rules we detect.
 16. [LLHeading](#llheading) (detect heading level jumps)
 17. [LLLlGg](#llllgg) (detect `<<` and `>>`)
 18. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters)
-19. [LLNonstandardNotation](#llnonstandardnotation) (detect nonstandard mathematical notations)
+19. [LLNonstandard](#llnonstandard) (detect nonstandard mathematical notations)
 20. [LLPeriod](#llperiod) (detect `e.g.`)
 21. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
 22. [LLSharp](#llsharp) (detect `\sharp` likely to be a misuse of `\#`)
@@ -304,7 +304,7 @@ We do not detect the following characters because they are often used in Japanes
 * U+FF0C `，`
 * U+FF0E `．`
 
-### LLNonstandardNotation
+### LLNonstandard
 
 Detect nonstandard mathematical notations in `.tex` and `.md` files that are not commonly used in formal academic writing.
 

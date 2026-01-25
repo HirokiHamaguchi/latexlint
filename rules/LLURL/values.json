@@ -1,5 +1,5 @@
 {
     "message": "Query parameter \"?%1=\" might be unnecessary and could be removed for cleaner URLs.",
     "severity": "WARN",
-    "lint_test_count": 4
+    "lint_test_count": 2
 }

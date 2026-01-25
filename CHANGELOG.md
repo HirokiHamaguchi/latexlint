@@ -2,6 +2,11 @@
 
 All notable changes to the "latexlint" extension will be documented in this file.
 
+## 1.6.7 - 2026-1-26
+
+- Speed up activation time by limiting files to diagnose.
+- Update the condition of `LLURL` to avoid false positives.
+
 ## 1.6.6 - 2026-1-19
 
 - fix bug of `detectMathSpace.ts`.

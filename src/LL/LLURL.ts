@@ -12,7 +12,7 @@ export default function LLURL(
   let message: string[] = [];
   let ranges: vscode.Range[] = [];
   for (const match of txt.text.matchAll(
-    /\?(utm_[^&=\s]*|sessionid|user|email)=/gi
+    /\?(utm_[^&=\s]*|sessionid)=/gi
   )) {
     if (!txt.isValid(match.index)) continue;
     message.push(messages[code].replaceAll("%1", match[1]));

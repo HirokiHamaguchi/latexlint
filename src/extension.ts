@@ -102,12 +102,15 @@ export function activate(context: vscode.ExtensionContext) {
     )
   );
 
-  // Only once on activation. Diagnose all open documents.
-  vscode.workspace.textDocuments.forEach((document) => {
-    if (document.languageId !== "latex" && document.languageId !== "markdown")
+  // Only once on activation. Diagnose the active document after activation settles.
+  setTimeout(() => {
+    if (!isEnabled) return;
+    const activeDoc = vscode.window.activeTextEditor?.document;
+    if (!activeDoc) return;
+    if (activeDoc.languageId !== "latex" && activeDoc.languageId !== "markdown")
       return;
-    if (isEnabled) diagnose(document, diagnosticsCollection, false);
-  });
+    diagnose(activeDoc, diagnosticsCollection, false);
+  }, 0);
 
   // temporary removed notebook support
   // ? Can we re-add this in the future?

@@ -11,6 +11,11 @@ export type BeginEndResult = {
     secondWordEnd: number;
 };
 
+export type BeginEndTargetSearchResult = {
+    result: BeginEndResult | undefined;
+    message: string;
+};
+
 class Command {
     success: boolean = false;
     isBegin: boolean = false;
@@ -151,17 +156,16 @@ function findCorrespondingCommand(text: string, command: Command): Command {
 export default function findBeginEndTargets(
     text: string,
     cursorOffset: number,
-): BeginEndResult | undefined {
+): BeginEndTargetSearchResult {
     let command = new Command(text, cursorOffset);
-    if (!command.success) return undefined;
+    if (!command.success) return { result: undefined, message: "" };
 
     let otherCommand = findCorrespondingCommand(text, command);
-    if (!otherCommand.success) return undefined;
+    if (!otherCommand.success) return { result: undefined, message: "" };
 
-    if (text.substring(command.wordStart, command.wordEnd) !== text.substring(otherCommand.wordStart, otherCommand.wordEnd)) {
-        vscode.window.showErrorMessage('The content inside \\begin{...} and \\end{...} should be the same.');
-        return undefined;
-    }
+    if (text.substring(command.wordStart, command.wordEnd) !== text.substring(otherCommand.wordStart, otherCommand.wordEnd))
+        return { result: undefined, message: 'The content inside \\begin{...} and \\end{...} should be the same.' };
+
 
     const s1 = Math.min(command.wordStart, otherCommand.wordStart);
     const e1 = Math.min(command.wordEnd, otherCommand.wordEnd);
@@ -175,12 +179,15 @@ export default function findBeginEndTargets(
     const newTextCountForCursor = 2 - Number(command.wordStart === s1);
 
     return {
-        originalText,
-        cursorPos,
-        newTextCountForCursor,
-        firstWordStart: s1,
-        firstWordEnd: e1,
-        secondWordStart: s2,
-        secondWordEnd: e2,
+        result: {
+            originalText,
+            cursorPos,
+            newTextCountForCursor,
+            firstWordStart: s1,
+            firstWordEnd: e1,
+            secondWordStart: s2,
+            secondWordEnd: e2,
+        },
+        message: "",
     };
 }

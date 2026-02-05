@@ -1,4 +1,3 @@
-import * as vscode from 'vscode';
 
 export type LabelResult = {
     originalText: string;
@@ -6,20 +5,25 @@ export type LabelResult = {
     labelEnd: number;
 };
 
+export type LabelTargetSearchResult = {
+    result: LabelResult | undefined;
+    message: string;
+};
+
 export default function findLabelTargets(
     text: string,
     cursorOffset: number,
-): LabelResult | undefined {
+): LabelTargetSearchResult {
     // Find the backslash before the cursor
     let index = cursorOffset;
     while (index > 0 && text[index - 1] !== '\n' && text[index] !== '\\') index--;
-    if (text[index] !== '\\') return undefined;
+    if (text[index] !== '\\') return { result: undefined, message: "" };
 
     // Check if this is a \label{...} command
-    if (text.slice(index, index + 6) !== '\\label') return undefined;
+    if (text.slice(index, index + 6) !== '\\label') return { result: undefined, message: "" };
 
     const braceStart = index + 6;
-    if (text[braceStart] !== '{') return undefined;
+    if (text[braceStart] !== '{') return { result: undefined, message: "" };
 
     // Find the closing brace
     let braceEnd = braceStart + 1;
@@ -30,21 +34,23 @@ export default function findLabelTargets(
         if (braceDepth === 0) break;
         braceEnd++;
     }
-    if (braceDepth !== 0 || text[braceEnd] !== '}') {
-        vscode.window.showErrorMessage('Failed to find the closing brace for the label command.');
-        return undefined;
-    }
+    if (braceDepth !== 0 || text[braceEnd] !== '}')
+        return { result: undefined, message: 'Failed to find the closing brace for the label command.' };
+
 
     const labelStart = braceStart;
     const labelEnd = braceEnd + 1;
     const originalText = text.substring(labelStart, labelEnd);
 
     // Check if the cursor is inside the label command
-    if (cursorOffset < index || cursorOffset > labelEnd) return undefined;
+    if (cursorOffset < index || cursorOffset > labelEnd) return { result: undefined, message: "" };
 
     return {
-        originalText,
-        labelStart,
-        labelEnd,
+        result: {
+            originalText,
+            labelStart,
+            labelEnd,
+        },
+        message: "",
     };
 }

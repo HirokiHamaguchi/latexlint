@@ -21,33 +21,27 @@ async function handleBeginEndRename(doc: vscode.TextDocument, editor: vscode.Tex
         (newText === "equation" || newText === "equation*");
 
     // In-place edition: replace only the specific command names
-    const workspaceEdit = new vscode.WorkspaceEdit();
-    workspaceEdit.replace(
-        doc.uri,
-        new vscode.Range(doc.positionAt(res.secondWordStart), doc.positionAt(res.secondWordEnd)),
-        newText
-    );
+    await editor.edit((editBuilder) => {
+        editBuilder.replace(
+            new vscode.Range(doc.positionAt(res.secondWordStart), doc.positionAt(res.secondWordEnd)),
+            newText
+        );
 
-    if (needsAlignConversion) {
-        const contentStart = doc.positionAt(res.firstWordEnd);
-        const contentEnd = doc.positionAt(res.secondWordStart);
-        const originalContent = doc.getText(new vscode.Range(contentStart, contentEnd));
-        const modifiedContent = originalContent.replace(/&/g, ' ').replace(/\\/g, '  ');
-        if (originalContent !== modifiedContent)
-            workspaceEdit.replace(doc.uri, new vscode.Range(contentStart, contentEnd), modifiedContent);
-    }
+        if (needsAlignConversion) {
+            const contentStart = doc.positionAt(res.firstWordEnd);
+            const contentEnd = doc.positionAt(res.secondWordStart);
+            const originalContent = doc.getText(new vscode.Range(contentStart, contentEnd));
+            const modifiedContent = originalContent.replace(/&/g, ' ').replace(/\\\\/g, '  ');
+            if (originalContent !== modifiedContent)
+                editBuilder.replace(new vscode.Range(contentStart, contentEnd), modifiedContent);
+        }
 
-    workspaceEdit.replace(
-        doc.uri,
-        new vscode.Range(doc.positionAt(res.firstWordStart), doc.positionAt(res.firstWordEnd)),
-        newText
-    );
+        editBuilder.replace(
+            new vscode.Range(doc.positionAt(res.firstWordStart), doc.positionAt(res.firstWordEnd)),
+            newText
+        );
 
-    const applied = await vscode.workspace.applyEdit(workspaceEdit);
-    if (!applied) {
-        vscode.window.showErrorMessage('Failed to apply begin/end rename edits.');
-        return;
-    }
+    });
 
     let cursorPos = res.cursorPos + res.newTextCountForCursor * newText.length;
     const pos = doc.positionAt(cursorPos);
@@ -107,11 +101,9 @@ async function handleLabelRename(doc: vscode.TextDocument, res: LabelResult) {
             vscode.window.showErrorMessage('Failed to apply label rename edits.');
             return;
         }
-
         vscode.window.showInformationMessage(`Replaced ${occurrenceMessage}.`);
     } else
         vscode.window.showInformationMessage('Label rename canceled.');
-
 }
 
 export default async function renameCommand() {

@@ -18,6 +18,7 @@ export type BeginEndTargetSearchResult = {
 
 class Command {
     success: boolean = false;
+    errorMessage: string = '';
     isBegin: boolean = false;
     commandStart: number = -1; // open interval
     braceStart: number = -1;   // open interval
@@ -34,10 +35,7 @@ class Command {
         // Find the backslash before the cursor
         let index = cursorOffset;
         while (index > 0 && text[index - 1] !== '\n' && text[index] !== '\\') index--;
-        if (text[index] !== '\\') {
-            vscode.window.showErrorMessage('Failed to find the backslash before the cursor.');
-            return;
-        }
+        if (text[index] !== '\\') return;
         this.commandStart = index;
 
         // Check if the cursor is inside \begin{...} or \end{...}
@@ -47,10 +45,9 @@ class Command {
         } else if (text.slice(index, index + 4) === '\\end') {
             this.isBegin = false;
             this.braceStart = index + 4;
-        } else {
-            vscode.window.showErrorMessage('The cursor is not inside \\begin{...} or \\end{...}');
+        } else
             return;
-        }
+
         this.wordStart = this.braceStart + 1;
 
         // Find the closing brace
@@ -63,7 +60,8 @@ class Command {
             wordEnd++;
         }
         if (braceDepth !== 0 || text[wordEnd] !== '}') {
-            vscode.window.showErrorMessage('Failed to find the command to rename.');
+            this.errorMessage = 'Failed to find the command to rename.';
+            vscode.window.showErrorMessage(this.errorMessage);
             return;
         }
         this.wordEnd = wordEnd;
@@ -72,13 +70,15 @@ class Command {
         // Check if the content inside the braces is a single word
         const content = text.substring(this.wordStart, this.wordEnd);
         if (!content.match(/^\w+\*?$/)) { // This matches [1+ word characters][optional *]
-            vscode.window.showErrorMessage('The content inside the braces is not a single word.');
+            this.errorMessage = 'The content inside the braces is not a single word.';
+            vscode.window.showErrorMessage(this.errorMessage);
             return;
         }
 
         // Check if the cursor is inside the command
         if (cursorOffset < this.commandStart || cursorOffset > this.braceEnd) {
-            vscode.window.showErrorMessage('The cursor is not inside the command.');
+            this.errorMessage = 'The cursor is not inside the command.';
+            vscode.window.showErrorMessage(this.errorMessage);
             return;
         }
 
@@ -92,13 +92,13 @@ class Command {
         this.braceStart = text.indexOf('{', this.commandStart);
         this.braceEnd = text.indexOf('}', this.braceStart) + 1;
         if (text[this.braceStart] !== '{' || text[this.braceEnd - 1] !== '}') {
-            vscode.window.showErrorMessage('bug: parseFromIndex failed.');
-            this.success = false;
+            this.errorMessage = 'bug: parseFromIndex failed.';
+            vscode.window.showErrorMessage(this.errorMessage);
+            return this;
         }
         this.wordStart = this.braceStart + 1;
         this.wordEnd = this.braceEnd - 1;
         this.isBegin = delta === 1;
-        this.success = true;
         return this;
     }
 }
@@ -125,16 +125,16 @@ function findCorrespondingCommand(text: string, command: Command): Command {
         if (pair.depth < 0) break;
     }
     if (depth !== 0) {
-        vscode.window.showErrorMessage(
-            "Unmatched \\begin and \\end commands. Are the commands valid and properly nested?"
-        );
+        otherCommand.errorMessage = "Unmatched \\begin and \\end commands. Are the commands valid and properly nested?";
+        vscode.window.showErrorMessage(otherCommand.errorMessage);
         return otherCommand;
     }
 
     // Find the corresponding command
     const commandIndex = cmdPairs.findIndex(pair => pair.index === command.commandStart);
     if (commandIndex === -1) {
-        vscode.window.showErrorMessage(`bug: the selected command is not found in the text.`);
+        otherCommand.errorMessage = 'bug: the selected command is not found in the text.';
+        vscode.window.showErrorMessage(otherCommand.errorMessage);
         return otherCommand;
     }
     const delta = cmdPairs[commandIndex].delta;
@@ -146,10 +146,13 @@ function findCorrespondingCommand(text: string, command: Command): Command {
     ) {
         targetIndex += delta;
         if (targetIndex < 0 || targetIndex >= cmdPairs.length) {
-            vscode.window.showErrorMessage(`bug: the corresponding command is not found.`);
+            otherCommand.errorMessage = 'bug: the corresponding command is not found.';
+            vscode.window.showErrorMessage(otherCommand.errorMessage);
             return otherCommand;
         }
     }
+
+    otherCommand.success = true;
     return otherCommand.parseFromIndex(text, cmdPairs[targetIndex].delta, cmdPairs[targetIndex].index);
 }
 
@@ -158,10 +161,10 @@ export default function findBeginEndTargets(
     cursorOffset: number,
 ): BeginEndTargetSearchResult {
     let command = new Command(text, cursorOffset);
-    if (!command.success) return { result: undefined, message: "" };
+    if (!command.success) return { result: undefined, message: command.errorMessage };
 
     let otherCommand = findCorrespondingCommand(text, command);
-    if (!otherCommand.success) return { result: undefined, message: "" };
+    if (!otherCommand.success) return { result: undefined, message: otherCommand.errorMessage };
 
     if (text.substring(command.wordStart, command.wordEnd) !== text.substring(otherCommand.wordStart, otherCommand.wordEnd))
         return { result: undefined, message: 'The content inside \\begin{...} and \\end{...} should be the same.' };

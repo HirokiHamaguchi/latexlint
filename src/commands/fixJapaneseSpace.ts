@@ -36,8 +36,7 @@ export default async function fixJapaneseSpaceCommand() {
 
     // Build the modified text
     let modifiedText = document.getText();
-    for (let i = replacements.length - 1; i >= 0; i--) {
-        const { range, replacement } = replacements[i];
+    for (const { range, replacement } of replacements) {
         const startOffset = document.offsetAt(range.start);
         const endOffset = document.offsetAt(range.end);
         modifiedText = modifiedText.slice(0, startOffset) + replacement + modifiedText.slice(endOffset);
@@ -66,5 +65,4 @@ export default async function fixJapaneseSpaceCommand() {
         vscode.window.showInformationMessage(`Fixed ${replacements.length} Japanese spacing issue(s).`);
     } else
         vscode.window.showInformationMessage('Fix Japanese spacing canceled.');
-
 }

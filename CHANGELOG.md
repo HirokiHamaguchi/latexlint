@@ -2,6 +2,10 @@
 
 All notable changes to the "latexlint" extension will be documented in this file.
 
+## 1.6.8 - 2026-2-5
+
+- Add diff view when applying fixes.
+
 ## 1.6.7 - 2026-1-26
 
 - Speed up activation time by limiting files to diagnose.

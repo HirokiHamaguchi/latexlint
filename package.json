@@ -195,7 +195,7 @@
     "eslint": "^9.16.0",
     "ts-loader": "^9.5.2",
     "typescript": "^5.7.2",
-    "webpack": "^5.99.9",
+    "webpack": "^5.105.0",
     "webpack-cli": "^5.1.4"
   },
   "repository": {

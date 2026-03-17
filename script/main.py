@@ -60,10 +60,10 @@ def main():
             functions.append(f[:-3])
     print("All done!")
 
-    if "updateQiita" in sys.argv:
+    if "-updateQiita" in sys.argv:
         maybe_update_qiita_from_readme()
     else:
-        print("To update Qiita, run this script with 'updateQiita'.")
+        print("To update Qiita, run this script with '-updateQiita'.")
 
 
 if __name__ == "__main__":

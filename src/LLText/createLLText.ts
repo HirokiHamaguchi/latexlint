@@ -10,6 +10,7 @@ export default function createLLText(
   computeLinePos: (index: number) => { line: number; character: number }
 ): LLText {
   const validRanges = computeValidRanges(text, languageId);
+  const disabledLines = computeDisabledLines(text, languageId);
   const alignLikeEnvs = enumAlignEnvs(
     text,
     diagnostics,
@@ -19,12 +20,27 @@ export default function createLLText(
   const idxOfBeginDocument = text.indexOf("\\begin{document}");
   return {
     text: text,
+    disabledLines: disabledLines,
     alignLikeEnvs: alignLikeEnvs,
     validRanges: validRanges,
     idxOfBeginDocument: idxOfBeginDocument,
     isValid: (idx: number) => isPositionValid(idx, validRanges),
     isPreamble: (idx: number) => idxOfBeginDocument !== -1 && idx < idxOfBeginDocument,
   };
+}
+
+function computeDisabledLines(text: string, languageId: string): number[] {
+  const lines = text.split(/\r?\n/);
+  const disabledLines: number[] = [];
+  for (let lineNumber = 0; lineNumber < lines.length; lineNumber++)
+    if (isDisableDirectiveLine(lines[lineNumber], languageId)) disabledLines.push(lineNumber);
+  return disabledLines;
+}
+
+function isDisableDirectiveLine(line: string, languageId: string): boolean {
+  if (languageId === "latex") return /%\s*LLDisable/.test(line);
+  if (languageId === "markdown") return /<!--\s*LLDisable/.test(line);
+  return false;
 }
 
 function isPositionValid(idx: number, validRanges: [number, number][]) {

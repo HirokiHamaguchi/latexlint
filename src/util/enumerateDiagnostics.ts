@@ -13,19 +13,44 @@ export default function enumerateDiagnostics(
   const exceptions = config.get<string[]>("exceptions") || [];
 
   // Lint with performance tracking
-  const { diagnostics, timings } = lintWithPerformanceTracking({
+  const { diagnostics, disabledLines, timings } = lintWithPerformanceTracking({
     doc,
     disabledRules,
     getConfigValue: (configKey: string) => config.get(configKey) as string[],
   });
 
+  const diagnosticsWithoutDisabledLines = filterDisabledLineDiagnostics(
+    diagnostics,
+    disabledLines
+  );
+
   // Filter exceptions
-  const filteredDiagnostics = diagnostics.filter(
+  const filteredDiagnostics = diagnosticsWithoutDisabledLines.filter(
     (diag) => !exceptions.includes(formatException(doc.getText(diag.range)))
   );
 
   // Display performance report
   displayPerformanceReport(timings);
 
+  return filteredDiagnostics;
+}
+
+function filterDisabledLineDiagnostics(
+  sortedDiagnostics: vscode.Diagnostic[],
+  sortedDisabledLines: number[]
+): vscode.Diagnostic[] {
+  if (sortedDiagnostics.length === 0 || sortedDisabledLines.length === 0)
+    return sortedDiagnostics;
+
+  const filteredDiagnostics: vscode.Diagnostic[] = [];
+  let i = 0;
+  for (const diag of sortedDiagnostics) {
+    const line = diag.range.start.line;
+    while (i < sortedDisabledLines.length && sortedDisabledLines[i] < line)
+      i += 1;
+    if (i < sortedDisabledLines.length && sortedDisabledLines[i] === line)
+      continue;
+    filteredDiagnostics.push(diag);
+  }
   return filteredDiagnostics;
 }

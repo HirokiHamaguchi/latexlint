@@ -1,5 +1,11 @@
 # Sample Document
 
+## LLDisable
+
+Writing a comment with `LLDisable` will disable diagnostics for the specified line.
+
+Test error: $a^T$ <!-- LLDisable -->
+
 ## Sample Section
 
 $$

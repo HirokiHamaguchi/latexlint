@@ -32,6 +32,20 @@ Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint
 
 <!-- AUTO_GENERATED_RULES -->
 
+## Disabling Rules
+
+To disable a rule, add `% LLDisable` at the beginning of the line for LaTeX or `<!-- LLDisable -->` for Markdown.
+
+```tex
+Some error contained line. % LLDisable
+```
+
+```md
+Some error contained line. <!-- LLDisable -->
+```
+
+To toggle the entire rule on or off, use [LaTeX Lint: Choose Detection Rules](#latex-lint-choose-detection-rules).
+
 ## Other Features
 
 You can also use the following features in VS Code. These commands are available by clicking the icon on the editor toolbar.

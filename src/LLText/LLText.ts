@@ -4,6 +4,8 @@
 export interface LLText {
     /** The raw LaTeX text content */
     text: string;
+    /** 0-based line numbers where diagnostics should be disabled */
+    disabledLines: number[];
     /** Array of [start, end] indices for align-like environments */
     alignLikeEnvs: [number, number][];
     /** Array of [start, end] indices for valid ranges (not in comments or verbatim) */

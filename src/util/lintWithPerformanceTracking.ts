@@ -20,6 +20,7 @@ export interface LintOptions {
  */
 export function lintWithPerformanceTracking(options: LintOptions): {
   diagnostics: vscode.Diagnostic[];
+  disabledLines: number[];
   timings: PerformanceTiming[];
 } {
   const { doc, disabledRules, getConfigValue, onRuleError } = options;
@@ -68,7 +69,16 @@ export function lintWithPerformanceTracking(options: LintOptions): {
     timings.push({ name: ruleName, time: ruleEnd - ruleStart });
   }
 
-  return { diagnostics, timings };
+  diagnostics.sort(compareDiagnosticsByPosition);
+
+  return { diagnostics, disabledLines: txt.disabledLines, timings };
+}
+
+function compareDiagnosticsByPosition(a: vscode.Diagnostic, b: vscode.Diagnostic) {
+  if (a.range.start.line !== b.range.start.line) return a.range.start.line - b.range.start.line;
+  if (a.range.start.character !== b.range.start.character) return a.range.start.character - b.range.start.character;
+  if (a.range.end.line !== b.range.end.line) return a.range.end.line - b.range.end.line;
+  return a.range.end.character - b.range.end.character;
 }
 
 /**

@@ -29,6 +29,11 @@ async function testEnumerateDiagnosticsOther() {
   assert.strictEqual(diagnostics.length, 2);
 }
 
+async function testEnumerateDiagnosticsOtherMd() {
+  const diagnostics = await testEnumerateDiagnostics("sample/otherFeature.md");
+  assert.strictEqual(diagnostics.length, 0);
+}
+
 async function testLLTextTex() {
   const diagnostics = await testEnumerateDiagnostics("sample/testLLText.tex");
   const positions = [];
@@ -61,6 +66,7 @@ async function testLLTextMd() {
 suite("Extension Test Suite", () => {
   test("Test enumerateDiagnosticsTex", testEnumerateDiagnosticsTex);
   test("Test enumerateDiagnosticsOther", testEnumerateDiagnosticsOther);
+  test("Test enumerateDiagnosticsOtherMd", testEnumerateDiagnosticsOtherMd);
   test("Test TestLLText", testLLTextTex);
   test("Test TestLLTextMd", testLLTextMd);
 });

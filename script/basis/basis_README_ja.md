@@ -28,6 +28,20 @@ LaTeX Lintは、`.tex`および`.md`ファイル用のLaTeXリンターです。
 
 <!-- AUTO_GENERATED_RULES -->
 
+## ルールの無効化
+
+ルールを無効化するには、エラーが発生する行の先頭に、LaTeXの場合は`% LLDisable`、Markdownの場合は`<!-- LLDisable -->`を追加してください。
+
+```tex
+Some error contained line. % LLDisable
+```
+
+```md
+Some error contained line. <!-- LLDisable -->
+```
+
+ルール全体の有効・無効を切り替えるには、[LaTeX Lint: Choose Detection Rules](#latex-lint-choose-detection-rules)を使用してください。
+
 ## その他の機能
 
 VS Codeでは以下の機能も利用できます。これらのコマンドはエディタのツールバー上のアイコンから実行できます。

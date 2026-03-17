@@ -42,7 +42,7 @@ LaTeX Lintは、`.tex`および`.md`ファイル用のLaTeXリンターです。
 17. [LLLlGg](#llllgg) (`<<`と`>>`を検出)
 18. [LLNonASCII](#llnonascii) (全角ASCII文字を検出)
 19. [LLNonstandard](#llnonstandard) (非標準的な数学記号を検出)
-20. [LLPeriod](#llperiod) (`e.g.`を検出)
+20. [LLPeriod](#llperiod) (LaTeX中の略語ピリオドを検出)
 21. [LLRefEq](#llrefeq) (`\ref{eq:`を検出)
 22. [LLSharp](#llsharp) (`\#`の誤用とおぼしき`\sharp`を検出)
 23. [LLSI](#llsi) (`\SI`なしの`KB`、`MB`、`GB`などを検出)
@@ -343,8 +343,9 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 
 ### LLPeriod
 
-`.tex`と`.md`ファイルの`e.g.`を検出します。
-コンマを追加して`e.g.,`にするか、`e.g.\`を使用して空白の問題を避けるべきです。`i.e.`も同様です。
+LaTeXファイル中の略語ピリオドを検出します。
+このルールは、空白が続く `e.g.`, `i.e.`, `i.i.d.`, `w.r.t.`, `w.l.o.g.` を検出します。
+`e.g.,` のようにコンマを追加するか、`e.g.\ ` のように `\ ` を使って空白の問題を回避してください。
 
 ![rules/LLPeriod](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLPeriod/LLPeriod.png)
 
@@ -422,6 +423,7 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 ![rules/LLT](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLT/LLT.png)
 
 そうしないと、変数`T`による累乗と転置を区別できません（累乗には`^{T}`を使えます）。
+また、$\sum_{i=1}^T$ や $\prod_{i=1}^T$ などもエラーとして検出しません。
 
 参考文献:
 

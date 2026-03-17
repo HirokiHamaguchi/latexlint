@@ -1,4 +1,4 @@
-[CODE] LLPeriod (244)
+[CODE] LLPeriod (245)
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 112)
   error: i.e. 
   message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
@@ -761,6 +761,13 @@
   1045: \end{equation}
 > 1046: Where \(\varepsilon\) denotes the search space (all possible edges over \(\boldsymbol{U}\)) and \(S(e)\) a criterion function for edge relevance (e.g. edge frequency, thresholds, \(\cdots\)). 
   1047: This formulation takes into account the underlying edges' characteristics but not the overall network structure, complexity and missing data \cite{consensus_bn_jose}, leading to a \textit{consensus fusion approach} \cite{torrijos2025informedgreedyalgorithmscalable}.
+
+- file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 1075)
+  error: i.i.d. 
+  message: Consider adding a comma "i.i.d.," or using "i.i.d.\ " to avoid spacing issues.
+  1074: \paragraph{Criterion.}
+> 1075: We propose a \textbf{Class-Aware Information Gain (CAIG)} score for evaluating candidate edges during Phase 2 of CARGO. Given \(m\) i.i.d. samples from a dataset \(\boldsymbol{D}\), CAIG balances three key factors: mutual information derived from information gain, class imbalance, and network complexity. 
+  1076: %?Unlike heuristic-based methods, CAIG is \emph{score-equivalent} and \emph{locally consistent}, with asymptotic convergence to the true mutual information—akin to the guarantees of the BIC criterion.?
 
 - file: sample\arxiv_sources\2511.08548v1\appendix_problems.tex (line 66)
   error: i.e. 

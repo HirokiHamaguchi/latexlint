@@ -7,6 +7,6 @@ export default function LLT(doc: vscode.TextDocument, txt: LLText): vscode.Diagn
     return regex2diagnostics(
         doc, txt,
         "LLT",
-        /(?<!\[)\^T/g,
+        /(?<!\[|\\(?:sum|prod)|})\^T/g,
     );
 }

@@ -545,8 +545,8 @@ The following line contains non-ASCII characters.
 
 \subsection{Therefore and Because}
 
-Not Standard?: $\therefore a = b$, $\because x > 0$\\
-Standard: Therefore, $a = b$. Because $x > 0$, $\ldots$.
+Not Standard?: \(\therefore \, a = b\), \(\because \, x > 0\)\\
+Standard: Therefore, \(a = b\). Because \(x > 0\), \(\ldots\).
 
 % OK: These should not be detected (commented out as they are undefined)
 % $\Therefore a = b$
@@ -560,17 +560,17 @@ Not Standard?: This statement is true iff the condition holds.\\
 Standard: This statement is true if and only if the condition holds.
 
 OK: \verb|\iff| is a valid LaTeX command and should not be detected.
-$a = b \iff c = d$.
+\(a = b \iff c = d\).
 
 \subsection{DotSeq}
 
-Not Standard?: $a \fallingdotseq b$, $x \risingdotseq y$\\
-Standard: $a \approx b$, $x \approx y$
+Not Standard?: \(a \fallingdotseq b\), \(x \risingdotseq y\)\\
+Standard: \(a \approx b\), \(x \approx y\)
 
 \subsection{Combination Notation}
 
-Not Standard?: ${}_n C_k$, ${}_n \mathrm{C}_k$\\
-Standard: $\binom{n}{k}$
+Not Standard?: \({}_n C_k\), \({}_n \mathrm{C}_k\)\\
+Standard: \(\binom{n}{k}\)
 
 \section{LLPeriod}
 
@@ -583,7 +583,8 @@ Standard: $\binom{n}{k}$
 	\end{tabular}
 \end{table}
 
-i.e. is also checked.
+Without a backslash: e.g. blah i.e. blah i.i.d. blah w.r.t. blah w.l.o.g. blah etc.\\
+\phantom{out}With a backslash: e.g.\ blah i.e.\ blah i.i.d.\ blah w.r.t.\ blah w.l.o.g.\ blah etc.
 
 \section{LLRefEq}
 
@@ -661,13 +662,32 @@ We exclude cases like H\({}_2\)O and C\({}_{n}\)H\({}_{2n+2}\).
 \end{table}
 
 Disabled by default.
+The following cases are not detected as errors.
+
+\begin{equation*}
+	\sum^T_{i=1} x_i, \quad \sum_{i=1}^T y_i, \quad \prod^T_{i=1} x_i, \quad \prod_{i=1}^T y_i
+\end{equation*}0
 
 \section{LLTextLint}
 
 Only for Japanese texts.
 
 \begin{CJK}{UTF8}{ipxm}
-	馬から落馬は重言です。
+	ご静聴ありがとうございました。
+	御静聴ありがとうございました。
+	まず第1に、背景を説明します。
+	まず第一に、背景を説明します。
+	このモデルをシュミレーションします。
+	この命題は帰納法で証明できます。
+	1番最初に確認します。
+	一番最初に確認します。
+	一番最後に結論を述べます。
+	この実装はまだ未完成です。
+	開催日時はまだ未定です。
+	この問題はまだ未解決です。
+	これは第1回目です。
+	今日は第2日目です。
+	この関数の2回導関数を考えます。
 \end{CJK}
 
 \section{LLThousands}

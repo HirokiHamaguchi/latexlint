@@ -46,7 +46,7 @@ Here is the list of rules we detect.
 17. [LLLlGg](#llllgg) (detect `<<` and `>>`)
 18. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters)
 19. [LLNonstandard](#llnonstandard) (detect nonstandard mathematical notations)
-20. [LLPeriod](#llperiod) (detect `e.g.`)
+20. [LLPeriod](#llperiod) (detect abbreviation periods in LaTeX)
 21. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
 22. [LLSharp](#llsharp) (detect `\sharp` likely to be a misuse of `\#`)
 23. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
@@ -347,8 +347,9 @@ References:
 
 ### LLPeriod
 
-Detect `e.g.` in `.tex` and `.md` files.
-You should likely add a comma like `e.g.,` or use `e.g.\` to avoid spacing issues.　`i.e.` is treated similarly.
+Detect abbreviation periods in `.tex` files.
+This rule checks `e.g.`, `i.e.`, `i.i.d.`, `w.r.t.`, and `w.l.o.g.` when followed by a space.
+You should likely add a comma (e.g., `e.g.,`) or use `\ ` (e.g., `e.g.\ `) to avoid spacing issues.
 
 ![rules/LLPeriod](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLPeriod/LLPeriod.png)
 
@@ -425,6 +426,7 @@ This rule is disabled by default.
 ![rules/LLT](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLT/LLT.png)
 
 Otherwise, we cannot distinguish between the transpose and the power by a variable `T` (you can use `^{T}` for the power).
+We also do not detect $\sum_{i=1}^T$ or $\prod_{i=1}^T$ as errors.
 
 References:
 

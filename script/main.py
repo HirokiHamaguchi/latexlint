@@ -1,4 +1,5 @@
 import os
+import sys
 
 from make_constants_ts import make_constants_ts
 from make_enumerate_diagnostics_test import make_enumerate_diagnostics_test
@@ -50,9 +51,6 @@ def main():
     test_web_config()
     run_diagnose()
 
-    # Optionally update Qiita article if README_ja.md was updated recently
-    maybe_update_qiita_from_readme()
-
     files = os.listdir(os.path.dirname(__file__))
     functions = []
     for f in files:
@@ -61,6 +59,11 @@ def main():
         if f.startswith("make_") or f.startswith("test_"):
             functions.append(f[:-3])
     print("All done!")
+
+    if "updateQiita" in sys.argv:
+        maybe_update_qiita_from_readme()
+    else:
+        print("To update Qiita, run this script with 'updateQiita'.")
 
 
 if __name__ == "__main__":

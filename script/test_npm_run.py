@@ -17,7 +17,9 @@ def run_cmd(cmd, cwd, name=None):
         encoding="utf-8",
         cwd=base_dir / cwd,
     )
-    print(f"Finished: {name}\nstdout: {result.stdout}\nstderr: {result.stderr}")
+    print(f"Finished: {name}\nstdout: {result.stdout}")
+    if result.stderr:
+        print(f"stderr: {result.stderr}")
     return name, result.returncode
 
 

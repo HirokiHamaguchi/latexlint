@@ -8,10 +8,13 @@ export interface VocabularyEntry {
 
 let cachedVocabularyData: VocabularyEntry[] | null = null;
 
-function preprocessMemo(memo: string[] | null | undefined): string {
-    if (!memo || memo.length === 0) return '';
+function preprocessMemo(memo: string | string[] | null | undefined): string {
+    if (!memo) return '';
 
-    const processedMemo = [...memo];
+    const memoList = Array.isArray(memo) ? memo : [memo];
+    if (memoList.length === 0) return '';
+
+    const processedMemo = [...memoList];
     if (processedMemo[0] === '[重言]')
         processedMemo[0] = 'この表現は重言の可能性があり、修辞技法として意図されていれば問題ありませんが、誤用の可能性もあるので注意が必要です。';
 

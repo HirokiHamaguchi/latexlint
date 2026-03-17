@@ -1,4 +1,3 @@
-import datetime
 import os
 from typing import Callable, Optional
 
@@ -26,14 +25,6 @@ def maybe_update_qiita_from_readme(
     if not os.path.exists(readme_path):
         print(f"README not found: {readme_path}")
         return False
-
-    # Check modification time
-    mod_time = datetime.datetime.fromtimestamp(os.path.getmtime(readme_path))
-    now = datetime.datetime.now()
-    if (now - mod_time).total_seconds() > 3600:
-        print("README not updated recently. Skip Qiita update.")
-        return False
-    print(f"README last modified at {mod_time}. Proceeding with Qiita update.")
 
     # Read README body
     body_text = _read_file_text(readme_path)

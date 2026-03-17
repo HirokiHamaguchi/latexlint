@@ -5,6 +5,7 @@ import { checkOverlookedTypo } from "@latexlint/TextLint/overlooked_typo";
 import { parseSentence } from "@latexlint/TextLint/parser";
 import { checkTariTari } from "@latexlint/TextLint/tari_tari";
 import type { LLTextLintErrorResult } from "@latexlint/TextLint/types";
+import filterDisabledLineDiagnostics from "@latexlint/util/filterDisabledLineDiagnostics";
 import formatException from "@latexlint/util/formatException";
 import { getCodeWithURI } from "@latexlint/util/getCodeWithURI";
 import {
@@ -109,7 +110,7 @@ export async function lintLatex(
   const disabledRules = config.disabledRules || [];
 
   // Lint with performance tracking
-  const { diagnostics, timings } = lintWithPerformanceTracking({
+  const { diagnostics, disabledLines, timings } = lintWithPerformanceTracking({
     doc: vscodeDoc,
     disabledRules,
     getConfigValue: (configKey: string) =>
@@ -162,7 +163,12 @@ export async function lintLatex(
   // Display performance report
   displayPerformanceReport(timings);
 
-  return diagnostics
+  const diagnosticsWithoutDisabledLines = filterDisabledLineDiagnostics(
+    diagnostics,
+    disabledLines
+  );
+
+  return diagnosticsWithoutDisabledLines
     .filter(
       (diag) =>
         !config.exceptions.includes(

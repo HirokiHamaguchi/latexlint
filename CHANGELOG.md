@@ -2,7 +2,7 @@
 
 All notable changes to the "latexlint" extension will be documented in this file.
 
-## 1.7.1 - 2026-3-17
+## 1.7.0 - 2026-3-17
 
 - Add LLDisable rule
 - Update several rules to fix bugs and avoid false positives.

@@ -3,9 +3,7 @@
 
 out
 dist
-docs
 node_modules
-
 
 sample/arxiv_sources
 **/**.dvi

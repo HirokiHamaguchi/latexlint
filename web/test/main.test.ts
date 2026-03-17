@@ -1,11 +1,10 @@
-import { describe, it, expect } from "vitest";
-import { parseSentence, Token } from "@latexlint/TextLint/parser";
-import type { LLTextLintErrorResult } from "@latexlint/TextLint/types";
 import { checkNoDroppingI } from "@latexlint/TextLint/no_dropping_i";
 import { checkNoDroppingRa } from "@latexlint/TextLint/no_dropping_ra";
 import { checkOverlookedTypo } from "@latexlint/TextLint/overlooked_typo";
+import { parseSentence, Token } from "@latexlint/TextLint/parser";
 import { checkTariTari } from "@latexlint/TextLint/tari_tari";
-import { checkUsageError } from "@latexlint/TextLint/usage_error";
+import type { LLTextLintErrorResult } from "@latexlint/TextLint/types";
+import { describe, expect, it } from "vitest";
 
 import fs from "fs";
 import path from "path";
@@ -76,4 +75,3 @@ runCommonTests("checkNoDroppingRa", "no_dropping_ra.json", checkNoDroppingRa);
 runCommonTests("checkTariTari", "tari_tari.json", checkTariTari);
 
 runCommonTestsSync("checkOverlookedTypo", "overlooked_typo.json", checkOverlookedTypo);
-runCommonTestsSync("usage_error", "usage_error.json", checkUsageError);

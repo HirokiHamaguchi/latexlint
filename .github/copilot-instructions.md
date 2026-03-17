@@ -12,6 +12,7 @@
 - `README.md` と `package.json` は自動生成されるため、必要なら `script/basis/` 側を編集する。
 - バグ修正時は対応する `rules/{RuleName}/lint.tex` に再現ケース（コメント）を追加する。
 - 必要に応じて `rules/{RuleName}/README.md` と `rules/{RuleName}/values.json` も更新する。
+- `src/LL/LL*.ts`などを編集した場合は、対応する `rules/{RuleName}/README.md` と `rules/{RuleName}/README_ja.md` の更新要否を確認し、必要なら更新する。
 
 ## 変更後の必須手順
 

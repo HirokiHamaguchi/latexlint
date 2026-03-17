@@ -1,4 +1,4 @@
-[CODE] LLBracketMissing (340)
+[CODE] LLBracketMissing (339)
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 232)
   error: _mm
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
@@ -103,13 +103,6 @@
   2111:     \tld{H}_j\left(
 > 2112:     \left(X_kY_{1}^{\nu_{j,k}}V_{j,k}(W)\right)_{k\in K_{j}^{-}}, \left(X_kY_{2}^{\nu_{j,k}}V_{j,k}(W)\right)_{k\in K_{j}^{+}},
   2113:     \right.
-
-- file: sample\arxiv_sources\1609.01657v1\main.tex (line 226)
-  error: _al
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   225: 
->  226: \bibitem{todfer} \url{www.toonz.com/personal/todesco/superfici_algebriche/}
-   227: 
 
 - file: sample\arxiv_sources\1609.03457v1\extent-abilities.tex (line 136)
   error: _nC

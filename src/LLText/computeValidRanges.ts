@@ -28,6 +28,7 @@ function computeLaTeXInvalidRanges(
     "LVerbatim",
     "SaveVerbatim",
     "VerbatimOut",
+    "thebibliography",
   ];
 
   // verbsBegin: \\\\begin\\{${env}[*]?\\}

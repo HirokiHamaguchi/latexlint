@@ -12,6 +12,7 @@ export default function LLTextLint(doc: vscode.TextDocument, txt: LLText): vscod
     const messages: string[] = [];
     const ranges: vscode.Range[] = [];
     for (const error of checkUsageError(txt.text)) {
+        if (!txt.isValid(error.startOffset)) continue;
         messages.push(error.message);
         ranges.push(new vscode.Range(doc.positionAt(error.startOffset), doc.positionAt(error.endOffset)));
     }

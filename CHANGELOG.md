@@ -7,6 +7,7 @@ All notable changes to the "latexlint" extension will be documented in this file
 - Add LLDisable rule
 - Update several rules to fix bugs and avoid false positives.
 - Add diff view when applying fixes.
+- Skip LLText-related diagnostics inside `thebibliography` environments.
 
 ## 1.6.7 - 2026-1-26
 

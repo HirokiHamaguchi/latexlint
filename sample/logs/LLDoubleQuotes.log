@@ -1,4 +1,4 @@
-[CODE] LLDoubleQuotes (2467)
+[CODE] LLDoubleQuotes (2463)
 - file: sample\arxiv_sources\1407.2927v2\JustMathPERC.revised.tex (line 93)
   error: "
   message: For double quotes, use ``...''.
@@ -153,20 +153,6 @@
 >  193: \section{The visitors' impressions} \label{sec4} Multimedia installations and interwoven threads were not the only factors of success for the first set-up of the exhibition \textit{MadeInMath}. The animators were of crucial importance because they were mediators between organizers and visitors. Master students in various degrees in science (Mathematics, Biology, Physics, etc.) have been trained on the topics covered by the exhibition to accompany the many school-groups, but also to follow individual visitors, or small groups of hesitant visitors. For animators it was undoubtedly a formative moment for their training and their personal growth. Each of them, in fact, was free to propose their reading of the contents of the exhibition because the exhibition has various interpretations and visits had different cuts. People reported that they visited it twice and had different impressions each time. The ability to create connections between seemingly unrelated issues is one of the most powerful activity of mathematics, which gave the show an edge. It was thanks to all these facets that each visitor could grasp interesting aspects depending on their age, their training and their own interests. As commented in \cite{tg} by one of the animators, Maurizio Giaffredo, each of us animators took away a wealth of meetings and reflections whose value derives from the diversity of people and ideas that we had the chance to meet. In just two weeks the exhibition was visited by over 40,000 visitors. Of these, about 18,000 were students, mostly from middle and  high school. This means that more than half of the visitors fall into the category `general public`, which was quite a success. Beyond the figures, it was impressive to experience a high level of satisfaction by visitors. An initial indicator in this regard was to see students on a visit with the class during the week and then see them again at the weekend with their parents or other friends to illustrate some of the content of the exhibition as if they were young guides. A second indicator comes from the evidence left by visitors. Let us quote some of the thousands that people delighted in leaving. One of them says: "We knew the beauty of mathematics, but we did not suspect that  it was so beautiful. Thank you also for the love and attention to the teacher's figure". In fact, part of the exhibition gave space to the admirable work done every day by teachers, in this case those of mathematics. We were particularly pleased that this aspect has been apprehended and appreciated. Further evidence comes from some foreign visitors, who wrote: "I wish I had paid more attention to math class!" indicating the fact that the exhibition has managed to somehow overcome the misconception regarding mathematics and bring in the foreground some of the fundamental aspects of the teaching of mathematics (but not only), such as curiosity, wonder and the transmission of important ideas and not only tedious techniques. In this regard, a visitor wrote that he/she discovered a new world. In this sense, the initial disorientation was overcome in an unexpected and positive way because the exhibition succeeded in unveiling the potential of mathematics, which previously seemed unattainable. Another witness is grateful for the many ideas and so many hints that would be used at school for events on the subject of mathematics. There have also been some criticism, sometimes because of the difficulty in understanding certain topics. For this, as we discussed before, the guides were really fundamental because they played a role as a cultural mediator. The comments regarding some guides have been very positive, as, for example, "The exhibition is very beautiful but the enthusiasm of our guide was exceptional". Finally, we would like to quote a comment by a visitor, probably very young, that after the visit wrote that the exhibition was better than \textit {Gardaland} (an amusement park)!
    194: 
 
-- file: sample\arxiv_sources\1609.01657v1\main.tex (line 203)
-  error: "
-  message: For double quotes, use ``...''.
-   202: 
->  203: \bibitem{GB}G. Bini, \textit{A tour of the exhibition "MadeinMath. Mathematicians in Search of the Future"}, Newsletter of the European Mathematical Society (2015) {\bf 98}, 48--49.
-   204: 
-
-- file: sample\arxiv_sources\1609.01657v1\main.tex (line 203)
-  error: "
-  message: For double quotes, use ``...''.
-   202: 
->  203: \bibitem{GB}G. Bini, \textit{A tour of the exhibition "MadeinMath. Mathematicians in Search of the Future"}, Newsletter of the European Mathematical Society (2015) {\bf 98}, 48--49.
-   204: 
-
 - file: sample\arxiv_sources\1609.03457v1\examples-screenshots.tex (line 91)
   error: "
   message: For double quotes, use ``...''.
@@ -306,20 +292,6 @@
    113: 
 >  114: The above brings us to another point raised in \cite{sh18}, that the authors (of \cite{kal18}) had not offered or referred to any proof of the statement ``A vortex scale cannot be smaller than Kolmogorov length scale". A close examination of \cite{kal18} would reveal that no such statement was made thereat; rather it was stated that ``the Kolmogorov theory \cite{wal} asserts that eddies below a certain size cannot be formed." However, Shtern \cite{sh18} avoids making any comments on the justification provided in the last paragrpah of section 2.3.1  pertaining to Kolmogorov length scale in \cite{kal18}. Under the same geometric configuration, for a flow undergoing laminar to turbulent transition, can the smallest possible laminar scale  be smaller than the smallest turbulent scale defined by the Kolmogorov scale? The answer is a clear no, which comes from experimental and numerical evidences. For example, the visualization of flow past bluff bodies at high Reynolds numbers, where the flow is laminar just behind the body initially and becomes turbulent in the downstream region away from the body  later on (see the visualizations  in \cite{dyke,zad1,zad2}, Chapter 7 of \cite{white} Chapters 5, 6 of \cite{white1}). Another example in this context is the visualization of flows arising out of plane jets at different Reylonds numbers depicting the laminar and turbulent  regimes \cite{sur,tenn}. Just behind the jets, the turbulent length scales are much smaller than the laminar ones here. Recall that the concept of the Kolmogorov length scale comes from the cascading effect where energy is transferred from larger to smaller eddies. Laminar eddies are not small enough to accommodate the mixing of the eddies to facilitate the transfer of energy \cite{white1}.  
    115: 
-
-- file: sample\arxiv_sources\1807.00200v1\comment.tex (line 129)
-  error: "
-  message: For double quotes, use ``...''.
-   128: \bibitem{kal18} J. C. Kalita, S. Biswas and S. Panda. {Finiteness of corner vortices.}  {\em Zeitschrift f\"{u}r angewandte Mathematik und Physik}, 2018; 69(2): 37 (1-15).
->  129: \bibitem{sh18} V. Shtern. {Comment on "Finiteness of corner vortices"}  [ Z. Angew. Math. Phys. (2018) 69:37].  {\em Zeitschrift f\"{u}r angewandte Mathematik und Physik}, 2018; 69: 64 (1-2). 
-   130: \bibitem{hal} G. Haller. {An objective definition of vortex.} {\em Journal of Fluid Mechanics}, 2005; 225: 1-26.
-
-- file: sample\arxiv_sources\1807.00200v1\comment.tex (line 129)
-  error: "
-  message: For double quotes, use ``...''.
-   128: \bibitem{kal18} J. C. Kalita, S. Biswas and S. Panda. {Finiteness of corner vortices.}  {\em Zeitschrift f\"{u}r angewandte Mathematik und Physik}, 2018; 69(2): 37 (1-15).
->  129: \bibitem{sh18} V. Shtern. {Comment on "Finiteness of corner vortices"}  [ Z. Angew. Math. Phys. (2018) 69:37].  {\em Zeitschrift f\"{u}r angewandte Mathematik und Physik}, 2018; 69: 64 (1-2). 
-   130: \bibitem{hal} G. Haller. {An objective definition of vortex.} {\em Journal of Fluid Mechanics}, 2005; 225: 1-26.
 
 - file: sample\arxiv_sources\1905.00894v1\hoofdstellingmodernengels.tex (line 11)
   error: "

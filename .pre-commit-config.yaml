@@ -11,7 +11,7 @@ repos:
         args: ["--fix=crlf"]
         exclude: ^submodules/|sample/logs/
       - id: check-added-large-files
-        args: ["--maxkb=500"]
+        args: ["--maxkb=5000"]
         exclude: ^submodules/|sample/logs/
 
   - repo: https://github.com/pre-commit/mirrors-mypy

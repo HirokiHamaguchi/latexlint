@@ -38,7 +38,7 @@ Here is the list of rules we detect.
 9. [LLColonEqq](#llcoloneqq) (detect `:=`, `=:`,`::=`, and `=::`)
 10. [LLColonForMapping](#llcolonformapping) (detect `:` for mapping)
 11. [LLCref](#llcref) (detect `\ref`, disabled by default)
-12. [LLDoubleQuotes](#lldoublequotes) (detect `“`, `”` and `"`)
+12. [LLDoubleQuotes](#lldoublequotes) (detect `"`)
 13. [LLENDash](#llendash) (detect the dubious use of `-`(hyphen))
 14. [LLEqnarray](#lleqnarray) (detect `eqnarray` environment)
 15. [LLFootnote](#llfootnote) (detect space before `\footnote`)
@@ -181,12 +181,11 @@ This rule is disabled in the preamble (only if `\begin{document}` exists, before
 
 ### LLDoubleQuotes
 
-Detect `“`, `”` and `"` in `.tex` files.
-Use ` ``XXX'' ` instead for double quotation.
+Detect `"` in `.tex` files. Use ` ``XXX'' ` instead for double quotation.
 
 ![rules/LLDoubleQuotes](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLDoubleQuotes/LLDoubleQuotes.png)
 
-As for “XXX”, there is no problem in most cases. We prefer to use ` ``XXX'' ` for consistency.
+As for “XXX”, there is no problem in most cases and thus we don't detect it, but we prefer to use ` ``XXX'' ` for consistency.
 
 You can also use `\enquote{XXX}` with the [csquotes](https://ctan.org/pkg/csquotes) package.
 

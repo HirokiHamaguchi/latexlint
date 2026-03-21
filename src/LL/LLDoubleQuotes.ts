@@ -10,7 +10,7 @@ export default function LLDoubleQuotes(doc: vscode.TextDocument, txt: LLText): v
     const code = "LLDoubleQuotes";
     const ranges: vscode.Range[] = [];
 
-    for (const match of txt.text.matchAll(/(?<!\\)[“”"]/g)) {
+    for (const match of txt.text.matchAll(/(?<!\\)"/g)) {
         if (!txt.isValid(match.index)) continue;
         ranges.push(match2range(doc, match));
     }

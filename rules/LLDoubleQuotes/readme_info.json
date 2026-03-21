@@ -1,6 +1,6 @@
 {
-  "description": "detect `“`, `”` and `\"`",
-  "description_ja": "`“`、`”`、`\"`を検出",
+  "description": "detect `\"`",
+  "description_ja": "`\"`を検出",
   "references": [
     "[What is the best way to use quotation mark glyphs? (Stack Exchange)](https://tex.stackexchange.com/questions/531/what-is-the-best-way-to-use-quotation-mark-glyphs)"
   ]

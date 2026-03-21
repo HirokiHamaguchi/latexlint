@@ -34,7 +34,7 @@ LaTeX Lintは、`.tex`および`.md`ファイル用のLaTeXリンターです。
 9. [LLColonEqq](#llcoloneqq) (`:=`、`=:`、`::=`、`=::`を検出)
 10. [LLColonForMapping](#llcolonformapping) (写像に使われた`:`を検出)
 11. [LLCref](#llcref) (`\ref`を検出 (デフォルトで無効))
-12. [LLDoubleQuotes](#lldoublequotes) (`“`、`”`、`"`を検出)
+12. [LLDoubleQuotes](#lldoublequotes) (`"`を検出)
 13. [LLENDash](#llendash) (疑わしい`-`(ハイフン)の使用を検出)
 14. [LLEqnarray](#lleqnarray) (`eqnarray`環境を検出)
 15. [LLFootnote](#llfootnote) (`\footnote`の前の空白を検出)
@@ -177,12 +177,11 @@ LaTeX Lintは、`.tex`および`.md`ファイル用のLaTeXリンターです。
 
 ### LLDoubleQuotes
 
-`.tex`ファイルの`"`、`"`、`"`を検出します。
-二重引用符には、代わりに` ``XXX'' `を使用してください。
+`.tex`ファイルの`"`を検出します。二重引用符には、代わりに` ``XXX'' `を使用してください。
 
 ![rules/LLDoubleQuotes](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLDoubleQuotes/LLDoubleQuotes.png)
 
-“XXX”については、ほとんどの場合に問題ありませんが、一貫性のために` ``XXX'' `を使用することを推奨しています。
+“XXX”については、ほとんどの場合に問題ないので検出はしませんが、一貫性のために` ``XXX'' `を使用することを推奨しています。
 
 [csquotes](https://ctan.org/pkg/csquotes)パッケージで`\enquote{XXX}`を使用することもできます。
 

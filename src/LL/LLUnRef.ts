@@ -14,7 +14,9 @@ export default function LLUnRef(doc: vscode.TextDocument, txt: LLText): vscode.D
 
     const collectRefs = () => {
         const foundRefs = new Set<string>();
-        const refRegex = /\\[cC]?ref\{([^}]*)\}/g;
+        // This regex matches LaTeX commands that contain "ref" (case-insensitive).
+        // If we lack the "ref" part, we might match other commands like \label.
+        const refRegex = /\\[a-zA-Z]*(?:ref|Ref|REF)[a-zA-Z]*\{([^}]*)\}/g;
         for (const refMatch of txt.text.matchAll(refRegex)) {
             if (!txt.isValid(refMatch.index!)) continue;
             const refNames = refMatch[1].split(',').map(name => name.trim());

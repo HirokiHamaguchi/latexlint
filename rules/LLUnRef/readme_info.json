@@ -1,5 +1,5 @@
 {
   "description": "detect unreferenced figure and table labels",
   "description_ja": "参照されていない図表ラベルを検出",
-  "references": []
+  "references": ["https://academia.stackexchange.com/questions/220447/is-it-normal-to-require-to-reference-all-figures-and-tables-in-the-text", "https://www.lib.sfu.ca/help/cite-write/citation-style-guides/apa/tables-figures"]
 }

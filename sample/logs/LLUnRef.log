@@ -1,4 +1,4 @@
-[CODE] LLUnRef (93)
+[CODE] LLUnRef (86)
 - file: sample\arxiv_sources\1609.03457v1\tables_for-avail-engines-chapter.tex (line 12)
   error: \label{table:Web-available-main}
   message: Label "table:Web-available-main" is defined but never referenced.
@@ -89,20 +89,6 @@
    181: \caption{Example results of figure extraction, math formula extraction, and graph identification.}
 >  182: \label{fig:implementation}
    183: \end{figure}
-
-- file: sample\arxiv_sources\2307.16112v1\5-user-study.tex (line 34)
-  error: \label{fig:boxplot}
-  message: Label "fig:boxplot" is defined but never referenced.
-    33: \caption{This box plot summarizes the average scores of engagement (purple) and overall rating (orange) based on participants' preferences.}
->   34: \label{fig:boxplot}
-    35: \end{figure}
-
-- file: sample\arxiv_sources\2307.16112v1\5-user-study.tex (line 47)
-  error: \label{fig:feature}
-  message: Label "fig:feature" is defined but never referenced.
-    46: \caption{This figure summarize our participants' feedback on the usefulness of the implemented features. From top to bottom, the features are sorted by their average score in descending order.}
->   47: \label{fig:feature}
-    48: \end{figure}
 
 - file: sample\arxiv_sources\2312.01661v2\samplebody-conf.tex (line 100)
   error: \label{daposedit}
@@ -510,13 +496,6 @@
 >  197: \label{fig:sloppy_struct}
    198: \end{figure}
 
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 183)
-  error: \label{satACTstats}
-  message: Label "satACTstats" is defined but never referenced.
-   182: \caption{Mean and standard deviation for the SAT and ACT.}
->  183: \label{satACTstats}
-   184: \end{figure}
-
 - file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 701)
   error: \label{6895997}
   message: Label "6895997" is defined but never referenced.
@@ -615,38 +594,10 @@
 > 1190:   \label{county_pop_change_v_pop_transform_main}
   1191: \end{figure}
 
-- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1275)
-  error: \label{countyPovertyMap}
-  message: Label "countyPovertyMap" is defined but never referenced.
-  1274:         {countyPovertyMap}
-> 1275:     \label{countyPovertyMap}
-  1276:   }
-
-- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1282)
-  error: \label{countyUnemploymentRateMap}
-  message: Label "countyUnemploymentRateMap" is defined but never referenced.
-  1281:         {countyUnemploymentRateMap}
-> 1282:     \label{countyUnemploymentRateMap}
-  1283:   }
-
-- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1298)
-  error: \label{countyHomeownershipMap}
-  message: Label "countyHomeownershipMap" is defined but never referenced.
-  1297:         {countyHomeownershipMap}
-> 1298:     \label{countyHomeownershipMap}
-  1299:   }
-
 - file: sample\submodules\openintro-statistics\extraTeX\tables\TeX\chiSquareTable.tex (line 94)
   error: \label{arrayOfFigureAreasForChiSquareDistributionChiSqAppendix}
   message: Label "arrayOfFigureAreasForChiSquareDistributionChiSqAppendix" is defined but never referenced.
     93: }
 >   94: \label{arrayOfFigureAreasForChiSquareDistributionChiSqAppendix}
     95: \end{figure}
-
-- file: sample\submodules\openintro-statistics\extraTeX\tables\TeX\zTable.tex (line 198)
-  error: \label{normTableSide1}
-  message: Label "normTableSide1" is defined but never referenced.
-   197: \end{tabular}}
->  198: \label{normTableSide1}
-   199: \end{center}
 

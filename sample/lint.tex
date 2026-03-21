@@ -740,7 +740,9 @@ Only for Japanese texts.
 	\end{minipage}
 \end{figure}
 
-\Cref{fig:referenced,fig:referenced2} are referenced in the text, while the other figure is not.
+\newcommand{\myRef}[1]{\cref{#1}}
+
+\Cref{fig:referenced} and \myRef{fig:referenced2} are referenced in the text, while the other figure is not.
 
 \section{LLURL}
 

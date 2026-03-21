@@ -52,7 +52,7 @@ export const messages: Record<LLCode, string> = {
     LLBracketRound: 'Did you mean "%1{...}" instead of "%1(...)"?',
     LLColonEqq: 'Consider using %1 instead of %2.',
     LLColonForMapping: 'If this : is for a mapping, consider using \\colon.',
-    LLCref: 'Consider using \\cref instead of \\ref.',
+    LLCref: 'Consider using \\cref instead of \\ref, or changing the prefix of the label to avoid confusion.',
     LLDoubleQuotes: 'For double quotes, use ``...\'\'.',
     LLENDash: 'If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".',
     LLEqnarray: 'Eqnarray is not recommended. Use align or gather instead.',

@@ -7,6 +7,6 @@ export default function LLRefEq(doc: vscode.TextDocument, txt: LLText): vscode.D
     return regex2diagnostics(
         doc, txt,
         "LLRefEq",
-        /\\ref\{eq:/g,
+        /\(\\ref\{eq:/g,
     );
 }

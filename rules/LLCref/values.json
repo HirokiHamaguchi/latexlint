@@ -1,5 +1,5 @@
 {
-  "message": "Consider using \\\\cref instead of \\\\ref.",
+  "message": "Consider using \\\\cref instead of \\\\ref, or changing the prefix of the label to avoid confusion.",
   "severity": "INFO",
-  "lint_test_count": 4
+  "lint_test_count": 6
 }

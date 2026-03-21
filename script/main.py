@@ -26,6 +26,10 @@ from test_web_config import test_web_config
 
 
 def main():
+    if "-updateQiita" in sys.argv:
+        maybe_update_qiita_from_readme()
+        return
+
     # only once
     if False:
         run_fetch_arXiv()
@@ -59,11 +63,7 @@ def main():
         if f.startswith("make_") or f.startswith("test_"):
             functions.append(f[:-3])
     print("All done!")
-
-    if "-updateQiita" in sys.argv:
-        maybe_update_qiita_from_readme()
-    else:
-        print("To update Qiita, run this script with '-updateQiita'.")
+    print("To update Qiita, run this script with '-updateQiita'.")
 
 
 if __name__ == "__main__":

@@ -1,18 +1,31 @@
 # latexlint: Copilot Instructions
 
-## 目的
+## 概要
 
-- このレポジトリは、VSCode 拡張機能「latexlint」の開発を行っている。LaTeXもしくはMarkdownのLinterである。`web/`にはweb版の情報がある。
-- このリポジトリでは、ルール実装とそれに伴う自動生成物の整合性を保つことを最優先にする。
+- このレポジトリは、LaTeXもしくはMarkdown向けのLinterであるVSCode 拡張機能「latexlint」の開発を行っている。
+- 殆どのフォルダはVSCode向けの実装である。`web/`にはwebサイトのUIに関する実装があり、lint処理はsrcなどから共通のコードを参照している。
 
 ## 変更対象の原則
 
-- 通常の実装変更は `rules/` と `src/` を中心に行う。
-- メインとなるlinterのルールは、`src/rules/**.ts` に実装されている。
 - `README.md` と `package.json` は自動生成されるため、必要なら `script/basis/` 側を編集する。
-- バグ修正時は対応する `rules/{RuleName}/lint.tex` に再現ケース（コメント）を追加する。
-- 必要に応じて `rules/{RuleName}/README.md` と `rules/{RuleName}/values.json` も更新する。
-- `src/LL/LL*.ts`などを編集した場合は、対応する `rules/{RuleName}/README.md` と `rules/{RuleName}/README_ja.md` の更新要否を確認し、必要なら更新する。
+- 以下に記すrule単位で整理されている情報どうしに、矛盾がないように注意する。特に、ルールの挙動を変更する場合は、実装だけでなく説明や再現ケースも更新する必要がある。
+
+## rule単位で整理されている情報
+
+- `src/LL/{ruleName}.ts`
+  - 検出ロジック本体（どのパターンを診断にするか）。
+- `rules/{ruleName}/values.json`
+  - VSCodeのProblemとしてのメッセージ、severity、およびテスト件数などの設定値。
+- `rules/{ruleName}/README.md` / `rules/{ruleName}/README_ja.md`
+  - ルールの説明（英日）と利用者向けの挙動説明。
+- `rules/{ruleName}/readme_info.json`
+  - README生成用の説明要素（短い説明、参考文献のリンク集）。
+- `rules/{ruleName}/lint.tex`
+  - 再現ケース・期待結果（OK/NG）を含む検証用サンプル。バグ修正などの際は、こちらにも再現ケースを追加することが望まく、テスト件数の設定も更新する。
+- `rules/{ruleName}/{ruleName}.tex` / `{ruleName}.png`（および `.pdf`）
+  - ルール説明用の図版ソースと生成物。これはない場合もある。
+
+rule修正時は、まず「実装層＋再現・検証層」を更新し、その後「診断設定層・説明層・生成物層」の整合を確認する。
 
 ## 変更後の必須手順
 

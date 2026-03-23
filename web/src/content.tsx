@@ -18,7 +18,7 @@ const getStatusMessage = (state: LintingState) => {
     switch (state) {
         case 'idle': return 'ℹ️ Not Started';
         case 'linting': return '🔄 Analyzing...';
-        default: return '';
+        default: return '✅ Linted';
     }
 };
 

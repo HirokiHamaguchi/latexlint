@@ -95,3 +95,7 @@ https://tex.stackexchange.com/questions/5223/command-for-argmin-or-argmax
 ## clever ref appendix
 
 https://tex.stackexchange.com/questions/119513/cleveref-and-appendix-packages-appendix-referenced-as-section
+
+## autonum
+
+https://qiita.com/t_kemmochi/items/a4c390b4967b13f3afb7

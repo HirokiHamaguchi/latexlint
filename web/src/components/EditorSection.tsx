@@ -84,7 +84,9 @@ export function EditorSection(props: EditorSectionProps) {
                 const url = resource.toString();
                 const hashMatch = url.match(/#(.+)$/);
                 if (hashMatch && url.includes(window.location.origin)) {
-                    onOpenAboutWithHash(hashMatch[1]);
+                    const hash = decodeURIComponent(hashMatch[1]);
+                    if (hash.startsWith('/')) return false;
+                    onOpenAboutWithHash(hash);
                     return true; // prevent default behavior
                 }
                 return false;

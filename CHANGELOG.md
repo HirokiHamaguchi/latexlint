@@ -5,6 +5,7 @@ All notable changes to the "latexlint" extension will be documented in this file
 ## 1.7.1 - 2026-3-21
 
 - Fix several rules to avoid false positives and negatives.
+- Refactor web app navigation: remove About modal, add standalone `Overview` / `README` / `Japanese` pages with header links and README deep-link routing.
 
 ## 1.7.0 - 2026-3-17
 

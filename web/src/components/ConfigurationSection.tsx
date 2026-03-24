@@ -1,6 +1,7 @@
 import {
     Box,
     Checkbox,
+    Heading,
     IconButton,
     Input,
     SimpleGrid,
@@ -94,23 +95,26 @@ type ConfigurationSectionProps = {
 
 export function ConfigurationSection(props: ConfigurationSectionProps) {
     return (
-        <Box mt={4} p={4} borderWidth="1px" borderRadius="md" bg="gray.50">
-            <VStack align="stretch" gap={4}>
-                {(Object.keys(props.config) as Array<keyof LintConfig>).map((key) => {
-                    return (
-                        <ConfigField
-                            key={key}
-                            keyName={key}
-                            config={props.config}
-                            updateConfig={(newConfig: LintConfig) => {
-                                props.onConfigChange(newConfig);
-                                props.onRunLint(props.text, props.docType, true);
-                            }}
-                            onOpenAboutWithHash={props.onOpenAboutWithHash}
-                        />
-                    );
-                })}
-            </VStack>
-        </Box>
+        <VStack align="stretch">
+            <Heading size="xl">Settings</Heading>
+            <Box mt={4} p={4} borderWidth="1px" borderRadius="md" bg="gray.50">
+                <VStack align="stretch" gap={4}>
+                    {(Object.keys(props.config) as Array<keyof LintConfig>).map((key) => {
+                        return (
+                            <ConfigField
+                                key={key}
+                                keyName={key}
+                                config={props.config}
+                                updateConfig={(newConfig: LintConfig) => {
+                                    props.onConfigChange(newConfig);
+                                    props.onRunLint(props.text, props.docType, true);
+                                }}
+                                onOpenAboutWithHash={props.onOpenAboutWithHash}
+                            />
+                        );
+                    })}
+                </VStack>
+            </Box>
+        </VStack>
     );
 }

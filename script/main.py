@@ -8,6 +8,7 @@ from make_package_json import make_package_json
 from make_png_files import make_png_files
 from make_readme import make_readme
 from make_rules_ts import make_rules_ts
+from make_screen_shot import make_screen_shot
 from make_web_readme import make_web_readme
 from make_web_svg import make_web_svg
 from run_diagnose import run_diagnose
@@ -28,6 +29,10 @@ from test_web_config import test_web_config
 def main():
     if "-updateQiita" in sys.argv:
         maybe_update_qiita_from_readme()
+        return
+
+    if "-makeScreenShot" in sys.argv:
+        make_screen_shot()
         return
 
     # only once

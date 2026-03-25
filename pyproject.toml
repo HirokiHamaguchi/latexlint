@@ -11,5 +11,6 @@ dependencies = [
     "fitz>=0.0.1.dev2",
     "pillow>=12.0.0",
     "pymupdf>=1.26.4",
+    "selenium>=4.35.0",
     "types-requests>=2.32.4.20250913",
 ]

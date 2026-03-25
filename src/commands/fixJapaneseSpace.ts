@@ -24,11 +24,15 @@ export default async function fixJapaneseSpaceCommand() {
 
         let replacement: string;
         if (matchText.startsWith('$'))
-            replacement = `$ ${matchText.slice(1)}`;
+            replacement = `$ ${matchText[1]}`;
         else if (matchText.endsWith('$'))
-            replacement = `${matchText.slice(0, -1)} $`;
+            replacement = `${matchText[0]} $`;
+        else if (matchText.startsWith('\\('))
+            replacement = `\\( ${matchText[2]}`;
+        else if (matchText.endsWith('\\)'))
+            replacement = `${matchText[0]} \\)`;
         else {
-            console.assert(false, 'Unexpected match that does not start or end with $.');
+            console.assert(false, 'Unexpected match: ' + matchText);
             continue;
         }
         replacements.push({ range, replacement });
@@ -37,6 +41,7 @@ export default async function fixJapaneseSpaceCommand() {
     // Build the modified text
     let modifiedText = document.getText();
     for (const { range, replacement } of replacements) {
+        console.log(`Replacing "${document.getText(range)}" with "${replacement}" at range ${range.start.line}:${range.start.character} - ${range.end.line}:${range.end.character}`);
         const startOffset = document.offsetAt(range.start);
         const endOffset = document.offsetAt(range.end);
         modifiedText = modifiedText.slice(0, startOffset) + replacement + modifiedText.slice(endOffset);

@@ -10,10 +10,11 @@ export default function detectMathSpace(doc: vscode.TextDocument, txt: LLText): 
     const re = new RegExp(SPACE_REGEX.source, SPACE_REGEX.flags);
     const matches: RegExpMatchArray[] = [...text.matchAll(re)];
 
+    // In reverse order for fixJapaneseSpaceCommand to apply edits from the end of the document
     for (let i = matches.length - 1; i >= 0; i--) {
         const start = matches[i].index ?? 0;
         if (!txt.isValid(start)) continue;
-        ranges.push(new vscode.Range(doc.positionAt(start), doc.positionAt(start + 1)));
+        ranges.push(new vscode.Range(doc.positionAt(start), doc.positionAt(start + matches[i][0].length)));
     }
 
     return ranges;

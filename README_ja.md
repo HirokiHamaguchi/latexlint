@@ -331,9 +331,13 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 
 [数学英語 (河東泰之, Japanese article)](https://www.ms.u-tokyo.ac.jp/~yasuyuki/english2.htm):
 
-> また ∀ や ∃ の記号は数理論理学でない限り，黒板などに書く時の略記法なので論文では使わないとされている．実は私の論文で ∀ が使われている例がいくつかあるのだが，それは共著者が書いたものを直し切れなかったのだ．これと同様のものとして，if and only if の意味の iff も略記法であって論文には不適切とされているが，私の論文中には共著者が書いたものが残っている例がある．
+> ∀ や ∃ の記号は数理論理学でない限り，黒板などに書く時の略記法なので論文では使わないとされている．実は私の論文で ∀ が使われている例がいくつかあるのだが，それは共著者が書いたものを直し切れなかったのだ．これと同様のものとして，if and only if の意味の iff も略記法であって論文には不適切とされている
+>
+> (The symbols ∀ and ∃ are considered shorthand notations for writing on blackboards, etc., and are not used in papers unless in mathematical logic. In fact, there are some examples of ∀ being used in my papers, but that is because I couldn't fully correct what my co-authors wrote. Similarly, the abbreviation "iff" for "if and only if" is also considered a shorthand notation and is inappropriate for use in papers.)
 
 > ∵という記号は今ここに書いている通り JIS コードにもあるし，TeX でも \because という名前がついているのだが，私の知っている限り欧米ではほとんど使わない．(∴のほうはこれよりは使われている．) これを日本人が黒板に書いて，「それは何か」と聞かれているところを見たことが何度もある．同じく欧米で使わない数学記号として≒がある．「大体等しい」ことを表すのによく使われる記号は≈である．
+>
+> (The symbol ∵ is included in the JIS code and is named \because in TeX, but as far as I know, it is rarely used in Western countries. (The symbol ∴ is used more than this.) I've seen Japanese people write this on blackboards and ask "What does that mean?" many times. Another mathematical symbol that is not used in Western countries is ≒. The symbol commonly used to represent "approximately equal" is ≈.)
 
 [組合せ (数学) (Japanese Wikipedia)](https://ja.wikipedia.org/wiki/%E7%B5%84%E5%90%88%E3%81%9B_(%E6%95%B0%E5%AD%A6)):
 
@@ -426,10 +430,11 @@ From Fig. 1 and Eq. (1), we can see that...
 
 ### LLSpaceEnglish
 
-`.tex`と`.md`ファイルの日本語・英語の文字とインライン数式の間の空白の不足を検出します。
-このルールはデフォルトで無効です。
+`.tex`と`.md`ファイルの日本語・英語の文字とインライン数式の間の空白の不足を検出します。\
 
 ![rules/LLSpaceEnglish](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLSpaceEnglish/LLSpaceEnglish.png)
+
+ただし、対象のトークンの直後が`th`である場合（例: `\(n\)th`）や、対象のトークンの直前がコマンドである場合（例: `$\backslash$n`）はスキップします。
 
 ### LLSpaceJapanese
 

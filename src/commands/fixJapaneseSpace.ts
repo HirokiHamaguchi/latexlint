@@ -11,7 +11,7 @@ export default async function fixJapaneseSpaceCommand() {
     const document = editor.document;
     const [txt, _diagnostics] = createLLTextVSCode(document);
 
-    const ranges = detectMathSpace(document, txt, 'ja');
+    const ranges = detectMathSpace(document, txt);
     if (ranges.length === 0) {
         vscode.window.showInformationMessage('No Japanese spacing issues found.');
         return;

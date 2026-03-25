@@ -633,13 +633,17 @@ Unsorted citations: \cite{hari2000,boli2000}.
 
 \section{LLSpaceEnglish}
 
-Space between text and inline math like\(x=1\) and \(y=2\)lacks a space.
-No spaces before commas, such as \(z=3\), we do not detect them.
+Missing spaces around inline math should be detected.
 
-We exclude cases like H\({}_2\)O and C\({}_{n}\)H\({}_{2n+2}\).
-% todo: detect for the cases like $...$. This is quite hard.
+Improper spacing: a\(x\)b and a$x$b.
+Proper spacing: a \(x\) b and a $x$ b.
+
+The following are excluded by rule exceptions: $n$th, \(m\)th, $\backslash$n, \(\backslash\)m, H\({}_2\)O, C\({}_{n}\)H\({}_{2n+2}\).
+No detection when token is not between letters:  1$x$, 1\(x\), $x$1, \(x\)1, $x$, \(x\), etc.
 
 \section{LLSpaceJapanese}
+
+The following are Japanese examples, which are excluded by rule exceptions.
 
 \begin{CJK}{UTF8}{ipxm}
 	日本語の文章で$x=1$と数式を書くと、スペースが欠如します。
@@ -666,7 +670,7 @@ The following cases are not detected as errors.
 
 \begin{equation*}
 	\sum^T_{i=1} x_i, \quad \sum_{i=1}^T y_i, \quad \prod^T_{i=1} x_i, \quad \prod_{i=1}^T y_i
-\end{equation*}0
+\end{equation*}
 
 \section{LLTextLint}
 

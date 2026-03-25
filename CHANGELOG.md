@@ -2,10 +2,14 @@
 
 All notable changes to the "latexlint" extension will be documented in this file.
 
+## 1.7.2 - 2026-3-25
+
+- Refactor web app navigation.
+- Update `LLSpaceEnglish` detection logic: detect `$`, `\(`, `\)` between letters with new exclusions (`th` backward check and forward `[a-zA-Z]+` then `\` check), and refresh rule examples/docs.
+
 ## 1.7.1 - 2026-3-21
 
 - Fix several rules to avoid false positives and negatives.
-- Refactor web app navigation: remove About modal, add standalone `Overview` / `README` / `Japanese` pages with header links and README deep-link routing.
 
 ## 1.7.0 - 2026-3-17
 

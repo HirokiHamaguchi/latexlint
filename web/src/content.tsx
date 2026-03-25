@@ -1,29 +1,18 @@
-import { Box, Button, Container, HStack, SimpleGrid, Text, VStack } from '@chakra-ui/react';
+import { HStack, SimpleGrid, Text, VStack } from '@chakra-ui/react';
 import type * as monaco from 'monaco-editor';
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import sampleMdBefore from '../sample/sample_before.md?raw';
-import sampleTexBefore from '../sample/sample_before.tex?raw';
-import { ConfigurationSection, EditorSection, Footer, TopNavHeader } from './components';
+import { ConfigurationSection, EditorSection } from './components';
 import { DiagnosticsSection } from './components/DiagnosticsSection';
+import { DocTypeSwitch } from './components/home/DocTypeSwitch';
+import { MainHero } from './components/home/MainHero';
+import { SampleSection } from './components/home/SampleSection';
+import { PageLayout } from './components/layout/PageLayout';
+import { ROUTES } from './constants/routes';
+import { DEFAULT_DOC_TYPE, SAMPLES } from './constants/samples';
 import { useConfig, useLinting } from './hooks';
 import { DocType, LintingState } from './types';
 import { preloadTextLintDictionary } from './utils';
-
-import {
-    Grid,
-    Heading,
-    Image,
-    Link
-} from '@chakra-ui/react';
-
-
-const samples: Record<DocType, string> = {
-    latex: sampleTexBefore,
-    markdown: sampleMdBefore,
-};
-
-const BASE_URL = import.meta.env.BASE_URL;
 
 const getStatusMessage = (state: LintingState) => {
     switch (state) {
@@ -33,26 +22,9 @@ const getStatusMessage = (state: LintingState) => {
     }
 };
 
-const SampleImage = ({ src, alt, color }: { src: string; alt: string; color: string }) => (
-    <VStack>
-        <Heading size="sm" color={color}>{alt}</Heading>
-        <Image
-            src={`${BASE_URL}${src}`}
-            alt={alt}
-            borderRadius="md"
-            border="1px solid"
-            borderColor="gray.300"
-            maxW="100%"
-            h="auto"
-        />
-    </VStack>
-);
-
-
 export function Content() {
-    const [docType, setDocType] = useState<DocType>('latex');
-    const [text, setText] = useState(sampleTexBefore);
-    const [isConfigOpen, setIsConfigOpen] = useState(false);
+    const [docType, setDocType] = useState<DocType>(DEFAULT_DOC_TYPE);
+    const [text, setText] = useState(SAMPLES[DEFAULT_DOC_TYPE]);
     const [isEditorReady, setIsEditorReady] = useState(false);
     const [editorHeight, setEditorHeight] = useState<number | undefined>(undefined);
     const editorRef = useRef<monaco.editor.IStandaloneCodeEditor | null>(null);
@@ -69,14 +41,14 @@ export function Content() {
 
     const handleDocTypeChange = (newType: DocType) => {
         setDocType(newType);
-        const shouldSwitchSample = text === samples[docType === 'latex' ? 'latex' : 'markdown'];
-        const textToLint = shouldSwitchSample ? samples[newType] : text;
+        const shouldSwitchSample = text === SAMPLES[docType];
+        const textToLint = shouldSwitchSample ? SAMPLES[newType] : text;
         if (shouldSwitchSample) setText(textToLint);
         runLint(textToLint, newType, true);
     };
 
     const handleOpenAboutWithHash = (hash: string) => {
-        const path = hash ? `/readme/${encodeURIComponent(hash)}` : '/readme';
+        const path = hash ? `${ROUTES.README}/${encodeURIComponent(hash)}` : ROUTES.README;
         navigate(path);
     };
 
@@ -105,33 +77,14 @@ export function Content() {
     }, []);
 
     useEffect(() => {
-        if (isEditorReady) runLint(sampleTexBefore, 'latex', false);
+        if (isEditorReady) runLint(SAMPLES[DEFAULT_DOC_TYPE], DEFAULT_DOC_TYPE, false);
     }, [isEditorReady, runLint]);
 
     return (
-        <>
-            <TopNavHeader />
-
-            <Container maxW="container.xl" py={8} as="main">
-                <VStack justify="center" align="center" mb={4}>
-                    <Link href={import.meta.env.BASE_URL} _hover={{ textDecoration: 'none' }}>
-                        <HStack align="center">
-                            <Image
-                                src="lintIconLight_copied.svg"
-                                alt="LaTeX Lint Icon"
-                                boxSize="2.5em"
-                                mr={2}
-                            />
-                            <Heading as="h1" size="3xl" color="#333333" _hover={{ color: 'blue.600' }} transition="color 0.2s">
-                                <Text fontFamily="Times New Roman, serif">LaTeX Lint</Text>
-                            </Heading>
-                        </HStack>
-                    </Link>
-                    <Text fontSize="lg" color="gray.500">
-                        Online LaTeX Code Checker
-                    </Text>
-                </VStack>
-                <VStack gap={4} align="stretch">
+        <PageLayout>
+            <MainHero />
+            <VStack align="stretch">
+                <VStack align="stretch">
                     <HStack
                         justify="flex-start"
                         align="center"
@@ -148,43 +101,13 @@ export function Content() {
                             </Text>
                         </HStack>
 
-                        <Box
-                            borderWidth="1px"
-                            borderColor="gray.200"
-                            borderRadius="full"
-                            bg="white"
-                            p={1}
-                            flexShrink={0}
-                            ml="auto"
-                        >
-                            <HStack gap={1}>
-                                <Button
-                                    size="sm"
-                                    borderRadius="full"
-                                    variant={docType === 'latex' ? 'solid' : 'ghost'}
-                                    colorPalette={docType === 'latex' ? 'blue' : 'gray'}
-                                    onClick={() => handleDocTypeChange('latex')}
-                                >
-                                    LaTeX
-                                </Button>
-                                <Button
-                                    size="sm"
-                                    borderRadius="full"
-                                    variant={docType === 'markdown' ? 'solid' : 'ghost'}
-                                    colorPalette={docType === 'markdown' ? 'blue' : 'gray'}
-                                    onClick={() => handleDocTypeChange('markdown')}
-                                >
-                                    Markdown
-                                </Button>
-                            </HStack>
-                        </Box>
+                        <DocTypeSwitch docType={docType} onChange={handleDocTypeChange} />
                     </HStack>
 
                     <SimpleGrid columns={{ base: 1, lg: 2 }} gap={4}>
                         <EditorSection
                             text={text}
                             diagnostics={diagnostics}
-                            lintingState={lintingState}
                             onTextChange={handleTextChange}
                             onEditorReady={() => setIsEditorReady(true)}
                             onOpenAboutWithHash={handleOpenAboutWithHash}
@@ -200,29 +123,19 @@ export function Content() {
                             height={editorHeight}
                         />
                     </SimpleGrid>
-
-                    <VStack align="stretch">
-                        <Heading size="xl">Sample</Heading>
-                        <Grid templateColumns={{ base: '1fr', md: '1fr 1fr' }} gap={6}>
-                            <SampleImage src="sample_before.png" alt="Before" color="red.600" />
-                            <SampleImage src="sample_after.png" alt="After" color="green.600" />
-                        </Grid>
-                    </VStack>
-
-                    <ConfigurationSection
-                        isOpen={isConfigOpen}
-                        onToggle={setIsConfigOpen}
-                        config={config}
-                        onConfigChange={updateConfig}
-                        onRunLint={runLint}
-                        text={text}
-                        docType={docType}
-                        onOpenAboutWithHash={handleOpenAboutWithHash}
-                    />
                 </VStack>
 
-                <Footer />
-            </Container>
-        </>
+                <SampleSection />
+
+                <ConfigurationSection
+                    config={config}
+                    onConfigChange={updateConfig}
+                    onRunLint={runLint}
+                    text={text}
+                    docType={docType}
+                    onOpenAboutWithHash={handleOpenAboutWithHash}
+                />
+            </VStack>
+        </PageLayout >
     );
 }

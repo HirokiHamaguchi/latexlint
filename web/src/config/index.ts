@@ -19,6 +19,7 @@ export interface ConfigFieldMetadata {
 }
 
 type ConfigData = Record<keyof LintConfig, ConfigFieldMetadata>;
+type ConfigChangeListener = () => void;
 
 export const configMetadata = configData as ConfigData;
 
@@ -33,17 +34,25 @@ export const defaultConfig: LintConfig = Object.keys(configData).reduce(
 
 // Global mutable config for web version
 export let currentConfig: LintConfig = { ...defaultConfig };
+const listeners = new Set<ConfigChangeListener>();
 
-// todo: consider persisting to localStorage
-// todo: format exceptions before setting
 export function setConfig(newConfig: LintConfig): void {
   currentConfig = { ...newConfig };
+  listeners.forEach((listener) => listener());
 }
 
 export function getConfig(): LintConfig {
-  return { ...currentConfig };
+  return currentConfig;
 }
 
 export function resetConfig(): void {
   currentConfig = { ...defaultConfig };
+  listeners.forEach((listener) => listener());
+}
+
+export function subscribeConfig(listener: ConfigChangeListener): () => void {
+  listeners.add(listener);
+  return () => {
+    listeners.delete(listener);
+  };
 }

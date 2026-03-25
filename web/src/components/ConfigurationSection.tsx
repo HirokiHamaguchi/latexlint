@@ -1,7 +1,6 @@
 import {
     Box,
     Checkbox,
-    Heading,
     IconButton,
     Input,
     SimpleGrid,
@@ -11,9 +10,19 @@ import {
 import { LuCircleHelp } from "react-icons/lu";
 import { configMetadata, type LintConfig } from '../config';
 import { DocType } from '../types';
+import { SectionHeading } from './typography/SectionHeading';
+
+type ConfigKey = keyof LintConfig;
+
+function parseInputList(value: string): string[] {
+    return value
+        .split(',')
+        .map((entry) => entry.trim())
+        .filter((entry) => entry.length > 0);
+}
 
 type ConfigFieldProps = {
-    keyName: keyof LintConfig;
+    keyName: ConfigKey;
     config: LintConfig;
     updateConfig: (newConfig: LintConfig) => void;
     onOpenAboutWithHash: (hash: string) => void;
@@ -21,7 +30,7 @@ type ConfigFieldProps = {
 
 function ConfigField(props: ConfigFieldProps) {
     const metadata = configMetadata[props.keyName];
-    const currentValues = props.config[props.keyName] as unknown as string[];
+    const currentValues = props.config[props.keyName];
     return (
         <Box>
             <Box display="flex" alignItems="center" gap={2} mb={2}>
@@ -53,9 +62,11 @@ function ConfigField(props: ConfigFieldProps) {
                                         : currentValues.filter((v) => v !== option);
                                     props.updateConfig({ ...props.config, [props.keyName]: newValue } as LintConfig);
                                 }}
+                                width="fit-content"
+                                cursor="pointer"
                             >
                                 <Checkbox.HiddenInput />
-                                <Checkbox.Control />
+                                <Checkbox.Control borderColor="gray.400" />
                                 <Checkbox.Label>{option}</Checkbox.Label>
                             </Checkbox.Root>
                         ))}
@@ -67,15 +78,13 @@ function ConfigField(props: ConfigFieldProps) {
                     id={`config-input-${String(props.keyName)}`}
                     value={currentValues.join(', ')}
                     onChange={(e) => {
-                        const value = e.target.value
-                            .split(',')
-                            .map((s) => s.trim())
-                            .filter((s) => s);
+                        const value = parseInputList(e.target.value);
                         // todo: validation
                         props.updateConfig({ ...props.config, [props.keyName]: value } as LintConfig);
                     }}
                     placeholder="word1, word2, word3"
                     size="sm"
+                    borderColor="gray.400"
                 />
             )}
         </Box>
@@ -84,10 +93,8 @@ function ConfigField(props: ConfigFieldProps) {
 
 type ConfigurationSectionProps = {
     text: string;
-    isOpen: boolean;
     docType: DocType;
     config: LintConfig;
-    onToggle: (open: boolean) => void;
     onConfigChange: (newConfig: LintConfig) => void;
     onRunLint: (text: string, type: DocType, forceTextLint: boolean) => void;
     onOpenAboutWithHash: (hash: string) => void;
@@ -96,25 +103,25 @@ type ConfigurationSectionProps = {
 export function ConfigurationSection(props: ConfigurationSectionProps) {
     return (
         <VStack align="stretch">
-            <Heading size="xl">Settings</Heading>
-            <Box mt={4} p={4} borderWidth="1px" borderRadius="md" bg="gray.50">
-                <VStack align="stretch" gap={4}>
-                    {(Object.keys(props.config) as Array<keyof LintConfig>).map((key) => {
-                        return (
-                            <ConfigField
-                                key={key}
-                                keyName={key}
-                                config={props.config}
-                                updateConfig={(newConfig: LintConfig) => {
-                                    props.onConfigChange(newConfig);
-                                    props.onRunLint(props.text, props.docType, true);
-                                }}
-                                onOpenAboutWithHash={props.onOpenAboutWithHash}
-                            />
-                        );
-                    })}
-                </VStack>
-            </Box>
+            <SectionHeading>Settings</SectionHeading>
+            <VStack align="stretch" gap={4}>
+                {(Object.keys(props.config) as ConfigKey[]).map((key) => {
+                    const updateConfigAndLint = (newConfig: LintConfig) => {
+                        props.onConfigChange(newConfig);
+                        props.onRunLint(props.text, props.docType, true);
+                    };
+
+                    return (
+                        <ConfigField
+                            key={key}
+                            keyName={key}
+                            config={props.config}
+                            updateConfig={updateConfigAndLint}
+                            onOpenAboutWithHash={props.onOpenAboutWithHash}
+                        />
+                    );
+                })}
+            </VStack>
         </VStack>
     );
 }

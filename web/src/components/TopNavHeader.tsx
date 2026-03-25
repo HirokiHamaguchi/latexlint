@@ -1,18 +1,13 @@
 import { Box, HStack, Image, Text } from '@chakra-ui/react';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
-
-const NAV_ITEMS = [
-    { label: 'Home', path: '/' },
-    { label: 'Overview', path: '/overview' },
-    { label: 'README', path: '/readme' },
-] as const;
+import { NAV_ITEMS, ROUTES } from '../constants/routes';
 
 export function TopNavHeader() {
     const location = useLocation();
 
     const isActive = (path: string) => {
-        if (path === '/readme') {
-            return location.pathname === '/readme' || location.pathname.startsWith('/readme/');
+        if (path === ROUTES.README) {
+            return location.pathname === ROUTES.README || location.pathname.startsWith(`${ROUTES.README}/`);
         }
         return location.pathname === path;
     };
@@ -72,8 +67,7 @@ export function TopNavHeader() {
                 {NAV_ITEMS.map((item) => (
                     <Box
                         key={item.path}
-                        as={RouterLink}
-                        to={item.path}
+                        asChild
                         flexShrink={0}
                         borderRadius="md"
                         px={3}
@@ -90,7 +84,7 @@ export function TopNavHeader() {
                         }}
                         transition="all 0.2s"
                     >
-                        {item.label}
+                        <RouterLink to={item.path}>{item.label}</RouterLink>
                     </Box>
                 ))}
             </HStack>

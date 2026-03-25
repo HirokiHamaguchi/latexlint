@@ -12,56 +12,15 @@ import {
 } from '@chakra-ui/react';
 import type * as monaco from 'monaco-editor';
 import { LuBan, LuExternalLink, LuSettings } from 'react-icons/lu';
-
-const SEVERITY = { ERROR: 8, WARNING: 4, INFO: 2, HINT: 1 } as const;
-
-type SeverityKey = 'errors' | 'warnings' | 'info' | 'hints';
-type DiagnosticCounts = Record<SeverityKey, number>;
-
-const SEVERITY_CONFIG: Record<SeverityKey, { severity: number; color: string; label: string }> = {
-    errors: { severity: SEVERITY.ERROR, color: 'red', label: 'Errors' },
-    warnings: { severity: SEVERITY.WARNING, color: 'orange', label: 'Warnings' },
-    info: { severity: SEVERITY.INFO, color: 'blue', label: 'Info' },
-    hints: { severity: SEVERITY.HINT, color: 'gray', label: 'Hints' },
-} as const;
-
-const SEVERITY_TO_KEY = {
-    [SEVERITY.ERROR]: 'errors',
-    [SEVERITY.WARNING]: 'warnings',
-    [SEVERITY.INFO]: 'info',
-    [SEVERITY.HINT]: 'hints',
-} as const;
-
-const getDiagnosticCounts = (diagnostics: monaco.editor.IMarkerData[]): DiagnosticCounts => {
-    const counts: DiagnosticCounts = { errors: 0, warnings: 0, info: 0, hints: 0 };
-    diagnostics.forEach(d => {
-        const key = SEVERITY_TO_KEY[d.severity as keyof typeof SEVERITY_TO_KEY];
-        if (key) counts[key]++;
-    });
-    return counts;
-};
-
-const getDiagnosticColor = (counts: DiagnosticCounts) =>
-    Object.entries(SEVERITY_CONFIG)
-        .find(([key]) => counts[key as SeverityKey] > 0)
-        ?.[1].color ?? 'green';
-
-const sortDiagnostics = (diagnostics: monaco.editor.IMarkerData[]) =>
-    [...diagnostics].sort((a, b) =>
-        a.startLineNumber !== b.startLineNumber
-            ? a.startLineNumber - b.startLineNumber
-            : a.startColumn - b.startColumn
-    );
-
-const getRuleId = (diagnostic: monaco.editor.IMarkerData): string | undefined => {
-    if (!diagnostic.code) return undefined;
-    if (typeof diagnostic.code === 'string') return diagnostic.code;
-    if (typeof diagnostic.code === 'object' && 'value' in diagnostic.code) {
-        return diagnostic.code.value as string;
-    }
-    console.warn('Diagnostic code is not in expected format:', diagnostic.code);
-    return undefined;
-};
+import {
+    type DiagnosticCounts,
+    getDiagnosticColor,
+    getDiagnosticCounts,
+    getRuleId,
+    getSeverityPresentation,
+    SEVERITY_CONFIG,
+    sortDiagnostics,
+} from './diagnostics/diagnostic-utils';
 
 const RuleActions = ({ diagnostic, onOpenAboutWithHash, onDisableRule }: {
     diagnostic: monaco.editor.IMarkerData;
@@ -146,8 +105,7 @@ const DiagnosticItem = ({ diagnostic, onOpenAboutWithHash, onDiagnosticClick, on
     onDiagnosticClick: (lineNumber: number, column: number) => void;
     onDisableRule: (ruleId: string) => void;
 }) => {
-    const severityKey = SEVERITY_TO_KEY[diagnostic.severity as keyof typeof SEVERITY_TO_KEY];
-    const config = severityKey ? SEVERITY_CONFIG[severityKey] : SEVERITY_CONFIG.hints;
+    const presentation = getSeverityPresentation(diagnostic);
 
     const handleClick = () => {
         onDiagnosticClick(diagnostic.startLineNumber, diagnostic.startColumn);
@@ -167,8 +125,8 @@ const DiagnosticItem = ({ diagnostic, onOpenAboutWithHash, onDiagnosticClick, on
             <VStack align="stretch" gap={3}>
                 <HStack justify="space-between" align="center">
                     <HStack gap={2}>
-                        <Badge colorPalette={config.color} variant="solid" size="sm">
-                            {config.label.endsWith('s') ? config.label.slice(0, -1) : config.label}
+                        <Badge colorPalette={presentation.color} variant="solid" size="sm">
+                            {presentation.label.endsWith('s') ? presentation.label.slice(0, -1) : presentation.label}
                         </Badge>
                         <Text fontSize="sm" color="gray.600">
                             Line {diagnostic.startLineNumber}, Column {diagnostic.startColumn}

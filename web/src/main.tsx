@@ -2,8 +2,9 @@ import { ChakraProvider, defaultSystem } from '@chakra-ui/react'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { ROUTES } from './constants/routes'
 import { Content } from './content'
-import { OverviewPage } from './pages/OverviewPage'
+import { OtherPage } from './pages/OtherPage'
 import { ReadmePage } from './pages/ReadmePage'
 
 createRoot(document.getElementById('root')!).render(
@@ -11,11 +12,11 @@ createRoot(document.getElementById('root')!).render(
     <ChakraProvider value={defaultSystem}>
       <HashRouter>
         <Routes>
-          <Route path="/" element={<Content />} />
-          <Route path="/overview" element={<OverviewPage />} />
-          <Route path="/readme" element={<ReadmePage />} />
-          <Route path="/readme/:anchor" element={<ReadmePage />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path={ROUTES.HOME} element={<Content />} />
+          <Route path={ROUTES.OTHER} element={<OtherPage />} />
+          <Route path={ROUTES.README} element={<ReadmePage />} />
+          <Route path={`${ROUTES.README}/:anchor`} element={<ReadmePage />} />
+          <Route path="*" element={<Navigate to={ROUTES.HOME} replace />} />
         </Routes>
       </HashRouter>
     </ChakraProvider>

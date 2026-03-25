@@ -5,12 +5,12 @@ import {
 import Editor, { OnMount } from '@monaco-editor/react';
 import type * as Monaco from 'monaco-editor';
 import { useEffect, useRef, useState } from 'react';
-import { LintingState } from '../types';
+import { computeEditorHeight } from './editor/editorSizing';
+import { LATEX_LANGUAGE_ID, latexMonarchTokensProvider } from './editor/latexMonarch';
 
 type EditorSectionProps = {
     text: string;
     diagnostics: Monaco.editor.IMarkerData[];
-    lintingState: LintingState;
     onTextChange: (text: string) => void;
     onEditorReady: () => void;
     onOpenAboutWithHash: (hash: string) => void;
@@ -35,10 +35,7 @@ export function EditorSection(props: EditorSectionProps) {
         const editor = editorRef.current;
         if (!editor) return;
 
-        const contentHeight = editor.getContentHeight();
-        const min = window.innerHeight * 0.5;
-        const max = window.innerHeight * 0.8;
-        const clampedHeight = Math.min(Math.max(contentHeight, min), max);
+        const clampedHeight = computeEditorHeight(editor);
         setHeight(clampedHeight);
         onHeightChange?.(clampedHeight);
     };
@@ -47,37 +44,8 @@ export function EditorSection(props: EditorSectionProps) {
         editorRef.current = editor;
         monacoRef.current = monaco;
 
-        monaco.languages.register({ id: 'latex' });
-
-        monaco.languages.setMonarchTokensProvider('latex', {
-            tokenizer: {
-                root: [
-                    [/\\[a-zA-Z@]+/, 'keyword'],
-                    [/\\[^a-zA-Z@]/, 'keyword'],
-                    [/%.*$/, 'comment'],
-                    [/\$\$/, 'string', '@display_math'],
-                    [/\$/, 'string', '@inline_math'],
-                    [/\\begin\{[^}]+\}/, 'keyword'],
-                    [/\\end\{[^}]+\}/, 'keyword'],
-                    [/\{/, 'delimiter.curly'],
-                    [/\}/, 'delimiter.curly'],
-                    [/\[/, 'delimiter.square'],
-                    [/\]/, 'delimiter.square'],
-                ],
-                inline_math: [
-                    [/[^$\\]+/, 'string'],
-                    [/\$/, 'string', '@pop'],
-                    [/\\[a-zA-Z@]+/, 'keyword'],
-                    [/\\[^a-zA-Z@]/, 'keyword'],
-                ],
-                display_math: [
-                    [/[^$\\]+/, 'string'],
-                    [/\$\$/, 'string', '@pop'],
-                    [/\\[a-zA-Z@]+/, 'keyword'],
-                    [/\\[^a-zA-Z@]/, 'keyword'],
-                ],
-            },
-        });
+        monaco.languages.register({ id: LATEX_LANGUAGE_ID });
+        monaco.languages.setMonarchTokensProvider(LATEX_LANGUAGE_ID, latexMonarchTokensProvider);
 
         monaco.editor.registerLinkOpener({
             open: (resource) => {
@@ -132,7 +100,7 @@ export function EditorSection(props: EditorSectionProps) {
                     }}
                 >
                     <Editor
-                        language="latex"
+                        language={LATEX_LANGUAGE_ID}
                         value={value}
                         onChange={(value) => { onChange(value || ''); }}
                         onMount={handleEditorDidMount}

@@ -1,16 +1,20 @@
-import { useCallback, useState } from 'react';
-import { getConfig, type LintConfig, setConfig as setGlobalConfig } from '../config';
+import { useCallback, useSyncExternalStore } from 'react';
+import {
+    getConfig,
+    type LintConfig,
+    setConfig as setGlobalConfig,
+    subscribeConfig,
+} from '../config';
 
 export function useConfig() {
-    const [, forceUpdate] = useState({});
+    const config = useSyncExternalStore(subscribeConfig, getConfig, getConfig);
 
     const updateConfig = useCallback((newConfig: LintConfig) => {
         setGlobalConfig(newConfig);
-        forceUpdate({}); // Force component re-render
     }, []);
 
     return {
-        config: getConfig(),
+        config,
         updateConfig,
     };
 }

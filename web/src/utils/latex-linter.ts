@@ -18,6 +18,13 @@ import { getConfig } from "../config";
 import * as vscode from "./vscode-mock";
 import { DiagnosticSeverity, Range } from "./vscode-mock";
 
+const VSCODE_TO_MONACO_SEVERITY: Record<number, monaco.MarkerSeverity> = {
+  0: 8,
+  1: 4,
+  2: 2,
+  3: 1,
+};
+
 // TextLint readiness state
 let isTextLintReady = false;
 let textLintPreloadPromise: Promise<void> | null = null;
@@ -42,29 +49,11 @@ export async function preloadTextLintDictionary(): Promise<void> {
 function convertToMonacoMarker(
   diag: import("vscode").Diagnostic
 ): monaco.editor.IMarkerData {
-  // Convert VS Code DiagnosticSeverity to Monaco MarkerSeverity
-  // VS Code: Error=0, Warning=1, Information=2, Hint=3
-  // Monaco: Hint=1, Info=2, Warning=4, Error=8
-  let severity: monaco.MarkerSeverity;
-  switch (diag.severity) {
-    case 0:
-      severity = 8;
-      break; // Error
-    case 1:
-      severity = 4;
-      break; // Warning
-    case 2:
-      severity = 2;
-      break; // Information
-    case 3:
-      severity = 1;
-      break; // Hint
-    default:
-      severity = 2;
-      break; // Default to Info
-  }
+  const severity =
+    VSCODE_TO_MONACO_SEVERITY[diag.severity ?? DiagnosticSeverity.Information] ??
+    2;
 
-  const code_value = String(
+  const codeValue = String(
     typeof diag.code === "object" ? diag.code.value : diag.code
   );
   let code: string | { value: string; target: monaco.Uri } = "";
@@ -75,10 +64,10 @@ function convertToMonacoMarker(
       const code_target = monaco.Uri.parse(
         `${window.location.origin}${window.location.pathname}#${hashMatch[1]}`
       );
-      code = { value: code_value, target: code_target };
+      code = { value: codeValue, target: code_target };
     }
   }
-  if (!code) code = code_value;
+  if (!code) code = codeValue;
 
   return {
     startLineNumber: diag.range.start.line + 1, // Monaco uses 1-based line numbers

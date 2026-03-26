@@ -2,6 +2,11 @@
 
 All notable changes to the "latexlint" extension will be documented in this file.
 
+## 1.7.2 - 2026-3-27
+
+- Update readme_info.json.
+- Fix bug of `LLSpaceJapanese`
+
 ## 1.7.2 - 2026-3-25
 
 - Refactor web app navigation.

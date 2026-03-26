@@ -11,6 +11,7 @@ sample/arxiv_sources
 **/**.aux
 **/**.aux
 **/**.log
+**/**.blg
 **/**.synctex.gz
 
 !sample/logs/**.log

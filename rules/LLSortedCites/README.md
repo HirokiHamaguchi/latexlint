@@ -4,6 +4,8 @@ Detect unsorted multiple citations in `.tex` files.
 
 Multiple citations like `\cite{b,a}` can be displayed as `[2,1]` instead of the sorted order `[1,2]`. This rule detects such cases and suggests adding the `sort` option to natbib or using `\usepackage{cite}`.
 
+![rules/LLSortedCites](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLSortedCites/LLSortedCites.png)
+
 This rule only applies when:
 
 1. The document uses `\usepackage[numbers]{natbib}` without `sort` option, and

@@ -124,6 +124,15 @@
 				"pdflatex"
 			]
 		},
+		{
+			"name": "pdflatex+bibtex+pdflatex*2",
+			"tools": [
+				"pdflatex",
+				"bibtex",
+				"pdflatex",
+				"pdflatex"
+			]
+		}
 	],
 	"latex-workshop.latex.tools": [
 		{
@@ -137,6 +146,13 @@
 			"command": "pdflatex",
 			"name": "pdflatex"
 		},
+		{
+			"args": [
+				"%DOCFILE%"
+			],
+			"command": "bibtex",
+			"name": "bibtex"
+		}
 	],
 	"latexlint.userDefinedRules": [
 		"f\\^a"

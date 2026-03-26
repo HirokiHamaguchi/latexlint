@@ -421,6 +421,8 @@ From Fig. 1 and Eq. (1), we can see that...
 
 `\cite{b,a}`のような複数引用は、ソート順の`[1,2]`ではなく`[2,1]`と表示されることがあります。このルールはそのようなケースを検出し、natbibに`sort`オプションを追加するか、`\usepackage{cite}`を使うことを提案します。
 
+![rules/LLSortedCites](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLSortedCites/LLSortedCites.png)
+
 このルールが適用されるのは次の場合のみです:
 
 1. ドキュメントが`sort`オプションなしの`\usepackage[numbers]{natbib}`を使用しており、

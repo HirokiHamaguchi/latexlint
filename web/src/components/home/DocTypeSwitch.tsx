@@ -7,6 +7,14 @@ type DocTypeSwitchProps = {
 };
 
 export function DocTypeSwitch({ docType, onChange }: DocTypeSwitchProps) {
+    // gap={1} in Chakra corresponds to 4px; keep in sync with HStack gap below
+    const GAP_PX = 4;
+    const indicatorWidth = `calc((100% - ${GAP_PX}px) / 2)`;
+    const indicatorTransform =
+        docType === 'latex'
+            ? 'translateX(0)'
+            : `translateX(calc(${indicatorWidth} + ${GAP_PX}px))`;
+
     return (
         <Box
             borderWidth="1px"
@@ -17,12 +25,27 @@ export function DocTypeSwitch({ docType, onChange }: DocTypeSwitchProps) {
             flexShrink={0}
             ml="auto"
         >
-            <HStack gap={1}>
+            <HStack gap={1} position="relative">
+                <Box
+                    position="absolute"
+                    insetBlock="0"
+                    insetInlineStart="0"
+                    width={indicatorWidth}
+                    borderRadius="full"
+                    bg="blue.500"
+                    transform={indicatorTransform}
+                    transition="transform 180ms ease"
+                    pointerEvents="none"
+                />
                 <Button
                     size="sm"
                     borderRadius="full"
-                    variant={docType === 'latex' ? 'solid' : 'ghost'}
-                    colorPalette={docType === 'latex' ? 'blue' : 'gray'}
+                    variant="ghost"
+                    flex="1"
+                    zIndex={1}
+                    color={docType === 'latex' ? 'white' : 'gray.700'}
+                    _hover={{ bg: 'transparent' }}
+                    _active={{ bg: 'transparent' }}
                     onClick={() => onChange('latex')}
                 >
                     LaTeX
@@ -30,8 +53,12 @@ export function DocTypeSwitch({ docType, onChange }: DocTypeSwitchProps) {
                 <Button
                     size="sm"
                     borderRadius="full"
-                    variant={docType === 'markdown' ? 'solid' : 'ghost'}
-                    colorPalette={docType === 'markdown' ? 'blue' : 'gray'}
+                    variant="ghost"
+                    flex="1"
+                    zIndex={1}
+                    color={docType === 'markdown' ? 'white' : 'gray.700'}
+                    _hover={{ bg: 'transparent' }}
+                    _active={{ bg: 'transparent' }}
                     onClick={() => onChange('markdown')}
                 >
                     Markdown

@@ -16,7 +16,6 @@
 		"source.fixAll.eslint": "explicit"
 	},
 	// Turn off tsc task auto detection since we have the necessary tasks as npm scripts
-	"typescript.tsc.autoDetect": "off",
 	"editor.formatOnSave": true,
 	"cSpell.words": [
 		"'enyi",

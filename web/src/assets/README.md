@@ -435,6 +435,12 @@ This rule only applies when:
 
 (This rule might not be accurate.)
 
+References:
+
+[Numbered ordering of multiple citations (Stack Exchange)](https://tex.stackexchange.com/questions/69230/numbered-ordering-of-multiple-citations)
+
+[Biblatex, numeric style, multicite: Order of references (Stack Exchange)](https://tex.stackexchange.com/questions/130937/biblatex-numeric-style-multicite-order-of-references)
+
 ### LLSpaceEnglish
 
 Detect the lack of space between English text and inline math in `.tex` and `.md` files.
@@ -518,9 +524,7 @@ Requiring all figures and tables to be explicitly referenced in the text may fee
 
 References:
 
-https://academia.stackexchange.com/questions/220447/is-it-normal-to-require-to-reference-all-figures-and-tables-in-the-text
-
-https://www.lib.sfu.ca/help/cite-write/citation-style-guides/apa/tables-figures
+[Is it normal to require to reference all figures and tables in the text? (Academia Stack Exchange)](https://academia.stackexchange.com/questions/220447/is-it-normal-to-require-to-reference-all-figures-and-tables-in-the-text)
 
 ### LLURL
 

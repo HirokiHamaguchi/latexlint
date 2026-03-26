@@ -37,6 +37,7 @@ def _make_readme(is_en: bool = True):
                 assert all(
                     not ref.endswith(".") or "\n\n>" in ref for ref in references
                 ), references
+                assert all(not ref.startswith("http") for ref in references), references
 
         LIST.append(f"{i}. [{rule}](#{rule.lower()}) ({description})")
 

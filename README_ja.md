@@ -430,6 +430,12 @@ From Fig. 1 and Eq. (1), we can see that...
 
 （このルールは完全でない可能性があります。）
 
+参考文献:
+
+[Numbered ordering of multiple citations (Stack Exchange)](https://tex.stackexchange.com/questions/69230/numbered-ordering-of-multiple-citations)
+
+[Biblatex, numeric style, multicite: Order of references (Stack Exchange)](https://tex.stackexchange.com/questions/130937/biblatex-numeric-style-multicite-order-of-references)
+
 ### LLSpaceEnglish
 
 `.tex`と`.md`ファイルの日本語・英語の文字とインライン数式の間の空白の不足を検出します。\
@@ -512,9 +518,7 @@ From Fig. 1 and Eq. (1), we can see that...
 
 参考文献:
 
-https://academia.stackexchange.com/questions/220447/is-it-normal-to-require-to-reference-all-figures-and-tables-in-the-text
-
-https://www.lib.sfu.ca/help/cite-write/citation-style-guides/apa/tables-figures
+[Is it normal to require to reference all figures and tables in the text? (Academia Stack Exchange)](https://academia.stackexchange.com/questions/220447/is-it-normal-to-require-to-reference-all-figures-and-tables-in-the-text)
 
 ### LLURL
 

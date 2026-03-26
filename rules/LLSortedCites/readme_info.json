@@ -1,5 +1,5 @@
 {
   "description": "detect unsorted cites",
   "description_ja": "ソートされていない引用を検出",
-  "references": []
+  "references": ["[Numbered ordering of multiple citations (Stack Exchange)](https://tex.stackexchange.com/questions/69230/numbered-ordering-of-multiple-citations)", "[Biblatex, numeric style, multicite: Order of references (Stack Exchange)](https://tex.stackexchange.com/questions/130937/biblatex-numeric-style-multicite-order-of-references)"]
 }

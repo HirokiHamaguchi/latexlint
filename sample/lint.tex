@@ -646,11 +646,13 @@ No detection when token is not between letters:  1$x$, 1\(x\), $x$1, \(x\)1, $x$
 The following are Japanese examples, which are excluded by rule exceptions.
 
 \begin{CJK}{UTF8}{ipxm}
-	日本語の文章で$x=1$と数式を書くと、スペースが欠如します。
+	日本語の文章で$x=1$もしくは\(y=2\)と数式を書くと、スペースが欠如します。
 
-	日本語の文章で $x=1$ と数式を書くと、スペースが生まれます。
+	日本語の文章で $x=1$ もしくは \(y=2\) と数式を書くと、スペースが生まれます。
 
 	尤も、フォーマルな文章では非推奨な場合もあり、その為デフォルトでは無効です。
+
+	テスト:これは大丈夫。
 \end{CJK}
 
 \section{LLT}

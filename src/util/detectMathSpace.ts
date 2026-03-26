@@ -6,7 +6,7 @@ export default function detectMathSpace(doc: vscode.TextDocument, txt: LLText): 
     const ranges: vscode.Range[] = [];
     const text = txt.text;
 
-    const SPACE_REGEX = /(?:[\$(?:\\\))][ぁ-んァ-ヶｱ-ﾝﾞﾟ一-龠ー])|(?:[ぁ-んァ-ヶｱ-ﾝﾞﾟ一-龠ー][\$(?:\\\()])/gu;
+    const SPACE_REGEX = /(?:\\[()]|\$)[ぁ-んァ-ヶｱ-ﾝﾞﾟ一-龠ー]|[ぁ-んァ-ヶｱ-ﾝﾞﾟ一-龠ー](?:\\[()]|\$)/gu;
     const re = new RegExp(SPACE_REGEX.source, SPACE_REGEX.flags);
     const matches: RegExpMatchArray[] = [...text.matchAll(re)];
 

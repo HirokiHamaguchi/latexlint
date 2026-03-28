@@ -6,7 +6,9 @@
     "https://www.kurims.kyoto-u.ac.jp/~gokun/machigai.html",
     "https://www.nhk.or.jp/bunken/research/kotoba/20230901_5.html",
     "https://www.nhk.or.jp/bunken/research/kotoba/20240101_4.html",
-    "https://www.sankei.com/article/20190331-S5JDHEJOGRODPOFGYVMADY24AI/"
+    "https://www.sankei.com/article/20190331-S5JDHEJOGRODPOFGYVMADY24AI/",
+    "https://www.merriam-webster.com/dictionary/et%20al.",
+    "https://salon.mainichi-kotoba.jp/archives/95"
   ],
   "entries": [
     {
@@ -123,6 +125,41 @@
         "回導関数"
       ],
       "memo": "明確に誤りとされる表現ではないかも知れませんが、一般的には「二階導関数」などと表現されることが多く、Wikipediaの見出し語もそうなっています。同様に、「2回微分する」と動詞的に用いるか「二階微分可能である」と名詞的に用いるかなどで、表記が異なることもあります。"
+    },
+    {
+      "yes": "et al.",
+      "no": [
+        "et. al."
+      ],
+      "memo": "The first period is incorrect. The correct form is \"et al.\" which comes from the Latin phrase \"et alii\", \"et aliae\", or \"et alia\" meaning \"and others.\""
+    },
+    {
+      "yes": "YouTube",
+      "no": [
+        "Youtube",
+        "youTube"
+      ],
+      "memo": "The correct capitalization is \"YouTube\" with a capital 'Y' and 'T'."
+    },
+    {
+      "yes": "GitHub",
+      "no": [
+        "Github",
+        "gitHub"
+      ],
+      "memo": "The correct capitalization is \"GitHub\" with a capital 'G' and 'H'."
+    },
+    {
+      "yes": "VS Code",
+      "no": [
+        "VScode",
+        "VS code",
+        "VsCode",
+        "Vs Code",
+        "Vscode",
+        "Vs code"
+      ],
+      "memo": "The correct capitalization is \"VS Code\" with a capital 'V', 'S', and 'C'."
     }
   ]
 }

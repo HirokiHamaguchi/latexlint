@@ -21,6 +21,7 @@ export default function LLENDash(
     const words = match[0].split("-");
     if (words.every((word) => wordSet.has(word.toLowerCase()))) continue;
     if (words.some((word) => word.length === 1)) continue;
+    if (!txt.isValid(match.index)) continue;
     if (isLabelOrURL(txt.text, match)) continue;
 
     // Check if this is likely a person's name (e.g., "Tim Berners-Lee")

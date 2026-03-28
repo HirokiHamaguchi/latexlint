@@ -2,7 +2,14 @@
 
 All notable changes to the "latexlint" extension will be documented in this file.
 
-## 1.7.2 - 2026-3-27
+## 1.7.4 - 2026-3-28
+
+- Add LLErrCompOps rule to detect incorrect comparison operator usage in LaTeX and Markdown files.
+- Update Japanese example in LLSpaceJapanese rule for clarity.
+- Add vocabulary entries and correct capitalization rules.
+- Fix validation of match index in LLENDash function.
+
+## 1.7.3 - 2026-3-27
 
 - Update readme_info.json.
 - Fix bug of `LLSpaceJapanese`

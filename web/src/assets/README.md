@@ -41,25 +41,26 @@ Here is the list of rules we detect.
 12. [LLDoubleQuotes](#lldoublequotes) (detect `"`)
 13. [LLENDash](#llendash) (detect the dubious use of `-`(hyphen))
 14. [LLEqnarray](#lleqnarray) (detect `eqnarray` environment)
-15. [LLFootnote](#llfootnote) (detect space before `\footnote`)
-16. [LLHeading](#llheading) (detect heading level jumps)
-17. [LLLlGg](#llllgg) (detect `<<` and `>>`)
-18. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters)
-19. [LLNonstandard](#llnonstandard) (detect nonstandard mathematical notations)
-20. [LLPeriod](#llperiod) (detect abbreviation periods in LaTeX)
-21. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
-22. [LLSharp](#llsharp) (detect `\sharp` likely to be a misuse of `\#`)
-23. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
-24. [LLSortedCites](#llsortedcites) (detect unsorted cites)
-25. [LLSpaceEnglish](#llspaceenglish) (detect the lack of space for English)
-26. [LLSpaceJapanese](#llspacejapanese) (detect the lack of space for Japanese, disabled by default)
-27. [LLT](#llt) (detect `^T`, disabled by default)
-28. [LLTextLint](#lltextlint) (part of textlint features)
-29. [LLThousands](#llthousands) (detect `1,000` etc.)
-30. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
-31. [LLUnRef](#llunref) (detect unreferenced figure and table labels)
-32. [LLURL](#llurl) (detect unnecessary info in URLs)
-33. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
+15. [LLErrCompOps](#llerrcompops) (detect incorrect comparison operator orders)
+16. [LLFootnote](#llfootnote) (detect space before `\footnote`)
+17. [LLHeading](#llheading) (detect heading level jumps)
+18. [LLLlGg](#llllgg) (detect `<<` and `>>`)
+19. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters)
+20. [LLNonstandard](#llnonstandard) (detect nonstandard mathematical notations)
+21. [LLPeriod](#llperiod) (detect abbreviation periods in LaTeX)
+22. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
+23. [LLSharp](#llsharp) (detect `\sharp` likely to be a misuse of `\#`)
+24. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
+25. [LLSortedCites](#llsortedcites) (detect unsorted cites)
+26. [LLSpaceEnglish](#llspaceenglish) (detect the lack of space for English)
+27. [LLSpaceJapanese](#llspacejapanese) (detect the lack of space for Japanese, disabled by default)
+28. [LLT](#llt) (detect `^T`, disabled by default)
+29. [LLTextLint](#lltextlint) (part of textlint features)
+30. [LLThousands](#llthousands) (detect `1,000` etc.)
+31. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
+32. [LLUnRef](#llunref) (detect unreferenced figure and table labels)
+33. [LLURL](#llurl) (detect unnecessary info in URLs)
+34. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
 
 Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
@@ -229,6 +230,16 @@ It is known that the `eqnarray` environment is not recommended because it has so
 References:
 
 [Why not use eqnarray? (TeX FAQ)](https://texfaq.org/FAQ-eqnarray)
+
+### LLErrCompOps
+
+Detect suspected typographical errors in the sequence of comparison operators in `.tex` and `.md` files.
+
+The target of detection includes `<=`, `\\le =`, `\\leq =`, etc.
+
+![rules/LLErrCompOps](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLErrCompOps/LLErrCompOps.png)
+
+In markdown files, `<=` and `=>` are ignored.
 
 ### LLFootnote
 

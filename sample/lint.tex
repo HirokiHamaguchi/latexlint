@@ -476,6 +476,33 @@ We should not use eqnarray. It has some spacing issues.
 	a & = & b
 \end{eqnarray*}
 
+\section{LLErrCompOps}
+
+\begin{gather*}
+	x \leq y \quad
+	x \geq y \quad
+	x = y \quad
+	\text{\tA{ok}} \\
+	x <= y \quad
+	x < = y \quad
+	x =< y \quad
+	x = < y \quad
+	x \le = y \quad
+	x = \le y \quad
+	x \leq = y \quad
+	x = \leq y \quad
+	\text{\tD{ng}} \\
+	x => y \quad
+	x = > y \quad
+	x >= y \quad
+	x > = y \quad
+	x \ge = y \quad
+	x = \ge y \quad
+	x \geq = y \quad
+	x = \geq y \quad
+	\text{\tD{ng}}
+\end{gather*}
+
 \section{LLFootnote}
 
 \subsection{Bad Examples}
@@ -652,7 +679,7 @@ The following are Japanese examples, which are excluded by rule exceptions.
 
 	尤も、フォーマルな文章では非推奨な場合もあり、その為デフォルトでは無効です。
 
-	テスト:これは大丈夫。
+	テスト:これは大丈夫。テスト(これは大丈夫)。
 \end{CJK}
 
 \section{LLT}

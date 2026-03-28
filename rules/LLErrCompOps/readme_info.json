@@ -1,0 +1,5 @@
+{
+  "description": "detect incorrect comparison operator orders",
+  "description_ja": "誤った比較演算子の並びを検出",
+  "references": []
+}

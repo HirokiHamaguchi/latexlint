@@ -1,0 +1,57 @@
+[CODE] LLErrCompOps (8)
+- file: sample\arxiv_sources\2308.07921v1\iclr2023_conference.tex (line 285)
+  error: <=
+  message: These comparison operators seem to be incorrect.
+   284: product = gcd * lcm\\
+>  285: pairs = [(d, product // d) for d in sp.divisors(product) if d $<=$ product // d]\\
+   286: min\_pair = min(pairs, key=sum)\\
+
+- file: sample\arxiv_sources\2501.04519v1\appendix.tex (line 293)
+  error: >=
+  message: These comparison operators seem to be incorrect.
+   292: 		\# \textbf{\textcolor{teal}{Step 4: Use the AM-GM inequality to find the minimum value of a}}\\
+>  293: 	    \# By AM-GM, (r1*r2 + r2*r3 + r3*r1) / 3 >= (r1*r2*r3)$^{(2/3)}$\\
+   294: 		\# Substituting the known values:\\
+
+- file: sample\arxiv_sources\2501.04519v1\appendix.tex (line 295)
+  error: >=
+  message: These comparison operators seem to be incorrect.
+   294: 		\# Substituting the known values:\\
+>  295: 		\# a / 3 >= (-1)$^{(2/3)}$\\
+   296: 		\# a / 3 >= 1\\
+
+- file: sample\arxiv_sources\2501.04519v1\appendix.tex (line 296)
+  error: >=
+  message: These comparison operators seem to be incorrect.
+   295: 		\# a / 3 >= (-1)$^{(2/3)}$\\
+>  296: 		\# a / 3 >= 1\\
+   297: 		\# a >= 3\\
+
+- file: sample\arxiv_sources\2501.04519v1\appendix.tex (line 297)
+  error: >=
+  message: These comparison operators seem to be incorrect.
+   296: 		\# a / 3 >= 1\\
+>  297: 		\# a >= 3\\
+   298: 		\textcolor{ora}{<end\_of\_step>} \textit{\textcolor{teal}{[PPM Score: \bf0.9999]}}\\
+
+- file: sample\submodules\OpenLogic\content\normal-modal-logic\frame-definability\first-order-definability.tex (line 65)
+  error: = <
+  message: These comparison operators seem to be incorrect.
+    64: such that $!A_k$ is in the subset, $\Domain{M_k} = \{1, \dots, k\}$,
+>   65: $\Assign{a_i}{M_k} = i$, and $\Assign{Q}{M_k} = <$. Since $<$ on $\{1,
+    66: \dots, k\}$ is transitive and converse well-founded,
+
+- file: sample\submodules\coursebook\introc\language_facilities.tex (line 586)
+  error: <=
+  message: These comparison operators seem to be incorrect.
+   585:     Note that shifting by the word size (e.g. by 64 in a 64-bit architecture) results in undefined behavior.
+>  586: 	\item \keyword{<=/>=} are the greater than equal to/less than equal to, relational operators.
+   587:     They work as their name implies.
+
+- file: sample\submodules\coursebook\introc\language_facilities.tex (line 586)
+  error: >=
+  message: These comparison operators seem to be incorrect.
+   585:     Note that shifting by the word size (e.g. by 64 in a 64-bit architecture) results in undefined behavior.
+>  586: 	\item \keyword{<=/>=} are the greater than equal to/less than equal to, relational operators.
+   587:     They work as their name implies.
+

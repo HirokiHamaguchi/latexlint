@@ -14,6 +14,7 @@ import LLCref from '../LL/LLCref';
 import LLDoubleQuotes from '../LL/LLDoubleQuotes';
 import LLENDash from '../LL/LLENDash';
 import LLEqnarray from '../LL/LLEqnarray';
+import LLErrCompOps from '../LL/LLErrCompOps';
 import LLFootnote from '../LL/LLFootnote';
 import LLHeading from '../LL/LLHeading';
 import LLLlGg from '../LL/LLLlGg';
@@ -53,6 +54,7 @@ export const standardRules: Record<string, StandardRuleFunction> = {
     LLDoubleQuotes,
     LLENDash,
     LLEqnarray,
+    LLErrCompOps,
     LLFootnote,
     LLHeading,
     LLLlGg,

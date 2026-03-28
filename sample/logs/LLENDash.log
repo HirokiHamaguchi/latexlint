@@ -1,4 +1,4 @@
-[CODE] LLENDash (304)
+[CODE] LLENDash (262)
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 455)
   error: Shannon-Kolmogorov-Sinai
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -33,13 +33,6 @@
    119:  $\phi_0(\nu'_0)(A)=0$. Thus $\phi_0(\nu'_0)\ll\phi_0(\mu)$.  Hence, by Lemma 2 (ii) in \cite{Wer3}, $\Phi(\nu'_0)\ll\Phi(\mu)$. 
 >  120: It is a well know fact that for any positive shift-invariant Borel measures $\Lambda$ and $M$,  absolute continuity relation $\Lambda\ll M$ implies that $E_{M}(1_{_1[e]}|\mathcal{F})=E_{\Lambda}(1_{_1[e]}|\mathcal{F})$ $\Lambda$-a.e. (as  the shift-invariance of the measures implies that  $d\Lambda/dM \circ S =  d\Lambda/dM$ $M$-a.e., where  $d\Lambda/dM$ is the Radon-Nikodym derivative, which in turn implies that $E_{M}(d\Lambda/dM|\mathcal{F}) \circ S = E_{M}(d\Lambda/dM|\mathcal{F})$ $M$-a.e., and this implies the fact). Therefore, 
    121: \[E_{\Phi\left(\nu'_0\right)}\left(1_{_1[e]}|\mathcal{F}\right) = E_{\Phi\left(\mu\right)}\left(1_{_1[e]}|\mathcal{F}\right)\ \ \  \Phi(\nu'_0)\mbox{-a.e.}.\] 
-
-- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 378)
-  error: Fourier-Stieltjes
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   377: %42B20   	Singular and oscillatory integrals (Caldern-Zygmund, etc.)
->  378: %42A38   	Fourier and Fourier-Stieltjes transforms and other transforms of Fourier type
-   379: %03C64   	Model theory of ordered structures; o-minimality
 
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 661)
   error: Fourier-Plancherel
@@ -272,13 +265,6 @@
 > 1622: is motivated by a similar idea in order to map from one Crouzeix-Raviart
   1623: space into its intersection with a finer one. 
 
-- file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1691)
-  error: Scott-Zhang
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-  1690:     %   The claim holds for all $\elm\in\gridk$ and thus the properties of
-> 1691:     %   Scott-Zhang interpolation apply, i.e. in the third case of (3.3) the identity
-  1692:     %   is only guaranteed, if
-
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 1711)
   error: Scott-Zhang
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -355,13 +341,6 @@
     54: % \title[short text for running head]{full title}
 >   55: \title[VW Floer Homology, Langlands Correspondence and Categories]{Vafa-Witten Theory: Invariants, Floer Homologies, \\
     56: Higgs Bundles, a Geometric Langlands Correspondence,\\
-
-- file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 65)
-  error: Zhi-Cong
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-    64: 
->   65: %\author{Zhi-Cong~Ong}
-    66: %\address{Department of Physics\\
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 73)
   error: Meng-Chwan
@@ -664,27 +643,6 @@
 >  668: \caption{A novel web of mathematical relations stemming from Vafa-Witten theory that also involves higher categories.}
    669: \label{fig:equimath - cat}
 
-- file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 716)
-  error: Mathai-Quillen
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   715: 
->  716: \bibitem [LL97]{LL97} J.M.F. Labastida, and C. Lozano, \textit{Mathai-Quillen formulation of twisted $\mathcal N= 4$ supersymmetric gauge theories in four dimensions}, Nuclear Physics B 502, no. 3, 1997, 741-790.
-   717: 
-
-- file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 721)
-  error: Vafa-Witten
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   720: 
->  721: \bibitem [OT22]{OT22} Z.-C. Ong, M.-C. Tan. \textit{Vafa-Witten Theory: Invariants, Floer Homologies, Higgs Bundles, a Geometric Langlands Correspondence, and Categorification}, arXiv:2203.17115.
-   722: 
-
-- file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 729)
-  error: Vafa-Witten
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   728: 
->  729: \bibitem[TT17]{TT17} Y. Tanaka and R.P. Thomas. \textit{Vafa-Witten invariants for projective surfaces I: stable case}, J. Algebraic Geom. 29 (2020), 603-668. arXiv:1702.08487.
-   730: 
-
 - file: sample\arxiv_sources\2306.00482v1\acl2023.tex (line 833)
   error: Boyd-Graber
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -733,20 +691,6 @@
    362: MetaMath-\textbf{InternLM2-Math-Base-20B} & \textbf{80.7} & \textbf{36.1} \\
 >  363: MetaMath-Llemma-34B * & 75.8 & 34.8 \\
    364: % MetaMath-DeepSeek-67B * & 82.8 & 36.8 \\
-
-- file: sample\arxiv_sources\2402.06332v2\main.tex (line 364)
-  error: MetaMath-DeepSeek
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   363: MetaMath-Llemma-34B * & 75.8 & 34.8 \\
->  364: % MetaMath-DeepSeek-67B * & 82.8 & 36.8 \\
-   365: % MetaMath-Llama2-70B $\dagger$ & 82.3 & 26.6  \\
-
-- file: sample\arxiv_sources\2402.06332v2\main.tex (line 365)
-  error: MetaMath-Llama
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   364: % MetaMath-DeepSeek-67B * & 82.8 & 36.8 \\
->  365: % MetaMath-Llama2-70B $\dagger$ & 82.3 & 26.6  \\
-   366: \bottomrule
 
 - file: sample\arxiv_sources\2402.06332v2\main.tex (line 383)
   error: Code-Llama
@@ -803,48 +747,6 @@
    578: MathCODER-CL-7B \citep{wang2023mathcoder} & 67.8 & 30.2 \\
 >  579: DeepSeek-Coder-Instruct-1.5-7B \citep{guo2024deepseekcoder} & 72.6 & 34.1 \\
    580: ToRA-7B \citep{gou2023tora} & 72.6 & 44.6 \\
-
-- file: sample\arxiv_sources\2402.06332v2\main.tex (line 722)
-  error: MathBench-Acc
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   721: \toprule
->  722: % Ablations & GSM8K & MathBench-Acc. & MathBench-CirAcc. & MathBench-CirAcc.\& cloze & MathBench-arith \& cloze \\
-   723: Benchmarks & MATH & GSM8K\\ %& \multicolumn{4}{c}{MathBench} \\
-
-- file: sample\arxiv_sources\2402.06332v2\main.tex (line 722)
-  error: MathBench-CirAcc
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   721: \toprule
->  722: % Ablations & GSM8K & MathBench-Acc. & MathBench-CirAcc. & MathBench-CirAcc.\& cloze & MathBench-arith \& cloze \\
-   723: Benchmarks & MATH & GSM8K\\ %& \multicolumn{4}{c}{MathBench} \\
-
-- file: sample\arxiv_sources\2402.06332v2\main.tex (line 722)
-  error: MathBench-CirAcc
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   721: \toprule
->  722: % Ablations & GSM8K & MathBench-Acc. & MathBench-CirAcc. & MathBench-CirAcc.\& cloze & MathBench-arith \& cloze \\
-   723: Benchmarks & MATH & GSM8K\\ %& \multicolumn{4}{c}{MathBench} \\
-
-- file: sample\arxiv_sources\2402.06332v2\main.tex (line 775)
-  error: MathBench-Acc
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   774: \toprule
->  775: % Ablations & GSM8K & MathBench-Acc. & MathBench-CirAcc. & MathBench-CirAcc.\& cloze & MathBench-arith \& cloze \\
-   776: Difficulty level & Results correct & Process correct\\ %& \multicolumn{4}{c}{MathBench} \\
-
-- file: sample\arxiv_sources\2402.06332v2\main.tex (line 775)
-  error: MathBench-CirAcc
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   774: \toprule
->  775: % Ablations & GSM8K & MathBench-Acc. & MathBench-CirAcc. & MathBench-CirAcc.\& cloze & MathBench-arith \& cloze \\
-   776: Difficulty level & Results correct & Process correct\\ %& \multicolumn{4}{c}{MathBench} \\
-
-- file: sample\arxiv_sources\2402.06332v2\main.tex (line 775)
-  error: MathBench-CirAcc
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   774: \toprule
->  775: % Ablations & GSM8K & MathBench-Acc. & MathBench-CirAcc. & MathBench-CirAcc.\& cloze & MathBench-arith \& cloze \\
-   776: Difficulty level & Results correct & Process correct\\ %& \multicolumn{4}{c}{MathBench} \\
 
 - file: sample\arxiv_sources\2402.06332v2\main.tex (line 878)
   error: MathLib-Train
@@ -937,61 +839,12 @@
 >  261: The Xwin-Math models perform well on the GSM8K benchmark but fall
    262: behind \model~(Prop2Diff) on other challenging benchmarks overall,
 
-- file: sample\arxiv_sources\2407.13690v2\exp.tex (line 485)
-  error: Olympiad-Math
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   484: % following out-of-domain evaluation benchmarks: the English
->  485: % competition subset of OlympiadBench (abbreviated as Olympiad-Math
-   486: % below)~\citep{he2024olympiadbench},
-
-- file: sample\arxiv_sources\2407.13690v2\intro.tex (line 266)
-  error: OlympiadBench-Math
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   265: % representative mathematical reasoning benchmarks, i.e. MATH as
->  266: % in-domain, and CollegeMath, OlympiadBench-Math, GSM8K as
-   267: % out-of-domain, and plot the scaling curves against the number of
-
-- file: sample\arxiv_sources\2407.13690v2\intro.tex (line 322)
-  error: DeepMind-Mathematics
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   321: % widely-used mathematical reasoning benchmarks, i.e.
->  322: % DeepMind-Mathematics, GSM-Plus, SVAMP, NumGLUE, which form a
-   323: % comprehensive evaluation suite.
-
-- file: sample\arxiv_sources\2407.13690v2\intro.tex (line 340)
-  error: DeepSeekMath-Instruct
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   339: % for math-domain-specific base LLMs, compared with
->  340: % DeepSeekMath-Instruct using 776k samples, \model-DSMath-7B based on
-   341: % DeepSeekMath-7B improves from 46.90\% to 53.53\% on MATH, even
-
-- file: sample\arxiv_sources\2407.13690v2\intro.tex (line 347)
-  error: OlympiadBench-Math
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   346: % surpassing GPT-4(0314) with 24.4\%. \model-DSMath-7B achieves
->  347: % 21.78\% on OlympiadBench-Math, surpassing DeepSeekMath-7B-RL with 18.22\%.
-   348: 
-
-- file: sample\arxiv_sources\2407.13690v2\intro.tex (line 467)
-  error: Mixtral-Instruct
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   466: % cost-effectiveness advantage. \shortplus consistently surpasses
->  467: % official instruction models like Mixtral-Instruct on chat
-   468: % benchmarks. These results demonstrate the effectiveness of our
-
 - file: sample\arxiv_sources\2407.13690v2\main_results.tex (line 32)
   error: Xwin-Math
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
     31:       \multicolumn{10}{c}{\textbf{70B General Base Model}} \\
 >   32:       Llama2-70B-Xwin-Math-V1.1$^\dagger$
     33:       & 1.4M  & 52.5                  & 90.2                  & 33.1
-
-- file: sample\arxiv_sources\2407.13690v2\main_results.tex (line 36)
-  error: KPMath-Plus
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-    35:       & 44.2                  \\
->   36:       % Llama2-70B-KPMath-Plus
-    37:       %      & 1.6M  & 48.6                  & 87.4
 
 - file: sample\arxiv_sources\2407.13690v2\main_results.tex (line 80)
   error: KPMath-Plus
@@ -1041,13 +894,6 @@
    186:     checkpoints and evaluate ourselves using their official CoT prompt.
 >  187:     $^\dagger$: For Xwin-Math, we take the best public models that
    188:     are based on Llama2~\citep{touvron2023llama}, which is not a very
-
-- file: sample\arxiv_sources\2407.13690v2\neurips_2024.tex (line 134)
-  error: Pareto-Optimal
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   133: 
->  134: % \title{\method: \fullmethod as Pareto-Optimal Strategies for Data
-   135: % Difficulty Distribution in Instruction Tuning}
 
 - file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 368)
   error: Distill-Qwen
@@ -1210,13 +1056,6 @@
 >   47: \title{SBI-RAG: Enhancing Math Word Problem Solving for Students through Schema-Based Instruction and Retrieval-Augmented Generation}
     48: 
 
-- file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 99)
-  error: Retrieval-Augmented
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-    98: \vspace{-3mm}
->   99: % Students often struggle with math word problems (MWPs) because they do not know how to approach the problem or where to begin. According to a survey by the EdWeek Research Center, roughly 50\% of students can read the problem but cannot understand the mathematical question being asked. Even when they grasp the math concepts involved, they may find it difficult to identify key information and choose the appropriate mathematical operation to solve the problem. Schema-based instruction (SBI) is a well-established, evidence-based strategy that helps students categorize word problems based on their underlying structure or schema, enabling them to better identify relevant information and apply the correct mathematical operations.Building on this foundation, we propose a Schema-Based Retrieval-Augmented Generation (RAG) framework, incorporating a large language model (LLM). Our approach not only focuses on the correctness of solving the problem but also emphasizes step-by-step reasoning by identifying the underlying structure and generating detailed solutions. We evaluate the performance of our approach from an educational perspective on the GSM8K dataset by comparing it against responses generated by other large language models, including GPT-4 and GPT -3.5. We introduce a new method called the "reasoning score" metric to assess the quality of solutions and employ an LLM-as-a-Judge method to evaluate the generated responses. Our findings suggest that schema-based RAG improves problem-solving accuracy and reasoning clarity, offering educational benefits and providing a robust solution to the challenges students face in MWPs.
-   100: 
-
 - file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 101)
   error: Retrieval-Augmented
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -1224,40 +1063,12 @@
 >  101: Many students struggle with math word problems (MWPs), often finding it difficult to identify key information and select the appropriate mathematical operations. Schema-based instruction (SBI) is an evidence-based strategy that helps students categorize problems based on their structure, improving problem-solving accuracy. Building on this, we propose a Schema-Based Instruction Retrieval-Augmented Generation (SBI-RAG) framework that incorporates a large language model (LLM). Our approach emphasizes step-by-step reasoning by leveraging schemas to guide solution generation. We evaluate its performance on the GSM8K dataset, comparing it with GPT-4 and GPT-3.5 Turbo, and introduce a "reasoning score" metric to assess solution quality. Our findings suggest that SBI-RAG enhances reasoning clarity and facilitates a more structured problem-solving process
    102: %problem-solving accuracy,
 
-- file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 117)
-  error: Retrieval-Augmented
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   116: 
->  117: % In this paper, we propose a Schema-Based Retrieval-Augmented Generation (RAG) framework incorporating a Large Language Model (LLM) to assist in solving math word problems (MWPs). Our system first utilizes a schema classifier, trained on DistilBERT, to predict the appropriate schema \( S_i \) for a given problem \( P \). The identified schema is then used to generate a schema-specific prompt, which retrieves relevant context from a pre-defined document set. The retrieved context, schema, and problem are passed to an LLM (Ollama Llama 3.1), which generates a detailed, step-by-step solution.
-   118: 
-
-- file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 135)
-  error: Retrieval-Augmented
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   134: 
->  135: %{Retrieval-Augmented Generation (RAG)} \cite{lewis2021retrievalaugmentedgenerationknowledgeintensivenlp} combines the generation capabilities of LLMs with a retrieval mechanism to fetch relevant documents from external knowledge sources. This ensures responses are grounded in factual context. The original RAG framework by Lewis et al. \cite{lewis2021retrievalaugmentedgenerationknowledgeintensivenlp} showed that combining retrieval with generation leads to more accurate, contextually informed answers, especially for fact-based tasks. RAG has been used across domains like question answering, medical diagnosis, and conversational agents \cite{izacard2020leveraging}. However, its application to education, particularly MWPs, remains underexplored. This presents an opportunity to enhance RAG by integrating schema-based instructional approaches for more structured problem-solving.
-   136: 
-
 - file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 138)
   error: Retrieval-Augmented
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
    137: 
 >  138: In this paper, we propose a Schema-Based Instruction Retrieval-Augmented Generation (SBI-RAG) framework incorporating a Large Language Model (LLM) to assist in solving MWPs. Our system first utilizes a schema classifier, trained on DistilBERT \cite{sanh2020distilbertdistilledversionbert}, to predict the appropriate schema \( S_i \) for a given problem \( P \). The identified schema is then used to generate a schema-specific prompt, which retrieves relevant context from a pre-defined document set. The retrieved context, schema, and problem are passed to an LLM (Ollama Llama 3.1), which generates a detailed, step-by-step solution.
    139: 
-
-- file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 153)
-  error: Retrieval-Augmented
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   152: 
->  153: %     \item We introduce a structured prompt generation method that incorporates the predicted schema and sub-category, combined with a Retrieval-Augmented Generation (RAG) framework. This approach retrieves relevant context, guiding the large language model (LLM) to apply schema-specific reasoning in solving problems.
-   154: 
-
-- file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 167)
-  error: Retrieval-Augmented
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   166: 
->  167: % In recent years, with the advent of Generative AI and  Large Language Models (LLMs) into tutoring systems has further expanded the potential for personalized learning. Retrieval-Augmented Generation (RAG) systems have been successfully employed across various industries for querying closed-domain and in-house knowledge bases, enabling precise and contextually relevant responses. However, in the domain of mathematics education, particularly for MWPs, limited research has focused on combining schema-based approaches with RAG and LLMs to directly enhance students' problem-solving abilities.
-   168: 
 
 - file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 223)
   error: Retrieval-Augmented
@@ -1279,55 +1090,6 @@
    301: 
 >  302: In conclusion, we proposed a Schema-Based Retrieval-Augmented Generation framework that enhances reasoning and understanding in solving math word problems. Our approach, combining schema-based instruction with large language models, outperformed existing LLM responses in quality and step-by-step reasoning. This framework provides a strong foundation for improving problem-solving in education, with future work focused on refining the system with user feedback. Additionally, this work could have applications in enhancing the reasoning capabilities of LLMs themselves.
    303: 
-
-- file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 317)
-  error: Herbert-Voss
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   316: \bibitem{brown2020languagemodelsfewshotlearners}
->  317: Tom~B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel~M. Ziegler, Jeffrey Wu, Clemens Winter, Christopher Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei.
-   318: \newblock Language models are few-shot learners, 2020.
-
-- file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 321)
-  error: Kuo-En
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   320: \bibitem{chang2006computer}
->  321: Kuo-En Chang, Yao-Ting Sung, and Shiu-Feng Lin.
-   322: \newblock Computer-assisted learning for mathematical problem solving.
-
-- file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 321)
-  error: Yao-Ting
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   320: \bibitem{chang2006computer}
->  321: Kuo-En Chang, Yao-Ting Sung, and Shiu-Feng Lin.
-   322: \newblock Computer-assisted learning for mathematical problem solving.
-
-- file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 321)
-  error: Shiu-Feng
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   320: \bibitem{chang2006computer}
->  321: Kuo-En Chang, Yao-Ting Sung, and Shiu-Feng Lin.
-   322: \newblock Computer-assisted learning for mathematical problem solving.
-
-- file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 350)
-  error: Wiemer-Hastings
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   349: \bibitem{graesser1999autotutor}
->  350: Arthur~C Graesser, Katja Wiemer-Hastings, Peter Wiemer-Hastings, Roger Kreuz, Tutoring~Research Group, et~al.
-   351: \newblock Autotutor: A simulation of a human tutor.
-
-- file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 360)
-  error: He-Yueya
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   359: \bibitem{he2023solving}
->  360: Joy He-Yueya, Gabriel Poesia, Rose~E Wang, and Noah~D Goodman.
-   361: \newblock Solving math word problems by combining language models with symbolic solvers.
-
-- file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 428)
-  error: Jean-Baptiste
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   427: \bibitem{team2023gemini}
->  428: Gemini Team, Rohan Anil, Sebastian Borgeaud, Yonghui Wu, Jean-Baptiste Alayrac, Jiahui Yu, Radu Soricut, Johan Schalkwyk, Andrew~M Dai, Anja Hauth, et~al.
-   429: \newblock Gemini: a family of highly capable multimodal models.
 
 - file: sample\arxiv_sources\2501.04519v1\appendix.tex (line 22)
   error: DeepSeek-Coder
@@ -1546,13 +1308,6 @@
 >10249: Then, by using two of the estimates above, namley $f\geq 1$, and Cauchy-Schwarz,
  10250: $$g(a,b,c)=\frac{a^2+b^2+c^2}{ab+bc+ca}\; f(a,b,c)^2 > \frac{a^2+b^2+c^2}{ab+bc+ca}\geq 1.$$
 
-- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10589)
-  error: Abel-Dirichlet
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
- 10588: 
->10589: %alternating series $e^{-x}\sum_{n=1}^N \frac{(-1)^{n-1}}{n} e^{-(n-1)x}$ by $2e^{-x}$ again(Abel-Dirichlet)
- 10590: \begin{eqnarray*}
-
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10694)
   error: Euler-MacLaurin
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -1602,20 +1357,6 @@
 >14809: If $p$ is a polynomial, we have (due to Cauchy-Schwarz)
  14810: $$\left|\int_0^1 f''p dx\right|^2\leq \left(\int_0^1 (f'')^2dx\right) \left(\int_0^1 p^2dx\right).$$
 
-- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 15508)
-  error: Springer-Birkh
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
- 15507: {\sl Classical Analysis in the Complex Plane},
->15508: Springer-Birkh\"auser, New-York, 2021.
- 15509: 
-
-- file: sample\arxiv_sources\2502.17387v1\main.tex (line 291)
-  error: Orca-Math
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   290: % -- cn_k12
->  291: % -- Orca-Math
-   292: % -- olypmiads
-
 - file: sample\arxiv_sources\2502.17387v1\main.tex (line 365)
   error: Orca-Math
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -1630,33 +1371,12 @@
 >  459:         Orca-Math & 1 \\
    460:         \bottomrule
 
-- file: sample\arxiv_sources\2502.17387v1\main.tex (line 580)
-  error: Orca-Math
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   579:     \begin{text_full}{Example Problem: Operations Research}
->  580:     % Source: Orca-Math\\
-   581:     Question: A book was sold at a profit of 12\%. Had it been sold for \$18 more, a profit of 18\% would have been gained. What is the cost price of the book?\\
-
 - file: sample\arxiv_sources\2502.17387v1\main.tex (line 647)
   error: Orca-Math
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
    646: % -- GSM8k and orca-math are similar (known because they're both grade-school math
 >  647: The most obvious grouping that we see is GSM8k and Orca-Math on the left side of the figure. This is no surprise as they are both composed of grade-school math problems.
    648: % -- Omni-MATH, aops_forum, MATH are generally in the same area
-
-- file: sample\arxiv_sources\2502.17387v1\main.tex (line 674)
-  error: Orca-Math
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   673: 
->  674: % -- Similarly for the Multi-part filter, we find that the regex catches significantly more data than the model, suggesting that this is a good place to look for filter improvement (in particular, R finds 14,000 more in Orca-Math, 6,500 in olympiads, 2,700 in MATH).
-   675: \subsubsection{Multi-Part Filter}
-
-- file: sample\arxiv_sources\2502.17387v1\main.tex (line 690)
-  error: Orca-Math
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   689: %     \item \bigmath~compared to other commonly used math datasets
->  690: %     \item 40.7\% of final data is from synthetic source (Orca-Math) remainder is human-written but mostly scraped.
-   691: %     \item ``Diversity'' of data in our dataset vs. the diversity in each subset or other existing datasets.
 
 - file: sample\arxiv_sources\2502.17387v1\main.tex (line 802)
   error: Orca-Math
@@ -1721,13 +1441,6 @@
 >   52: \author{\textbf{Peijie Wang$^{1,2}$, Zhong-Zhi Li$^{1,2}$, Fei Yin$^{1,2}$, Xin Yang$^{1,2}$, Dekang Ran$^{1,2}$, Cheng-Lin Liu$^{1,2}$\thanks{Corresponding author}}\\
     53: MAIS, Institute of Automation of Chinese Academy of Sciences$^{1}$\\
 
-- file: sample\arxiv_sources\2504.04313v2\main.tex (line 559)
-  error: Dahan-Dalmedico
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   558: \textit{Modern Mathematics: Does it Exist?}, 
->  559: in: A. Dahan-Dalmedico et al. (eds.), \textit{Modern Mathematics: A Survey}, Cambridge University Press, 1985.
-   560: 
-
 - file: sample\arxiv_sources\2507.20527v3\appendix.tex (line 372)
   error: Olympiad-Level
   message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
@@ -1783,13 +1496,6 @@
   1175:     points)\\
 > 1176:      \# Erdos-Anning Theorem
   1177:      \# De Bruijn–Erdős theorem (projective plane version)
-
-- file: sample\arxiv_sources\2508.15096v1\iclr2025_conference.tex (line 223)
-  error: MegaMath-Web
-  message: If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around "-".
-   222: \paragraph{Datasets} We compare \dataset to existing prior math pretraining datasets, including Megamath, OWM, and FineMath. Table~\ref{tab:comp_math_pretraining} summarizes the dataset statistics.
->  223: %Specifically, \datasetmid is compared to FineMath-3+, and MegaMath-Web; % InfiMM-WebMath-3+, InfiMM-WebMath-4+,
-   224: 
 
 - file: sample\arxiv_sources\2508.15096v1\iclr2025_conference.tex (line 236)
   error: MegaMath-Web

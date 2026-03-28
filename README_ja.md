@@ -37,25 +37,26 @@ LaTeX Lintは、`.tex`および`.md`ファイル用のLaTeXリンターです。
 12. [LLDoubleQuotes](#lldoublequotes) (`"`を検出)
 13. [LLENDash](#llendash) (疑わしい`-`(ハイフン)の使用を検出)
 14. [LLEqnarray](#lleqnarray) (`eqnarray`環境を検出)
-15. [LLFootnote](#llfootnote) (`\footnote`の前の空白を検出)
-16. [LLHeading](#llheading) (見出しレベルのジャンプを検出)
-17. [LLLlGg](#llllgg) (`<<`と`>>`を検出)
-18. [LLNonASCII](#llnonascii) (全角ASCII文字を検出)
-19. [LLNonstandard](#llnonstandard) (非標準的な数学記号を検出)
-20. [LLPeriod](#llperiod) (LaTeX中の略語ピリオドを検出)
-21. [LLRefEq](#llrefeq) (`\ref{eq:`を検出)
-22. [LLSharp](#llsharp) (`\#`の誤用とおぼしき`\sharp`を検出)
-23. [LLSI](#llsi) (`\SI`なしの`KB`、`MB`、`GB`などを検出)
-24. [LLSortedCites](#llsortedcites) (ソートされていない引用を検出)
-25. [LLSpaceEnglish](#llspaceenglish) (英語での空白の不足を検出)
-26. [LLSpaceJapanese](#llspacejapanese) (日本語での空白の不足を検出 (デフォルトで無効))
-27. [LLT](#llt) (`^T`を検出 (デフォルトで無効))
-28. [LLTextLint](#lltextlint) (textlintの一部機能)
-29. [LLThousands](#llthousands) (`1,000`などを検出)
-30. [LLTitle](#lltitle) (`\title{}`、`\section{}`などでの疑わしいタイトルケースを検出)
-31. [LLUnRef](#llunref) (参照されていない図表ラベルを検出)
-32. [LLURL](#llurl) (URLの不要な情報を検出)
-33. [LLUserDefined](#lluserdefined) (`latexlint.userDefinedRules`内の正規表現を検出)
+15. [LLErrCompOps](#llerrcompops) (誤った比較演算子の並びを検出)
+16. [LLFootnote](#llfootnote) (`\footnote`の前の空白を検出)
+17. [LLHeading](#llheading) (見出しレベルのジャンプを検出)
+18. [LLLlGg](#llllgg) (`<<`と`>>`を検出)
+19. [LLNonASCII](#llnonascii) (全角ASCII文字を検出)
+20. [LLNonstandard](#llnonstandard) (非標準的な数学記号を検出)
+21. [LLPeriod](#llperiod) (LaTeX中の略語ピリオドを検出)
+22. [LLRefEq](#llrefeq) (`\ref{eq:`を検出)
+23. [LLSharp](#llsharp) (`\#`の誤用とおぼしき`\sharp`を検出)
+24. [LLSI](#llsi) (`\SI`なしの`KB`、`MB`、`GB`などを検出)
+25. [LLSortedCites](#llsortedcites) (ソートされていない引用を検出)
+26. [LLSpaceEnglish](#llspaceenglish) (英語での空白の不足を検出)
+27. [LLSpaceJapanese](#llspacejapanese) (日本語での空白の不足を検出 (デフォルトで無効))
+28. [LLT](#llt) (`^T`を検出 (デフォルトで無効))
+29. [LLTextLint](#lltextlint) (textlintの一部機能)
+30. [LLThousands](#llthousands) (`1,000`などを検出)
+31. [LLTitle](#lltitle) (`\title{}`、`\section{}`などでの疑わしいタイトルケースを検出)
+32. [LLUnRef](#llunref) (参照されていない図表ラベルを検出)
+33. [LLURL](#llurl) (URLの不要な情報を検出)
+34. [LLUserDefined](#lluserdefined) (`latexlint.userDefinedRules`内の正規表現を検出)
 
 必要に応じて、[sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf)も参照してください。
 
@@ -225,6 +226,16 @@ LaTeX Lintは、`.tex`および`.md`ファイル用のLaTeXリンターです。
 参考文献:
 
 [Why not use eqnarray? (TeX FAQ)](https://texfaq.org/FAQ-eqnarray)
+
+### LLErrCompOps
+
+`.tex` と `.md` ファイルで、誤植と思われる比較演算子の並びを検出します。
+
+`<=`, `\\le =`, `\\leq =`などが検出の対象です。
+
+![rules/LLErrCompOps](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLErrCompOps/LLErrCompOps.png)
+
+Markdown では `<=` と `=>` は検出しません。
 
 ### LLFootnote
 

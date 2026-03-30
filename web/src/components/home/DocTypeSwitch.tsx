@@ -7,8 +7,14 @@ type DocTypeSwitchProps = {
 };
 
 export function DocTypeSwitch({ docType, onChange }: DocTypeSwitchProps) {
+    const toggleDocType = () => {
+        onChange(docType === 'latex' ? 'markdown' : 'latex');
+    };
+
     return (
-        <Box
+        <Button
+            type="button"
+            aria-label={`Current document type: ${docType}. Click to switch.`}
             borderWidth="1px"
             borderColor="gray.200"
             borderRadius="full"
@@ -16,27 +22,40 @@ export function DocTypeSwitch({ docType, onChange }: DocTypeSwitchProps) {
             p={1}
             flexShrink={0}
             ml="auto"
+            onClick={toggleDocType}
+            cursor="pointer"
+            variant="plain"
+            h="auto"
+            minW="auto"
+            _hover={{ bg: 'gray.50' }}
+            _active={{ bg: 'gray.100' }}
         >
-            <HStack gap={1}>
-                <Button
-                    size="sm"
+            <HStack gap={1} pointerEvents="none">
+                <Box
+                    px={3}
+                    py={1.5}
                     borderRadius="full"
-                    variant={docType === 'latex' ? 'solid' : 'ghost'}
-                    colorPalette={docType === 'latex' ? 'blue' : 'gray'}
-                    onClick={() => onChange('latex')}
+                    fontSize="sm"
+                    fontWeight="medium"
+                    bg={docType === 'latex' ? '#2563eb' : 'transparent'}
+                    color={docType === 'latex' ? 'white' : 'gray.700'}
+                    transition="background-color 0.3s, color 0.3s"
                 >
                     LaTeX
-                </Button>
-                <Button
-                    size="sm"
+                </Box>
+                <Box
+                    px={3}
+                    py={1.5}
                     borderRadius="full"
-                    variant={docType === 'markdown' ? 'solid' : 'ghost'}
-                    colorPalette={docType === 'markdown' ? 'blue' : 'gray'}
-                    onClick={() => onChange('markdown')}
+                    fontSize="sm"
+                    fontWeight="medium"
+                    bg={docType === 'markdown' ? '#2563eb' : 'transparent'}
+                    color={docType === 'markdown' ? 'white' : 'gray.700'}
+                    transition="background-color 0.3s, color 0.3s"
                 >
                     Markdown
-                </Button>
+                </Box>
             </HStack>
-        </Box>
+        </Button>
     );
 }

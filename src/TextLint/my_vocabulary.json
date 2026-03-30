@@ -160,6 +160,13 @@
         "Vs code"
       ],
       "memo": "The correct capitalization is \"VS Code\" with a capital 'V', 'S', and 'C'."
+    },
+    {
+      "yes": "LaTeX",
+      "no": [
+        "Latex"
+      ],
+      "memo": "The correct capitalization is \"LaTeX\" with a capital 'L', 'T', and 'X'."
     }
   ]
 }

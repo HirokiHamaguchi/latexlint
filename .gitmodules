@@ -44,5 +44,5 @@
 	path = sample/submodules/coursebook
 	url = https://github.com/cs341-illinois/coursebook.git
 [submodule "latexcheck"]
-	path = latexcheck
+	path = submodules/latexcheck
 	url = https://github.com/dainiak/latexcheck.git

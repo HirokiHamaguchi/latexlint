@@ -2,6 +2,11 @@
 
 All notable changes to the "latexlint" extension will be documented in this file.
 
+## 1.7.5 - 2026-4-3
+
+- Update diagnostic messages to clarify the intent of the rules.
+- Change severities of some rules from `WARN` to `INFO`.
+
 ## 1.7.4 - 2026-3-28
 
 - Add LLErrCompOps rule to detect incorrect comparison operator usage in LaTeX and Markdown files.

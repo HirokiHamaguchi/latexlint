@@ -1,5 +1,5 @@
 {
-  "message": "Consider using %1 instead of %2.",
+  "message": "Consider using %1 instead of %2. %1 is more appropriate in this context and different from %2.",
   "severity": "WARN",
   "lint_test_count": 2
 }

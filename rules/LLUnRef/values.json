@@ -1,5 +1,5 @@
 {
-    "message": "Label \"%1\" is defined but never referenced.",
-    "severity": "WARN",
+    "message": "The label \"%1\" is defined but unused in this file (possibly elsewhere).",
+    "severity": "INFO",
     "lint_test_count": 1
 }

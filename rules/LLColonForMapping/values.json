@@ -1,5 +1,5 @@
 {
-  "message": "If this : is for a mapping, consider using \\\\colon.",
+  "message": "If this : is for a mapping, consider using \\\\colon instead. It is often used for ratios, and spacing around : is different from \\\\colon.",
   "severity": "WARN",
   "lint_test_count": 8
 }

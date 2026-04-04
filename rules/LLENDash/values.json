@@ -1,5 +1,5 @@
 {
-  "message": "If these are names, consider using en-dash (--). Otherwise, register as an exception or add a space around \"-\".",
-  "severity": "WARN",
+  "message": "If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.",
+  "severity": "INFO",
   "lint_test_count": 6
 }

@@ -1,5 +1,5 @@
 {
-  "message": "For single-line equations, use the equation environment instead of align-like environments.",
-  "severity": "WARN",
+  "message": "For a single-line equation, the align-like environment can cause extra spacing. Consider using the equation environment instead.",
+  "severity": "INFO",
   "lint_test_count": 3
 }

@@ -1,5 +1,5 @@
 {
-  "message": "Consider using \"%1{,}%2\" instead of \"%1,%2\".",
+  "message": "Consider using \"%1{,}%2\" instead of \"%1,%2\". This can help avoid spacing issues and improve readability.",
   "severity": "WARN",
   "lint_test_count": 1
 }

@@ -172,5 +172,11 @@
 	"[tex]": {
 		"editor.insertSpaces": false,
 		"editor.detectIndentation": false
+	},
+	"chat.tools.terminal.autoApprove": {
+		"/^uv run script/main\\.py$/": {
+			"approve": true,
+			"matchCommandLine": true
+		}
 	}
 }

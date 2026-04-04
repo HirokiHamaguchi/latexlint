@@ -1,4 +1,5 @@
 import Markdown from 'react-markdown';
+import { Link as RouterLink } from 'react-router-dom';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 import remarkSlug from 'remark-slug';
@@ -15,6 +16,13 @@ export function ReadmeMarkdown({ content }: ReadmeMarkdownProps) {
             remarkPlugins={[remarkGfm, remarkSlug]}
             rehypePlugins={[rehypeRaw]}
             components={{
+                a: ({ href, children, ...props }) => {
+                    if (href?.startsWith('#')) {
+                        return <RouterLink {...props} to={`/readme/${href.slice(1)}`}>{children}</RouterLink>;
+                    }
+
+                    return <a {...props} href={href}>{children}</a>;
+                },
                 img: ({ src, ...props }) => {
                     const resolvedSrc = src?.startsWith('http') ? src : `${GITHUB_RAW_BASE}${src}`;
                     if ('width' in props) return <img {...props} src={resolvedSrc} />;

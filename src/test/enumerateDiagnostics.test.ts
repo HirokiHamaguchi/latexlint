@@ -43,13 +43,13 @@ async function testLLTextTex() {
     positions.push([line, char]);
   }
   assert.deepStrictEqual(positions, [
-    [16, 2],
-    [17, 9],
-    [18, 15],
-    [19, 4],
-    [20, 6],
-    [39, 1],
-    [43, 1],
+    [17, 2],
+    [18, 9],
+    [19, 18],
+    [20, 5],
+    [21, 7],
+    [39, 2],
+    [43, 2],
   ]);
 }
 

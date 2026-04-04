@@ -1,4 +1,4 @@
-[CODE] LLENDash (551)
+[CODE] LLENDash (548)
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 455)
   error: Shannon-Kolmogorov-Sinai
   message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
@@ -642,20 +642,6 @@
    667: \end{tikzcd}
 >  668: \caption{A novel web of mathematical relations stemming from Vafa-Witten theory that also involves higher categories.}
    669: \label{fig:equimath - cat}
-
-- file: sample\arxiv_sources\2306.00482v1\acl2023.tex (line 833)
-  error: Boyd-Graber
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-   832: \section*{Acknowledgements}
->  833: This document has been adapted by Jordan Boyd-Graber, Naoaki Okazaki, Anna Rogers from the style files used for earlier ACL, EMNLP and NAACL proceedings, including those for
-   834: EACL 2023 by Isabelle Augenstein and Andreas Vlachos,
-
-- file: sample\arxiv_sources\2306.00482v1\acl2023.tex (line 844)
-  error: Jing-Shin
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-   843: ACL 2012 by Maggie Li and Michael White, 
->  844: ACL 2010 by Jing-Shin Chang and Philipp Koehn, 
-   845: ACL 2008 by Johanna D. Moore, Simone Teufel, James Allan, and Sadaoki Furui, 
 
 - file: sample\arxiv_sources\2310.09590v2\Pseudo-Dual.tex (line 69)
   error: See-Kiong
@@ -1370,13 +1356,6 @@
    458:         MATH & 48 \\
 >  459:         Orca-Math & 1 \\
    460:         \bottomrule
-
-- file: sample\arxiv_sources\2502.17387v1\main.tex (line 647)
-  error: Orca-Math
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-   646: % -- GSM8k and orca-math are similar (known because they're both grade-school math
->  647: The most obvious grouping that we see is GSM8k and Orca-Math on the left side of the figure. This is no surprise as they are both composed of grade-school math problems.
-   648: % -- Omni-MATH, aops_forum, MATH are generally in the same area
 
 - file: sample\arxiv_sources\2502.17387v1\main.tex (line 802)
   error: Orca-Math

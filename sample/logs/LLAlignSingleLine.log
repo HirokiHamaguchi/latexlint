@@ -1,4 +1,4 @@
-[CODE] LLAlignSingleLine (882)
+[CODE] LLAlignSingleLine (881)
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 568)
   error: \begin{align}
   message: For a single-line equation, the align-like environment can cause extra spacing. Consider using the equation environment instead.
@@ -4156,13 +4156,6 @@
    851: In the hard-constrained approximation $z_{\mathrm{aux}}=u$ (equivalently $\tau\to 0$), this reduces to inference in $(u,z_{\mathrm{rec}})$ with log-posterior
 >  852: \begin{align}
    853:   \log p(u,z_{\mathrm{rec}} \mid y)
-
-- file: sample\arxiv_sources\2604.02304v1\main.tex (line 1566)
-  error: \begin{align}
-  message: For a single-line equation, the align-like environment can cause extra spacing. Consider using the equation environment instead.
-  1565: The posterior over $(u,z_{\mathrm{rec}})$ has density
-> 1566: \begin{align}
-  1567:   \log p(u,z_{\mathrm{rec}} \mid y)
 
 - file: sample\arxiv_sources\2604.02306v1\Exp_Sums_Multi_GL.tex (line 2634)
   error: \begin{aligned}

@@ -6,6 +6,7 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 - Update diagnostic messages to clarify the intent of the rules.
 - Change severities of some rules from `WARN` to `INFO`.
+- Improve LaTeX invalid range detection for conditional blocks: treat `\if0`/`\iffalse` regions as disabled ranges while also tracking `\if1`/`\iftrue` to consume matching `\fi` and reduce pairing mismatches.
 
 ## 1.7.4 - 2026-3-28
 

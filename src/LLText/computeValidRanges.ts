@@ -31,6 +31,12 @@ function computeLaTeXInvalidRanges(
     "thebibliography",
   ];
 
+  // First, detect \if0 / \iffalse ... \fi ranges independently and treat them
+  // as top-priority invalid ranges.
+  // We intentionally use a simple approximation: from \if0 or \iffalse to the
+  // next \fi. This may over-ignore content because LaTeX has many other
+  // conditionals (\ifx, etc.) and complete pairing is complex.
+  // After that, detect the following patterns only outside those ranges:
   // verbsBegin: \\\\begin\\{${env}[*]?\\}
   // verbsEnd: \\\\end\\{${env}[*]?\\}
   // verbsInline: \verb (ただし、その直後の1文字が[a-zA-Z]でない場合に限る)
@@ -54,6 +60,10 @@ function computeLaTeXInvalidRanges(
     env?: string; // for verbsBegin and verbsEnd
   }
 
+  const ifFalseRanges = mergeRanges(computeIfFalseInvalidRanges(text));
+  const isInsideIfFalseRange = (index: number): boolean =>
+    ifFalseRanges.some(([start, end]) => start <= index && index < end);
+
   const patterns: Pattern[] = [];
 
   // Detect all patterns
@@ -64,26 +74,30 @@ function computeLaTeXInvalidRanges(
 
     let match;
     while ((match = beginRegex.exec(text)) !== null)
-      patterns.push({ type: "verbsBegin", index: match.index, env });
+      if (!isInsideIfFalseRange(match.index))
+        patterns.push({ type: "verbsBegin", index: match.index, env });
     while ((match = endRegex.exec(text)) !== null)
-      patterns.push({ type: "verbsEnd", index: match.index, env });
+      if (!isInsideIfFalseRange(match.index))
+        patterns.push({ type: "verbsEnd", index: match.index, env });
   }
 
   // verbsInline: \verb
   const verbRegex = /\\verb(?![a-zA-Z])/g;
   let match;
   while ((match = verbRegex.exec(text)) !== null)
-    patterns.push({ type: "verbsInline", index: match.index });
+    if (!isInsideIfFalseRange(match.index))
+      patterns.push({ type: "verbsInline", index: match.index });
 
   // comments: %
   const commentRegex = /%/g;
   while ((match = commentRegex.exec(text)) !== null)
-    patterns.push({ type: "comment", index: match.index });
+    if (!isInsideIfFalseRange(match.index))
+      patterns.push({ type: "comment", index: match.index });
 
   // Sort patterns by index
   patterns.sort((a, b) => a.index - b.index);
 
-  const invalidRanges: [number, number][] = [...verbatimRanges];
+  const invalidRanges: [number, number][] = [...verbatimRanges, ...ifFalseRanges];
   let i = 0;
 
   while (i < patterns.length) {
@@ -178,11 +192,57 @@ function computeLaTeXInvalidRanges(
         patterns.splice(j, 1);
 
       i++;
-    } // verbsEnd without matching verbsBegin - skip
+    } // standalone verbsEnd without matching opener - skip
     else i++;
   }
 
   return invalidRanges;
+}
+
+function computeIfFalseInvalidRanges(text: string): [number, number][] {
+  const ifFalseBeginRegex = /\\if0(?![a-zA-Z])|\\iffalse(?![a-zA-Z])/g;
+  const ifTrueBeginRegex = /\\if1(?![a-zA-Z])|\\iftrue(?![a-zA-Z])/g;
+  const ifEndRegex = /\\fi(?![a-zA-Z])/g;
+
+  interface IfToken {
+    type: "ifFalseBegin" | "ifTrueBegin" | "ifEnd";
+    index: number;
+  }
+
+  const tokens: IfToken[] = [];
+  let match;
+
+  while ((match = ifFalseBeginRegex.exec(text)) !== null)
+    tokens.push({ type: "ifFalseBegin", index: match.index });
+  while ((match = ifTrueBeginRegex.exec(text)) !== null)
+    tokens.push({ type: "ifTrueBegin", index: match.index });
+  while ((match = ifEndRegex.exec(text)) !== null)
+    tokens.push({ type: "ifEnd", index: match.index });
+
+  tokens.sort((a, b) => a.index - b.index);
+
+  // Track only \\if0, \\iffalse, \\if1, \\iftrue and \\fi.
+  // Other LaTeX if-commands (e.g. \\ifx) are intentionally not tracked.
+  // This is an approximation, but consuming \\fi for true branches reduces
+  // incorrect pairing for disabled branches.
+  const stack: Array<{ type: "ifFalseBegin" | "ifTrueBegin"; index: number }> = [];
+
+  const ranges: [number, number][] = [];
+
+  for (const token of tokens) {
+    if (token.type === "ifFalseBegin" || token.type === "ifTrueBegin") {
+      stack.push({ type: token.type, index: token.index });
+      continue;
+    }
+
+    // token.type === "ifEnd"
+    const beginToken = stack.pop();
+    if (!beginToken) continue;
+    if (beginToken.type === "ifFalseBegin")
+      ranges.push([beginToken.index, token.index + 3]); // "\\fi".length = 3
+  }
+
+  return ranges;
 }
 
 function computeMarkdownCodeBlockRanges(text: string): [number, number][] {

@@ -1,4 +1,4 @@
-[CODE] LLUnRef (276)
+[CODE] LLUnRef (272)
 - file: sample\arxiv_sources\1609.03457v1\tables_for-avail-engines-chapter.tex (line 12)
   error: \label{table:Web-available-main}
   message: The label "table:Web-available-main" is defined but unused in this file (possibly elsewhere).
@@ -1762,34 +1762,6 @@
   1332:   latent dimensions.}
 > 1333: \label{fig:source_traces}
   1334: \end{figure}
-
-- file: sample\arxiv_sources\2604.02304v1\main.tex (line 1582)
-  error: \label{fig:El-PDE_Post}
-  message: The label "fig:El-PDE_Post" is defined but unused in this file (possibly elsewhere).
-  1581:     \caption{Posterior samples for the elliptic PDE inverse problem.}
-> 1582:     \label{fig:El-PDE_Post}
-  1583: \end{figure}
-
-- file: sample\arxiv_sources\2604.02304v1\main.tex (line 1589)
-  error: \label{fig:El-PDE_Marginal}
-  message: The label "fig:El-PDE_Marginal" is defined but unused in this file (possibly elsewhere).
-  1588:     \caption{Marginal posterior distributions for the auxiliary variables.}
-> 1589:     \label{fig:El-PDE_Marginal}
-  1590: \end{figure}
-
-- file: sample\arxiv_sources\2604.02304v1\main.tex (line 1969)
-  error: \label{fig:posteriors}
-  message: The label "fig:posteriors" is defined but unused in this file (possibly elsewhere).
-  1968: sparse observation regime (34 sensors, $\sigma_\mathrm{noise}=0.50$).}
-> 1969: \label{fig:posteriors}
-  1970: \end{figure}
-
-- file: sample\arxiv_sources\2604.02304v1\main.tex (line 1982)
-  error: \label{fig:traces}
-  message: The label "fig:traces" is defined but unused in this file (possibly elsewhere).
-  1981: the correct values for all four dimensions.}
-> 1982: \label{fig:traces}
-  1983: \end{figure}
 
 - file: sample\arxiv_sources\2604.02320v1\datascale.tex (line 20)
   error: \label{tab:datascale}

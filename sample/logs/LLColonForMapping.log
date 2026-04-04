@@ -1,4 +1,4 @@
-[CODE] LLColonForMapping (264)
+[CODE] LLColonForMapping (263)
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 440)
   error: :
   message: If this : is for a mapping, consider using \colon instead. It is often used for ratios, and spacing around : is different from \colon.
@@ -1559,13 +1559,6 @@
     87: 
 >   88: Let $x \in \mathbb{R}^p$ denote an unknown high-dimensional parameter or field, and let $y \in \mathbb{R}^m$ denote data. Given a forward model $\mathcal{F} : \mathbb{R}^p \to \mathbb{R}^m$ and a noise model $p_\varepsilon$, the likelihood is $p(y \mid x) \propto p_\varepsilon\bigl(y - \mathcal{F}(x)\bigr)$. A prior $p(x)$ summarizes knowledge about $x$ before observing $y$. Bayes' rule then yields the posterior, $p(x \mid y) \propto p(y \mid x)\,p(x)$.
     89: 
-
-- file: sample\arxiv_sources\2604.02304v1\main.tex (line 1595)
-  error: :
-  message: If this : is for a mapping, consider using \colon instead. It is often used for ratios, and spacing around : is different from \colon.
-  1594: 
-> 1595: Consider a Bayesian neural network (BNN) with parameters $\theta$ (weights and biases) defining a function $f_\theta:\mathcal{X}\to\mathbb{R}^d$ and a likelihood $p(\mathcal{D}\mid \theta)$. In many applications of BNNs, $\theta$ is non-physical: there is no direct interpretation of an individual weight, and the parameterization is ambiguous in the sense that large sets of distinct parameter values may yield the similar functions.
-  1596: 
 
 - file: sample\arxiv_sources\2604.02306v1\Exp_Sums_Multi_GL.tex (line 214)
   error: :

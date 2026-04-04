@@ -1,4 +1,4 @@
-[CODE] LLColonEqq (1067)
+[CODE] LLColonEqq (1066)
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 111)
   error: :=
   message: Consider using \coloneqq instead of :=. \coloneqq is more appropriate in this context and different from :=.
@@ -7250,13 +7250,6 @@
    939: \begin{equation}
 >  940:   \Phi(x;\,y) \;:=\; \frac{1}{2\sigma^2}\,\|y - M\,T(x)\|_2^2.
    941:   \label{eq:nll}
-
-- file: sample\arxiv_sources\2604.02304v1\main.tex (line 2229)
-  error: :=
-  message: Consider using \coloneqq instead of :=. \coloneqq is more appropriate in this context and different from :=.
-  2228: \begin{equation}
-> 2229:   \Phi(x;y) := \frac{1}{2\sigma^2}\|y - M\,T(x)\|_2^2.
-  2230:   \label{eq:heat2d_nll}
 
 - file: sample\arxiv_sources\2604.02306v1\Exp_Sums_Multi_GL.tex (line 214)
   error: :=

@@ -1,4 +1,4 @@
-[CODE] LLPeriod (327)
+[CODE] LLPeriod (323)
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 112)
   error: i.e. 
   message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
@@ -398,13 +398,6 @@
 >  416: A possible different teaching sequence would be to start from problems: give the students some problems, which once mathematized turn out into solving a second degree polynomial. Some of the problems should be aesily solvable (i.e. lead to an equation of the form $x^2=d$ or $x^2+bx=0$), some should lead to a complete equation with no vanishing terms. The students will find by themselves how to solve the simpler ones, and maybe will even give a try to the more difficult ones. Guided by the teacher, working in groups, they may rediscover themselves the formula (maybe by completing the square) and teach it to other groups. A discover made by themselves, while trying to solve a problem and effectively experiencing the hardness of the problem and the sense of joy that comes with the solution, will leave the students something more than just a formula to blindly apply. Most of all, it will leave them with the sense of doing math.
    417: 
 
-- file: sample\arxiv_sources\2306.00482v1\acl2023.tex (line 784)
-  error: e.g. 
-  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
-   783: You can use the command \verb|\citep| (cite in parentheses) to get ``(author, year)'' citations \citep{Gusfield:97}.
->  784: You can use the command \verb|\citealp| (alternative cite without parentheses) to get ``author, year'' citations, which is useful for using citations within parentheses (e.g. \citealp{Gusfield:97}).
-   785: 
-
 - file: sample\arxiv_sources\2307.16112v1\2-related-work.tex (line 4)
   error: e.g. 
   message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
@@ -496,13 +489,6 @@
 >  308:         that would yield results that are out of range (e.g. negative
    309:         error rates).
 
-- file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 329)
-  error: i.e. 
-  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
-   328:     A question needs to satisfy all the above criteria to be valid. Further, we provide the model with two types of exemplars to facilitate this step. Firstly, we give the model the reference examples for each skill. Secondly, we also give the model a set of 6 question validation outputs which are manually annotated with human feedback on how the model performed while validating a given question. These validation outputs are not human crafted but instead were extracted from the output of older iterations of the validation prompt. We use majority voting (maj @ 4) \citep{wang2023selfconsistency} to increase the robustness of the validation step.
->  329:     \item \textbf{Final Solution and Re-validation.} If the question is classified as valid in Step 4, we ask GPT-4 / Claude to (re-)solve the question to get a final solution. The reference examples for both the skills are provided in-context to improve the model's understanding of the skills. We use majority voting (maj @ 4) to improve the model's performance. Additionally, we investigate the final answer obtained by the model in all 4 trials. If all the answers obtained are unique (i.e. if no single answer has a majority), we discard the question since it hints at the possibility of some ambiguity in the question which was not detected in the validation step.
-   330: 
-
 - file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 838)
   error: i.e. 
   message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
@@ -531,13 +517,6 @@
 > 1367: I am going to use these two skills for framing a new question such that the question requires an expertise in both the skills in order to be solved, i.e. the question will compose these two skills. However, I do not want the two skills to be very similar, i.e., they should not mean the same thing. Go through the descriptions of the skills carefully. Based on your understanding of the skills, can you please tell me whether the two skills are essentially entirely the same or not? Think step by step and give a detailed explanation of your answer. The answer should begin with a prefix '\# EXPLANATION
   1368: '. Note that your understanding of the skills should not be restricted to the sample questions provided previously. They are just example questions. Use your own prior knowledge as well. End your response with a 'Yes' or 'No' answer to whether the skills are similar or not. This final answer should be on a new line and preceded by the prefix '\# FINAL ANSWER
 
-- file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 1942)
-  error: i.e. 
-  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
-  1941:     A question needs to satisfy all the above criteria to be valid. Further, we provide the model with two types of exemplars to facilitate this step. Firstly, we give the model the reference examples for each skill. Secondly, we also give the model a set of 6 question validation outputs which are manually annotated with human feedback on how the model performed while validating a given question. These validation outputs are not human crafted but instead were extracted from the output of older iterations of the validation prompt. We use majority voting (maj @ 4) \citep{wang2023selfconsistency} to increase the robustness of the validation step.
-> 1942:     \item \textbf{Final Solution and Re-validation.} If the question is classified as valid in Step 4, we ask GPT-4 / Claude to (re-)solve the question to get a final solution. The reference examples for both the skills are provided in-context to improve the model's understanding of the skills. We use majority voting (maj @ 4) to improve the model's performance. Additionally, we investigate the final answer obtained by the model in all 4 trials. If all the answers obtained are unique (i.e. if no single answer has a majority), we discard the question since it hints at the possibility of some ambiguity in the question which was not detected in the validation step.
-  1943: 
-
 - file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 2448)
   error: i.e. 
   message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
@@ -565,13 +544,6 @@
   2976: 
 > 2977: I am going to use these two skills for framing a new question such that the question requires an expertise in both the skills in order to be solved, i.e. the question will compose these two skills. However, I do not want the two skills to be very similar, i.e., they should not mean the same thing. Go through the descriptions of the skills carefully. Based on your understanding of the skills, can you please tell me whether the two skills are essentially entirely the same or not? Think step by step and give a detailed explanation of your answer. The answer should begin with a prefix '\# EXPLANATION
   2978: '. Note that your understanding of the skills should not be restricted to the sample questions provided previously. They are just example questions. Use your own prior knowledge as well. End your response with a 'Yes' or 'No' answer to whether the skills are similar or not. This final answer should be on a new line and preceded by the prefix '\# FINAL ANSWER
-
-- file: sample\arxiv_sources\2407.21009v4\example_paper.tex (line 323)
-  error: i.e. 
-  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
-   322:     A question needs to satisfy all the above criteria to be valid. Further, we provide the model with two types of exemplars to facilitate this step. Firstly, we give the model the reference examples for each skill. Secondly, we also give the model a set of 6 question validation outputs which are manually annotated with human feedback on how the model performed while validating a given question. These validation outputs are not human crafted but instead were extracted from the output of older iterations of the validation prompt. We use majority voting (maj @ 4) \citep{wang2023selfconsistency} to increase the robustness of the validation step.
->  323:     \item \textbf{Final Solution and Re-validation.} If the question is classified as valid in Step 4, we ask GPT-4 / Claude to (re-)solve the question to get a final solution. The reference examples for both the skills are provided in-context to improve the model's understanding of the skills. We use majority voting (maj @ 4) to improve the model's performance. Additionally, we investigate the final answer obtained by the model in all 4 trials. If all the answers obtained are unique (i.e. if no single answer has a majority), we discard the question since it hints at the possibility of some ambiguity in the question which was not detected in the validation step.
-   324: 
 
 - file: sample\arxiv_sources\2407.21009v4\example_paper.tex (line 829)
   error: i.e. 

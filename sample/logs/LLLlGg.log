@@ -1,4 +1,4 @@
-[CODE] LLLlGg (4)
+[CODE] LLLlGg (12)
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 597)
   error: <<
   message: Consider using \ll instead of <<.
@@ -26,4 +26,60 @@
    603:      (ii)
 >  604:       Clearly, it follows from the hypothesis that $P^0_x<<\phi_0(\nu'_0)$ for all $x\in K_i$ and $i\in S$. Therefore, $\phi_0(\mu)<<\phi_0(\nu'_0)$. Hence, by Lemma \ref{pomm}(i),  $\Phi(\mu)<<\Phi(\nu'_0)$.
    605:       Since, by (i), $\Phi(\mu)(\Sigma) > 0$, the claim follows.
+
+- file: sample\arxiv_sources\2604.02106v1\implementation_serial_comp.tex (line 192)
+  error: >>
+  message: Consider using \gg instead of >>.
+   191: // tracking a kernel's grid dimension and arguments
+>  192: tuple<Kernel, vector<ET>, vector<ET>> kernelInfo;
+   193: vector<Value> allocVars;                 // allocations
+
+- file: sample\arxiv_sources\2604.02163v1\manuscript.tex (line 53)
+  error: <<
+  message: Consider using \ll instead of <<.
+    52: \end{equation}  
+>   53:  Note that the quasi-one-dimensional regime is obtained by taking $\omega<<\omega_{\perp}$ and considering mean-field energy much smaller than transverse confinement energy. Under this condition, the transverse distribution of the condensate is described by $\exp\left[\frac{-\left(y^{2}+z^{2} \right) }{2l_{\perp}} \right]/\left(l_{\perp}\sqrt{\pi} \right)$. Integrating the three-dimensional DDI over the transverse direction using transverse distribution yields the  following effective one-dimensional DDI \cite{f4a,f5,f6,f7}. 
+    54: \begin{equation}
+
+- file: sample\arxiv_sources\2604.02163v1\manuscript.tex (line 62)
+  error: >>
+  message: Consider using \gg instead of >>.
+    61: 	  \end{equation}
+>   62: Here ${\rm erfc}$ stands for complementary error function and $\theta$ is the angle of polarization. For far-field approximation  $|x-x'|>>l_{\perp}$,  Eq.(\ref{e5}) turns out to be 
+    63: \begin{equation}
+
+- file: sample\arxiv_sources\2604.02208v1\MurashkaKuptsova.tex (line 128)
+  error: <<
+  message: Consider using \ll instead of <<.
+   127:   
+>  128:   \small Faculty of Mathematics and Technologies of Programming,\\ Research Laboratory <<Mathematics of Hybrid Intelligence Systems>>,\\ Francisk Skorina Gomel State University, Gomel,  Belarus
+   129:   
+
+- file: sample\arxiv_sources\2604.02285v1\Group-D_.tex (line 179)
+  error: <<
+  message: Consider using \ll instead of <<.
+   178:     \item \textcolor{brown}{For all $ 0.5 \le x \le 1$ and $0 \le y \le 0.4$}, under the assumption that $R >  B  + 10^{20}$, using Wolfram Mathematica we prove that $term1 \le 0$ and $term2 \le -0.01$, which imply that $\lambda < - 0.01$.
+>  179:     \item \textcolor{brown}{For all $ 0.65 \le x \le 0.99$ and $0 \le y \le 0.5$}, under the assumption that $R >  B  + 10^{20}$, using Wolfram Mathematica we prove that $term1 \le -0.001$ and $term2 < 10$, which implies that $\lambda << - 1$.
+   180:     \item \textcolor{brown}{For all $ 0.1 \le x \le 1$ and $0.01 \le y \le 0.99$}, under the assumption that $R >  B  + 10^{20}$, using Wolfram Mathematica we prove that $term8 \le -10^{-9}$ and $term9 < 10$, which implies that $Gy << - 1$.
+
+- file: sample\arxiv_sources\2604.02285v1\Group-D_.tex (line 180)
+  error: <<
+  message: Consider using \ll instead of <<.
+   179:     \item \textcolor{brown}{For all $ 0.65 \le x \le 0.99$ and $0 \le y \le 0.5$}, under the assumption that $R >  B  + 10^{20}$, using Wolfram Mathematica we prove that $term1 \le -0.001$ and $term2 < 10$, which implies that $\lambda << - 1$.
+>  180:     \item \textcolor{brown}{For all $ 0.1 \le x \le 1$ and $0.01 \le y \le 0.99$}, under the assumption that $R >  B  + 10^{20}$, using Wolfram Mathematica we prove that $term8 \le -10^{-9}$ and $term9 < 10$, which implies that $Gy << - 1$.
+   181:     \item \textcolor{brown}{For all $ 0.01 \le x \le 0.99$ and $0.01 \le y \le 0.99$}, under the assumption that $R >  B  + 10^{20}$, using Wolfram Mathematica we prove that $term6 > 10^{-8}$ and $term7>-10$, which implies that $Gx >>1$.
+
+- file: sample\arxiv_sources\2604.02285v1\Group-D_.tex (line 181)
+  error: >>
+  message: Consider using \gg instead of >>.
+   180:     \item \textcolor{brown}{For all $ 0.1 \le x \le 1$ and $0.01 \le y \le 0.99$}, under the assumption that $R >  B  + 10^{20}$, using Wolfram Mathematica we prove that $term8 \le -10^{-9}$ and $term9 < 10$, which implies that $Gy << - 1$.
+>  181:     \item \textcolor{brown}{For all $ 0.01 \le x \le 0.99$ and $0.01 \le y \le 0.99$}, under the assumption that $R >  B  + 10^{20}$, using Wolfram Mathematica we prove that $term6 > 10^{-8}$ and $term7>-10$, which implies that $Gx >>1$.
+   182:     \item \textcolor{brown}{For all $ 0 \le x \le 0.1$ and $0 \le y \le 1$}, under the assumption that $R >  B  + 10^{20}$, using Wolfram Mathematica we prove that $term8 \le 0$ and $term9 \le -0.01$, which implies that $Gy \le -0.01$.
+
+- file: sample\arxiv_sources\2604.02285v1\Group-F_.tex (line 59)
+  error: >>
+  message: Consider using \gg instead of >>.
+    58:     \item \textcolor{brown}{For all $ 0 \le x \le 0.85$ and $0.6 \le y \le 1$}, using Wolfram Mathematica we prove that $Gx < -0.001$.
+>   59:     \item \textcolor{brown}{For all $0 \le x \le 1$ and $0.42 \le y \le 0.99$}, under the assumption that $R - M > 10^{20}$, using Wolfram Mathematica we prove that $term8 > 0.001$ and $term9 > -10$, which implies that $Gy >> 0.001$.
+    60:     \item \textcolor{brown}{For all $0.85 \le x \le 1$ and $0.99 \le y \le 1$}, using Wolfram Mathematica we prove that $term8 \ge 0$ and $term9 \ge 0.001$, which implies that $Gy > 0.001$.
 

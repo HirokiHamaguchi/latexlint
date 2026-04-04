@@ -19,7 +19,7 @@ def make_web_readme():
         content = source_readme.read_text(encoding="utf-8")
         target_readme.write_text(content, encoding="utf-8")
 
-        print(f"✓ README.md copied from {source_readme} to {target_readme}")
+        print(f"Successfully copied {source_readme} to {target_readme}")
     except Exception as e:
-        print(f"✗ Failed to copy README.md: {e}")
+        print(f"Error copying README.md: {e}")
         raise

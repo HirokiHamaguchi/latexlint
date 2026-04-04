@@ -1,4 +1,4 @@
-[CODE] LLErrCompOps (8)
+[CODE] LLErrCompOps (20)
 - file: sample\arxiv_sources\2308.07921v1\iclr2023_conference.tex (line 285)
   error: <=
   message: These comparison operators seem to be incorrect.
@@ -33,6 +33,90 @@
    296: 		\# a / 3 >= 1\\
 >  297: 		\# a >= 3\\
    298: 		\textcolor{ora}{<end\_of\_step>} \textit{\textcolor{teal}{[PPM Score: \bf0.9999]}}\\
+
+- file: sample\arxiv_sources\2604.02275v1\secretSharingOverClassicalQuantumBroadcastChannel.tex (line 167)
+  error: >=
+  message: These comparison operators seem to be incorrect.
+   166:      \draw[decoration={markings,mark=at position 1 with {\arrow[scale=1.5]{latex}}},
+>  167:       postaction={decorate}, thick, shorten >=1.4pt] ($(a.east)+(0.0,0)$) -- ($(b.west)-(0,0)$);
+   168:      %%%%%%%%%%%% FROM ENCODER
+
+- file: sample\arxiv_sources\2604.02275v1\secretSharingOverClassicalQuantumBroadcastChannel.tex (line 170)
+  error: >=
+  message: These comparison operators seem to be incorrect.
+   169:      \draw[decoration={markings,mark=at position 1 with {\arrow[scale=1.5]{latex}}},
+>  170:       postaction={decorate}, thick, shorten >=1.4pt] ($(b.east)+(0.0,0)$) -- ($(c.west)-(0,0)$) node [midway, above] {$X$};
+   171:      %%%%%%%%%%%% FROM CHANNEL
+
+- file: sample\arxiv_sources\2604.02275v1\secretSharingOverClassicalQuantumBroadcastChannel.tex (line 173)
+  error: >=
+  message: These comparison operators seem to be incorrect.
+   172:      \draw[decoration={markings,mark=at position 1 with {\arrow[scale=1.5]{latex}}},
+>  173:      postaction={decorate}, thick, shorten >=1.4pt] ($(c.east)+(0.0,0.15)$) -- ($(d.west)-(0,0)$) node [midway, above left] {$\rho_{Y_1}^x$};
+   174:      \draw[decoration={markings,mark=at position 1 with {\arrow[scale=1.5]{latex}}},
+
+- file: sample\arxiv_sources\2604.02275v1\secretSharingOverClassicalQuantumBroadcastChannel.tex (line 175)
+  error: >=
+  message: These comparison operators seem to be incorrect.
+   174:      \draw[decoration={markings,mark=at position 1 with {\arrow[scale=1.5]{latex}}},
+>  175:      postaction={decorate}, thick, shorten >=1.4pt] ($(c.east)+(0.0,0)$) -- ($(e.west)-(0,0)$) node [midway, above right] {$\rho_{Y_2}^x$};
+   176:      \draw[decoration={markings,mark=at position 1 with {\arrow[scale=1.5]{latex}}},
+
+- file: sample\arxiv_sources\2604.02275v1\secretSharingOverClassicalQuantumBroadcastChannel.tex (line 177)
+  error: >=
+  message: These comparison operators seem to be incorrect.
+   176:      \draw[decoration={markings,mark=at position 1 with {\arrow[scale=1.5]{latex}}},
+>  177:      postaction={decorate}, thick, shorten >=1.4pt] ($(c.east)+(0.0,-0.15)$) -- ($(f.west)-(0,0)$) node [midway, below left] {$\rho_{Y_3}^x$};
+   178: 
+
+- file: sample\arxiv_sources\2604.02275v1\secretSharingOverClassicalQuantumBroadcastChannel.tex (line 225)
+  error: >=
+  message: These comparison operators seem to be incorrect.
+   224:      % set {1,2,3}
+>  225:      \draw[decoration={markings,mark=at position 1 with {\arrow[scale=1.5]{latex}}}, postaction={decorate}, thick, shorten >=1.4pt] ($(aa2.east)+(0.0,0)$) -- ($(aa3.west)-(0,0)$);
+   226:      % set {1,2}
+
+- file: sample\arxiv_sources\2604.02275v1\secretSharingOverClassicalQuantumBroadcastChannel.tex (line 227)
+  error: >=
+  message: These comparison operators seem to be incorrect.
+   226:      % set {1,2}
+>  227:      \draw[decoration={markings,mark=at position 1 with {\arrow[scale=1.5]{latex}}}, postaction={decorate}, thick, shorten >=1.4pt] ($(bb1.east)+(0.0,0)$) -- ($(bb2.west)-(0,0)$);
+   228:      % set {1,3}
+
+- file: sample\arxiv_sources\2604.02275v1\secretSharingOverClassicalQuantumBroadcastChannel.tex (line 229)
+  error: >=
+  message: These comparison operators seem to be incorrect.
+   228:      % set {1,3}
+>  229:      \draw[decoration={markings,mark=at position 1 with {\arrow[scale=1.5]{latex}}}, postaction={decorate}, thick, shorten >=1.4pt] ($(cc1.east)+(0.0,0)$) -- ($(cc2.west)-(0,0)$);
+   230:      % set {2,3}
+
+- file: sample\arxiv_sources\2604.02275v1\secretSharingOverClassicalQuantumBroadcastChannel.tex (line 231)
+  error: >=
+  message: These comparison operators seem to be incorrect.
+   230:      % set {2,3}
+>  231:      \draw[decoration={markings,mark=at position 1 with {\arrow[scale=1.5]{latex}}}, postaction={decorate}, thick, shorten >=1.4pt] ($(dd1.east)+(0.0,0)$) -- ($(dd2.west)-(0,0)$);
+   232:      % set {1}
+
+- file: sample\arxiv_sources\2604.02275v1\secretSharingOverClassicalQuantumBroadcastChannel.tex (line 233)
+  error: >=
+  message: These comparison operators seem to be incorrect.
+   232:      % set {1}
+>  233:      \draw[decoration={markings,mark=at position 1 with {\arrow[scale=1.5]{latex}}}, postaction={decorate}, thick, shorten >=1.4pt] ($(ee.east)+(0.0,0)$) -- ($(ee1.west)-(0,0)$);
+   234:      % set {2}
+
+- file: sample\arxiv_sources\2604.02275v1\secretSharingOverClassicalQuantumBroadcastChannel.tex (line 235)
+  error: >=
+  message: These comparison operators seem to be incorrect.
+   234:      % set {2}
+>  235:      \draw[decoration={markings,mark=at position 1 with {\arrow[scale=1.5]{latex}}}, postaction={decorate}, thick, shorten >=1.4pt] ($(ff.east)+(0.0,0)$) -- ($(ff1.west)-(0,0)$);
+   236:      % set {3}
+
+- file: sample\arxiv_sources\2604.02275v1\secretSharingOverClassicalQuantumBroadcastChannel.tex (line 237)
+  error: >=
+  message: These comparison operators seem to be incorrect.
+   236:      % set {3}
+>  237:      \draw[decoration={markings,mark=at position 1 with {\arrow[scale=1.5]{latex}}}, postaction={decorate}, thick, shorten >=1.4pt] ($(gg.east)+(0.0,0)$) -- ($(gg1.west)-(0,0)$);
+   238:     \end{tikzpicture}
 
 - file: sample\submodules\OpenLogic\content\normal-modal-logic\frame-definability\first-order-definability.tex (line 65)
   error: = <

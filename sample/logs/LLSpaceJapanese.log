@@ -1,0 +1,15 @@
+[CODE] LLSpaceJapanese (2)
+- file: sample\arxiv_sources\2603.10767v2\content.tex (line 28)
+  error: 径$
+  message: Consider adding a space at here.
+    27: A circle with radius $R$ is inscribed in an isosceles trapezoid. The upper base of the trapezoid is half of its height. Find the area of the trapezoid.
+>   28: & \textbf{Japanese:} 半径$R$の円が二等辺台形に内接している。この台形の上底は高さの半分である。台形の面積を求めよ。\\
+    29: \midrule
+
+- file: sample\arxiv_sources\2603.10767v2\content.tex (line 28)
+  error: $の
+  message: Consider adding a space at here.
+    27: A circle with radius $R$ is inscribed in an isosceles trapezoid. The upper base of the trapezoid is half of its height. Find the area of the trapezoid.
+>   28: & \textbf{Japanese:} 半径$R$の円が二等辺台形に内接している。この台形の上底は高さの半分である。台形の面積を求めよ。\\
+    29: \midrule
+

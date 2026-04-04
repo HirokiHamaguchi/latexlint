@@ -1,4 +1,4 @@
-[CODE] LLNonstandard (833)
+[CODE] LLNonstandard (848)
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 455)
   error:  iff
   message: This notation might be nonstandard in formal academic writing. Refer to the link for more details.
@@ -26,6 +26,111 @@
   1052: As argued out by \citet{JanzingDominik2013QCI}, a causal strength measure (or criterion) \(C_{X_i \rightarrow Y_j}\) should possess multiple properties. Notably that if \(C_{X_i \rightarrow Y_j} = 0\),  then the joint distribution satisfies the Markov condition with respect to the DAG obtained by removing
 > 1053: the arrow \({X_i \rightarrow Y_j}\). Moreover, the true DAG reads \(X_i \rightarrow Y\) iff \(C_{X_i \rightarrow Y_j} = I(X_i, Y_j)\). 
   1054: 
+
+- file: sample\arxiv_sources\2509.19112v3\neurips_2025.tex (line 443)
+  error:  iff
+  message: This notation might be nonstandard in formal academic writing. Refer to the link for more details.
+   442: 
+>  443: A naive fusion approach, such as taking the simple union of all edges \(E = \bigcup^m_{k=1} E^\sigma_k\) works iff the Oracle models yield the perfect CI-tests in Phase 1 and thus the local graphs \(\mathbb{G}^k\) are faithful to \(p(x,y)\)  (\cite{consensus_bn_jose}, Theorem 4.). 
+   444: %Thus the intersection \(\bigcap^m_{k=1}\mathcal{I}(\mathbb{G}^k)=\mathcal{I}(\mathbb{G}^*)\) yield the correct consensus DAG . 
+
+- file: sample\arxiv_sources\2509.19112v3\neurips_2025.tex (line 828)
+  error:  iff
+  message: This notation might be nonstandard in formal academic writing. Refer to the link for more details.
+   827: As argued out by \citet{JanzingDominik2013QCI}, a causal strength measure (or criterion) \(C_{X_i \rightarrow Y_j}\) should possess multiple properties. Notably, if \(C_{X_i \rightarrow Y_j} = 0\),  then the joint distribution satisfies the Markov condition with respect to the DAG obtained by removing
+>  828: the arrow \({X_i \rightarrow Y_j}\). Moreover, the true DAG reads \(X_i \rightarrow Y\) iff \(C_{X_i \rightarrow Y_j} = I(X_i, Y_j)\). 
+   829: 
+
+- file: sample\arxiv_sources\2603.16313v2\appendix_b.tex (line 255)
+  error:  iff
+  message: This notation might be nonstandard in formal academic writing. Refer to the link for more details.
+   254: We want to reuse the estimated conditional mutual information, Eq. \ref{eq:cmi_theorique}, and profit from the parallelized inference of Phase 1 (Fig.~\ref{fig:cargo}). As argued out by \cite{quantifyingcausalinfluence}, a causal strength measure (or criterion) \(C_{X_i \rightarrow Y_j}\) should possess multiple properties. Notably, if \(C_{X_i \rightarrow Y_j} = 0\),  then the joint distribution satisfies the Markov condition with respect to the DAG obtained by removing
+>  255: the arrow \({X_i \rightarrow Y_j}\). The true DAG reads \(X_i \rightarrow Y\) iff \(C_{X_i \rightarrow Y_j} = I(X_i, Y_j)\). 
+   256: 
+
+- file: sample\arxiv_sources\2603.16313v2\c2.tex (line 553)
+  error:  iff
+  message: This notation might be nonstandard in formal academic writing. Refer to the link for more details.
+   552: \end{equation}
+>  553: where $\delta_{i,r}$ is the Kronecker delta, iff event type \(x_i\) belongs to the set of random event types \(R\) and \(0\) otherwise.
+   554: %which equals $1$ when $i = r, r \in R$ (set of randomly generated events) and $0$ otherwise. 
+
+- file: sample\arxiv_sources\2603.16313v2\c4.tex (line 294)
+  error:  iff
+  message: This notation might be nonstandard in formal academic writing. Refer to the link for more details.
+   293: where \(P(.|[CLS])\) is considered the marginal distribution \(P(.)\). 
+>  294: \noindent Assuming that P is faithful (Def.~\ref{def:bn_faithfulness}) to \(\mathcal{G}\), no hidden confounders bias the estimate (A\ref{assumption:causal_sufficiency}) and temporal precedence (A\ref{assumption:temporal_precedence}), we can estimate the CMI \ref{eq:cmi_theorique} such that iff \(I(X_0, Y_j|\emptyset) > 0 \Leftrightarrow Y_j \not\perp_{\theta_x, \theta_y} X_1 \implies Y_j \not\perp_{\mathcal{G}} X_1\) (Lemma \ref{lemma:oracle_identifiability}).
+   295: 
+
+- file: sample\arxiv_sources\2603.16313v2\c4.tex (line 310)
+  error:  iff
+  message: This notation might be nonstandard in formal academic writing. Refer to the link for more details.
+   309: By bounded lagged effects (A\ref{assumption:lagged_effects}) we know that the causal influence of past \(X_{\leq i}\) on \(Y_j\) has expired. In addition, no hidden confounders (A\ref{assumption:causal_sufficiency}) bias the independence testing. Finally,
+>  310: using Eq.~\ref{eq:cmi_theorique}, we can estimate the CMI such that iff
+   311: \(I( Y_j, X_{i+1}| \boldsymbol{Z}) > 0 \Leftrightarrow Y_j \not\perp_{\theta_x, \theta_y}  X_{i+1} | \boldsymbol{Z} \implies Y_j \not\perp_{\mathcal{G}} X_{i+1} | \boldsymbol{Z}\) (Lemma \ref{lemma:oracle_identifiability}).
+
+- file: sample\arxiv_sources\2603.16313v2\c4.tex (line 380)
+  error:  iff
+  message: This notation might be nonstandard in formal academic writing. Refer to the link for more details.
+   379: where the expectation is taken over contexts \(z^{(l)}\) sampled from the learned model distribution \(P_\theta\) using the same Monte Carlo estimation as Eq.~\ref{eq:cmi_approx}. We compute the mean and standard deviations over contexts \(z^{(l)}\) to provide uncertainty estimates.
+>  380: Eq.~\ref{eq:causal_indic} align with the average causal effect (ACE)~\cite{pearl_2009} iff the conditioning \(Z\) fully blocks all unwanted backdoor paths~A~\ref{assumption:causal_sufficiency}. Here, \(\mathcal{C} > 0\) indicates a positive influence and \(\mathcal{C} < 0\) reflects an inhibitory effect.
+   381: While several metrics for causal strength exist—including Causal Power \cite{Cheng1997} and Good’s measure \cite{measure_of_causal_strength_oxford}, we adopt this measure for its simplicity of interpretation. An operator can easily read it and get a sense of the rise in likelihood of the label \(Y_j\). We employ the term causal \textit{indicator} to distinguish it from causal strength measures, which, if using this formulation, can be problematic as pointed out by \cite{quantifyingcausalinfluence}. Ours serves more as an indication than a strength, which is here the conditional mutual information. 
+
+- file: sample\arxiv_sources\2604.02208v1\MurashkaKuptsova.tex (line 242)
+  error:  iff
+  message: This notation might be nonstandard in formal academic writing. Refer to the link for more details.
+   241: 
+>  242: A function $f$, which assigns to every prime a formation, is called a formation function. Recall \cite[Chapter IV, Definition 3.1]{Doerk1992} that a formation $\mathfrak{F}$ is called local~if $$\mathfrak{F}=(G \mid G/C_G(H/K) \in f(p) \, \text{for every} \, p\in \pi(H/K)\, \text{and chief factor} \, H/K \, \text{of} \, G)$$ for some formation function $f$. In this case $f$ is called a local definition of $\mathfrak{F}$. According to Gash$\mathrm{\ddot{u}}$ts -- Lubeseder -- Schmid theorem \cite[Chapter IV, Theorem~4.6]{Doerk1992} a non-empty formation is saturated iff it is local. 
+   243: 
+
+- file: sample\arxiv_sources\2604.02208v1\MurashkaKuptsova.tex (line 385)
+  error:  iff
+  message: This notation might be nonstandard in formal academic writing. Refer to the link for more details.
+   384: 
+>  385: \begin{proof}[Proof of the Corollary~\ref{coroll8}] Let $\mathfrak{F}$ be a non-empty hereditary saturated formation and $f$ be its local definition (it exists by Gash$\mathrm{\ddot{u}}$ts -- Lubeseder -- Schmid theorem). Now $\mathfrak{F}=f_\mathfrak{F}(\mathfrak{F})$ by Lemma~\ref{122}. From Theorem~\ref{theorem5} it follows that we need only to prove that $H/K\rtimes TH/C_G(H/K)\in \mathfrak{F}$ iff $TH/C_G(H/K)\in \mathfrak{N}_pf(p)$ for every $p\in \pi(H/K)$ where $H/K$ is a chief factor of $G$ and $T/C_G(H/K)$ is an $\mathfrak{F}$-subgroup of $G/C_G(H/K)$. Let $C=C_G(H/K)$ and $\overline{T}=(H/K)\rtimes (HT/C)$.
+   386: 
+
+- file: sample\arxiv_sources\2604.02233v1\main.tex (line 805)
+  error:  iff
+  message: This notation might be nonstandard in formal academic writing. Refer to the link for more details.
+   804: 
+>  805: For a set $S \subseteq [n]$, let $1_S$ denote an $n$-bit string where $x_i = 1$ iff $i \in S$.
+   806: Then let $f(S) = 1$ iff $1_S$ is reachable from $0^n$ in $G$ and $0$ otherwise.
+
+- file: sample\arxiv_sources\2604.02233v1\main.tex (line 806)
+  error:  iff
+  message: This notation might be nonstandard in formal academic writing. Refer to the link for more details.
+   805: For a set $S \subseteq [n]$, let $1_S$ denote an $n$-bit string where $x_i = 1$ iff $i \in S$.
+>  806: Then let $f(S) = 1$ iff $1_S$ is reachable from $0^n$ in $G$ and $0$ otherwise.
+   807: If a set $S \subseteq [n]$ satisfies the current partial order, we can compute $f(S)$ using
+
+- file: sample\arxiv_sources\2604.02233v1\main.tex (line 839)
+  error:  iff
+  message: This notation might be nonstandard in formal academic writing. Refer to the link for more details.
+   838:     Denote the \textit{weight} of a vertex $x \in V$ by $|x| = \sum_{i=0}^{n-k} x_i$.
+>  839:     Let a directed edge go from $x$ to $y$ in this graph iff $|x|+1 = |y|$.
+   840: 
+
+- file: sample\arxiv_sources\2604.02284v1\rigor_test.tex (line 1231)
+  error:  iff
+  message: This notation might be nonstandard in formal academic writing. Refer to the link for more details.
+  1230: 
+> 1231: {\textbf{Step 3 (equivalence).} At $t=2$, constraint (c11) limits the aggregate MSP deficit of the selected fully served MSPs by the available $W$ credits in the GCP. Because $L_m^{(t)}=1$ iff \emph{all} active Heads of MSP $m$ meet the threshold (c3), choosing which MSPs to fully serve at $t=2$ consumes exactly $\sum_{i\in S} w_i$ credits and yields total value $\sum_{i\in S} v_i$ in the objective sum $\sum_{m} L_m^{(2)}$. Hence, there exists a feasible allocation with $\sum_m L_m^{(2)} \ge V^\star$ iff the knapsack instance admits a subset $S$ with $\sum_{i\in S} w_i \le W$ and $\sum_{i\in S} v_i \ge V^\star$. Therefore, $\bar P$-DEC is NP-hard.}
+  1232: \end{proof}
+
+- file: sample\arxiv_sources\2604.02284v1\rigor_test.tex (line 1231)
+  error:  iff
+  message: This notation might be nonstandard in formal academic writing. Refer to the link for more details.
+  1230: 
+> 1231: {\textbf{Step 3 (equivalence).} At $t=2$, constraint (c11) limits the aggregate MSP deficit of the selected fully served MSPs by the available $W$ credits in the GCP. Because $L_m^{(t)}=1$ iff \emph{all} active Heads of MSP $m$ meet the threshold (c3), choosing which MSPs to fully serve at $t=2$ consumes exactly $\sum_{i\in S} w_i$ credits and yields total value $\sum_{i\in S} v_i$ in the objective sum $\sum_{m} L_m^{(2)}$. Hence, there exists a feasible allocation with $\sum_m L_m^{(2)} \ge V^\star$ iff the knapsack instance admits a subset $S$ with $\sum_{i\in S} w_i \le W$ and $\sum_{i\in S} v_i \ge V^\star$. Therefore, $\bar P$-DEC is NP-hard.}
+  1232: \end{proof}
+
+- file: sample\arxiv_sources\2604.02306v1\Exp_Sums_Multi_GL.tex (line 967)
+  error:  iff
+  message: This notation might be nonstandard in formal academic writing. Refer to the link for more details.
+   966: %  \[  \bigg|  \sum_{\substack{n\leq x\\ (n,q)=1}} \frac{f(n)\overline{\chi}(n)}{n^{it}}\bigg| \leq \sum_{\substack{n\leq x\\ (n,q)=1}}  1 \sim  \frac {\phi(q)}q x \] and 
+>  967: $|I(x,\beta,t)|\leq 1$; note that $|I(x,\beta,t)|\sim 1$ if and only if  $\beta=o(1/x)$ and $t=o(1/\log x)$.\footnote{To see this note that $|I(x,\beta,t)|\sim 1$ iff $e(\beta v) v^{it}$ is more or less fixed for all $v$ in the range $0<v\leq x$ and the claim follows.}
+   968:  Therefore
 
 - file: sample\submodules\OpenLogic\content\applied-modal-logic\epistemic-logic\bisimulations.tex (line 37)
   error:  iff

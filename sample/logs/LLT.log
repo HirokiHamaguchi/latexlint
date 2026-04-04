@@ -1,4 +1,4 @@
-[CODE] LLT (5)
+[CODE] LLT (95)
 - file: sample\arxiv_sources\1912.00839v1\AAAI-YuanK.6564.tex (line 327)
   error: ^T
   message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
@@ -33,4 +33,634 @@
    653:     
 >  654:     \item[speed]: Adds a relative speed matrix to the attention scores. Defines matrices $T_r$ and $M_r \in \mathbb{R}^L$ containing time and mileage features, forming $S = \frac{M}{T}$ and $S_{rel} = S - S^T \in \mathbb{R}^{L \times L}$. The attention scores are modified as $\mathbf{A} = \text{softmax}((\textbf{Q}\textbf{K}^T + \mathbf{S}_{rel})/\sqrt{2d})$. This model explores if incorporating relative speed information improves predictive performance.
    655: \end{description}
+
+- file: sample\arxiv_sources\2602.01109v1\math.tex (line 279)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   278: \begin{align}
+>  279:     a(\boldsymbol{u}_m, \boldsymbol{e}_n, m,n) &= f(\boldsymbol{q}_m^T \boldsymbol{k}_n) = a_{dtc \rightarrow env}\\
+   280:     a(\boldsymbol{u}_m, \boldsymbol{e}_n, m, n) &= f\left(\boldsymbol{u}_m^T \boldsymbol{W}_q^T e^{i(n\theta_e - m\theta_u)}\boldsymbol{W}_k \boldsymbol{e}_n\right) \label{eq:rope_q_k}
+
+- file: sample\arxiv_sources\2602.01109v1\math.tex (line 280)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   279:     a(\boldsymbol{u}_m, \boldsymbol{e}_n, m,n) &= f(\boldsymbol{q}_m^T \boldsymbol{k}_n) = a_{dtc \rightarrow env}\\
+>  280:     a(\boldsymbol{u}_m, \boldsymbol{e}_n, m, n) &= f\left(\boldsymbol{u}_m^T \boldsymbol{W}_q^T e^{i(n\theta_e - m\theta_u)}\boldsymbol{W}_k \boldsymbol{e}_n\right) \label{eq:rope_q_k}
+   281: \end{align}
+
+- file: sample\arxiv_sources\2602.01109v1\math.tex (line 280)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   279:     a(\boldsymbol{u}_m, \boldsymbol{e}_n, m,n) &= f(\boldsymbol{q}_m^T \boldsymbol{k}_n) = a_{dtc \rightarrow env}\\
+>  280:     a(\boldsymbol{u}_m, \boldsymbol{e}_n, m, n) &= f\left(\boldsymbol{u}_m^T \boldsymbol{W}_q^T e^{i(n\theta_e - m\theta_u)}\boldsymbol{W}_k \boldsymbol{e}_n\right) \label{eq:rope_q_k}
+   281: \end{align}
+
+- file: sample\arxiv_sources\2603.16313v2\appendix_a.tex (line 13)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+    12: \begin{align}
+>   13:     \ln{\mathcal{L}_k}(t_1, \cdots, t_L) &= \ln \left(\left[\prod^L_{i=1} \lambda^{*}_k(t_i)\right]\exp{(-\int^T_0 \lambda^{*}_k(t) dt)}\right) \notag\\
+    14: \end{align}
+
+- file: sample\arxiv_sources\2603.16313v2\appendix_a.tex (line 17)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+    16: \begin{align}
+>   17:     &= \sum^L_{i=1}\ln{\lambda^{*}_k(t_i)} + \ln{\left(\exp{(-\int^T_0 \lambda^{*}_k(t) dt)}\right)} \notag\\
+    18:     &= \sum^L_{i=1}\ln{\lambda^{*}_k(t_i)} -\int^T_0 \lambda^{*}_k(t) dt\label{eq:mll_mutual_hawkes_per_event}
+
+- file: sample\arxiv_sources\2603.16313v2\appendix_a.tex (line 18)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+    17:     &= \sum^L_{i=1}\ln{\lambda^{*}_k(t_i)} + \ln{\left(\exp{(-\int^T_0 \lambda^{*}_k(t) dt)}\right)} \notag\\
+>   18:     &= \sum^L_{i=1}\ln{\lambda^{*}_k(t_i)} -\int^T_0 \lambda^{*}_k(t) dt\label{eq:mll_mutual_hawkes_per_event}
+    19: \end{align}
+
+- file: sample\arxiv_sources\2603.16313v2\appendix_a.tex (line 22)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+    21: \begin{equation}\label{eq:mll_mutual_hawkes_appendix}
+>   22:      \ln \mathcal{L} (\theta|t_1, \cdots, t_L, T) = \sum^{|\mathcal{X} |}_{k=1}\sum^L_{i=1}\ln{\lambda^{*}_k(t_i)} - \sum^{|\mathcal{X}|}_{k=1}\int^T_0 \lambda^{*}_k(t)dt
+    23: \end{equation}
+
+- file: sample\arxiv_sources\2603.16313v2\c2.tex (line 67)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+    66: \begin{equation}\label{eq:mll_mutual_hawkes}
+>   67:      \ln \mathcal{L} (\theta|t_1, \cdots, t_L, T) = \sum^{|\mathcal{X} |}_{k=1}\sum^L_{i=1}\ln{\lambda^{*}_k(t_i)} - \sum^{|\mathcal{X}|}_{k=1}\int^T_0 \lambda^{*}_k(t)dt
+    68: \end{equation}
+
+- file: sample\arxiv_sources\2603.16313v2\c2.tex (line 520)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   519: \begin{align}\label{eq:qkproduct}
+>  520:      \mathbf{q}^T_m \mathbf{k}_n &= (\mathbf{R}^d_{\Theta, m}(\mathbf{W}_q \mathbf{e}_m + \mathbf{CE}_m))^T 
+   521:     \mathbf{R}^d_{\Theta, n} (\mathbf{W}_k \mathbf{e}_n + \mathbf{CE}_n) \nonumber \\
+
+- file: sample\arxiv_sources\2603.16313v2\c2.tex (line 529)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   528: \end{align}
+>  529: where $\mathbf{R}^d_{\Theta, n-m} = (\mathbf{R}^d_{\Theta, m})^T\mathbf{R}^d_{\Theta, n}$ is a sparse orthogonal matrix. The terms provide (1) standard attention capturing similarity between token embeddings, (2) query attending to the spatiotemporal information of the other token (vice versa for (3)) and (4) the interaction of the spatiotemporal information only of both token only. Consequently, they provide a richer query and key representations when computing the attention scores. The final the attention scores is computed as:
+   530: \begin{equation}
+
+- file: sample\arxiv_sources\2603.16313v2\c2.tex (line 531)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   530: \begin{equation}
+>  531: \mathbf{A} = \text{softmax}\left( \frac{(\mathbf{R}_{\Theta}^d (\mathbf{W}^Q \mathbf{E}+ \mathbf{CE})) (\mathbf{R}_{\Theta}^d (\mathbf{W}^K \mathbf{E} + \mathbf{CE}))^T}{\sqrt{3d}}\right)    
+   532: \end{equation}
+
+- file: sample\arxiv_sources\2603.16313v2\c2.tex (line 925)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   924: \begin{align}
+>  925:     a(\boldsymbol{u}_m, \boldsymbol{e}_n, m,n) &= f(\boldsymbol{q}_m^T \boldsymbol{k}_n) = a_{dtc \rightarrow env}\notag\\
+   926:     &= f\left(\boldsymbol{u}_m^T \boldsymbol{W}_q^T e^{i(n\theta_e - m\theta_u)}\boldsymbol{W}_k \boldsymbol{e}_n\right) \label{eq:rope_q_k}
+
+- file: sample\arxiv_sources\2603.16313v2\c2.tex (line 926)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   925:     a(\boldsymbol{u}_m, \boldsymbol{e}_n, m,n) &= f(\boldsymbol{q}_m^T \boldsymbol{k}_n) = a_{dtc \rightarrow env}\notag\\
+>  926:     &= f\left(\boldsymbol{u}_m^T \boldsymbol{W}_q^T e^{i(n\theta_e - m\theta_u)}\boldsymbol{W}_k \boldsymbol{e}_n\right) \label{eq:rope_q_k}
+   927: \end{align}
+
+- file: sample\arxiv_sources\2603.16313v2\c2.tex (line 926)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   925:     a(\boldsymbol{u}_m, \boldsymbol{e}_n, m,n) &= f(\boldsymbol{q}_m^T \boldsymbol{k}_n) = a_{dtc \rightarrow env}\notag\\
+>  926:     &= f\left(\boldsymbol{u}_m^T \boldsymbol{W}_q^T e^{i(n\theta_e - m\theta_u)}\boldsymbol{W}_k \boldsymbol{e}_n\right) \label{eq:rope_q_k}
+   927: \end{align}
+
+- file: sample\arxiv_sources\2604.02101v1\CDC.tex (line 550)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   549: \mathbb E\!\left[
+>  550: \int_0^T
+   551: L(t,X(t),\nu_{H}, \mu, m, u)
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 2033)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  2032:     \[
+> 2033:     \s(t) - \check{\s}(t) = -\int_t^T \p_t(\s - \check{\s})(s)\,ds = -\int_t^T \frac{1}{s} \big( Ns\delta\s_0 + (N-1)\bar\Psi \big)(s)\,ds.
+  2034:     \]
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 2033)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  2032:     \[
+> 2033:     \s(t) - \check{\s}(t) = -\int_t^T \p_t(\s - \check{\s})(s)\,ds = -\int_t^T \frac{1}{s} \big( Ns\delta\s_0 + (N-1)\bar\Psi \big)(s)\,ds.
+  2034:     \]
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 2039)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  2038:     \[
+> 2039:     \|\s-\check{\s}\|_{H^{k_1}(\Omega_t)} \leq \int_t^T \frac{1}{s}\|Ns\delta\s_0 + (N-1)\bar\Psi\|_{H^{k_1}(\Omega_s)} \,ds \leq C t^{-A},
+  2040:     \]
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 2051)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  2050:     \[
+> 2051:     |\s(t) - \check{\s}(t)| \leq (r^2 + 2r) \int_t^T \frac{1}{s}\,ds \leq 3r\int_t^T\frac{1}{s}\,ds \leq -\frac{1}{6}\ln t,
+  2052:     \]
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 2051)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  2050:     \[
+> 2051:     |\s(t) - \check{\s}(t)| \leq (r^2 + 2r) \int_t^T \frac{1}{s}\,ds \leq 3r\int_t^T\frac{1}{s}\,ds \leq -\frac{1}{6}\ln t,
+  2052:     \]
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 2457)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  2456:     \begin{align*}
+> 2457:         \lowen{e}(s) &\leq \lowen{e}(T) + \int_s^T \frac{Cr-2\delta}{t} \lowen{e}(t) \,dt,\\
+  2458:         \lowen{\omega}(s) &\leq \lowen{\omega}(T) + \int_s^T \frac{Cr-2\delta}{t} \lowen{\omega}(t) \,dt
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 2458)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  2457:         \lowen{e}(s) &\leq \lowen{e}(T) + \int_s^T \frac{Cr-2\delta}{t} \lowen{e}(t) \,dt,\\
+> 2458:         \lowen{\omega}(s) &\leq \lowen{\omega}(T) + \int_s^T \frac{Cr-2\delta}{t} \lowen{\omega}(t) \,dt
+  2459:     \end{align*}
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 2475)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  2474:     \begin{split}
+> 2475:         \lowen{e}(s) - \lowen{e}(T) &= \int_s^T -\p_t \lowen{e}(t) \,dt\\
+  2476:         &= \int_s^T -\frac{2(1-4\delta)}{t} \lowen{e}(t) + t^{2(1-4\delta)} \sum_{I,i} \sum_{m=0}^{k_0+1} \sigma_m \sum_{|\I|=m} 2\p_{\hspace{1pt}\I}(-\p_te_I^i) \p_{\hspace{1pt}\I} e_I^i \,dt.
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 2476)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  2475:         \lowen{e}(s) - \lowen{e}(T) &= \int_s^T -\p_t \lowen{e}(t) \,dt\\
+> 2476:         &= \int_s^T -\frac{2(1-4\delta)}{t} \lowen{e}(t) + t^{2(1-4\delta)} \sum_{I,i} \sum_{m=0}^{k_0+1} \sigma_m \sum_{|\I|=m} 2\p_{\hspace{1pt}\I}(-\p_te_I^i) \p_{\hspace{1pt}\I} e_I^i \,dt.
+  2477:     \end{split}
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 2538)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  2537:     \[
+> 2538:     \lowen{\delta k}(s) \leq \lowen{\delta k}(T) + \int_s^T Ct^{-1+\delta}\,dt,
+  2539:     \]
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 2558)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  2557:     %
+> 2558:     with $\alpha = 1$ and $k = k_0+1$. Now we can write $\lowen{\delta k}(s) - \lowen{\delta k}(T) = \int_s^T -\p_t\lowen{\delta k}(t) \,dt$ and use \eqref{eq: k equation global low order} to obtain the result.
+  2559: \end{proof}
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 2612)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  2611:     \[
+> 2612:     \lowen{\Theta}(s) \leq \lowen{\Theta}(T) + \int_s^T \frac{6\delta-2\lpar}{t} \lowen{\Theta}(t) + Ct^{-1+\delta} \,dt
+  2613:     \]
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 2634)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  2633:     %
+> 2634:     with $\alpha = -3\delta$ and $k = k_0+1$. Now we can write $\lowen{\Theta}(s) - \lowen{\Theta}(T) = \int_s^T -\p_t\lowen{\Theta}(t) \,dt$ and use \eqref{mean curvature low order equation 2} to obtain the result.
+  2635: \end{proof}
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 2739)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  2738:     \[
+> 2739:     \lowen{N}(s) \leq \int_s^T Ct^{-1+\delta}\,dt,
+  2740:     \]
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 2752)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  2751:     %
+> 2752:     with $\alpha = 0$ and $k = k_0+1$. Since $N(T) = 1$, then $\lowen{N}(s) = \int_s^T -\p_t \lowen{N}(t)\,dt$, and the result follows by using \eqref{lapse equation global 2}.
+  2753: \end{proof}
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 2781)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  2780:     \[
+> 2781:     \lowen{\ve(\ln N)}(s) \leq \int_s^T \frac{Cr-2\delta}{t} \lowen{\ve(\ln N)}(t) + Ct^{-1+\delta} \;dt,
+  2782:     \]
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 2800)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  2799:     %
+> 2800:     with $\alpha = 1-4\delta$, $k = k_0$ and $\xi = \ve(\ln N)$. Note that $\lowen{\ve(\ln N)}(s) = \int_s^T -\p_t \lowen{\ve(\ln N)}(t) \,dt$. The result follows similarly as in the proof of Lemma~\ref{lemma: low order estimate frame and dual frame}, by using \eqref{eq: lapse derivatives low order 2} and commuting $\p_{\hspace{1pt}\I}$ with $\bar p_I$ with Lemma~\ref{lemma: commutator estimate with crazy sequence}.
+  2801: \end{proof}
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 2877)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  2876:     \[
+> 2877:     \lowen{\gamma}(s) \leq \lowen{\gamma}(T) + \int_s^T \frac{Cr - 4\delta}{t} \lowen{\gamma}(t) + Ct^{-1+\delta} \,dt
+  2878:     \]
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 2897)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  2896:     %
+> 2897:     with $\alpha = 1-3\delta$, $k = k_0$ and $\xi = \gamma$. Now we can write $\lowen{\gamma}(s) - \lowen{\gamma}(t) = \int_s^T -\p_t\lowen{\gamma}(t) \,dt$, and the result follows similarly as in the proof of Lemma~\ref{lemma: low order estimate frame and dual frame}, by using \eqref{eq: gamma equation global low order} and commuting $\p_{\hspace{1pt}\I}$ with $\bar p_I + \bar p_J - \bar p_K$ with Lemma~\ref{lemma: commutator estimate with crazy sequence}.
+  2898: \end{proof}
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 2962)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  2961:     \[
+> 2962:     \lowen{\delta\s_0}(s) \leq \lowen{\delta\s_0}(T) + \int_s^T Ct^{-1+\delta} \,dt
+  2963:     \]
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 2981)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  2980:     %
+> 2981:     with $\alpha = 1$ and $k = k_0+1$. Now we can write $\lowen{\delta\s_0}(s) - \lowen{\delta\s_0}(T) = \int_s^T -\p_t\lowen{\delta\s_0}(t)\,dt$ and use \eqref{eq: phi equation global low order} to obtain the result.
+  2982: \end{proof}
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 2988)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  2987:     \[
+> 2988:     \lowen{\ve\s}(s) \leq \lowen{\ve\s}(T) + \int_s^T \frac{Cr-4\delta}{t} \lowen{\ve\s}(t) + Ct^{-1+\delta} \,dt
+  2989:     \]
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 3008)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  3007:     %
+> 3008:     with $\alpha = 1-3\delta$, $k = k_0$ and $\xi = \ve\s$. The result follows similarly as in the proof of Lemma~\ref{lemma: low order estimate frame and dual frame}, by writing $\lowen{\ve\s}(s) - \lowen{\ve\s}(T) = \int_s^T -\p_t\lowen{\ve\s}(t)\,dt$, using \eqref{eq: phi derivatives equation global low order} and commuting $\p_{\hspace{1pt}\I}$ and $\bar p_I$ with Lemma~\ref{lemma: commutator estimate with crazy sequence}.
+  3009: \end{proof}
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 3111)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  3110:     \begin{split}
+> 3111:         \Big|\int_s^T t^{2(A+1)} \big\langle Ne_I\gamma_{JKK}, \delta k_{IJ} \big\rangle_{H^{k_1}(\Omega_t)} \,dt\Big| &\leq \int_s^T \frac{C_* + Cr}{t}\bbh(t)^2 + Ct^{-1+\delta} \,dt\\
+  3112:         &\quad + C\int_{\side_{[s,T]}} t^{2A}\rho(t)\, \frac{t^{-1+4\delta}}{|df|} \,\mu_{\side_{[s,T]}}
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 3111)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  3110:     \begin{split}
+> 3111:         \Big|\int_s^T t^{2(A+1)} \big\langle Ne_I\gamma_{JKK}, \delta k_{IJ} \big\rangle_{H^{k_1}(\Omega_t)} \,dt\Big| &\leq \int_s^T \frac{C_* + Cr}{t}\bbh(t)^2 + Ct^{-1+\delta} \,dt\\
+  3112:         &\quad + C\int_{\side_{[s,T]}} t^{2A}\rho(t)\, \frac{t^{-1+4\delta}}{|df|} \,\mu_{\side_{[s,T]}}
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 3201)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  3200:     \begin{split}
+> 3201:         &\int_s^T t^{2(A+1)} \big\langle Ne_I\gamma_{JKK}, \delta k_{IJ} \big\rangle_{H^{k_1}} \,dt\\
+  3202:         &\hspace{2cm}= \int_s^T t^{2(A+1)} \Big( \big\langle Ne_I\gamma_{JKK}, \delta k_{IJ} \big\rangle_{H^{k_1}} + \big\langle \gamma_{JKK},  Ne_I\delta k_{IJ} \big\rangle_{H^{k_1}} \Big)\,dt\\
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 3202)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  3201:         &\int_s^T t^{2(A+1)} \big\langle Ne_I\gamma_{JKK}, \delta k_{IJ} \big\rangle_{H^{k_1}} \,dt\\
+> 3202:         &\hspace{2cm}= \int_s^T t^{2(A+1)} \Big( \big\langle Ne_I\gamma_{JKK}, \delta k_{IJ} \big\rangle_{H^{k_1}} + \big\langle \gamma_{JKK},  Ne_I\delta k_{IJ} \big\rangle_{H^{k_1}} \Big)\,dt\\
+  3203:         &\hspace{2cm}\quad - \int_s^T t^{2(A+1)} \big\langle \gamma_{JKK}, Ne_I\delta k_{IJ} - e_J\Theta \big\rangle_{H^{k_1}} \,dt\\
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 3203)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  3202:         &\hspace{2cm}= \int_s^T t^{2(A+1)} \Big( \big\langle Ne_I\gamma_{JKK}, \delta k_{IJ} \big\rangle_{H^{k_1}} + \big\langle \gamma_{JKK},  Ne_I\delta k_{IJ} \big\rangle_{H^{k_1}} \Big)\,dt\\
+> 3203:         &\hspace{2cm}\quad - \int_s^T t^{2(A+1)} \big\langle \gamma_{JKK}, Ne_I\delta k_{IJ} - e_J\Theta \big\rangle_{H^{k_1}} \,dt\\
+  3204:         &\hspace{2cm}\quad - \int_s^T t^{2A+1} \Big( \big\langle \gamma_{JKK}, e_J(t\Theta-1) \big\rangle_{H^{k_1}} + \big\langle e_J\gamma_{JKK}, t\Theta-1 \big\rangle_{H^{k_1}} \Big) \,dt\\
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 3204)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  3203:         &\hspace{2cm}\quad - \int_s^T t^{2(A+1)} \big\langle \gamma_{JKK}, Ne_I\delta k_{IJ} - e_J\Theta \big\rangle_{H^{k_1}} \,dt\\
+> 3204:         &\hspace{2cm}\quad - \int_s^T t^{2A+1} \Big( \big\langle \gamma_{JKK}, e_J(t\Theta-1) \big\rangle_{H^{k_1}} + \big\langle e_J\gamma_{JKK}, t\Theta-1 \big\rangle_{H^{k_1}} \Big) \,dt\\
+  3205:         &\hspace{2cm}\quad + \int_s^T t^{2A+1} \big\langle e_J\gamma_{JKK}, t\Theta-1 \big\rangle_{H^{k_1}} \,dt.
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 3205)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  3204:         &\hspace{2cm}\quad - \int_s^T t^{2A+1} \Big( \big\langle \gamma_{JKK}, e_J(t\Theta-1) \big\rangle_{H^{k_1}} + \big\langle e_J\gamma_{JKK}, t\Theta-1 \big\rangle_{H^{k_1}} \Big) \,dt\\
+> 3205:         &\hspace{2cm}\quad + \int_s^T t^{2A+1} \big\langle e_J\gamma_{JKK}, t\Theta-1 \big\rangle_{H^{k_1}} \,dt.
+  3206:     \end{split}
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 3212)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  3211:     \[
+> 3212:     \int_s^T Ct^{-1+\delta} \,dt + C\int_{\side_{[s,T]}} t^{2A}\rho(t)\, \frac{t^{-1+4\delta}}{|df|} \,\mu_{\side_{[s,T]}}.
+  3213:     \]
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 3234)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  3233:         &\bbh(s)^2 + \int_{\side_{[s,T]}} t^{2A}\rho(t)\, \frac{t^{-1+3\delta}}{|df|} \,\mu_{\side_{[s,T]}}\\
+> 3234:         &\leq \int_s^T 2t^{2(A+1)} \Big( \big\langle Ne_K\gamma_{KIJ}, \delta k_{IJ} \big\rangle_{H^{k_1}(\Omega_t)} + \big\langle Ne_I\delta k_{JK}, \gamma_{IJK} \big\rangle_{H^{k_1}(\Omega_t)} \Big) \,dt\\
+  3235:         &\quad + \int_s^T 2t^{2(A+1)} \Big( \big\langle -Ne_Ie_J(\ln N), \delta k_{IJ} \big\rangle_{H^{k_1}(\Omega_t)} + \big\langle -Ne_J\delta k_{JI}, e_I(\ln N) \big\rangle_{H^{k_1}(\Omega_t)} \Big) \,dt\\
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 3235)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  3234:         &\leq \int_s^T 2t^{2(A+1)} \Big( \big\langle Ne_K\gamma_{KIJ}, \delta k_{IJ} \big\rangle_{H^{k_1}(\Omega_t)} + \big\langle Ne_I\delta k_{JK}, \gamma_{IJK} \big\rangle_{H^{k_1}(\Omega_t)} \Big) \,dt\\
+> 3235:         &\quad + \int_s^T 2t^{2(A+1)} \Big( \big\langle -Ne_Ie_J(\ln N), \delta k_{IJ} \big\rangle_{H^{k_1}(\Omega_t)} + \big\langle -Ne_J\delta k_{JI}, e_I(\ln N) \big\rangle_{H^{k_1}(\Omega_t)} \Big) \,dt\\
+  3236:         &\quad + \int_s^T 2t^{2A+1} \Big( \big\langle -\lpar e_Ie_I(\ln N), t\Theta-1 \big\rangle_{H^{k_1}(\Omega_t)} + \big\langle -\lpar e_I(t\Theta-1), e_I(\ln N) \big\rangle_{H^{k_1}(\Omega_t)} \Big) \,dt\\
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 3236)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  3235:         &\quad + \int_s^T 2t^{2(A+1)} \Big( \big\langle -Ne_Ie_J(\ln N), \delta k_{IJ} \big\rangle_{H^{k_1}(\Omega_t)} + \big\langle -Ne_J\delta k_{JI}, e_I(\ln N) \big\rangle_{H^{k_1}(\Omega_t)} \Big) \,dt\\
+> 3236:         &\quad + \int_s^T 2t^{2A+1} \Big( \big\langle -\lpar e_Ie_I(\ln N), t\Theta-1 \big\rangle_{H^{k_1}(\Omega_t)} + \big\langle -\lpar e_I(t\Theta-1), e_I(\ln N) \big\rangle_{H^{k_1}(\Omega_t)} \Big) \,dt\\
+  3237:         &\quad + \int_s^T 2t^{2(A+1)} \Big( \big\langle -Ne_Ie_I\s, \delta\s_0 \big\rangle_{H^{k_1}(\Omega_t)} + \big\langle -Ne_I\delta\s_0, e_I\s \big\rangle_{H^{k_1}(\Omega_t)} \Big) \,dt\\
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 3237)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  3236:         &\quad + \int_s^T 2t^{2A+1} \Big( \big\langle -\lpar e_Ie_I(\ln N), t\Theta-1 \big\rangle_{H^{k_1}(\Omega_t)} + \big\langle -\lpar e_I(t\Theta-1), e_I(\ln N) \big\rangle_{H^{k_1}(\Omega_t)} \Big) \,dt\\
+> 3237:         &\quad + \int_s^T 2t^{2(A+1)} \Big( \big\langle -Ne_Ie_I\s, \delta\s_0 \big\rangle_{H^{k_1}(\Omega_t)} + \big\langle -Ne_I\delta\s_0, e_I\s \big\rangle_{H^{k_1}(\Omega_t)} \Big) \,dt\\
+  3238:         &\quad + \bbh(T)^2 + \int_s^T 2t^{2(A+1)} \big\langle Ne_I\gamma_{JKK}, \delta k_{IJ} \big\rangle_{H^{k_1}(\Omega_t)} + \frac{C_* + Cr - 2A}{t}\bbh(t)^2 + Ct^{-1+\delta} \,dt.
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 3238)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  3237:         &\quad + \int_s^T 2t^{2(A+1)} \Big( \big\langle -Ne_Ie_I\s, \delta\s_0 \big\rangle_{H^{k_1}(\Omega_t)} + \big\langle -Ne_I\delta\s_0, e_I\s \big\rangle_{H^{k_1}(\Omega_t)} \Big) \,dt\\
+> 3238:         &\quad + \bbh(T)^2 + \int_s^T 2t^{2(A+1)} \big\langle Ne_I\gamma_{JKK}, \delta k_{IJ} \big\rangle_{H^{k_1}(\Omega_t)} + \frac{C_* + Cr - 2A}{t}\bbh(t)^2 + Ct^{-1+\delta} \,dt.
+  3239:     \end{split}
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 3246)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  3245:     \begin{split}
+> 3246:         \bbh(s)^2 + \int_{\side_{[s,T]}} t^{2A}\rho(t)\, \frac{t^{-1+3\delta}}{|df|} \,\mu_{\side_{[s,T]}} &\leq \bbh(T)^2 + \int_s^T \frac{C_* + Cr - 2A}{t} \bbh(t)^2 + Ct^{-1+\delta} \,dt\\
+  3247:         &\quad + C\int_{\side_{[s,T]}} t^{2A}\rho(t)\, \frac{t^{-1+4\delta}}{|df|} \,\mu_{\side_{[s,T]}}
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 3275)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  3274:     \begin{split}
+> 3275:         \mfe(s) &\leq \mfe(T) + \int_s^T \frac{6\delta-2\lpar}{t} \lowen{\Theta}(t) + Ct^{-1+\delta} \,dt\\
+  3276:         &\quad + \int_s^T \frac{Cr-2\delta}{t}\Big( \lowen{e}(t) + \lowen{\omega}(t) + \lowen{\ve(\ln N)}(t) + \lowen{\gamma}(t) + \lowen{\ve\s}(t) \Big) \,dt.
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 3276)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  3275:         \mfe(s) &\leq \mfe(T) + \int_s^T \frac{6\delta-2\lpar}{t} \lowen{\Theta}(t) + Ct^{-1+\delta} \,dt\\
+> 3276:         &\quad + \int_s^T \frac{Cr-2\delta}{t}\Big( \lowen{e}(t) + \lowen{\omega}(t) + \lowen{\ve(\ln N)}(t) + \lowen{\gamma}(t) + \lowen{\ve\s}(t) \Big) \,dt.
+  3277:     \end{split}
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 4587)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  4586:     \begin{split}
+> 4587:         s^{2(A+1)} \|a\|_{H^{k_1}(\Omega_s)}^2 &\leq T^{2(A+1)} \|a\|_{H^{k_1}(\Omega_T)}^2 + \int_s^T \frac{-2A-2}{t} t^{2(A+1)}\|a\|_{H^{k_1}(\Omega_t)}^2 \,dt\\
+  4588:         &\quad + \int_s^T \frac{4-8\delta}{t} t^{2(A+1)}\|e(\ln N)\|_{H^{k_1}} \|a\|_{H^{k_1}} \,dt\\
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 4588)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  4587:         s^{2(A+1)} \|a\|_{H^{k_1}(\Omega_s)}^2 &\leq T^{2(A+1)} \|a\|_{H^{k_1}(\Omega_T)}^2 + \int_s^T \frac{-2A-2}{t} t^{2(A+1)}\|a\|_{H^{k_1}(\Omega_t)}^2 \,dt\\
+> 4588:         &\quad + \int_s^T \frac{4-8\delta}{t} t^{2(A+1)}\|e(\ln N)\|_{H^{k_1}} \|a\|_{H^{k_1}} \,dt\\
+  4589:         &\quad + \int_s^T \frac{2(1+\delta)}{t} t^{2(A+1)} \big( \tfrac{1}{2}\|\gamma\|_{H^{k_1}}^2 + \|e(\s)\|_{H^{k_1}(\Omega_t)}^2 \big)^{1/2} \|a\|_{H^{k_1}(\Omega_t)} \,dt\\
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 4589)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  4588:         &\quad + \int_s^T \frac{4-8\delta}{t} t^{2(A+1)}\|e(\ln N)\|_{H^{k_1}} \|a\|_{H^{k_1}} \,dt\\
+> 4589:         &\quad + \int_s^T \frac{2(1+\delta)}{t} t^{2(A+1)} \big( \tfrac{1}{2}\|\gamma\|_{H^{k_1}}^2 + \|e(\s)\|_{H^{k_1}(\Omega_t)}^2 \big)^{1/2} \|a\|_{H^{k_1}(\Omega_t)} \,dt\\
+  4590:         &\quad + \int_s^T \frac{Cr}{t} \bbh(t)^2 + Ct^{-1+\delta} \,dt
+
+- file: sample\arxiv_sources\2604.02104v1\main.tex (line 4590)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  4589:         &\quad + \int_s^T \frac{2(1+\delta)}{t} t^{2(A+1)} \big( \tfrac{1}{2}\|\gamma\|_{H^{k_1}}^2 + \|e(\s)\|_{H^{k_1}(\Omega_t)}^2 \big)^{1/2} \|a\|_{H^{k_1}(\Omega_t)} \,dt\\
+> 4590:         &\quad + \int_s^T \frac{Cr}{t} \bbh(t)^2 + Ct^{-1+\delta} \,dt
+  4591:     \end{split}
+
+- file: sample\arxiv_sources\2604.02108v1\main.tex (line 119)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   118: % (Methods, Sec.~\ref{subsub:activeshape})
+>  119: We first develop a mathematical framework for the proposed visuo-tactile cross-modality approach and then investigate how it supports the inference of physical properties of complex objects through experiments on our robotic platform (shown in Figure\,\ref{fig:experimentalsetuprobot}). Formally we address the problem of estimating the latent state $\mathbf{s}$ of an unknown, non-rigid object placed on a support surface from visual ($\mathbf{o}^V$) and tactile ($\mathbf{o}^T$) observations obtained through interactive actions $\mathbf{a}$. The interaction between objects and the robotic system is modeled as a discrete non-linear dynamical system with tactile and visual observations $\mathbf{o}_{1:H} = (\mathbf{o}_1, \mathbf{o}_2, \ldots, \mathbf{o}_H), \mathbf{o}_t \in \mathbb{R}^{n_o}$ and actions $\mathbf{a}_{1:H} = (\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_H), \mathbf{a}_t \in \mathbb{R}^{n_a}$, defined over discrete time steps $t=1, \ldots, H$. At each time step, the observation vector is defined as the concatenation of visual and tactile measurements $\mathbf{o}_t = [\,\mathbf{o}^V_t,\ \mathbf{o}^T_t\,]'$ with $\mathbf{o}^V_t \in \mathbb{R}^{n^V_o}$ and $\mathbf{o}^T_t \in \mathbb{R}^{n^T_o}$, such that $n^{}_o = n^V_o + n^T_o$. 
+   120: 
+
+- file: sample\arxiv_sources\2604.02108v1\main.tex (line 119)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   118: % (Methods, Sec.~\ref{subsub:activeshape})
+>  119: We first develop a mathematical framework for the proposed visuo-tactile cross-modality approach and then investigate how it supports the inference of physical properties of complex objects through experiments on our robotic platform (shown in Figure\,\ref{fig:experimentalsetuprobot}). Formally we address the problem of estimating the latent state $\mathbf{s}$ of an unknown, non-rigid object placed on a support surface from visual ($\mathbf{o}^V$) and tactile ($\mathbf{o}^T$) observations obtained through interactive actions $\mathbf{a}$. The interaction between objects and the robotic system is modeled as a discrete non-linear dynamical system with tactile and visual observations $\mathbf{o}_{1:H} = (\mathbf{o}_1, \mathbf{o}_2, \ldots, \mathbf{o}_H), \mathbf{o}_t \in \mathbb{R}^{n_o}$ and actions $\mathbf{a}_{1:H} = (\mathbf{a}_1, \mathbf{a}_2, \ldots, \mathbf{a}_H), \mathbf{a}_t \in \mathbb{R}^{n_a}$, defined over discrete time steps $t=1, \ldots, H$. At each time step, the observation vector is defined as the concatenation of visual and tactile measurements $\mathbf{o}_t = [\,\mathbf{o}^V_t,\ \mathbf{o}^T_t\,]'$ with $\mathbf{o}^V_t \in \mathbb{R}^{n^V_o}$ and $\mathbf{o}^T_t \in \mathbb{R}^{n^T_o}$, such that $n^{}_o = n^V_o + n^T_o$. 
+   120: 
+
+- file: sample\arxiv_sources\2604.02116v1\mainV2.tex (line 1228)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  1227: \begin{align}\label{bctm}
+> 1228:    P(Y_i \leq y_i| \boldsymbol{X}_i = \boldsymbol{x}_i) = & \Phi(\boldsymbol{a}_{20}(\lfloor y_i \rfloor)^T \boldsymbol{\gamma}_1 + \beta_0 + \boldsymbol{a}_5(Year_i)^T\boldsymbol{\gamma}_2 + \boldsymbol{a}_5(Month_i)^T\boldsymbol{\gamma}_3 \\
+  1229:     & +  (\boldsymbol{a}_5(Day_i)^T \otimes (\textrm{Period}_i)^T) \boldsymbol{\gamma}_4 + \textrm{Period}_i \times \boldsymbol{\gamma}_5). \nonumber
+
+- file: sample\arxiv_sources\2604.02116v1\mainV2.tex (line 1228)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  1227: \begin{align}\label{bctm}
+> 1228:    P(Y_i \leq y_i| \boldsymbol{X}_i = \boldsymbol{x}_i) = & \Phi(\boldsymbol{a}_{20}(\lfloor y_i \rfloor)^T \boldsymbol{\gamma}_1 + \beta_0 + \boldsymbol{a}_5(Year_i)^T\boldsymbol{\gamma}_2 + \boldsymbol{a}_5(Month_i)^T\boldsymbol{\gamma}_3 \\
+  1229:     & +  (\boldsymbol{a}_5(Day_i)^T \otimes (\textrm{Period}_i)^T) \boldsymbol{\gamma}_4 + \textrm{Period}_i \times \boldsymbol{\gamma}_5). \nonumber
+
+- file: sample\arxiv_sources\2604.02116v1\mainV2.tex (line 1228)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  1227: \begin{align}\label{bctm}
+> 1228:    P(Y_i \leq y_i| \boldsymbol{X}_i = \boldsymbol{x}_i) = & \Phi(\boldsymbol{a}_{20}(\lfloor y_i \rfloor)^T \boldsymbol{\gamma}_1 + \beta_0 + \boldsymbol{a}_5(Year_i)^T\boldsymbol{\gamma}_2 + \boldsymbol{a}_5(Month_i)^T\boldsymbol{\gamma}_3 \\
+  1229:     & +  (\boldsymbol{a}_5(Day_i)^T \otimes (\textrm{Period}_i)^T) \boldsymbol{\gamma}_4 + \textrm{Period}_i \times \boldsymbol{\gamma}_5). \nonumber
+
+- file: sample\arxiv_sources\2604.02116v1\mainV2.tex (line 1229)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  1228:    P(Y_i \leq y_i| \boldsymbol{X}_i = \boldsymbol{x}_i) = & \Phi(\boldsymbol{a}_{20}(\lfloor y_i \rfloor)^T \boldsymbol{\gamma}_1 + \beta_0 + \boldsymbol{a}_5(Year_i)^T\boldsymbol{\gamma}_2 + \boldsymbol{a}_5(Month_i)^T\boldsymbol{\gamma}_3 \\
+> 1229:     & +  (\boldsymbol{a}_5(Day_i)^T \otimes (\textrm{Period}_i)^T) \boldsymbol{\gamma}_4 + \textrm{Period}_i \times \boldsymbol{\gamma}_5). \nonumber
+  1230: \end{align}
+
+- file: sample\arxiv_sources\2604.02116v1\mainV2.tex (line 1229)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  1228:    P(Y_i \leq y_i| \boldsymbol{X}_i = \boldsymbol{x}_i) = & \Phi(\boldsymbol{a}_{20}(\lfloor y_i \rfloor)^T \boldsymbol{\gamma}_1 + \beta_0 + \boldsymbol{a}_5(Year_i)^T\boldsymbol{\gamma}_2 + \boldsymbol{a}_5(Month_i)^T\boldsymbol{\gamma}_3 \\
+> 1229:     & +  (\boldsymbol{a}_5(Day_i)^T \otimes (\textrm{Period}_i)^T) \boldsymbol{\gamma}_4 + \textrm{Period}_i \times \boldsymbol{\gamma}_5). \nonumber
+  1230: \end{align}
+
+- file: sample\arxiv_sources\2604.02116v1\mainV2.tex (line 1233)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  1232: 
+> 1233: \noindent where $\boldsymbol{a}_{20}(y)$ is a monotonic Bernstein polynomial of degree 20, $\lfloor y \rfloor$ is the floor dunction because the response variable is the count type, and $\boldsymbol{a}_5(Year)$, and $\boldsymbol{a}_5(Month)$ represent Bernstein polynomials of degree 5 for year, and month effects. The term $(\boldsymbol{a}_5(Day)^T \otimes (\textrm{Period})^T)$ represents a interaction between day effects (in terms of a Bernstein polynomial) and period of the day (a categorical variable).
+  1234: 
+
+- file: sample\arxiv_sources\2604.02116v1\mainV2.tex (line 1233)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  1232: 
+> 1233: \noindent where $\boldsymbol{a}_{20}(y)$ is a monotonic Bernstein polynomial of degree 20, $\lfloor y \rfloor$ is the floor dunction because the response variable is the count type, and $\boldsymbol{a}_5(Year)$, and $\boldsymbol{a}_5(Month)$ represent Bernstein polynomials of degree 5 for year, and month effects. The term $(\boldsymbol{a}_5(Day)^T \otimes (\textrm{Period})^T)$ represents a interaction between day effects (in terms of a Bernstein polynomial) and period of the day (a categorical variable).
+  1234: 
+
+- file: sample\arxiv_sources\2604.02139v1\main.tex (line 156)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   155: The logic of the algorithm is explained in the following. For each parameter realization $\boldsymbol{\mu}_p$, the snapshot matrix is defined as $\mathbb{X}^{\boldsymbol{\mu}_p} \in \mathbb{R}^{\mathcal{N}_h \times N_t}$, where $\mathcal{N}_h$ denotes the number of mesh cells (i.e. the number of spatial degrees of freedom) and $N_t$ the number of stored time steps. This matrix is then compressed via Singular Value Decomposition (SVD), through the reduced basis $\mathbb{U}^{\boldsymbol{\mu}_p} \in \mathbb{R}^{\mathcal{N}_h \times r}$ of rank $r$. The associated latent representation is obtained as $$
+>  156: \mathbb{V}^{\boldsymbol{\mu}_p}=\left(\mathbb{U}^{\boldsymbol{\mu}_p}\right)^T \mathbb{X}^{\boldsymbol{\mu}_p} \in \mathbb{R}^{r \times N_t}$$
+   157: where $\mathbb{V}^{\boldsymbol{\mu}_p}$ contains the temporal coefficients encoding the dynamics corresponding to the parameter value $\mu_p$, and serves as training data for SHRED. In case of parametric dataset, however, it is necessary to construct a global reduced basis for spanning the entire parametric space, thereby capturing the most representative physical features across different parameter instances. To this end, the complete dataset is assembled as 
+
+- file: sample\arxiv_sources\2604.02139v1\main.tex (line 190)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   189:     \rho = \rho_0 \left(1 - \beta\left(T - T_0 \right) \right) & \text{in } \Omega, \, t > 0\\
+>  190:     \boldsymbol{\tau} =\mu\left(\nabla \mathbf{u}+(\nabla \mathbf{u})^T\right)-\dfrac{2}{3} \mu(\nabla \cdot \mathbf{u} \, \mathbf{I}) & \text{in } \Omega, \, t > 0\\
+   191:     \end{array}\right.
+
+- file: sample\arxiv_sources\2604.02167v1\main.tex (line 1339)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  1338:     \\
+> 1339:     &\times \sum_{\textbf{r}, \textbf{r}'} \int_0^Tdt \int_0^T dt' \langle {\cal J}_\alpha^{({\rm fl})}(\textbf{r}, t) {\cal J}_\alpha^{({\rm fl})}(\textbf{r}', t') \rangle \\
+  1340:     &=\frac{1}{2 } \sum_{\textbf{r}}\int_{-\infty}^\infty dt C^{{\cal J}_\alpha^{({\rm fl})} {\cal J}_\beta^{({\rm fl})}}(t, 0) = \frac{1}{2} \sum_{\textbf{r}} \Gamma^{\alpha \alpha}_{\textbf{r}},
+
+- file: sample\arxiv_sources\2604.02167v1\main.tex (line 1339)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+  1338:     \\
+> 1339:     &\times \sum_{\textbf{r}, \textbf{r}'} \int_0^Tdt \int_0^T dt' \langle {\cal J}_\alpha^{({\rm fl})}(\textbf{r}, t) {\cal J}_\alpha^{({\rm fl})}(\textbf{r}', t') \rangle \\
+  1340:     &=\frac{1}{2 } \sum_{\textbf{r}}\int_{-\infty}^\infty dt C^{{\cal J}_\alpha^{({\rm fl})} {\cal J}_\beta^{({\rm fl})}}(t, 0) = \frac{1}{2} \sum_{\textbf{r}} \Gamma^{\alpha \alpha}_{\textbf{r}},
+
+- file: sample\arxiv_sources\2604.02175v1\main.tex (line 164)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   163: 
+>  164: We model a quantum harmonic oscillator of mass $m$ and eigenfrequency $\Omega$ using the state vector $\vect{v}=[Q,P]^T$, where $Q=z/z_\text{zp}$ and $P=p/p_\text{zp}$ are position $z$ and momentum $p$, each normalized by their respective zero-point values $z_\text{zp}=\sqrt{\hbar/(2m\Omega)}$ and $p_\text{zp}=\sqrt{\hbar m\Omega/2}$. 
+   165: The evolution of the state vector is governed by the quantum Langevin equation
+
+- file: sample\arxiv_sources\2604.02175v1\main.tex (line 174)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   173: The second term $\vect w(t)$ describes a stochastic force acting on the oscillator, which can, e.g., be due to a thermal bath.
+>  174: For an optically levitated nanoparticle in ultra-high vacuum, this stochastic force is dominated by measurement backaction according to $\vect{w}(t)=\sqrt{\Gamma_\text{qb}/r^2}X_\text{in}(t)[0,1]^T$, where $X_\text{in}(t)$ is the zero-mean amplitude quadrature of the tweezer field with autocorrelation function $\langle X_\text{in}(t)X_\text{in}(t')\rangle = \delta(t-t')/2$. 
+   175: The third term $\vect f(t)=f(t)[0,1]^T$ describes the action of a deterministic force $f(t)$. In the following, we model the effect of shot-to-shot noise by assuming that the force $f(t)=f_0$ is constant over a single run of the experiment but can change from run to run.
+
+- file: sample\arxiv_sources\2604.02175v1\main.tex (line 175)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   174: For an optically levitated nanoparticle in ultra-high vacuum, this stochastic force is dominated by measurement backaction according to $\vect{w}(t)=\sqrt{\Gamma_\text{qb}/r^2}X_\text{in}(t)[0,1]^T$, where $X_\text{in}(t)$ is the zero-mean amplitude quadrature of the tweezer field with autocorrelation function $\langle X_\text{in}(t)X_\text{in}(t')\rangle = \delta(t-t')/2$. 
+>  175: The third term $\vect f(t)=f(t)[0,1]^T$ describes the action of a deterministic force $f(t)$. In the following, we model the effect of shot-to-shot noise by assuming that the force $f(t)=f_0$ is constant over a single run of the experiment but can change from run to run.
+   176: 
+
+- file: sample\arxiv_sources\2604.02175v1\main.tex (line 194)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   193: For Gaussian states, the phase-space distribution is fully described by the state's expectation value $\vect d=\avg{\vect v}$ and its covariance matrix
+>  194: $\Sigma=\langle\textbf{v}\textbf{v}^T\rangle-\langle\textbf{v}\rangle\langle\textbf{v}\rangle^T$.
+   195: 
+
+- file: sample\arxiv_sources\2604.02175v1\main.tex (line 210)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   209: \begin{equation}\label{eq:evolutionMean_translationVector}
+>  210:     \vect d_{f_0,r}(\theta)=\frac{f_0}{\Omega} \frac{r^2-1}{r}[r(1-\cos\theta),\sin \theta]^T,
+   211: \end{equation}
+
+- file: sample\arxiv_sources\2604.02175v1\main.tex (line 242)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   241: 
+>  242: It is particularly instructive to visualize the trajectory of $\vect{d}(\theta)$ when starting at the origin $\vect{d}_0=[0,0]^T$.
+   243: In this case, the state's mean is given by $\vect{d}_{f_0,r}(\theta)$ and traces an elliptical trajectory around the center point
+
+- file: sample\arxiv_sources\2604.02175v1\main.tex (line 245)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   244: \begin{equation}\label{eq:rotationPoint}
+>  245:     \vect c_{f_0,r} = \left[\frac{f_0}{\Omega}(r^2-1), 0 \right]^T.
+   246: \end{equation}
+
+- file: sample\arxiv_sources\2604.02175v1\main.tex (line 255)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   254: \begin{equation}\label{eq:covarianceMatrix_sum}
+>  255:     \Sigma(\theta) = \Phi_r(\theta)\Sigma_0\Phi(\theta)^T + \Sigma_{r}^\Gamma(\theta).
+   256: \end{equation}
+
+- file: sample\arxiv_sources\2604.02175v1\main.tex (line 327)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   326:     \Sigma_{r'rr'}(\theta_2) =  
+>  327:     \Phi_r(\theta_2) \Sigma_0 \Phi_r^T(\theta_2) 
+   328:     + \Phi_r(\theta_2) \Sigma_{r'}^\Gamma(\pi) \Phi_r^T(\theta_2) 
+
+- file: sample\arxiv_sources\2604.02175v1\main.tex (line 328)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   327:     \Phi_r(\theta_2) \Sigma_0 \Phi_r^T(\theta_2) 
+>  328:     + \Phi_r(\theta_2) \Sigma_{r'}^\Gamma(\pi) \Phi_r^T(\theta_2) 
+   329:     \\ +\Sigma_r^\Gamma(\theta_2)
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 106)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   105: \newcommand{\intok}{\int_0^{k}}
+>  106: \newcommand{\intot}{\int_0^T}
+   107: \newcommand{\ka}{k_\alpha}
+
+- file: sample\arxiv_sources\2604.02188v1\bare_jrnl.tex (line 538)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   537: \begin{equation}
+>  538:     \text{Self-Attention}(Q,K,V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V,
+   539: \end{equation}
+
+- file: sample\arxiv_sources\2604.02214v1\main.tex (line 283)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   282:         \begin{matrix}
+>  283:            \mathbf{\tilde{D}}^{(0)} & (\boldsymbol{\delta}\mathbf{\tilde{D}}^{(0)}\cdot \mathbf{\tilde{\Psi}}^{(0)})^T\\
+   284:            (\mathbf{\tilde{\Psi}}^{(0)})^T & \mathbf{0} 
+
+- file: sample\arxiv_sources\2604.02214v1\main.tex (line 284)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   283:            \mathbf{\tilde{D}}^{(0)} & (\boldsymbol{\delta}\mathbf{\tilde{D}}^{(0)}\cdot \mathbf{\tilde{\Psi}}^{(0)})^T\\
+>  284:            (\mathbf{\tilde{\Psi}}^{(0)})^T & \mathbf{0} 
+   285:         \end{matrix}
+
+- file: sample\arxiv_sources\2604.02214v1\main.tex (line 291)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   290:         \end{matrix}
+>  291:     \right)^T \nonumber\\
+   292:     \mathbf{s}&=\left(
+
+- file: sample\arxiv_sources\2604.02214v1\main.tex (line 296)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   295:         \end{matrix}
+>  296:     \right)^T.
+   297: \end{align}
+
+- file: sample\arxiv_sources\2604.02214v1\main.tex (line 298)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   297: \end{align}
+>  298: The additional row enforces the orthogonality condition $(\mathbf{\tilde{\Psi}}^{(0)})^T\mathbf{\tilde{\Psi}}^{(1)}$=0, which ensures we find a unique solution (see Sec.~III.B of \cite{Cardoso2026RingingRapidlyRotating}). The operators $\mathbf{\tilde{D}}$ are discretized versions of the regular, continuous operators $\tilde{\mathcal{D}}$ from Eq. (\ref{eq:Eq_O1_reg}) with any divergent coefficients removed by the $B^{(1)}$ term. This system can be solved for $\mathbf{x}$ using standard linear solve methods, like Mathematica's \texttt{LinearSolve}, to find the scalar QNM corrections.
+   299: 
+
+- file: sample\arxiv_sources\2604.02224v1\main.tex (line 490)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   489: \paragraph{High Volatility and Cumulative Pressure ($T=100$).} 
+>  490: By setting the volatility to $\sigma_J = 1.5$ (with a corresponding $\sigma_{CIR} \approx 0.387$) over an extended horizon of $T=100$, we observe that the final epidemic size, $1-S_T$, saturates at $1.0$ for both models. However, the cumulative transmission intensity, $H_T = \int_0^T \beta_s \, ds$, highlights the fundamental differences between the two frameworks, as illustrated in Figure \ref{fig:scenario2}. The CIR process exhibits a heavy right tail because it admits extreme transmission intensities that are structurally non-realizable within the bounded Jacobi framework. This suggests that this tail behavior, rather than the mean dynamics, governs the elevated risk bounds in unbounded models.
+   491: 
+
+- file: sample\arxiv_sources\2604.02285v1\membership.tex (line 283)
+  error: ^T
+  message: Write ^\top or ^\mathsf{T} instead of ^T. If this is a power of T, write as ^{T}.
+   282: 
+>  283: Let the constraints be indexed $1$ through $m$, with hyperplanes $H_i = \{x \mid a_i^T x = b_i\}$. 
+   284: For any subset $I \subseteq \{1, \dots, m\}$, define the affine subspace $E_I = \{x \mid A_I x = b_I\}$. 
 

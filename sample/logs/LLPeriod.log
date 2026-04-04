@@ -1,4 +1,4 @@
-[CODE] LLPeriod (245)
+[CODE] LLPeriod (327)
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 112)
   error: i.e. 
   message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
@@ -769,6 +769,20 @@
 > 1075: We propose a \textbf{Class-Aware Information Gain (CAIG)} score for evaluating candidate edges during Phase 2 of CARGO. Given \(m\) i.i.d. samples from a dataset \(\boldsymbol{D}\), CAIG balances three key factors: mutual information derived from information gain, class imbalance, and network complexity. 
   1076: %?Unlike heuristic-based methods, CAIG is \emph{score-equivalent} and \emph{locally consistent}, with asymptotic convergence to the true mutual information—akin to the guarantees of the BIC criterion.?
 
+- file: sample\arxiv_sources\2509.19112v3\neurips_2025.tex (line 821)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   820: \end{equation}
+>  821: Where \(\varepsilon\) denotes the search space (all possible edges over \(\boldsymbol{U}\)) and \(S(e)\) a criterion function for edge relevance (e.g. edge frequency, thresholds, \(\cdots\)). 
+   822: This formulation takes into account the underlying edges' characteristics but not the overall network structure, complexity and missing data \cite{consensus_bn_jose}, leading to a \textit{consensus fusion approach} \cite{torrijos2025informedgreedyalgorithmscalable}.
+
+- file: sample\arxiv_sources\2509.19112v3\neurips_2025.tex (line 850)
+  error: i.i.d. 
+  message: Consider adding a comma "i.i.d.," or using "i.i.d.\ " to avoid spacing issues.
+   849: \paragraph{Criterion.}
+>  850: We propose a \textbf{Class-Aware Information Gain (CAIG)} score for evaluating candidate edges during Phase 2 of CARGO. Given \(m\) i.i.d. samples from a dataset \(\boldsymbol{D}\), CAIG balances three key factors: mutual information derived from information gain, class imbalance, and network complexity. 
+   851: %?Unlike heuristic-based methods, CAIG is \emph{score-equivalent} and \emph{locally consistent}, with asymptotic convergence to the true mutual information—akin to the guarantees of the BIC criterion.?
+
 - file: sample\arxiv_sources\2511.08548v1\appendix_problems.tex (line 66)
   error: i.e. 
   message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
@@ -782,6 +796,566 @@
    148: 2021 N6 & Determine all integers \$n \textbackslash{}geqslant 2\$ with the following property: every \$n\$ pairwise distinct integers whose sum is not divisible by \$n\$ can be arranged in some order \$a\_\{1\}, a\_\{2\}, \textbackslash{}ldots, a\_\{n\}\$ so that \$n\$ divides \$1 \textbackslash{}cdot a\_\{1\}+2 \textbackslash{}cdot a\_\{2\}+\textbackslash{}cdots+n \textbackslash{}cdot a\_\{n\}\$. \\
 >  149: 2021 N7 & Let \$a\_\{1\}, a\_\{2\}, a\_\{3\}, \textbackslash{}ldots\$ be an infinite sequence of positive integers such that \$a\_\{n+2 m\}\$ divides \$a\_\{n\}+a\_\{n+m\}\$ for all positive integers \$n\$ and \$m\$. Prove that this sequence is eventually periodic, i.e. there exist positive integers \$N\$ and \$d\$ such that \$a\_\{n\}=a\_\{n+d\}\$ for all \$n>N\$. \\
    150: 2021 N8 & For a polynomial \$P(x)\$ with integer coefficients let \$P\textasciicircum{}\{1\}(x)=P(x)\$ and \$P\textasciicircum{}\{k+1\}(x)=\$ \$P\textbackslash{}left(P\textasciicircum{}\{k\}(x)\textbackslash{}right)\$ for \$k \textbackslash{}geqslant 1\$. Find all positive integers \$n\$ for which there exists a polynomial \$P(x)\$ with integer coefficients such that for every integer \$m \textbackslash{}geqslant 1\$, the numbers \$P\textasciicircum{}\{m\}(1), \textbackslash{}ldots, P\textasciicircum{}\{m\}(n)\$ leave exactly \$\textbackslash{}left\textbackslash{}lceil n / 2\textasciicircum{}\{m\}\textbackslash{}right\textbackslash{}rceil\$ distinct remainders when divided by \$n\$. \\
+
+- file: sample\arxiv_sources\2602.01135v2\example_paper.tex (line 1047)
+  error: i.i.d. 
+  message: Consider adding a comma "i.i.d.," or using "i.i.d.\ " to avoid spacing issues.
+  1046: %\paragraph{Approximation.}
+> 1047: The previous Eq.~\ref{eq:cmi_theorique} involves an expectation over the distribution of histories \(x_{<t}\). Since the true distribution $P$ is unknown, we utilize the \(\epsilon\)-Oracle model $\text{Tf}_\theta$ as a proxy to simulate $N$ i.i.d. history particles $\{x^{(l)}_{<t}\}_{l=1}^N \sim P_\theta(X_{<t})$. We define the empirical estimator $\hat{I}_N$ of the CMI as the Monte Carlo estimation:
+  1048: \small{
+
+- file: sample\arxiv_sources\2602.01135v2\example_paper.tex (line 1058)
+  error: i.i.d. 
+  message: Consider adding a comma "i.i.d.," or using "i.i.d.\ " to avoid spacing issues.
+  1057: \textit{Proof Sketch.}
+> 1058: It follows directly from the Strong Law of Large Numbers (SLLN), as the samples are drawn i.i.d. from $P_\theta$ and the information gain term \(f_\theta(x^{(l)}_{<t})\) is bounded by $\log 2$, ensuring finite variance. 
+  1059: 
+
+- file: sample\arxiv_sources\2603.16313v2\appendix_b.tex (line 250)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   249: \end{equation}
+>  250: Where \(\varepsilon\) denotes the search space (all possible edges over \(\boldsymbol{U}\)) and \(S(e)\) a criterion function for edge relevance (e.g. edge frequency, thresholds, \(\cdots\)). 
+   251: This formulation accounts for the characteristics of the underlying edges but not for the overall network structure, complexity, or missing data \cite{consensus_bn_jose}, leading to a \textit{consensus fusion approach} \cite{torrijos2025informedgreedyalgorithmscalable}.
+
+- file: sample\arxiv_sources\2603.16313v2\appendix_b.tex (line 277)
+  error: i.i.d. 
+  message: Consider adding a comma "i.i.d.," or using "i.i.d.\ " to avoid spacing issues.
+   276: \paragraph{Criterion.}
+>  277: We propose a \textbf{Class-Aware Information Gain (CAIG)} score for evaluating candidate edges during Phase 2 of CARGO. Given \(m\) i.i.d. samples from a dataset \(\mathcal{D}\), CAIG balances three key factors: mutual information derived from information gain, class imbalance, and network complexity. 
+   278: %?Unlike heuristic-based methods, CAIG is \emph{score-equivalent} and \emph{locally consistent}, with asymptotic convergence to the true mutual information—akin to the guarantees of the BIC criterion.?
+
+- file: sample\arxiv_sources\2603.16313v2\c4.tex (line 1145)
+  error: i.i.d. 
+  message: Consider adding a comma "i.i.d.," or using "i.i.d.\ " to avoid spacing issues.
+  1144: \textit{(Proof Sketch)}
+> 1145: It follows directly from the Strong Law of Large Numbers (SLLN), as the samples are drawn i.i.d. from $P_\theta$ and the information gain term \(f_\theta(x^{(l)}_{<t})\) is bounded by $\log 2$, ensuring finite variance. 
+  1146: 
+
+- file: sample\arxiv_sources\2604.02064v1\main.tex (line 1181)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+  1180: \end{equation}
+> 1181: Considering the case $n_0=0$, i.e. $4n = 2^\nf$, this can be recast in the minimal number of qubits required given accuracy~$\eps$, namely
+  1182: \begin{equation}\label{eq:nf_epsilon}
+
+- file: sample\arxiv_sources\2604.02070v1\bilayer.tex (line 1975)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+  1974: to find its asymptotic behavior to within an $O(1/(\sigma \bar \rho))$
+> 1975: error (arguing, e.g. as in \cite{newman63}):
+  1976: \begin{align}
+
+- file: sample\arxiv_sources\2604.02081v1\main.tex (line 203)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   202: 
+>  203: We attribute the variation of the final Bell state fidelity primarily due to drifts in the interferometer phase ($\approx 2\%$). In addition, we attribute the decrease in the final Bell state fidelity  (from $\mathcal{F} =  0.996$) to drifts in the interferometer phase ($\approx 1\%)$, extinction ratio of FPBS ($\approx 1\%$) and imperfectly setting the MPCs, VOAs and SNSPD detector efficiencies ($\approx 8\%$) to balance PDL. These errors are consistent with the observed decrease in overall fidelity. At the cost of complexity, loss in interconversion modules in this work (\SI{\approx12}{\dB} and \SI{\approx7}{\dB}) can be decreased by up to \SI{6}{\dB} by using active switches (e.g. electro-optic modulators) instead of beamsplitters to combine/split time-bins.
+   204: 
+
+- file: sample\arxiv_sources\2604.02084v1\boundednessdecaywave.tex (line 119)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   118: 
+>  119: Given the remarkable difficulty of understanding \eqref{EE} near a stationary solution, a common approach is to first look at the global in time dynamics of scalar perturbations on a fixed exterior, i.e. solutions to the conformal\footnote{Equation \eqref{confWE} is called conformal, or conformally invariant, because if we apply the conformal transformation $\tilde{g}=h^{2}g$, we find that $\tilde{\psi}=h^{-1}\psi$
+   120: solves equation $\square_{\tilde{g}}\tilde{\psi}-\frac{1}{6}\tilde{R}\tilde{\psi}=h^{-3}\left(\square_{g}\psi-\frac{1}{6}R\psi\right)$.} wave equation:
+
+- file: sample\arxiv_sources\2604.02084v1\boundednessdecaywave.tex (line 790)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   789: \end{align}
+>  790: The proof is concluded if we find a way to control all terms appearing in the last line. First of all, observe that any contribution made in the region $[r_{\text{RED}},r_{\text{CUT}}]$ can be included into the spacetime term in the second line, i.e. the one we obtained applying property \eqref{KawayH} to $\mathbf{K}^N_0[\psi]$. We are thus left with the contributions in the region $[r_+,r_{\text{RED}}]$:
+   791: \begin{align}
+
+- file: sample\arxiv_sources\2604.02084v1\boundednessdecaywave.tex (line 931)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   930: 
+>  931: This concludes the proof of the first statement of Theorem \ref{thm:deg-integrated}, i.e. the degenerate and conditional Morawetz estimate for $r\psi$.
+   932: 
+
+- file: sample\arxiv_sources\2604.02084v1\boundednessdecaywave.tex (line 933)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   932: 
+>  933: To obtain statement 2, i.e. the unconditional, degenerate Morawetz estimate for $T\psi$, apply the divergence identity \eqref{eq:integralid} to the solution $T\psi$. Repeat the proof of statement 1 using $T\psi$ instead of $\psi$, but, when dealing with the boundary term at $\scri^+$, observe that it is no longer necessary to invoke Poincaré inequality \eqref{poincare} because one finds
+   934: \begin{equation}
+
+- file: sample\arxiv_sources\2604.02084v1\boundednessdecaywave.tex (line 1008)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+  1007: \end{multline}
+> 1008: We claim that $h'(r)$ can be made arbitrarily small while maintaining the desired profile for $h(r)$. In fact, with respect to the tortoise coordinate $r^*$, the smooth cut-off function $h$ transitions from $0$ to $1$ between two points $r^*_0$ and $r^*_1=r^*_{\text{RED}}$, corresponding respectively to $r_0$ and $r_{\text{RED}}$. Since the event horizon $r_+$ corresponds to $r^*(r_+)= -\infty$, we have infinite space to operate the transition from $0$ to $1$, i.e. we can push $r^*_0$ towards $-\infty$ as much as needed and, in so doing, make $h'(r)$ as small as necessary to absorb the error on the left hand side.
+  1009: \end{proof}
+
+- file: sample\arxiv_sources\2604.02101v1\CDC.tex (line 196)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   195: 
+>  196: For the simplicity, we assume that attackers are kamikaze, i.e. they ignore defenders and have single
+   197: objective, the destruction of the HVU. Furthermore, we suppose that the dynamics/behavior of attackers is known.
+
+- file: sample\arxiv_sources\2604.02108v1\main.tex (line 115)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   114:     \includegraphics[width=0.85\textwidth]{figures/Figure_5.pdf}
+>  115:      \caption{Robotic experimental setup and data collection pipeline. a) The figure illustrates the main stages used to construct the visuo-tactile interaction dataset. The process begins with initial estimation of the object shape and pose, which is used to autonomously perform prehensile robotic interactions. These interactions generate rich, time-varying visual and tactile observations capturing both geometric and contact dynamics. The resulting multi-sensory streams are then processed by the proposed Cross-Modal Latent Filter (CMLF) to infer latent object properties and interaction dynamics over time. b) To emulate everyday non-rigid objects, we designed a set of synthetic objects with configurable material properties, enabling controlled variation in flexibility. This allows us to systematically control intrinsic (e.g. mass, stiffness, surface friction) and extrinsic (e.g. size, shape, visual texture) physical attributes and to study their cross-modal associations.}
+   116:     \label{fig:experimentalsetuprobot}
+
+- file: sample\arxiv_sources\2604.02108v1\main.tex (line 115)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   114:     \includegraphics[width=0.85\textwidth]{figures/Figure_5.pdf}
+>  115:      \caption{Robotic experimental setup and data collection pipeline. a) The figure illustrates the main stages used to construct the visuo-tactile interaction dataset. The process begins with initial estimation of the object shape and pose, which is used to autonomously perform prehensile robotic interactions. These interactions generate rich, time-varying visual and tactile observations capturing both geometric and contact dynamics. The resulting multi-sensory streams are then processed by the proposed Cross-Modal Latent Filter (CMLF) to infer latent object properties and interaction dynamics over time. b) To emulate everyday non-rigid objects, we designed a set of synthetic objects with configurable material properties, enabling controlled variation in flexibility. This allows us to systematically control intrinsic (e.g. mass, stiffness, surface friction) and extrinsic (e.g. size, shape, visual texture) physical attributes and to study their cross-modal associations.}
+   116:     \label{fig:experimentalsetuprobot}
+
+- file: sample\arxiv_sources\2604.02108v1\main.tex (line 278)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   277: 
+>  278: Inspired by household items (e.g. food containers, milk cartons), each object comprised: (i) a rigid inner inertial block, 3D printed in one of five prismatic shapes \{\textit{cylinder,\,ellipsoid,\,cube,\,cuboid,\,hexagonal prism}\} and of three height levels \{0.12,\,0.15,\,0.175\}\,m; (ii) a polyurethane foam covering with stiffness values \{3,\,9,\,15,\,20,\,25\}\,kPa; and (iii) an outer textured layer to vary surface friction. Given the difficulty of producing standardized friction surfaces, we employed natural textures and empirically measured the approximate static coefficients measured $\mu \in$ \{0.1,\,0.15,\,0.35,\,0.47,\,0.8\}.
+   279: 
+
+- file: sample\arxiv_sources\2604.02108v1\main.tex (line 315)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   314: 
+>  315: Kernel Ridge Regression (KRR) with a radial basis function (RBF) kernel was used to align the latent representations corresponding to physical parameters (e.g. object properties and pose) using three separate KRR models:
+   316: \begin{align}
+
+- file: sample\arxiv_sources\2604.02111v1\ms.tex (line 292)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   291: will be explored in a paper of the \MTW\ series) and some published orbits are either contaminated by third-light effects or even 
+>  292: false orbits generated by e.g. poor temporal sampling of pulsating stars (MONOS~II, \citealt{SimDetal24}). Furthermore, 
+   293: massive stars are scarce so any additional information about one or several objects may be crucial to solve problems relevant to a 
+
+- file: sample\arxiv_sources\2604.02111v1\ms.tex (line 346)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   345: circular aperture that (for the most part) erases the spatial information from visual binaries
+>  346: (e.g. \citealt{SimDetal15a}), something that can be overcome at lower spectral resolutions with 
+   347: long slits or IFUs \citep{Maizetal18a,Maizetal21b,MaizBarb20}. We expect to include in \MTW\ intermediate-resolution spectra from 
+
+- file: sample\arxiv_sources\2604.02111v1\ms.tex (line 360)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   359: finding a solution in a many-dimensional space, one is likely to find local minima that are not the desired one and, in such cases,
+>  360: using external information (e.g. orbital periods or eccentricities) can significantly improve the solution, hence the usefulness of
+   361: having previous spectroscopic orbits available. Astrometry will not be the only \Gaia\ data that we will use, as DR4 will also 
+
+- file: sample\arxiv_sources\2604.02111v1\ms.tex (line 388)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   387: more components in a spectroscopic binary but also for other tasks such as the fitting and subtraction of the ISM component and the 
+>  388: generation of high S/N spectra of SB1 systems (e.g. OWN~I).
+   389: %/wɪnd/ /wʌɪnd/
+
+- file: sample\arxiv_sources\2604.02111v1\ms.tex (line 436)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   435: velocities\footnote{The current version of the code assumes that the two stars are not too different in \Teff, so that the flux 
+>  436: fraction does not change much over the wavelength range of interest. For systems composed of e.g. a blue and a red star, a
+   437: solution is to divide the disentangling process in several wavelength ranges and apply different flux fractions in each.}. 
+
+- file: sample\arxiv_sources\2604.02111v1\ms.tex (line 765)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   764: \ion{He}{ii} lines also detected). For similar efforts over a range about one half of that (but avoiding regions of strong telluric 
+>  765: absorption), see e.g. \citet{Rosuetal20a,Rosuetal22a}.
+   766: 
+
+- file: sample\arxiv_sources\2604.02111v1\ms.tex (line 768)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   767: As part of the outer iteration described above and, given the previous results of \citet{Maizetal15a}, we initially assumed a flux 
+>  768: fraction for Aa of 0.50 (i.e. a flux ratio of 1:1 between the two components). Such an assumption leads to the two components having
+   769: almost identical spectra (Figs.~\ref{He_II}~and~\ref{blue-violet}), with EWs that conform to what is expected from observed stars of 
+
+- file: sample\arxiv_sources\2604.02111v1\ms.tex (line 879)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   878:           \ion{He}{i} velocity of $-23.5$~km/s in our barycentric reference frame, which is blueshifted with respect to either 
+>  879:           \ion{K}{i} cloud. Stellar lines are broader in velocity than the plotted range (see e.g. Fig.~\ref{He_II}).}
+   880:  \label{He_I}      
+
+- file: sample\arxiv_sources\2604.02111v1\ms.tex (line 1187)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+  1186: The DIB fitting was done iteratively, fixing RV to that of the ISM rest frame but leaving $\lambda_0$, FWHM and the EW
+> 1187: free. For DIBs with asymmetries or internal level structure (e.g. DIBN6614) we fitted the profiles with multiple 
+  1188: (2 to 4) Gaussians. We tried fitting each DIB in as many stars as possible, explicitly excluding the DIB-star 
+
+- file: sample\arxiv_sources\2604.02111v1\ms.tex (line 1190)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+  1189: combinations where the DIB was too weak or contaminated by stellar features. For cases with multiple Gaussians we were even more 
+> 1190: strict in the stars we selected, excluding those where some circumstance (e.g. kinematic broadening, see above) led to a poor fit.
+  1191: Finally, the $\lambda_0$ and FWHM of each fitted Gaussian was averaged among the selected stars in each case to yield the final
+
+- file: sample\arxiv_sources\2604.02111v1\ms.tex (line 1272)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+  1271: popular for DIB studies thanks to the data availability in \Gaia~DR3, soon to increase significantly in DR4. Most such
+> 1272: studies concentrate on the strongest DIB, DIBN8621 (e.g. \citealt{Schuetal23a}), with some including the second one in EW for most
+  1273: sightlines, DIBI8646 (e.g. \citealt{Zhaoetal24}). A third previously known DIB, DIBN8530 \citep{JennDese94},
+
+- file: sample\arxiv_sources\2604.02111v1\ms.tex (line 1273)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+  1272: studies concentrate on the strongest DIB, DIBN8621 (e.g. \citealt{Schuetal23a}), with some including the second one in EW for most
+> 1273: sightlines, DIBI8646 (e.g. \citealt{Zhaoetal24}). A third previously known DIB, DIBN8530 \citep{JennDese94},
+  1274: has been ignored in recent studies to our knowledge. In addition to those, we detect three new weak DIBs close to the bluemost
+
+- file: sample\arxiv_sources\2604.02117v1\main.tex (line 306)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   305: 
+>  306: On the noncommutative metric geometry side of the story, quantum metric spaces of Rieffel were  introduced in \cite{Rieffel98a} motivated by noncommutative differential geometry in the sense of Connes \cite{Connes} and the need to introduce a more metric side of the noncommutative story to address statements in the high energy physics literature \cite{Rieffel00}. It's safe to say that  Rieffel's quantum metric spaces have been established as an important chapter in the story of quantum mathematics. Therefore, in \cite{Aguilar25}, the authors used the quantum metric to induce a metric on the density space and made several topological observations. But again, just as with the Bures metric, the non-unital case has not been studied yet. However, Rieffel's compact quantum metric spaces cannot be used since they are by definition only for unital spaces. But thankfully, a non-unital notion of a quantum metric space has been introduced by Latr\'emoli\`ere \cite{Latremoliere12b} called a quantum locally compact metric space. Although this is the natural choice for the non-unital case, one issue does arise, which is that quantum metric can take value infinity (i.e. in general, it is at best an extended metric). To remedy this, we introduce a subclass of quantum locally compact metric spaces called quantum Lipschitz triples, which have the benefit of a quantum metric that is truly a metric on the density space. We first prove that this is a natural setting since we show that the topology induced by the quantum metric for quantum Lipschitz triples is weaker than the topology induced by the C*-norm (see Theorem \ref{t:c*-norm-stronger-qm}). Next, unlike the Bures metric setting, the question of compactness seems to be more subtle likely due to the dependence on the $L$-seminorm given by the quantum Lipschitz triple. But, we still perform a detailed analysis of the quantized interval, where we show that the Bures metric and quantum metric are not uniformly equivalent (Theorem \ref{t:non-uniform}) and that the quantum metric topology is not compact (Theorem \ref{t:non-compact}). As this example comes from a non-classical construction, we hope that it will provide future insights into the topological nature of the quantum metric on the density space for both the non-unital and  unital case. Overall, we hope this article not only begins the study of these fascinating metrics (the Bures metric and quantum metric) in the non-unital setting, but also provides foundational result for future work to build.
+   307: 
+
+- file: sample\arxiv_sources\2604.02117v1\main.tex (line 1261)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+  1260:     \]
+> 1261:     where   $\de_n$ is the Dirac point mass at $n$ (i.e. $\de_n(f)=f(n)$ for every $f\in C_0(\N)$).
+  1262: \end{lemma}
+
+- file: sample\arxiv_sources\2604.02128v1\main.tex (line 368)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   367: \section{Proposed Framework }
+>  368: In this section, we present the details for the proposed closed-loop framework, i.e. Synthetic data generation with Ethics Audit Loop (SEAL) in AI-native 6G networks. 
+   369: % The SEAL framework focuses on simulating realistic 6G scenarios through layered, configurable components. By integrating the ERCD module and a closed-loop FL feedback system, the SEAL framework ensures that synthetic datasets are not only realistic but also ethically sound, auditable, and continuously refined against real-world discrepancies. 
+
+- file: sample\arxiv_sources\2604.02128v1\main.tex (line 372)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   371: % The SEAL framework also prioritizes structural cohesion, interoperability, and compliance with standards such as 3GPP TS 28.105 for AI trustworthiness\footnote{https://www.3gpp.org/technologies/ai-ml-management}. \\
+>  372: The proposed SEAL framework comprises of five layers, i.e. Data Generation Layer, ERCD Module, FL feedback layer, Audit and Validation layer, and Governance layer. The SEAL framework is designed to be an integrated pipeline that processes inputs from simulation parameters to produce auditable and refined synthetic datasets that are suitable for training AI models in the context of AI-native 6G systems \cite{ref1}. Let us denote the simulation parameters with $\theta$, which is fed into the data generation layer (DGL) to generate the initial synthetic dataset $\mathfrak{D}$ while capturing 6G-specific scenarios. The $\mathfrak{D}$ is then fed to the ERCD module that transforms the synthetically generated data into an augmented dataset $\mathfrak{D}'$ by enriching it with test suites, bias metadata, and compliance annotations. To address real-world alignment, the FL feedback layer (FLFL) analyzes the discrepancies between $\mathfrak{D}'$ and aggregated insights from real deployments while computing updates to $\theta$. 
+   373: % These updates will refine subsequent generations of $\mathfrak{D}$, indirectly improving future $\mathfrak{D}'$ through iterative recalibration. 
+
+- file: sample\arxiv_sources\2604.02128v1\main.tex (line 424)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   423: 
+>  424: The SEAL framework ensures the differential privacy by adding noise, i.e. $v \sim \mathcal{N}(0, \sigma^{2}I)$ to $g_{CL}$, with $\sigma$ calibrated for $(\epsilon, \delta) - DP$, in order to balance utility and protection \cite{FLoriginal, FL1, FL3}. In the context of 6G, parameters are refined through this process, such as in channel variance: $\theta' = \theta_{chan} + \Delta$, where $\Delta$ corresponds to the parameter that minimizes reality-simulation mismatches. The loop is integrated with audit by providing updated $\mathfrak{D}'$ for validation and governance during aggregation (e.g., consent checks). 
+   425: 
+
+- file: sample\arxiv_sources\2604.02128v1\main.tex (line 450)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   449: 
+>  450: In GL, we achieve the traceability through lifecycle state management, i.e. $\mathcal{S}_{t+1} = Trans(\mathcal{S}_{t}, \mathcal{A}_{t})$, where $\mathcal{S}_{t}, \mathcal{A}_{t}$ represent the dataset's state at time $t$ (e.g., "generated", "validated", "archived"), and the action performed (e.g., FL update or audit pass), respectively. The $Trans$ function is the transition function that records changes with timestamps and the actors involved. Lifecycle state management uses provenance metadata from the DGL and ERCD trails to create an immutable audit log, enabling reconstruction of the dataset's history for compliance audits or dispute resolution \cite{auditgovernance}. We can also apply differential privacy in the Governance layer by integrating a privacy budget into the loss function. Lastly, dissemination, that is, the sharing of datasets in GL, is managed through the function $Share(\mathfrak{D}') = Enc(\mathfrak{D}', key)$, indicating that if $Auth$ succeeds and certification from the audit is valid, the data can be shared in encrypted form $Enc$ using the encryption key $key$. Encrypted sharing of the dataset supports interoperability across organizations while enforcing data sovereignty. 
+   451: 
+
+- file: sample\arxiv_sources\2604.02136v1\introduction.tex (line 16)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+    15: 
+>   16: For experiments such as pion electro-production, which often have a lower momentum resolution requirement, dipole-only non-focusing spectrometers were used, see e.g. Refs.~\cite{Bonn, Gross, Doug}.
+    17: Those spectrometers provided a much larger solid angle up to 50-100~msr, a wide momentum range starting from a few hundred MeV/c, and a relative momentum resolution of (0.3-1)$\times$p[GeV]\%.
+
+- file: sample\arxiv_sources\2604.02136v1\introduction.tex (line 32)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+    31: The momentum reconstruction in the SBS uses the so-called "vertical bend" approach, in which the magnet midplane is vertical.
+>   32: The vertical coordinate of the beam-target interaction point is defined by the location of the beam, so the track's coordinates and directions after the magnet permit unique reconstruction of the particle momentum, $p$, the polar and azimuthal angles of the particle trajectory at the target relative to the beam direction, $\theta$ and $\phi$,  and the $y$ coordinate of the scattering vertex (transverse to the dispersive direction) at the target, see e.g. Ref.~\cite{Optics}.
+    33: 
+
+- file: sample\arxiv_sources\2604.02137v1\main_v3.tex (line 184)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   183: In this work, we focus on the interface diffusion problem, discretized by means of piecewise linear conforming elements on an unfitted mesh. First, we describe how to construct an 
+>  184: $ H(div,\Omega)$-conforming flux in the whole domain, using a hybrid mixed formulation with Lagrange multipliers associated to each sub-domain. This approach yields a flux which satisfies the natural local conservation property while preserving the transmission condition on the interface. We then employ the recovered flux in a posteriori error analysis and establish the sharp reliability of the corresponding error estimator, \textcolor{black}{i.e. we bound the error by the estimator plus a higher order term, with a constant in front of the estimator equal to $1$.} Finally, we present a numerical experiment which illustrates the proposed approach.
+   185: 
+
+- file: sample\arxiv_sources\2604.02137v1\main_v3.tex (line 541)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   540: \]
+>  541: where \((x, y) \in \Omega = [-1, 1]^2\) and $ k^-=1, \, k^+=100k^- $. We set a non-homogeneous  Dirichlet condition. \textcolor{black}{As regards the refinement, we use the D\"{o}rfler marking strategy \cite{dorfler1996convergent}, i.e. we look for the set of elements \(\mathcal T_h^m\) with minimal cardinal such that  \( \theta \eta(\mathcal T_h)^2 \leq \eta(\mathcal T_h^m)^2\). In the adaptive mesh refinement procedure, the marking percent \(\theta\) is set to be 20\%, i.e. the ordered elements that account to the top 20\% of the total error estimator get refined.} As stopping criteria, we  impose that the total number of degrees of freedom $N$ is less than $20 000$. 
+   542: 
+
+- file: sample\arxiv_sources\2604.02137v1\main_v3.tex (line 541)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   540: \]
+>  541: where \((x, y) \in \Omega = [-1, 1]^2\) and $ k^-=1, \, k^+=100k^- $. We set a non-homogeneous  Dirichlet condition. \textcolor{black}{As regards the refinement, we use the D\"{o}rfler marking strategy \cite{dorfler1996convergent}, i.e. we look for the set of elements \(\mathcal T_h^m\) with minimal cardinal such that  \( \theta \eta(\mathcal T_h)^2 \leq \eta(\mathcal T_h^m)^2\). In the adaptive mesh refinement procedure, the marking percent \(\theta\) is set to be 20\%, i.e. the ordered elements that account to the top 20\% of the total error estimator get refined.} As stopping criteria, we  impose that the total number of degrees of freedom $N$ is less than $20 000$. 
+   542: 
+
+- file: sample\arxiv_sources\2604.02139v1\main.tex (line 155)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   154: 
+>  155: The logic of the algorithm is explained in the following. For each parameter realization $\boldsymbol{\mu}_p$, the snapshot matrix is defined as $\mathbb{X}^{\boldsymbol{\mu}_p} \in \mathbb{R}^{\mathcal{N}_h \times N_t}$, where $\mathcal{N}_h$ denotes the number of mesh cells (i.e. the number of spatial degrees of freedom) and $N_t$ the number of stored time steps. This matrix is then compressed via Singular Value Decomposition (SVD), through the reduced basis $\mathbb{U}^{\boldsymbol{\mu}_p} \in \mathbb{R}^{\mathcal{N}_h \times r}$ of rank $r$. The associated latent representation is obtained as $$
+   156: \mathbb{V}^{\boldsymbol{\mu}_p}=\left(\mathbb{U}^{\boldsymbol{\mu}_p}\right)^T \mathbb{X}^{\boldsymbol{\mu}_p} \in \mathbb{R}^{r \times N_t}$$
+
+- file: sample\arxiv_sources\2604.02139v1\main.tex (line 306)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   305: 
+>  306: The figures depict a cross-section of the square channel at mid-length, at $t=2 \ s$. The comparison includes the reference solution, corresponding to the high-fidelity model, the SHRED reconstruction, and the absolute difference between the two. For the test cases within the training parameter range, i.e. $B_x = 0.75 \, \text{T}$, $B_x = 1.85 \, \text{T}$ (Figures \ref{fig: Bx075} and \ref{fig: Bx185}), the results show that SHRED is able to reconstruct all the fields of interest with very high accuracy, relying exclusively on temperature measurements over time. Moreover, the residuals, defined as the absolute difference between the reference solution and the reconstructed one, are extremely low overall, and their maximum values reach only a few percentage points; higher residuals are confined to small, highly localized regions of the domain. It is also interesting observing the results obtained for the extrapolation test case, corresponding to the magnetic field intensity outside the training range, i.e $B_x = 2.5 \, \text{T}$ (Figure \ref{fig: Bx250}). Even in this scenario, SHRED demonstrates a remarkable capability to accurately reconstruct the flow fields. The residuals are only slightly higher than those observed for the two in-range test cases, yet they remain overall negligible and are consistently characterized by maximum values of only a few percentage points. 
+   307: 
+
+- file: sample\arxiv_sources\2604.02172v1\sec_linear.tex (line 62)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+    61: \par 
+>   62: When scanning resistivity, we exclude the pressure effects by turning off the time evolution for pressure in \simcode{} code (i.e. Eq.~\ref{eq_te} and \ref{eq_ti}). The resulting scaling trend is quite similar to the discussion in Hastie, et al. (1987)\cite{Hastie1987} that a kink-like mode structure is obtained at low $S$, whereas a tearing-like mode structure is obtained at high $S$, for $m=1$, $n=1$ mode with the plasma $\beta = 0$. 
+    63: \par
+
+- file: sample\arxiv_sources\2604.02208v1\MurashkaKuptsova.tex (line 175)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   174: 
+>  175: In \cite{Murashka2020} it was shown that the constructions $v_{\pi}\mathfrak{F}$ and $w_{\pi}\mathfrak{F}$ do not necessarily lead to saturated formations, i.e.  hereditary $\check{S}$-formations have this property. For the applications of such formations, see \cite[$\S 6.4$]{BallesterBolinches2006}, \cite[$\S 2.4$]{Kamornikov2003} and \cite[$\S 24$]{ShemetkovSkiba1989}.
+   176:  
+
+- file: sample\arxiv_sources\2604.02208v1\MurashkaKuptsova.tex (line 208)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   207: 
+>  208: The notation and terminology agree with \cite{BallesterBolinches2006, Doerk1992}. Let us recall some of them: $Z_n$ is the cyclic group of order $n$; $A_n$ is the alternating group of degree $n$; $Core_G(H)$ is the largest normal subgroup of the group $G$ that is contained in $H$; if $M$ is a proper subgroup with the property that $M=H$ whenever $M\leq H< G$, then $M$ is called a maximal subgroup of $G$;  a chain of subgroups $H=H_0\subset H_1\subset \ldots \subset H_n=G$ is called maximal in $G$ if either $n=0$ or $H_{i-1}$ is a maximal subgroup of $H_i$ for any $i>0$; a group $G\in \mathfrak{F}$ is called an $\mathfrak{F}$-group; a subgroup $U$ of $G$ is called $\mathfrak{F}$-maximal in $G$ provided $U\in \mathfrak{F}$ and if $U\leq V\leq G$, $V\in \mathfrak{F}$, then $U=V$; $\Phi(G)$ is the Frattini subgroup of $G$, i.e. the intersection of all maximal subgroups of $G$; $\mathrm{F}(G)$ is the Fitting subgroup of $G$, i.e. the largest normal nilpotent subgroup of $G$; $N\rtimes M$ is the semidirect product of $N$ with $M$; $\mathrm{Aut}(G)$ is the group of all automorphisms of a group $G$; $G^\mathfrak{F}$ is the $\mathfrak{F}$-residual of $G$, i.e. the intersection of all those normal subgroups $N$ of $G$ for which $G/N\in \mathfrak{F}$; $G_\mathfrak{S}$ is the soluble radical of $G$, i.e. the largest normal soluble subgroup of $G$.
+   209: 
+
+- file: sample\arxiv_sources\2604.02208v1\MurashkaKuptsova.tex (line 208)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   207: 
+>  208: The notation and terminology agree with \cite{BallesterBolinches2006, Doerk1992}. Let us recall some of them: $Z_n$ is the cyclic group of order $n$; $A_n$ is the alternating group of degree $n$; $Core_G(H)$ is the largest normal subgroup of the group $G$ that is contained in $H$; if $M$ is a proper subgroup with the property that $M=H$ whenever $M\leq H< G$, then $M$ is called a maximal subgroup of $G$;  a chain of subgroups $H=H_0\subset H_1\subset \ldots \subset H_n=G$ is called maximal in $G$ if either $n=0$ or $H_{i-1}$ is a maximal subgroup of $H_i$ for any $i>0$; a group $G\in \mathfrak{F}$ is called an $\mathfrak{F}$-group; a subgroup $U$ of $G$ is called $\mathfrak{F}$-maximal in $G$ provided $U\in \mathfrak{F}$ and if $U\leq V\leq G$, $V\in \mathfrak{F}$, then $U=V$; $\Phi(G)$ is the Frattini subgroup of $G$, i.e. the intersection of all maximal subgroups of $G$; $\mathrm{F}(G)$ is the Fitting subgroup of $G$, i.e. the largest normal nilpotent subgroup of $G$; $N\rtimes M$ is the semidirect product of $N$ with $M$; $\mathrm{Aut}(G)$ is the group of all automorphisms of a group $G$; $G^\mathfrak{F}$ is the $\mathfrak{F}$-residual of $G$, i.e. the intersection of all those normal subgroups $N$ of $G$ for which $G/N\in \mathfrak{F}$; $G_\mathfrak{S}$ is the soluble radical of $G$, i.e. the largest normal soluble subgroup of $G$.
+   209: 
+
+- file: sample\arxiv_sources\2604.02208v1\MurashkaKuptsova.tex (line 208)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   207: 
+>  208: The notation and terminology agree with \cite{BallesterBolinches2006, Doerk1992}. Let us recall some of them: $Z_n$ is the cyclic group of order $n$; $A_n$ is the alternating group of degree $n$; $Core_G(H)$ is the largest normal subgroup of the group $G$ that is contained in $H$; if $M$ is a proper subgroup with the property that $M=H$ whenever $M\leq H< G$, then $M$ is called a maximal subgroup of $G$;  a chain of subgroups $H=H_0\subset H_1\subset \ldots \subset H_n=G$ is called maximal in $G$ if either $n=0$ or $H_{i-1}$ is a maximal subgroup of $H_i$ for any $i>0$; a group $G\in \mathfrak{F}$ is called an $\mathfrak{F}$-group; a subgroup $U$ of $G$ is called $\mathfrak{F}$-maximal in $G$ provided $U\in \mathfrak{F}$ and if $U\leq V\leq G$, $V\in \mathfrak{F}$, then $U=V$; $\Phi(G)$ is the Frattini subgroup of $G$, i.e. the intersection of all maximal subgroups of $G$; $\mathrm{F}(G)$ is the Fitting subgroup of $G$, i.e. the largest normal nilpotent subgroup of $G$; $N\rtimes M$ is the semidirect product of $N$ with $M$; $\mathrm{Aut}(G)$ is the group of all automorphisms of a group $G$; $G^\mathfrak{F}$ is the $\mathfrak{F}$-residual of $G$, i.e. the intersection of all those normal subgroups $N$ of $G$ for which $G/N\in \mathfrak{F}$; $G_\mathfrak{S}$ is the soluble radical of $G$, i.e. the largest normal soluble subgroup of $G$.
+   209: 
+
+- file: sample\arxiv_sources\2604.02208v1\MurashkaKuptsova.tex (line 208)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   207: 
+>  208: The notation and terminology agree with \cite{BallesterBolinches2006, Doerk1992}. Let us recall some of them: $Z_n$ is the cyclic group of order $n$; $A_n$ is the alternating group of degree $n$; $Core_G(H)$ is the largest normal subgroup of the group $G$ that is contained in $H$; if $M$ is a proper subgroup with the property that $M=H$ whenever $M\leq H< G$, then $M$ is called a maximal subgroup of $G$;  a chain of subgroups $H=H_0\subset H_1\subset \ldots \subset H_n=G$ is called maximal in $G$ if either $n=0$ or $H_{i-1}$ is a maximal subgroup of $H_i$ for any $i>0$; a group $G\in \mathfrak{F}$ is called an $\mathfrak{F}$-group; a subgroup $U$ of $G$ is called $\mathfrak{F}$-maximal in $G$ provided $U\in \mathfrak{F}$ and if $U\leq V\leq G$, $V\in \mathfrak{F}$, then $U=V$; $\Phi(G)$ is the Frattini subgroup of $G$, i.e. the intersection of all maximal subgroups of $G$; $\mathrm{F}(G)$ is the Fitting subgroup of $G$, i.e. the largest normal nilpotent subgroup of $G$; $N\rtimes M$ is the semidirect product of $N$ with $M$; $\mathrm{Aut}(G)$ is the group of all automorphisms of a group $G$; $G^\mathfrak{F}$ is the $\mathfrak{F}$-residual of $G$, i.e. the intersection of all those normal subgroups $N$ of $G$ for which $G/N\in \mathfrak{F}$; $G_\mathfrak{S}$ is the soluble radical of $G$, i.e. the largest normal soluble subgroup of $G$.
+   209: 
+
+- file: sample\arxiv_sources\2604.02208v1\MurashkaKuptsova.tex (line 210)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   209: 
+>  210: Recall \cite[Chapter II, Definition 1.1]{Doerk1992} that a class of groups is a collection $\mathfrak{X}$ of groups with the property that if $G\in \mathfrak{X}$ and if $H\simeq G$, then $H\in \mathfrak{X}$. The classes of all soluble groups and of all $p$-groups for a prime $p$ are denoted by $\mathfrak{S}$ and $\mathfrak{N}_p$, respectively. A class of groups $\mathfrak{H}$ is called a homomorph if $G\in \mathfrak{H}$ and $N\unlhd G$, then $G/N\in \mathfrak{H}$. A formation is a homomorph $\mathfrak{F}$ that is closed under taking subdirect products, i.e. from $H/A\in \mathfrak{F}$, $H/B\in \mathfrak{F}$ it follows that $H/(A\cap B)\in \mathfrak{F}$. A class of groups $\mathfrak{F}$ is called: hereditary if $G\in \mathfrak{F}$ and $H\leq G$, then $H\in \mathfrak{F}$; saturated if $G/N\in \mathfrak{F}$ and $N\leq \Phi(G)$, then $G\in \mathfrak{F}$; solubly saturated if $G/N\in \mathfrak{F}$ and $N\leq \Phi(G_\mathfrak{S})$, then $G\in \mathfrak{F}$. The formation product of $\mathfrak{F}_1$ with $\mathfrak{F}_2$ is defined as $\mathfrak{F}_1\mathfrak{F}_2=(G\mid G^{\mathfrak{F}_2}\in \mathfrak{F}_1)$.
+   211: 
+
+- file: sample\arxiv_sources\2604.02208v1\MurashkaKuptsova.tex (line 281)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   280: 
+>  281: $(3)$ If $N\leq \mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G)$, then $\mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G/N)\leq \mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G)/N$, i.e. $\mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G/\mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G)) \simeq 1$. If $\mathfrak{H}$ is saturated, then $\mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G/N)= \mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G)/N$.
+   282: 
+
+- file: sample\arxiv_sources\2604.02208v1\MurashkaKuptsova.tex (line 298)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   297: 
+>  298: $(3)$ Let $N\leq \mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G)$ and $\overline{K}=\mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G/N)=K/N$. Note that $K\unlhd G$. Let $H\leq G$ and $H\in \mathfrak{H}$. Hence $\overline{H}=HN/N\simeq H/(H\cap N)\in \mathfrak{H}$. Let $\overline{T}$ be a weak $\mathfrak{F}$-subnormalizer of $\overline{H}$ in $G/N$, i.e. $\overline{H}$ $\mathfrak{F}$-sn $\overline{T}$. From $\overline{H}< \overline{KH}\leq \overline{T}$ it follows that $\overline{H}=HN/N$ $\mathfrak{F}$-sn $\overline{KN}=HK/N$. So $HN$ $\mathfrak{F}$-sn $HK$ by $(2)$ of Lemma \ref{lem1}. Since $H$ $\mathfrak{F}$-sn $HN$ by Lemma \ref{lem11}, we obtain that $H$ $\mathfrak{F}$-sn $HK$ by $(3)$ of Lemma~\ref{lem1}. Let $T_1$ be a weak $\mathfrak{F}$-subnormalizer of $H$ in $G$. Then $HK$ $\mathfrak{F}$-sn $T_1K$ by Lemma~\ref{lem123}. Since $H$ $\mathfrak{F}$-sn $HK$ and $HK$ $\mathfrak{F}$-sn $T_1K$,  $H$ $\mathfrak{F}$-sn $T_1K$ by $(3)$ of Lemma~\ref{lem1}. So $T_1K=T_1$ by the definition of weak $\mathfrak{F}$-subnormalizer. Therefore $K$ lies in all weak $\mathfrak{F}$-subnormalizers of all $\mathfrak{H}$-subgroups of $G$. Hence $K\leq I$, i.e. $\mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G/N)\leq \mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G)/N$. 
+   299: 
+
+- file: sample\arxiv_sources\2604.02208v1\MurashkaKuptsova.tex (line 298)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   297: 
+>  298: $(3)$ Let $N\leq \mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G)$ and $\overline{K}=\mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G/N)=K/N$. Note that $K\unlhd G$. Let $H\leq G$ and $H\in \mathfrak{H}$. Hence $\overline{H}=HN/N\simeq H/(H\cap N)\in \mathfrak{H}$. Let $\overline{T}$ be a weak $\mathfrak{F}$-subnormalizer of $\overline{H}$ in $G/N$, i.e. $\overline{H}$ $\mathfrak{F}$-sn $\overline{T}$. From $\overline{H}< \overline{KH}\leq \overline{T}$ it follows that $\overline{H}=HN/N$ $\mathfrak{F}$-sn $\overline{KN}=HK/N$. So $HN$ $\mathfrak{F}$-sn $HK$ by $(2)$ of Lemma \ref{lem1}. Since $H$ $\mathfrak{F}$-sn $HN$ by Lemma \ref{lem11}, we obtain that $H$ $\mathfrak{F}$-sn $HK$ by $(3)$ of Lemma~\ref{lem1}. Let $T_1$ be a weak $\mathfrak{F}$-subnormalizer of $H$ in $G$. Then $HK$ $\mathfrak{F}$-sn $T_1K$ by Lemma~\ref{lem123}. Since $H$ $\mathfrak{F}$-sn $HK$ and $HK$ $\mathfrak{F}$-sn $T_1K$,  $H$ $\mathfrak{F}$-sn $T_1K$ by $(3)$ of Lemma~\ref{lem1}. So $T_1K=T_1$ by the definition of weak $\mathfrak{F}$-subnormalizer. Therefore $K$ lies in all weak $\mathfrak{F}$-subnormalizers of all $\mathfrak{H}$-subgroups of $G$. Hence $K\leq I$, i.e. $\mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G/N)\leq \mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G)/N$. 
+   299: 
+
+- file: sample\arxiv_sources\2604.02208v1\MurashkaKuptsova.tex (line 323)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   322: \begin{proof}[Proof of the Theorem~\ref{theorem1}] Let $\mathfrak{F}_1$ be a class of groups, all of whose composition factors are from $(Z_2, Z_3, Z_5, A_5)$. It is clear that this class is a saturated formation and therefore it is solubly saturated.
+>  323: Recall \cite[Chapter~1, Definition 3.1]{Guo2015book} that a group $G$ is called a quasisoluble if for every $\mathfrak{S}$-eccentric (i.e. non $\mathfrak{S}$-central) chief factor $H/K$ of $G$, every automorphism of $H/K$ induced by an element of $G$ is inner. Let $\mathfrak{F}_2$ be the class of all quasisoluble groups. Then $\mathfrak{F}_2$ is a solubly saturated formation by \cite[Chapter~1,~Corollary~3.8]{Guo2015book}.
+   324: 
+
+- file: sample\arxiv_sources\2604.02208v1\MurashkaKuptsova.tex (line 330)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   329: 
+>  330: \begin{proof}[Proof of the Theorem~\ref{theorem2}] Assume that $\mathrm{Int}_{\mathfrak{F}}(G/\mathrm{Int}_{\mathfrak{F}}(G))\simeq 1$ holds for any group $G$ and there exists a non-$\mathfrak{F}$-group all of whose $\mathfrak{F}$-subgroups are $\mathfrak{F}$-subnormal. Let $G$ be a minimal order group with this property. Since $\mathfrak{F}$ is a hereditary formation, all $\mathfrak{F}$-subgroups of every maximal subgroup of $G$ are $\mathfrak{F}$-subnormal in it by Lemma~\ref{lem11}. Hence $M\in \mathfrak{F}$ for every maximal subgroup $M$ of $G$ by our assumption. Therefore $\mathrm{Int}_{\mathfrak{F}}(G)=\Phi(G)$. Assume that $\Phi(G)\neq 1$. If $G/\Phi(G)\in \mathfrak{F}$, then $1\simeq \mathrm{Int}_{\mathfrak{F}}(G/\mathrm{Int}_{\mathfrak{F}}(G))=\mathrm{Int}_{\mathfrak{F}}(G/\Phi(G))=G/\Phi(G)$, a contradiction. Thus $G/\Phi(G)\not\in \mathfrak{F}$. Let $H/\Phi(G)$ be a proper $\mathfrak{F}$-subgroup of $G/\Phi(G)$. Then $H$ is a proper subgroup of $G$, i.e. $H\in \mathfrak{F}$. Thus $H/\Phi(G)$ $\mathfrak{F}$-sn $G/\Phi(G)$ by (2) of Lemma~\ref{lem1}. It means that $G/\Phi(G)\in \mathfrak{F}$ by our assumption, a contradiction. Thus, $\Phi(G)= 1$. Since $1$ $\mathfrak{F}$-sn $G$, we obtain that $G^{\mathfrak{F}}<G$. From $\Phi(G)= 1$ it follows that there is a maximal subgroup $M$ of $G$ with $G^{\mathfrak{F}}\nleq M$. Since $M$ is $\mathfrak{F}$-subnormal and maximal in $G$, it follows that $G^{\mathfrak{F}}\leq M$, the final contradiction.
+   331: 
+
+- file: sample\arxiv_sources\2604.02214v1\main.tex (line 157)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   156: \end{equation}
+>  157: where we have introduced $\Delta = r^2-2Mr+a^2$ and $\Sigma = r^2 + a^2y^2$. The higher-derivative corrections $H_i(r,y)$ with $i\in\{1,2,3,4\}$ only depend on the radial and polar coordinate. This parametrisation for the corrections preserves several properties of a Kerr BH: the horizons are still located at the roots of $\Delta$, i.e. $r_\pm = (M\pm\sqrt{M^2-a^2})$, and $M$ and $a$ are still the ADM mass and spin, respectively, upon imposing appropriate asymptotic conditions on $H_i$ (see \cite{canoLeadingHigherderivativeCorrections2019}).
+   158: 
+
+- file: sample\arxiv_sources\2604.02214v1\main.tex (line 207)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   206: 
+>  207: To enforce the BCs for a QNM, we explicitly factor out a regularizing function $A_{m,\omega}$ that captures the correct QNM behaviour at the event horizon and infinity, i.e. we write
+   208: \begin{equation}
+
+- file: sample\arxiv_sources\2604.02214v1\main.tex (line 275)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   274: where $\mathbf{R}$ and $\mathbf{\Theta}$ are vectors of length $N_r$ and $N_y$, respectively. The matrices $\mathbf{L}_r$ and $\mathbf{L}_y$ are discretized differential operators of the shape $N_r\times N_r$ and $N_y\times N_y$, respectively. In the Schwarzschild limit, the angular equation is solved analytically and the radial equation reduces to a standard numerical quadratic eigenvalue problem. For finite spin, the coupled system is solved iteratively by incrementally increasing the spin and using a Newton–Raphson procedure applied to the equations for 
+>  275: $(\mathbf{R}, \mathbf{\Theta},\omega^{(0)},A_{lm})$ (see Eq.~(33) of \cite{Cardoso2026RingingRapidlyRotating}). In practice, we do not need to iterate in spin. Instead, for a given spin we start from tabulated values for $\omega^{(0)}$ (e.g. \cite{bertiExtremeGravityTests2018}) as accurate initial guesses. Now, only a few Newton-Raphson iterations are required to obtain the corresponding eigenvectors to the desired precision. This procedure yields the zeroth order solutions $\omega_{(0)}$ and $\mathbf{\tilde{\Psi}}^{(0)}=\mathbf{R}\otimes\mathbf{\Theta}$. These solutions then serve as input for the computation of higher-order corrections. At this order, we solve the non-separable, non-homogeneous Eq.~\eqref{eq:Eq_O1_reg} on the full grid for $(\mathbf{\tilde{\Psi}}^{(1)}, \omega^{(1)})$, which is equivalent to solving a linear problem:
+   276: \begin{equation}
+
+- file: sample\arxiv_sources\2604.02220v1\01-introduction.tex (line 10)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+     9:  
+>   10: In this paper, we propose such a unit of analysis: the \emph{visual decoding operator} (\Cref{fig:teaser}). Operators are perceptual primitives, ranging from projecting from a point to an axis, to locating a curve's peak, to judging the steepest slope. Each operator is modeled as a function with estimable bias and variance, and a given operator (e.g., project from a known position to a curve) appears whether the chart is a Cumulative Distribution Function (CDF) or a scatterplot and whether the task is looking up a single value along a curve or estimating the mean of a cluster of points. Operators are parameterized in a perceptually uniform space (e.g. visual angle) so they generalize across display contexts. And because they compose, complex tasks can be built from simpler operations, each carrying a quantified error.
+    11: 
+
+- file: sample\arxiv_sources\2604.02220v1\03-experiment.tex (line 211)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   210: \end{align*}
+>  211: \noindent  The standard deviation scales multiplicatively with how far the point must be projected, i.e. the visual angle distance to $x$-axis, $\theta_Y$, where $\alpha_j$ acts as a scaling parameter for participant $j$. We compared additive and multiplicative scaling relationships on pilot data; the multiplicative specification yielded better posterior predictive calibration and is used throughout. The models for \ProjToCurve\ and \ProjToAxisY\ are defined similarly as the model above. Details of the full hierarchical specifications (which model population means and standard deviations of $\beta_j$ and $\alpha_j$) are in~\Cref{sec:supplemental_materials}.
+   212: 
+
+- file: sample\arxiv_sources\2604.02220v1\04-extension.tex (line 19)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+    18: 
+>   19: The experiment used a mixed design. Between subjects, participants were randomly assigned to one of three graph types. Within-subjects factors were 2 variability levels (0 vs 0.4) $\times$ 2 variability positions (upper vs lower half of the chart) $\times$ $12$ random seeds (i.e. stimuli datasets) $= 48$ trials per participant. Stimuli were synthetic time series of 60 data points generated from geometric Brownian motion, with noise linearly interpolated as a function of the base value. Each participant estimated the average of 48 graphs by adjusting a draggable horizontal line.
+    20: 
+
+- file: sample\arxiv_sources\2604.02229v1\main.tex (line 268)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   267: \end{align*}
+>  268: where $d(u, \mathcal{M})$ is some distance function from $u$ to the set of minimizers $\mathcal{M}$. This kind of analysis was first done by Bianchi and Egnell for the Sobolev inequality \cite{bianchi1991note}. Answering such a question for various inequalities (e.g. Poincar\'e, Gagliardo–Nirenberg and etc.) turns out to have beautiful connections in the theory of optimal transport, symmetrization theory, spectral analysis and fast diffusion flows (see, \cite{cianchi2009sharp, brasco2012sharp, figalli2022sharp, dolbeault2025sharp, bonforte2025stability, yessirkegenov2026stability}).
+   269: 
+
+- file: sample\arxiv_sources\2604.02229v1\main.tex (line 440)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   439: \begin{rem}
+>  440: When $p=2$, by Remark \ref{rem lem}, identity \eqref{gen gupta main sec} extends to $\beta\in\mathbb{R}$, and in this case it recovers \cite[Theorem 2.1]{gupta2022discrete}. The case $\alpha=0$ and $\beta=\frac{p-1}{p}$ corresponds to the sharp form of the Fischer-Keller-Pogorzelski inequality (\ref{FKP}). Combining those two cases (i.e. , $p=2$, $\alpha=0$ and $\beta=\frac{p-1}{p}$), recovers the Krej{\v{c}}i{\v{r}}{\'\i}k and \v{S}tampach identity \cite[Theorem 1]{krejcirik2022sharp}.
+   441: \end{rem}
+
+- file: sample\arxiv_sources\2604.02230v1\acl_latex.tex (line 458)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   457: \paragraph{Model Initialization.} 
+>  458: We support multiple large language models (LLMs) through a unified initialization function.  The implementation maps human-readable names (e.g. \texttt{qwen\_32b}) to their respective HuggingFace or vLLM model checkpoints. 
+   459: Models are loaded with \texttt{bfloat16} precision and GPU memory utilization capped at 80\% for efficiency. Chat-oriented models (e.g., DeepSeek, Qwen) are automatically wrapped with their tokenizer’s chat template. For gpt-oss-120b, we set the reasoning effort parameter to `medium'. Our code also enables easy integration of new models.
+
+- file: sample\arxiv_sources\2604.02260v1\main.tex (line 258)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   257: \paragraph*{Sliding window}
+>  258: Fix a window size $w \in \N$. At episode $n$, the model is fitted only on the most recent $w$ episodes, i.e. on the dataset $\setD_{n-w:n-1}$. 
+   259: 
+
+- file: sample\arxiv_sources\2604.02271v1\main.tex (line 177)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   176: 
+>  177: In the early 2000s, Intensity correlation spectroscopy (ICS) was developed as the microscopy space equivalent of FCS/DLS~\cite{wiseman2015image,jameson2009fluorescence}. The general idea is to correlate pixel intensities to reconstruct diffusion coefficients~\cite{kolin2007advances}. Pixels can be correlated in space and time for different uses~\cite{wiseman2015image}, and maps of diffusion coefficients can be obtained in that way, which are especially useful to investigate e.g. cellular environments~\cite{scipioni2018local}. Most of these methods were developed for very small molecules in biological contexts~\cite{kolin2007advances}. Around the same time, ICS was developed in spatial k-space ICS~\cite{kolin2006k}, a premise for the establishment of dynamic differential microscopy (DDM)~\cite{cerbino2008differential}. In DDM, the Fourier transform of differences in images at different times is correlated, and allows one to obtain estimates of diffusion coefficients at multiple scales and further motion properties, with numerically efficient tools~\cite{giavazzi2014digital,lattuada2025hitchhiker}. All these techniques are especially useful at the nanoscales where segmentation of individual particles is not possible. 
+   178: \sophiem{read history on hitchhiker, add a DLS reference from Montpellier}
+
+- file: sample\arxiv_sources\2604.02271v1\main.tex (line 377)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   376: 
+>  377: \sophieh{outlook on more practical details (e.g. 3D, drift, high densities, etc)}
+   378: 
+
+- file: sample\arxiv_sources\2604.02271v1\main.tex (line 454)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   453: where $\boldsymbol{\eta}(t)$ is a Gaussian white noise with zero mean $\left< \boldsymbol{\eta}_i(t) \right> =0$, correlation $\left< \boldsymbol{\eta}_i(t) \boldsymbol{\eta}_j(t') \right> = \delta_{ij} \delta(t-t') \mathbb{1}$ and $\mathbb{1}$ denotes the unit matrix. 
+>  454: Due to its simplicity, Eq. \eqref{eq:Langevin} can be solved analytically as $$\textbf{x}_j(t) = \textbf{x}_j(0) + \sqrt{2D} \int_0^t dt' \boldsymbol{\eta}_j(t')$$ and allows to express the density-density correlation function exactly (see e.g. Reference \cite{velenich2008}) as
+   455: \begin{align}
+
+- file: sample\arxiv_sources\2604.02275v1\secretSharingOverClassicalQuantumBroadcastChannel.tex (line 323)
+  error: i.i.d. 
+  message: Consider adding a comma "i.i.d.," or using "i.i.d.\ " to avoid spacing issues.
+   322: 
+>  323: When sharing a secret across   $n$ i.i.d. uses of a classical-quantum broadcast channel, we have the following second order characterization of the rate.
+   324: 
+
+- file: sample\arxiv_sources\2604.02283v1\main.tex (line 204)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   203: \begin{enumerate}
+>  204:     \item The particles should be constructed of chemical compounds that have demonstrated compatibility with safety requirements for humans, the biota, and the environment (including limits on impurities \citep{EU_CLP}). We note that some safety tests (e.g. carcinogenicity) may define compounds as safe or unsafe independently of exposure, while others define maximum exposure levels for which the compounds are considered safe - primarily NOAECs (No Observed Adverse Effect Concentrations), defined as the highest tested concentrations that produce no biologically significant adverse effects. Compatibility with the latter type of requirements requires reliable upper limits on expected ground-level exposure.
+   205:     \item The dispersed particles’ shape and size distribution should be compatible with these safety requirements.
+
+- file: sample\arxiv_sources\2604.02283v1\main.tex (line 217)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   216: 
+>  217: \textbf{Biota Health:} Environmental safety relies on aquatic ecotoxicity \citep{OECD_AquaticEcotoxicity} testing using standardized algae, invertebrate, and fish species, complemented by terrestrial studies examining effects on earthworms, plants, birds, pollinators, and soil microbial communities \citep{OECD_TerrestrialEcotoxicity}, establishing environmental no observed effect concentrations (NOECs) that similarly inform safe ground-level concentration limits (e.g. concentrations of concern, COC) through appropriate ecological risk assessment safety margins.
+   218: 
+
+- file: sample\arxiv_sources\2604.02283v1\main.tex (line 268)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   267:     \begin{enumerate}
+>  268:         \item For a small-scale pilot phase, producing a global IRF corresponding to $\ll0.1\%$ (0.3~W$/{\rm m^2}$) modification of the radiative flux at the top of the atmosphere (a perturbation similar in magnitude to that of the 11-year solar cycle, see e.g. \citep{Coddington2019}), the monitoring sub-system should enable measurements of (locally averaged) stratospheric particle concentrations and size distributions, which enable determining the resulting (locally averaged) IRF (based on known optical particle properties) to $\sim10\%$  accuracy.
+   269:         \item For an intermediate scale pilot phase, producing a global IRF corresponding to $\simeq0.1\%$ flux modification, the monitoring sub-system should enable direct measurement of the modification of the global net radiative flux at the top of the atmosphere.
+
+- file: sample\arxiv_sources\2604.02301v1\main.tex (line 1076)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+  1075: previous section, the rectangular pulse with $k=1$ has the smallest field 
+> 1076: amplitude at a given gate time. All the other pulses, i.e. 
+  1077: rectangular pulses with 
+
+- file: sample\arxiv_sources\2604.02302v1\Methods.tex (line 16)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+    15: \bmhead{Outcome, exposure, and incidence}
+>   16: For each publication year $t$, we define an \emph{exposure} $N_t$ and an \emph{outcome} $R_t$, with both quantities instantiated to match the cohort under study. In the paper-level analyses, $N_t$ is the \emph{total number of works} published in year $t$ for a chosen cohort: e.g., the \emph{entire dataset}, a \emph{specific geography} (country/region), a \emph{scientific domain/field}, or a \emph{venue class} (publisher, journal family, mega-journal). The variable $R_t$ is the corresponding \emph{number of those works that are  retracted}. In author-level analyses, we analogously set $N_t \equiv A_t$ to be the \emph{number of active authors} in that cohort/year, i.e. those who published at least one work during that year, and $R_t$ to be the \emph{number of authors} with $\geq 1$ retraction attributable to that cohort/year. In all cases, the incidence (per-unit risk) is
+    17: $
+
+- file: sample\arxiv_sources\2604.02302v1\Results.tex (line 40)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+    39: \end{equation}
+>   40:  where $g$ is the incidence per-year growth rate and $i_0$ is the baseline incidence at time $t_0$. Full model selection details and robustness checks are reported in the \methods section. An exponential increase in incidence implies  that the per-year growth rate $g$ can be associated to the \emph{doubling time}, i.e. the number of years required for incidence to double, through the relation 
+    41: $T_d =ln2/g$. Because $g$ is estimated from data, it has an associated uncertainty that propagates to $T_d$, producing confidence intervals for the doubling time.
+
+- file: sample\arxiv_sources\2604.02304v1\main.tex (line 777)
+  error: i.e. 
+  message: Consider adding a comma "i.e.," or using "i.e.\ " to avoid spacing issues.
+   776: \end{equation*}
+>  777: then $A_u(u-u') + A_{\mathrm{rec}}(z_{\mathrm{rec}}-z'_{\mathrm{rec}})=0$, i.e. $A\xi=0$ with $\xi=(u-u',\,z_{\mathrm{rec}}-z'_{\mathrm{rec}})$, and hence $\xi=0$ (Claim 3).
+   778: 
+
+- file: sample\arxiv_sources\2604.02306v1\Exp_Sums_Multi_GL.tex (line 589)
+  error: i.i.d. 
+  message: Consider adding a comma "i.i.d.," or using "i.i.d.\ " to avoid spacing issues.
+   588: Assume that $f(p^e)$ with $p>q^2$ are given so that \eqref{Eq:LogLowerBdConseq} holds. Let the $f(p^e)$ with $p\leq q^2$
+>  589: be i.i.d. random variables each uniformly distributed on  $\mathbb{U}$. 
+   590: In section \ref{sec2.ex2a} we will show that 
+
+- file: sample\arxiv_sources\2604.02306v1\Exp_Sums_Multi_GL.tex (line 1037)
+  error: i.i.d. 
+  message: Consider adding a comma "i.i.d.," or using "i.i.d.\ " to avoid spacing issues.
+  1036: % (for example, if each  $f(p)= e(-hp\alpha)$). %$f(p)=1$).
+> 1037: We now allow each $f(p)$ for $p\leq z$ and $2z<p\leq x$ to be i.i.d. random variables uniformly distributed on $\mathbb U$.
+  1038: Let $P$ be the product of the primes in $(z,2z]$.
+
+- file: sample\arxiv_sources\2604.02306v1\Exp_Sums_Multi_GL.tex (line 1083)
+  error: i.i.d. 
+  message: Consider adding a comma "i.i.d.," or using "i.i.d.\ " to avoid spacing issues.
+  1082:  Let the $f(p^e)$ with $p\leq q^2$
+> 1083: be i.i.d. random variables each uniformly distributed on $\mathbb{U}$. We first observe that 
+  1084: $$
+
+- file: sample\arxiv_sources\2604.02310v1\paper-format1.tex (line 244)
+  error: e.g. 
+  message: Consider adding a comma "e.g.," or using "e.g.\ " to avoid spacing issues.
+   243: 
+>  244: We present here results from one of the observations of PSR J2051$-$0827 in L-band which spans $\sim$4\,hrs of on-source time, capturing two eclipses during the observation. The pulse profile obtained from 320~s of sub-integrated time is shown in the left panel of Fig.~\ref{fig:profileJ2051} at four different frequency channels. This pulsar has a DM value of around 20.2 pc cm$^{-3}$ and we observe the total intensity profile to evolve as a function of frequency showing scintillation. It is also seen that the linear and circular polarisation intensities vary as a function of observing frequency. The waterfall plots (shown in the right panel of Fig.~\ref{fig:profileJ2051}) of Stokes Q and U exhibit multi-component features, and a clear evolution of  these components with frequency. We see e.g. a stronger leading component in both Q and U emerge at lower frequencies. This is similarly seen plotted as the linear polarisation profile in the left-hand side panel. While the cause of this is not fully known, it is important to note that the linear polarisation profiles have been seen to vary as a function of both frequency and time in a magnetar \citep{Lower_etal2024} providing a unique probe of the relativistic, magnetized plasma within the near-field environment of these ultra-magnetic neutron stars. The pulsar undergoes two eclipses during our observation as seen in Fig.~\ref{fig:phasetimeJ2051}. The evolution of total intensity, linear and circular polarisation across the eclipse can been seen in the first three panels of this figure. A characteristic feature of this system is that the pulsar is not fully eclipsed by its companion, as evidenced by the continued detection of pulsar flux, albeit at a reduced level, during the eclipse phase. We observed linear depolarisation during this phase. Using 40\,s sub-integrated profiles we estimate the DM, RMs and scattering timescales for this source. This choice was made to achieve a high S/N for reliable RM estimation. A template was created by summing  all the profiles in the region where no eclipses were observed (between 4000~s to 9500~s of observation). The changes in the DM and scattering timescales were estimated with respect to this template. The variation of DM, scattering timescales and RM is shown in Fig~\ref{fig:profileJ2051}. \cite{Wang_etal2023} observed gradual changes in RM from 60 rad m$^{-2}$ to 28.7 rad m$^{-2}$ and RM gradually changing back to the template value when the line of sight moved away from the eclipse. While we do not see such apparent changes in our observations, the eclipse of linear polarization does imply a rapidly changing RM. 
+   245: 
 
 - file: sample\submodules\OpenLogic\content\set-theory\replacement\refproofs.tex (line 134)
   error: i.e. 

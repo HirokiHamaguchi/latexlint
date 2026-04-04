@@ -1,4 +1,4 @@
-[CODE] LLRefEq (126)
+[CODE] LLRefEq (255)
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 491)
   error: (\ref{eq:
   message: Consider using \eqref instead of \ref for equations.
@@ -880,4 +880,907 @@
   2051: \begin{proof}
 > 2052: As an example, we show Eq.(\ref{eq:divide_F}).
   2053: The other two equalities are shown in a similar way.
+
+- file: sample\arxiv_sources\2604.02084v1\boundednessdecaywave.tex (line 1000)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   999: \end{multline}
+> 1000: where we implicitly improved the weight of $(r\psi)^2$ at infinity in the spacetime term (see Lemma \ref{lem:weightimprovement}) and used the fact that, since we control $\frac{(T(r\psi))^2}{r^2}$ from eq. (\ref{eq:Tcontrol}), controlling $(R^*(r\psi))^2/(1-\frac{2M}{r}+\frac{r^2}{l^2})$ is equivalent to controlling $r^2(\de_{\tilde{r}}(r\psi))^2$.
+  1001: \vspace{3mm}
+
+- file: sample\arxiv_sources\2604.02121v1\main.tex (line 242)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   241: At each step $s$, two random variables are sampled: (i) the index of the reaction channel, which determines the change in molecule count $\Delta N_s$ (left branch in Fig.~\ref{fig:estimator_illustration}b), and (ii) the waiting time $\Delta t_s$ until the next reaction (right branch in Fig.~\ref{fig:estimator_illustration}b). 
+>  242: To sample the reaction channel index, we use Eq.~(\ref{eq:gsst__fwd}) with probabilities determined by the reaction propensities, $p(I=i)=a^{(i)}_{s-1}/a_{s-1}^{\rm tot}$. 
+   243: This yields the one-hot vector $X_s$ indicating the sampled reaction channel, while the corresponding gradient $\nabla_\theta X_s$ is obtained via Eq.~(\ref{eq:gsst__bwd}). 
+
+- file: sample\arxiv_sources\2604.02121v1\main.tex (line 243)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   242: To sample the reaction channel index, we use Eq.~(\ref{eq:gsst__fwd}) with probabilities determined by the reaction propensities, $p(I=i)=a^{(i)}_{s-1}/a_{s-1}^{\rm tot}$. 
+>  243: This yields the one-hot vector $X_s$ indicating the sampled reaction channel, while the corresponding gradient $\nabla_\theta X_s$ is obtained via Eq.~(\ref{eq:gsst__bwd}). 
+   244: The resulting change in molecule count is then given by $\Delta N_s = \mathcal{S} X_s$, with gradient $\nabla_\theta \Delta N_s = \mathcal{S}\,\nabla_\theta X_s$, where $\mathcal{S}$ denotes the stoichiometric matrix. 
+
+- file: sample\arxiv_sources\2604.02121v1\main.tex (line 304)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   303: where the second line uses that the distribution of $\Delta N_r$ depends on the past only through the molecule count $N_{r-1}$, but is independent of the detailed trajectory $\Delta N_{< r}$ by which this state was reached.
+>  304: The second term in Eq.~(\ref{eq:SF__joint_score_function}) accounts for the stochasticity of the waiting times and must be included when evaluating gradients at fixed physical time $t_{\rm final}$. 
+   305: Since the waiting times are independent of each other and each $\Delta t_s$ depends only on the previous reaction history $\Delta N_{\leq s}$, the time score is additive,
+
+- file: sample\arxiv_sources\2604.02121v1\main.tex (line 512)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   511: Therefore, the mean-squared term $\mathbb{E}[\mathcal{G}_{\rm SF}(N_s)]^2 = \bigl({\rm d}\mathbb{E}[N_s]/{\rm d}k\bigr)^2$ is constant and does not affect the scaling with $s$.
+>  512: Using Eq.~(\ref{eq:SF_chain}), the first term of the variance reads
+   513: \begin{align*}
+
+- file: sample\arxiv_sources\2604.02125v1\crk_es.tex (line 809)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   808: % which is used in~\eqref{eq:general.non.conservative.fr.one} to compute the derivative of the discontinuous flux~\eqref{eq:discts.flux} and the discontinuous solution~\eqref{eq:soln.poly}
+>  809: , $\fnumpm_\eph$ is defined using the finite volume conservative and non-conservative numerical fluxes~(\ref{eq:combined.num.flux}, \ref{eq:non.cons.num.flux.basic}) as
+   810: \begin{equation}
+
+- file: sample\arxiv_sources\2604.02125v1\crk_es.tex (line 879)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   878: \end{equation}
+>  879: the local time average of the non-conservative product, $\Bloc_h$, is computed as a time average of the local approximations of $\bB(\uu) \partial_x \bg(\uu)$ used in~(\ref{eq:fr.non.cons.gll},~\ref{eq:rkfr1},~\ref{eq:rkfr2}) to give
+   880: \begin{equation}
+
+- file: sample\arxiv_sources\2604.02125v1\crk_es.tex (line 890)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   889: Using the time-average solution $\uU_{\eph}^\pm$ (computed similar to~\eqref{eq:disc.avg.flux}) in the dissipative term instead of the extrapolated solution $\uu_\eph^\pm$ enhances the stability of the scheme~\cite{babbar2022lax,babbar2025crk}.
+>  890: The conservative part $\F_\eph^\pm$ in the extrapolation term $\Ftotpm_\eph$ in~(\ref{eq:total.F.non.cons},~\ref{eq:numflux.cons}) is computed by extrapolating the time averaged flux~\eqref{eq:disc.avg.flux} to the element interface $x_\eph$ similar to~\eqref{eq:total.flux.non.cons}.
+   891: The non-conservative part $\Fncpm_\eph$ of the extrapolation term~$\Ftotpm_\eph$ in~\eqref{eq:total.F.non.cons} is computed as $\Fncpm_\eph = \sum_j {b}_j \bB (\uu_\eph^{(j)\pm}) \bg(\uu_\eph^{(j)\pm}).$
+
+- file: sample\arxiv_sources\2604.02125v1\crk_es.tex (line 892)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   891: The non-conservative part $\Fncpm_\eph$ of the extrapolation term~$\Ftotpm_\eph$ in~\eqref{eq:total.F.non.cons} is computed as $\Fncpm_\eph = \sum_j {b}_j \bB (\uu_\eph^{(j)\pm}) \bg(\uu_\eph^{(j)\pm}).$
+>  892: The expression of the non-conservative time averaged numerical flux $\Fnumncpm_\eph$ that is obtained by time averaging~(\ref{eq:combined.num.flux.fr},~\ref{eq:non.cons.num.flux.basic}) directly would be
+   893: \begin{equation}
+
+- file: sample\arxiv_sources\2604.02125v1\crk_es.tex (line 938)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   937: 
+>  938: The formulas~(\ref{eq:flux.dev},~\ref{eq:noncons.dev}) directly apply to the inner stages of the cRKFR scheme~\eqref{eq:crkfr.inner}.
+   939: In addition, in the final update~\eqref{eq:crkfr.non.cons.final}, the computation of the local flux derivative $\pdx \discF$ and the non-conservative term $\Bloc_h$~\eqref{eq:local.time.avg.non.cons} are also modified to be
+
+- file: sample\arxiv_sources\2604.02137v1\main_v3.tex (line 395)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   394: \end{equation*}
+>  395: The last term vanishes thanks to (\ref{eq:aposteriori_phi}) with the test-function $w:=u-\varphi$, so we further get that:
+   396: \begin{equation}\label{eq: aposteriori_step2_2}
+
+- file: sample\arxiv_sources\2604.02137v1\main_v3.tex (line 399)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   398: 	\end{equation}
+>  399: We integrate by parts the last term of \eqref{eq: aposteriori_step2_2}. Since  $(u-\varphi)\in H^1_0(\Omega)$ and $(\sigma-\sigma_h)\in H(\div,\Omega)$, we obtain using the conservation property (\ref{eq:conservation_equalities}) that:
+   400: \begin{equation*}
+
+- file: sample\arxiv_sources\2604.02137v1\main_v3.tex (line 415)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   414: 
+>  415: On the other hand, from problem (\ref{eq:aposteriori_phi}) we have that $|\varphi-u_h|_{1,K,h}= \displaystyle{\inf_{v\in H_0^1(\Omega)}}|v-u_h|_{1,K,h}$. Using the last relation and (\ref{eq: aposteriori_bound_1}) in \eqref{eq: triangl_inq_2} yields the result.
+   416: \end{proof}
+
+- file: sample\arxiv_sources\2604.02137v1\main_v3.tex (line 415)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   414: 
+>  415: On the other hand, from problem (\ref{eq:aposteriori_phi}) we have that $|\varphi-u_h|_{1,K,h}= \displaystyle{\inf_{v\in H_0^1(\Omega)}}|v-u_h|_{1,K,h}$. Using the last relation and (\ref{eq: aposteriori_bound_1}) in \eqref{eq: triangl_inq_2} yields the result.
+   416: \end{proof}
+
+- file: sample\arxiv_sources\2604.02153v1\main_v2.tex (line 240)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   239: \end{equation*}
+>  240: The proof of the conservation property on the non-cut cells is standard; on a cut cell $T\in \mathcal T_h^{\Gamma}$, we employ as usually Green's formula for  $\displaystyle{\int_{T}}(\div \sigma_h^i)v\dx$ with $v\in P^m(T)$, and we further test the mixed formulation \textcolor{black}{(\ref{eq: Mixed formulation})} with $(v\chi_T,0)$ if $i=1$, and with $(0, v\chi_T)$ if $i=2$. Using that $\bar{T}=\bar{T}^i \cup \bar{T}^i_C$ and integrating by parts the term $\displaystyle{\int_{T^i_C}}k_i\nabla u_h^i\cdot \nabla v\dx$, we finally deduce the conservation property with respect to the extension of $f^i$:
+   241: \begin{equation*}
+
+- file: sample\arxiv_sources\2604.02153v1\main_v2.tex (line 280)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   279: \begin{proof}
+>  280: \textcolor{black}{Let $T\in\T$.} We start from  $\int_{T} \div \sigma_h\dx= \int_{\partial T}\sigma_h\cdot n_T \ds$ and we use the  flux definition \textcolor{black}{(\ref{eq: def_flux_IRT0_noncut})-(\ref{eq: def_flux_IRT0})}. As previously, we obtain \eqref{eq: conservation_property} on a non-cut cell $T$ by testing the mixed formulation \textcolor{black}{(\ref{eq: Mixed formulation})} with $(\chi_T,0)$ if $T\in \T^1$, and with $(0,\chi_T)$ if $T\in \T^2$. Finally, if $T\in \mathcal T_h^{\Gamma}$ we use the test-function $v_h=(\chi_T,\chi_T)$ in \textcolor{black}{problem (\ref{eq: Mixed formulation})}. The definition of \textcolor{black}{$v_h=(v_h^1,v_h^2)$ yields that on any cell $T'\in \mathcal T_h$ one has that $(\nabla v_h^i)_{|T'}=0$, hence} $a_i(u_h^i,v_h^i)=j_i(u_h^i,v_h^i)=0$ for $i=1,2$. \textcolor{black}{Moreover, one also has that
+   281: $$a_{\Gamma}(u_h,v_h)= \sum_{T'\in\T^{\Gamma}}\int_{\Gamma_{T'}}( \frac{\gamma k_{\Gamma}}{h_{T'}}[u_h]-\{K\nabla u_h\cdot n_{\Gamma}\})[v_h]\ds=0,$$
+
+- file: sample\arxiv_sources\2604.02153v1\main_v2.tex (line 280)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   279: \begin{proof}
+>  280: \textcolor{black}{Let $T\in\T$.} We start from  $\int_{T} \div \sigma_h\dx= \int_{\partial T}\sigma_h\cdot n_T \ds$ and we use the  flux definition \textcolor{black}{(\ref{eq: def_flux_IRT0_noncut})-(\ref{eq: def_flux_IRT0})}. As previously, we obtain \eqref{eq: conservation_property} on a non-cut cell $T$ by testing the mixed formulation \textcolor{black}{(\ref{eq: Mixed formulation})} with $(\chi_T,0)$ if $T\in \T^1$, and with $(0,\chi_T)$ if $T\in \T^2$. Finally, if $T\in \mathcal T_h^{\Gamma}$ we use the test-function $v_h=(\chi_T,\chi_T)$ in \textcolor{black}{problem (\ref{eq: Mixed formulation})}. The definition of \textcolor{black}{$v_h=(v_h^1,v_h^2)$ yields that on any cell $T'\in \mathcal T_h$ one has that $(\nabla v_h^i)_{|T'}=0$, hence} $a_i(u_h^i,v_h^i)=j_i(u_h^i,v_h^i)=0$ for $i=1,2$. \textcolor{black}{Moreover, one also has that
+   281: $$a_{\Gamma}(u_h,v_h)= \sum_{T'\in\T^{\Gamma}}\int_{\Gamma_{T'}}( \frac{\gamma k_{\Gamma}}{h_{T'}}[u_h]-\{K\nabla u_h\cdot n_{\Gamma}\})[v_h]\ds=0,$$
+
+- file: sample\arxiv_sources\2604.02153v1\main_v2.tex (line 280)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   279: \begin{proof}
+>  280: \textcolor{black}{Let $T\in\T$.} We start from  $\int_{T} \div \sigma_h\dx= \int_{\partial T}\sigma_h\cdot n_T \ds$ and we use the  flux definition \textcolor{black}{(\ref{eq: def_flux_IRT0_noncut})-(\ref{eq: def_flux_IRT0})}. As previously, we obtain \eqref{eq: conservation_property} on a non-cut cell $T$ by testing the mixed formulation \textcolor{black}{(\ref{eq: Mixed formulation})} with $(\chi_T,0)$ if $T\in \T^1$, and with $(0,\chi_T)$ if $T\in \T^2$. Finally, if $T\in \mathcal T_h^{\Gamma}$ we use the test-function $v_h=(\chi_T,\chi_T)$ in \textcolor{black}{problem (\ref{eq: Mixed formulation})}. The definition of \textcolor{black}{$v_h=(v_h^1,v_h^2)$ yields that on any cell $T'\in \mathcal T_h$ one has that $(\nabla v_h^i)_{|T'}=0$, hence} $a_i(u_h^i,v_h^i)=j_i(u_h^i,v_h^i)=0$ for $i=1,2$. \textcolor{black}{Moreover, one also has that
+   281: $$a_{\Gamma}(u_h,v_h)= \sum_{T'\in\T^{\Gamma}}\int_{\Gamma_{T'}}( \frac{\gamma k_{\Gamma}}{h_{T'}}[u_h]-\{K\nabla u_h\cdot n_{\Gamma}\})[v_h]\ds=0,$$
+
+- file: sample\arxiv_sources\2604.02153v1\main_v2.tex (line 280)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   279: \begin{proof}
+>  280: \textcolor{black}{Let $T\in\T$.} We start from  $\int_{T} \div \sigma_h\dx= \int_{\partial T}\sigma_h\cdot n_T \ds$ and we use the  flux definition \textcolor{black}{(\ref{eq: def_flux_IRT0_noncut})-(\ref{eq: def_flux_IRT0})}. As previously, we obtain \eqref{eq: conservation_property} on a non-cut cell $T$ by testing the mixed formulation \textcolor{black}{(\ref{eq: Mixed formulation})} with $(\chi_T,0)$ if $T\in \T^1$, and with $(0,\chi_T)$ if $T\in \T^2$. Finally, if $T\in \mathcal T_h^{\Gamma}$ we use the test-function $v_h=(\chi_T,\chi_T)$ in \textcolor{black}{problem (\ref{eq: Mixed formulation})}. The definition of \textcolor{black}{$v_h=(v_h^1,v_h^2)$ yields that on any cell $T'\in \mathcal T_h$ one has that $(\nabla v_h^i)_{|T'}=0$, hence} $a_i(u_h^i,v_h^i)=j_i(u_h^i,v_h^i)=0$ for $i=1,2$. \textcolor{black}{Moreover, one also has that
+   281: $$a_{\Gamma}(u_h,v_h)= \sum_{T'\in\T^{\Gamma}}\int_{\Gamma_{T'}}( \frac{\gamma k_{\Gamma}}{h_{T'}}[u_h]-\{K\nabla u_h\cdot n_{\Gamma}\})[v_h]\ds=0,$$
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 397)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   396: lateral correlation scale through the range parameter, $\rho$.  Two special
+>  397: functions appear in eq.~(\ref{eq:spatmatern}): the Gamma function $\Gamma(z)$
+   398: defined in eq.~(6.1.1) of \cite{Abramowitz+65}, and the modified Bessel function
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 414)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   413: fields with generality to higher dimensions straightforward.  Evaluating
+>  414: eq.~(\ref{eq:specmaterndd}) for the two-dimensional case, we drop the
+   415: dimensionality superscript and express the Mat\'ern spectral density as
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 488)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   487: several, well-known two-parameter special cases being simplifications of
+>  488: eqs~(\ref{eq:spatmatern}) and (\ref{eq:specmaterndd}) where the value of the
+   489: smoothness parameter, $\nu$, is fixed, and the two parameters that remain free
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 488)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   487: several, well-known two-parameter special cases being simplifications of
+>  488: eqs~(\ref{eq:spatmatern}) and (\ref{eq:specmaterndd}) where the value of the
+   489: smoothness parameter, $\nu$, is fixed, and the two parameters that remain free
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 499)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   498: Table~\ref{tab:MaternSpecial} as direct simplifications of the parameterization
+>  499: of the two-dimensional Mat\'ern forms in eqs~(\ref{eq:spatmatern}) and
+   500: (\ref{eq:specmatern2d}).
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 500)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   499: of the two-dimensional Mat\'ern forms in eqs~(\ref{eq:spatmatern}) and
+>  500: (\ref{eq:specmatern2d}).
+   501: 
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 566)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   565: the total cumulative covariance, we implement a bisection root-finding strategy
+>  566: to evaluate eqs~(\ref{eq:cumulativecov})--(\ref{eq:auccov}) numerically, as we
+   567: cannot isolate $r_\alpha$ from the argument of the Bessel function analytically,
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 566)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   565: the total cumulative covariance, we implement a bisection root-finding strategy
+>  566: to evaluate eqs~(\ref{eq:cumulativecov})--(\ref{eq:auccov}) numerically, as we
+   567: cannot isolate $r_\alpha$ from the argument of the Bessel function analytically,
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 643)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   642: window-modified empirical periodogram $|H(\kb)|^2$, formed from the
+>  643: Fourier-transformed data vector $H(\kb)$. In eq.~(\ref{eq:dwl}), the periodogram
+   644: is divided by the blurred spectral density $\Sbar\ofst\ofk$, to which it is
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 660)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   659: multidimensional Fast Fourier Transform for sampling patterns that are modulations of regular grids \cite[][their
+>  660:   Lemma 2]{Guillaumin+2022}. The explicit dependence of eqs~(\ref{eq:dwl})
+   661: and~(\ref{eq:blurredspec}) on spatial wave vector $\kb$ rather than isotropic
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 661)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   660:   Lemma 2]{Guillaumin+2022}. The explicit dependence of eqs~(\ref{eq:dwl})
+>  661: and~(\ref{eq:blurredspec}) on spatial wave vector $\kb$ rather than isotropic
+   662: wavenumber $k=||\mbf{k}||$ is intentional, as even for an isotropic model, the
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 665)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   664: of the window $W\ofy$ is clearly not isotropic, even for a full rectangular
+>  665: grid. Compared to eq.~(\ref{eq:blurredspec}), in the original formulation of
+   666: \cite{Simons+2013}, the blurring of the spectral density by the sampling window
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 704)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   703: We find that various iterative numerical methods are suitable for the
+>  704: optimization of eq.~(\ref{eq:dwl}), including gradient-based (both constrained
+   705: and unconstrained) methods and non-gradient, simplex-based methods.  In
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 709)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   708: likelihood function evaluated at the numerical estimate $\hbtheta$ with our
+>  709: evaluations of the analytical partial derivatives of eq.~(\ref{eq:dwl}), which
+   710: we write explicitly in Appendix~\ref{app:maternpartials}.  Our initialization of
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 785)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   784: \end{equation}
+>  785: The blurred score vector,  which we minimize per eq.~(\ref{eq:bgth}), is 
+   786: \begin{equation}\label{eq:bgth2}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 814)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   813: and its expectation, the Fisher information matrix, both depend on the
+>  814: product of eq.~(\ref{eq:mthbar}) evaluated for parameter interactions,
+   815: \begin{equation}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 827)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   826: \end{equation}
+>  827: depends on values calculated from eqs~(\ref{eq:blurredspec}) and
+   828: (\ref{eq:mthbar}), as well as the covariance of the window-modified periodogram
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 828)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   827: depends on values calculated from eqs~(\ref{eq:blurredspec}) and
+>  828: (\ref{eq:mthbar}), as well as the covariance of the window-modified periodogram
+   829: and with correlated wave vectors $\cov\{|H\ofk|^2,|H\ofkp|^2\}$. We calculate this
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 849)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   848: denote the transpose and conjugate transpose.  In our case of non-unitary
+>  849: tapers, the elements of the spatial covariance in eq.~(\ref{eq:percov3}) are
+   850: weighted by the outer product of the sampling window $w\ofx$ with itself,
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 861)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   860: density). The top row visualizes each of the terms that appear in
+>  861: eqs~(\ref{eq:percov})--(\ref{eq:percov3}). The panel in the top row labeled
+   862: $\cov\big\{|H\ofk|^2,|H\ofkp|^2\big\}$ includes all wavenumber correlation
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 861)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   860: density). The top row visualizes each of the terms that appear in
+>  861: eqs~(\ref{eq:percov})--(\ref{eq:percov3}). The panel in the top row labeled
+   862: $\cov\big\{|H\ofk|^2,|H\ofkp|^2\big\}$ includes all wavenumber correlation
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 893)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   892: values and the geometry of the experiment, without reference to a particular data realization, we are able to calculate confidence intervals
+>  893: for single data realizations without the need for additional simulation, and, in addition, we can employ eq.~(\ref{eq:magic}) for designing sampling plans that minimize
+   894: estimation errors or other criteria, which is of great applicability across the
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 949)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   948:     outcomes. The thick black line is based on the covariance exactly calculated
+>  949:     from eq.~(\ref{eq:magic}) shown and calculated at the truth, shown by the
+   950:     dotted vertical line in the top panels.  The quantile-quantile plots of the
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 970)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   969: The analytically calculated parameter standard deviation follows
+>  970: eq.~(\ref{eq:magic}), evaluated at the mean of the estimator for this ensemble.
+   971: The analytical calculation closely matches our numerical experiments for these
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 974)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   973: scenarios presented by \cite{Simons+2026}, their Fig.~7. Optimizing the likelihood
+>  974: in eq.~(\ref{eq:dwl}) correctly accounts for missingness; see Sec.~\ref{sec:asymp} for
+   975: a discussion of the asymptotics of this behavior.
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 987)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   986:     ellipse is the predicted 68\% confidence region based on the covariance
+>  987:     predicted from eq.~(\ref{eq:magic}). Values quoted in the bottom left are
+   988:     the percentages of estimates falling within the 68.7\% predicted confidence
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 995)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   994:   \caption{\label{fig:mlerubiks} 
+>  995:     Comparison of the covariance predicted via eq.~(\ref{eq:magic})
+   996:     and the covariance observed on the set of experiments reported in
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 1010)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  1009:     $\nu_0=1.5$, and $\rho_0=50$~km. As in Fig.~11 of \cite{Simons+2026}, the
+> 1010:     distribution of the variable~$X\ofst\ofk$ of eq.~(\ref{eq:chisq}) is shown as a
+  1011:     histogram across all wavenumbers with the theoretical distribution
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 1026)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  1025: drawn from the observed samples, in gray, and from the analytically calculated
+> 1026: covariance of eq.~(\ref{eq:magic}), in black.  Here, for the 66.7\% observed
+  1027: field with random deletions, we see a subtle negative correlation between estimators of $\st$
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 1031)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  1030: $\{\st,\nu\}=-0.2254$, $\{\st,\rho\}=0.7830$, and $\{\nu,\rho\}=-0.7006$,
+> 1031: respectively. The correlations theoretically calculated via eq.~(\ref{eq:magic})
+  1032: are $\{\st,\nu\}=-0.2569$, $\{\st,\rho\}=0.7637$, and $\{\nu,\rho\}=-0.7441$,
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 1046)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  1045: distribution of the spectral residuals $X_{\btheta}(\kb)$ of
+> 1046: eq.~(\ref{eq:chisq}) for the same model, grid, and taper as previously detailed
+  1047: in Fig.~\ref{fig:blurring}. The histogram and Q-Q plot follow the $\chi^2_2$
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 1067)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  1066: 
+> 1067: The behavior of the estimates made via eq.~(\ref{eq:bgth}) is controlled by the
+  1068: shape of the sampling kernels $w\ofx$, their correlations $W\ofx$, and the
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 1071)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  1070: transform of $w\ofx$, on the spectral densities $\Sbar\ofst\ofk$ in
+> 1071: eq.~(\ref{eq:blurredspec}), which is equal to the expected periodogram of the
+  1072: data $\langle |H\ofk|^2\rangle$ as could be seen from the average $\overline{|H\ofk|^2}$ shown in
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 1080)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  1079: The parameter uncertainties and covariances obtained with
+> 1080: eqs~(\ref{eq:magic})--(\ref{eq:percov3}) are to be understood geometrically
+  1081: through the covariance of the periodogram $\langle |H\ofk|^2,|H\ofkp|^2\rangle$
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 1080)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  1079: The parameter uncertainties and covariances obtained with
+> 1080: eqs~(\ref{eq:magic})--(\ref{eq:percov3}) are to be understood geometrically
+  1081: through the covariance of the periodogram $\langle |H\ofk|^2,|H\ofkp|^2\rangle$
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 1152)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  1151: We include the option for inverting for nested models with parameters specified
+> 1152: as in eq.~(\ref{eq:101}) within the implementation of our maximum-likelihood
+  1153: estimation strategy.  Any (or all) parameters may be held fixed to a supplied
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 1158)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  1157: cases (Table~\ref{tab:MaternSpecial}), one may invert for the simplified
+> 1158: analytic function rather than eq.~(\ref{eq:specmatern2d}).  In such special
+  1159: nested model cases, we optimize only over variance $\st$ and range $\rho$ (as in
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 1166)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  1165: (eq.~\ref{hessian}) and Fisher (eq.~\ref{eq:fisherinfo}) matrix to compare with
+> 1166: the observed numerical behavior and to evaluate eq.~(\ref{eq:magic}) at the
+  1167: estimate $\hbtheta$, rely on first and second partial derivatives of the
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 1310)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  1309: distributed (to the eye) ensembles, whose empirical parameter uncertainties are
+> 1310: well predicted by the analytical calculation of eq.~(\ref{eq:magic}).
+  1311: Fig.~\ref{fig:specialsamples} is our first demonstration of the effect of
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 1550)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  1549:   \emph{Sm(ooth)~Anti} mask), taper used in analysis for the blurred likelihood
+> 1550:   (the $w\ofx$ in eq.~(\ref{eq:dwl}); \emph{Unit}, \emph{Mask},
+  1551:   \emph{Anti}-mask, \emph{Sm.~Mask}, \emph{Sm.~Anti} mask).  Estimate ensembles
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 1595)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  1594: patterns and produces an unbiased estimator $\langle\hbtheta\rangle=\btruth$
+> 1595: whose covariance can be exactly predicted via eq.~(\ref{eq:magic}), and (2)~how
+  1596: the appearance of multiple processes within a single window of observation
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 1651)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  1650: $\hbtheta_I$ and $\hbtheta_{I\!I}$, taking the sampling window for the
+> 1651: analysis, $w\ofx$ in eqs~(\ref{eq:dwl}) and~(\ref{eq:blurredspec}) to be a unit
+  1652: taper (i.e., fully observed).  The ensembles of estimates for the three Mat\'ern
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 1651)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  1650: $\hbtheta_I$ and $\hbtheta_{I\!I}$, taking the sampling window for the
+> 1651: analysis, $w\ofx$ in eqs~(\ref{eq:dwl}) and~(\ref{eq:blurredspec}) to be a unit
+  1652: taper (i.e., fully observed).  The ensembles of estimates for the three Mat\'ern
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 1697)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  1696: parameter uncertainties are well matched, a testament to the debiased Whittle
+> 1697: likelihood of eq.~(\ref{eq:dwl}). Smoothing the outer edges of the field does
+  1698: not appear to improve the ensemble mean in these cases, though we do see a
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 1956)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  1955:     residuals as they do not conform to the theoretical $\chi_2^2$ distribution
+> 1956:     of eq.~(\ref{eq:chisq}) as would be anticipated for the ratio of
+  1957:     uncorrelated, Gaussian random variables.  The structure of the residuals in
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2066)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2065:       \{$\sigma^2,\nu$\}, \{$\sigma^2,\rho$\}, \{$\nu,\rho$\}) from the observed
+> 2066:       ensemble (\textit{circles}) and predicted from eq.~(\ref{eq:magic})
+  2067:       (\textit{triangles}) scaled as $10\log_{10}(\cdot)$. Root-mean-squared
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2117)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2116: The common approximation $\cov\ofth\approx\bar{\bmcF}^{-1}\oftr$ requires
+> 2117: comparison to the full expression of eq.~(\ref{eq:magic}): how well does the
+  2118: inverse Fisher information matrix approximate the full theoretical calculation
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2493)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2492: \end{equation}
+> 2493: into eq.~(\ref{eq:A2}),
+  2494: \begin{equation}\label{eq:awesome}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2530)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2529: \end{equation}
+> 2530: the integral term in eq.~(\ref{eq:A7}) simplifies, reducing the Fourier transform of the Mat\'ern spatial 
+  2531: covariance to
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2636)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2635: modified Bessel function of the second kind term. For (2), we require the 
+> 2636: infinite integral of this product. We show the expressions needed to calculate eqs~(\ref{eq:cumulativecov}) and (\ref{eq:auccov}) here. We include an analytical
+  2637: solution for an additional integral of the modified Bessel function of the second kind in the case of integrating the Mat\'ern spatial covariance alone, in a numerically tractable form that we believe to be novelly expressed.
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2636)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2635: modified Bessel function of the second kind term. For (2), we require the 
+> 2636: infinite integral of this product. We show the expressions needed to calculate eqs~(\ref{eq:cumulativecov}) and (\ref{eq:auccov}) here. We include an analytical
+  2637: solution for an additional integral of the modified Bessel function of the second kind in the case of integrating the Mat\'ern spatial covariance alone, in a numerically tractable form that we believe to be novelly expressed.
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2644)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2643: \end{equation}
+> 2644: Applying eq.~(\ref{eq:kvrecursion}) for our first (1) goal, we find our eq.~(\ref{eq:cumulativecov}),
+  2645: \begin{equation}\label{eq:}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2644)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2643: \end{equation}
+> 2644: Applying eq.~(\ref{eq:kvrecursion}) for our first (1) goal, we find our eq.~(\ref{eq:cumulativecov}),
+  2645: \begin{equation}\label{eq:}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2664)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2663: \end{equation}
+> 2664: which leads us to our eq.~(\ref{eq:auccov}) for the total cumulative variance over all lag distances
+  2665: \begin{equation}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2677)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2676: 
+> 2677: The infinite integral of the Mat\'ern spatial covariance relies on solving $\int_0^\infty z^{\nu}K_\nu(z)dz$, which can be found by again applying eq.~(\ref{eq:watson13.21.8})
+  2678: \[ \int_0^\infty z^\nu K_\nu(az) dz = 2^{\nu-1}a^{-\nu-1}\Gamma(\nu+1/2)\sqrt{\pi}\]
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2701)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2700: is defined, e.g., in eq.~(4.1.1) of \cite{ErdelyiI1953}, where $(a)_n=\Gamma(a+n)/\Gamma(a)$ is referred to as Pochhammer's symbol.
+> 2701: The solution for an indefinite integral for terms resembling the right-hand side of eq.~(\ref{eq:Inuz}) is \cite[eq.~07.17.21.0003.01]{WolframFunctions}
+  2702: \[ \int z^{a-1} \pFq{0}{1}{-}{b}{z} dz = z^a \Gamma(b) \Gamma(a)  \rpFq{1}{2}{a}{b,a+1}{z}. \]
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2723)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2722: We include this expression as it is an explicit solution that can be readily implemented numerically. 
+> 2723: Returning to the definite integral of the spatial Mat\'ern covariance, we apply eq.~(\ref{eq:intznknz}) to find
+  2724: \begin{equation}\label{eq:intCydy}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2852)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2851: \end{equation}
+> 2852: to simplify eq.~(\ref{eq:besselhalfint1}) as
+  2853: \begin{equation}\label{eq:besselhalfint2}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2864)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2863: \end{equation}
+> 2864: Substituting eq.~(\ref{eq:gamma}) into eq.~(\ref{eq:gammadup}), we have
+  2865: \begin{equation}\label{eq:gammaplushalf}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2864)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2863: \end{equation}
+> 2864: Substituting eq.~(\ref{eq:gamma}) into eq.~(\ref{eq:gammadup}), we have
+  2865: \begin{equation}\label{eq:gammaplushalf}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2879)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2878: \end{equation} 
+> 2879: The reduced analytic form of eq.~(\ref{eq:MaternHalfInteger}) for $n = 0, 1,$
+  2880: and $2$ are provided in Table~\ref{tab:MaternSpecial}.
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2912)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2911: \end{equation} 
+> 2912: for $a=d/2$ and $b=0$ into eq.~(\ref{eq:sklimnu1}),
+  2913: \begin{equation}\label{eq:sklimnu2}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2998)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2997:     \hline
+> 2998:     $\pl/\pl \st$ & eq.~(\ref{eq:dCyds2}) & eq.~(\ref{eq:dSdkds2}) & eq.~(\ref{eq:dS2kds2})\\
+  2999:     $\pl/\pl \nu$ & eq.~(\ref{eq:dCydnu4}) & eq.~(\ref{eq:dSdkdnu}) & eq.~(\ref{eq:dS2kdnu})\\
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2998)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2997:     \hline
+> 2998:     $\pl/\pl \st$ & eq.~(\ref{eq:dCyds2}) & eq.~(\ref{eq:dSdkds2}) & eq.~(\ref{eq:dS2kds2})\\
+  2999:     $\pl/\pl \nu$ & eq.~(\ref{eq:dCydnu4}) & eq.~(\ref{eq:dSdkdnu}) & eq.~(\ref{eq:dS2kdnu})\\
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2998)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2997:     \hline
+> 2998:     $\pl/\pl \st$ & eq.~(\ref{eq:dCyds2}) & eq.~(\ref{eq:dSdkds2}) & eq.~(\ref{eq:dS2kds2})\\
+  2999:     $\pl/\pl \nu$ & eq.~(\ref{eq:dCydnu4}) & eq.~(\ref{eq:dSdkdnu}) & eq.~(\ref{eq:dS2kdnu})\\
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2999)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2998:     $\pl/\pl \st$ & eq.~(\ref{eq:dCyds2}) & eq.~(\ref{eq:dSdkds2}) & eq.~(\ref{eq:dS2kds2})\\
+> 2999:     $\pl/\pl \nu$ & eq.~(\ref{eq:dCydnu4}) & eq.~(\ref{eq:dSdkdnu}) & eq.~(\ref{eq:dS2kdnu})\\
+  3000:     $\pl/\pl \rho$ & eq.~(\ref{eq:dCydrh2}) & eq.~(\ref{eq:dSkdrho}) & eq.~(\ref{eq:dSkdrhodim2})\\
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2999)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2998:     $\pl/\pl \st$ & eq.~(\ref{eq:dCyds2}) & eq.~(\ref{eq:dSdkds2}) & eq.~(\ref{eq:dS2kds2})\\
+> 2999:     $\pl/\pl \nu$ & eq.~(\ref{eq:dCydnu4}) & eq.~(\ref{eq:dSdkdnu}) & eq.~(\ref{eq:dS2kdnu})\\
+  3000:     $\pl/\pl \rho$ & eq.~(\ref{eq:dCydrh2}) & eq.~(\ref{eq:dSkdrho}) & eq.~(\ref{eq:dSkdrhodim2})\\
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 2999)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2998:     $\pl/\pl \st$ & eq.~(\ref{eq:dCyds2}) & eq.~(\ref{eq:dSdkds2}) & eq.~(\ref{eq:dS2kds2})\\
+> 2999:     $\pl/\pl \nu$ & eq.~(\ref{eq:dCydnu4}) & eq.~(\ref{eq:dSdkdnu}) & eq.~(\ref{eq:dS2kdnu})\\
+  3000:     $\pl/\pl \rho$ & eq.~(\ref{eq:dCydrh2}) & eq.~(\ref{eq:dSkdrho}) & eq.~(\ref{eq:dSkdrhodim2})\\
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3000)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2999:     $\pl/\pl \nu$ & eq.~(\ref{eq:dCydnu4}) & eq.~(\ref{eq:dSdkdnu}) & eq.~(\ref{eq:dS2kdnu})\\
+> 3000:     $\pl/\pl \rho$ & eq.~(\ref{eq:dCydrh2}) & eq.~(\ref{eq:dSkdrho}) & eq.~(\ref{eq:dSkdrhodim2})\\
+  3001:     $\pl/\pl r$ & eq.~(\ref{eq:dCydlag}) & - & - \\
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3000)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2999:     $\pl/\pl \nu$ & eq.~(\ref{eq:dCydnu4}) & eq.~(\ref{eq:dSdkdnu}) & eq.~(\ref{eq:dS2kdnu})\\
+> 3000:     $\pl/\pl \rho$ & eq.~(\ref{eq:dCydrh2}) & eq.~(\ref{eq:dSkdrho}) & eq.~(\ref{eq:dSkdrhodim2})\\
+  3001:     $\pl/\pl r$ & eq.~(\ref{eq:dCydlag}) & - & - \\
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3000)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  2999:     $\pl/\pl \nu$ & eq.~(\ref{eq:dCydnu4}) & eq.~(\ref{eq:dSdkdnu}) & eq.~(\ref{eq:dS2kdnu})\\
+> 3000:     $\pl/\pl \rho$ & eq.~(\ref{eq:dCydrh2}) & eq.~(\ref{eq:dSkdrho}) & eq.~(\ref{eq:dSkdrhodim2})\\
+  3001:     $\pl/\pl r$ & eq.~(\ref{eq:dCydlag}) & - & - \\
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3001)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3000:     $\pl/\pl \rho$ & eq.~(\ref{eq:dCydrh2}) & eq.~(\ref{eq:dSkdrho}) & eq.~(\ref{eq:dSkdrhodim2})\\
+> 3001:     $\pl/\pl r$ & eq.~(\ref{eq:dCydlag}) & - & - \\
+  3002:     $\pl/\pl k$ & - & eq.~(\ref{eq:dsdkdk}) & eq.~(\ref{eq:ds2kdk}) \\
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3002)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3001:     $\pl/\pl r$ & eq.~(\ref{eq:dCydlag}) & - & - \\
+> 3002:     $\pl/\pl k$ & - & eq.~(\ref{eq:dsdkdk}) & eq.~(\ref{eq:ds2kdk}) \\
+  3003:     \hline
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3002)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3001:     $\pl/\pl r$ & eq.~(\ref{eq:dCydlag}) & - & - \\
+> 3002:     $\pl/\pl k$ & - & eq.~(\ref{eq:dsdkdk}) & eq.~(\ref{eq:ds2kdk}) \\
+  3003:     \hline
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3066)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3065: \end{equation}
+> 3066: The remaining difficulty for fully evaluating eq.~(\ref{eq:dCydnu1}) is that the smoothness parameter $\nu$ appears in the argument and order of the modified Bessel function of the second kind $K_\nu(z)$.
+  3067: While derivatives of Bessel functions with respect to order are listed within
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3085)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3084: 
+> 3085: For integer order $\nu\rightarrow n$, we evaluate eq.~(\ref{eq:as9.6.2})  for the ascending series representation of
+  3086: $I_{\nu}(z)$ given by eq.~(9.6.7) of
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3120)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3119: see eq.~(10.38.1) of \cite{NIST:DLMF}.
+> 3120: \cite{Brychkov2016} determined a closed-form solution that is a numerically viable simplification of eq.~(\ref{eq:dlmf10.38.1}) in terms of generalized hypergeometric functions, ${}_pF_q$, in their eq.~(3.1)
+  3121: \begin{equation}\label{eq:brychkov3.1}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3134)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3133: \end{equation}
+> 3134: Eq.~(3.5) of \cite{Brychkov2016} provides the closed-form solution for $\frac{\partial}{\partial \nu}  K_{\nu}(z)$ for $\nu\notin{\mathbb{Z}}$ derived from eq.~(\ref{eq:as9.6.2}) using
+  3135: eq.~(\ref{eq:brychkov3.1}) such that
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3135)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3134: Eq.~(3.5) of \cite{Brychkov2016} provides the closed-form solution for $\frac{\partial}{\partial \nu}  K_{\nu}(z)$ for $\nu\notin{\mathbb{Z}}$ derived from eq.~(\ref{eq:as9.6.2}) using
+> 3135: eq.~(\ref{eq:brychkov3.1}) such that
+  3136: \begin{equation}\label{eq:brychkov3.5}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3148)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3147: \[b_{\nu}=\frac{\pi\csc(\nu\pi)}{2\Gamma^2(\nu+1)}\left(z/2\right)^{2\nu}\left(K_{\nu}(z)+\frac{\pi}{2}\csc(\nu\pi)I_{\nu}(z)\right)\pFq{2}{3}{\nu,\nu+1/2}{\nu+1,\nu+1,2\nu+1}{z^2}.\]
+> 3148: We expand from eqs~(\ref{eq:as9.6.46}),~(\ref{eq:as9.6.45}),~and~(\ref{eq:brychkov3.5}) to account for $\nu$ appearing both in order and argument. 
+  3149: Using the definition provided by eq.~(\ref{eq:as9.6.7}) for
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3148)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3147: \[b_{\nu}=\frac{\pi\csc(\nu\pi)}{2\Gamma^2(\nu+1)}\left(z/2\right)^{2\nu}\left(K_{\nu}(z)+\frac{\pi}{2}\csc(\nu\pi)I_{\nu}(z)\right)\pFq{2}{3}{\nu,\nu+1/2}{\nu+1,\nu+1,2\nu+1}{z^2}.\]
+> 3148: We expand from eqs~(\ref{eq:as9.6.46}),~(\ref{eq:as9.6.45}),~and~(\ref{eq:brychkov3.5}) to account for $\nu$ appearing both in order and argument. 
+  3149: Using the definition provided by eq.~(\ref{eq:as9.6.7}) for
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3148)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3147: \[b_{\nu}=\frac{\pi\csc(\nu\pi)}{2\Gamma^2(\nu+1)}\left(z/2\right)^{2\nu}\left(K_{\nu}(z)+\frac{\pi}{2}\csc(\nu\pi)I_{\nu}(z)\right)\pFq{2}{3}{\nu,\nu+1/2}{\nu+1,\nu+1,2\nu+1}{z^2}.\]
+> 3148: We expand from eqs~(\ref{eq:as9.6.46}),~(\ref{eq:as9.6.45}),~and~(\ref{eq:brychkov3.5}) to account for $\nu$ appearing both in order and argument. 
+  3149: Using the definition provided by eq.~(\ref{eq:as9.6.7}) for
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3149)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3148: We expand from eqs~(\ref{eq:as9.6.46}),~(\ref{eq:as9.6.45}),~and~(\ref{eq:brychkov3.5}) to account for $\nu$ appearing both in order and argument. 
+> 3149: Using the definition provided by eq.~(\ref{eq:as9.6.7}) for
+  3150: argument $\nu z$, we find that the parameterization of both the order and
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3261)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3260: Finally, we present the partial derivative with respect to
+> 3261: smoothness $\nu$ of the Mat\'ern spatial covariance through eqs~(\ref{eq:dCydnu1})~and~(\ref{eq:dBkdnu4}) as 
+  3262: \begin{equation}\label{eq:dCydnu4}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3261)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3260: Finally, we present the partial derivative with respect to
+> 3261: smoothness $\nu$ of the Mat\'ern spatial covariance through eqs~(\ref{eq:dCydnu1})~and~(\ref{eq:dBkdnu4}) as 
+  3262: \begin{equation}\label{eq:dCydnu4}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3329)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3328: \end{equation}
+> 3329: Applying eq.~(\ref{eq:watson3.71.3}) to eq.~(\ref{eq:dCydrh1}), we find
+  3330: \begin{equation}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3329)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3328: \end{equation}
+> 3329: Applying eq.~(\ref{eq:watson3.71.3}) to eq.~(\ref{eq:dCydrh1}), we find
+  3330: \begin{equation}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3347)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3346: 
+> 3347: The partial derivatives of the spatial covariance in eqs~(\ref{eq:dCyds2}),
+  3348: (\ref{eq:dCydnu4}), and (\ref{eq:dCydrh2}) possess singularities at $r=0$. We model
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3348)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3347: The partial derivatives of the spatial covariance in eqs~(\ref{eq:dCyds2}),
+> 3348: (\ref{eq:dCydnu4}), and (\ref{eq:dCydrh2}) possess singularities at $r=0$. We model
+  3349: the isotropic covariance in the limiting case of small lag distances by
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3348)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3347: The partial derivatives of the spatial covariance in eqs~(\ref{eq:dCyds2}),
+> 3348: (\ref{eq:dCydnu4}), and (\ref{eq:dCydrh2}) possess singularities at $r=0$. We model
+  3349: the isotropic covariance in the limiting case of small lag distances by
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3357)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3356: We form an approximation of the Mat\'ern spatial covariance for small argument
+> 3357: by substituting eq.~(\ref{eq:as9.6.9}) into eq.~(\ref{eq:spatmatern}) as
+  3358: \begin{equation}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3357)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3356: We form an approximation of the Mat\'ern spatial covariance for small argument
+> 3357: by substituting eq.~(\ref{eq:as9.6.9}) into eq.~(\ref{eq:spatmatern}) as
+  3358: \begin{equation}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3383)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3382: whose analytical forms (their eqs~A25--A27) we will compare to.
+> 3383: As we did in eq.~(\ref{eq:spatmatofxi}) for the spatial covariance, we will make use of an auxiliary variable for the main argument of the spectral density such that
+  3384: \begin{equation}\label{eq:specmatofzeta}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3411)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3410: \end{equation}
+> 3411: Substituting eq.~(\ref{eq:dS2kds2}) into eq.~(\ref{eq:unblurredscore}) is equivalent to eq.~(A25) of \cite{Simons+2013},
+  3412: \begin{equation}\label{eq:ms2d2}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3411)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3410: \end{equation}
+> 3411: Substituting eq.~(\ref{eq:dS2kds2}) into eq.~(\ref{eq:unblurredscore}) is equivalent to eq.~(A25) of \cite{Simons+2013},
+  3412: \begin{equation}\label{eq:ms2d2}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3448)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3447: \end{equation}
+> 3448: where $\psi(z)$ is the digamma function, see eq.~(\ref{eq:digamma}).
+  3449: In two dimensions, eq.~(\ref{eq:dSdkdnu}) simplifies to
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3449)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3448: where $\psi(z)$ is the digamma function, see eq.~(\ref{eq:digamma}).
+> 3449: In two dimensions, eq.~(\ref{eq:dSdkdnu}) simplifies to
+  3450: \begin{equation}\label{eq:dS2kdnu}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3458)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3457: \end{equation}
+> 3458: Substituting eq.~(\ref{eq:dS2kdnu}) into eq.~(\ref{eq:unblurredscore}) is equivalent to eq.~(A26) of \cite{Simons+2013}
+  3459: \begin{equation}\label{eq:mnud2}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3458)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3457: \end{equation}
+> 3458: Substituting eq.~(\ref{eq:dS2kdnu}) into eq.~(\ref{eq:unblurredscore}) is equivalent to eq.~(A26) of \cite{Simons+2013}
+  3459: \begin{equation}\label{eq:mnud2}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3497)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3496: \end{equation}
+> 3497: Substitution of eq.~(\ref{eq:dSkdrhodim2}) into eq.~(\ref{eq:unblurredscore}) is equivalent to eq.~(A27) of \cite{Simons+2013},
+  3498: \begin{equation}\label{eq:mrhod2}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3497)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+  3496: \end{equation}
+> 3497: Substitution of eq.~(\ref{eq:dSkdrhodim2}) into eq.~(\ref{eq:unblurredscore}) is equivalent to eq.~(A27) of \cite{Simons+2013},
+  3498: \begin{equation}\label{eq:mrhod2}
+
+- file: sample\arxiv_sources\2604.02214v1\main.tex (line 298)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   297: \end{align}
+>  298: The additional row enforces the orthogonality condition $(\mathbf{\tilde{\Psi}}^{(0)})^T\mathbf{\tilde{\Psi}}^{(1)}$=0, which ensures we find a unique solution (see Sec.~III.B of \cite{Cardoso2026RingingRapidlyRotating}). The operators $\mathbf{\tilde{D}}$ are discretized versions of the regular, continuous operators $\tilde{\mathcal{D}}$ from Eq. (\ref{eq:Eq_O1_reg}) with any divergent coefficients removed by the $B^{(1)}$ term. This system can be solved for $\mathbf{x}$ using standard linear solve methods, like Mathematica's \texttt{LinearSolve}, to find the scalar QNM corrections.
+   299: 
+
+- file: sample\arxiv_sources\2604.02260v1\main.tex (line 152)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   151: We study the \emph{episodic} RL setting, where at the beginning of each episode the initial state is sampled from an initial state distribution $\rho$, i.e., $\vx_0 \sim \rho$. Then we rollout a policy $\vpi \in \Pi$ for $T$ steps in the environment and collect the resulting trajectory for learning. 
+>  152: The goal of the RL agent is to find the policy that maximizes the cumulative sum of rewards, i.e., solve (\ref{eq:control_objective}) for the dynamics $\vf_n^*$. 
+   153: For simplicity of notation, consider the case where the dynamics  $\vf_n^*$ are fixed within an episode.\footnote{Our results can be extended to the setting where the dynamics also change during the episode.} 
+
+- file: sample\arxiv_sources\2604.02260v1\main.tex (line 300)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   299: 
+>  300: Equation (\ref{eq:calibration_nonstationary}) reveals two distinct sources of error:
+   301: \begin{enumerate}
+
+- file: sample\arxiv_sources\2604.02260v1\main.tex (line 314)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   313: 
+>  314: We now relate model error to control performance akin to \cite{kakade_approximately_2002}. To unify the reset and sliding-window cases, let $\vmu_{m:n-1}$ and $\vsigma_{m:n-1}$ denote an arbitrary dynamics model and uncertainty model constructed using (\ref{eq:generic_gp}) from the most recent retained data horizon from episodes $m:n-1$, with $m$ as defined in \cref{lem:calibration}.
+   315: 
+
+- file: sample\arxiv_sources\2604.02260v1\main.tex (line 316)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   315: 
+>  316: For a policy $\vpi$, let $J(\vpi,\vf_n^*)$ and $J(\vpi,\vmu_{m:n-1})$ denote the expected finite-horizon returns from (\ref{eq:control_objective}) under the true dynamics and the learned model, respectively. We further define the trajectory-wise accumulated epistemic uncertainty for a range of episodes $m, \dots, \ell$ as
+   317: \begin{equation}
+
+- file: sample\arxiv_sources\2604.02260v1\main.tex (line 326)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   325: \end{equation}
+>  326: where the expectation is taken over trajectories generated by policy $\vpi$ under the dynamics $\vf$ with the same process noise as in (\ref{eq:dynamics}).
+   327: The bound is then as follows.
+
+- file: sample\arxiv_sources\2604.02260v1\main.tex (line 379)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   378: 
+>  379: In both cases, restricting the data buffer limits the temporal bias identified in (\ref{eq:calibration_nonstationary},\ref{eq:informal_perf_diff}).
+   380: 
+
+- file: sample\arxiv_sources\2604.02260v1\main.tex (line 502)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   501: To this end, we propose practical modifications to R-OMBRL and SW-OMBRL, which enable learning with BNNs. Moreover, we employ a scalable parametrized uncertainty-aware dynamics model $\mathcal{M}_{\bm{\phi}} = (\vmu_{\bm{\phi}},\vsigma_{\bm{\phi}})$ and instantiate it using deep ensembles. The model is trained to maximize the data likelihood using stochastic gradient descent.
+>  502: Similar to \cite{sukhija_optimism_2025}, we train a parameterized policy $\vpi_{\bm{\theta}}$ using the MBPO algorithm~\cite{janner2019trust} on the optimistic objective (\ref{eq:optimistic_objective}).  
+   503: To handle non-stationarity, we restrict the data buffer through resets or sliding windows as described in \cref{sec:algorithms}. 
+
+- file: sample\arxiv_sources\2604.02260v1\main.tex (line 791)
+  error: (\ref{eq:
+  message: Consider using \eqref instead of \ref for equations.
+   790: \end{align}
+>  791: In the last line, we used the fact that $\norm{{\vsigma}_{m:n-1}(\cdot,\cdot)}$ is bounded by $\sigma_{\max}$ and positive, and thus behaves like a reward. In fact, it is an intrinsic reward~\cite{sukhija_optimism_2025}, which is why \cref{lem:performance_difference} also applies. Thus, the epistemic uncertainty scaling $\lambda_{n,m}$ and drift accumulation $B_{n,m}$ from (\ref{eq: exploration bonus weight},\ref{eq: temporal drift accumulation}) are modified to become $\tilde \lambda_{n,m}$ and $\tilde B_{n,m}$ which include the term $\max\{R_{\max}, \sigma_{\max}\}$.
+   792: \end{proof}
 

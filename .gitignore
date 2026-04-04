@@ -5,7 +5,9 @@ out
 dist
 node_modules
 
-sample/arxiv_sources
+sample/arxiv_sources/**
+!sample/arxiv_sources/arxiv_id_list.json
+
 **/**.dvi
 **/**.out
 **/**.aux

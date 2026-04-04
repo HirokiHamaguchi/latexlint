@@ -13,14 +13,25 @@ def run_fetch_arxiv_from_list():
     """Fetch arXiv papers from the saved list."""
     os.makedirs(SAVE_DIR, exist_ok=True)
 
+    with open(ARXIV_LIST_FILE, "r", encoding="utf-8") as f:
+        arxiv_ids = json.load(f)
+
+    # First, ensure the list of arxiv_ids holds all successfully extracted IDs in the directory
+    existing_ids = {d.name for d in SAVE_DIR.iterdir() if d.is_dir()}
+    missing_ids = set(arxiv_ids) - existing_ids
+    if missing_ids:
+        raise Exception("Missing IDs:", ", ".join(list(missing_ids)))
+    if len(existing_ids) > len(arxiv_ids):
+        raise Exception(
+            "There are extra directories not in the list:",
+            ", ".join(list(existing_ids - set(arxiv_ids))),
+        )
+
     # Load arxiv_id list
     if not ARXIV_LIST_FILE.exists():
         print(f"Error: {ARXIV_LIST_FILE} not found.")
         print("Please run run_fetch_arXiv.py first to generate the list.")
         return
-
-    with open(ARXIV_LIST_FILE, "r", encoding="utf-8") as f:
-        arxiv_ids = json.load(f)
 
     print(f"Found {len(arxiv_ids)} arxiv_ids in {ARXIV_LIST_FILE.name}")
 

@@ -24,7 +24,8 @@ def run_fetch_arXiv():
 
     response = requests.get(
         "http://export.arxiv.org/api/query?"
-        + f"search_query=all:math&start=0&max_results={MAX_RESULTS}"
+        + f"search_query=all:a&start=0&max_results={MAX_RESULTS}"
+        + "&sortBy=submittedDate&sortOrder=descending"
     )
     response.raise_for_status()
 

@@ -1,644 +1,945 @@
-[CODE] LLSI (92)
+[CODE] LLSI (135)
 - file: sample\arxiv_sources\1609.03457v1\avail-engines.tex (line 146)
   error: 128GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    145: 
 >  146: The developer of the equation-based search engine MathWebSearch, Michael Kohlhase, states on his webpage that MathWebSearch is ready for deployment on arXiv.org.  To do so, he needs 128GB of additional server space, and that their restriction comes especially from the RAM; donations of server space are invited. \cite{MathWebSearch-info}
    147: 
 
 - file: sample\arxiv_sources\1609.03457v1\avail-engines.tex (line 189)
   error: 128GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    188: 
 >  189: ArXiv.org deployment of MWS is stated to need only an additional 128GB of RAM; donations of server space are invited. \cite{MathWebSearch-info}  MWS developers tested its performance on about 65\% of the arXiv (as of 2012).  Query times averaged 25 - 75 ms for most queries, and went just past 300 ms for a more difficult class of query.  The system uses distributed computing, so that its estimated memory requirements for the entire arXiv (170GB) can be accommodated.  A user interface for arXiv retrieval was designed, and appears to use LaTeX for its query language. \cite{MWS-05-2012}
    190: 
 
 - file: sample\arxiv_sources\1609.03457v1\avail-engines.tex (line 189)
   error: 170GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    188: 
 >  189: ArXiv.org deployment of MWS is stated to need only an additional 128GB of RAM; donations of server space are invited. \cite{MathWebSearch-info}  MWS developers tested its performance on about 65\% of the arXiv (as of 2012).  Query times averaged 25 - 75 ms for most queries, and went just past 300 ms for a more difficult class of query.  The system uses distributed computing, so that its estimated memory requirements for the entire arXiv (170GB) can be accommodated.  A user interface for arXiv retrieval was designed, and appears to use LaTeX for its query language. \cite{MWS-05-2012}
    190: 
 
 - file: sample\arxiv_sources\2103.03874v2\1-intro.tex (line 154)
   error: 23GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    153: It also contains over $5$ million problems generated using Mathematica scripts, based on $100$ hand-designed modules covering topics such as conic sections, div grad and curl, KL divergence, eigenvalues, polyhedra, and Diophantine equations. In total AMPS contains 
 >  154: 23GB of problems and solutions.
    155: Pretraining on AMPS enables a $0.1$ billion parameter model to perform comparably to a fine-tuned model that is $130\times$ larger.
 
 - file: sample\arxiv_sources\2103.03874v2\3-dataset.tex (line 100)
   error: 23$ GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
     99: \textbf{Mathematica.}\quad
 >  100: To make AMPS larger, we also contribute our own Mathematica scripts to generate approximately $50\times$ more problems than our Khan Academy dataset. With Mathematica, we designed $100$ scripts that test distinct mathematics concepts, $37$ of which include full step-by-step \LaTeX{} solutions in addition to final answers. We generated around $50,\!000$ exercises from each of our scripts, or around $5$ million problems in total. This results in over $23$ GB of mathematics problems, making it larger than the $16$ GB of natural language used to train BERT \citep{Devlin2019BERTPO}.
    101: 
 
 - file: sample\arxiv_sources\2103.03874v2\3-dataset.tex (line 100)
   error: 16$ GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
     99: \textbf{Mathematica.}\quad
 >  100: To make AMPS larger, we also contribute our own Mathematica scripts to generate approximately $50\times$ more problems than our Khan Academy dataset. With Mathematica, we designed $100$ scripts that test distinct mathematics concepts, $37$ of which include full step-by-step \LaTeX{} solutions in addition to final answers. We generated around $50,\!000$ exercises from each of our scripts, or around $5$ million problems in total. This results in over $23$ GB of mathematics problems, making it larger than the $16$ GB of natural language used to train BERT \citep{Devlin2019BERTPO}.
    101: 
 
 - file: sample\arxiv_sources\2103.03874v2\4-experiments.tex (line 117)
   error: 3$ GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    116: We additionally tried pretraining on StackExchange, a real-world but less  curated source of mathematics text. 
 >  117: A GPT-2 (0.3B) model pretrained on both AMPS and questions and answers from Math StackExchange ($\sim\!3$ GB) had $6.0\%$ accuracy. This is actually less than the $6.2\%$ accuracy attained by pretraining on AMPS alone. Thus our dataset is %
    118: more useful for pretraining even than %
 
 - file: sample\arxiv_sources\2103.12048v3\99_appendix.tex (line 24)
   error: 12 GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
     23: OS: 16.04.1-Ubuntu/ x86\_64.  \\
 >   24: GPU: GeForce GTX 1080 Ti with 12 GB of memory. 
     25: 
 
 - file: sample\arxiv_sources\2103.12048v3\99_appendix.tex (line 310)
   error: 12 GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    309: Operating System: 16.04.1-Ubuntu/ x86\_64.  \\
 >  310: GPU: GeForce GTX 1080 Ti with 12 GB of memory. 
    311: 
 
 - file: sample\arxiv_sources\2401.03238v1\Using_Large.tex (line 143)
   error: 37KB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    142: % \begin{Prompting GPT-4 and Identification of Criteria}
 >  143: The corpus consists of an unknown number of online tutors (a tutor could be represented in more than one dialogue) who were college students at a Pennsylvanian university. The students were middle school students, ranging from 6th-8th grade, from two schools. The student-level demographics represented in the corpus are unknown, however, the school-level demographics consisted of 52\% Latinx from a California public school and 100\% Black and male from a Pennsylvania charter school. Math proficiency is low at both schools, with  one school at zero percent proficiency suggesting the majority of students have low self-efficacy in learning math. Tutoring was performed remotely using Pencil as a remote communication platform with audio recordings transcribed within the platform. Individual dialogue recordings ranged in size from 100 bytes to 37KB. Transcriptions between 2KB and 8KB were used to provide sufficient utterances to assess dialogue while not overloading and slowing down the processing of  the GPT models. In addition, we strive to keep costs low, particularly when scaling to more transcriptions. For all transcriptions, the tutor was the first utterance in the dialogue, which was used as a guide in diarization. We prompt GPT-3.5-Turbo and GPT-4 using the prompt created (shown in Appendix E), with the temperature at 0. Running the prompt on 50 real-life tutoring dialogues, we  report the absolute performance of each model compared to a human grader. Appendix E displays the prompt used to assess real-life dialogues. 
    144: 
 
 - file: sample\arxiv_sources\2401.03238v1\Using_Large.tex (line 143)
   error: 2KB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    142: % \begin{Prompting GPT-4 and Identification of Criteria}
 >  143: The corpus consists of an unknown number of online tutors (a tutor could be represented in more than one dialogue) who were college students at a Pennsylvanian university. The students were middle school students, ranging from 6th-8th grade, from two schools. The student-level demographics represented in the corpus are unknown, however, the school-level demographics consisted of 52\% Latinx from a California public school and 100\% Black and male from a Pennsylvania charter school. Math proficiency is low at both schools, with  one school at zero percent proficiency suggesting the majority of students have low self-efficacy in learning math. Tutoring was performed remotely using Pencil as a remote communication platform with audio recordings transcribed within the platform. Individual dialogue recordings ranged in size from 100 bytes to 37KB. Transcriptions between 2KB and 8KB were used to provide sufficient utterances to assess dialogue while not overloading and slowing down the processing of  the GPT models. In addition, we strive to keep costs low, particularly when scaling to more transcriptions. For all transcriptions, the tutor was the first utterance in the dialogue, which was used as a guide in diarization. We prompt GPT-3.5-Turbo and GPT-4 using the prompt created (shown in Appendix E), with the temperature at 0. Running the prompt on 50 real-life tutoring dialogues, we  report the absolute performance of each model compared to a human grader. Appendix E displays the prompt used to assess real-life dialogues. 
    144: 
 
 - file: sample\arxiv_sources\2401.03238v1\Using_Large.tex (line 143)
   error: 8KB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    142: % \begin{Prompting GPT-4 and Identification of Criteria}
 >  143: The corpus consists of an unknown number of online tutors (a tutor could be represented in more than one dialogue) who were college students at a Pennsylvanian university. The students were middle school students, ranging from 6th-8th grade, from two schools. The student-level demographics represented in the corpus are unknown, however, the school-level demographics consisted of 52\% Latinx from a California public school and 100\% Black and male from a Pennsylvania charter school. Math proficiency is low at both schools, with  one school at zero percent proficiency suggesting the majority of students have low self-efficacy in learning math. Tutoring was performed remotely using Pencil as a remote communication platform with audio recordings transcribed within the platform. Individual dialogue recordings ranged in size from 100 bytes to 37KB. Transcriptions between 2KB and 8KB were used to provide sufficient utterances to assess dialogue while not overloading and slowing down the processing of  the GPT models. In addition, we strive to keep costs low, particularly when scaling to more transcriptions. For all transcriptions, the tutor was the first utterance in the dialogue, which was used as a guide in diarization. We prompt GPT-3.5-Turbo and GPT-4 using the prompt created (shown in Appendix E), with the temperature at 0. Running the prompt on 50 real-life tutoring dialogues, we  report the absolute performance of each model compared to a human grader. Appendix E displays the prompt used to assess real-life dialogues. 
    144: 
 
 - file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 396)
   error: 80GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    395: 
 >  396: For generating responses, we use the MAmmoTH \citep{yue2023mammoth} codebase. The responses are graded using a GPT-4 grader, where GPT-4 Omni checks the correctness of a solution response against the ground truth solution. This allows us to account for cases where incorrect reasoning traces lead to a correct final answer. Appendix~\ref{app:prompt_eval} shows the prompt used for evaluation. During response generation, we set the temperature to 0 and top\_p to 1 for all models. All necessary compute details are discussed in Appendix~\ref{app:expts}%For open source LLMs, 2 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. For evaluating GPT-4 Omni and GPT-4 Turbo, we use 25 parallel workers to make the API calls, and for Claude-3 Opus we use 2 workers.
    397: 
 
 - file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 396)
   error: 72GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    395: 
 >  396: For generating responses, we use the MAmmoTH \citep{yue2023mammoth} codebase. The responses are graded using a GPT-4 grader, where GPT-4 Omni checks the correctness of a solution response against the ground truth solution. This allows us to account for cases where incorrect reasoning traces lead to a correct final answer. Appendix~\ref{app:prompt_eval} shows the prompt used for evaluation. During response generation, we set the temperature to 0 and top\_p to 1 for all models. All necessary compute details are discussed in Appendix~\ref{app:expts}%For open source LLMs, 2 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. For evaluating GPT-4 Omni and GPT-4 Turbo, we use 25 parallel workers to make the API calls, and for Claude-3 Opus we use 2 workers.
    397: 
 
 - file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 882)
   error: 80GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    881: \label{app:expts}
 >  882: For open source LLMs, we use 4 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. We use 50 parallel workers while querying o1-preview, GPT-4 Omni, GPT-4 Turbo and Gemini-1.5-Pro, and 2 workers for querying Claude-3 Opus and Claude-3.5-Sonnet.
    883: 
 
 - file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 882)
   error: 72GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    881: \label{app:expts}
 >  882: For open source LLMs, we use 4 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. We use 50 parallel workers while querying o1-preview, GPT-4 Omni, GPT-4 Turbo and Gemini-1.5-Pro, and 2 workers for querying Claude-3 Opus and Claude-3.5-Sonnet.
    883: 
 
 - file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 2009)
   error: 80GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   2008: 
 > 2009: For generating responses, we use the MAmmoTH \citep{yue2023mammoth} codebase. The responses are graded using a GPT-4 grader, where GPT-4 Omni checks the correctness of a solution response against the ground truth solution. This allows us to account for cases where incorrect reasoning traces lead to a correct final answer. Appendix~\ref{app:prompt_eval} shows the prompt used for evaluation. During response generation, we set the temperature to 0 and top\_p to 1 for all models. All necessary compute details are discussed in Appendix~\ref{app:expts}%For open source LLMs, 2 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. For evaluating GPT-4 Omni and GPT-4 Turbo, we use 25 parallel workers to make the API calls, and for Claude-3 Opus we use 2 workers.
   2010: 
 
 - file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 2009)
   error: 72GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   2008: 
 > 2009: For generating responses, we use the MAmmoTH \citep{yue2023mammoth} codebase. The responses are graded using a GPT-4 grader, where GPT-4 Omni checks the correctness of a solution response against the ground truth solution. This allows us to account for cases where incorrect reasoning traces lead to a correct final answer. Appendix~\ref{app:prompt_eval} shows the prompt used for evaluation. During response generation, we set the temperature to 0 and top\_p to 1 for all models. All necessary compute details are discussed in Appendix~\ref{app:expts}%For open source LLMs, 2 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. For evaluating GPT-4 Omni and GPT-4 Turbo, we use 25 parallel workers to make the API calls, and for Claude-3 Opus we use 2 workers.
   2010: 
 
 - file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 2492)
   error: 80GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   2491: \label{app:expts}
 > 2492: For open source LLMs, we use 4 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. We use 50 parallel workers while querying o1-preview, GPT-4 Omni, GPT-4 Turbo and Gemini-1.5-Pro, and 2 workers for querying Claude-3 Opus and Claude-3.5-Sonnet.
   2493: 
 
 - file: sample\arxiv_sources\2407.21009v4\arxiv.tex (line 2492)
   error: 72GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   2491: \label{app:expts}
 > 2492: For open source LLMs, we use 4 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. We use 50 parallel workers while querying o1-preview, GPT-4 Omni, GPT-4 Turbo and Gemini-1.5-Pro, and 2 workers for querying Claude-3 Opus and Claude-3.5-Sonnet.
   2493: 
 
 - file: sample\arxiv_sources\2407.21009v4\example_paper.tex (line 390)
   error: 80GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    389: 
 >  390: For generating responses, we use the MAmmoTH \citep{yue2023mammoth} codebase. The responses are graded using a GPT-4 grader, where GPT-4 Omni checks the correctness of a solution response against the ground truth solution. This allows us to account for cases where incorrect reasoning traces lead to a correct final answer. Appendix~\ref{app:prompt_eval} shows the prompt used for evaluation. During response generation, we set the temperature to 0 and top\_p to 1 for all models. All necessary compute details are discussed in Appendix~\ref{app:expts}%For open source LLMs, 2 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. For evaluating GPT-4 Omni and GPT-4 Turbo, we use 25 parallel workers to make the API calls, and for Claude-3 Opus we use 2 workers.
    391: 
 
 - file: sample\arxiv_sources\2407.21009v4\example_paper.tex (line 390)
   error: 72GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    389: 
 >  390: For generating responses, we use the MAmmoTH \citep{yue2023mammoth} codebase. The responses are graded using a GPT-4 grader, where GPT-4 Omni checks the correctness of a solution response against the ground truth solution. This allows us to account for cases where incorrect reasoning traces lead to a correct final answer. Appendix~\ref{app:prompt_eval} shows the prompt used for evaluation. During response generation, we set the temperature to 0 and top\_p to 1 for all models. All necessary compute details are discussed in Appendix~\ref{app:expts}%For open source LLMs, 2 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. For evaluating GPT-4 Omni and GPT-4 Turbo, we use 25 parallel workers to make the API calls, and for Claude-3 Opus we use 2 workers.
    391: 
 
 - file: sample\arxiv_sources\2407.21009v4\example_paper.tex (line 873)
   error: 80GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    872: \label{app:expts}
 >  873: For open source LLMs, we use 4 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. We use 50 parallel workers while querying o1-preview, GPT-4 Omni, GPT-4 Turbo and Gemini-1.5-Pro, and 2 workers for querying Claude-3 Opus and Claude-3.5-Sonnet.
    874: 
 
 - file: sample\arxiv_sources\2407.21009v4\example_paper.tex (line 873)
   error: 72GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    872: \label{app:expts}
 >  873: For open source LLMs, we use 4 80GB A100 GPUs and 72GB of RAM to run inference facilitated by vLLM~\citep{kwon2023efficient}. We use 50 parallel workers while querying o1-preview, GPT-4 Omni, GPT-4 Turbo and Gemini-1.5-Pro, and 2 workers for querying Claude-3 Opus and Claude-3.5-Sonnet.
    874: 
 
 - file: sample\arxiv_sources\2501.04519v1\appendix.tex (line 22)
   error: 80GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
     21: 
 >   22: \noindent\textbf{Self-evolution Inference Costs.} In the initial bootstrap round, we use DeepSeek-Coder-v2-Instruct (236B) as the policy model, using 10 nodes of 8×80GB H100 GPUs with 8 MCTS rollouts. This required approximately two weeks to finish the data generation. For rounds 2–4, using our fine-tuned 7B SLM as the policy model, data generation was performed on 15 nodes of 4×40GB A100 GPUs,
     23: with each round completed in three days. In the final round, to include more challenging problems, we increased the number of MCTS rollouts to 64, extending the data generation time to one week.
 
 - file: sample\arxiv_sources\2501.04519v1\appendix.tex (line 22)
   error: 40GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
     21: 
 >   22: \noindent\textbf{Self-evolution Inference Costs.} In the initial bootstrap round, we use DeepSeek-Coder-v2-Instruct (236B) as the policy model, using 10 nodes of 8×80GB H100 GPUs with 8 MCTS rollouts. This required approximately two weeks to finish the data generation. For rounds 2–4, using our fine-tuned 7B SLM as the policy model, data generation was performed on 15 nodes of 4×40GB A100 GPUs,
     23: with each round completed in three days. In the final round, to include more challenging problems, we increased the number of MCTS rollouts to 64, extending the data generation time to one week.
 
 - file: sample\arxiv_sources\2501.04519v1\method.tex (line 20)
   error: 40GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
     19: 
 >   20: \noindent\textbf{Overview}. To this end, we explore using two 7B SLMs (a policy SLM and a PRM) to generate higher-quality training data, with their smaller size allowing for extensive MCTS rollouts on accessible hardware (e.g., 4$\times$40GB A100 GPUs). However, self-generating data presents greater challenges for SLMs, due to their weaker capabilities.
     21: SLMs frequently fail to generate correct solutions, and even when the final answer is correct, the intermediate steps are often flawed or of poor quality. Moreover, SLMs solve fewer challenging problems compared to advanced models like GPT-4.
 
 - file: sample\arxiv_sources\2508.15096v1\iclr2025_conference.tex (line 142)
   error: 1GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    141: \section{The Collection of \dataset} \vspace{-0.5em}
 >  142: We construct the \dataset corpus from Common Crawl\footnote{\url{https://commoncrawl.org/}}, a large-scale web archive extensively used in recent LLM training \citep{dubey2024llama, hui2024qwen25codertechnicalreport, deepseekai2025deepseekv3technicalreport}. Common Crawl contains over 300B documents across more than 6M WARC files (each contains over 1GB of compressed content). Our goal is to build a pipeline that can process the technical content from Common Crawl correctly. We apply our pipeline to math domain to assemble a high-quality, large-scale corpus of mathematical content from Common Crawl. To achieve this, we designed a robust and highly scalable data processing pipeline capable of operating at the full scale of Common Crawl, as illustrated in Figure~\ref{fig:pipeline}.
    143: 
 
+- file: sample\arxiv_sources\2602.01135v2\example_paper.tex (line 1632)
+  error: 24GiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+  1631: \section{Evaluation}\label{appendix:evaluation}
+> 1632: We used an \(ml.g5.4xlarge\) instance from AWS Sagemaker, which contains 8 vCPUs and 1 NVIDIA A10G as GPU with 24GiB for training and inference.
+  1633: 
+
+- file: sample\arxiv_sources\2603.16313v2\appendix_b.tex (line 379)
+  error: 24GiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   378: \subsection{Evaluation}\label{appendix:evaluation}
+>  379: We used an \(ml.g5.4xlarge\) instance from AWS Sagemaker, which contains 8 vCPUs and 1 NVIDIA A10G as GPU with 24GiB for training and inference.
+   380: 
+
+- file: sample\arxiv_sources\2604.02106v1\evaluation.tex (line 18)
+  error: 128$GB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+    17: 
+>   18: Our experimental platform has an AMD Ryzen 9 CPU with $128$GB DRAM and an NVIDIA RTX 3090 GPU.
+    19: The software stack consisted of Ubuntu $20.04$ OS, CUDA version $11.2$, and NVIDIA driver $470$.
+
+- file: sample\arxiv_sources\2604.02108v1\main.tex (line 336)
+  error: 5 TB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   335: \section{Data availability}
+>  336: A representative subset of the data is available at: \url{https://drive.google.com/drive/folders/1_9xQpeeUF4r76zLRBYKnzWGIbY9OwNoL?usp=sharing}. The complete data set generated and analyzed during this study is not publicly available due to its large size ($\sim$5 TB), but can be obtained from the authors upon reasonable request.
+   337: 
+
+- file: sample\arxiv_sources\2604.02109v1\Article.tex (line 106)
+  error: 1 GB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   105: 
+>  106: \textbf{Synthetic data generation}. Our data generation pipeline leverages NVIDIA Isaac Sim's physics-based simulation platform, built on Omniverse, to generate synthetic LiDAR datasets for 6-DoF pose estimation training. The pipeline utilizes Omniverse Replicator for domain randomization and realistic sensor modeling, configuring an RTX-based LiDAR via JSON parameters, defining intrinsic parameters (e.g., resolution, range, beam divergence) and realistic noise profiles to accurately emulate an Ouster OS1-128 sensor. To ensure diversity and enhance real-world generalization, the pipeline dynamically loads varied simulated environments, randomizes object layouts and LiDAR viewpoints. Additionally, it applies object-level augmentations, including scaling (±15\%), full 360° yaw rotations, and varying instance counts (1–5) to further prevent overfitting and enrich the training data. Ground truth labels follow the OpenPCDet standard format, with a ray-hit filter ensuring only LiDAR-visible objects are annotated \cite{ref27}. A dataset comprising 15,000 samples ($\approx$ 26.1 GB) was generated, including all object categories. Separate models were trained for each category using a 50\% train-test split. Fig.~\ref{fig:synthetic_data} illustrates the synthetic data generation, highlighting the diversity of simulated environments and the application of object-level augmentation.
+   107: 
+
+- file: sample\arxiv_sources\2604.02109v1\Article.tex (line 190)
+  error: 256 GB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   189: 
+>  190: The robotic system's communication and software framework is built upon ROS 2, providing the middleware and tools for communication and coordination between the software components deployed on the robot's onboard computer and the application server. Wireless communication is facilitated through a 5G network and zenoh middleware, ensuring high-speed, low-latency data transmission \cite{ref33}. On the robot’s onboard hardware, motion execution is controlled by the control software, which interprets high-level commands and converts them into motor commands. Sensor drivers collect data from various sensors, including laser scanners, 3D LiDAR, IMU, and rotary encoders. To optimize bandwidth usage, data filtering and compression techniques are applied, mainly for transmitting point cloud data between the robot and the application server. The application server serves as the central processing hub, hosting ROS 2 modules for localization, 6D pose estimation MOT and visualization as well as the client for streaming motion capture data from the OptiTrack system. The application server is equipped with dual AMD EPYC 75F3 processors (32 cores, 2.95 GHz), 256 GB of RDIMM memory (16×16 GB, 3200 MT/s), and an NVIDIA Ampere A10 GPU with 24 GB of memory to support real-time computation and data processing.
+   191: 
+
+- file: sample\arxiv_sources\2604.02109v1\Article.tex (line 190)
+  error: 16 GB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   189: 
+>  190: The robotic system's communication and software framework is built upon ROS 2, providing the middleware and tools for communication and coordination between the software components deployed on the robot's onboard computer and the application server. Wireless communication is facilitated through a 5G network and zenoh middleware, ensuring high-speed, low-latency data transmission \cite{ref33}. On the robot’s onboard hardware, motion execution is controlled by the control software, which interprets high-level commands and converts them into motor commands. Sensor drivers collect data from various sensors, including laser scanners, 3D LiDAR, IMU, and rotary encoders. To optimize bandwidth usage, data filtering and compression techniques are applied, mainly for transmitting point cloud data between the robot and the application server. The application server serves as the central processing hub, hosting ROS 2 modules for localization, 6D pose estimation MOT and visualization as well as the client for streaming motion capture data from the OptiTrack system. The application server is equipped with dual AMD EPYC 75F3 processors (32 cores, 2.95 GHz), 256 GB of RDIMM memory (16×16 GB, 3200 MT/s), and an NVIDIA Ampere A10 GPU with 24 GB of memory to support real-time computation and data processing.
+   191: 
+
+- file: sample\arxiv_sources\2604.02109v1\Article.tex (line 190)
+  error: 24 GB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   189: 
+>  190: The robotic system's communication and software framework is built upon ROS 2, providing the middleware and tools for communication and coordination between the software components deployed on the robot's onboard computer and the application server. Wireless communication is facilitated through a 5G network and zenoh middleware, ensuring high-speed, low-latency data transmission \cite{ref33}. On the robot’s onboard hardware, motion execution is controlled by the control software, which interprets high-level commands and converts them into motor commands. Sensor drivers collect data from various sensors, including laser scanners, 3D LiDAR, IMU, and rotary encoders. To optimize bandwidth usage, data filtering and compression techniques are applied, mainly for transmitting point cloud data between the robot and the application server. The application server serves as the central processing hub, hosting ROS 2 modules for localization, 6D pose estimation MOT and visualization as well as the client for streaming motion capture data from the OptiTrack system. The application server is equipped with dual AMD EPYC 75F3 processors (32 cores, 2.95 GHz), 256 GB of RDIMM memory (16×16 GB, 3200 MT/s), and an NVIDIA Ampere A10 GPU with 24 GB of memory to support real-time computation and data processing.
+   191: 
+
+- file: sample\arxiv_sources\2604.02119v1\main.tex (line 627)
+  error: 10$GB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   626: Without remapping, \ourmethodlight~is competitive with the best pruning methods at ratio $0.6$ (only a $19.8\%$ accuracy drop vs.\ $18.3\%$ for Bonsai), a notable result given that SVD-LLM lags substantially behind all pruning baselines at the same ratio ($37.5\%$ drop); with remapping, \ourmethodlight$^q$ surpasses every pruning method by a clear margin, achieving a $7.1\%$ accuracy drop at ratio $0.6$---less than half that of Bonsai---and $20.7\%$ at ratio $0.4$, competitive with Bonsai's performance at the less aggressive setting.
+>  627: The memory-budget comparison tells a similar story: \ourmethodlight~achieves the lowest perplexity at every budget from $10$GB down to $7$GB, and the advantage over pruning methods grows as the budget tightens, with structured pruning baselines deteriorating far more sharply under stricter constraints.
+   628: 
+
+- file: sample\arxiv_sources\2604.02119v1\main.tex (line 627)
+  error: 7$GB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   626: Without remapping, \ourmethodlight~is competitive with the best pruning methods at ratio $0.6$ (only a $19.8\%$ accuracy drop vs.\ $18.3\%$ for Bonsai), a notable result given that SVD-LLM lags substantially behind all pruning baselines at the same ratio ($37.5\%$ drop); with remapping, \ourmethodlight$^q$ surpasses every pruning method by a clear margin, achieving a $7.1\%$ accuracy drop at ratio $0.6$---less than half that of Bonsai---and $20.7\%$ at ratio $0.4$, competitive with Bonsai's performance at the less aggressive setting.
+>  627: The memory-budget comparison tells a similar story: \ourmethodlight~achieves the lowest perplexity at every budget from $10$GB down to $7$GB, and the advantage over pruning methods grows as the budget tightens, with structured pruning baselines deteriorating far more sharply under stricter constraints.
+   628: 
+
+- file: sample\arxiv_sources\2604.02119v1\main.tex (line 685)
+  error: 10GB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   684: \midrule
+>  685: 10GB & $9.88$ & $8.78$ & $9.40$ & ${7.17}$ & $\mathbf{6.89}$ \\
+   686: 9GB  & $12.21$ & $12.73$ & $12.76$ & ${8.22}$ & $\mathbf{7.14}$ \\
+
+- file: sample\arxiv_sources\2604.02119v1\main.tex (line 686)
+  error: 9GB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   685: 10GB & $9.88$ & $8.78$ & $9.40$ & ${7.17}$ & $\mathbf{6.89}$ \\
+>  686: 9GB  & $12.21$ & $12.73$ & $12.76$ & ${8.22}$ & $\mathbf{7.14}$ \\
+   687: 8GB  & $18.94$ & $16.39$ & $19.78$ & ${8.96}$ & $\mathbf{7.84}$ \\
+
+- file: sample\arxiv_sources\2604.02119v1\main.tex (line 687)
+  error: 8GB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   686: 9GB  & $12.21$ & $12.73$ & $12.76$ & ${8.22}$ & $\mathbf{7.14}$ \\
+>  687: 8GB  & $18.94$ & $16.39$ & $19.78$ & ${8.96}$ & $\mathbf{7.84}$ \\
+   688: 7GB  & $21.68$ & $27.41$ & $43.05$ & ${10.15}$ & $\mathbf{8.35}$  \\
+
+- file: sample\arxiv_sources\2604.02119v1\main.tex (line 688)
+  error: 7GB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   687: 8GB  & $18.94$ & $16.39$ & $19.78$ & ${8.96}$ & $\mathbf{7.84}$ \\
+>  688: 7GB  & $21.68$ & $27.41$ & $43.05$ & ${10.15}$ & $\mathbf{8.35}$  \\
+   689: \bottomrule
+
+- file: sample\arxiv_sources\2604.02144v1\paper.tex (line 304)
+  error: 512 GB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   303: 
+>  304: All computations were performed on the National Energy Research Scientific Computing Center (NERSC) Perlmutter supercomputer (AMD EPYC 7763 Milan processors, 128 cores per node, 512 GB memory per node, and 200 GB$\cdot$s$^{-1}$ interconnect).  The benchmark set consists of ground-state energy calculations for HBrTe, Rb$_4$, and Xe$_2$.  The largest X2C-DMRG calculation (HBrTe with 100 two-spinor orbitals and 88 electrons at bond dimension $m=1000$) required 30 nodes, whereas the corresponding X2C-CC calculation was performed on 4 nodes. The largest X2C-CI calculation ($10^{15}$ complex-valued determinants) was carried out on a total of 1,000 nodes.{\color{black}\cite{Li25_11016}}
+   305: 
+
+- file: sample\arxiv_sources\2604.02144v1\paper.tex (line 304)
+  error: 200 GB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   303: 
+>  304: All computations were performed on the National Energy Research Scientific Computing Center (NERSC) Perlmutter supercomputer (AMD EPYC 7763 Milan processors, 128 cores per node, 512 GB memory per node, and 200 GB$\cdot$s$^{-1}$ interconnect).  The benchmark set consists of ground-state energy calculations for HBrTe, Rb$_4$, and Xe$_2$.  The largest X2C-DMRG calculation (HBrTe with 100 two-spinor orbitals and 88 electrons at bond dimension $m=1000$) required 30 nodes, whereas the corresponding X2C-CC calculation was performed on 4 nodes. The largest X2C-CI calculation ($10^{15}$ complex-valued determinants) was carried out on a total of 1,000 nodes.{\color{black}\cite{Li25_11016}}
+   305: 
+
+- file: sample\arxiv_sources\2604.02158v1\manuscript.tex (line 93)
+  error: 40 GB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+    92: \subsection{Perlmutter Architecture}
+>   93: In this work, we use the application data from the NERSC Perlmutter system from March 2025. Perlmutter is an HPE (Hewlett-Packard Enterprise) Cray EX supercomputer that contains 3,072 CPU-only nodes and 1,792 GPU-accelerated nodes. We are mainly interested in the GPU nodes, each equipped with one AMD EPYC 7763 CPU, four NVIDIA A100 GPUs, and four HPE Slingshot 11 NICs. The A100 GPU memory is 40 GB on 1,536 nodes and 80 GB on the remaining 256 nodes. This work includes utilization data from all available GPU nodes across regular and premium Quality of Service (QoS) classes. Since the shared GPU nodes allow multi-tenancy and resource sharing of GPU jobs, we leave a more comprehensive resource utilization analysis of the shared nodes for future work.
+    94: 
+
+- file: sample\arxiv_sources\2604.02158v1\manuscript.tex (line 93)
+  error: 80 GB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+    92: \subsection{Perlmutter Architecture}
+>   93: In this work, we use the application data from the NERSC Perlmutter system from March 2025. Perlmutter is an HPE (Hewlett-Packard Enterprise) Cray EX supercomputer that contains 3,072 CPU-only nodes and 1,792 GPU-accelerated nodes. We are mainly interested in the GPU nodes, each equipped with one AMD EPYC 7763 CPU, four NVIDIA A100 GPUs, and four HPE Slingshot 11 NICs. The A100 GPU memory is 40 GB on 1,536 nodes and 80 GB on the remaining 256 nodes. This work includes utilization data from all available GPU nodes across regular and premium Quality of Service (QoS) classes. Since the shared GPU nodes allow multi-tenancy and resource sharing of GPU jobs, we leave a more comprehensive resource utilization analysis of the shared nodes for future work.
+    94: 
+
+- file: sample\arxiv_sources\2604.02164v1\hair2026.tex (line 887)
+  error: 2022]YB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   886: \begin{acknowledgments}
+>  887: This research was funded by the National Natural Science Foundation of China (No.~12505064), Guizhou Provincial Basic Research Program (Natural Science) Youth Guidance Program  (No.~QN [2025] 365), the project of Young Scientific and Technical Talents Development of Education Department of Guizhou Province (No.~[2024] 79), the Guizhou Provincial Basic Research Program General Project (No.~MS [2026] 068), and the Science and Technology Foundation of Guizhou Province (No.~ZK[2022]YB029). A. \"O. would like to acknowledge networking support of the COST Action CA21106 - COSMIC WISPers in the Dark Universe: Theory, astrophysics and experiments (CosmicWISPers), the COST Action CA22113 - Fundamental challenges in theoretical physics (THEORY-CHALLENGES), the COST Action CA21136 - Addressing observational tensions in cosmology with systematics and fundamental physics (CosmoVerse), the COST Action CA23130 - Bridging high and low energies in search of quantum gravity (BridgeQG), and the COST Action CA23115 - Relativistic Quantum Information (RQI) funded by COST (European Cooperation in Science and Technology). A. \"O. also thanks to EMU, TUBITAK, ULAKBIM (Turkiye) and SCOAP3 (Switzerland) for their support.
+   888: 
+
+- file: sample\arxiv_sources\2604.02166v1\main.tex (line 158)
+  error: 8~TB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   157: As the number of parallel pores and acquisition bandwidth increase, the resulting data streams rapidly exceed the capacity of conventional acquisition and storage workflows. 
+>  158: A four-channel system operating at MHz sampling rates already produces hundreds of gigabytes per hour, exceeding 0.8~TB per 30 minutes, while only a small fraction of data points correspond to informative molecular events~\cite{rosenstein2012integrated, fragasso20191, bell2016digitally}. Current experiments typically rely on indiscriminate recording, where all data are written to disk and event detection is performed offline using threshold-based routines, wavelet transforms, cumulative-sum statistics, or hidden Markov models~\cite{shekar2019wavelet, nakane2003nanopore, han2018accurate}. This architecture is fundamentally unscalable: the bottleneck is not analysis sophistication but the requirement that every raw sample be acquired, stored, and transferred before any information can be extracted. Triggering strategies and real-time voltage actuation have addressed specific aspects of this problem~\cite{Langecker2015, Rand2022, Mi2024}, and adaptive sampling has been demonstrated for biological nanopores~\cite{kovaka2021targeted, ulrich2022readbouncer}, but no existing framework provides a scalable, hardware-agnostic architecture for parallel event detection and selective data retention across solid-state nanopore arrays operating at MHz bandwidths.
+   159: 
+
+- file: sample\arxiv_sources\2604.02166v1\main.tex (line 195)
+  error: 8~TB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   194: 
+>  195: The primary advantage of the data sieving approach is a massive reduction in stored data volume. In a standard 30-minute acquisition at 4~$\times$~27~MHz (16-bit), traditional indiscriminate logging would produce $\sim$0.8~TB of data including voltage traces. By contrast, Data Sieving links file growth directly to molecular information content rather than experimental duration. As shown in Fig.~\ref{fig:fig3_datareduction}b, while traditional logging grows linearly over time, Data Sieving storage scales only with the number of detected event candidates.
+   196: 
+
+- file: sample\arxiv_sources\2604.02171v1\lrec2026-example.tex (line 311)
+  error: 3 GB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   310: 
+>  311: We report in Table~\ref{tab:time} the inference time and precision--speed trade-off for both systems on the official test sets of Subtasks~1 and~2, measured on a CPU-only machine (Intel x86\_64, 14 physical cores, 33.3 GB RAM) over 5 runs.
+   312: 
+
+- file: sample\arxiv_sources\2604.02171v1\lrec2026-example.tex (line 334)
+  error: 3 GB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   333: \end{tabular}
+>  334: \caption{Inference time and precision--speed trade-off on official test sets of Subtasks 1 and 2. Efficiency\,=\,CoNLL~F\textsubscript{1}\,/\, inference time (s). Measured on an Intel x86\_64 CPU (14 cores, 33.3 GB RAM) over 5 runs.}
+   335: \label{tab:time}
+
+- file: sample\arxiv_sources\2604.02291v1\main.tex (line 67)
+  error: 4MiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+    66:  %
+>   67:  Following the domain-specialization strategy, we present TensorPool, a cluster of 256 RISCV32IMAF programmable cores, accelerated by 16 256~MACs/cycle (FP16) tensor engines with low-latency access to 4MiB of L1 scratchpad for maximal data-reuse. Implemented in TSMC's N7, TensorPool achieves 3643~MACs/cycle (89\% tensor-unit utilization) on tensor operations for AI-RAN, 6$\times$ more than a core-only cluster without tensor acceleration, while simultaneously improving GOPS/W/mm\textsuperscript{2} efficiency by 9.1$\times$. Further, we show that 3D-stacking the computing blocks of TensorPool to better unfold the tensor engines to L1-memory routing provides 2.32$\times$ footprint improvement with no frequency degradation, compared to a 2D implementation.
+    68: \end{abstract}
+
+- file: sample\arxiv_sources\2604.02291v1\main.tex (line 95)
+  error: 4~MiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+    94: 
+>   95: \item We devise TensorPool, an \gls{ai}-native \gls{ran} processor. We integrate 16 \glspl{te} and 256 \glspl{pe} with 4~MiB of shared L1 memory through a hierarchical interconnect, and increase \gls{FP16} peak-performance by 2.25$\times$ (8.4~TFLOPS@\gls{FP16}), compared to a homogeneous cluster of RISC-V \glspl{pe}. 
+    96: 
+
+- file: sample\arxiv_sources\2604.02291v1\main.tex (line 129)
+  error: 4~MiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   128: 
+>  129: In terms of memory footprint, aiming for minimizing data movement across the memory hierarchy, the many-core's L1-memory should contain the \gls{tti} input samples and the model parameters. In this regard, excluding the models for cloud deployment, and assuming \gls{FP16} arithmetic precisions, all other approaches fit in 4~MiB.
+   130: 
+
+- file: sample\arxiv_sources\2604.02291v1\main.tex (line 136)
+  error: 4~MiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   135: 
+>  136: Based on the analysis of state-of-the-art models for AI-Native \gls{phy}, we design TensorPool, a domain-specific many-core heterogeneous architecture combining general-purpose \glspl{pe} and \glspl{te}. TensorPool architecture achieves $>$~8~TFLOPS@\gls{FP16} peak performance, by integrating domain-specific \gls{gemm} accelerators with 4~MiB of shared multi-banked L1 scratchpad.
+   137: 
+
+- file: sample\arxiv_sources\2604.02291v1\main.tex (line 140)
+  error: 2KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   139: 
+>  140: The \textit{Pool} is a modular design, assembled bottom up from \textit{Tiles}. A Tile in \Cref{fig:architecture}-a, contains 4 \glspl{pe}, each capable of two \gls{FP16}-MACs/cycle in parallel on their 32-bit \gls{fpu}, a shared Div-Sqrt \gls{fpu}, 32$\times$2KiB memory banks, and 4~KiB shared L1-I\$. Tile banks are accessed in one cycle through a local \gls{xbar}. The L1 in other Tiles is accessed through a remote-request arbiter. TensorPool contains 64 Tiles, divided into three hierarchies and connected via low-latency \glspl{xbar}, as in \Cref{fig:architecture}-b, to keep routing complexity low and ensure physical feasibility of the design: 4 Tiles form a \textit{SubGroup}, and 4 SubGroups make a \textit{Group}. To ease timing-closure, spill-registers are added at the Tile, Group and SubGroup boundaries. The \glspl{pe} access latency to the distributed scratchpad banks is 3 cycles within the SubGroup, 5 within the Group, and 9 to other Groups.
+   141: 
+
+- file: sample\arxiv_sources\2604.02291v1\main.tex (line 140)
+  error: 4~KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   139: 
+>  140: The \textit{Pool} is a modular design, assembled bottom up from \textit{Tiles}. A Tile in \Cref{fig:architecture}-a, contains 4 \glspl{pe}, each capable of two \gls{FP16}-MACs/cycle in parallel on their 32-bit \gls{fpu}, a shared Div-Sqrt \gls{fpu}, 32$\times$2KiB memory banks, and 4~KiB shared L1-I\$. Tile banks are accessed in one cycle through a local \gls{xbar}. The L1 in other Tiles is accessed through a remote-request arbiter. TensorPool contains 64 Tiles, divided into three hierarchies and connected via low-latency \glspl{xbar}, as in \Cref{fig:architecture}-b, to keep routing complexity low and ensure physical feasibility of the design: 4 Tiles form a \textit{SubGroup}, and 4 SubGroups make a \textit{Group}. To ease timing-closure, spill-registers are added at the Tile, Group and SubGroup boundaries. The \glspl{pe} access latency to the distributed scratchpad banks is 3 cycles within the SubGroup, 5 within the Group, and 9 to other Groups.
+   141: 
+
+- file: sample\arxiv_sources\2604.02291v1\main.tex (line 207)
+  error: 2MiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   206: 
+>  207: The double-buffering assumption requires half of the memory to be transferred: $Q_m = 8n^2 B = 2MiB \rightarrow n=512$. For this problem size, Kung's inequality holds.
+   208: 
+
+- file: sample\arxiv_sources\2604.02291v1\main.tex (line 346)
+  error: 4MiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   345: 
+>  346: The results in \Cref{fig:temporal_diagram} show that when operating \glspl{te}, \glspl{pe}, and \gls{dma} concurrently, contentions from simultaneous access to L1 shared memory banks reduce the utilization of the compute and data movement engines. In particular, the average utilization of the \glspl{te}' \glspl{fma} is respectively 67\%, 37\%, and 64\%, for the \gls{fc} layer, the depthwise-separable convolution, and the \gls{mha}. However, compared to a purely sequential execution, the runtime is reduced by 16\%, 25\%, and 1.3\%. Notably, these large dimensional problems fit in the 4MiB L1 of TensorPool, which allows one to overlap large memory transfers and computation, and to solve the data dependencies of \gls{mha} without resorting to L2 transfers. 
+   347: 
+
+- file: sample\arxiv_sources\2604.02291v1\main.tex (line 456)
+  error: 128~KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   455: 
+>  456: The Aerial \gls{ran} systems~\cite{nvidiaAerialRanComputerProDatasheet,nvidiaRtxProBlackwellArchV10,velayutham2024aerialran1,nvidiaRtxBlackwellArchV11,atri2025arccompact,nvidiaAdaLovelaceArchV11}, achieve the highest tensor throughput, reaching up to 503.8~TOPS, by scaling-out the \gls{sm}, a modular shared-L1 compute cluster with 128~KiB of L1-memory, 128 \glspl{pe} and 4 \glspl{te}. This high performance comes at the cost of substantial power consumption (up to 600~W, significantly higher than TensorPool's). Consequently, these platforms are well-suited for centralized deployments~\cite{kelkar_aerial_2021}, but are not suited for energy-constrained base-station deployment scenarios.
+   457: 
+
+- file: sample\arxiv_sources\2604.02291v1\soa_table.tex (line 36)
+  error: 128\,\mathrm{KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+    35: L1-size
+>   36: & $128\,\mathrm{KiB}$
+    37: & $128\,\mathrm{KiB}$
+
+- file: sample\arxiv_sources\2604.02291v1\soa_table.tex (line 37)
+  error: 128\,\mathrm{KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+    36: & $128\,\mathrm{KiB}$
+>   37: & $128\,\mathrm{KiB}$
+    38: & $128\,\mathrm{KiB}$
+
+- file: sample\arxiv_sources\2604.02291v1\soa_table.tex (line 38)
+  error: 128\,\mathrm{KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+    37: & $128\,\mathrm{KiB}$
+>   38: & $128\,\mathrm{KiB}$
+    39: & $128\,\mathrm{KiB}$
+
+- file: sample\arxiv_sources\2604.02291v1\soa_table.tex (line 39)
+  error: 128\,\mathrm{KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+    38: & $128\,\mathrm{KiB}$
+>   39: & $128\,\mathrm{KiB}$
+    40: & 4\,MiB
+
+- file: sample\arxiv_sources\2604.02291v1\soa_table.tex (line 40)
+  error: 4\,MiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+    39: & $128\,\mathrm{KiB}$
+>   40: & 4\,MiB
+    41: & 4\,MiB \\
+
+- file: sample\arxiv_sources\2604.02291v1\soa_table.tex (line 41)
+  error: 4\,MiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+    40: & 4\,MiB
+>   41: & 4\,MiB \\
+    42: 
+
+- file: sample\arxiv_sources\2604.02291v1\table_ran_processors.tex (line 16)
+  error: 4MiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+    15: \shortstack[c]{L1-size\\ \quad} 
+>   16: & \shortstack[c]{4MiB/\\ 1024PEs} 
+    17: & \shortstack[c]{-\\ \quad} 
+
+- file: sample\arxiv_sources\2604.02291v1\table_ran_processors.tex (line 18)
+  error: 64KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+    17: & \shortstack[c]{-\\ \quad} 
+>   18: & \shortstack[c]{64KiB/\\PE} 
+    19: & \shortstack[c]{128KiB/\\128PE} \\ 
+
+- file: sample\arxiv_sources\2604.02291v1\table_ran_processors.tex (line 19)
+  error: 128KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+    18: & \shortstack[c]{64KiB/\\PE} 
+>   19: & \shortstack[c]{128KiB/\\128PE} \\ 
+    20: 
+
+- file: sample\arxiv_sources\2604.02310v1\paper-format1.tex (line 211)
+  error: 20180516-MB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   210: % Projects, sources  
+>  211: Details of the data presented in this work, and planned for the upcoming papers in this series are given in Table~\ref{tab:pulsar_properties}. They were principally recorded as part of a MeerKAT Open Time proposal (OT4, PI: Li). We also include observations from the MeerTime Large Survey Proposal, specifically from the Globular Cluster programme (Proposal ID: SCI-20180516-MB-04).  
+   212: %Backends - fold mode and search mode.
+
+- file: sample\arxiv_sources\2604.02320v1\X_suppl.tex (line 46)
+  error: 80GB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+    45: \section{Training Parameters}
+>   46: We train our models using 64 NVIDIA A100 GPUs (80GB) via Distributed Data Parallel (DDP). For both training stages, we set the per-GPU batch size to 1, resulting in a total effective batch size of 64. The pretraining stage is conducted for $1 \times 10^{5}$ iterations, taking approximately 100 hours. Subsequently, the post-training stage is fine-tuned for $1 \times 10^{4}$ iterations, which requires approximately 10 hours to converge. For the loss weights, we set the $\ell_1$ and LPIPS coefficients to $0.1$ each, and the regularization weight $\lambda = 1.0$.
+    47: 
+
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 218)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    217: 
 >  218: As a worked example, suppose we divide the disk into 4KiB blocks and we want to address up to $2^{32}$ blocks.
    219: The maximum disk size is $4KiB *2^{32} = 16TiB$ remember $2^{10} = 1024$.
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 219)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    218: As a worked example, suppose we divide the disk into 4KiB blocks and we want to address up to $2^{32}$ blocks.
 >  219: The maximum disk size is $4KiB *2^{32} = 16TiB$ remember $2^{10} = 1024$.
    220: A disk block can store $\frac{4KiB}{4B}$ possible pointers or 1024 pointers.
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 219)
   error: 16TiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    218: As a worked example, suppose we divide the disk into 4KiB blocks and we want to address up to $2^{32}$ blocks.
 >  219: The maximum disk size is $4KiB *2^{32} = 16TiB$ remember $2^{10} = 1024$.
    220: A disk block can store $\frac{4KiB}{4B}$ possible pointers or 1024 pointers.
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 220)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    219: The maximum disk size is $4KiB *2^{32} = 16TiB$ remember $2^{10} = 1024$.
 >  220: A disk block can store $\frac{4KiB}{4B}$ possible pointers or 1024 pointers.
    221: Four byte wide pointers are needed because we want to address 32 bits worth of blocks.
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 222)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    221: Four byte wide pointers are needed because we want to address 32 bits worth of blocks.
 >  222: Each pointer refers to a 4KiB disk block, so you can refer up to $1024*4KiB = 4MiB$ of data.
    223: For the same disk configuration, a double indirect block stores 1024 pointers to 1024 indirection tables.
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 222)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    221: Four byte wide pointers are needed because we want to address 32 bits worth of blocks.
 >  222: Each pointer refers to a 4KiB disk block, so you can refer up to $1024*4KiB = 4MiB$ of data.
    223: For the same disk configuration, a double indirect block stores 1024 pointers to 1024 indirection tables.
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 222)
   error: 4MiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    221: Four byte wide pointers are needed because we want to address 32 bits worth of blocks.
 >  222: Each pointer refers to a 4KiB disk block, so you can refer up to $1024*4KiB = 4MiB$ of data.
    223: For the same disk configuration, a double indirect block stores 1024 pointers to 1024 indirection tables.
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 224)
   error: 4MiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    223: For the same disk configuration, a double indirect block stores 1024 pointers to 1024 indirection tables.
 >  224: Thus a double-indirect block can refer up to $1024 * 4MiB = 4GiB$ of data.
    225: Similarly, a triple indirect block can refer up to 4TiB of data.
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 224)
   error: 4GiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    223: For the same disk configuration, a double indirect block stores 1024 pointers to 1024 indirection tables.
 >  224: Thus a double-indirect block can refer up to $1024 * 4MiB = 4GiB$ of data.
    225: Similarly, a triple indirect block can refer up to 4TiB of data.
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 225)
   error: 4TiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    224: Thus a double-indirect block can refer up to $1024 * 4MiB = 4GiB$ of data.
 >  225: Similarly, a triple indirect block can refer up to 4TiB of data.
    226: This is three times as slow for reading between blocks, due to increased levels of indirection.
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 869)
   error: 1 MiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    868: Use the versatile \keyword{dd} command.
 >  869: For example, the following command copies 1 MiB of data from the file \keyword{/dev/urandom} to the file \keyword{/dev/null}.
    870: The data is copied as 1024 blocks of block size 1024 bytes.
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1180)
   error: 4 KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   1179: 
 > 1180: We will assume that a data block is 4 KiB.
   1181: 
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1194)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   1193: 
 > 1194: There are two full direct blocks, which together store $2*sizeof(data\_block)=2*4KiB=8KiB$.
   1195: 
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1194)
   error: 8KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   1193: 
 > 1194: There are two full direct blocks, which together store $2*sizeof(data\_block)=2*4KiB=8KiB$.
   1195: 
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1196)
   error: 8KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   1195: 
 > 1196: There are two used blocks referenced by the indirect block, which can store up to $8KiB$ as calculated above.
   1197: 
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1198)
   error: 16KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   1197: 
 > 1198: We can now add these values to get an upper bound on the file size of $16KiB$.
   1199: 
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1202)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   1201: second block referenced by the indirect block.
 > 1202: With this information, we can work out the lower bound to be $2*4KiB+4KiB+1=12KiB+1B$.
   1203: 
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1202)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   1201: second block referenced by the indirect block.
 > 1202: With this information, we can work out the lower bound to be $2*4KiB+4KiB+1=12KiB+1B$.
   1203: 
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1202)
   error: 12KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   1201: second block referenced by the indirect block.
 > 1202: With this information, we can work out the lower bound to be $2*4KiB+4KiB+1=12KiB+1B$.
   1203: 
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1208)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   1207: While doing our above calculations, we omitted this block.
 > 1208: This would instead be counted as the overhead of the file, and thus the total overhead of storing this file on disk is $sizeof(indirect\_block)=4KiB)$.
   1209: 
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1215)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   1214: Note that when a user writes the first byte, a data block will be allocated.
 > 1215: Since each data block is $4KiB$, we find that $4KiB$ is the minimum disk usage for a non-empty file.
   1216: Here, we observe that the file size will only be $1B$, despite that $4KiB$ of the disk is used -- there is a distinction between file size and disk usage because of overhead!
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1215)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   1214: Note that when a user writes the first byte, a data block will be allocated.
 > 1215: Since each data block is $4KiB$, we find that $4KiB$ is the minimum disk usage for a non-empty file.
   1216: Here, we observe that the file size will only be $1B$, despite that $4KiB$ of the disk is used -- there is a distinction between file size and disk usage because of overhead!
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1216)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   1215: Since each data block is $4KiB$, we find that $4KiB$ is the minimum disk usage for a non-empty file.
 > 1216: Here, we observe that the file size will only be $1B$, despite that $4KiB$ of the disk is used -- there is a distinction between file size and disk usage because of overhead!
   1217: 
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1220)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   1219: As we saw earlier in this chapter, a filesystem with this structure can have $1024$ data block numbers in one indirect block.
 > 1220: This implies that the maximum filesize can be $2*4KiB + 1024*4KiB = 4MiB + 8KiB$ (after accounting for the direct blocks as well).
   1221: However, on disk we also store the indirect block itself.
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1220)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   1219: As we saw earlier in this chapter, a filesystem with this structure can have $1024$ data block numbers in one indirect block.
 > 1220: This implies that the maximum filesize can be $2*4KiB + 1024*4KiB = 4MiB + 8KiB$ (after accounting for the direct blocks as well).
   1221: However, on disk we also store the indirect block itself.
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1220)
   error: 4MiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   1219: As we saw earlier in this chapter, a filesystem with this structure can have $1024$ data block numbers in one indirect block.
 > 1220: This implies that the maximum filesize can be $2*4KiB + 1024*4KiB = 4MiB + 8KiB$ (after accounting for the direct blocks as well).
   1221: However, on disk we also store the indirect block itself.
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1220)
   error: 8KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   1219: As we saw earlier in this chapter, a filesystem with this structure can have $1024$ data block numbers in one indirect block.
 > 1220: This implies that the maximum filesize can be $2*4KiB + 1024*4KiB = 4MiB + 8KiB$ (after accounting for the direct blocks as well).
   1221: However, on disk we also store the indirect block itself.
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1222)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   1221: However, on disk we also store the indirect block itself.
 > 1222: This means that an additional $4KiB$ of overhead will be used to account for the indirect block, so the total disk usage will be $4MiB + 12KiB$.
   1223: 
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1222)
   error: 4MiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   1221: However, on disk we also store the indirect block itself.
 > 1222: This means that an additional $4KiB$ of overhead will be used to account for the indirect block, so the total disk usage will be $4MiB + 12KiB$.
   1223: 
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1222)
   error: 12KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   1221: However, on disk we also store the indirect block itself.
 > 1222: This means that an additional $4KiB$ of overhead will be used to account for the indirect block, so the total disk usage will be $4MiB + 12KiB$.
   1223: 
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1252)
   error: 6$th KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   1251: Performing writes fall into two categories, writes to files and writes to directories.
 > 1252: First we'll focus on files and assume that we are writing a byte to the $6$th KiB of our file.
   1253: To perform a write on a file at a particular offset, first the filesystem must go to the data block would start at that offset.
 
 - file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1255)
   error: 2$KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
   1254: For this particular example we would have to go to the 2nd or indexed number 1 inode to perform our write.
 > 1255: We would once again fetch this number from the inode, go to the root of the data blocks, go to the $5$th data block and perform our write at the $2$KiB offset from this block because we skipped the first four kibibytes of the file in block 7.
   1256: We perform our write and go on our merry way.
 
 - file: sample\submodules\coursebook\ipc\ipc.tex (line 35)
   error: 4GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
     34: To illustrate, consider a 32-bit machine, meaning pointers are 32-bits.
 >   35: They can address $2^{32}$ different locations or 4GB of memory where one address is one byte.
     36: Imagine we had a large table for every possible address where we will store the `real' i.e. ~physical address.
 
 - file: sample\submodules\coursebook\ipc\ipc.tex (line 39)
   error: 4GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
     38: Naturally, This scheme would require 16 billion bytes to store all of the entries.
 >   39: It should be painfully obvious that our lookup scheme would consume all of the memory that we could buy for our 4GB machine.
     40: Our lookup table should be smaller than the memory we have otherwise we will have no space left for our actual programs and operating system data.
 
 - file: sample\submodules\coursebook\ipc\ipc.tex (line 46)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
     45: A \textbf{page} is a block of virtual memory.
 >   46: A typical block size on Linux is 4KiB or $2^{12}$ addresses, though one can find examples of larger blocks.
     47: So rather than talking about individual bytes, we can talk about blocks of 4KiBs, each block is called a page.
 
 - file: sample\submodules\coursebook\ipc\ipc.tex (line 48)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
     47: So rather than talking about individual bytes, we can talk about blocks of 4KiBs, each block is called a page.
 >   48: We can also number our pages (``Page 0'' ``Page 1'' etc). Let's do a sample calculation of how many pages are there assume page size of 4KiB.
     49: 	 
 
 - file: sample\submodules\coursebook\ipc\ipc.tex (line 63)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
     62: We also call this a \textbf{frame} or sometimes called a `page frame' is a block of \emph{physical memory} or RAM -- Random Access Memory.
 >   63: A frame is the same number of bytes as a virtual page or 4KiB on our machine.
     64: It stores the bytes of interest.
 
 - file: sample\submodules\coursebook\ipc\ipc.tex (line 81)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
     80: Now to go through the actual calculations.
 >   81: We will assume that a 32-bit machine has 4KiB pages
     82: Naturally, to address all the possible entries, there are $2^{20}$ frames.
 
 - file: sample\submodules\coursebook\ipc\ipc.tex (line 85)
   error: 4 MiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
     84: In practice, we'll round that up to 4 bytes and do something interesting with the rest of the bits.
 >   85: With 4 bytes per entry x $2^{20}$ entries = 4 MiB of physical memory are required to hold the entire page table for a process.
     86: 	 
 
 - file: sample\submodules\coursebook\ipc\ipc.tex (line 129)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    128: We do have a problem with 64-bit operating systems.
 >  129: For a 64-bit machine with 4KiB pages, each entry needs 52 bits.
    130: Meaning we need roughly
 
 - file: sample\submodules\coursebook\ipc\ipc.tex (line 154)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    153: That will contain a frame number.
 >  154: This is the good old fashioned 4KiB RAM that we were talking about earlier.
    155: Then, the MMU adds the offset and do the read or write.
 
 - file: sample\submodules\coursebook\ipc\ipc.tex (line 180)
   error: 2KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    179: We'll round up to 2 bytes for the sake of reasoning.
 >  180: If 2 bytes are used for each entry in the top-level table and there are only $2^{10}$ entries, we only need 2KiB to store this entire first level page table.
    181: Each subtable will point to physical frames, and each of their entries needs to be the required 4 bytes to be able to address all the frames as mentioned earlier.
 
 - file: sample\submodules\coursebook\ipc\ipc.tex (line 184)
   error: 4MiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    183: 	 
 >  184: Thus, the total memory overhead for our multi-level page table has shrunk from 4MiB for the single-level implementation to three page tables of memory or 2KiB for the top-level and 4KiB for the two intermediate levels of size 10KiB.
    185: Here's why.
 
 - file: sample\submodules\coursebook\ipc\ipc.tex (line 184)
   error: 2KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    183: 	 
 >  184: Thus, the total memory overhead for our multi-level page table has shrunk from 4MiB for the single-level implementation to three page tables of memory or 2KiB for the top-level and 4KiB for the two intermediate levels of size 10KiB.
    185: Here's why.
 
 - file: sample\submodules\coursebook\ipc\ipc.tex (line 184)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    183: 	 
 >  184: Thus, the total memory overhead for our multi-level page table has shrunk from 4MiB for the single-level implementation to three page tables of memory or 2KiB for the top-level and 4KiB for the two intermediate levels of size 10KiB.
    185: Here's why.
 
 - file: sample\submodules\coursebook\ipc\ipc.tex (line 184)
   error: 10KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    183: 	 
 >  184: Thus, the total memory overhead for our multi-level page table has shrunk from 4MiB for the single-level implementation to three page tables of memory or 2KiB for the top-level and 4KiB for the two intermediate levels of size 10KiB.
    185: Here's why.
 
 - file: sample\submodules\coursebook\ipc\ipc.tex (line 189)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    188: The other sub-table is for higher addresses used by the environment and stack.
 >  189: In practice, real programs will likely need more sub-table entries, as each subtable can only reference 1024*4KiB = 4MiB of address space.
    190: The main point still stands.
 
 - file: sample\submodules\coursebook\ipc\ipc.tex (line 189)
   error: 4MiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    188: The other sub-table is for higher addresses used by the environment and stack.
 >  189: In practice, real programs will likely need more sub-table entries, as each subtable can only reference 1024*4KiB = 4MiB of address space.
    190: The main point still stands.
 
 - file: sample\submodules\coursebook\ipc\ipc.tex (line 566)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    565: The problem with using a pipe in this fashion is that writing to a pipe can block meaning the pipe only has a limited buffering capacity.
 >  566: The maximum size of the buffer is system-dependent; typical values from 4KiB up to 128KiB though they can be changed.
    567: 	 
 
 - file: sample\submodules\coursebook\ipc\ipc.tex (line 566)
   error: 128KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    565: The problem with using a pipe in this fashion is that writing to a pipe can block meaning the pipe only has a limited buffering capacity.
 >  566: The maximum size of the buffer is system-dependent; typical values from 4KiB up to 128KiB though they can be changed.
    567: 	 
 
 - file: sample\submodules\coursebook\malloc\malloc.tex (line 205)
   error: 2KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    204: 
 >  205: If a new malloc request for 2KiB is executed (\keyword{malloc(2048)}), where should \keyword{malloc} reserve the memory?
    206: It could use the last 2KiB hole, which happens to be the perfect size!
 
 - file: sample\submodules\coursebook\malloc\malloc.tex (line 206)
   error: 2KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    205: If a new malloc request for 2KiB is executed (\keyword{malloc(2048)}), where should \keyword{malloc} reserve the memory?
 >  206: It could use the last 2KiB hole, which happens to be the perfect size!
    207: Or it could split one of the other two free holes.
 
 - file: sample\submodules\coursebook\malloc\malloc.tex (line 211)
   error: 2KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    210: The newly allocated space, which will be returned to the program and a smaller hole if there is spare space left over.
 >  211: A perfect-fit strategy finds the smallest hole that is of sufficient size (at least 2KiB):
    212: 
 
 - file: sample\submodules\coursebook\malloc\malloc.tex (line 219)
   error: 30KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    218: 
 >  219: A worst-fit strategy finds the largest hole that is of sufficient size so break the 30KiB hole into two:
    220: 
 
 - file: sample\submodules\coursebook\malloc\malloc.tex (line 228)
   error: 16KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    227: 
 >  228: A first-fit strategy finds the first available hole that is of sufficient size so break the 16KiB hole into two.
    229: We don't even have to look through the entire heap!
 
 - file: sample\submodules\coursebook\malloc\malloc.tex (line 239)
   error: 14KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    238: For example, our first fit allocator could've returned the original block unbroken.
 >  239: Notice that this would lead to about 14KiB of space to be unused by the user and the allocator.
    240: We call this internal fragmentation.
 
 - file: sample\submodules\coursebook\malloc\malloc.tex (line 243)
   error: 64KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    242: In contrast, external fragmentation is that even though we have enough memory in the heap, it may be divided up in a way so a continuous block of that size is unavailable.
 >  243: In our previous example, of the 64KiB of heap memory, 17KiB is allocated, and 47KiB is free.
    244: However, the largest available block is only 30KiB because our available unallocated heap memory is fragmented into smaller pieces.
 
 - file: sample\submodules\coursebook\malloc\malloc.tex (line 243)
   error: 17KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    242: In contrast, external fragmentation is that even though we have enough memory in the heap, it may be divided up in a way so a continuous block of that size is unavailable.
 >  243: In our previous example, of the 64KiB of heap memory, 17KiB is allocated, and 47KiB is free.
    244: However, the largest available block is only 30KiB because our available unallocated heap memory is fragmented into smaller pieces.
 
 - file: sample\submodules\coursebook\malloc\malloc.tex (line 243)
   error: 47KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    242: In contrast, external fragmentation is that even though we have enough memory in the heap, it may be divided up in a way so a continuous block of that size is unavailable.
 >  243: In our previous example, of the 64KiB of heap memory, 17KiB is allocated, and 47KiB is free.
    244: However, the largest available block is only 30KiB because our available unallocated heap memory is fragmented into smaller pieces.
 
 - file: sample\submodules\coursebook\malloc\malloc.tex (line 244)
   error: 30KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    243: In our previous example, of the 64KiB of heap memory, 17KiB is allocated, and 47KiB is free.
 >  244: However, the largest available block is only 30KiB because our available unallocated heap memory is fragmented into smaller pieces.
    245: 
 
 - file: sample\submodules\coursebook\malloc\malloc.tex (line 330)
   error: 1024 KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    329: This internal information represents some overhead.
 >  330: Meaning even if we had requested 1024 KiB of contiguous memory from the system, we an allocation of that size will fail.
    331: 
 
 - file: sample\submodules\coursebook\networking\networking.tex (line 991)
   error: 64 KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    990: One call to recvfrom is one packet.
 >  991: To make sure that you have enough space, use 64 KiB as storage space.
    992: 
 
 - file: sample\submodules\coursebook\review\review.tex (line 517)
   error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    516: 
 >  517: \item In an \keyword{ext2} filesystem with 32 bit addresses and 4KiB disk blocks, an inode can store 10 direct disk block numbers. What is the minimum file size required to require a single indirection table? ii) a double direction table?
    518: 
 
 - file: sample\submodules\coursebook\threads\threads.tex (line 495)
   error: 8 KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). Otherwise, register as an exception.
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
    494: 
 >  495: // 8 KiB stacks
    496: #define STACK_SIZE (8 * 1024 * 1024)

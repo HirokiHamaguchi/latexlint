@@ -1,231 +1,420 @@
-[CODE] LLThousands (33)
+[CODE] LLThousands (60)
 - file: sample\arxiv_sources\2103.03874v2\1-intro.tex (line 34)
   error: 12,500
-  message: Consider using "12{,}500" instead of "12,500".
+  message: Consider using "12{,}500" instead of "12,500". This can help avoid spacing issues and improve readability.
     33: dataset, which consists of 
 >   34: $12,500$ problems from high school math competitions. 
     35: Given a problem from MATH, machine learning models generate a sequence, such as \verb=$\frac{2}{3}$=, that encodes the final answer. These 
 
 - file: sample\arxiv_sources\2103.03874v2\1-intro.tex (line 152)
   error: 100,000
-  message: Consider using "100{,}000" instead of "100,000".
+  message: Consider using "100{,}000" instead of "100,000". This can help avoid spacing issues and improve readability.
    151: we create the first large-scale mathematics pretraining dataset with hundreds of thousands of step-by-step solutions in natural language and \LaTeX{}.
 >  152: We call this dataset the Auxiliary Mathematics Problems and Solutions (AMPS) pretraining corpus, which consists of Khan Academy and Mathematica data. AMPS has over $100,000$ Khan Academy problems with step-by-step solutions in \LaTeX{}; these exercises are used to teach human students concepts ranging from basic addition to Stokes' Theorem.
    153: It also contains over $5$ million problems generated using Mathematica scripts, based on $100$ hand-designed modules covering topics such as conic sections, div grad and curl, KL divergence, eigenvalues, polyhedra, and Diophantine equations. In total AMPS contains 
 
 - file: sample\arxiv_sources\2103.03874v2\2-related-work.tex (line 5)
   error: 1,602
-  message: Consider using "1{,}602" instead of "1,602".
+  message: Consider using "1{,}602" instead of "1,602". This can help avoid spacing issues and improve readability.
      4: Much of the existing work on machine learning models for mathematical reasoning relies on automated theorem proving benchmarks.
 >    5: \citet{Huang2019GamePadAL} use the Coq theorem proving environment to create a machine learning benchmark with $1,602$ theorems and lemmas. \citet{Bansal2019HOListAE} introduce the HOList benchmark for automated theorem proving, which uses a formal language to enable automatic evaluation. Rather than use HOList, \citet{Polu2020GenerativeLM} use the Metamath formalization language for automated theorem proving with promising results. We show an example of Metamath in \Cref{fig:splash}. These benchmarks can be approached with seq2seq \citep{Sutskever2014SequenceTS} Transformers which have traction on the problem \citep{Polu2020GenerativeLM, Rabe2020MathematicalRV, Li2020ModellingHM}.
      6: 
 
 - file: sample\arxiv_sources\2103.03874v2\2-related-work.tex (line 39)
   error: 12,500
-  message: Consider using "12{,}500" instead of "12,500".
+  message: Consider using "12{,}500" instead of "12,500". This can help avoid spacing issues and improve readability.
     38: we even find that large GPT-3 models can perform remarkably well on a sequence completion test similar to an IQ test, the C-Test \citep{ctest,Legg2007UniversalIA}. Even difficult logical understanding tasks such as LogiQA \citep{Liu2020LogiQAAC} will soon be straightforwardly solved by enormous Transformers should trends continue, which we also show in the Supplementary Materials. %
 >   39: \citet{Hendrycks2020MeasuringMM} create a multiple-choice benchmark covering $57$ subjects. However, unlike our benchmark, which is a text generation task with $12,500$ mathematical reasoning questions, their benchmark is a multiple choice task that includes only a few hundred questions about mathematics. 
     40: In contrast to these benchmarks, we find that our MATH benchmark is unusually challenging for current models and, if trends continue, simply using bigger versions of today's Transformers will not solve our task in the foreseeable future.
 
 - file: sample\arxiv_sources\2103.12048v3\2_data.tex (line 26)
   error: 281,265
-  message: Consider using "281{,}265" instead of "281,265".
+  message: Consider using "281{,}265" instead of "281,265". This can help avoid spacing issues and improve readability.
     25: \paragraph{StackExchange Probability Problems.}
 >   26: We obtained the data dump from \textit{stats.stackexchange},  containing  $281,265$ Statistics problems.  Each problem is labeled with relevant  concept tags. We discarded all    programming-related problems, tagged with: \textit{`Matlab'} and  \textit{`R'}, resulting in  $139, 303$ problems. We also pruned  concept tags  outside of the $69$ background concepts.
     27: To avoid overly complex problems, those with $> 3$ tags were pruned. Lastly, we   only kept problems for which there is an `\textit{accepted answer}' from the forum.  Overall after pre-processing,  there were $1,171$ remaining  problems,  spanning 11 Probability  concepts,  along with their answers.
 
 - file: sample\arxiv_sources\2103.12048v3\2_data.tex (line 27)
   error: 1,171
-  message: Consider using "1{,}171" instead of "1,171".
+  message: Consider using "1{,}171" instead of "1,171". This can help avoid spacing issues and improve readability.
     26: We obtained the data dump from \textit{stats.stackexchange},  containing  $281,265$ Statistics problems.  Each problem is labeled with relevant  concept tags. We discarded all    programming-related problems, tagged with: \textit{`Matlab'} and  \textit{`R'}, resulting in  $139, 303$ problems. We also pruned  concept tags  outside of the $69$ background concepts.
 >   27: To avoid overly complex problems, those with $> 3$ tags were pruned. Lastly, we   only kept problems for which there is an `\textit{accepted answer}' from the forum.  Overall after pre-processing,  there were $1,171$ remaining  problems,  spanning 11 Probability  concepts,  along with their answers.
     28: Table~\ref{tab:trainvalidtestsplit} shows the  train/dev/test  split\footnote{Breakdown of problems by concept is in the appendix.}.
 
 - file: sample\arxiv_sources\2103.12048v3\3_labelunk.tex (line 3)
   error: 1,171
-  message: Consider using "1{,}171" instead of "1,171".
+  message: Consider using "1{,}171" instead of "1,171". This can help avoid spacing issues and improve readability.
      2: To collect labeled data, we  assume  the unknown is  a contiguous sequence of tokens in the problem specification. 
 >    3: We implemented a simple labeling tool, shown in Figure~\ref{fig:labelinterface}. A problem can have multiple unknowns, each unknown is entered separately.   In total,  $1,171$ problems were annotated. Problems whose unknowns were deemed `unclear'  were few: $26/904(2.9\%)$, $4/110 (3.6)\%$, and $2/157(1.3\%)$ for  train, dev, test, respectively.
      4: % On average, it took $6$ minutes to label a problem.   Fleiss’ Kappa is $0.862$, computed from a pair of annotations.
 
 - file: sample\arxiv_sources\2103.12048v3\4_models_2unk.tex (line 34)
   error: 2,360
-  message: Consider using "2{,}360" instead of "2,360".
+  message: Consider using "2{,}360" instead of "2,360". This can help avoid spacing issues and improve readability.
     33: with three types of \textit{nodes}:  concept, problem;   and answer nodes. We have $5$ \textit{edge} types: \textit{problem-has-type}~(between problems and concepts); \textit{problems-has-answer}~(between problems and answers); and \textit{same-section-as}, \textit{mentioned-in-before-chapters},  \textit{same-chapter-as} (all three between concepts).  We use the concept hierarchy derived from the ordering of concepts in \citet{wasserman2013all} to obtain the last three relationships. Our graph consists of 
 >   34: $2,360$~nodes, $5,116$ edges,  and $768$  initial node features obtained from  BERT embeddings. Node features are from average pooling the embeddings. For the concept nodes, the  pooled tokens are taken from the concept definitions.
     35: The task for  learning node  representations is predicting the \textit{problem-has-type} links. 
 
 - file: sample\arxiv_sources\2103.12048v3\4_models_2unk.tex (line 34)
   error: 5,116
-  message: Consider using "5{,}116" instead of "5,116".
+  message: Consider using "5{,}116" instead of "5,116". This can help avoid spacing issues and improve readability.
     33: with three types of \textit{nodes}:  concept, problem;   and answer nodes. We have $5$ \textit{edge} types: \textit{problem-has-type}~(between problems and concepts); \textit{problems-has-answer}~(between problems and answers); and \textit{same-section-as}, \textit{mentioned-in-before-chapters},  \textit{same-chapter-as} (all three between concepts).  We use the concept hierarchy derived from the ordering of concepts in \citet{wasserman2013all} to obtain the last three relationships. Our graph consists of 
 >   34: $2,360$~nodes, $5,116$ edges,  and $768$  initial node features obtained from  BERT embeddings. Node features are from average pooling the embeddings. For the concept nodes, the  pooled tokens are taken from the concept definitions.
     35: The task for  learning node  representations is predicting the \textit{problem-has-type} links. 
 
 - file: sample\arxiv_sources\2103.12048v3\5_experiments.tex (line 36)
   error: 980,018
-  message: Consider using "980{,}018" instead of "980,018".
+  message: Consider using "980{,}018" instead of "980,018". This can help avoid spacing issues and improve readability.
     35: % However,   this is not significantly better than just a \textbf{CNN}. 
 >   36: Incorporating graph structure,  \textbf{CNN+Graph}~(9), yields F1 of $0.78$.  \textbf{ CNN+Graph+LSTM/GRU}~(10-11) both yield poor results. This is likely due to the size of our dataset given that these methods have about twice as many parameters as the other methods, for example, CNN+Graph+LSTM has $2,980,018$ parameters vs. CNN+Graph with $1,502,386$. 
     37: 
 
 - file: sample\arxiv_sources\2103.12048v3\5_experiments.tex (line 36)
   error: 502,386
-  message: Consider using "502{,}386" instead of "502,386".
+  message: Consider using "502{,}386" instead of "502,386". This can help avoid spacing issues and improve readability.
     35: % However,   this is not significantly better than just a \textbf{CNN}. 
 >   36: Incorporating graph structure,  \textbf{CNN+Graph}~(9), yields F1 of $0.78$.  \textbf{ CNN+Graph+LSTM/GRU}~(10-11) both yield poor results. This is likely due to the size of our dataset given that these methods have about twice as many parameters as the other methods, for example, CNN+Graph+LSTM has $2,980,018$ parameters vs. CNN+Graph with $1,502,386$. 
     37: 
 
 - file: sample\arxiv_sources\2502.17387v1\main.tex (line 267)
   error: 275,000
-  message: Consider using "275{,}000" instead of "275,000".
+  message: Consider using "275{,}000" instead of "275,000". This can help avoid spacing issues and improve readability.
    266: % -- 6 sources we did use
 >  267: The largest subset from Numina is the cn\_k12 subset of data, composed of $\sim275,000$ math problems scraped from chinese math exams. The next largest subset from NuminaMath is the Orca-Math~\citep{mitra2024orcamathunlockingpotentialslms} subset ($\sim150,000$ problems), which is a synthetically generated dataset of grade school math problems. Although this data was synthetically generated,~\citet{mitra2024orcamathunlockingpotentialslms} demonstrate that as the lone source of SFT training data, this subset leads to impressive math performance, even for small language models. Next, we include the olympiads subset, consisting of 150,000 problems collected from online sources of international-level math competitions. Next,~\citet{numina_math_datasets} scrape the Art of Problem Solving forum for additional math competition problems, selecting to keep only problems with high quantities of LaTeX and at least one \texttt{\textbackslash boxed} or $\blacksquare$ symbol, leading to an additional 30,000 problems. Additionally, we use the GSM8k~\citep{cobbe2021trainingverifierssolvemath} subset, providing another $\sim8,000$ problems. Finally, we also include the amc\_aime subset, consisting of 4,000 more math competition problems, with solutions scraped from online sources.
    268: 
 
 - file: sample\arxiv_sources\2502.17387v1\main.tex (line 267)
   error: 150,000
-  message: Consider using "150{,}000" instead of "150,000".
+  message: Consider using "150{,}000" instead of "150,000". This can help avoid spacing issues and improve readability.
    266: % -- 6 sources we did use
 >  267: The largest subset from Numina is the cn\_k12 subset of data, composed of $\sim275,000$ math problems scraped from chinese math exams. The next largest subset from NuminaMath is the Orca-Math~\citep{mitra2024orcamathunlockingpotentialslms} subset ($\sim150,000$ problems), which is a synthetically generated dataset of grade school math problems. Although this data was synthetically generated,~\citet{mitra2024orcamathunlockingpotentialslms} demonstrate that as the lone source of SFT training data, this subset leads to impressive math performance, even for small language models. Next, we include the olympiads subset, consisting of 150,000 problems collected from online sources of international-level math competitions. Next,~\citet{numina_math_datasets} scrape the Art of Problem Solving forum for additional math competition problems, selecting to keep only problems with high quantities of LaTeX and at least one \texttt{\textbackslash boxed} or $\blacksquare$ symbol, leading to an additional 30,000 problems. Additionally, we use the GSM8k~\citep{cobbe2021trainingverifierssolvemath} subset, providing another $\sim8,000$ problems. Finally, we also include the amc\_aime subset, consisting of 4,000 more math competition problems, with solutions scraped from online sources.
    268: 
 
 - file: sample\arxiv_sources\2502.17387v1\main.tex (line 267)
   error: 8,000
-  message: Consider using "8{,}000" instead of "8,000".
+  message: Consider using "8{,}000" instead of "8,000". This can help avoid spacing issues and improve readability.
    266: % -- 6 sources we did use
 >  267: The largest subset from Numina is the cn\_k12 subset of data, composed of $\sim275,000$ math problems scraped from chinese math exams. The next largest subset from NuminaMath is the Orca-Math~\citep{mitra2024orcamathunlockingpotentialslms} subset ($\sim150,000$ problems), which is a synthetically generated dataset of grade school math problems. Although this data was synthetically generated,~\citet{mitra2024orcamathunlockingpotentialslms} demonstrate that as the lone source of SFT training data, this subset leads to impressive math performance, even for small language models. Next, we include the olympiads subset, consisting of 150,000 problems collected from online sources of international-level math competitions. Next,~\citet{numina_math_datasets} scrape the Art of Problem Solving forum for additional math competition problems, selecting to keep only problems with high quantities of LaTeX and at least one \texttt{\textbackslash boxed} or $\blacksquare$ symbol, leading to an additional 30,000 problems. Additionally, we use the GSM8k~\citep{cobbe2021trainingverifierssolvemath} subset, providing another $\sim8,000$ problems. Finally, we also include the amc\_aime subset, consisting of 4,000 more math competition problems, with solutions scraped from online sources.
    268: 
 
 - file: sample\arxiv_sources\2502.17387v1\main.tex (line 377)
   error: 000,000
-  message: Consider using "000{,}000" instead of "000,000".
+  message: Consider using "000{,}000" instead of "000,000". This can help avoid spacing issues and improve readability.
    376: \indent \textbf{(Model Solve Rate)}
 >  377: Finally, while it is not feasible to manually ensure the correctness of each problem-answer pair, we develop a heuristic for correctness using language models. For each problem, we generate 64 solutions from Llama-3.1-8B ($\sim 30,000,000$ rollouts) and 5-8 solutions from Llama-3.1-405B ($\sim 1,100,000$ rollouts, generated on a pre-filtered subset)~\citep{dubey2024llama3herdmodels}. If either model answers the question with the ground truth answer, then we determine that the question-answer pair may be valid. We do not apply this filter to HARP, Omni-Math, MATH, or GSM8k as these datasets include pre-parsed answers.\\
    378: % -- issues with this filter
 
 - file: sample\arxiv_sources\2502.17387v1\main.tex (line 377)
   error: 100,000
-  message: Consider using "100{,}000" instead of "100,000".
+  message: Consider using "100{,}000" instead of "100,000". This can help avoid spacing issues and improve readability.
    376: \indent \textbf{(Model Solve Rate)}
 >  377: Finally, while it is not feasible to manually ensure the correctness of each problem-answer pair, we develop a heuristic for correctness using language models. For each problem, we generate 64 solutions from Llama-3.1-8B ($\sim 30,000,000$ rollouts) and 5-8 solutions from Llama-3.1-405B ($\sim 1,100,000$ rollouts, generated on a pre-filtered subset)~\citep{dubey2024llama3herdmodels}. If either model answers the question with the ground truth answer, then we determine that the question-answer pair may be valid. We do not apply this filter to HARP, Omni-Math, MATH, or GSM8k as these datasets include pre-parsed answers.\\
    378: % -- issues with this filter
 
 - file: sample\arxiv_sources\2502.17387v1\main.tex (line 434)
   error: 117,000
-  message: Consider using "117{,}000" instead of "117,000".
+  message: Consider using "117{,}000" instead of "117,000". This can help avoid spacing issues and improve readability.
    433: % - We lost a lot of data because it's multiple choice
 >  434: During the development of our filters, we found a staggering number of multiple choice questions ($> 117,000$), which are removed during the filtering process for \bigmath. In particular, we are concerned with the loss of significant quantities of data from human-written and high-quality sources: olympiads, amc\_aime, and aops\_forum.
    435: % - This is why we have to remove it, but we also note that with a simple change, we can reintroduce this data after slight changes
 
 - file: sample\arxiv_sources\2502.17387v1\main.tex (line 525)
   error: 120,000
-  message: Consider using "120{,}000" instead of "120,000".
+  message: Consider using "120{,}000" instead of "120,000". This can help avoid spacing issues and improve readability.
    524: % -- stronger models
 >  525: On the other hand, for those training a larger, or math-specific, model will find many of the easy questions redundant, and training on such data will be inefficient. Therefore, for practitioners training strong models it would be sensible to keep only the harder problems. Supposing that the hardest two quintiles of data are retained, there is still $> 120,000$ problems, \textit{10 times more problems than the next closest RL-suitable dataset.}
    526: % -- Problem difficulty based on Llama3-405B successrate@5/8??
 
 - file: sample\arxiv_sources\2502.17387v1\main.tex (line 628)
   error: 66,000
-  message: Consider using "66{,}000" instead of "66,000".
+  message: Consider using "66{,}000" instead of "66,000". This can help avoid spacing issues and improve readability.
    627: % -- distribution, outliers, interesting bits in the middle
 >  628: We see in Figures~\ref{fig:omnimath_domains} and~\ref{fig:msc_domains} that the distributions for both ontologies have long tails. The largest domain from~\citet{gao2024omnimathuniversalolympiadlevel} is the Math Word Problems, which we find to come disproportionately from Orca-Math, which contains $>66,000$ such problems.
    629: % - MSC: Covers 47 topics with > 10 problems each, 29 topics with > 100 problems each, and 20 topics with > 1000 problems
 
 - file: sample\arxiv_sources\2502.17387v1\main.tex (line 633)
   error: 10,000
-  message: Consider using "10{,}000" instead of "10,000".
+  message: Consider using "10{,}000" instead of "10,000". This can help avoid spacing issues and improve readability.
    632: % -- findings from MSC
 >  633: We found that the distribution of MSC domains follows a nearly log-linear relation, with large quantities of problems in college-level topics, including $\sim10,000$ problems on ordinary differential equations, field theory, and optimal control. We also found smaller quantities of applications in the sciences in the dataset, with problems in electromagnetic theory, thermodynamics, and fluid mechanics, showing that the collected dataset contains problems from a wide variety of mathematics domains.
    634: 
 
 - file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 180)
   error: 29,100
-  message: Consider using "29{,}100" instead of "29,100".
+  message: Consider using "29{,}100" instead of "29,100". This can help avoid spacing issues and improve readability.
    179: 
 >  180: We empirically validate CARGO on a large-scale vehicular dataset composed of about \(29,100\) events and \(474\) imbalanced labels, demonstrating for the first time, scalability and practical superiority over traditional causal discovery baselines. We also provide ablation on scoring criterions, frequency thresholds and the quality of the Transformers.
    181: %a complete causal framework backed by theoretical guarantee under certain assumptions proper to multi-labeled event sequences that the aggregated graph will be a MEC.
 
 - file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 506)
   error: 300,000
-  message: Consider using "300{,}000" instead of "300,000".
+  message: Consider using "300{,}000" instead of "300,000". This can help avoid spacing issues and improve readability.
    505: We used a \(g4dn.12xlarge\) instance from AWS Sagemaker to run comparisons. It contains 48 vCPUs and 4 NVIDIA T4 GPUs. We used a combination of F1-Score, Precision, and Recall with different averaging \cite{reviewmultilabellearning} to perform comparisons.
 >  506: We evaluated our method on a real-world vehicular test set of \(m=300,000\) sequences, with \(|\mathbb{Y}|=474\) different error patterns and \(|\mathbb{X}| = 29,100\) different DTCs forming sequences of \( \approx 100 \pm 35\) events. We used \(\text{Tf}_x\) and \(\text{Tf}_y\) with 90m and 15m parameters \cite{math2024harnessingeventsensorydata}. The two NADEs didn't see the test set during training. 
    507: The error patterns are manually defined by domain experts as boolean rules between DTCs (Fig. \ref{fig:ep_def}). We set the elements of this rule as the correct Markov Boundary for each label \(y_j\) in the tested sequences. 
 
 - file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 506)
   error: 29,100
-  message: Consider using "29{,}100" instead of "29,100".
+  message: Consider using "29{,}100" instead of "29,100". This can help avoid spacing issues and improve readability.
    505: We used a \(g4dn.12xlarge\) instance from AWS Sagemaker to run comparisons. It contains 48 vCPUs and 4 NVIDIA T4 GPUs. We used a combination of F1-Score, Precision, and Recall with different averaging \cite{reviewmultilabellearning} to perform comparisons.
 >  506: We evaluated our method on a real-world vehicular test set of \(m=300,000\) sequences, with \(|\mathbb{Y}|=474\) different error patterns and \(|\mathbb{X}| = 29,100\) different DTCs forming sequences of \( \approx 100 \pm 35\) events. We used \(\text{Tf}_x\) and \(\text{Tf}_y\) with 90m and 15m parameters \cite{math2024harnessingeventsensorydata}. The two NADEs didn't see the test set during training. 
    507: The error patterns are manually defined by domain experts as boolean rules between DTCs (Fig. \ref{fig:ep_def}). We set the elements of this rule as the correct Markov Boundary for each label \(y_j\) in the tested sequences. 
 
 - file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 524)
   error: 50,000
-  message: Consider using "50{,}000" instead of "50,000".
+  message: Consider using "50{,}000" instead of "50,000". This can help avoid spacing issues and improve readability.
    523: \textbf{Comparisons.}
 >  524: We performed comparaisons on Table~\ref{tab:performance_comparison} with \(n = 50,000\) random sequences. We found out that even under this reduced setup, LSL algorithms failed to compute the Markov Boundaries within multiple days (3 days timeout), far exceeding practical limits for deployment.
    525: This behaviour highlights the current infeasibility of multi-label causal discovery in high-dimensional event sequences.
 
 - file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 529)
   error: 50,000
-  message: Consider using "50{,}000" instead of "50,000".
+  message: Consider using "50{,}000" instead of "50,000". This can help avoid spacing issues and improve readability.
    528: \centering
 >  529: \caption{Comparisons of \textbf{MB} retrieval with \(m=50,000\) samples averaged over \(6-\)folds with \(|Y| = 474, |X|=29,100\) nodes. Averaging is 'weighted'. The symbol ’-’ indicates that the algorithm didn't output the \(\textbf{MBs}\) within 3 days. Metrics are given in \(\%\).}
    530: \begin{tabular}{lcccc}
 
 - file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 529)
   error: 29,100
-  message: Consider using "29{,}100" instead of "29,100".
+  message: Consider using "29{,}100" instead of "29,100". This can help avoid spacing issues and improve readability.
    528: \centering
 >  529: \caption{Comparisons of \textbf{MB} retrieval with \(m=50,000\) samples averaged over \(6-\)folds with \(|Y| = 474, |X|=29,100\) nodes. Averaging is 'weighted'. The symbol ’-’ indicates that the algorithm didn't output the \(\textbf{MBs}\) within 3 days. Metrics are given in \(\%\).}
    530: \begin{tabular}{lcccc}
 
 - file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 553)
   error: 29,100
-  message: Consider using "29{,}100" instead of "29,100".
+  message: Consider using "29{,}100" instead of "29,100". This can help avoid spacing issues and improve readability.
    552:     \centering
 >  553:     \caption{Comparison of different criterions for the structural fusion (Phase 2) in function of the number of samples \(m\). With \(|Y| = 474, |X|=29,100\) nodes.}\label{fig:ablation_comparaison_criterions}
    554:     \includegraphics[width=0.95\linewidth]{plots/comparaison_cargo_nsamples.pdf}
 
+- file: sample\arxiv_sources\2509.19112v3\neurips_2025.tex (line 180)
+  error: 29,100
+  message: Consider using "29{,}100" instead of "29,100". This can help avoid spacing issues and improve readability.
+   179: 
+>  180: We empirically validate CARGO on a large-scale vehicular dataset comprising about \(29,100\) events and \(474\) imbalanced labels, demonstrating, for the first time, scalability and practical superiority over traditional causal discovery baselines. We also perform ablation on scoring criteria, frequency thresholds, and Transformer quality.
+   181: %a complete causal framework backed by theoretical guarantee under certain assumptions proper to multi-labeled event sequences that the aggregated graph will be a MEC.
+
+- file: sample\arxiv_sources\2509.19112v3\neurips_2025.tex (line 506)
+  error: 300,000
+  message: Consider using "300{,}000" instead of "300,000". This can help avoid spacing issues and improve readability.
+   505: We used a \(g4dn.12xlarge\) instance from AWS Sagemaker to run comparisons. It contains 48 vCPUs and 4 NVIDIA T4 GPUs. We used a combination of F1-Score, Precision, and Recall with different averaging methods \cite{reviewmultilabellearning} to compare results.
+>  506: We evaluated our method on a real-world vehicular test set of \(m=300,000\) sequences, with \(|\mathbb{Y}|=474\) different error patterns and \(|\mathbb{X}| = 29,100\) different DTCs forming sequences of \( \approx 100 \pm 35\) events. We used \(\text{Tf}_x\) and \(\text{Tf}_y\) with 90m and 15m parameters \cite{math2024harnessingeventsensorydata}. The two NADEs didn't see the test set during training. 
+   507: Domain experts manually define error patterns as Boolean rules among DTCs (Fig. \ref{fig:ep_def}). We set the elements of this rule as the correct Markov Boundary for each label \(y_j\) in the tested sequences. 
+
+- file: sample\arxiv_sources\2509.19112v3\neurips_2025.tex (line 506)
+  error: 29,100
+  message: Consider using "29{,}100" instead of "29,100". This can help avoid spacing issues and improve readability.
+   505: We used a \(g4dn.12xlarge\) instance from AWS Sagemaker to run comparisons. It contains 48 vCPUs and 4 NVIDIA T4 GPUs. We used a combination of F1-Score, Precision, and Recall with different averaging methods \cite{reviewmultilabellearning} to compare results.
+>  506: We evaluated our method on a real-world vehicular test set of \(m=300,000\) sequences, with \(|\mathbb{Y}|=474\) different error patterns and \(|\mathbb{X}| = 29,100\) different DTCs forming sequences of \( \approx 100 \pm 35\) events. We used \(\text{Tf}_x\) and \(\text{Tf}_y\) with 90m and 15m parameters \cite{math2024harnessingeventsensorydata}. The two NADEs didn't see the test set during training. 
+   507: Domain experts manually define error patterns as Boolean rules among DTCs (Fig. \ref{fig:ep_def}). We set the elements of this rule as the correct Markov Boundary for each label \(y_j\) in the tested sequences. 
+
+- file: sample\arxiv_sources\2509.19112v3\neurips_2025.tex (line 524)
+  error: 50,000
+  message: Consider using "50{,}000" instead of "50,000". This can help avoid spacing issues and improve readability.
+   523: \textbf{Comparisons.}
+>  524: We performed comparisons on Table~\ref{tab:performance_comparison} with \(n = 50,000\) random sequences. We found that even under this reduced setup, LSL algorithms failed to compute the Markov Boundaries within 3 days (a 3-day timeout), far exceeding practical deployment limits.
+   525: This behavior highlights the current infeasibility of multi-label causal discovery in high-dimensional event sequences.
+
+- file: sample\arxiv_sources\2509.19112v3\neurips_2025.tex (line 529)
+  error: 50,000
+  message: Consider using "50{,}000" instead of "50,000". This can help avoid spacing issues and improve readability.
+   528: \centering
+>  529: \caption{Comparisons of \textbf{MB} retrieval with \(m=50,000\) samples averaged over \(6-\)folds with \(|Y| = 474, |X|=29,100\) nodes. Averaging is 'weighted'. The symbol ’-’ indicates that the algorithm didn't output the \(\textbf{MBs}\) within 3 days. Metrics are given in \(\%\).}
+   530: \begin{tabular}{lcccc}
+
+- file: sample\arxiv_sources\2509.19112v3\neurips_2025.tex (line 529)
+  error: 29,100
+  message: Consider using "29{,}100" instead of "29,100". This can help avoid spacing issues and improve readability.
+   528: \centering
+>  529: \caption{Comparisons of \textbf{MB} retrieval with \(m=50,000\) samples averaged over \(6-\)folds with \(|Y| = 474, |X|=29,100\) nodes. Averaging is 'weighted'. The symbol ’-’ indicates that the algorithm didn't output the \(\textbf{MBs}\) within 3 days. Metrics are given in \(\%\).}
+   530: \begin{tabular}{lcccc}
+
+- file: sample\arxiv_sources\2509.19112v3\neurips_2025.tex (line 553)
+  error: 29,100
+  message: Consider using "29{,}100" instead of "29,100". This can help avoid spacing issues and improve readability.
+   552:     \centering
+>  553:     \caption{Comparison of different criteria for the structural fusion (Phase 2) in function of the number of samples \(m\). With \(|Y| = 474, |X|=29,100\) nodes.}\label{fig:ablation_comparaison_criterions}
+   554:     \includegraphics[width=0.95\linewidth]{plots/comparaison_cargo_nsamples.pdf}
+
 - file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 174)
   error: 29,100
-  message: Consider using "29{,}100" instead of "29,100".
+  message: Consider using "29{,}100" instead of "29,100". This can help avoid spacing issues and improve readability.
    173: \begin{abstract}
 >  174: Understanding causality in event sequences with thousands of sparse event types is critical in domains such as healthcare, cybersecurity, or vehicle diagnostics, yet current methods fail to scale. We present OSCAR, a one-shot causal autoregressive method that infers per-sequence Markov Boundaries using two pretrained Transformers as density estimators. This enables efficient, parallel causal discovery without costly global CI testing. On a real-world automotive dataset with \(29,100\) events and \(474\) labels, OSCAR recovers interpretable causal structures in minutes, while classical methods fail to scale— enabling practical scientific diagnostics at production scale.
    175: \end{abstract}
 
 - file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 306)
   error: 300,000
-  message: Consider using "300{,}000" instead of "300,000".
+  message: Consider using "300{,}000" instead of "300,000". This can help avoid spacing issues and improve readability.
    305: \textbf{Vehicle Event Sequences Dataset.}
 >  306: We evaluated our method on a real-world vehicular test set of \(n=300,000\) sequences. It contains \(|\mathbb{Y}|=474\) different error patterns and about \(|\mathbb{X}| = 29,100\) different DTCs forming sequences of \( \approx 150 \pm 90\) events. We used 105m backbones as \(\text{Tf}_x, \text{Tf}_y\) \cite{math2024harnessingeventsensorydata}. The two NADEs were not exposed to the test set during. 
    307: The error patterns are manually defined by domain experts as boolean rules between DTCs in Eq \eqref{eq:ep_def} where \((y_1)\) is a boolean definition based on diagnosis trouble codes \((x_i)\):
 
 - file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 306)
   error: 29,100
-  message: Consider using "29{,}100" instead of "29,100".
+  message: Consider using "29{,}100" instead of "29,100". This can help avoid spacing issues and improve readability.
    305: \textbf{Vehicle Event Sequences Dataset.}
 >  306: We evaluated our method on a real-world vehicular test set of \(n=300,000\) sequences. It contains \(|\mathbb{Y}|=474\) different error patterns and about \(|\mathbb{X}| = 29,100\) different DTCs forming sequences of \( \approx 150 \pm 90\) events. We used 105m backbones as \(\text{Tf}_x, \text{Tf}_y\) \cite{math2024harnessingeventsensorydata}. The two NADEs were not exposed to the test set during. 
    307: The error patterns are manually defined by domain experts as boolean rules between DTCs in Eq \eqref{eq:ep_def} where \((y_1)\) is a boolean definition based on diagnosis trouble codes \((x_i)\):
 
 - file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 316)
   error: 50,000
-  message: Consider using "50{,}000" instead of "50,000".
+  message: Consider using "50{,}000" instead of "50,000". This can help avoid spacing issues and improve readability.
    315: \centering
 >  316: \caption{Comparisons of \textbf{MB} retrieval with \(n=50,000\) samples, \(|\mathbb{X}| = 29,100, |\mathbb{Y}|=474\) averaged over \(6-\)folds. Classification metrics averaging is 'weighted' and shown as one-shot for OSCAR. The symbol ’-’ indicates that the algorithm didn't output the \(\textbf{MBs}\) under 3 days. Metrics are given in \(\%\).}
    317: \begin{tabular}{lcccc}
 
 - file: sample\arxiv_sources\2509.23213v2\neurips_2025.tex (line 330)
   error: 50,000
-  message: Consider using "50{,}000" instead of "50,000".
+  message: Consider using "50{,}000" instead of "50,000". This can help avoid spacing issues and improve readability.
    329: \end{table}
 >  330: Table~\ref{tab:performance_comparison} shows comparision with \(n=50,000\). We found out LSL algorithms failed to compute the Markov Boundaries within multiple days (3-day timeout), far exceeding practical limits for deployment. OSCAR, on the other hand, shows robust classification over a large amount of events \((29,100)\), especially \(55\%\) precision, in a matter of minutes.
    331: This behaviour highlights the current infeasibility of multi-label causal discovery in high-dimensional event sequences, since it relies on expensive global CI-testings \cite{cd_temporaldata_review}. This positions OSCAR as a more feasible approach for large-scale causal per-sequence causal reasoning in production environments.
 
+- file: sample\arxiv_sources\2602.01135v2\example_paper.tex (line 1377)
+  error: 29,100
+  message: Consider using "29{,}100" instead of "29,100". This can help avoid spacing issues and improve readability.
+  1376:     \includegraphics[width=0.9\linewidth]{plots/time_summary_graph_cropped.pdf}
+> 1377:     \caption{\textbf{Instance Time Causal Graph.} Temporal evolution of a diagnostic defect cascade in a vehicle ($|\mathcal{X}| \approx 29,100$). TRACE effectively captures causal relationships, revealing distinct \textbf{error clusters} at different time steps (e.g., initial sensor failures at $t=3$ triggering mechanical faults at $t=12$, battery at issue \(t=17\)). This enables actionable root-cause analysis by isolating the specific onset of a failure mechanism and their strength using The CMI \(\hat{I}_N\)}% is reported as causal strength between nodes.}
+  1378:     \label{fig:time_instance_graph_dtc}
+
+- file: sample\arxiv_sources\2602.01135v2\example_paper.tex (line 1381)
+  error: 29,000
+  message: Consider using "29{,}000" instead of "29,000". This can help avoid spacing issues and improve readability.
+  1380: \subsection{Application to Vehicles Diagnostics}\label{sec:application}
+> 1381: To evaluate TRACE in a safety-critical setting, we adopt the real-world vehicle diagnostics environment introduced by \citet{math2024harnessingeventsensorydata}. This dataset consists of high-dimensional sequences of diagnostic trouble codes (DTCs). We utilize a 120M-parameter Transformer backbone (CarFormer) as our density estimator $\text{Tf}_\theta$, operating over a massive vocabulary of $|\mathcal{X}| \approx 29,000$ event types with a training loss of $\mathcal{L}_{AR} = 1.91$. We apply TRACE to analyze complex electrical cascades, specifically focusing on battery and sensor degradation scenarios as shown in Fig.~\ref{fig:time_instance_graph_dtc} with \(\mathcal{G}_{t,s}\) and in Fig.~\ref{fig:carformer_summary_appendix} with \(\mathcal{G}_s\). In standard approaches, these events are often collapsed into a static correlation graph, obscuring the order of operations and their causal relationship. %We also output the summary graph in Fig.~\ref{fig:carformer_summary_appendix}.
+  1382: %To evaluate TRACE in a safety-critical setting, we adopt the real-world vehicle diagnostics environment introduced by \citet{math2024harnessingeventsensorydata}. This dataset consists of high-dimensional sequences of diagnostic trouble codes (DTCs) preceding component failures. We utilize a 120M-parameter Transformer backbone (referred to as CarFormer) as our density estimator $\text{Tf}_\theta$, operating over a vocabulary of $|\mathcal{X}| \approx 29,000$ event types and achieving a training loss of \(\mathcal{L}_{AR} = 1.91\).
+
+- file: sample\arxiv_sources\2602.01135v2\example_paper.tex (line 1785)
+  error: 1,000
+  message: Consider using "1{,}000" instead of "1,000". This can help avoid spacing issues and improve readability.
+  1784:         \midrule
+> 1785:         \textbf{Dimensionality} & Low \(|\mathcal{X}| \leq 100\) & Massive \(|\mathcal{X}| > 1,000\) \\
+  1786: %        \textbf{Temporal Assumption} & Continuous Time (Exact timestamps) & Discrete Time (Steps/Positions) \\
+
+- file: sample\arxiv_sources\2602.01155v2\conference_101719.tex (line 123)
+  error: 29,100
+  message: Consider using "29{,}100" instead of "29,100". This can help avoid spacing issues and improve readability.
+   122: 
+>  123: \noindent We evaluate CAREP on a real-world dataset of \(29,100\) DTCs and \(474\) known EPs rules by masking a random subset of the known rules and testing the framework’s ability to identify them. Results show that CAREP outperforms LLM-only baselines by a large margin while offering interpretable explanations at scale.
+   124: 
+
+- file: sample\arxiv_sources\2602.01155v2\conference_101719.tex (line 351)
+  error: 300,000
+  message: Consider using "300{,}000" instead of "300,000". This can help avoid spacing issues and improve readability.
+   350: \subsection{Vehicle Dataset}
+>  351: \noindent We evaluated our method on a real-world vehicular test set of \(m=300,000\) sequences, with \(|\mathbb{Y}|=474\) different error patterns and \(|\mathbb{X}| = 29,100\) different DTCs forming sequences of \( \approx 100 \pm 35\) events. The language models \(\text{Tf}_x\) and \(\text{Tf}_y\) were used with respectively 90M and 15M parameters \cite{math2024harnessingeventsensorydata}, they didn't see the test set during training. 
+   352: We created 5 folds of \(50,000\) sequences and randomly masked \(20\) different EPs with at least \(n \geq 100\) sequences. We set their masked rule as the ground truth for each label \(y^{un}_j\) and average the results across the 5 folds.
+
+- file: sample\arxiv_sources\2602.01155v2\conference_101719.tex (line 351)
+  error: 29,100
+  message: Consider using "29{,}100" instead of "29,100". This can help avoid spacing issues and improve readability.
+   350: \subsection{Vehicle Dataset}
+>  351: \noindent We evaluated our method on a real-world vehicular test set of \(m=300,000\) sequences, with \(|\mathbb{Y}|=474\) different error patterns and \(|\mathbb{X}| = 29,100\) different DTCs forming sequences of \( \approx 100 \pm 35\) events. The language models \(\text{Tf}_x\) and \(\text{Tf}_y\) were used with respectively 90M and 15M parameters \cite{math2024harnessingeventsensorydata}, they didn't see the test set during training. 
+   352: We created 5 folds of \(50,000\) sequences and randomly masked \(20\) different EPs with at least \(n \geq 100\) sequences. We set their masked rule as the ground truth for each label \(y^{un}_j\) and average the results across the 5 folds.
+
+- file: sample\arxiv_sources\2602.01155v2\conference_101719.tex (line 352)
+  error: 50,000
+  message: Consider using "50{,}000" instead of "50,000". This can help avoid spacing issues and improve readability.
+   351: \noindent We evaluated our method on a real-world vehicular test set of \(m=300,000\) sequences, with \(|\mathbb{Y}|=474\) different error patterns and \(|\mathbb{X}| = 29,100\) different DTCs forming sequences of \( \approx 100 \pm 35\) events. The language models \(\text{Tf}_x\) and \(\text{Tf}_y\) were used with respectively 90M and 15M parameters \cite{math2024harnessingeventsensorydata}, they didn't see the test set during training. 
+>  352: We created 5 folds of \(50,000\) sequences and randomly masked \(20\) different EPs with at least \(n \geq 100\) sequences. We set their masked rule as the ground truth for each label \(y^{un}_j\) and average the results across the 5 folds.
+   353: \subsection{Comparison}
+
+- file: sample\arxiv_sources\2603.16313v2\c1.tex (line 149)
+  error: 29,100
+  message: Consider using "29{,}100" instead of "29,100". This can help avoid spacing issues and improve readability.
+   148:     \includegraphics[width=0.7\linewidth]{inc/part2/time_summary_graph_cropped.pdf}
+>  149:   \caption{\textbf{Anonymized Instance-Time Causal Graph for Diagnostic Defect Cascade.} Temporal evolution of a diagnostic defect cascade in a vehicle ($|\mathcal{X}| \approx 29,100$). TRACE effectively captures causal relationships, revealing distinct \textbf{error clusters} at different time steps (e.g., initial sensor failures at $t=3$ triggering mechanical faults at $t=12$, battery at issue \(t=17\)). This enables actionable root-cause analysis by isolating the specific onset of a failure mechanism and its strength using the conditional mutual information.}%     \label{fig:time_instance_causal_graph}
+   150: \end{figure}
+
+- file: sample\arxiv_sources\2603.16313v2\c4.tex (line 389)
+  error: 300,000
+  message: Consider using "300{,}000" instead of "300,000". This can help avoid spacing issues and improve readability.
+   388: \subsection{Vehicle Event Sequences Dataset}
+>  389: We evaluated our method on an anonymized real-world vehicular test set of \(n=300,000\) sequences. It contains \(|\mathcal{Y}|=474\) different error patterns and about \(|\mathcal{X}| = 29,100\) different DTCs forming sequences of \( \approx 150 \pm 90\) events. We used 105m parameters backbones as \(\text{Tf}_x, \text{Tf}_y\). The two NADEs did not see the test set during training. %\textit{CarFormer} is used as backbone and EPredictor is plugged on top. To relate, CarFormer is trained and reach about 22\% of accuracy when predicting the next event. EPredictor reach with the full sequence about 85\% micro f1 score and 90 \% micro precision.
+   390: We set the elements of the EP rules (as defined in \ref{sec:ep_def}, Eq.~\ref{eq:ep_def}) as the correct Markov Boundary for each label \(y_j\) in the tested sequences. Importantly, the rules are subject to change over time by automotive engineers, contain some noise, and are biased, which makes it more difficult to extract the true \(\mathcal{MB}\). Further, there is about \(12\%\) missing ground truth \(\mathcal{MB}\) rules for certain \(Y_j\).
+
+- file: sample\arxiv_sources\2603.16313v2\c4.tex (line 389)
+  error: 29,100
+  message: Consider using "29{,}100" instead of "29,100". This can help avoid spacing issues and improve readability.
+   388: \subsection{Vehicle Event Sequences Dataset}
+>  389: We evaluated our method on an anonymized real-world vehicular test set of \(n=300,000\) sequences. It contains \(|\mathcal{Y}|=474\) different error patterns and about \(|\mathcal{X}| = 29,100\) different DTCs forming sequences of \( \approx 150 \pm 90\) events. We used 105m parameters backbones as \(\text{Tf}_x, \text{Tf}_y\). The two NADEs did not see the test set during training. %\textit{CarFormer} is used as backbone and EPredictor is plugged on top. To relate, CarFormer is trained and reach about 22\% of accuracy when predicting the next event. EPredictor reach with the full sequence about 85\% micro f1 score and 90 \% micro precision.
+   390: We set the elements of the EP rules (as defined in \ref{sec:ep_def}, Eq.~\ref{eq:ep_def}) as the correct Markov Boundary for each label \(y_j\) in the tested sequences. Importantly, the rules are subject to change over time by automotive engineers, contain some noise, and are biased, which makes it more difficult to extract the true \(\mathcal{MB}\). Further, there is about \(12\%\) missing ground truth \(\mathcal{MB}\) rules for certain \(Y_j\).
+
+- file: sample\arxiv_sources\2603.16313v2\c4.tex (line 398)
+  error: 50,000
+  message: Consider using "50{,}000" instead of "50,000". This can help avoid spacing issues and improve readability.
+   397: \subsection{Results}
+>  398: We first drew \(n=50,000\) random sequences from our dataset and performed comparisons (Table~\ref{tab:performance_comparison}). We observed that even under this reduced setup, LSL algorithms failed to compute the Markov Boundaries within a 3-day timeout, far exceeding practical limits for deployment. OSCAR, on the other hand, shows robust classification over a large amount of events \((29,100)\), especially \(55\%\) precision, in a matter of minutes.
+   399: This behavior highlights the current infeasibility of multi-label causal discovery in massive discrete event sequences. This positions OSCAR as a more feasible approach for large-scale sample-level causal discovery in production environments.
+
+- file: sample\arxiv_sources\2603.16313v2\c4.tex (line 424)
+  error: 50,000
+  message: Consider using "50{,}000" instead of "50,000". This can help avoid spacing issues and improve readability.
+   423: \hline
+>  424: \end{tabular}\caption{Comparisons of \(\mathcal{MB}\) retrieval with \(n=50,000\) samples, \(|\mathcal{X}| = 29,100, |\mathcal{Y}|=474\) averaged over \(6-\)folds. Classification metrics averaging is 'weighted' and shown as one-shot for OSCAR. The symbol ’-’ indicates that the algorithm did not output the \(\mathcal{MB}\) within 3 days. Metrics are given in \(\%\).}
+   425: \label{tab:performance_comparison}
+
+- file: sample\arxiv_sources\2603.16313v2\c4.tex (line 688)
+  error: 50,000
+  message: Consider using "50{,}000" instead of "50,000". This can help avoid spacing issues and improve readability.
+   687: \end{adjustbox}
+>  688: \caption{Comparisons of \(\mathcal{MB}\) retrieval with \(m=50,000\) samples averaged over \(6-\)folds with \(|\mathcal{Y}| = 474, |\mathcal{X}|=29,100\) nodes. Averaging is 'weighted'. The symbol ’-’ indicates that the algorithm did not output the \(\textbf{MBs}\) within 3 days. Metrics are given in \(\%\). OSCAR reports the sample-level performance (Phase 1).}
+   689: \label{tab:performance_comparison_plus_agg}
+
+- file: sample\arxiv_sources\2603.16313v2\c4.tex (line 688)
+  error: 29,100
+  message: Consider using "29{,}100" instead of "29,100". This can help avoid spacing issues and improve readability.
+   687: \end{adjustbox}
+>  688: \caption{Comparisons of \(\mathcal{MB}\) retrieval with \(m=50,000\) samples averaged over \(6-\)folds with \(|\mathcal{Y}| = 474, |\mathcal{X}|=29,100\) nodes. Averaging is 'weighted'. The symbol ’-’ indicates that the algorithm did not output the \(\textbf{MBs}\) within 3 days. Metrics are given in \(\%\). OSCAR reports the sample-level performance (Phase 1).}
+   689: \label{tab:performance_comparison_plus_agg}
+
+- file: sample\arxiv_sources\2603.16313v2\c4.tex (line 700)
+  error: 29,100
+  message: Consider using "29{,}100" instead of "29,100". This can help avoid spacing issues and improve readability.
+   699:      \end{adjustbox}
+>  700:      \caption{\textbf{Criterion Ablation for Structural Fusion}. Comparison of different criteria for the structural fusion (Phase 2) as a function of the number of samples \(m\). With \(|\mathcal{Y}| = 474, |\mathcal{X}|=29,100\) nodes.}\label{fig:ablation_comparaison_criterions}  
+   701: \end{figure}
+
+- file: sample\arxiv_sources\2603.16313v2\c4.tex (line 1577)
+  error: 29,100
+  message: Consider using "29{,}100" instead of "29,100". This can help avoid spacing issues and improve readability.
+  1576:     \includegraphics[width=0.85\linewidth]{inc/part2/time_summary_graph_cropped.pdf}
+> 1577:     \caption{\textbf{Instance-Time Causal Graph.} Temporal evolution of a diagnostic defect cascade in a vehicle ($|\mathcal{X}| \approx 29,100$). TRACE effectively captures causal relationships, revealing distinct \textbf{error clusters} at different time steps (e.g., initial sensor failures at $t=3$ triggering mechanical faults at $t=12$, battery at issue \(t=17\)). This enables actionable root-cause analysis by isolating the specific onset of a failure mechanism and their strength using the CMI \(\hat{I}_N\)}% is reported as causal strength between nodes.}
+  1578:     \label{fig:time_instance_graph_dtc}
+
+- file: sample\arxiv_sources\2603.16313v2\c5.tex (line 284)
+  error: 50,000
+  message: Consider using "50{,}000" instead of "50,000". This can help avoid spacing issues and improve readability.
+   283: \subsection{Settings}\label{c8:sec:settings}
+>  284: \noindent We used the same experimental setup and dataset as in Chapters~\ref{c7:multi_label_one_shot_causal_discovery} and \ref{c7:multi_label_causal_discovery}. We created 5 folds of \(50,000\) sequences and randomly masked \(20\) different EPs with at least \(n \geq 100\) sequences. We set their masked rule as the ground truth for each label \(y^{un}_j\) and average the results across the five folds. We used a combination of F1-Score, Precision, and Recall with different averaging methods \cite{reviewmultilabellearning} to compare with LLM-only baselines.
+   285: 
+
+- file: sample\arxiv_sources\2604.02224v1\main.tex (line 473)
+  error: 100,000
+  message: Consider using "100{,}000" instead of "100,000". This can help avoid spacing issues and improve readability.
+   472: \end{equation}
+>  473: Our procedure consists of selecting a value for $\sigma_J$, calculating the resulting variance, and then solving for the specific $\sigma_{CIR}$ that yields the exact same level of dispersion in the CIR process (where $\text{Var}[P_\infty^C] = \sigma_{CIR}^2 \eta / (2\kappa)$). This ensures that we are strictly controlling for the amount of noise in the system. Consequently, any discrepancy observed in the epidemic dynamics can be attributed solely to the boundary effects rather than differences in the first two moments. To guarantee the robustness of these findings, particularly for rare tail events, we initialize the simulation at $s_0 = 0.99$ and execute $N=100,000$ Monte Carlo paths.
+   474: %-----------------------------------------------------------------------
+
+- file: sample\arxiv_sources\2604.02302v1\Introduction.tex (line 2)
+  error: 10,000
+  message: Consider using "10{,}000" instead of "10,000". This can help avoid spacing issues and improve readability.
+     1: \section{Introduction}\label{sec:introduction}
+>    2: \noindent The phenomenon of scholarly article retractions has gained attention due to its essential role in maintaining scientific integrity and correcting the published record~\cite{brainard2018massive,fang2012misconduct,van2011science,van2023news,van2023big}. Unfortunately, the past two decades have seen a sharp rise in the absolute number of retractions, culminating in $2023$ with a new annual record of over $10,000$ retracted articles~\cite{van2023news}. This surge raises a fundamental question: does the rise in retractions reflect a genuine deterioration in research integrity, improved detection of problematic work, or simply the natural consequence of exponential growth in scientific output?
+     3: Retractions, although imperfect, serve as an operational proxy for research-integrity failures (combining misconduct and serious error). Prior large-scale studies estimate that misconduct accounts for a majority of retractions in biomedical domains~\cite{fang2012misconduct,freijedo2024biomedical,marco2021fraud, song2025systematic, gaudino2021trends}, but practices vary across fields; accordingly, we focus on the incidence of retractions as an indicator of integrity stress rather than equating retractions with misconduct per se. Moreover, retracted articles continue to accumulate citations and generate second-order citations, propagating unreliable findings~\cite{bar2018temporal, ioannidis2025linking,wray2018retractions,stavale2019research,candal2022retracted,candal2024retracted, shepperd2023analysis}. Understanding whether retraction rates are accelerating is thus critical for safeguarding the reliability of the scientific enterprise.
+
+- file: sample\arxiv_sources\2604.02302v1\Results.tex (line 25)
+  error: 31,000
+  message: Consider using "31{,}000" instead of "31,000". This can help avoid spacing issues and improve readability.
+    24: \subsection{Data Sources and Incidence Metrics}
+>   25: Here, we analyze published works in the OpenAlex dataset~\cite{priem2022openalex} (October $2025$ updated snapshot). OpenAlex is one of the largest open bibliometric dataset, and we restrict the analysis to records with a known publication year, article type, and sources classified as journal or conference proceedings. This results in over $107$M works published from $1992$ to $2021$, of which about $31,000$ are flagged as retracted in OpenAlex  through a boolean entry sourced from the Retraction Watch database~\cite{retractionwatch2023}. OpenAlex also provides additional metadata such as active-author counts, topic tags mapped to fields and domains, institutional affiliations, and publisher identifiers, enabling multi-level analyses across disciplines, countries, and publishers. For each publication year $t$, we record the total number of works published in that year and the subset that were retracted at any point in time (i.e., counts are indexed by publication cohort). This is an important point as we consider the incidence per year of publication and not retraction date. Because retractions typically occur with a delay after publication, we analyze the delay distribution for works published since $1992$; in the last decade we observe a median lag of approximately $2.0$ years ($95\%$ confidence interval (CI) $[1.0\text{–}3.0]$) (Appendix Fig.~\ref{fig:time to retraction}), consistent with previous findings~\cite{steen2016has}. To prevent right-censoring in recent cohorts, we limit our analysis to papers published before $2021$, ensuring that retraction counts are sufficiently stable for the incidence analyses that follow (see \methods section and the Appendix for additional details). 
+    26: 
+
 - file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1749)
   error: 11,785
-  message: Consider using "11{,}785" instead of "11,785".
+  message: Consider using "11{,}785" instead of "11,785". This can help avoid spacing issues and improve readability.
   1748: \end{align*}
 > 1749: Thus, the bookstore should expect to generate about $\$7,535 + \$4,250 = \$11,785$ from these 100 students for this one class. However, there might be some \emph{sampling variability} so the actual amount may differ by a little bit.
   1750: \end{nexample}

@@ -1,4 +1,4 @@
-[CODE] LLEqnarray (361)
+[CODE] LLEqnarray (391)
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 233)
   error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
@@ -2364,6 +2364,216 @@
  15223: that
 >15224: \begin{eqnarray*}
  15225: \int_{{-\infty}}^\infty\frac{\sin^2 (\tan x)}{x^2} dx&=&\sum_{k=-\infty}^\infty \int_{-\frac{\pi}{2}+k\pi}^{\frac{\pi}{2} +k\pi} \frac{\sin^2 (\tan x)}{x^2} dx\\
+
+- file: sample\arxiv_sources\2604.02086v1\main.tex (line 265)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   264: \emph{Proof of $\Cref{sub:claim:2a:thm1}$.} \textbf{Case 1.} First suppose $\overline{G}[X']$ is disconnected. Note that $\overline{G}[X']$ can not have more than two connected components since if it has more than two connected components then the smallest connected component has size at most $(2n-2002)/3$. Since each component contains at least $ \delta(\overline{G}[X'])+1$ many vertices, we can choose two vertices from the smallest component such that they will have at least $(2n-2002)- (2n-2002)/3=(4n-4004)/3\geq n$ common non-neighbors in $\overline{G}[X']$ for $n\geq 4004$, a contradiction. Therefore consider the partition $X'=A\sqcup B$ with $|A|\leq |B|$. Note that $|A|\geq \delta(\overline{G}[X'])+1\geq 2$ and hence $|B|\leq n-1$, otherwise we have two vertices having $n$ non-neighbors in $\overline{G}$, but this implies $|A|\geq n-2001$. Further, we revise the bounds as follows 
+>  265: \begin{eqnarray*}
+   266:     n-2000 \leq &|A|&\leq n-1000\\
+
+- file: sample\arxiv_sources\2604.02086v1\main.tex (line 272)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   271: Now, we consider 
+>  272: \begin{eqnarray*}
+   273:     |A|&=&n-1001-k,\\
+
+- file: sample\arxiv_sources\2604.02086v1\main.tex (line 378)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   377: \textbf{Case 2.} Assume that $\kappa(\overline{G}[X'])=1$, that is, there exists a cut vertex, say $w$. Therefore, we can assume $X'\setminus \{w\}=A\sqcup B$, where
+>  378: \begin{eqnarray*}
+   379:      n-2001 \leq &|A|&\leq n-1002\\
+
+- file: sample\arxiv_sources\2604.02086v1\main.tex (line 383)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   382: Again, we consider 
+>  383: \begin{eqnarray*}
+   384:     |A|&=&n-1002-k,\\
+
+- file: sample\arxiv_sources\2604.02086v1\main.tex (line 452)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   451: \textbf{Case 3.} Assume that $\kappa(\overline{G}[X'])=2$, that is, there exist two vertices $w, w'\in X'$ such that they form a cut set for $\overline{G}[X']$. Assume $X'\setminus\{w,w'\}=A\sqcup B$, where
+>  452: \begin{eqnarray*}
+   453:      n-2002 \leq &|A|&\leq n-1002\\
+
+- file: sample\arxiv_sources\2604.02086v1\main.tex (line 457)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   456: Similar to the previous cases, we consider 
+>  457: \begin{eqnarray*}
+   458:     |A|&=&n-1002-k,\\
+
+- file: sample\arxiv_sources\2604.02086v1\main.tex (line 692)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   691: Thus $|A_i|\geq 2a_i-1$ and $|B_i|\geq 2b_i-1$ for all $i$. Moreover,  
+>  692: \begin{eqnarray*}
+   693:     \ell &\geq& \sum_{i=1}^{q}\left(|A_i|+|B_i|\right)+2qs\\
+
+- file: sample\arxiv_sources\2604.02086v1\main.tex (line 748)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   747: \emph{Proof of $\Cref{sub:claim:2a:thm2}$.} \textbf{Case 1.} If not, let $\overline{G}[X']$ is disconnected. Due to a similar reason used in the \Cref{sub:claim:2a:thm1}, $\overline{G}[X']$ can not have more than two connected components and if   $X'=A\sqcup B$ with $|A|\leq |B|$ then we have
+>  748: \begin{eqnarray*}
+   749:     |A|&=&n-1002-k,\\
+
+- file: sample\arxiv_sources\2604.02086v1\main.tex (line 755)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   754: \textbf{Case 2.} Now assume that $\kappa(\overline{G}[X'])=1$, that is, there exists a cut vertex, say $w$. Therefore, we can assume $X'\setminus \{w\}=A\sqcup B$, where
+>  755: \begin{eqnarray*}
+   756:     |A|&=&n-1003-k,\\
+
+- file: sample\arxiv_sources\2604.02086v1\main.tex (line 770)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   769: \textbf{Case 3.} Assume that $\kappa(\overline{G}[X'])=2$, that is, there exist two vertices $w, w'\in X'$ such that they form a cut set for $\overline{G}[X']$. Assume $X'\setminus\{w,w'\}=A\sqcup B$, where
+>  770: \begin{eqnarray*}
+   771:     |A|&=&n-1003-k,\\
+
+- file: sample\arxiv_sources\2604.02100v1\paper.tex (line 96)
+  error: \begin{eqnarray}
+  message: Eqnarray is not recommended. Use align or gather instead.
+    95: A spherical droplet with mass $m_d$, charge $q_d$, and radius $r_d$ is considered. The analysis adopts the dust-particle model described in \cite{DUSTT}, which incorporates mass loss due to evaporation. The equations of motion are as follows:
+>   96: \begin{eqnarray}
+    97: \label{eq:xdot}
+
+- file: sample\arxiv_sources\2604.02100v1\paper.tex (line 109)
+  error: \begin{eqnarray}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   108: with
+>  109: \begin{eqnarray}
+   110: \mathbf{F}_{\rm drag,i}
+
+- file: sample\arxiv_sources\2604.02100v1\paper.tex (line 131)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   130: For a negatively charged sphere, the first component reads as 
+>  131: \begin{eqnarray*}
+   132: \mathbf{F}_{\rm coll}
+
+- file: sample\arxiv_sources\2604.02100v1\paper.tex (line 177)
+  error: \begin{eqnarray}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   176: For a collisionless Maxwellian plasma and in the absence of magnetic-field effects, the collected currents are given by
+>  177: \begin{eqnarray}
+   178: \label{eq:Ie}
+
+- file: sample\arxiv_sources\2604.02100v1\paper.tex (line 188)
+  error: \begin{eqnarray}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   187: For hot liquid metals, thermionic emission contributes an additional outward electron flux. This process is modeled using Richardson–Dushman emission with a size-corrected work function,
+>  188: \begin{eqnarray}
+   189: \label{eq:Jth}
+
+- file: sample\arxiv_sources\2604.02100v1\paper.tex (line 219)
+  error: \begin{eqnarray}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   218: For a spherical droplet with uniform temperature and low Reynolds number ($\mathrm{Re}_d \ll 1$), the coupled mass and energy balances are given by
+>  219: \begin{eqnarray}
+   220: \label{eq:radius_evol}
+
+- file: sample\arxiv_sources\2604.02100v1\paper.tex (line 398)
+  error: \begin{eqnarray}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   397: The gravity-drag update is benchmarked against the closed-form solution for a uniform plasma with constant $\nu_E$:
+>  398: \begin{eqnarray}
+   399: v_z(t) &=& (v_0-v_\infty)e^{-\nu_E(t-t_0)}+v_\infty,
+
+- file: sample\arxiv_sources\2604.02100v1\paper.tex (line 470)
+  error: \begin{eqnarray}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   469: =1.5,\ 2.5,\ 3.5~\mathrm{mm}$ (Types 1–3, respectively). All droplets are initialized with the same velocity vector,
+>  470: \begin{eqnarray}
+   471: \mathbf{v}_0=(v_R,v_Z,v_\phi)=(-3.40,\ 21.07,\ -2.52)\ \mathrm{m\,s^{-1}}
+
+- file: sample\arxiv_sources\2604.02125v1\crk_es.tex (line 864)
+  error: \begin{eqnarray}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   863: The cRKFR scheme in the time-average framework~\cite{babbar2025crk} is obtained by dropping the inter-element terms from the inner stages~\eqref{eq:rkfr1} while using FR operators on the time averages in the final update~\eqref{eq:rkfr2} as follows
+>  864: \begin{eqnarray}
+   865: \uu^{(i)} & = & \uu^n -  \Delta t\sum_{j = 1}^{i-1} {a}_{ij} \Big( \dlocx \pf(\uu^{(j)}) + \bB (\uu^{(j)}) \dlocx \bg(\uu^{(j)}) \Big),
+
+- file: sample\arxiv_sources\2604.02163v1\manuscript.tex (line 77)
+  error: \begin{eqnarray}
+  message: Eqnarray is not recommended. Use align or gather instead.
+    76: The Lagrangian density is given by
+>   77: 	\begin{eqnarray}
+    78: 		\mathcal{L}&=&\frac{i}{2}\left(\psi^{*}\psi_{t}-\psi\psi^{*}_{t} \right) -\frac{1}{2}\left|\psi_{x} \right| ^{2} -V_{\rm{ext}}\left( x\right)|\psi|^{2}+\frac{g}{2}|\psi|^{4} \nonumber \\ &-&\frac{2g_{1}}{5}|\psi|^{5}-\frac{1}{2}\phi_{\rm{dd}}|\psi|^{2}.
+
+- file: sample\arxiv_sources\2604.02163v1\manuscript.tex (line 104)
+  error: \begin{eqnarray}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   103: \end{equation}  
+>  104: \begin{eqnarray}
+   105: &&H\left(N, w, x_{0} \right) =-\frac{NV_{0}\cos\left(2\eta x_{0} \right)}{2} \,\,  _{0}F_{2}\left(;\frac{1}{2},\frac{3}{4};\frac{\eta^{4}w^{4}}{16} \right)\\ \nonumber &-&\frac{NV_{0}}{2}-\frac{Nk^{2}}{2}+\frac{NV_{0}\eta^{2}\Gamma(\frac{3}{4})w^{2}\cos\left(2\eta x_{0} \right)}{\Gamma(1/4)}\,\,  _{0}F_{2}\left(;\frac{5}{4},\frac{3}{2}; \frac{\eta^{4}w^{4}}{16} \right),\nonumber
+
+- file: sample\arxiv_sources\2604.02163v1\manuscript.tex (line 120)
+  error: \begin{eqnarray}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   119: with  
+>  120: \begin{eqnarray}
+   121: U=\frac{2\Gamma(1/4)}{\Gamma(3/4)}\left[ \frac{K_{0}}{w^{2}}-\frac{gK_{1}}{w}+\frac{g_{1}K_{2}}{w^{3/2}} -H+G_{\rm{dd}} \right],
+
+- file: sample\arxiv_sources\2604.02163v1\manuscript.tex (line 124)
+  error: \begin{eqnarray}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   123: and 
+>  124: \begin{eqnarray}
+   125: \ddot{x}_{0}=-\frac{dU_{\rm{OL}}}{dx_{0}} 
+
+- file: sample\arxiv_sources\2604.02163v1\manuscript.tex (line 128)
+  error: \begin{eqnarray}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   127: 	with   
+>  128: \begin{eqnarray}
+   129: U_{\rm{OL}}\left(x_{0} \right) &=& -\frac{V_{0}\cos\left(2\eta x_{0} \right)}{2} \,\,  _{0}F_{2}\left(;\frac{1}{2},\frac{3}{4};\frac{\eta^{4}w^{4}}{16} \right)\\ \nonumber &+&\frac{V_{0}\eta^{2}\Gamma(\frac{3}{4})w^{2}\cos\left(2\eta x_{0} \right)}{\Gamma(1/4)}\,\,  _{0}F_{2}\left(;\frac{5}{4},\frac{3}{2}; \frac{\eta^{4}w^{4}}{16} \right).\nonumber
+
+- file: sample\arxiv_sources\2604.02163v1\manuscript.tex (line 132)
+  error: \begin{eqnarray}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   131: Eq. (14) implies that the number of atom in a QD is not changing with time while its width and center-of-mass vary with time. Particularly, width of the droplet moves in a effective potential given in Eq. (16) and center-of-mass faces an effective potential given in Eq. (18). We see that, for small value of $x_0$, the center-of-mass executes harmonic oscillation and the frequency of oscillation is given by
+>  132: \begin{eqnarray}
+   133: \Omega=2\eta\sqrt{{V_{0}}\left[-\frac{1}{4}\,\, Y_{1} +\frac{\eta^{2}\Gamma(3/4)w^{2}}{\Gamma(1/4)}\,\, Y_{2} \right]}.
+
+- file: sample\arxiv_sources\2604.02163v1\manuscript.tex (line 148)
+  error: \begin{eqnarray}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   147: 	\end{equation}
+>  148: 	\begin{eqnarray}
+   149: 		\nonumber
+
+- file: sample\arxiv_sources\2604.02167v1\main.tex (line 688)
+  error: \begin{eqnarray}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   687: \end{equation}
+>  688: \begin{eqnarray}
+   689:     \Gamma_{q_{x},q_{y}}^{yy} &=& \frac{\tilde{\zeta}_{2}^{2}}{16}\langle m^{2} \rangle \mu_{2}\lambda(q_{y}),
+
+- file: sample\arxiv_sources\2604.02167v1\main.tex (line 692)
+  error: \begin{eqnarray}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   691: while the off-diagonal components are given by
+>  692: \begin{eqnarray}
+   693:     \Gamma_{q_{x},q_{y}}^{xy} &=& \frac{\tilde{\zeta}_{1}\tilde{\zeta}_{2}}{16}\langle m^{2} \rangle \mu_{1}^{2}(1-e^{iq_{x}})(1-e^{-iq_{y}})
+
+- file: sample\arxiv_sources\2604.02167v1\main.tex (line 820)
+  error: \begin{eqnarray}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   819: and the off-diagonal elements,
+>  820: \begin{eqnarray}
+   821:     \Gamma_{q_{x},q_{y}}^{xy} &=& \frac{\tilde{\zeta}_{1}\tilde{\zeta}_{2}}{16}\langle m^{2} \rangle \mu_{1}(1-e^{iq_{x}})(1-e^{-iq_{y}}).
+
+- file: sample\arxiv_sources\2604.02167v1\main.tex (line 1052)
+  error: \begin{eqnarray}
+  message: Eqnarray is not recommended. Use align or gather instead.
+  1051: \begin{widetext}
+> 1052: \begin{eqnarray}\label{f:sq}
+  1053:      S(\textbf{q})
 
 - file: sample\submodules\OpenLogic\content\computability\recursive-functions\non-pr-functions.tex (line 21)
   error: \begin{eqnarray*}

@@ -1,4 +1,4 @@
-[CODE] LLFootnote (52)
+[CODE] LLFootnote (56)
 - file: sample\arxiv_sources\1609.03457v1\appendix-nifty-tools.tex (line 16)
   error: \footnote{
   message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
@@ -361,4 +361,32 @@
    302: %\textbf{Settings.}
 >  303: We used a \(g4dn.12xlarge\) instance from AWS Sagemaker to run comparisons, containing 4 T4 GPUs. We used a combination of F1-Score, Precision, and Recall with different averaging \cite{reviewmultilabellearning} (Appendix ~\ref{appendix:eval}) to perform the comparisons. The code for OSCAR, \(\text{Tf}_x, \text{Tf}_y\) and the evaluation are provided anonymously \footnote{\url{https://github.com/Mathugo/OSCAR-One-Shot-Causal-AutoRegressive-discovery.git}} as well as the anonymised version of the dataset for reproducibility purposes. An Ablation of the NADEs quality is given in \ref{appendix:nades}.
    304: 
+
+- file: sample\arxiv_sources\2603.10767v2\main_apple.tex (line 88)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+    87:   \renewcommand\@makefntext[1]{\noindent##1}%
+>   88:   \footnote{#1}%
+    89:   \addtocounter{footnote}{-1}%
+
+- file: sample\arxiv_sources\2603.16313v2\c4.tex (line 386)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+   385: \subsection{Settings}\label{sec:settings}
+>  386: We used a \(g4dn.12xlarge\) instance from AWS Sagemaker to run comparisons. It contains 48 vCPUs and 4 NVIDIA T4 GPUs. During inference, we used fp16 for \(\text{Tf}_y\) and fp32 for \(\text{Tf}_x\). We used a combination of F1-Score, Precision, and Recall with different averaging \cite{reviewmultilabellearning} to perform the comparisons. The code for OSCAR, \(\text{Tf}_x, \text{Tf}_y\) and the evaluation are provided  \footnote{\url{https://github.com/Mathugo/OSCAR-One-Shot-Causal-AutoRegressive-discovery}} as well as the anonymized version of the dataset for reproducibility purposes.
+   387: 
+
+- file: sample\arxiv_sources\2604.02176v1\experimental.tex (line 9)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+     8: \subsection{Off-the-shelf Frequency Estimation}
+>    9: For off-the-shelf frequency estimation, we adopt off-the-shelf resources for estimation \footnote{https://github.com/rspeer/wordfreq} using Zipf frequency \citep{robyn_speer_2022_7199437}. Since this project is further built on many resources such as ParaCrawl \citep{banon-etal-2020-paracrawl}, we refer the readers to their projects for more references.
+    10: 
+
+- file: sample\arxiv_sources\2604.02176v1\experimental_(1).tex (line 9)
+  error: \footnote{
+  message: The footnote marker will appear after unnecessary space. Consider moving the command position or removing the space.
+     8: \subsection{Off-the-shelf Frequency Estimation}
+>    9: For off-the-shelf frequency estimation, we adopt off-the-shelf resources for estimation \footnote{https://github.com/rspeer/wordfreq} using Zipf frequency \citep{robyn_speer_2022_7199437}. Since this project is further built on many resources such as ParaCrawl \citep{banon-etal-2020-paracrawl}, we refer the readers to their projects for more references.
+    10: 
 

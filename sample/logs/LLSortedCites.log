@@ -1,4 +1,4 @@
-[CODE] LLSortedCites (5)
+[CODE] LLSortedCites (12)
 - file: sample\arxiv_sources\2103.03874v2\main.tex (line 181)
   error: \bibliography{
   message: Consider automatically sorting citations. See the link for details.
@@ -33,4 +33,53 @@
    684: \bibliographystyle{unsrtnat}
 >  685: \bibliography{custom}
    686: 
+
+- file: sample\arxiv_sources\2604.02053v1\tb149_iq.tex (line 611)
+  error: \bibliography{
+  message: Consider automatically sorting citations. See the link for details.
+   610: \biboptions{sort&compress} 
+>  611: \bibliography{tb149_bibliography.bib}
+   612: 
+
+- file: sample\arxiv_sources\2604.02111v1\ms.tex (line 967)
+  error: \bibliography{
+  message: Consider automatically sorting citations. See the link for details.
+   966: \bibliographystyle{aa} % style aa.bst
+>  967: \bibliography{general}   
+   968: %\bibliography{general} 
+
+- file: sample\arxiv_sources\2604.02125v1\crk_es.tex (line 1067)
+  error: \bibliography{
+  message: Consider automatically sorting citations. See the link for details.
+  1066: \bibliographystyle{spbasic}
+> 1067: \bibliography{references.bib}
+  1068: \end{document}
+
+- file: sample\arxiv_sources\2604.02126v1\FINAL.tex (line 515)
+  error: \bibliography{
+  message: Consider automatically sorting citations. See the link for details.
+   514: \bibliographystyle{elsarticle-harv}%num}
+>  515: \bibliography{biblio_2207}
+   516: 
+
+- file: sample\arxiv_sources\2604.02139v1\main.tex (line 472)
+  error: \bibliography{
+  message: Consider automatically sorting citations. See the link for details.
+   471: 
+>  472: \bibliography{bibliography.bib}
+   473: 
+
+- file: sample\arxiv_sources\2604.02214v1\main.tex (line 431)
+  error: \bibliography{
+  message: Consider automatically sorting citations. See the link for details.
+   430: \bibliographystyle{apsrev4-2}
+>  431: \bibliography{bibliography}
+   432: 
+
+- file: sample\arxiv_sources\2604.02248v1\Deep_survival.tex (line 2607)
+  error: \bibliography{
+  message: Consider automatically sorting citations. See the link for details.
+  2606: \bibliographystyle{unsrtnat}
+> 2607: \bibliography{references}  %%% Uncomment this line and comment out the ``thebibliography'' section below to use the external .bib file (using bibtex) .
+  2608: 
 

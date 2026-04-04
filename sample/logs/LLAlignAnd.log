@@ -1,336 +1,1309 @@
-[CODE] LLAlignAnd (48)
+[CODE] LLAlignAnd (187)
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1317)
   error: = &
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1316: \[
 > 1317: \begin{aligned}B_{r}\left(\mathbb{\mathbb{C}}\right)= & \left\{ z\in\mathbb{\mathbb{C}}^{N}:\ |z_{1}|\leq r_{1},\ldots,|z_{N}|\leq r_{N}\right\} \\
   1318: \text{and}\  & B_{r}\left(\mathbb{R}\right)=B_{r}\left(\mathbb{\mathbb{C}}\right)\cap\mathbb{R}^{N},
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 996)
   error: =&
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
    995: \begin{align}
 >  996: 	de_{t}(\zeta)=&-\frac{e^{2h_{t}(\zeta)}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(2)}-\frac{ie^{2h_{t}(\zeta)}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(3)}, \\
    997: 	dh_{t}(\zeta)=&-\frac{\tau}{2\rho_{t}(\zeta)^{2}}dt
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 997)
   error: =&
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
    996: 	de_{t}(\zeta)=&-\frac{e^{2h_{t}(\zeta)}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(2)}-\frac{ie^{2h_{t}(\zeta)}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(3)}, \\
 >  997: 	dh_{t}(\zeta)=&-\frac{\tau}{2\rho_{t}(\zeta)^{2}}dt
    998: 				-\frac{1}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(1)}+\frac{f_{t}(\zeta)}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(2)}+\frac{if_{t}(\zeta)}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(3)}, \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 999)
   error: =&
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
    998: 				-\frac{1}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(1)}+\frac{f_{t}(\zeta)}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(2)}+\frac{if_{t}(\zeta)}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(3)}, \\
 >  999: 	df_{t}(\zeta)=&-\frac{\sqrt{2}f_{t}(\zeta)}{\rho_{t}(\zeta)}dB_{t}^{(1)}-\frac{1-f_{t}(\zeta)^{2}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(2)}+\frac{i(1+f_{t}(\zeta)^{2})}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(3)}.		
   1000: \end{align}
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1146)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1145: \begin{align}
 > 1146: 	\scr{G}_{t}^{-1}L(z)\scr{G}_{t}=
   1147: 	&L(\rho_{t}(z))\del\rho_{t}(z)^{2}-\sum_{i=1}^{\ell} \del h^{i}_{t}(z)\del \rho_{t}(z)H_{i}(\rho_{t}(z)) \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1165)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1164: \begin{align}
 > 1165: 	\scr{G}_{t}^{-1}H(z)_{+}\scr{G}_{t}=
   1166: 	&\sum_{m\in\mbb{Z}}\mrm{Res}_{w}\frac{\del \rho_{t}(w)\rho_{t}(w)^{-m-1}}{w-z}H(m)
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1168)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1167: 	-\mrm{Res}_{w}\frac{1}{w-z}\sum_{i=1}^{\ell}(H_{i}|H)\del h^{i}_{t}(w), \\
 > 1168: 	\scr{G}_{t}^{-1}H(z)_{-}\scr{G}_{t}=
   1169: 	&\sum_{m\in\mbb{Z}}\mrm{Res}_{w}\frac{\del \rho_{t}(w) \rho_{t}(w)^{-m-1}}{z-w}H(m)
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1176)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1175: \begin{align}
 > 1176: 	\braket{v_{\Lambda}|\no{H(z)^{2}}\scr{G}_{t}|v_{\Lambda}}=
   1177: 	&(H|H)\mrm{Res}_{w}\left[\frac{\del\rho_{t}(w)}{w-z}\del_{z}\left(\frac{1}{\rho_{t}(w)-\rho_{t}(z)}\right)-\frac{\del\rho_{t}(w)}{z-w}\del_{z}\left(\frac{\rho_{t}(z)\rho_{t}(w)^{-1}}{\rho_{t}(z)-\rho_{t}(w)}\right)\right]  \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1183)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1182: \begin{align}
 > 1183: 	\braket{v_{\Lambda}|L(z)\scr{G}_{t}|v_{\Lambda}}=
   1184: 	&\frac{\ell}{2}\mrm{Res}_{w}\left[\frac{\del\rho_{t}(w)}{w-z}\del_{z}\left(\frac{1}{\rho_{t}(w)-\rho_{t}(z)}\right)-\frac{\del\rho_{t}(w)}{z-w}\del_{z}\left(\frac{\rho_{t}(z)\rho_{t}(w)^{-1}}{\rho_{t}(z)-\rho_{t}(w)}\right)\right]  \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1204)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1203: \begin{align}
 > 1204: 	\scr{G}_{t}^{-1}E(z)\scr{G}_{t}=
   1205: 	&e^{-2h_{t}(z)}\del \rho_{t}(z) E(\rho_{t}(z)) +e^{-2h_{t}(z)}f_{t}(z)\del \rho_{t}(z)H(\rho_{t}(z)) \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1207)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1206: 	&-e^{-2h_{t}(z)}f_{t}(z)^{2}\del\rho_{t}(z)F(\rho_{t}(z)) -k\del f_{t}(z),  \\
 > 1207: 	\scr{G}_{t}^{-1}H(z)\scr{G}_{t}=
   1208: 	&2e^{-2h_{t}(z)}e_{t}(z)\del\rho_{t}(z)E(\rho_{t}(z))+(1+2e^{-2h_{t}(z)}e_{t}(z)f_{t}(z))\del\rho_{t}(z)H(\rho_{t}(z)) \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1211)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1210: 	&-k(2\del h_{t}(z)+2e^{-2h_{t}(z)}e_{t}(z)\del f_{t}(z)),  \\
 > 1211: 	\scr{G}_{t}^{-1}F(z)\scr{G}_{t}=
   1212: 	&-e^{-2h_{t}(z)}e_{t}(z)^{2}\del \rho_{t}(z) E(\rho_{t}(z)) \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1240)
   error: =&
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1239: 		\begin{align}
 > 1240: 			\braket{v_{\Lambda}|H(z)\scr{G}_{t}|v_{\Lambda}}=&(1+2e^{-2h_{t}(z)}e_{t}(z)f_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)}  \notag \\
   1241: 										&-(2\del h_{t}(z)+2e^{-2h_{t}(z)}e_{t}(z)\del f_{t}(z)),  \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1242)
   error: =&
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1241: 										&-(2\del h_{t}(z)+2e^{-2h_{t}(z)}e_{t}(z)\del f_{t}(z)),  \\
 > 1242: 			\braket{v_{-\Lambda}|H(z)\scr{G}_{t}|v_{\Lambda}}=&-(2f_{t}(z)+2e^{-2h_{t}(z)}e_{t}(z)f_{t}(z)^{2})\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
   1243: 			\braket{v_{\Lambda}|H(z)\scr{G}_{t}|v_{-\Lambda}}=&2e^{-2h_{t}(z)}e_{t}(z)\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1243)
   error: =&
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1242: 			\braket{v_{-\Lambda}|H(z)\scr{G}_{t}|v_{\Lambda}}=&-(2f_{t}(z)+2e^{-2h_{t}(z)}e_{t}(z)f_{t}(z)^{2})\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
 > 1243: 			\braket{v_{\Lambda}|H(z)\scr{G}_{t}|v_{-\Lambda}}=&2e^{-2h_{t}(z)}e_{t}(z)\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
   1244: 			\braket{v_{-\Lambda}|H(z)\scr{G}_{t}|v_{-\Lambda}}=&-(1+2e^{-2h_{t}(z)}e_{t}(z)f_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)} \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1244)
   error: =&
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1243: 			\braket{v_{\Lambda}|H(z)\scr{G}_{t}|v_{-\Lambda}}=&2e^{-2h_{t}(z)}e_{t}(z)\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
 > 1244: 			\braket{v_{-\Lambda}|H(z)\scr{G}_{t}|v_{-\Lambda}}=&-(1+2e^{-2h_{t}(z)}e_{t}(z)f_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)} \notag \\
   1245: 										&-(2\del h_{t}(z)+2e^{-2h_{t}(z)}e_{t}(z)\del f_{t}(z)).
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1250)
   error: =&
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1249: 		\begin{align}
 > 1250: 			\braket{v_{\Lambda}|F(z)\scr{G}_{t}|v_{\Lambda}}=&-(e_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}f_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)} \notag \\
   1251: 										&+(2e_{t}(z)\del f_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}\del f_{t}(z)-\del e_{t}(z)),  \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1252)
   error: =&
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1251: 										&+(2e_{t}(z)\del f_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}\del f_{t}(z)-\del e_{t}(z)),  \\
 > 1252: 			\braket{v_{-\Lambda}|F(z)\scr{G}_{t}|v_{\Lambda}}=&(2e_{t}(z)f_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}f_{t}(z)^{2})\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
   1253: 			\braket{v_{\Lambda}|F(z)\scr{G}_{t}|v_{-\Lambda}}=&-e^{-2h_{t}(z)}e_{t}(z)^{2}\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1253)
   error: =&
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1252: 			\braket{v_{-\Lambda}|F(z)\scr{G}_{t}|v_{\Lambda}}=&(2e_{t}(z)f_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}f_{t}(z)^{2})\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
 > 1253: 			\braket{v_{\Lambda}|F(z)\scr{G}_{t}|v_{-\Lambda}}=&-e^{-2h_{t}(z)}e_{t}(z)^{2}\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
   1254: 			\braket{v_{-\Lambda}|F(z)\scr{G}_{t}|v_{-\Lambda}}=&(e_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}f_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)} \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1254)
   error: =&
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1253: 			\braket{v_{\Lambda}|F(z)\scr{G}_{t}|v_{-\Lambda}}=&-e^{-2h_{t}(z)}e_{t}(z)^{2}\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
 > 1254: 			\braket{v_{-\Lambda}|F(z)\scr{G}_{t}|v_{-\Lambda}}=&(e_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}f_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)} \notag \\
   1255: 										&+(2e_{t}(z)\del f_{t}(z)+e^{-2h_{t}(z)}e_{t}(z)^{2}\del f_{t}(z)-\del e_{t}(z)).
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1271)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1270: \begin{align}
 > 1271: 	\scr{G}_{t}^{-1}L(z)\scr{G}_{t}=
   1272: 	&(\del\rho_{t}(z))^{2}L(\rho_{t}(z)) \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1287)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1286: \begin{align}
 > 1287: 	\braket{v_{\Lambda}|L(z)\scr{G}_{t}|v_{\Lambda}}=
   1288: 	&\frac{1}{4}\left(\frac{\del\rho_{t}(z)}{\rho_{t}(z)}\right)^{2}-(\del h_{t}(z)+e^{-2h_{t}(z)}f_{t}(z)\del e_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)} \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1290)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1289: 	&+((\del h_{t}(z))^{2}+e^{-2h_{t}(z)}\del e_{t}(z) \del f_{t}(z))+\frac{1}{12}(S\rho_{t})(z),  \\
 > 1290: 	\braket{v_{-\Lambda}|L(z)\scr{G}_{t}|v_{\Lambda}}=
   1291: 	&-(\del f_{t}(z)-2f_{t}(z)\del h_{t}(z)-e^{-2h_{t}(z)}f_{t}(z)^{2}\del e_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1292)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1291: 	&-(\del f_{t}(z)-2f_{t}(z)\del h_{t}(z)-e^{-2h_{t}(z)}f_{t}(z)^{2}\del e_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
 > 1292: 	\braket{v_{\Lambda}|L(z)\scr{G}_{t}|v_{-\Lambda}}=
   1293: 	&-e^{-2h_{t}(z)}\del e_{t}(z)\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1294)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1293: 	&-e^{-2h_{t}(z)}\del e_{t}(z)\frac{\del \rho_{t}(z)}{\rho_{t}(z)}, \\
 > 1294: 	\braket{v_{-\Lambda}|L(z)\scr{G}_{t}|v_{-\Lambda}}=
   1295: 	&\frac{1}{4}\left(\frac{\del\rho_{t}(z)}{\rho_{t}(z)}\right)^{2}+(\del h_{t}(z)+e^{-2h_{t}(z)}f_{t}(z)\del e_{t}(z))\frac{\del \rho_{t}(z)}{\rho_{t}(z)} \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1336)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1335: \begin{align}
 > 1336: 	\scr{E}_{\ell}=
   1337: 	&-\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}e^{2h(w)}e^{-2h(z)}z^{-\ell}\pr{g}(z)}{g(w)-g(z)}\frac{\del}{\del e_{n}}   \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1346)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1345: \begin{align}
 > 1346: 	\scr{H}_{\ell}=
   1347: 	&-2\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}e^{2h(w)}e^{-2h(z)}e(z)z^{-\ell}\pr{g}(z)}{g(w)-g(z)}\frac{\del}{\del e_{n}} \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1356)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1355: \begin{align}
 > 1356: 	\scr{F}_{\ell}=
   1357: 	&\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}e^{2h(w)}e^{-2h(z)}e(z)^{2}z^{-\ell}\pr{g}(z)}{g(w)-g(z)}\frac{\del}{\del e_{n}} \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1373)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1372: \begin{align}
 > 1373: 	\scr{L}_{\ell}=
   1374: 	&-\sum_{n\le 0}\mrm{Res}_{z}\mrm{Res}_{w}\frac{z^{-\ell+1}w^{-n-1}\pr{g}(z)^{2}}{g(w)-g(z)}\frac{\del}{\del g_{n}}  \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1915)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1914: \begin{align}
 > 1915: 	d\Theta_{t}=
   1916: 	&(de^{{\bf e}_{t}})e^{{\bf h}_{t}}e^{{\bf f}_{t}}+e^{{\bf e}_{t}}(de^{{\bf h}_{t}})e^{{\bf f}_{t}}+e^{{\bf e}_{t}}e^{{\bf h}_{t}}(de^{{\bf f}_{t}})  \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1948)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1947: \begin{align}
 > 1948: 	de_{t}(\zeta)=
   1949: 	&-\frac{e^{2h_{t}(\zeta)}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(2)}-\frac{ie^{2h_{t}(\zeta)}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(3)}, \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1950)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1949: 	&-\frac{e^{2h_{t}(\zeta)}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(2)}-\frac{ie^{2h_{t}(\zeta)}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(3)}, \\
 > 1950: 	dh_{t}(\zeta)=
   1951: 	&-\frac{\tau}{2}\rho_{t}(\zeta)^{-2}dt -\frac{1}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(1)}
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1953)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1952: 	+\frac{f_{t}(\zeta)}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(2)}+\frac{if_{t}(\zeta)}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(3)}, \\
 > 1953: 	df_{t}(\zeta)=
   1954: 	&-\frac{\sqrt{2}f_{t}(\zeta)}{\rho_{t}(\zeta)}dB_{t}^{(1)}-\frac{1-f_{t}(\zeta)^{2}}{\sqrt{2}\rho_{t}(\zeta)}dB_{t}^{(2)}
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1975)
   error: =&
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1974: \begin{align}
 > 1975: 	\scr{G}^{-1}\frac{\del \scr{G}}{\del e_{n}}=&E\otimes e^{-2h(g^{-1}(\zeta))}g^{-1}(\zeta)^{n}+H\otimes e^{-2h(g^{-1}(\zeta))}f(g^{-1}(\zeta))g^{-1}(\zeta)^{n} \notag \\
   1976: 	&-F\otimes e^{-2h(g^{-1}(\zeta))}f(g^{-1}(\zeta))^{2}g^{-1}(\zeta)^{n}
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1991)
   error: =&
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1990: 	\scr{G}F\otimes \theta(\zeta)&=\sum_{n\le -1}\left(\mrm{Res}_{w}w^{-n-1}\theta(g(w))\right)\frac{\del \scr{G}}{\del f_{n}}, \\
 > 1991: 	\scr{G}H\otimes \theta(\zeta)=&\sum_{n\le -1}\left(\mrm{Res}_{w}w^{-n-1}\theta(g(w))\right)\frac{\del \scr{G}}{\del h_{n}} 
   1992: 		+2\sum_{n\le -1}\left(\mrm{Res}_{w}w^{-n-1}f(w)\theta(g(w))\right)\frac{\del \scr{G}}{\del f_{n}}, \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1993)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   1992: 		+2\sum_{n\le -1}\left(\mrm{Res}_{w}w^{-n-1}f(w)\theta(g(w))\right)\frac{\del \scr{G}}{\del f_{n}}, \\
 > 1993: 	\scr{G}E\otimes \theta(\zeta)=
   1994: 	&\sum_{n\le -1}\left(\mrm{Res}_{w}w^{-n-1}e^{2h(w)}\theta(g(w))\right)\frac{\del \scr{G}}{\del e_{n}}
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2013)
   error: =&
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   2012: 	\scr{G}^{-1}E\otimes \zeta^{-\ell}\scr{G}
 > 2013: 	=& E\otimes e^{-2h(\xi)}\xi^{-\ell}+H\otimes e^{-2h(\xi)}f(\xi)\xi^{-\ell}  \notag \\
   2014: 		&-F\otimes e^{-2h(\xi)}f(\xi)^{2}\xi^{-\ell}-k\mrm{Res}_{w}\del f(w)e^{-2h(w)}w^{-\ell}, \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2016)
   error: =&
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   2015: 	\scr{G}^{-1}H\otimes \zeta^{-\ell}\scr{G}
 > 2016: 	=& 2E\otimes e^{-2h(\xi)}e(\xi)\xi^{-\ell} \notag \\
   2017: 		&+H\otimes (1+2e^{-2h(\xi)}e(\xi)f(\xi))\xi^{-\ell} \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2021)
   error: =&
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   2020: 	\scr{G}^{-1}F\otimes \zeta^{-\ell}\scr{G}
 > 2021: 	=& -E\otimes e^{-2h(\xi)}e(\xi)^{2}\xi^{-\ell}  \notag \\
   2022: 		&-H\otimes (e(\xi)+e^{-2h(\xi)}e(\xi)^{2}f(\xi))\xi^{-\ell} \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2036)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   2035: \begin{align}
 > 2036: 	\scr{G}E\otimes \theta(\zeta)\mcal{Y}(v,x)\ket{0}=
   2037: 	&\Biggl(\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}e^{2h(w)}\theta(z)}{g(w)-z}\frac{\del}{\del e_{n}}  \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2041)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   2040: 	&+\mrm{Res}_{z}\frac{\theta(z)}{z-x}\scr{G}\mcal{Y}(Ev,x)\ket{0}, \\
 > 2041: 	\scr{G}H\otimes \theta(\zeta)\mcal{Y}(v,x)\ket{0}=
   2042: 	&\Biggl(\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}\theta(z)}{g(w)-z}\frac{\del}{\del h_{n}}  \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2046)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   2045: 	\label{eq:divide_F}
 > 2046: 	\scr{G}F\otimes \theta(\zeta)\mcal{Y}(v,x)\ket{0}=
   2047: 	&\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}\theta(z)}{g(w)-z}\frac{\del}{\del f_{n}}\scr{G}\mcal{Y}(v,x)\ket{0}  \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2091)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   2090: \begin{align}
 > 2091: 	\scr{E}_{\ell}=
   2092: 	&-\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}e^{2h(w)}e^{-2h(z)}z^{-\ell}\pr{g}(z)}{g(w)-g(z)}\frac{\del}{\del e_{n}} \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2107)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   2106: \begin{align}
 > 2107: 	\scr{H}_{\ell}=
   2108: 	&-2\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}e^{2h(w)}e^{-2h(z)}e(z)z^{-\ell}\pr{g}(z)}{g(w)-g(z)}\frac{\del}{\del e_{n}} \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2122)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   2121: \begin{align}
 > 2122: 	\scr{F}_{\ell}=
   2123: 	&\sum_{n\le -1}\mrm{Res}_{z}\mrm{Res}_{w}\frac{w^{-n-1}e^{2h(w)}e^{-2h(z)}e(z)^{2}z^{-\ell}\pr{g}(z)}{g(w)-g(z)}\frac{\del}{\del e_{n}} \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2138)
   error: =&
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   2137: 	\scr{G}^{-1}L_{-\ell}\scr{G}
 > 2138: 	=&\sum_{m\in\mbb{Z}}\left(\mrm{Res}_{z}z^{-\ell+1}g(z)^{-n-2}\pr{g}(z)^{2}\right)L_{m} \notag \\
   2139: 	&-E\otimes e^{-2h(\xi)}\del e(\xi)\xi^{-\ell+1} \notag \\
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 2155)
   error: = (and 1 more line...)
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
   2154: \begin{align}
 > 2155: 	\scr{L}_{\ell}=
   2156: 	&-\sum_{n\le 0}\mrm{Res}_{z}\mrm{Res}_{w}\frac{z^{-\ell+1}w^{-n-1}\pr{g}(z)^{2}}{g(w)-g(z)}\frac{\del}{\del g_{n}} \notag \\
 
+- file: sample\arxiv_sources\2603.16313v2\c4.tex (line 1091)
+  error: \implies &
+  message: Use &\implies or \implies{}& instead of \implies& to avoid spacing issues in align-like environments.
+  1090: & D_{KL}(P(X_t \mid X_{<t}) ~||~ P_\theta(X_t \mid X_{<t})) \leq \epsilon \notag \\
+> 1091: \implies & \sqrt{\frac{1}{2}D_{KL}(P(X_t \mid X_{<t}) ~||~ P_\theta(X_t \mid X_{<t}))} \leq \sqrt{\frac{\epsilon}{2}} \notag \\
+  1092: \implies& \delta(P, P_\theta) \leq \sqrt{\frac{\epsilon}{2}} \; \text{By Pinsker's inequality}
+
+- file: sample\arxiv_sources\2603.16313v2\c4.tex (line 1092)
+  error: \implies&
+  message: Use &\implies or \implies{}& instead of \implies& to avoid spacing issues in align-like environments.
+  1091: \implies & \sqrt{\frac{1}{2}D_{KL}(P(X_t \mid X_{<t}) ~||~ P_\theta(X_t \mid X_{<t}))} \leq \sqrt{\frac{\epsilon}{2}} \notag \\
+> 1092: \implies& \delta(P, P_\theta) \leq \sqrt{\frac{\epsilon}{2}} \; \text{By Pinsker's inequality}
+  1093: \end{align}
+
+- file: sample\arxiv_sources\2604.02049v1\point_couplings.tex (line 1308)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  1307: \dWPosStar 
+> 1308: =&\ \br[0]{\dlagrangePos^\ast}\tr \br{
+  1309:     \rbeamB^\ast - \rbeamA^\ast
+
+- file: sample\arxiv_sources\2604.02049v1\point_couplings.tex (line 1320)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  1319: \\
+> 1320: =&\ \dlagrangePos\tr \br[0]{\rigidBodyRotation}\tr \br{
+  1321:     \rigidBodyRotation \rbeamB + \rigidBodyTranslation
+
+- file: sample\arxiv_sources\2604.02049v1\point_couplings.tex (line 1334)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  1333: \\
+> 1334: =&\ \dlagrangePos\tr \br[0]{\rigidBodyRotation}\tr \rigidBodyRotation \br{
+  1335:      \rbeamB - \rbeamA
+
+- file: sample\arxiv_sources\2604.02049v1\point_couplings.tex (line 1347)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  1346: \label{eq:objectivity_positional_coupling_intermediate_3}
+> 1347: =&\ \dWPos
+  1348: .
+
+- file: sample\arxiv_sources\2604.02084v1\boundednessdecaywave.tex (line 191)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   190: \begin{align*}
+>  191:     \mathcal{R}:= & \R\times[r_+,\infty)\times\sfera^2,  \\ 
+   192:     g_{M,l}:= & -\left(1-\frac{2M}{r}+\frac{r^2}{l^2}\right)dv^2+2dvdr+r^2(d\theta^2+(\sin\theta)^2d\varphi^2),
+
+- file: sample\arxiv_sources\2604.02084v1\boundednessdecaywave.tex (line 192)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   191:     \mathcal{R}:= & \R\times[r_+,\infty)\times\sfera^2,  \\ 
+>  192:     g_{M,l}:= & -\left(1-\frac{2M}{r}+\frac{r^2}{l^2}\right)dv^2+2dvdr+r^2(d\theta^2+(\sin\theta)^2d\varphi^2),
+   193: \end{align*}
+
+- file: sample\arxiv_sources\2604.02084v1\boundednessdecaywave.tex (line 1050)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  1049: \begin{align*}
+> 1050: c_0(r,M,l):=&\Big(1-\frac{2M}{r}+\frac{r^2}{l^2}\Big)\left[-\dfrac{f(r)}{2}\dfrac{2M}{r^{3}}\de_{r}\Big(1-\frac{2M}{r}+\frac{r^2}{l^2}\Big)-\dfrac{\de_{r}f(r)}{4}\Big(\de_{r}\Big(1-\frac{2M}{r}+\frac{r^2}{l^2}\Big)\Big)^{2}\right] \\
+  1051: &+o\Big(\Big(1-\frac{2M}{r}+\frac{r^2}{l^2}\Big)^2\Big),
+
+- file: sample\arxiv_sources\2604.02116v1\mainV2.tex (line 228)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   227: \begin{align}
+>  228:     (Ha)_n = & \sum_k h(k-2n)a_k \\
+   229:     (Ga)_n = & \sum_kg(k -2n)a_k,
+
+- file: sample\arxiv_sources\2604.02116v1\mainV2.tex (line 229)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   228:     (Ha)_n = & \sum_k h(k-2n)a_k \\
+>  229:     (Ga)_n = & \sum_kg(k -2n)a_k,
+   230: \end{align}
+
+- file: sample\arxiv_sources\2604.02116v1\mainV2.tex (line 415)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   414: \begin{align}\label{KLD}
+>  415:     \text{KLD}(q(\boldsymbol{\theta}|\boldsymbol{\psi})||p(\boldsymbol{\theta}|\boldsymbol{y})) = & \mathbb{E}_{q(\boldsymbol{\theta}|\boldsymbol{\psi})}\left[\log \frac{q(\boldsymbol{\theta}|\boldsymbol{\psi})}{p(\boldsymbol{\theta}|\boldsymbol{y})}\right] = \mathbb{E}_{q(\boldsymbol{\theta}|\boldsymbol{\psi})}[\log q(\boldsymbol{\theta}|\boldsymbol{\psi})] - \mathbb{E}_{q(\boldsymbol{\theta}|\boldsymbol{\psi})}[\log p(\boldsymbol{\theta}|\boldsymbol{y})] \nonumber \\
+   416:     = &\mathbb{E}_{q(\boldsymbol{\theta}|\boldsymbol{\psi})}[\log q(\boldsymbol{\theta}|\boldsymbol{\psi})] - \mathbb{E}_{q(\boldsymbol{\theta}|\boldsymbol{\psi})}[\log p(\boldsymbol{\theta}|\boldsymbol{y})] \nonumber \\
+
+- file: sample\arxiv_sources\2604.02116v1\mainV2.tex (line 416)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   415:     \text{KLD}(q(\boldsymbol{\theta}|\boldsymbol{\psi})||p(\boldsymbol{\theta}|\boldsymbol{y})) = & \mathbb{E}_{q(\boldsymbol{\theta}|\boldsymbol{\psi})}\left[\log \frac{q(\boldsymbol{\theta}|\boldsymbol{\psi})}{p(\boldsymbol{\theta}|\boldsymbol{y})}\right] = \mathbb{E}_{q(\boldsymbol{\theta}|\boldsymbol{\psi})}[\log q(\boldsymbol{\theta}|\boldsymbol{\psi})] - \mathbb{E}_{q(\boldsymbol{\theta}|\boldsymbol{\psi})}[\log p(\boldsymbol{\theta}|\boldsymbol{y})] \nonumber \\
+>  416:     = &\mathbb{E}_{q(\boldsymbol{\theta}|\boldsymbol{\psi})}[\log q(\boldsymbol{\theta}|\boldsymbol{\psi})] - \mathbb{E}_{q(\boldsymbol{\theta}|\boldsymbol{\psi})}[\log p(\boldsymbol{\theta}|\boldsymbol{y})] \nonumber \\
+   417:      = &\mathbb{E}_{q(\boldsymbol{\theta}|\boldsymbol{\psi})}[\log q(\boldsymbol{\theta}|\boldsymbol{\psi})] - \mathbb{E}_{q(\boldsymbol{\theta}|\boldsymbol{\psi})}[\log p(\boldsymbol{\theta},\boldsymbol{y})] + \log p(\boldsymbol{y}) \nonumber \\
+
+- file: sample\arxiv_sources\2604.02116v1\mainV2.tex (line 417)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   416:     = &\mathbb{E}_{q(\boldsymbol{\theta}|\boldsymbol{\psi})}[\log q(\boldsymbol{\theta}|\boldsymbol{\psi})] - \mathbb{E}_{q(\boldsymbol{\theta}|\boldsymbol{\psi})}[\log p(\boldsymbol{\theta}|\boldsymbol{y})] \nonumber \\
+>  417:      = &\mathbb{E}_{q(\boldsymbol{\theta}|\boldsymbol{\psi})}[\log q(\boldsymbol{\theta}|\boldsymbol{\psi})] - \mathbb{E}_{q(\boldsymbol{\theta}|\boldsymbol{\psi})}[\log p(\boldsymbol{\theta},\boldsymbol{y})] + \log p(\boldsymbol{y}) \nonumber \\
+   418:      = & - \text{ELBO}(\boldsymbol{y},\boldsymbol{\psi}) + \log p(\boldsymbol{y}).& 
+
+- file: sample\arxiv_sources\2604.02116v1\mainV2.tex (line 418)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   417:      = &\mathbb{E}_{q(\boldsymbol{\theta}|\boldsymbol{\psi})}[\log q(\boldsymbol{\theta}|\boldsymbol{\psi})] - \mathbb{E}_{q(\boldsymbol{\theta}|\boldsymbol{\psi})}[\log p(\boldsymbol{\theta},\boldsymbol{y})] + \log p(\boldsymbol{y}) \nonumber \\
+>  418:      = & - \text{ELBO}(\boldsymbol{y},\boldsymbol{\psi}) + \log p(\boldsymbol{y}).& 
+   419: \end{align}
+
+- file: sample\arxiv_sources\2604.02116v1\mainV2.tex (line 1228)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  1227: \begin{align}\label{bctm}
+> 1228:    P(Y_i \leq y_i| \boldsymbol{X}_i = \boldsymbol{x}_i) = & \Phi(\boldsymbol{a}_{20}(\lfloor y_i \rfloor)^T \boldsymbol{\gamma}_1 + \beta_0 + \boldsymbol{a}_5(Year_i)^T\boldsymbol{\gamma}_2 + \boldsymbol{a}_5(Month_i)^T\boldsymbol{\gamma}_3 \\
+  1229:     & +  (\boldsymbol{a}_5(Day_i)^T \otimes (\textrm{Period}_i)^T) \boldsymbol{\gamma}_4 + \textrm{Period}_i \times \boldsymbol{\gamma}_5). \nonumber
+
+- file: sample\arxiv_sources\2604.02126v1\FINAL.tex (line 679)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   678:     \begin{split}
+>  679:         \tilde{y}_{t+4} - \mathbb{E}[\tilde{y}_{t+4}|\mathcal{F}_t] =& \Big(\phi_0 + \phi_1\tilde{y}_{t+3} + \phi_2\tilde{y}_{t+2} + \phi_3\tilde{y}_{t+1} + \eta_{t+4}\Big) + \\ 
+   680:         &-\Big(\phi_0 + \mathbb{E}[\phi_1\tilde{y}_{t+3} + \phi_2\tilde{y}_{t+2} + \phi_3\tilde{y}_{t+1}|\mathcal{F}_t]\Big) = \\
+
+- file: sample\arxiv_sources\2604.02126v1\FINAL.tex (line 681)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   680:         &-\Big(\phi_0 + \mathbb{E}[\phi_1\tilde{y}_{t+3} + \phi_2\tilde{y}_{t+2} + \phi_3\tilde{y}_{t+1}|\mathcal{F}_t]\Big) = \\
+>  681:         =& \Big(\phi_0 + \phi_0\phi_1 + (\phi_1^2 + \phi_2)\tilde{y}_{t+2} + (\phi_1\phi_2 + \phi_3)\tilde{y}_{t+1} + \phi_1\phi_3\tilde{y}_{t} + \phi_1\eta_{t+3} + \eta_{t+4}\Big) + \\ 
+   682:         &- \Big( \phi_0 + \phi_0\phi_1 + 
+
+- file: sample\arxiv_sources\2604.02126v1\FINAL.tex (line 684)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   683:  \mathbb{E}[(\phi_1^2 + \phi_2)\tilde{y}_{t+2} + (\phi_1\phi_2 + \phi_3)\tilde{y}_{t+1}|\mathcal{F}_t]+ \phi_1\phi_3\tilde{y}_{t}\Big)=\\
+>  684:         =&\ldots = \\
+   685:          =& [(\phi_1^2 + \phi_2)\phi_1 + \phi_1\phi_2 + \phi_3]\eta_{t+1} + (\phi_1^2 + \phi_2)\eta_{t+2}+\phi_1^2\eta_{t+3} + \eta_{t+4}.
+
+- file: sample\arxiv_sources\2604.02126v1\FINAL.tex (line 685)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   684:         =&\ldots = \\
+>  685:          =& [(\phi_1^2 + \phi_2)\phi_1 + \phi_1\phi_2 + \phi_3]\eta_{t+1} + (\phi_1^2 + \phi_2)\eta_{t+2}+\phi_1^2\eta_{t+3} + \eta_{t+4}.
+   686:     \end{split}
+
+- file: sample\arxiv_sources\2604.02137v1\main_v3.tex (line 245)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   244: 	\begin{split}
+>  245:  a_h(u_h, v_h) = & \sum_{i=1}^{2} \bigg({\sum_{T \in \mathcal T_h^{i}}} \int_{{T \cap} \Omega^i} k_i \nabla u_h^i \cdot \nabla v_h^i \, dx +  \sum_{F \in \mathcal{F}_g^i} \gamma_g h_F \int_{F} k_i [\![\partial_n u_h^{i}]\!] [\![\partial_n v_h^{i}]\!] \, ds\bigg)\\
+   246: 		 &+ \sum_{T \in \mathcal T_h^{\Gamma}} \int_{\Gamma_T} \bigg( \frac{\gamma k_{\Gamma}}{h_T} [u_h] [v_h] - \{K \nabla u_h \cdot n_{\Gamma}\} [v_h] - \{K \nabla v_h \cdot n_{\Gamma}\} [u_h] \bigg) \, ds,\\
+
+- file: sample\arxiv_sources\2604.02137v1\main_v3.tex (line 247)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   246: 		 &+ \sum_{T \in \mathcal T_h^{\Gamma}} \int_{\Gamma_T} \bigg( \frac{\gamma k_{\Gamma}}{h_T} [u_h] [v_h] - \{K \nabla u_h \cdot n_{\Gamma}\} [v_h] - \{K \nabla v_h \cdot n_{\Gamma}\} [u_h] \bigg) \, ds,\\
+>  247: 	l_h(v_h) = & \sum_{i=1}^{2} \int_{\Omega^i} f^i v_h^i \, dx.
+   248: 	\end{split}
+
+- file: sample\arxiv_sources\2604.02153v1\main_v2.tex (line 136)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   135: \begin{split}
+>  136: a_i(u_h^i,v_h^i)=&\textcolor{black}{\sum_{T\in\T^{i}}}\int_{\textcolor{black}{T\cap}\Omega^i}k_i\nabla u_h^i \cdot \nabla v_h^i\dx,\quad  j_i(u_h^i,v_h^i)=\sum_{F\in\mathcal{F}_g^i} h_F \int_{F}k_i[\![\partial_n u_h^{i}]\!][\![\partial_n v_h^{i}]\!]\ds,\\
+   137: a_{\Gamma}(u_h,v_h)=& \sum_{T\in\T^{\Gamma}}\int_{\Gamma_T}( \frac{\gamma k_{\Gamma}}{h_T}[u_h][v_h]-\{K\nabla u_h\cdot n_{\Gamma}\}[v_h]-\{K\nabla v_h\cdot n_{\Gamma}\}[u_h])\ds,\\
+
+- file: sample\arxiv_sources\2604.02153v1\main_v2.tex (line 137)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   136: a_i(u_h^i,v_h^i)=&\textcolor{black}{\sum_{T\in\T^{i}}}\int_{\textcolor{black}{T\cap}\Omega^i}k_i\nabla u_h^i \cdot \nabla v_h^i\dx,\quad  j_i(u_h^i,v_h^i)=\sum_{F\in\mathcal{F}_g^i} h_F \int_{F}k_i[\![\partial_n u_h^{i}]\!][\![\partial_n v_h^{i}]\!]\ds,\\
+>  137: a_{\Gamma}(u_h,v_h)=& \sum_{T\in\T^{\Gamma}}\int_{\Gamma_T}( \frac{\gamma k_{\Gamma}}{h_T}[u_h][v_h]-\{K\nabla u_h\cdot n_{\Gamma}\}[v_h]-\{K\nabla v_h\cdot n_{\Gamma}\}[u_h])\ds,\\
+   138: l_h(v_h)=& \sum_{i=1}^{2}\int_{\Omega^i}f^i v_h^i\dx. %+\sum_{T\in\mathcal{T}_h^{\Gamma}}\int_{\Gamma_T}g\{v_h\}^*\ds.
+
+- file: sample\arxiv_sources\2604.02153v1\main_v2.tex (line 138)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   137: a_{\Gamma}(u_h,v_h)=& \sum_{T\in\T^{\Gamma}}\int_{\Gamma_T}( \frac{\gamma k_{\Gamma}}{h_T}[u_h][v_h]-\{K\nabla u_h\cdot n_{\Gamma}\}[v_h]-\{K\nabla v_h\cdot n_{\Gamma}\}[u_h])\ds,\\
+>  138: l_h(v_h)=& \sum_{i=1}^{2}\int_{\Omega^i}f^i v_h^i\dx. %+\sum_{T\in\mathcal{T}_h^{\Gamma}}\int_{\Gamma_T}g\{v_h\}^*\ds.
+   139: \end{split}
+
+- file: sample\arxiv_sources\2604.02153v1\main_v2.tex (line 154)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   153: 	\begin{split}
+>  154: 		\DD^i=&\{v\in L^2(\T^i);\, {v}_{|T}\in P^1(T)\,\forall T\in \T^i\},\\
+   155: 		\M^i=&\{\mu\in L^2(\F^i);\, {\mu}|_{F}\in P^1(F)\, \forall F\in \F ^i,\, 
+
+- file: sample\arxiv_sources\2604.02153v1\main_v2.tex (line 155)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   154: 		\DD^i=&\{v\in L^2(\T^i);\, {v}_{|T}\in P^1(T)\,\forall T\in \T^i\},\\
+>  155: 		\M^i=&\{\mu\in L^2(\F^i);\, {\mu}|_{F}\in P^1(F)\, \forall F\in \F ^i,\, 
+   156: 		\displaystyle\sum_{F\in\mathcal{F}_N}\mathfrak{s}_N^Fh_F{\mu}_{|F}(N)=0 \,\forall N\in \overset{\circ}{\mathcal {N}_h^i}\}.
+
+- file: sample\arxiv_sources\2604.02153v1\main_v2.tex (line 177)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   176: 	\begin{split}
+>  177: 		d_h(\tilde u_h,v_h)=&\sum_{i=1}^{2} \sum_{F\in\mathcal{F}_h^{i}}  \int_{F\cap\Omega^i} \bigg(\langle k_i\nabla \tilde {u}_h^i\cdot n_F\rangle [\![v_h^i]\!]   +\langle k_i\nabla v_h^i \cdot n_F\rangle [\![\tilde{u}_h^i]\!]\bigg)\ds,\\
+   178: 		b_h^i(\mu_h^i,v_h^i)=&\sum_{F\in\mathcal{F}_h^{i}} \frac{k_i h_F}{2}\sum_{N\in\mathcal{N}_F}{\mu_h^i}_{|F}(N)[\![v_h^i]\!](N) \approx \sum_{F\in\mathcal{F}_h^{i}}  \int_{F}k_i\mu_h^i[\![v_h^i]\!]\ds.
+
+- file: sample\arxiv_sources\2604.02153v1\main_v2.tex (line 178)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   177: 		d_h(\tilde u_h,v_h)=&\sum_{i=1}^{2} \sum_{F\in\mathcal{F}_h^{i}}  \int_{F\cap\Omega^i} \bigg(\langle k_i\nabla \tilde {u}_h^i\cdot n_F\rangle [\![v_h^i]\!]   +\langle k_i\nabla v_h^i \cdot n_F\rangle [\![\tilde{u}_h^i]\!]\bigg)\ds,\\
+>  178: 		b_h^i(\mu_h^i,v_h^i)=&\sum_{F\in\mathcal{F}_h^{i}} \frac{k_i h_F}{2}\sum_{N\in\mathcal{N}_F}{\mu_h^i}_{|F}(N)[\![v_h^i]\!](N) \approx \sum_{F\in\mathcal{F}_h^{i}}  \int_{F}k_i\mu_h^i[\![v_h^i]\!]\ds.
+   179: 	\end{split}
+
+- file: sample\arxiv_sources\2604.02153v1\main_v2.tex (line 228)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   227: 	\begin{split}
+>  228: 		\int_{T}\sigma_h^i\cdot \zeta \dx=&\int_{T}k_i\nabla u_h^i\cdot \zeta\dx - \int_{\Gamma_T} \omega_ik_i \zeta\cdot n_{\Gamma} [u_h]\ds \\
+   229: 		&+ \sum_{F\in \mathcal F_g^i\cap \partial T}\beta h_F\int_{F}k_i[\![\partial_n u_h^i]\!] [\![\zeta\cdot n_F]\!]\ds,\quad \forall \zeta\in (P^{0}(T))^2.
+
+- file: sample\arxiv_sources\2604.02153v1\main_v2.tex (line 236)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   235: 	\begin{split}
+>  236: 		\int_{T^i_C}f^ip\dx=&\int_{\Gamma_T}\bigg(\textcolor{black}{[k\nabla u_h\cdot n_{\Gamma}](\omega_i-1)}+\frac{(-1)^i\gamma k_{\Gamma}}{h_T}[u_h]\bigg)p\ds\\
+   237: 		&+\frac{1}{2}\int_{F^i_C }[\![k_i\partial_n u_h^i]\!]p\ds, \quad \forall p\in P^m(T^i_C).
+
+- file: sample\arxiv_sources\2604.02153v1\main_v2.tex (line 347)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   346: \begin{split}
+>  347: |u-\varphi|_{1,K}^2=&\textcolor{black}{\sum_{i=1}^2\int_{\Omega^i}\nabla(u-\varphi)\cdot (K\nabla u-\sigma_h+K^{1/2}\tau_h+K\nabla u_h^i-K\nabla \varphi)\dx}\\
+   348: =&\int_{\Omega}\nabla(u-\varphi)\cdot (\sigma-\sigma_h)\dx+\int_{\Omega} K^{1/2}\nabla(u-\varphi)\cdot \tau_h\dx\\
+
+- file: sample\arxiv_sources\2604.02153v1\main_v2.tex (line 348)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   347: |u-\varphi|_{1,K}^2=&\textcolor{black}{\sum_{i=1}^2\int_{\Omega^i}\nabla(u-\varphi)\cdot (K\nabla u-\sigma_h+K^{1/2}\tau_h+K\nabla u_h^i-K\nabla \varphi)\dx}\\
+>  348: =&\int_{\Omega}\nabla(u-\varphi)\cdot (\sigma-\sigma_h)\dx+\int_{\Omega} K^{1/2}\nabla(u-\varphi)\cdot \tau_h\dx\\
+   349: &+\sum_{i=1}^2\int_{\Omega^i}\nabla(u-\varphi)\cdot K\nabla(u_h^i-\varphi)\dx.
+
+- file: sample\arxiv_sources\2604.02153v1\main_v2.tex (line 389)
+  error: \leq &
+  message: Use &\leq or \leq{}& instead of \leq& to avoid spacing issues in align-like environments.
+   388: 		\begin{split}
+>  389: 			|U_h-u_h|_{1,K}^2 \leq & \sum_{T\in \T^\Gamma}\sum_{i=1}^2 k_i|U_h-u_h^i|^2_{1,T} \leq  C \sum_{T\in \T^\Gamma} \sum_{i=1}^2 \sum_{N\in \mathcal N_T}k_i (U_h-u_h^i)^2(N)\\
+   390: 			\le & C  \sum_{T\in \T^\Gamma} k_{max} \sum_{N\in \mathcal N_T}(u_h^1-u_h^2)^2(N)\le C\sum_{T\in \T^\Gamma}\frac{k_{max}}{h_T^2}\|[u_h]\|_T^2, 
+
+- file: sample\arxiv_sources\2604.02153v1\main_v2.tex (line 390)
+  error: \le &
+  message: Use &\le or \le{}& instead of \le& to avoid spacing issues in align-like environments.
+   389: 			|U_h-u_h|_{1,K}^2 \leq & \sum_{T\in \T^\Gamma}\sum_{i=1}^2 k_i|U_h-u_h^i|^2_{1,T} \leq  C \sum_{T\in \T^\Gamma} \sum_{i=1}^2 \sum_{N\in \mathcal N_T}k_i (U_h-u_h^i)^2(N)\\
+>  390: 			\le & C  \sum_{T\in \T^\Gamma} k_{max} \sum_{N\in \mathcal N_T}(u_h^1-u_h^2)^2(N)\le C\sum_{T\in \T^\Gamma}\frac{k_{max}}{h_T^2}\|[u_h]\|_T^2, 
+   391: 		\end{split}
+
+- file: sample\arxiv_sources\2604.02157v1\main.tex (line 180)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   179: \label{eq:R}
+>  180: \mathcal{R}_{N} = &\big\{ x_{(N)} \in \mathbb{R}^{n_x} \big|
+   181: x_{(k+1)} = A_\tr x_{(k)} + B_\tr u_{(k)} + w_{(k)}, \nonumber \\&
+
+- file: sample\arxiv_sources\2604.02159v1\main.tex (line 185)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   184: \begin{align*}
+>  185:     A_{\mathcal{Y}\mathcal{P}} =& \begin{bmatrix} \text{vec}(A^{(1)}_{\mathcal{Y}}) & \dots & \text{vec}
+   186:     (A_{\mathcal{Y}}^{(\gamma)}) & 0_{n_{c}n_{a}  \times q_{\mathcal{P}}} \\
+
+- file: sample\arxiv_sources\2604.02159v1\main.tex (line 189)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   188:     \end{bmatrix}, \\
+>  189:     {B}_{\mathcal{Y}\mathcal{P}} =&\begin{bmatrix} \text{vec}(B_{\mathcal{Y}}) \\  b_{\mathcal{P}}\end{bmatrix},
+   190:    G_{\mathcal{YP}}=\begin{bmatrix} G_{\mathcal{Y}}c_{\mathcal{P}} & C_{\mathcal{Y}} G_{\mathcal{P}}& G_{f} \end{bmatrix},
+
+- file: sample\arxiv_sources\2604.02159v1\main.tex (line 192)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   191:      \\
+>  192:     G_{f} =& \begin{bmatrix} g_{f}^{(1)} & \dots & g_{f}^{(h_\mathcal{P}\gamma)} \end{bmatrix},  {R_\mathcal{YP}} = \begin{bmatrix} \overline{R}_{\mathcal{Y}} & \overline{R}_{\mathcal{P}} \end{bmatrix} ,\\
+   193:     E_\mathcal{YP}=  &\bigg[ \overline{E}_{\mathcal{Y}}, \overline{E}_{\mathcal{P}}, 
+
+- file: sample\arxiv_sources\2604.02159v1\main.tex (line 193)
+  error: =  &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   192:     G_{f} =& \begin{bmatrix} g_{f}^{(1)} & \dots & g_{f}^{(h_\mathcal{P}\gamma)} \end{bmatrix},  {R_\mathcal{YP}} = \begin{bmatrix} \overline{R}_{\mathcal{Y}} & \overline{R}_{\mathcal{P}} \end{bmatrix} ,\\
+>  193:     E_\mathcal{YP}=  &\bigg[ \overline{E}_{\mathcal{Y}}, \overline{E}_{\mathcal{P}}, 
+   194:     \Big[\overline{E}_{\mathcal{Y}}^{(\cdot,1)} + \overline{E}_{\mathcal{P}}^{(\cdot,1)}\Big],
+
+- file: sample\arxiv_sources\2604.02159v1\main.tex (line 209)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   208: 	\begin{align}
+>  209: 			\mathcal{P}_1 \cap \mathcal{P}_2 =& \bigg \langle c_1, G_1, \begin{bmatrix} E_1 \\ \mathbf{0} \end{bmatrix}, \begin{bmatrix} A_1 & \mathbf{0} & \mathbf{0} & \mathbf{0} \\ \mathbf{0} & A_2 & \mathbf{0} & \mathbf{0}  \\ \mathbf{0} & \mathbf{0} & G_1 & - G_2 \end{bmatrix}, \nonumber \\&\begin{bmatrix} b_1 \\ b_2 \\ c_2 - c_1 \end{bmatrix}, \begin{bmatrix} \CE_1 & \mathbf{0} & E_1 & \mathbf{0} \\ \mathbf{0} & \CE_2 & \mathbf{0} & E_2 \end{bmatrix}  \bigg \rangle_{\text{CPZ}},
+   210: 	\end{align}	
+
+- file: sample\arxiv_sources\2604.02167v1\main.tex (line 626)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   625: \begin{align}
+>  626:     C^{I}(\textbf{r})= &\langle m^{2}\rangle\sum_{\alpha=x,y} \left[ D_{\alpha \alpha}\delta(\mathbf{r})-\frac{D_{\alpha \alpha}}{2}\sum_{v \in [-1,1]}\delta(\mathbf{r}+v\hat{\mathbf{e}_{\alpha}}) \right]
+   627:     +\frac{1}{4\pi\sqrt{D_{xx}D_{yy}}(\sum_\mu x_\mu^2/D_{\mu\mu})} \sum_{\alpha=x,y}\left[ \frac{\gamma_{0}^{\alpha}}{D_{\alpha\alpha}}-\frac{2\gamma_{0}^{\alpha}x_{\alpha}^2}{D_{\alpha\alpha}^2R} \right]\notag\\
+
+- file: sample\arxiv_sources\2604.02214v1\main.tex (line 149)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   148: \begin{split}
+>  149: 	g_{\mu\nu}dx^\mu dx^\nu =&
+   150:     -\left(1-\frac{2Mr}{\Sigma}-\lambda H_1\right) dt^2 \\
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 816)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   815:     \Delta v_\ip (\xi_0)
+>  816:     \nonumber \\ = &\,  -4\pi
+   817:     \bigl[
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 1191)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  1190: \begin{align}
+> 1191:     \frac{f'_{\rm quad} (z)}{4\pi} = &\, C_2 \biggl[ \frac{\xi^3 \sin (z \xi)}{z^2} +
+  1192:     \frac{4 \xi^2 \cos (z \xi)}{z^3} - \frac{8\xi \sin (z\xi)}{z^4}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 1334)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  1333: \begin{align}
+> 1334:     \frac{f'_{\rm lc}(z)}{4\pi} = &\,
+  1335:     \vA \biggl[ \frac{ \xi_w \,
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 1345)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  1344: \begin{align}
+> 1345:     f'_{\rm lc}(z) = &\, \pi \biggl[
+  1346:     \frac{\vA}{15} \,
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 1349)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  1348:     \frac{\vB}{3} ( \xi_{\rm sh}^4 - \xi_w^4 ) \biggr] \, z + \mathcal{O}(z^3) \quad \text{for $z \to 0$}\,, \\
+> 1349:     f'_{\rm lc}(z) = &\, \frac{4\pi}{z^2}  \, \bigl(\vA \, \xi_w \sin(z \xi_w) +   \vB
+  1350:     [\xi_{\rm sh} \sin (z \xi_{\rm sh}) - \xi_w \sin (z \xi_w)]\bigr) + \mathcal{O}(z^{-3}) \qquad \,
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 2328)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  2327:     \Pi_{ij}(t,\kk)
+> 2328:     = &\, e^{i \kk \cdot \xx_0}
+  2329:     \int \frac{\dd^3 \pp}{(2\pi)^3}\, 
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 2333)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  2332:     \nonumber \\ 
+> 2333:     = & \frac{1}{4 \pi^2}
+  2334:     e^{i \kk \cdot \xx_0}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 2834)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  2833: \begin{align}
+> 2834:     v_\rms^2 (t) = \bra{v^2(t)} = &\,  \frac{1}{2 \pi^2}
+  2835:     \int_0^\infty \FL (t, k) \, k^2 \dd k \nonumber \\ = &\,
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 2835)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  2834:     v_\rms^2 (t) = \bra{v^2(t)} = &\,  \frac{1}{2 \pi^2}
+> 2835:     \int_0^\infty \FL (t, k) \, k^2 \dd k \nonumber \\ = &\,
+  2836:     \frac{1}{2 \pi^2}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 2846)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  2845:     v_\rms^2 (\tilde t)
+> 2846:     = &\, \frac{1}{2 \pi^2}
+  2847:     \int_0^\infty \tilde \fL(z) \, z^2 \dd z \int_{t_c}^t \Gamma(t_0) (t - t_0)^3
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 2850)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  2849:     \dd t_0
+> 2850:     \nonumber \\ = &\,
+  2851:     \frac{\tilde b_{ii} (0)}{{\cal V}_w} \frac{1}{6}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 3425)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  3424:     A_{\infty}^{\rm exp}
+> 3425:     = &\,
+  3426:     \int_0^\infty \half\, \tilde T^2 \, e^{-\tilde T}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 3708)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  3707: \begin{align} \label{S_SBPL}
+> 3708:     S_{\rm SBPL} (\tilde k) = &\,
+  3709:     \tilde k^2 \Biggl[ 1+ \biggl(\frac{\tilde k}{\tilde k_1} \biggr)^{b_1} \Biggr]^{-6/b_1}\,,
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 3712)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  3711:     \label{S_DBPL}
+> 3712:     S_{\rm DBPL} (\tilde k) = &\,
+  3713:     \tilde k^2 \Biggl[ 1+ \biggl(\frac{\tilde k}{\tilde k_1} \biggr)^{b_1} \Biggr]^{\frac{\sigma-2}{b_1}}\,
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 4439)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  4438: \begin{align}
+> 4439:     \tilde v_+ = &\, \frac{1}{2(1+\alpha_+)} \left[
+  4440:     \tilde v_- + \frac{1}{3\tilde v_-}  \pm \sqrt{\biggl(\tilde v_- - \frac{1}{3\tilde v_-}\biggr)^2 + 4\alpha_+^2 + \frac{8}{3} \alpha_+} \ 
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 4442)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  4441:     \right]\,, \label{vplus_from_vminus} \\
+> 4442:     \tilde v_- = &\, \frac{1}{2} \left[
+  4443:     (1 + \alpha_+)\tilde v_+ + \frac{1 - 3\alpha_+}{3\tilde v_+} \pm
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 5074)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  5073: \begin{align}
+> 5074:     F_{\rm L} (k) = &\,  4 \pi \int_0^\infty
+  5075:     \Bigl(j_0 (kr) B_{\rm L} (r) + \frac{2 j_1 (kr)}{kr}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 5079)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  5078:     \\
+> 5079:     F_{\rm N} (k) = &\,  4 \pi \int_0^\infty
+  5080:     \Bigl(j_0 (kr) B_{\rm N} (r) + \frac{j_1 (kr)}{kr}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 5110)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  5109: \begin{align}
+> 5110:     v_\rms^2 = \bra{v^2(\xx)} = &\, 
+  5111:     \int \frac{\dd^3 k}{(2\pi)^3}\int \frac{\dd^3 k'}{(2\pi)^3} e^{-i\xx \cdot(\kk-\kk')}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 5113)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  5112:     \bra{v_i (\kk) \, v_i^* (\kk')}  \nonumber \\
+> 5113:     = &\, \int_0^\infty E_v (k) \dd k = \int_{-\infty}^\infty \PP_v (k) \dd \ln k \,,
+  5114:     \label{Parseval}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 5140)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  5139: \begin{align}
+> 5140:     F_{\rm A} (k) = &\, f_{\rm A}^{(0)} + k^2 f_{\rm A}^{(2)}  + {\cal O} (k^4)\,,
+  5141:     \qquad 
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 5405)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  5404: \begin{align}
+> 5405:     h(\tilde t)= &\, \exp \Biggl[
+  5406:     \ln h_\ast\,
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 6084)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  6083: \begin{align}
+> 6084:     {\Gamma}_{\rm Gauss}'(y) = &\,
+  6085:     3\, \int_{y_c}^{y}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 6134)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  6133: \begin{align}
+> 6134:     S_{\rm SBPL} (k) = &\,
+  6135:     k^2 \Biggl[ 1+ \biggl(\frac{k}{k_1} \biggr)^{b_1} \Biggr]^{-6/b_1}\,,
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 6137)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  6136:     \\
+> 6137:     S_{\rm DBPL} (k) = &\,  k^2 \Biggl[ 1+ \biggl(\frac{k}{k_1} \biggr)^{b_1} \Biggr]^{\frac{\sigma-2}{b_1}}\, \Biggl[ 1+ \biggl(\frac{k}{k_2} \biggr)^{b_2} \Biggr]^{\frac{-\sigma-4}{b_2}}\,,
+  6138:     \label{FL_DBPL_app}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 6153)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  6152: \begin{align}
+> 6153:     {\cal N}^{-1}_{\rm SBPL} = &\, \frac{1}{2 \pi^2} \int_0^{\infty} k^4 \bigl[1 + (k/k_1)^{b_1}\bigr]^{-6/b_1}
+  6154:     \dd k = \frac{k_1^5}{2\pi^2}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 6156)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  6155:     \int_0^{\infty} x^4 \, (1 + x^{b_1})^{-6/b_1} \dd x \nonumber \\
+> 6156:     = &\, \frac{k_1^5}{2 \pi^2 b_1}
+  6157:     \int_0^{\infty} y^{5/b_1 - 1}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 6176)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  6175: \begin{align}
+> 6176:     {\cal N}_{\rm DBPL}^{-1} (b_1 = b_2 = b) = &\, \frac{1}{2 \pi^2}
+  6177:     \int_0^{\infty} k^4 \bigl[ 1+ (k/k_1)^{b} \bigr]^{(\sigma-2)/b}\, \bigl[ 1+(k/k_2)^{b} \bigr]^{-(\sigma-4)/b}  \dd k \nonumber 
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 6178)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  6177:     \int_0^{\infty} k^4 \bigl[ 1+ (k/k_1)^{b} \bigr]^{(\sigma-2)/b}\, \bigl[ 1+(k/k_2)^{b} \bigr]^{-(\sigma-4)/b}  \dd k \nonumber 
+> 6178:     \\ = &\, 
+  6179:     \frac{k_2^5}{2 \pi^2 b} \int_0^1 t^{5/b - 1} \bigl[
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 6182)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+  6181:     (1 - t)^{1/b - 1} \dd t \nonumber \\
+> 6182:     = &\, \frac{k_2^5}{2 \pi^2 b} B\bigl(\tfrac{5}{b},
+  6183:     \tfrac{1}{b}\bigr) {}_2F_1\Bigl( \tfrac{2-\sigma}{b}, \tfrac{5}{b} \,; \tfrac{6}{b} \,; 1-\tfrac{k_2^b}{k_1^b} \Bigr)\,,
+
+- file: sample\arxiv_sources\2604.02260v1\main.tex (line 748)
+  error: \leq&
+  message: Use &\leq or \leq{}& instead of \leq& to avoid spacing issues in align-like environments.
+   747:     \big|\E_{\vw_{t}}\big[J_{t+1}(&\vpi_n, \vf_n^*, \vmu_{m:n-1}(\hallucinated{\vx}_{t}, \vpi_n(\hallucinated{\vx}_t)) + \vw_t) -  J_{t+1}(\vpi_n, \vf_n^*, \vf_n^*(\hallucinated{\vx}_{t}, \vpi_n(\hallucinated{\vx}_t)) + \vw_t) \vert \vx_t \big]\big| \\
+>  748:     \leq& \sqrt{\max\left\{\E_{\vw_{t}}[J^2_{t+1}(\vpi_n, \vf_n^*, \vmu_{m:n-1}(\vx_{t}, \vpi_n(\vx_t))+\vw_t) \vert \vx_t],  \E_{\vw_{t}}[J^2_{t+1}(\vpi_n, \vf_n^*, \vf_n^*(\vx_{t}, \vpi(\vx_t))+\vw_t) \vert \vx_t]\right\}} \\
+   749:     &\times \min\left\{\frac{\norm{\vf_n^*(\vx_t, \vpi_n(\vx_t)) - \vmu_{m:n-1}(\vx_t, \vpi_n(\vx_t))}_2}{\sigma}, 1\right\} \tag*{(Lemma C.2 of \cite{kakade2020information})}\\
+
+- file: sample\arxiv_sources\2604.02260v1\main.tex (line 750)
+  error: \leq&
+  message: Use &\leq or \leq{}& instead of \leq& to avoid spacing issues in align-like environments.
+   749:     &\times \min\left\{\frac{\norm{\vf_n^*(\vx_t, \vpi_n(\vx_t)) - \vmu_{m:n-1}(\vx_t, \vpi_n(\vx_t))}_2}{\sigma}, 1\right\} \tag*{(Lemma C.2 of \cite{kakade2020information})}\\
+>  750:     \leq&\ \frac{R_{\max} T}{\sigma} \times \left({\beta_n(\delta, n-m)}\,\|\vsigma_{n}(\vx_t, \vpi_n(\vx_t))\|_2 +  \xi_{n-m} \sum_{j=1}^{d_x} \sum_{s=m}^{n-1}\|f^*_{s+1,j}-f^*_{s,j}\|_{\mathcal H_k} \right). \tag{by \cref{ass:reward} and the success event of \cref{lem:calibration}}
+   751: \end{align*}
+
+- file: sample\arxiv_sources\2604.02271v1\main.tex (line 202)
+  error: > &
+  message: Use &> or >{}& instead of >& to avoid spacing issues in align-like environments.
+   201: \begin{align}
+>  202: \left< \Delta I(t)^2\right> &=\left< \big(I(t) - I(0)\big)^2\right>  \nonumber \\
+   203: &= 2 \left<  I^2\right>  - 2 \left< I(t) I(0)\right>, \label{eq:msi}  
+
+- file: sample\arxiv_sources\2604.02271v1\main.tex (line 248)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   247: For the density-density correlation we use the exact expression \begin{align*}
+>  248:     \left<\hatrho(\textbf{k},t) \hatrho(\textbf{k}',t') \right> =& \left(2 \pi\right)^{2d} \frac{N(N-1)}{V^2} \delta(\textbf{k}) \delta(\textbf{k}') \\&+ \left(2 \pi\right)^d \frac{N}{V} \delta(\textbf{k}+\textbf{k}') e^{-Dk^2 |t-t'|}
+   249: \end{align*} for $N$ purely diffusive, non-interacting particles moving in a $d$-dimensional volume $V$ \cite{velenich2008}. 
+
+- file: sample\arxiv_sources\2604.02271v1\main.tex (line 254)
+  error: > &
+  message: Use &> or >{}& instead of >& to avoid spacing issues in align-like environments.
+   253: \begin{align}
+>  254: \left< \Delta I(t)^2 \right> &= 2 \left< I \right> I_0 \! \left[ f\!\left(\frac{4 \sigma^2}{L^2}\right)^{\!\!d} \!\!- f\!\left(\frac{4 D t+ 4\sigma^2}{L^2}\right)^{\!\!d}\right]\! \label{eq:I_Gaussian_Square} \\
+   255: %\end{align}
+
+- file: sample\arxiv_sources\2604.02271v1\main.tex (line 423)
+  error: =  &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   422: \begin{align}
+>  423:     I(\tilde{\textbf{x}},t) =  &\int d\textbf{x} \phi(\tilde{\textbf{x}}-\textbf{x}) \int d\textbf{x}' \text{PSF}(\textbf{x} - \textbf{x}') \hat{\rho}(\textbf{x}',t) \label{eq:NR1} \\
+   424:     = &\int \frac{d \textbf{k}}{(2 \pi)^d} \hatrho(\textbf{k},t) e^{ i \textbf{k}\cdot \tilde{\textbf{x}}} \int d\textbf{x} \phi(\tilde{\textbf{x}}-\textbf{x}) e^{- i \textbf{k}\cdot (\tilde{\textbf{x}}-\textbf{x})} \nonumber \\
+
+- file: sample\arxiv_sources\2604.02271v1\main.tex (line 424)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   423:     I(\tilde{\textbf{x}},t) =  &\int d\textbf{x} \phi(\tilde{\textbf{x}}-\textbf{x}) \int d\textbf{x}' \text{PSF}(\textbf{x} - \textbf{x}') \hat{\rho}(\textbf{x}',t) \label{eq:NR1} \\
+>  424:     = &\int \frac{d \textbf{k}}{(2 \pi)^d} \hatrho(\textbf{k},t) e^{ i \textbf{k}\cdot \tilde{\textbf{x}}} \int d\textbf{x} \phi(\tilde{\textbf{x}}-\textbf{x}) e^{- i \textbf{k}\cdot (\tilde{\textbf{x}}-\textbf{x})} \nonumber \\
+   425:     &\times \int d\textbf{x}' \text{PSF}(\textbf{x} - \textbf{x}') e^{- i \textbf{k}\cdot (\textbf{x}-\textbf{x}')} \\
+
+- file: sample\arxiv_sources\2604.02271v1\main.tex (line 426)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   425:     &\times \int d\textbf{x}' \text{PSF}(\textbf{x} - \textbf{x}') e^{- i \textbf{k}\cdot (\textbf{x}-\textbf{x}')} \\
+>  426:     = &\int \frac{d \textbf{k}}{(2 \pi)^d} e^{ i \textbf{k}\cdot \tilde{\textbf{x}}}  \hatrho(\textbf{k},t) \phi(\textbf{k}) \text{PSF}(\textbf{k}), \label{eq:NR2}
+   427: \end{align}
+
+- file: sample\arxiv_sources\2604.02271v1\main.tex (line 440)
+  error: > (and 1 more line...)
+  message: Use &> or >{}& instead of >& to avoid spacing issues in align-like environments.
+   439: \begin{align}
+>  440:      \left< I(t) I(t') \right>
+   441:      &=\int\!\!\frac{d\textbf{k}}{(2\pi)^d}  \left|P_\text{eff}(\textbf{k})\right|^2 \left< \hatrho(\textbf{k},t) \hatrho(-\textbf{k},t') \right>, \label{eq:NR3}
+
+- file: sample\arxiv_sources\2604.02271v1\main.tex (line 456)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   455: \begin{align}
+>  456:     \left< \hatrho(\textbf{k},t) \hatrho(\textbf{k}',t')\right> =&  \left(2 \pi\right)^{2d} \frac{N(N-1)}{V^2} \delta(\textbf{k}) \delta(\textbf{k}') \nonumber \\
+   457:     &+ \left(2 \pi\right)^d \frac{N}{V} \delta(\textbf{k}+\textbf{k}') e^{-Dk^2 |t-t'|}, 
+
+- file: sample\arxiv_sources\2604.02271v1\main.tex (line 463)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   462: \begin{align}
+>  463:     \left< I(t) I(0) \right> = &N(N-1)  I_0^2  \frac{V_\text{box}^2}{V^2}\nonumber \\
+   464:     &+ \frac{N}{V} \int \frac{d\textbf{k}}{(2\pi)^d} \left|P_\text{eff}(\textbf{k})\right|^2 e^{- D t \textbf{k}^2} \label{eq:<II>}
+
+- file: sample\arxiv_sources\2604.02284v1\rigor_test.tex (line 384)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   383: \begin{aligned}
+>  384: \sigma_h^{(t)} = &\max\left(e_0, 1 - (e_1 + e_2 \omega_h) B_h^{(t)^{-(e_3 + e_4 \omega_h)}} \right)\\
+   385:     \eta_h^{(t)} = & \min\left(100, j_1 + j_2 \omega_h + j_3 B_h^{(t)} + j_4 \omega_h B_h^{(t)} \right) 
+
+- file: sample\arxiv_sources\2604.02284v1\rigor_test.tex (line 385)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   384: \sigma_h^{(t)} = &\max\left(e_0, 1 - (e_1 + e_2 \omega_h) B_h^{(t)^{-(e_3 + e_4 \omega_h)}} \right)\\
+>  385:     \eta_h^{(t)} = & \min\left(100, j_1 + j_2 \omega_h + j_3 B_h^{(t)} + j_4 \omega_h B_h^{(t)} \right) 
+   386: \end{aligned}
+
+- file: sample\arxiv_sources\2604.02285v1\Group-A_.tex (line 35)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    34: \begin{align*}
+>   35: Gx =& x^4 y^5 (-180 M + 180 R - 180) + x^4 y^4 (450 M - 450 R + 450) + x^4 y^3 (-300 M + 300 R - 300) + 30 x^4 \\
+    36: &+  x^3 y^5 (360 M - 360 R + 372) + x^3 y^4 (-900 M + 900 R - 930) + x^3 y^3 (600 M - 600 R + 620) - 61 x^3  \\
+
+- file: sample\arxiv_sources\2604.02285v1\Group-A_.tex (line 44)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    43: \begin{align*}
+>   44:     term7 = &-(360 x^4 y^5 - 900 x^4 y^4 + 600 x^4 y^3 - 60 x^4 - 
+    45:        744 x^3 y^5 + 1860 x^3 y^4- 1240 x^3 y^3 + 122 x^3 \\
+
+- file: sample\arxiv_sources\2604.02285v1\Group-A_.tex (line 53)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    52: \begin{align*}
+>   53: Gy =& x^5 y^4 (-180 M + 180 R - 180) + x^5 y^3 (360 M - 360 R + 360) +  x^5 y^2 (-180 M + 180 R - 180)  \\
+    54: &+ x^4 y^4 (450 M - 450 R + 465) + x^4 y^3 (-900 M + 900 R - 930) + x^4 y^2 (450 M - 450 R + 465)  \\
+
+- file: sample\arxiv_sources\2604.02285v1\Group-A_.tex (line 70)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    69:  \begin{align*}
+>   70:      term10 = &-(y - 1) (360 x^5 y^3 - 360 x^5 y^2 - 930 x^4 y^3 + 
+    71:        930 x^4 y^2 + 660 x^3 y^3 -660 x^3 y^2 - 30 x y^3  \\
+
+- file: sample\arxiv_sources\2604.02285v1\Group-A_.tex (line 98)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    97: \begin{align*}
+>   98: term2 = &30 x y (12 x^4 y^2 - 18 x^4 y + 6 x^4 - 30 x^3 y^2 + 45 x^3 y - 
+    99:       15 x^3 + 12 x^2 y^4 - 30 x^2 y^3 \\
+
+- file: sample\arxiv_sources\2604.02285v1\Group-A_.tex (line 112)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   111: \begin{align*}
+>  112:      term3 = &x^5 (-360 y^3 + 540 y^2 - 180 y) + 
+   113:     x^4 (930 y^3 - 1395 y^2 + 465 y)  \\
+
+- file: sample\arxiv_sources\2604.02285v1\Group-A_.tex (line 126)
+  error: =  (and 1 more line...)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   125: \begin{align*}
+>  126:    term42 = 
+   127:    &7200 x (-1 + y) 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-A_.tex (line 135)
+  error: =  (and 1 more line...)
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   134:  \begin{align*}
+>  135:  term43 = 
+   136:    &3600 x^2 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-A_.tex (line 157)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   156:  \begin{align*}
+>  157:  term44 = &-360 (-1 + y) y (-1 + 2 y) (-21 x + 61 x^2 - 40 x^3 + 27 y + 10 x y - 
+   158:       220 x^3 y + 310 x^4 y - 120 x^5 y - 77 y^2  \\
+
+- file: sample\arxiv_sources\2604.02285v1\Group-A_.tex (line 166)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   165:  \begin{align*}
+>  166:  term45 = &-360 x 
+   167:     y (210 x^3 - 925 x^4 + 1441 x^5 - 966 x^6 + 240 x^7 - 270 x^2 y - 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-A_.tex (line 202)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   201:  \begin{align*}
+>  202:  term5 = & 
+   203:    9 (441 x^2 - 2562 x^3 + 5401 x^4 - 4880 x^5 + 1600 x^6 - 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-B_.tex (line 18)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    17: \begin{align*}
+>   18: Gx = &x(360x^3y^5(R - B - 1) + 900x^3y^4(-R + B + 1) + 
+    19:       600x^3y^3(R - B - 1) + 30x^3y + 45x^3 \\
+
+- file: sample\arxiv_sources\2604.02285v1\Group-B_.tex (line 38)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    37: \begin{align*}
+>   38: Gy = &x^5y^4(180R - 180B - 180) + x^5y^3(-360R + 360B + 360) + 
+    39:    x^5y^2(180R - 180B - 180) + 3x^5 \\
+
+- file: sample\arxiv_sources\2604.02285v1\Group-B_.tex (line 52)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    51: \begin{align*}
+>   52:     Gy = &(R - B)(30x^3C(y)P(x)) + (M - B)(-30C(y)) + 
+    53:    C(y)(-180x^5 + 465x^4 - 330x^3 + 45) \\
+
+- file: sample\arxiv_sources\2604.02285v1\Group-B_.tex (line 74)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    73: \begin{align*}
+>   74: \lambda = &x^5y^3(360R - 360B - 360) + x^5y^2(-540R + 540B + 540) - 
+    75:    180x^5y(-R + B + 1)\\
+
+- file: sample\arxiv_sources\2604.02285v1\Group-B_.tex (line 171)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   170: \begin{align*}
+>  171:    \lambda = & term1 \cdot (R-B)+term2 \cdot (M-B)+term3 -Sqrt[ term41 \cdot (R-B)^2 \\ & + term42 \cdot (R-B) \cdot (M-B)+term43 \cdot (M-B)^2+term44 \cdot (R-B)+term45 \cdot (M-B)+term5]/2 
+   172: \end{align*}
+
+- file: sample\arxiv_sources\2604.02285v1\Group-B_.tex (line 185)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   184: \begin{align*}
+>  185: term3 = &(1/2)(-1 + 93y - 273y^2 + 180y^3 + 930x^4yW(y) - 
+   186:      360x^5yW(y) + x(51 + 30y - 660y^3 + 990y^4 - 396y^5)\\
+
+- file: sample\arxiv_sources\2604.02285v1\Group-B_.tex (line 386)
+  error: \leq &
+  message: Use &\leq or \leq{}& instead of \leq& to avoid spacing issues in align-like environments.
+   385:     Gy
+>  386:     \leq &(R - B)(30 \cdot (1/10)^3 \cdot C(y) \cdot 10) + (81/10000) \cdot (465 \cdot (1/10)^4 + 
+   387:       45) \\
+
+- file: sample\arxiv_sources\2604.02285v1\Group-C_.tex (line 20)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    19: \begin{align*}
+>   20:    Gx = &
+    21:   x^4y^5(180M - 180R + 270) + x^4y^4(-450M + 450R - 1335/2) + 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-C_.tex (line 34)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    33: \begin{align*}
+>   34:    Gy =&
+    35:   y(x^5y^3(360M - 360R + 540) + x^5y^2(-720M + 720R - 1068) + 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-C_.tex (line 58)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    57: \begin{align*}
+>   58:     term7 = & (540x^4y^5 - 1335x^4y^4 + 870x^4y^3 - 120x^4 - 1092x^3y^5 + 
+    59:    2700x^3y^4 \\ & - 1760x^3y^3 + 242x^3 + 558x^2y^5 - 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-C_.tex (line 77)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    76: \begin{align*}
+>   77:     term9 = & y(540x^5y^3 - 1068x^5y^2 + 522x^5y - 1365x^4y^3 + 
+    78:     2700x^4y^2 \\ & - 1320x^4y + 930x^3y^3 - 1840x^3y^2 + 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-C_.tex (line 95)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    94: \begin{align*}
+>   95:     term1 = & -30(x - 1)(y - 1)(12x^4y^2 - 6x^4y - 18x^3y^2 + 9x^3y  + 12x^2y^4 \\ & - 18x^2y^3 + 4x^2y^2 + x^2y + 2x^2 - 6xy^4 + 
+    96:    9xy^3 + xy^2 \\ & - 2xy - x + 2y^2 - y),
+
+- file: sample\arxiv_sources\2604.02285v1\Group-C_.tex (line 100)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    99: \begin{align*}
+>  100:     term2 = & (1080x^5y^3 - 1602x^5y^2 + 522x^5y - 2730x^4y^3 + 
+   101:     4050x^4y^2 - 1320x^4y + 1080x^3y^5 - 2670x^3y^4 \\ & + 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-C_.tex (line 109)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   108: \begin{align*}
+>  109:     term3 = & 900(x - 1)^2(y - 1)^2(144x^8y^4 - 144x^8y^3 + 
+   110:     36x^8y^2 - 432x^7y^4 + 432x^7y^3 - 108x^7y^2 + 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-C_.tex (line 125)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   124: \begin{align*}
+>  125:     term4 = & -90(x - 1)(y - 1)(4320x^9y^5 - 8568x^9y^4 + 
+   126:     5292x^9y^3 - 1044x^9y^2 - 17400x^8y^5 + 34512x^8y^4 \\ & - 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-C_.tex (line 148)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   147: \begin{align*}
+>  148:     term5 = & 9(129600x^{10}y^6 - 384480x^{10}y^5 + 410436x^{10}y^4 - 
+   149:      185832x^{10}y^3 + 30276x^{10}y^2 - 655200x^9y^6 \\ & + 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-D_.tex (line 20)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    19: \begin{align*}
+>   20:    Gx = &
+    21:   x(x^3y^5(360B - 360R - 540) + x^3y^4(-900B + 900R + 1365) + 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-D_.tex (line 35)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    34: \begin{align*}
+>   35:    Gy =&
+    36:   x^5y^4(180B - 180R - 270) + x^5y^3(-360B + 360R + 546) + 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-D_.tex (line 58)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    57: \begin{align*}
+>   58:     term7 = & -x(540x^3y^5 - 1365x^3y^4 + 930x^3y^3 - 30x^3y - 
+    59:      15x^3 - 1068x^2y^5 + 2700x^2y^4 - 1840x^2y^3 \\ & + 60x^2y + 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-D_.tex (line 76)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    75: \begin{align*}
+>   76:     term9 = & -(540x^5y^4 - 1092x^5y^3 + 558x^5y^2 - 6x^5 - 
+    77:      1335x^4y^4 + 2700x^4y^3 - 1380x^4y^2 \\ & + 15x^4 + 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-D_.tex (line 93)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    92: \begin{align*}
+>   93:     term1 = & -30x(y - 1)(12x^4y^2 - 6x^4y - 30x^3y^2 + 15x^3y + 
+    94:    12x^2y^4 - 18x^2y^3 + 22x^2y^2 - 8x^2y \\ & + 2x^2 - 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-D_.tex (line 100)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    99: \begin{align*}
+>  100:     term2 = & -(1080x^5y^3 - 1638x^5y^2 + 558x^5y - 2670x^4y^3 + 4050x^4y^2 - 1380x^4y + 1080x^3y^5 - 2730x^3y^4 \\ & + 
+   101:     3600x^3y^3 - 2640x^3y^2 + 840x^3y - 30x^3 - 1602x^2y^5 + 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-D_.tex (line 108)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   107: \begin{align*}
+>  108:     term3 = & 900x^2(y - 1)^2(144x^8y^4 - 144x^8y^3 + 36x^8y^2 - 
+   109:    720x^7y^4 + 720x^7y^3 - 180x^7y^2 + 612x^6y^6 - 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-D_.tex (line 125)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   124: \begin{align*}
+>  125:     term4 = & 90x(y - 1)(4320x^9y^5 - 8712x^9y^4 + 5508x^9y^3 - 
+   126:    1116x^9y^2 - 21480x^8y^5 + 43320x^8y^4 - 27390x^8y^3 \\ & + 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-D_.tex (line 148)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   147: \begin{align*}
+>  148:     term5 = & 9(129600x^{10}y^6 - 393120x^{10}y^5 + 432036x^{10}y^4 - 
+   149:     203112x^{10}y^3 + 34596x^{10}y^2 - 640800x^9y^6 + 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-E_.tex (line 20)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    19: \begin{align}
+>   20:    Gx = &
+    21:   x(540x^3y^5 - 1350x^3y^4 + 900x^3y^3 + 30x^3y + 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-E_.tex (line 32)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    31: \begin{align}
+>   32:    Gy =&
+    33:   270x^5y^4 - 540x^5y^3 + 270x^5y^2 + 3x^5 - 675x^4y^4 + 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-E_.tex (line 53)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    52: \begin{align*}
+>   53:     term2 = & 540x^5y^3 - 810x^5y^2 + 270x^5y - 1350x^4y^3 + 
+    54:    2025x^4y^2 - 675x^4y + 540x^3y^5 - 1350x^3y^4 + 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-E_.tex (line 66)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    65: \begin{align*}
+>   66:     term4 =& -360
+    67:    x(x - 1)(2x - 1)(360x^5y^3 - 540x^5y^2 + 180x^5y - 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-E_.tex (line 77)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    76: \begin{align*}
+>   77:     term5 = & 1166400x^{10}y^6 - 3499200x^{10}y^5 + 3790800x^{10}y^4 - 
+    78:    1749600x^{10}y^3 + 291600x^{10}y^2 - 5832000x^9y^6 \\ & + 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-F_.tex (line 20)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    19: \begin{align}
+>   20:    Gx =&
+    21:   -270x^4y^5 + 1335x^4y^4/2 - 435x^4y^3 + 15x^4 + 534x^3y^5 - 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-F_.tex (line 30)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    29: \begin{align}
+>   30:    Gy =&
+    31:   y(-540x^5y^3 + 1068x^5y^2 - 522x^5y + 1335x^4y^3 - 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-F_.tex (line 48)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    47: \begin{align}
+>   48:     term9 =& -y(540x^5y^3 - 1068x^5y^2 + 522x^5y - 1335x^4y^3 + 
+    49:     2640x^4y^2 - 1290x^4y + 870x^3y^3 - 1720x^3y^2 + 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-G_.tex (line 19)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    18: \begin{align}
+>   19:    Gx =&
+    20:   \frac{x}{2}\cdot\big(360x^3y^5 - 900x^3y^4 + 600x^3y^3 + 60x^3y + 
+
+- file: sample\arxiv_sources\2604.02285v1\Group-G_.tex (line 31)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    30: \begin{align}
+>   31:    Gy =&
+    32:   180x^5y^4 - 360x^5y^3 + 180x^5y^2 + 6x^5 - 450x^4y^4 + 
+
+- file: sample\arxiv_sources\2604.02285v1\Original-Groups.tex (line 38)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    37: \begin{align*}
+>   38:     Gx = & x^2(1 - x)^2((b - a)(180y^5 - 450y^4 + 300y^3) + (d - c)(-180y^5 + 450y^4 - 300y^3 + 30)) \\ & + 15x^4 - 31x^3 + (33/2)x^2 - (1/2)x - 1/2
+    39: \end{align*}
+
+- file: sample\arxiv_sources\2604.02285v1\Original-Groups.tex (line 147)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   146: \begin{align*}
+>  147:    Gx = & x^4y^5(-180a + 180b + 180c - 180d + 90) + 
+   148:  x^4y^4(450a - 450b - 450c + 450d - 435/2) \\ & + 
+
+- file: sample\arxiv_sources\2604.02285v1\Original-Groups.tex (line 164)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   163: \begin{align*}
+>  164:    Gy =&
+   165:   x^5y^4(-180a + 180b + 180c - 180d + 90) + 
+
+- file: sample\arxiv_sources\2604.02285v1\Original-Groups.tex (line 193)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   192: \begin{align*}
+>  193:     Py = & (1 - x)y^2((-90x^4 + 285x^3/2 - 45x^2/2 - 45x/2 - 15/2)y^2 + (174x^4 - 276x^3 \\ & + 44x^2 + 44x + 14)y - 81x^4 + 129x^3 - 21x^2 - 21x - 6) - 15y^2(y - 1)^2 - 1/2
+   194: \end{align*}
+
+- file: sample\arxiv_sources\2604.02285v1\Original-Groups.tex (line 309)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   308: \begin{align*}
+>  309:    Gx = & 180x^4y^5(-a + b + c - d) + 15x^4y^4(60a - 60b - 60c + 60d - 1)/2 +15x^4y^3(-20a + 20b + 20c - 20d + 1) \\ &  - 15x^4y + 15x^4(-4c + 4d + 1)/2 + 6x^3y^5(60a - 60b - 60c + 60d + 1) + 900x^3y^4(-a + b + c - d) \\ &  + 20x^3y^3(30a - 30b - 30c + 30d - 1) + 30x^3y + x^3(60c - 60d - 17) + 9x^2y^5(-20a + 20b + 20c - 20d - 1) \\ &  + 15x^2y^4(30a - 30b - 30c + 30d + 1) + 300x^2y^3(-a + b + c - d) - 15x^2y + 3x^2(-20c + 20d + 7)/2 \\ &  - x/2 + 3y^5 - 15y^4/2 + 5y^3 - 1/2
+   310: \end{align*}
+
+- file: sample\arxiv_sources\2604.02285v1\Original-Groups.tex (line 316)
+  error: =&
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   315: \begin{align*}
+>  316:    Gy =&
+   317:   180x^5y^4(-a + b + c - d) +  6x^5y^3(60a - 60b - 60c + 60d - 1) + 9x^5y^2(-20a + 20b + 20c - 20d + 1) \\ & - 3x^5 + 15x^4y^4(60a - 60b - 60c + 60d + 1)/2 + 900x^4y^3(-a + b + c - d) \\ & + 15x^4y^2(30a - 30b - 30c + 30d - 1) + 15x^4/2 + 15x^3y^4(-20a + 20b + 20c - 20d - 1) \\ & + 20x^3y^3(30a - 30b - 30c + 30d + 1) + 300x^3y^2(-a + b + c - d) - 5x^3 \\ & + 15xy^4 - 30xy^3 + 15xy^2 + 15y^4(4a - 4c +1)/2 + 15y^3(-4a + 4c - 1) \\ & + 15y^2(4a - 4c + 1)/2 - y/2
+
+- file: sample\arxiv_sources\2604.02285v1\Original-Groups.tex (line 336)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+   335: \begin{align*}
+>  336:     Py = & (1 - x)^3(1 - y)^2(-15/2(x + 1)y^2 + (6x^2 + 3x + 1)(y + 1/2)) - 15y^2(y - 1)^2 - 1/2
+   337: \end{align*}
+
 - file: sample\submodules\OpenLogic\content\methods\induction\structural-induction.tex (line 25)
   error: = &
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align environments.
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
     24: \begin{align*}
 >   25:   o(s_1, s_2) = & [s_1 \circ s_2]
     26: \end{align*}

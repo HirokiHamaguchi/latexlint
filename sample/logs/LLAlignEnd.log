@@ -1,10 +1,80 @@
-[CODE] LLAlignEnd (6)
+[CODE] LLAlignEnd (16)
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 392)
   error: \\
   message: \\ at the enf of align-like environments might be unnecessary.
    391:     &= \text{(1): query-to-key} + \text{(2): query-to-ce} \nonumber \\
 >  392:     &\quad \text{(3): ce-to-key} + \text{(4): ce-to-ce}\nonumber \\
    393: \end{align}}
+
+- file: sample\arxiv_sources\2603.16313v2\appendix_a.tex (line 13)
+  error: \\
+  message: \\ at the enf of align-like environments might be unnecessary.
+    12: \begin{align}
+>   13:     \ln{\mathcal{L}_k}(t_1, \cdots, t_L) &= \ln \left(\left[\prod^L_{i=1} \lambda^{*}_k(t_i)\right]\exp{(-\int^T_0 \lambda^{*}_k(t) dt)}\right) \notag\\
+    14: \end{align}
+
+- file: sample\arxiv_sources\2603.16313v2\c2.tex (line 527)
+  error: \\
+  message: \\ at the enf of align-like environments might be unnecessary.
+   526:     &= \text{(1): query-to-key} + \text{(2): query-to-ce} \nonumber \\
+>  527:     &\quad \text{(3): ce-to-key} + \text{(4): ce-to-ce}\nonumber \\
+   528: \end{align}
+
+- file: sample\arxiv_sources\2604.02117v1\main.tex (line 1289)
+  error: \\
+  message: \\ at the enf of align-like environments might be unnecessary.
+  1288:     mk_{L_\be}(\de_n,\de_m)&= mk_{L_\be}(\wt{\de_n},\wt{\de_m})\\
+> 1289:     & =  \sup\{|\wt{\de_n}(f)-\wt{\de_m}(f)| : f\in sa(C(\overline{\N})), L_\be(f)\leq 1\}\\
+  1290:     \end{align*} 
+
+- file: sample\arxiv_sources\2604.02199v1\main.tex (line 103)
+  error: \\
+  message: \\ at the enf of align-like environments might be unnecessary.
+   102: 			\frac{d\theta_{i}^{(1)}}{dt}=\omega_{i}^{(1)}+K \sum_{j=1}^{N} A_{ij}^{(1)} \sin\left(\theta_{j}^{(1)}-\theta_{i}^{(1)}-\alpha^{(1)}\right)+ K \sin\left(\theta_{i}^{(2)}-\theta_{i}^{(1)}\right), \\
+>  103: 			\frac{d\theta_{i}^{(2)}}{dt}=\omega_{i}^{(2)}+K \sum_{j=1}^{N} A_{ij}^{(2)} \sin\left(\theta_{j}^{(2)}-\theta_{i}^{(2)}-\alpha^{(2)}\right)+ K \sin\left(\theta_{i}^{(1)}-\theta_{i}^{(2)}\right), \\
+   104: 		\end{aligned}    
+
+- file: sample\arxiv_sources\2604.02220v1\03-experiment.tex (line 209)
+  error: \\
+  message: \\ at the enf of align-like environments might be unnecessary.
+   208: \begin{align*}
+>  209:     \sigma_{j} &= \alpha_j \cdot \theta_Y % \\
+   210: \end{align*}
+
+- file: sample\arxiv_sources\2604.02260v1\main.tex (line 737)
+  error: \\
+  message: \\ at the enf of align-like environments might be unnecessary.
+   736:         \\
+>  737:         &=  \E_{\vw_{0:T-1}}^{\vpi_n,\vmu_{m:n-1}}\left[\sum^{T-1}_{t=0} J_{t+1}(\vpi_n, \vf_n^*, \vmu_{m:n-1}(\vx_{t}, \vpi_n(\vx_t))+\vw_t) -  J_{t+1}(\vpi_n, \vf_n^*, \vf_n^*(\hallucinated{\vx}_{t}, \vpi_n(\hallucinated{\vx}_t)) + \vw_t)\right]. \\
+   738:     \end{align*}
+
+- file: sample\arxiv_sources\2604.02260v1\main.tex (line 743)
+  error: \\
+  message: \\ at the enf of align-like environments might be unnecessary.
+   742:         &=  \left| \E_{\vw_{0:T-1}}^{\vpi_n, \vmu_{m:n-1}}\left[\sum^{T-1}_{t=0} J_{t+1}(\vpi_n, \vf_n^*, \vmu_{m:n-1}(\vx_{t}, \vpi_n(\vx_t))+\vw_t) -  J_{t+1}(\vpi_n, \vf_n^*, \vf_n^*(\hallucinated{\vx}_{t}, \vpi_n(\hallucinated{\vx}_t)) + \vw_t)\right]\right| \\
+>  743:  &\leq \sum^{T-1}_{t=0}  \E^{\vpi_n, \vmu_{m:n-1}}_{\vw_{0:t-1}}\left[\left|\E_{\vw_{t}}\left[J_{t+1}(\vpi_n, \vf_n^*, \vmu_{m:n-1}(\hallucinated{\vx}_{t}, \vpi_n(\hallucinated{\vx}_t)) + \vw_t) -  J_{t+1}(\vpi_n, \vf_n^*, \vf_n^*(\hallucinated{\vx}_{t}, \vpi_n(\hallucinated{\vx}_t)) + \vw_t) \vert \vx_t \right]\right|\right].\\
+   744:     \end{align*}
+
+- file: sample\arxiv_sources\2604.02291v1\main.tex (line 216)
+  error: \\
+  message: \\ at the enf of align-like environments might be unnecessary.
+   215: Q_m &= 2B \times \left[ nR + nC(P+1) + 2 \times RC(P+1) \right]\\ 
+>  216: &= (128n + 2048)~B \\
+   217: \end{aligned}
+
+- file: sample\arxiv_sources\2604.02291v1\main.tex (line 224)
+  error: \\
+  message: \\ at the enf of align-like environments might be unnecessary.
+   223: \begin{aligned}
+>  224: &\frac{Wk}{\pi_{TE}} \geq \frac{Q_m}{\beta_{loc.}} \rightarrow \frac{\pi_{TE}}{\beta_{loc.}} \leq \frac{Wk}{Q_m} \rightarrow \frac{\pi_{TE}}{\beta_{loc.}} \leq 8~MACs/B\\
+   225: \end{aligned}
+
+- file: sample\arxiv_sources\2604.02306v1\Exp_Sums_Multi_GL.tex (line 1761)
+  error: \\
+  message: \\ at the enf of align-like environments might be unnecessary.
+  1760: &\ll \Big(\frac{y}{\sqrt{q_1}}+ \sqrt{yq_1\log(2q_1)}\Big)(\log y)^{-1/4+o(1)}+ye^{-(\frac12-\frac{\ep}{2})\sqrt{\log y}}\\
+> 1761: &\ll \Big(\frac{\sqrt{xy}}{\sqrt{q}}+ \sqrt{yq\log q} \Big)(\log y)^{-1/4+o(1)}+ye^{-(\frac12-\frac{\ep}{2})\sqrt{\log y}}\\
+  1762:  \end{align*} 
 
 - file: sample\submodules\OpenLogic\content\lambda-calculus\lambda-definability\arithmetical-functions.tex (line 44)
   error: \\

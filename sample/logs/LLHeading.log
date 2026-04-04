@@ -1,4 +1,4 @@
-[CODE] LLHeading (7)
+[CODE] LLHeading (9)
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 299)
   error: \subsubsection{
   message: Found \subsubsection without a preceding \subsection.
@@ -19,6 +19,20 @@
    452: 
 >  453: \subsubsection*{Acknowledgments}
    454: We would like to thank Markus Kliegl for the original suggestion to explore text based browsers, and Ying Lin for their helpful comments and suggestions.
+
+- file: sample\arxiv_sources\2604.02221v1\MAIN_arXiv.tex (line 497)
+  error: \subsubsection{
+  message: Found \subsubsection without a preceding \subsection.
+   496: \begin{credits}
+>  497: \subsubsection{\ackname} 
+   498: We are grateful for the support provided by National Science Foundation under Grant No. 2247790 and Grant No. 2112532. 
+
+- file: sample\arxiv_sources\2604.02320v1\X_suppl.tex (line 179)
+  error: \subsubsection*{
+  message: Found \subsubsection without a preceding \subsection.
+   178: 
+>  179: \subsubsection*{Project Lead} Shunsuke Saito.
+   180: 
 
 - file: sample\submodules\coursebook\appendix\appendix.tex (line 337)
   error: \subsubsection{

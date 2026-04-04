@@ -67,6 +67,20 @@ def main():
             continue
         if f.startswith("make_") or f.startswith("test_"):
             functions.append(f[:-3])
+
+    executed_in_this_run = set()
+    with open(__file__, "r", encoding="utf-8") as f:
+        for line in f:
+            for func in functions:
+                if func in line and func not in executed_in_this_run:
+                    executed_in_this_run.add(func)
+    if any(func not in executed_in_this_run for func in functions):
+        not_executed = ""
+        for func in functions:
+            if func not in executed_in_this_run:
+                not_executed += f"  - {func}\n"
+        raise Exception("Not executed functions:\n" + not_executed)
+
     print("All done!")
     print("To update Qiita, run this script with '-updateQiita'.")
 

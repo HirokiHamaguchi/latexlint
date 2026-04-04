@@ -1,4 +1,4 @@
-[CODE] LLBig (36)
+[CODE] LLBig (43)
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 178)
   error: \otimes_
   message: Consider using \bigotimes for subscripts and superscripts.
@@ -250,4 +250,53 @@
    449: A hypercohomology $\text{HP}^*(M_3)$ was constructed by Abouzaid-Manolescu in \cite{AM20}, where it was conjectured to be isomorphic to instanton Floer homology assigned to $M_3$ for the complex gauge group $SL(2,\mathbb{C})$.  
 >  450: Its construction  was via a Heegaard split of $M_3=M'_3 \cup_{C}M''_3$ along $C$ of genus $g$, and the intersection of the two associated Lagrangians in the moduli space $X_{\text{irr}}(C)$  of irreducible flat $SL(2, \mathbb{C})$-connections on $C$ (that represent solutions extendable to $M'_3$ and $M''_3$, respectively), to which one can associate a perverse sheaf of vanishing cycles. $\text{HP}^*(M_3)$ is then the hypercohomology of this perverse sheaf of vanishing cycles in $X_{\text{irr}}(M_3)$, where it is an invariant of $M_3$ independent of the Heegaard split. 
    451: 
+
+- file: sample\arxiv_sources\2604.02116v1\mainV2.tex (line 95)
+  error: \oplus_
+  message: Consider using \bigoplus for subscripts and superscripts.
+    94: 
+>   95: \noindent and, $\lbrace \psi(x - k), k \in \mathbb{Z}\rbrace$ constitutes a base for $W_0$, and scale and translation of this basis defined a basis for $W_j$. Since $\bigcup V_j =  L_2(\mathbb{R})$, and $V_{j + 1} = V_j \oplus W_j$ we say, for some integer $j_0 > 0$, that $ L_2(\mathbb{R}) = V_{j_0} \oplus_{j > j_0} W_j$ which means that any $L_2$ function can be written as 
+    96: 
+
+- file: sample\arxiv_sources\2604.02117v1\main.tex (line 984)
+  error: \cup_
+  message: Consider using \bigcup for subscripts and superscripts.
+   983: \begin{proposition}\label{p:comm-ex}
+>  984:     Let $(X, d)$ be a locally compact metric space such that $d$ extends to a metric $\wt{d}$ on the one-point compactification $\overline{X}=X\cup \{\infty\}$ that metrizes its topology. Let $\A=\overline{\cup_{n\in \N}\A_n}^{\|\cdot\|_\A}$ be a unital AF algebra equipped with faithful tracial state $\tau$ such that $\A_1=\C1_\A$, and for every $n\in \N$, $\A_n$ is a finite-dimensional C*-subalgebra of $\A$, $1_\A\in \A_n$, and $\A_n\subseteq \A_{n+1}$. Let $(\be(n))_{n\in \N}$ be a sequence of positive reals that converges to $0$.  Let $L_{\wt{d}}^{\A, \be}$ be the extended seminorm on $sa(C(\overline{X}, \A))$ of \cite[Theorem 3.10]{Aguilar19}. 
+   985:     
+
+- file: sample\arxiv_sources\2604.02208v1\MurashkaKuptsova.tex (line 288)
+  error: \cap_
+  message: Consider using \bigcap for subscripts and superscripts.
+   287: 
+>  288: \begin{proof} $(1)$ Let $\mathcal{K}$ be the set of all weak $\mathfrak{F}$-subnormalizers of $\mathfrak{H}$-subgroups of $G$ and $T\in \mathcal{K}$. Then $T$ is a weak $\mathfrak{F}$-subnormalizer of some $\mathfrak{H}$-subgroup $H$. Since $\mathfrak{H}$ is a class of group, $H^{\alpha}\in \mathfrak{H}$ for any $\alpha\in \mathrm{Aut}(G)$. Then $T^\alpha\in \mathcal{K}$ for any $\alpha\in \mathrm{Aut}(G)$ by Lemma~\ref{lem2}. Note that $$(\mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G))^{\alpha}=(\cap_{T\in \mathcal{K}}T)^{\alpha}=(\cap_{T\in \mathcal{K}}T^{\alpha^{-1}})^\alpha=\cap_{T\in \mathcal{K}}T^{\alpha^{-1}\alpha}=\cap_{T\in \mathcal{K}}T=\mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G)$$ for any $\alpha\in \mathrm{Aut}(G)$. Therefore $\mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G)$ is the characteristic subgroup of $G$.
+   289: 
+
+- file: sample\arxiv_sources\2604.02208v1\MurashkaKuptsova.tex (line 288)
+  error: \cap_
+  message: Consider using \bigcap for subscripts and superscripts.
+   287: 
+>  288: \begin{proof} $(1)$ Let $\mathcal{K}$ be the set of all weak $\mathfrak{F}$-subnormalizers of $\mathfrak{H}$-subgroups of $G$ and $T\in \mathcal{K}$. Then $T$ is a weak $\mathfrak{F}$-subnormalizer of some $\mathfrak{H}$-subgroup $H$. Since $\mathfrak{H}$ is a class of group, $H^{\alpha}\in \mathfrak{H}$ for any $\alpha\in \mathrm{Aut}(G)$. Then $T^\alpha\in \mathcal{K}$ for any $\alpha\in \mathrm{Aut}(G)$ by Lemma~\ref{lem2}. Note that $$(\mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G))^{\alpha}=(\cap_{T\in \mathcal{K}}T)^{\alpha}=(\cap_{T\in \mathcal{K}}T^{\alpha^{-1}})^\alpha=\cap_{T\in \mathcal{K}}T^{\alpha^{-1}\alpha}=\cap_{T\in \mathcal{K}}T=\mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G)$$ for any $\alpha\in \mathrm{Aut}(G)$. Therefore $\mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G)$ is the characteristic subgroup of $G$.
+   289: 
+
+- file: sample\arxiv_sources\2604.02208v1\MurashkaKuptsova.tex (line 288)
+  error: \cap_
+  message: Consider using \bigcap for subscripts and superscripts.
+   287: 
+>  288: \begin{proof} $(1)$ Let $\mathcal{K}$ be the set of all weak $\mathfrak{F}$-subnormalizers of $\mathfrak{H}$-subgroups of $G$ and $T\in \mathcal{K}$. Then $T$ is a weak $\mathfrak{F}$-subnormalizer of some $\mathfrak{H}$-subgroup $H$. Since $\mathfrak{H}$ is a class of group, $H^{\alpha}\in \mathfrak{H}$ for any $\alpha\in \mathrm{Aut}(G)$. Then $T^\alpha\in \mathcal{K}$ for any $\alpha\in \mathrm{Aut}(G)$ by Lemma~\ref{lem2}. Note that $$(\mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G))^{\alpha}=(\cap_{T\in \mathcal{K}}T)^{\alpha}=(\cap_{T\in \mathcal{K}}T^{\alpha^{-1}})^\alpha=\cap_{T\in \mathcal{K}}T^{\alpha^{-1}\alpha}=\cap_{T\in \mathcal{K}}T=\mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G)$$ for any $\alpha\in \mathrm{Aut}(G)$. Therefore $\mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G)$ is the characteristic subgroup of $G$.
+   289: 
+
+- file: sample\arxiv_sources\2604.02208v1\MurashkaKuptsova.tex (line 288)
+  error: \cap_
+  message: Consider using \bigcap for subscripts and superscripts.
+   287: 
+>  288: \begin{proof} $(1)$ Let $\mathcal{K}$ be the set of all weak $\mathfrak{F}$-subnormalizers of $\mathfrak{H}$-subgroups of $G$ and $T\in \mathcal{K}$. Then $T$ is a weak $\mathfrak{F}$-subnormalizer of some $\mathfrak{H}$-subgroup $H$. Since $\mathfrak{H}$ is a class of group, $H^{\alpha}\in \mathfrak{H}$ for any $\alpha\in \mathrm{Aut}(G)$. Then $T^\alpha\in \mathcal{K}$ for any $\alpha\in \mathrm{Aut}(G)$ by Lemma~\ref{lem2}. Note that $$(\mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G))^{\alpha}=(\cap_{T\in \mathcal{K}}T)^{\alpha}=(\cap_{T\in \mathcal{K}}T^{\alpha^{-1}})^\alpha=\cap_{T\in \mathcal{K}}T^{\alpha^{-1}\alpha}=\cap_{T\in \mathcal{K}}T=\mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G)$$ for any $\alpha\in \mathrm{Aut}(G)$. Therefore $\mathcal{I}_{\mathfrak{H}}^{\mathfrak{F}}(G)$ is the characteristic subgroup of $G$.
+   289: 
+
+- file: sample\arxiv_sources\2604.02306v1\Exp_Sums_Multi_GL.tex (line 2640)
+  error: \cup_
+  message: Consider using \bigcup for subscripts and superscripts.
+  2639: since $\sum_{p\mid r}1/p\ll \log_2 r\ll \log_3 x$. 
+> 2640:  For each $r\mid q$, let $\mathcal{X}(r)$ be the set of characters $\chi\bmod q/r$ such that $\chi$ is induced by one of the $\chi_j$ for $1\leq j\leq J-1$. Note that $|\mathcal{X}(r)|\leq J-1$. Using the Cauchy-Schwarz inequality, together with Theorem \ref{Thm:PretentiousLSieve} and the estimates   \eqref{Eq:BoundRepulsive} and \eqref{Eq:DistanceImprimitive},   we deduce that the contribution to \eqref{Eq:IdentityCharacters}  of all characters $\chi \notin \cup_{r\mid q} \mathcal{X}(r) $ is
+  2641: \begin{align}\label{Eq:BadCharPretentious}
 

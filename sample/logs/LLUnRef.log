@@ -1,602 +1,1932 @@
-[CODE] LLUnRef (86)
+[CODE] LLUnRef (276)
 - file: sample\arxiv_sources\1609.03457v1\tables_for-avail-engines-chapter.tex (line 12)
   error: \label{table:Web-available-main}
-  message: Label "table:Web-available-main" is defined but never referenced.
+  message: The label "table:Web-available-main" is defined but unused in this file (possibly elsewhere).
     11: \centering
 >   12: \label{table:Web-available-main}
     13: \begin{tabular}{SlSlSlSlSlSl}  \toprule %
 
 - file: sample\arxiv_sources\1609.03457v1\tables_for-avail-engines-chapter.tex (line 124)
   error: \label{table:web-available-query}
-  message: Label "table:web-available-query" is defined but never referenced.
+  message: The label "table:web-available-query" is defined but unused in this file (possibly elsewhere).
    123: \caption{Querying in Web-Available Engines}
 >  124: \label{table:web-available-query}
    125: \small
 
 - file: sample\arxiv_sources\1609.03457v1\tables_for-avail-engines-chapter.tex (line 278)
   error: \label{table:downloadable-main}
-  message: Label "table:downloadable-main" is defined but never referenced.
+  message: The label "table:downloadable-main" is defined but unused in this file (possibly elsewhere).
    277: \centering
 >  278: \label{table:downloadable-main}
    279: \begin{tabular}{SlSlSlSlSlSlSlSl}  \toprule %
 
 - file: sample\arxiv_sources\1609.03457v1\tables_for-avail-engines-chapter.tex (line 358)
   error: \label{table:downloadable-querying}
-  message: Label "table:downloadable-querying" is defined but never referenced.
+  message: The label "table:downloadable-querying" is defined but unused in this file (possibly elsewhere).
    357: \caption{Querying in Downloadable Versions}
 >  358: \label{table:downloadable-querying}
    359: \small
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 208)
   error: \label{fig:1}
-  message: Label "fig:1" is defined but never referenced.
+  message: The label "fig:1" is defined but unused in this file (possibly elsewhere).
    207: \caption{$\DPB$, $\ATR$, and some theories of hyperarithmetic analysis.  The new results are those concerning $\DPB$.  A double arrow indicates a 
 >  208: strict implication.}\label{fig:1}
    209: \end{figure}
 
 - file: sample\arxiv_sources\1909.12665v2\ADGFEM_corrected.tex (line 674)
   error: \label{fig:prichn2b}
-  message: Label "fig:prichn2b" is defined but never referenced.
+  message: The label "fig:prichn2b" is defined but unused in this file (possibly elsewhere).
    673: \begin{figure}[h]
 >  674:   \label{fig:prichn2b}
    675:   \centering
 
 - file: sample\arxiv_sources\2103.12048v3\2_data.tex (line 79)
   error: \label{fig:turnspertype}
-  message: Label "fig:turnspertype" is defined but never referenced.
+  message: The label "fig:turnspertype" is defined but unused in this file (possibly elsewhere).
     78: \includegraphics[width=\linewidth]{images/total_sents2.pdf}\vspace{-0.25cm}
 >   79: \caption{}\label{fig:turnspertype}
     80: \end{subfigure}~
 
 - file: sample\arxiv_sources\2103.12048v3\2_data.tex (line 83)
   error: \label{fig:numwords}
-  message: Label "fig:numwords" is defined but never referenced.
+  message: The label "fig:numwords" is defined but unused in this file (possibly elsewhere).
     82: \includegraphics[width=\linewidth]{images/location_of_unks_train_all2.pdf}\vspace{-0.25cm}
 >   83: \caption{}\label{fig:numwords}
     84: \end{subfigure}
 
 - file: sample\arxiv_sources\2103.12048v3\2_data.tex (line 90)
   error: \label{fig:distributions}
-  message: Label "fig:distributions" is defined but never referenced.
+  message: The label "fig:distributions" is defined but unused in this file (possibly elsewhere).
     89: \caption{Distributions of  \textbf{(a)} number of sentences per problem, and \textbf{(b)} position of unknown.}
 >   90: \label{fig:distributions}
     91: \end{figure}
 
 - file: sample\arxiv_sources\2105.03843v1\IsMathUseful.tex (line 62)
   error: \label{figRV}
-  message: Label "figRV" is defined but never referenced.
+  message: The label "figRV" is defined but unused in this file (possibly elsewhere).
     61: 	\caption{\textit{Math describes reality}, according to young Roby Vic, a Disney version of the ESA austronaut Roberto Vittori in the story \textit{3 gradini per le stelle --- Paperino Paperotto, Roby Vic e i conti... alla rovescia} (\textit{3 steps to the stars --- Donald Duckling, Roby Vic and the countdowns}) \cite{RV}}
 >   62: 	\label{figRV}
     63: \end{figure}
 
 - file: sample\arxiv_sources\2105.03843v1\IsMathUseful.tex (line 115)
   error: \label{figRedBaron}
-  message: Label "figRedBaron" is defined but never referenced.
+  message: The label "figRedBaron" is defined but unused in this file (possibly elsewhere).
    114: 	\caption{The cover of the album Snoopy vs the Red Baron (imagine from wikipedia)}
 >  115: 	\label{figRedBaron}
    116: \end{figure}
 
 - file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 769)
   error: \label{}
-  message: Label "" is defined but never referenced.
+  message: The label "" is defined but unused in this file (possibly elsewhere).
    768: \caption{text of caption}
 >  769: \label{}
    770: \end{figure}
 
 - file: sample\arxiv_sources\2307.16112v1\4-system.tex (line 182)
   error: \label{fig:implementation}
-  message: Label "fig:implementation" is defined but never referenced.
+  message: The label "fig:implementation" is defined but unused in this file (possibly elsewhere).
    181: \caption{Example results of figure extraction, math formula extraction, and graph identification.}
 >  182: \label{fig:implementation}
    183: \end{figure}
 
 - file: sample\arxiv_sources\2312.01661v2\samplebody-conf.tex (line 100)
   error: \label{daposedit}
-  message: Label "daposedit" is defined but never referenced.
+  message: The label "daposedit" is defined but unused in this file (possibly elsewhere).
     99: \begin{table}[]
 >  100: \label{daposedit}    
    101: \vspace{10pt}
 
 - file: sample\arxiv_sources\2312.01661v2\samplebody-conf.tex (line 188)
   error: \label{table2}
-  message: Label "table2" is defined but never referenced.
+  message: The label "table2" is defined but unused in this file (possibly elsewhere).
    187: \caption{{\dataset} statistics by grades.} \label{tab:diffdist}
 >  188: \label{table2}
    189: \vspace{-10mm}
 
 - file: sample\arxiv_sources\2312.01661v2\samplebody-conf.tex (line 349)
   error: \label{tab:answer-unaware-results}
-  message: Label "tab:answer-unaware-results" is defined but never referenced.
+  message: The label "tab:answer-unaware-results" is defined but unused in this file (possibly elsewhere).
    348: \caption{\small{Answer-unaware question generation results in the context-aware setting.}}
 >  349: \label{tab:answer-unaware-results}
    350: \vspace{-10mm}
 
 - file: sample\arxiv_sources\2312.01661v2\samplebody-conf.tex (line 406)
   error: \label{tab:my_label}
-  message: Label "tab:my_label" is defined but never referenced.
+  message: The label "tab:my_label" is defined but unused in this file (possibly elsewhere).
    405: \caption{Human evaluation results in the context-unaware setting. The format is $\mu + \sigma$}
 >  406: \label{tab:my_label}
    407: \vspace{-7mm}
 
 - file: sample\arxiv_sources\2401.03238v1\Using_Large.tex (line 123)
   error: \label{tab:my-table}
-  message: Label "tab:my-table" is defined but never referenced.
+  message: The label "tab:my-table" is defined but unused in this file (possibly elsewhere).
    122: \caption{Agreement Among Human Graders}
 >  123: \label{tab:my-table}
    124: \vspace{10pt}
 
 - file: sample\arxiv_sources\2401.03238v1\Using_Large.tex (line 160)
   error: \label{tab:my-table}
-  message: Label "tab:my-table" is defined but never referenced.
+  message: The label "tab:my-table" is defined but unused in this file (possibly elsewhere).
    159: \caption{Performance Comparison of GPT-3.5-turbo and GPT-4}
 >  160: \label{tab:my-table}
    161: \vspace{10pt}
 
 - file: sample\arxiv_sources\2401.03238v1\Using_Large.tex (line 201)
   error: \label{fig:your_label}
-  message: Label "fig:your_label" is defined but never referenced.
+  message: The label "fig:your_label" is defined but unused in this file (possibly elsewhere).
    200:     \caption{Scenario from \textit{Reacting to Errors} lesson}
 >  201:     \label{fig:your_label}
    202: \end{figure}
 
 - file: sample\arxiv_sources\2401.03238v1\Using_Large.tex (line 227)
   error: \label{tab:my-table}
-  message: Label "tab:my-table" is defined but never referenced.
+  message: The label "tab:my-table" is defined but unused in this file (possibly elsewhere).
    226: \caption{Criteria with Explanations/Actions by the Tutor}
 >  227: \label{tab:my-table}
    228: \vspace{10pt}
 
 - file: sample\arxiv_sources\2401.03238v1\Using_Large.tex (line 248)
   error: \label{tab:my-table}
-  message: Label "tab:my-table" is defined but never referenced.
+  message: The label "tab:my-table" is defined but unused in this file (possibly elsewhere).
    247: \caption{Criteria with Annotated Example Utterances}
 >  248: \label{tab:my-table}
    249: \vspace{10pt}
 
 - file: sample\arxiv_sources\2402.06332v2\main.tex (line 114)
   error: \label{fig:head}
-  message: Label "fig:head" is defined but never referenced.
+  message: The label "fig:head" is defined but unused in this file (possibly elsewhere).
    113:  \caption{4-shot MATH performances with 256 times majority voting. Comparison is based on our pre-trained base model, Llemma \citep{llemma}, and Minerva \citep{Minerva}. The figure is modified from \cite{llemma}.}
 >  114:  \label{fig:head}
    115: \end{figure}
 
 - file: sample\arxiv_sources\2402.14804v1\03-Datasets.tex (line 46)
   error: \label{fig:sotas}
-  message: Label "fig:sotas" is defined but never referenced.
+  message: The label "fig:sotas" is defined but unused in this file (possibly elsewhere).
     45: \caption{State-of-the-art performance and corresponding model (\circled{1}: GPT-4V, \circled{2}: InternLM-XComposer2-VL-7B, \circled{3}: GPT-4 Code Interpreter) of several mathematical benchmarks in \textbf{zero-shot} settings. Our~\datasetname~benchmark is markedly more challenging compared to existing text-only and multi-modal mathematical benchmarks. Results of other benchmarks are either from their official website or \href{https://paperswithcode.com/sota/}{Papers With Code}.}
 >   46: \label{fig:sotas}
     47: \end{figure}
 
 - file: sample\arxiv_sources\2407.13690v2\appendix.tex (line 232)
   error: \label{tab:train_time}
-  message: Label "tab:train_time" is defined but never referenced.
+  message: The label "tab:train_time" is defined but unused in this file (possibly elsewhere).
    231:   \caption{Examples of training time cost.}
 >  232:   \label{tab:train_time}
    233: \end{table}
 
 - file: sample\arxiv_sources\2407.13690v2\comparison_to_non_vanilla.tex (line 27)
   error: \label{tab:comparison_to_non_vanilla}
-  message: Label "tab:comparison_to_non_vanilla" is defined but never referenced.
+  message: The label "tab:comparison_to_non_vanilla" is defined but unused in this file (possibly elsewhere).
     26:   the official implementations have not been open-sourced.}
 >   27:   \label{tab:comparison_to_non_vanilla}
     28: \end{table}
 
 - file: sample\arxiv_sources\2407.13690v2\datasets.tex (line 37)
   error: \label{tab:datasets}
-  message: Label "tab:datasets" is defined but never referenced.
+  message: The label "tab:datasets" is defined but unused in this file (possibly elsewhere).
     36:   }
 >   37:   \label{tab:datasets}
     38:   \vspace{-15pt}
 
 - file: sample\arxiv_sources\2407.13690v2\domain_wise_math.tex (line 50)
   error: \label{tab:domain_wise_math}
-  message: Label "tab:domain_wise_math" is defined but never referenced.
+  message: The label "tab:domain_wise_math" is defined but unused in this file (possibly elsewhere).
     49:   score within the respective base model.}
 >   50:   \label{tab:domain_wise_math}
     51: \end{table}
 
 - file: sample\arxiv_sources\2407.13690v2\dsmath_dart_rl.tex (line 24)
   error: \label{tab:dsmath_dart_rl}
-  message: Label "tab:dsmath_dart_rl" is defined but never referenced.
+  message: The label "tab:dsmath_dart_rl" is defined but unused in this file (possibly elsewhere).
     23:   respective base model.}
 >   24:   \label{tab:dsmath_dart_rl}
     25: \end{table}
 
 - file: sample\arxiv_sources\2407.13690v2\level_wise_math_coverage.tex (line 25)
   error: \label{tab:level_wise_math_coverage}
-  message: Label "tab:level_wise_math_coverage" is defined but never referenced.
+  message: The label "tab:level_wise_math_coverage" is defined but unused in this file (possibly elsewhere).
     24:   ensure there is at least one correct response for each query.}
 >   25:   \label{tab:level_wise_math_coverage}
     26: \end{table}
 
 - file: sample\arxiv_sources\2407.13690v2\main_results.tex (line 194)
   error: \label{tab:main-results}
-  message: Label "tab:main-results" is defined but never referenced.
+  message: The label "tab:main-results" is defined but unused in this file (possibly elsewhere).
    193:   }
 >  194:   \label{tab:main-results}
    195:   \vspace{-15pt}
 
 - file: sample\arxiv_sources\2409.02834v3\dataset_overview.tex (line 5)
   error: \label{table: Overview}
-  message: Label "table: Overview" is defined but never referenced.
+  message: The label "table: Overview" is defined but unused in this file (possibly elsewhere).
      4: \caption{Key statistics of CMM-Math. }
 >    5: \label{table: Overview}
      6: \vspace{-3mm}
 
 - file: sample\arxiv_sources\2409.02834v3\model_params.tex (line 5)
   error: \label{table: model_param}
-  message: Label "table: model_param" is defined but never referenced.
+  message: The label "table: model_param" is defined but unused in this file (possibly elsewhere).
      4: \caption{Detail of \texttt{Math-LMM} parameters}
 >    5: \label{table: model_param}
      6: \vspace{-2mm}
 
 - file: sample\arxiv_sources\2409.02834v3\test_dataset.tex (line 6)
   error: \label{table: detailed statics}
-  message: Label "table: detailed statics" is defined but never referenced.
+  message: The label "table: detailed statics" is defined but unused in this file (possibly elsewhere).
      5: \caption{Detailed statistics of CMM-Math datasets. }
 >    6: \label{table: detailed statics}
      7: \vspace{-2mm}
 
 - file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 239)
   error: \label{fig:SBI-RAG}
-  message: Label "fig:SBI-RAG" is defined but never referenced.
+  message: The label "fig:SBI-RAG" is defined but unused in this file (possibly elsewhere).
    238:   \caption{Illustration of SBI-RAG Architecture}
 >  239:   \label{fig:SBI-RAG}
    240: \end{figure}
 
 - file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 540)
   error: \label{GSM8k}
-  message: Label "GSM8k" is defined but never referenced.
+  message: The label "GSM8k" is defined but unused in this file (possibly elsewhere).
    539:   \caption{GSM8K dataset example problems}
 >  540:   \label{GSM8k}
    541: \end{figure}
 
 - file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 625)
   error: \label{fig:Reasoning_score}
-  message: Label "fig:Reasoning_score" is defined but never referenced.
+  message: The label "fig:Reasoning_score" is defined but unused in this file (possibly elsewhere).
    624:     \caption{Reasoning Score SBI-RAG vs GPT-4}
 >  625:     \label{fig:Reasoning_score}
    626:   \end{minipage}
 
 - file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 632)
   error: \label{fig:Confusion_matrix_Reasoning}
-  message: Label "fig:Confusion_matrix_Reasoning" is defined but never referenced.
+  message: The label "fig:Confusion_matrix_Reasoning" is defined but unused in this file (possibly elsewhere).
    631:     \caption{Reasoning Score SBI-RAG vs GPT 3.5 Turbo}
 >  632:     \label{fig:Confusion_matrix_Reasoning}
    633:   \end{minipage}
 
 - file: sample\arxiv_sources\2411.00387v3\finetune_gpt.tex (line 23)
   error: \label{tab:fine_tune}
-  message: Label "tab:fine_tune" is defined but never referenced.
+  message: The label "tab:fine_tune" is defined but unused in this file (possibly elsewhere).
     22: \caption{First-level classification with various context lengths on GPT-3.5 and fine-tuned GPT-3.5.}
 >   23: \label{tab:fine_tune}
     24: \end{table}
 
 - file: sample\arxiv_sources\2411.00387v3\lstm_acc_data.tex (line 15)
   error: \label{tab: input_length}
-  message: Label "tab: input_length" is defined but never referenced.
+  message: The label "tab: input_length" is defined but unused in this file (possibly elsewhere).
     14: \caption{LSTM first-level classification accuracy based on different input context lengths. }
 >   15: \label{tab: input_length}
     16: \end{table}
 
 - file: sample\arxiv_sources\2411.00387v3\lstm_acc_model.tex (line 15)
   error: \label{tab: model_sizes}
-  message: Label "tab: model_sizes" is defined but never referenced.
+  message: The label "tab: model_sizes" is defined but unused in this file (possibly elsewhere).
     14: \caption{LSTM first-level classification accuracy based on different model sizes}
 >   15: \label{tab: model_sizes}
     16: \end{table}
 
 - file: sample\arxiv_sources\2411.00387v3\math_reasoning_res.tex (line 25)
   error: \label{tab:math_reason_res}
-  message: Label "tab:math_reason_res" is defined but never referenced.
+  message: The label "tab:math_reason_res" is defined but unused in this file (possibly elsewhere).
     24: \caption{Evaluation of LLMs on downstream mathematical reasoning tasks. \textbf{+ LoRA (\ours)} indicates that the corresponding model is first fine-tuned using LoRA on \ours before being evaluated on downstream mathematical reasoning tasks. The improvements from LoRA fine-tuning on \ours are highlighted in \textcolor{darkgreen}{darkgreen} (\(\uparrow x\)).}
 >   25: \label{tab:math_reason_res}
     26: \end{table}
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 410)
   error: \label{fig:carformer}
-  message: Label "fig:carformer" is defined but never referenced.
+  message: The label "fig:carformer" is defined but unused in this file (possibly elsewhere).
    409:     \caption{CarFormer architecture}
 >  410:     \label{fig:carformer}
    411: \end{figure}
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 560)
   error: \label{fig:exp_epredictor_arch}
-  message: Label "fig:exp_epredictor_arch" is defined but never referenced.
+  message: The label "fig:exp_epredictor_arch" is defined but unused in this file (possibly elsewhere).
    559:     \caption{F1 Score comparison with multiple Epredictor architectures in function of the number of observations.}
 >  560:     \label{fig:exp_epredictor_arch}
    561: \end{figure}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6901)
   error: \label{red}
-  message: Label "red" is defined but never referenced.
+  message: The label "red" is defined but unused in this file (possibly elsewhere).
   6900:         {\scalebox{0.40} {\includegraphics{Tangenten}} }
 > 6901: \caption{\label{red} {The red curve}}
   6902: \end{figure}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 6910)
   error: \label{bsp}
-  message: Label "bsp" is defined but never referenced.
+  message: The label "bsp" is defined but unused in this file (possibly elsewhere).
   6909:   {\includegraphics{onetang}} 
 > 6910:  \caption{\label{bsp} {Graph of $f$ and one tangent}}
   6911: 
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 8307)
   error: \label{}
-  message: Label "" is defined but never referenced.
+  message: The label "" is defined but unused in this file (possibly elsewhere).
   8306:   {\includegraphics{real-ana}} 
 > 8307: \caption{\label{} {Intersecting curves}}
   8308: \end{figure}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9628)
   error: \label{$r=0$}
-  message: Label "$r=0$" is defined but never referenced.
+  message: The label "$r=0$" is defined but unused in this file (possibly elsewhere).
   9627:   {\includegraphics{kurv}} 
 > 9628:   \caption{\label{$r=0$} $r=0$, $a=1$, $b=0$}
   9629: \end{figure}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9647)
   error: \label{$r=1$}
-  message: Label "$r=1$" is defined but never referenced.
+  message: The label "$r=1$" is defined but unused in this file (possibly elsewhere).
   9646:   {\includegraphics{kurv1}} 
 > 9647:    \caption{\label{$r=1$} $r=1$, $a=3$, $b=3$}
   9648: \end{figure}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 9704)
   error: \label{a-neg4}
-  message: Label "a-neg4" is defined but never referenced.
+  message: The label "a-neg4" is defined but unused in this file (possibly elsewhere).
   9703:   {\includegraphics{kurv5}} 
 > 9704:    \caption{\label{a-neg4} $a=9$, $b=18$ blau, $b=-18$ rot}
   9705: \end{figure}
 
 - file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 10313)
   error: \label{max-sigma}
-  message: Label "max-sigma" is defined but never referenced.
+  message: The label "max-sigma" is defined but unused in this file (possibly elsewhere).
  10312:   {\includegraphics{sigma}} 
 >10313: \caption{\label{max-sigma} The H\"older-Lipschitz constant $\sigma(\alpha)$}
  10314: \end{figure}
 
 - file: sample\arxiv_sources\2502.17387v1\main.tex (line 203)
   error: \label{fig:treemaps}
-  message: Label "fig:treemaps" is defined but never referenced.
+  message: The label "fig:treemaps" is defined but unused in this file (possibly elsewhere).
    202: \caption{The sources (left) and domains (right) of the \bigmath~dataset, scaled by size.}
 >  203: \label{fig:treemaps}
    204: \end{figure}
 
 - file: sample\arxiv_sources\2502.17387v1\main.tex (line 424)
   error: \label{fig:reformulation}
-  message: Label "fig:reformulation" is defined but never referenced.
+  message: The label "fig:reformulation" is defined but unused in this file (possibly elsewhere).
    423:     \caption{\textbf{Our reformulation strategy} first extracts key information, then reformulates the problem as open-ended, followed by a judgement of the reformulation and a final verification. The full process is detailed in Section~\ref{sec:reformulation_strategy}, with successful and failed examples of reformulation in Appendix~\ref{app:reformulation_examples}.}
 >  424:     \label{fig:reformulation}
    425: \end{figure}
 
 - file: sample\arxiv_sources\2502.17387v1\main.tex (line 977)
   error: \label{app:llama8b_rollout}
-  message: Label "app:llama8b_rollout" is defined but never referenced.
+  message: The label "app:llama8b_rollout" is defined but unused in this file (possibly elsewhere).
    976:     \end{text_full}
 >  977:     \label{app:llama8b_rollout}
    978: \end{figure}
 
 - file: sample\arxiv_sources\2502.17387v1\main.tex (line 1039)
   error: \label{app:llama405b_rollout}
-  message: Label "app:llama405b_rollout" is defined but never referenced.
+  message: The label "app:llama405b_rollout" is defined but unused in this file (possibly elsewhere).
   1038:     \end{text_full}
 > 1039:     \label{app:llama405b_rollout}
   1040: \end{figure}
 
 - file: sample\arxiv_sources\2502.20808v6\3_MI-MATH.tex (line 103)
   error: \label{tab:result_diffculty}
-  message: Label "tab:result_diffculty" is defined but never referenced.
+  message: The label "tab:result_diffculty" is defined but unused in this file (possibly elsewhere).
    102:     \caption{Result decomposition across question difficulty levels.}
 >  103:     \label{tab:result_diffculty}
    104:     \vspace{-5mm}
 
 - file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 555)
   error: \label{fig:placeholder}
-  message: Label "fig:placeholder" is defined but never referenced.
+  message: The label "fig:placeholder" is defined but unused in this file (possibly elsewhere).
+   554:     \includegraphics[width=0.95\linewidth]{plots/comparaison_cargo_nsamples.pdf}
+>  555:     \label{fig:placeholder}
+   556: \end{figure}
+
+- file: sample\arxiv_sources\2509.19112v3\neurips_2025.tex (line 555)
+  error: \label{fig:placeholder}
+  message: The label "fig:placeholder" is defined but unused in this file (possibly elsewhere).
    554:     \includegraphics[width=0.95\linewidth]{plots/comparaison_cargo_nsamples.pdf}
 >  555:     \label{fig:placeholder}
    556: \end{figure}
 
 - file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 102)
   error: \label{fig:interestingness}
-  message: Label "fig:interestingness" is defined but never referenced.
+  message: The label "fig:interestingness" is defined but unused in this file (possibly elsewhere).
    101:     \caption{Human interactions with mathematics involve not just solving problems, but deciding what problems are worth pursuing at all. LLMs, in many of their applications today, are asked to solve problems directly -- without ``choice'' in what to solve. Our work compares model and humans' judgments of problems at both the final judgment and the factors considered in that judgment.}%A gap remains: in settings where LLMs interact with mathematics in a human-like way, LLMs’ judgments of how interesting problems are and why they are interesting remains unexplored. In our work, we study two human participant pools, exploring how language models' assessments of interestigness can be compared to people both in the final assessment of whether the problem is interesting and in the \textit{process} by which a reasoner arrives at such a judgement (e.g., what factors are considered when judging interestingness).} %We conduct a first study comparing LLMs' judgments of problem interestingness to those of humans; we collect data from two human participant pools --- participants from a crowdsourcing website, and IMO participants --- and compare those to LLMs, showing ways in which LLMs' judgments align (and do not) with those of humans.}
 >  102:     \label{fig:interestingness}
    103: \end{figure}
 
 - file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 194)
   error: \label{fig:r2}
-  message: Label "fig:r2" is defined but never referenced.
+  message: The label "fig:r2" is defined but unused in this file (possibly elsewhere).
    193:     \caption{Correlation plots with $95\%$ bootstrapped confidence intervals for human vs. LLM interestingness ratings at temperature $1.0$. All plots for interestingness and difficulty correlations across temperatures and models are listed in Appendix \ref{app:model_corr}.}
 >  194:     \label{fig:r2}
    195: \end{figure}
 
 - file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 244)
   error: \label{fig:heatmap-prolific-int-1.0}
-  message: Label "fig:heatmap-prolific-int-1.0" is defined but never referenced.
+  message: The label "fig:heatmap-prolific-int-1.0" is defined but unused in this file (possibly elsewhere).
    243:     \caption{Interestingness (temp = 1.0)}
 >  244:     \label{fig:heatmap-prolific-int-1.0}
    245:   \end{subfigure}
 
 - file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 252)
   error: \label{fig:heatmap-prolific-chal-1.0}
-  message: Label "fig:heatmap-prolific-chal-1.0" is defined but never referenced.
+  message: The label "fig:heatmap-prolific-chal-1.0" is defined but unused in this file (possibly elsewhere).
    251:     \caption{Difficulty (temp = 1.0)}
 >  252:     \label{fig:heatmap-prolific-chal-1.0}
    253:   \end{subfigure}
 
 - file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 304)
   error: \label{fig:prolific-wd-heatmaps-t1}
-  message: Label "fig:prolific-wd-heatmaps-t1" is defined but never referenced.
+  message: The label "fig:prolific-wd-heatmaps-t1" is defined but unused in this file (possibly elsewhere).
    303:     }
 >  304:     \label{fig:prolific-wd-heatmaps-t1}
    305: \end{figure}
 
 - file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 404)
   error: \label{fig:placeholder}
-  message: Label "fig:placeholder" is defined but never referenced.
+  message: The label "fig:placeholder" is defined but unused in this file (possibly elsewhere).
    403:     \caption{Caption}
 >  404:     \label{fig:placeholder}
    405: \end{figure}\paragraph{Features of Problem Interestingness}
 
 - file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 430)
   error: \label{fig:placeholder}
-  message: Label "fig:placeholder" is defined but never referenced.
+  message: The label "fig:placeholder" is defined but unused in this file (possibly elsewhere).
    429:     \caption{Caption}
 >  430:     \label{fig:placeholder}
    431: \end{figure}
 
 - file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 517)
   error: \label{fig:heatmap-prolific-int-0.3}
-  message: Label "fig:heatmap-prolific-int-0.3" is defined but never referenced.
+  message: The label "fig:heatmap-prolific-int-0.3" is defined but unused in this file (possibly elsewhere).
    516:     \caption{Interestingness (temp = 0.3)}
 >  517:     \label{fig:heatmap-prolific-int-0.3}
    518:   \end{subfigure}
 
 - file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 525)
   error: \label{fig:heatmap-prolific-chal-0.3}
-  message: Label "fig:heatmap-prolific-chal-0.3" is defined but never referenced.
+  message: The label "fig:heatmap-prolific-chal-0.3" is defined but unused in this file (possibly elsewhere).
    524:     \caption{Difficulty (temp = 0.3)}
 >  525:     \label{fig:heatmap-prolific-chal-0.3}
    526:   \end{subfigure}
 
 - file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 545)
   error: \label{fig:heatmap-prolific-int-1.0}
-  message: Label "fig:heatmap-prolific-int-1.0" is defined but never referenced.
+  message: The label "fig:heatmap-prolific-int-1.0" is defined but unused in this file (possibly elsewhere).
    544:     \caption{Interestingness (temp = 1.0)}
 >  545:     \label{fig:heatmap-prolific-int-1.0}
    546:   \end{subfigure}
 
 - file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 553)
   error: \label{fig:heatmap-prolific-chal-1.0}
-  message: Label "fig:heatmap-prolific-chal-1.0" is defined but never referenced.
+  message: The label "fig:heatmap-prolific-chal-1.0" is defined but unused in this file (possibly elsewhere).
    552:     \caption{Difficulty (temp = 1.0)}
 >  553:     \label{fig:heatmap-prolific-chal-1.0}
    554:   \end{subfigure}
 
 - file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 768)
   error: \label{fig:qwq_r2}
-  message: Label "fig:qwq_r2" is defined but never referenced.
+  message: The label "fig:qwq_r2" is defined but unused in this file (possibly elsewhere).
    767:     \caption{QwQ-32B: Human vs LLM ratings}
 >  768:     \label{fig:qwq_r2}
    769: \end{figure}
 
 - file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 913)
   error: \label{tab:models}
-  message: Label "tab:models" is defined but never referenced.
+  message: The label "tab:models" is defined but unused in this file (possibly elsewhere).
    912: \end{tabular}
 >  913: \label{tab:models}
    914: \end{table}
 
+- file: sample\arxiv_sources\2602.01135v2\example_paper.tex (line 1759)
+  error: \label{tab:data_comparison}
+  message: The label "tab:data_comparison" is defined but unused in this file (possibly elsewhere).
+  1758:     \caption{\textbf{Data Paradigm Comparison.} Contrast between traditional event sequence causal discovery (multivariate) and our single sequence setting (Session-based/NLP-like). Standard methods require the structure on the left and scale poorly to the structure on the right.}
+> 1759:     \label{tab:data_comparison}
+  1760:     \resizebox{\columnwidth}{!}{%
+
+- file: sample\arxiv_sources\2603.16313v2\appendix_a.tex (line 56)
+  error: \label{fig:randomhead}
+  message: The label "fig:randomhead" is defined but unused in this file (possibly elsewhere).
+    55:     \caption{\textbf{Confident Predictive Maintenance Window Evolution} with and w/o the random head.}
+>   56:     \label{fig:randomhead}
+    57: \end{figure}
+
+- file: sample\arxiv_sources\2603.16313v2\appendix_a.tex (line 93)
+  error: \label{fig:pretraining_comp}
+  message: The label "fig:pretraining_comp" is defined but unused in this file (possibly elsewhere).
+    92:       \caption{\textbf{Pretraining Loss Comparison}. Base-DTC classification loss comparison with and without multimodal learning.}
+>   93:       \label{fig:pretraining_comp}
+    94: \end{figure}
+
+- file: sample\arxiv_sources\2603.16313v2\appendix_b.tex (line 446)
+  error: \label{fig:carformer_summary_appendix}
+  message: The label "fig:carformer_summary_appendix" is defined but unused in this file (possibly elsewhere).
+   445:     \caption{\textbf{Instance Summary Causal Graph.} The global causal structure $\mathcal{G}_s$ aggregated from TRACE inferences over the validation set. While the instance graph (Fig. \ref{fig:time_instance_graph_dtc}) details \textit{when} events occur, this summary graph captures the invariant mechanism types. The density of the graph highlights the complexity of modern vehicle architectures, where high-degree nodes often represent central control units (e.g., ECU, Battery Management) that propagate cascading faults. The conditional mutual information is reported as causal strength.}
+>  446:     \label{fig:carformer_summary_appendix}
+   447: \end{figure}
+
+- file: sample\arxiv_sources\2603.16313v2\appendix_b.tex (line 544)
+  error: \label{verbatim:output_json}
+  message: The label "verbatim:output_json" is defined but unused in this file (possibly elsewhere).
+   543: \caption{\textbf{Input Examples Given to the Agentic System}. The \textit{potential causes} are output by the causal discovery algorithm. For instance, \textit{DTC3} is a cause of \textit{unknown EP} and has an Average Causal Effect (\textit{ACE}) of 0.7, i.e., it increases the likelihood of observing the EP on average by 70\% (Eq.~\eqref{eq:ace_mean}). Examples of defective vehicles exhibiting this error pattern are provided in the \textit{DTC samples}.}
+>  544: \label{verbatim:output_json}
+   545: \end{figure}
+
+- file: sample\arxiv_sources\2603.16313v2\c1.tex (line 54)
+  error: \label{fig:car_}
+  message: The label "fig:car_" is defined but unused in this file (possibly elsewhere).
+    53:   \caption{\textbf{Error Pattern Prediction (when and what)}. Based on the past sequence $S$ of diagnostic trouble codes (DTCs), manufacturers want to prevent error patterns (EPs) from happening by predicting their likelihood and time of occurrence.}
+>   54:   \label{fig:car_}
+    55: \end{figure}
+
+- file: sample\arxiv_sources\2603.16313v2\c1.tex (line 82)
+  error: \label{fig:dtc_env_car}
+  message: The label "fig:dtc_env_car" is defined but unused in this file (possibly elsewhere).
+    81:   \caption{\textbf{Error Pattern Prediction using Multimodal Sequences}. Past diagnostic trouble codes only provide limited information about complex and overlapping error patterns. In addition, domain experts rely on environmental conditions (e.g., temperature, voltage, humidity, \dots) to identify more accurately error patterns.}
+>   82:   \label{fig:dtc_env_car}
+    83: \end{figure}
+
+- file: sample\arxiv_sources\2603.16313v2\c2.tex (line 656)
+  error: \label{tab:pretraining_exp}
+  message: The label "tab:pretraining_exp" is defined but unused in this file (possibly elsewhere).
+   655:   \caption{Overall prediction performance of CarFormer with different embeddings. Best results are in bold.}
+>  656:   \label{tab:pretraining_exp}
+   657: \end{table}
+
+- file: sample\arxiv_sources\2603.16313v2\c4.tex (line 597)
+  error: \label{fig:cargo}
+  message: The label "fig:cargo" is defined but unused in this file (possibly elsewhere).
+   596:     \caption{\textbf{Overview of CARGO}. Phase 1 (one-shot~\cite{math2025oneshot} or sample-level) is on top, and Phase 2 (Adaptive Thresholding) is on the bottom. \(d\) denotes the hidden dimension, \(L\) the sequence length, \(m\) the number of samples and \(\mathcal{MB}_1, \mathcal{MB}_2\) the Markov Boundary of \(Y_1, Y_2\). All green and blue areas are parallelized.}
+>  597:     \label{fig:cargo}
+   598: \end{figure}
+
+- file: sample\arxiv_sources\2603.16313v2\c5.tex (line 293)
+  error: \label{fig:complexity_analysis}
+  message: The label "fig:complexity_analysis" is defined but unused in this file (possibly elsewhere).
+   292: (Right) \textbf{Operator Frequency:} The significant presence of logical NOT ($\neg$) and OR ($\vee$) operators highlights the non-trivial, inhibitory causal structures.}
+>  293: \label{fig:complexity_analysis}
+   294: \end{figure}
+
+- file: sample\arxiv_sources\2604.02049v1\point_couplings.tex (line 943)
+  error: \label{fig:examples_elbow_problem}
+  message: The label "fig:examples_elbow_problem" is defined but unused in this file (possibly elsewhere).
+   942: For~\subref{fig:examples_elbow_problem_b}, the contour plot visualizes the displacement magnitude in the structure.}
+>  943: \label{fig:examples_elbow_problem}
+   944: \end{figure}
+
+- file: sample\arxiv_sources\2604.02049v1\point_couplings.tex (line 1100)
+  error: \label{fig:examples_helix}
+  message: The label "fig:examples_helix" is defined but unused in this file (possibly elsewhere).
+  1099: For the deformed configurations, the contour plots visualize the displacement magnitude in the structure.}
+> 1100: \label{fig:examples_helix}
+  1101: \end{figure}
+
+- file: sample\arxiv_sources\2604.02064v1\main.tex (line 1206)
+  error: \label{fig:gaussian_part1}
+  message: The label "fig:gaussian_part1" is defined but unused in this file (possibly elsewhere).
+  1205:     \caption{Gaussian density approximations (Statement~\ref{st:state}). (Part~1 of~2)}
+> 1206:     \label{fig:gaussian_part1}
+  1207: \end{figure}
+
+- file: sample\arxiv_sources\2604.02064v1\main.tex (line 1231)
+  error: \label{fig:gaussian}
+  message: The label "fig:gaussian" is defined but unused in this file (possibly elsewhere).
+  1230:     \caption{Gaussian density approximations (Statement~\ref{st:state}). (Part 2~of~2)}
+> 1231:     \label{fig:gaussian}
+  1232: \end{figure}
+
+- file: sample\arxiv_sources\2604.02064v1\main.tex (line 1278)
+  error: \label{fig:bs_surface}
+  message: The label "fig:bs_surface" is defined but unused in this file (possibly elsewhere).
+  1277:   \caption{Black--Scholes Put surface approximation (Method~A, $n=8$, $\nf=5$ qubits, $40\times 40$ grid, $S_{0}=100$, $r=0.03$). Theoretical bound from Example~\ref{ex:TruncatedPutBound}.}
+> 1278:   \label{fig:bs_surface}
+  1279: \end{figure}
+
+- file: sample\arxiv_sources\2604.02064v1\main.tex (line 1310)
+  error: \label{fig:method_compare_part1}
+  message: The label "fig:method_compare_part1" is defined but unused in this file (possibly elsewhere).
+  1309:     \caption{Per-method noiseless performance. The error bound in (A)--(B) combines the approximation and statistical terms from Corollary~\ref{cor:Levy}. (C) The error analysis for Method A. (Part 1 of 2)}
+> 1310:     \label{fig:method_compare_part1}
+  1311: \end{figure}
+
+- file: sample\arxiv_sources\2604.02064v1\main.tex (line 1327)
+  error: \label{fig:method_compare}
+  message: The label "fig:method_compare" is defined but unused in this file (possibly elsewhere).
+  1326:     \caption{Per-method noiseless performance. The error bound in (A)--(B) combines the approximation and statistical terms from Corollary~\ref{cor:Levy}. (C) The error analysis for Method A. (Part 2 of 2)}
+> 1327:     \label{fig:method_compare}
+  1328: \end{figure}
+
+- file: sample\arxiv_sources\2604.02064v1\main.tex (line 1369)
+  error: \label{fig:noise_sim}
+  message: The label "fig:noise_sim" is defined but unused in this file (possibly elsewhere).
+  1368:     $N_{\mathrm{shots}} = 8192$, 20 test points). Density-matrix predictions from Proposition~\ref{prop:rho_depol} agree with \texttt{AerSimulator} at all noise levels.}
+> 1369:   \label{fig:noise_sim}
+  1370: \end{figure}
+
+- file: sample\arxiv_sources\2604.02068v1\main.tex (line 264)
+  error: \label{tab:network_evolution}
+  message: The label "tab:network_evolution" is defined but unused in this file (possibly elsewhere).
+   263: \caption{Evolution of UK Payment Network Structure (2017-2024)}
+>  264: \label{tab:network_evolution}
+   265: \begin{tabular}{lcccc}
+
+- file: sample\arxiv_sources\2604.02084v1\boundednessdecaywave.tex (line 303)
+  error: \label{fig:penrosediagramD}
+  message: The label "fig:penrosediagramD" is defined but unused in this file (possibly elsewhere).
+   302: %
+>  303: \begin{figure}[H] \label{fig:penrosediagramD}
+   304: \centering
+
+- file: sample\arxiv_sources\2604.02100v1\paper.tex (line 341)
+  error: \label{fig:time-splitting-scheme}
+  message: The label "fig:time-splitting-scheme" is defined but unused in this file (possibly elsewhere).
+   340:   \caption{Time-integration scheme for a droplet subject to drag, gravity, evaporation, rocket recoil, and Lorentz forces. Evaporation (with rocket velocity kick) and non-Lorentz forces (drag, gravity) are applied as symmetric half-steps surrounding the Boris pusher, which advances both Lorentz rotation and position advection over the full timestep.}
+>  341:   \label{fig:time-splitting-scheme}
+   342: \end{figure}
+
+- file: sample\arxiv_sources\2604.02106v1\implementation_serial_comp.tex (line 214)
+  error: \label{fig:impl:express}
+  message: The label "fig:impl:express" is defined but unused in this file (possibly elsewhere).
+   213: \vspace{-1em}
+>  214: \label{fig:impl:express}
+   215: \end{figure}
+
+- file: sample\arxiv_sources\2604.02106v1\related.tex (line 51)
+  error: \label{tab:comparison}
+  message: The label "tab:comparison" is defined but unused in this file (possibly elsewhere).
+    50: \caption{Comparing \racetool{} with prior works.}
+>   51: \label{tab:comparison}
+    52: \end{table}
+
+- file: sample\arxiv_sources\2604.02108v1\Table_1.tex (line 4)
+  error: \label{tab:noisecorr}
+  message: The label "tab:noisecorr" is defined but unused in this file (possibly elsewhere).
+     3: \caption{Perturbation study on noise and corruption, with heatmap in cells. Brighter hue signifies higher error and worst performance, values are scaled by 100 to improve clarity of presentation.}
+>    4: \label{tab:noisecorr}
+     5: \begin{tabular*}{\textwidth}{@{\extracolsep\fill}ccccccc}
+
+- file: sample\arxiv_sources\2604.02108v1\supplementary_content.tex (line 53)
+  error: \label{fig:placeholder}
+  message: The label "fig:placeholder" is defined but unused in this file (possibly elsewhere).
+    52:     \caption{Probabilistic Graphical Model of the Latent Filter}
+>   53:     \label{fig:placeholder}
+    54: \end{figure}
+
+- file: sample\arxiv_sources\2604.02108v1\supplementary_content.tex (line 85)
+  error: \label{fig:latentumadistance}
+  message: The label "fig:latentumadistance" is defined but unused in this file (possibly elsewhere).
+    84:     \caption{Qualitative analysis of latent space}
+>   85:     \label{fig:latentumadistance}
+    86: \end{figure}
+
+- file: sample\arxiv_sources\2604.02108v1\supplementary_content.tex (line 91)
+  error: \label{fig:poseregression}
+  message: The label "fig:poseregression" is defined but unused in this file (possibly elsewhere).
+    90:     \caption{Temporal evolution of the NMSE error of pose estimation, with the shaded region depicting $\pm 0.1$ standard deviation, representing the variability of the mean error. }
+>   91:     \label{fig:poseregression}
+    92: \end{figure}
+
+- file: sample\arxiv_sources\2604.02126v1\FINAL.tex (line 913)
+  error: \label{tab: transaction_costs_ashr_no_return}
+  message: The label "tab: transaction_costs_ashr_no_return" is defined but unused in this file (possibly elsewhere).
+   912:   \caption{Hedged asset: CSI 300. We compute the difference, multiplied by 100, of various performance metrics obtained using the robust Hedge Ratios relative to those obtained using the standard Hedge Ratios. P\&L, SR, $\Omega$, DD, VaR, ES correspond to profit and loss, Sharpe ratio, Omega ratio, maximum drawdown, 95\% Value at Risk, and 95\% Expected Shortfall, respectively. Transaction costs are indicated in curly brackets.} 
+>  913:   \label{tab: transaction_costs_ashr_no_return} 
+   914: \end{table}
+
+- file: sample\arxiv_sources\2604.02126v1\FINAL.tex (line 953)
+  error: \label{tab: transaction_costs_bno_no_return}
+  message: The label "tab: transaction_costs_bno_no_return" is defined but unused in this file (possibly elsewhere).
+   952:   \caption{Hedged asset: Brent oil. We compute the difference, multiplied by 100, of various performance metrics obtained using the robust Hedge Ratios relative to those obtained using the standard Hedge Ratios. P\&L, SR, $\Omega$, DD, VaR, ES correspond to profit and loss, Sharpe ratio, Omega ratio, maximum drawdown, 95\% Value at Risk, and 95\% Expected Shortfall, respectively. Transaction costs are indicated in curly brackets.} 
+>  953:   \label{tab: transaction_costs_bno_no_return} 
+   954: \end{table}
+
+- file: sample\arxiv_sources\2604.02126v1\FINAL.tex (line 1059)
+  error: \label{tab:transaction_costs_gsg}
+  message: The label "tab:transaction_costs_gsg" is defined but unused in this file (possibly elsewhere).
+  1058: \caption{Hedged asset: GSCI Commodity index. We compute the difference, multiplied by 100, of various performance metrics obtained using the robust Hedge Ratios relative to those obtained using the standard Hedge Ratios. P\&L, SR, $\Omega$, DD, VaR, ES correspond to profit and loss, Sharpe ratio, Omega ratio, maximum drawdown, 95\% Value at Risk, and 95\% Expected Shortfall, respectively. Transaction costs are indicated in curly brackets.} 
+> 1059: \label{tab:transaction_costs_gsg} 
+  1060: \end{table}
+
+- file: sample\arxiv_sources\2604.02126v1\FINAL.tex (line 1116)
+  error: \label{tab:transaction_costs_iev}
+  message: The label "tab:transaction_costs_iev" is defined but unused in this file (possibly elsewhere).
+  1115: \caption{Hedged asset: S\&P Europe 350. We compute the difference, multiplied by 100, of various performance metrics obtained using the robust Hedge Ratios relative to those obtained using the standard Hedge Ratios. P\&L, SR, $\Omega$, DD, VaR, ES correspond to profit and loss, Sharpe ratio, Omega ratio, maximum drawdown, 95\% Value at Risk, and 95\% Expected Shortfall, respectively. Transaction costs are indicated in curly brackets.} 
+> 1116: \label{tab:transaction_costs_iev} 
+  1117: \end{table}
+
+- file: sample\arxiv_sources\2604.02144v1\paper.tex (line 326)
+  error: \label{fig:systems}
+  message: The label "fig:systems" is defined but unused in this file (possibly elsewhere).
+   325:     \caption{Benchmark chemical systems used in this work: (a) HBrTe an asymmetric modification of H$_2$Te (b) Rb$_4$ a relativistic analogue of the H$_4$ square planar system which displays strong static correlation (c) Xe$_2$ a dispersion bound noble gas complex dominated by dynamic correlation. }
+>  326:     \label{fig:systems}
+   327: \end{figure}
+
+- file: sample\arxiv_sources\2604.02157v1\ablation_table.tex (line 4)
+  error: \label{tab:ablation}
+  message: The label "tab:ablation" is defined but unused in this file (possibly elsewhere).
+     3: \caption{Ablation study for $K=2$, $N_s=3$.}
+>    4: \label{tab:ablation}
+     5: \setlength{\tabcolsep}{4pt}
+
+- file: sample\arxiv_sources\2604.02157v1\ira_speedup_table.tex (line 4)
+  error: \label{tab:ira_speedup}
+  message: The label "tab:ira_speedup" is defined but unused in this file (possibly elsewhere).
+     3: \caption{Speedup of IRA and TA-IRA over DD for varying $K$ and $N_s$.}
+>    4: \label{tab:ira_speedup}
+     5: \setlength{\tabcolsep}{5pt}
+
+- file: sample\arxiv_sources\2604.02157v1\timing_table.tex (line 4)
+  error: \label{tab:timing}
+  message: The label "tab:timing" is defined but unused in this file (possibly elsewhere).
+     3: \caption{Per-step wall-clock cost (ms) for $K{=}2$, $N_s{=}3$. Steps marked $\dagger$ run in parallel.}
+>    4: \label{tab:timing}
+     5: \setlength{\tabcolsep}{4pt}
+
+- file: sample\arxiv_sources\2604.02157v1\tradeoff_table.tex (line 4)
+  error: \label{tab:tradeoff}
+  message: The label "tab:tradeoff" is defined but unused in this file (possibly elsewhere).
+     3: \caption{Runtime--conservatism trade-off of IRA for varying $K$ and $N_s$. Width ratios are mean IH width of the numerator divided by the denominator.}
+>    4: \label{tab:tradeoff}
+     5: \setlength{\tabcolsep}{2.5pt}
+
+- file: sample\arxiv_sources\2604.02158v1\manuscript.tex (line 202)
+  error: \label{tab:stage-2-perf-metrics}
+  message: The label "tab:stage-2-perf-metrics" is defined but unused in this file (possibly elsewhere).
+   201:   \caption{Runtime Power Prediction Performance for VASP Jobs}
+>  202:   \label{tab:stage-2-perf-metrics}
+   203:   \rowcolors{2}{white}{gray!10}
+
+- file: sample\arxiv_sources\2604.02158v1\table1.tex (line 3)
+  error: \label{tab:slurm_selected_metrics}
+  message: The label "tab:slurm_selected_metrics" is defined but unused in this file (possibly elsewhere).
+     2: \caption{Selected Slurm job accounting fields.}
+>    3: \label{tab:slurm_selected_metrics}
+     4: \centering
+
+- file: sample\arxiv_sources\2604.02158v1\table2.tex (line 4)
+  error: \label{tab:dcgm_metrics}
+  message: The label "tab:dcgm_metrics" is defined but unused in this file (possibly elsewhere).
+     3: \caption{Selected GPU profiling metrics from NVIDIA DCGM.}
+>    4: \label{tab:dcgm_metrics}
+     5: \centering
+
+- file: sample\arxiv_sources\2604.02163v1\manuscript.tex (line 169)
+  error: \label{fig2}
+  message: The label "fig2" is defined but unused in this file (possibly elsewhere).
+   168: 	 	\caption{Left panel: Variation of width with time for different values  of dipole-dipole interaction in absence of optical lattice. The red curve is drawn for $C_{0}=0.005$, blue curve is drawn for $C_{0}=0.004$, and black curve is drawn $C_{0}=0.003$. For each curve, we have taken $N=10,\,\, g=4.75,\,\, g_{1}=0.75,\,\, V_{0}=0,\,\, k=1.5$ and $x_{0}=0$. Right panel: Density profile corresponding to red curve.} 
+>  169: 	 	\label{fig2}
+   170: 	 \end{figure} 
+
+- file: sample\arxiv_sources\2604.02163v1\manuscript.tex (line 177)
+  error: \label{fig3}
+  message: The label "fig3" is defined but unused in this file (possibly elsewhere).
+   176: 	 	\caption{Left panel: Variation of effective optical lattice potential with the change of center of mass. Right panel: Variation of effective optical lattice potential with width and center of mass. In both the panel we take  $ V_{0}=1.8,\,\, \eta=0.5$ and $ w=1.7$. } 
+>  177: 	 	\label{fig3}
+   178: 	 \end{figure}  
+
+- file: sample\arxiv_sources\2604.02163v1\manuscript.tex (line 189)
+  error: \label{fig4}
+  message: The label "fig4" is defined but unused in this file (possibly elsewhere).
+   188:  	\caption{Left panel: Variation of effective potential with width for different values  of strength of optical lattice in presence of dipole-dipole interaction. The blue curve is drawn for $V_{0}=0$, black curve is drawn for $V_{0}=1$, and red curve is drawn $V_{0}=1.8$. For each curve, we have taken $N=10,\,\, g=4.75,\,\, g_{1}=0.75,\,\, C_{0}=0.0007,\,\, k=1.5,\,\,\,x_{0}=0.5$ and $\eta=3.5$. Right panel: Variation of chemical potential with number of particle corresponding to effective potential.    } 
+>  189:  	\label{fig4}
+   190:  \end{figure}  
+
+- file: sample\arxiv_sources\2604.02163v1\manuscript.tex (line 197)
+  error: \label{fig5}
+  message: The label "fig5" is defined but unused in this file (possibly elsewhere).
+   196:  	\caption{ Left panel: Variation of  width with time in presence of both optical lattice and dipole-dipole interaction. The curve is drawn for  $N=10,\,\, g=4.75,\,\, g_{1}=0.75,\,\, C_{0}=0.0007,\,\, k=1.5,\,\,\,V_{0}=1.8,\,\,\, k=1.5$ and $\eta=0.5$. Right panel: Density profile corresponding width verse time curve. } 
+>  197:  	\label{fig5} 
+   198:  \end{figure}  
+
+- file: sample\arxiv_sources\2604.02163v1\manuscript.tex (line 205)
+  error: \label{fig6}
+  message: The label "fig6" is defined but unused in this file (possibly elsewhere).
+   204: \caption{Left panel: Frequency of oscillation ($\Omega$) of center of mass of a droplet with $\eta$ keeping $V_0$ fixed at $1.0$(blue curve), $0.5$ (black curve) and $0.2$ (red curve). Right panel: It gives $\Omega$ versus $V_0$ curve for $\eta=0.5$.  In both the panels we take  $N=10,\,\, g=4.75,\,\, g_{1}=0.75,\,\, C_{0}=0.0007$ and $ k=1.5$.} 
+>  205: \label{fig6} 
+   206: \end{figure} 
+
+- file: sample\arxiv_sources\2604.02170v1\1A_main.tex (line 318)
+  error: \label{fig:minV_compare_2ssp1}
+  message: The label "fig:minV_compare_2ssp1" is defined but unused in this file (possibly elsewhere).
+   317:     \includegraphics[width=\linewidth]{figures/surface3d_static_minV.pdf}
+>  318:     \caption{Static case minimum voltage.\label{fig:minV_compare_2ssp1}}
+   319:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02170v1\1A_main.tex (line 385)
+  error: \label{fig:stoch_iter_i_dist}
+  message: The label "fig:stoch_iter_i_dist" is defined but unused in this file (possibly elsewhere).
+   384:     \caption{Current distribution with stochastic iterative method.}
+>  385:     \label{fig:stoch_iter_i_dist}
+   386: \end{figure}
+
+- file: sample\arxiv_sources\2604.02176v1\appendix_comet.tex (line 28)
+  error: \label{np}
+  message: The label "np" is defined but unused in this file (possibly elsewhere).
+    27: \end{tabular}
+>   28: \caption{\label{np}
+    29: The list of 37 languages supported by our COMET model for evaluation on machine translation.
+
+- file: sample\arxiv_sources\2604.02176v1\appendix_comet_(1).tex (line 28)
+  error: \label{np}
+  message: The label "np" is defined but unused in this file (possibly elsewhere).
+    27: \end{tabular}
+>   28: \caption{\label{np}
+    29: The list of 37 languages supported by our COMET model for evaluation on machine translation.
+
+- file: sample\arxiv_sources\2604.02176v1\appendix_freqstat.tex (line 30)
+  error: \label{freqstat}
+  message: The label "freqstat" is defined but unused in this file (possibly elsewhere).
+    29: \end{tabular}
+>   30: \caption{\label{freqstat}
+    31: The statistics are based on the TFD calculations: We first statistically calculate the occurrence frequencies of unigrams and bigrams from both the web resources and the generated corpus, then assign different weights to the two corpora, and finally calculate the weighted geometric average of the unigram and bigram frequencies.
+
+- file: sample\arxiv_sources\2604.02176v1\appendix_freqstat.tex (line 52)
+  error: \label{scaling}
+  message: The label "scaling" is defined but unused in this file (possibly elsewhere).
+    51: \end{tabular}
+>   52: \caption{\label{scaling}
+    53: The evaluation on different model sizes using qwen-2.5. The results are reported on the task of MR.
+
+- file: sample\arxiv_sources\2604.02176v1\appendix_freqstat.tex (line 87)
+  error: \label{np}
+  message: The label "np" is defined but unused in this file (possibly elsewhere).
+    86: \end{tabular}
+>   87: \caption{\label{np}
+    88: A list of hyperparameters used in our fine-tuning experiments.
+
+- file: sample\arxiv_sources\2604.02176v1\appendix_freqstat.tex (line 112)
+  error: \label{lc}
+  message: The label "lc" is defined but unused in this file (possibly elsewhere).
+   111: \end{tabular}
+>  112: \caption{\label{lc}
+   113: A list of language classes of the 100 languages used in our experiments. More than half of the languages used in our study are relatively low-resource according to \citet{joshi-etal-2020-state}.
+
+- file: sample\arxiv_sources\2604.02176v1\appendix_freqstat.tex (line 132)
+  error: \label{chain-of-thought-evaluation}
+  message: The label "chain-of-thought-evaluation" is defined but unused in this file (possibly elsewhere).
+   131: \end{tabular}
+>  132: \caption{\label{chain-of-thought-evaluation}
+   133: The evaluation of the chain-of-thought process on the MR partition of our proposed TFPD dataset.
+
+- file: sample\arxiv_sources\2604.02176v1\appendix_freqstat_(1).tex (line 30)
+  error: \label{freqstat}
+  message: The label "freqstat" is defined but unused in this file (possibly elsewhere).
+    29: \end{tabular}
+>   30: \caption{\label{freqstat}
+    31: The statistics are based on the TFD calculations: We first statistically calculate the occurrence frequencies of unigrams and bigrams from both the web resources and the generated corpus, then assign different weights to the two corpora, and finally calculate the weighted geometric average of the unigram and bigram frequencies.
+
+- file: sample\arxiv_sources\2604.02176v1\appendix_freqstat_(1).tex (line 52)
+  error: \label{scaling}
+  message: The label "scaling" is defined but unused in this file (possibly elsewhere).
+    51: \end{tabular}
+>   52: \caption{\label{scaling}
+    53: The evaluation on different model sizes using qwen-2.5. The results are reported on the task of MR.
+
+- file: sample\arxiv_sources\2604.02176v1\appendix_freqstat_(1).tex (line 87)
+  error: \label{np}
+  message: The label "np" is defined but unused in this file (possibly elsewhere).
+    86: \end{tabular}
+>   87: \caption{\label{np}
+    88: A list of hyperparameters used in our fine-tuning experiments.
+
+- file: sample\arxiv_sources\2604.02176v1\appendix_freqstat_(1).tex (line 112)
+  error: \label{lc}
+  message: The label "lc" is defined but unused in this file (possibly elsewhere).
+   111: \end{tabular}
+>  112: \caption{\label{lc}
+   113: A list of language classes of the 100 languages used in our experiments. More than half of the languages used in our study are relatively low-resource according to \citet{joshi-etal-2020-state}.
+
+- file: sample\arxiv_sources\2604.02176v1\appendix_freqstat_(1).tex (line 132)
+  error: \label{chain-of-thought-evaluation}
+  message: The label "chain-of-thought-evaluation" is defined but unused in this file (possibly elsewhere).
+   131: \end{tabular}
+>  132: \caption{\label{chain-of-thought-evaluation}
+   133: The evaluation of the chain-of-thought process on the MR partition of our proposed TFPD dataset.
+
+- file: sample\arxiv_sources\2604.02176v1\appendix_pearson.tex (line 20)
+  error: \label{pptable}
+  message: The label "pptable" is defined but unused in this file (possibly elsewhere).
+    19: \end{tabular}
+>   20: \caption{\label{pptable}
+    21: The correlation between textual frequency and the final translation BLEU scores on translating from English into other languages. We compute Pearson correlation coefficients \citep{freedman2007statistics} using numpy.corrcoef().
+
+- file: sample\arxiv_sources\2604.02176v1\appendix_pearson_(1).tex (line 20)
+  error: \label{pptable}
+  message: The label "pptable" is defined but unused in this file (possibly elsewhere).
+    19: \end{tabular}
+>   20: \caption{\label{pptable}
+    21: The correlation between textual frequency and the final translation BLEU scores on translating from English into other languages. We compute Pearson correlation coefficients \citep{freedman2007statistics} using numpy.corrcoef().
+
+- file: sample\arxiv_sources\2604.02176v1\appendix_tables.tex (line 262)
+  error: \label{fig:tfd2}
+  message: The label "fig:tfd2" is defined but unused in this file (possibly elsewhere).
+   261:     \caption{The figure that demonstrates the relationship between performance percentage and the amount of data used for TFD. We can see that with more data used, the performance improvement increases.}
+>  262:     \label{fig:tfd2}
+   263: \end{center}
+
+- file: sample\arxiv_sources\2604.02176v1\appendix_tables_(1).tex (line 262)
+  error: \label{fig:tfd2}
+  message: The label "fig:tfd2" is defined but unused in this file (possibly elsewhere).
+   261:     \caption{The figure that demonstrates the relationship between performance percentage and the amount of data used for TFD. We can see that with more data used, the performance improvement increases.}
+>  262:     \label{fig:tfd2}
+   263: \end{center}
+
+- file: sample\arxiv_sources\2604.02176v1\experimental.tex (line 21)
+  error: \label{fig:gsm8k}
+  message: The label "fig:gsm8k" is defined but unused in this file (possibly elsewhere).
+    20:     \caption{The overall accuracy of TFPD on math reasoning for our proposed framework. It is obvious that the high-frequency partition in TFPD has a higher accuracy than the low-frequency partition. High-frequency $\cap$ low-frequency denotes a model that is correct in both low-frequency and high-frequency partitions.}
+>   21:     \label{fig:gsm8k}
+    22: \end{center}
+
+- file: sample\arxiv_sources\2604.02176v1\experimental_(1).tex (line 21)
+  error: \label{fig:gsm8k}
+  message: The label "fig:gsm8k" is defined but unused in this file (possibly elsewhere).
+    20:     \caption{The overall accuracy of TFPD on math reasoning for our proposed framework. It is obvious that the high-frequency partition in TFPD has a higher accuracy than the low-frequency partition. High-frequency $\cap$ low-frequency denotes a model that is correct in both low-frequency and high-frequency partitions.}
+>   21:     \label{fig:gsm8k}
+    22: \end{center}
+
+- file: sample\arxiv_sources\2604.02188v1\bare_jrnl.tex (line 744)
+  error: \label{fig:PINet}
+  message: The label "fig:PINet" is defined but unused in this file (possibly elsewhere).
+   743:     \caption{PINet implementation with multi-branch outputs.}
+>  744:     \label{fig:PINet}
+   745: \end{figure}
+
+- file: sample\arxiv_sources\2604.02188v1\bare_jrnl.tex (line 754)
+  error: \label{fig:roi}
+  message: The label "fig:roi" is defined but unused in this file (possibly elsewhere).
+   753:         \caption{ROI implementation and integration with loss functions.}
+>  754:     \label{fig:roi}
+   755: \end{figure}
+
+- file: sample\arxiv_sources\2604.02188v1\bare_jrnl.tex (line 764)
+  error: \label{fig:postprocessing}
+  message: The label "fig:postprocessing" is defined but unused in this file (possibly elsewhere).
+   763:     \caption{Post-processing pipeline with RANSAC and graph-based smoothing.}
+>  764:     \label{fig:postprocessing}
+   765: \end{figure}
+
+- file: sample\arxiv_sources\2604.02220v1\03-experiment.tex (line 107)
+  error: \label{fig:modeling-approach-overall}
+  message: The label "fig:modeling-approach-overall" is defined but unused in this file (possibly elsewhere).
+   106:     \caption{A horseshoe diagram~\cite{varona2025theory} of this paper's approach to modeling.}
+>  107:     \label{fig:modeling-approach-overall}
+   108: \end{figure}
+
+- file: sample\arxiv_sources\2604.02220v1\03-experiment.tex (line 180)
+  error: \label{fig:process}
+  message: The label "fig:process" is defined but unused in this file (possibly elsewhere).
+   179:     }
+>  180:     \label{fig:process}
+   181: \end{figure}
+
+- file: sample\arxiv_sources\2604.02220v1\03-experiment.tex (line 228)
+  error: \label{fig:task3-pp-check}
+  message: The label "fig:task3-pp-check" is defined but unused in this file (possibly elsewhere).
+   227:     \caption{}
+>  228:     \label{fig:task3-pp-check}
+   229:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02220v1\03-experiment.tex (line 235)
+  error: \label{fig:task3-pit-ecdf}
+  message: The label "fig:task3-pit-ecdf" is defined but unused in this file (possibly elsewhere).
+   234:     \caption{}
+>  235:     \label{fig:task3-pit-ecdf}
+   236:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02220v1\03-experiment.tex (line 323)
+  error: \label{fig:task3-ppcheck}
+  message: The label "fig:task3-ppcheck" is defined but unused in this file (possibly elsewhere).
+   322:     \caption{(a) Posterior retrodictive density of participants' errors overlaid with density of observed errors, plotted on top of strip plot of observed errors for \MaxSlope. (b) PIT-ECDF Calibration plot. }
+>  323:     \label{fig:task3-ppcheck}
+   324: \end{figure}
+
+- file: sample\arxiv_sources\2604.02220v1\04-discussion.tex (line 9)
+  error: \label{fig:part2-KDE}
+  message: The label "fig:part2-KDE" is defined but unused in this file (possibly elsewhere).
+     8:     \caption{Cross-task posterior predictive density overlay plot, each with 100 draws, faceted by variability upper/lower vs. variability 0/0.4 experiment conditions. Point intervals indicate the mean and 68\% quantile interval (approximately $\pm$ 1 SD) for observed responses and model predictions respectively.}
+>    9:     \label{fig:part2-KDE}
+    10: \end{figure}
+
+- file: sample\arxiv_sources\2604.02220v1\04-extension.tex (line 12)
+  error: \label{fig:model-diagram-sec5}
+  message: The label "fig:model-diagram-sec5" is defined but unused in this file (possibly elsewhere).
+    11:     Overview of the cross-task generalization approach. Left: the \ProjToAxisY\ operator is measured by asking participants to project a dot to the y-axis on a $600\times450$ px chart. Right: the same operator, without refitting, is composed under candidate averaging strategies to predict mean-estimation responses on Moritz et al.'s~\cite{moritz2023average} $500\times200$ px scatterplot task. All composition and prediction occurs in the \textit{perceptually-uniform} visual angle space (center).}
+>   12:     \label{fig:model-diagram-sec5}
+    13: \end{figure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 14)
+  error: \label{fig:example-dist}
+  message: The label "fig:example-dist" is defined but unused in this file (possibly elsewhere).
+    13:     \caption{An example of the experiment interface. The generalized skewed-$t$ distribution is parameterized with $\mu = -1.1, \sigma = 0.7, \lambda = -0.1, p = 4.6, q = 31.7$.}
+>   14:     \label{fig:example-dist} 
+    15: \end{figure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 61)
+  error: \label{fig:task5-x-pp-check}
+  message: The label "fig:task5-x-pp-check" is defined but unused in this file (possibly elsewhere).
+    60:         \caption{}
+>   61:         \label{fig:task5-x-pp-check}
+    62:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 68)
+  error: \label{fig:task5-x-pit-ecdf}
+  message: The label "fig:task5-x-pit-ecdf" is defined but unused in this file (possibly elsewhere).
+    67:         \caption{}
+>   68:         \label{fig:task5-x-pit-ecdf}
+    69:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 74)
+  error: \label{fig:task5-y-pp-check}
+  message: The label "fig:task5-y-pp-check" is defined but unused in this file (possibly elsewhere).
+    73:         \caption{}
+>   74:         \label{fig:task5-y-pp-check}
+    75:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 80)
+  error: \label{fig:task5-y-pit-ecdf}
+  message: The label "fig:task5-y-pit-ecdf" is defined but unused in this file (possibly elsewhere).
+    79:         \caption{}
+>   80:         \label{fig:task5-y-pit-ecdf}
+    81:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 83)
+  error: \label{fig:placeholder}
+  message: The label "fig:placeholder" is defined but unused in this file (possibly elsewhere).
+    82:     \caption{Plots for \ProjToAxisX\ and \ProjToAxisY: (a), (c) Posterior predictive checks with 100 draws for $x$-axis and $y$-Axis respectively. (b), (d) PIT-ECDF calibration plot for $x$-axis and $y$-axis respectively.}
+>   83:     \label{fig:placeholder}
+    84: \end{figure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 95)
+  error: \label{fig:task2-y-ppcheck}
+  message: The label "fig:task2-y-ppcheck" is defined but unused in this file (possibly elsewhere).
+    94:         \caption{}
+>   95:         \label{fig:task2-y-ppcheck}
+    96:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 102)
+  error: \label{fig:task2-y-pit-ecdf}
+  message: The label "fig:task2-y-pit-ecdf" is defined but unused in this file (possibly elsewhere).
+   101:     \caption{}
+>  102:     \label{fig:task2-y-pit-ecdf}
+   103:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 105)
+  error: \label{fig:task2-y-posterior-checks}
+  message: The label "fig:task2-y-posterior-checks" is defined but unused in this file (possibly elsewhere).
+   104:     \caption{Plots for \HighestPointY: (a) Posterior predictive check with 100 draws, (b) PIT-ECDF calibration.}
+>  105:     \label{fig:task2-y-posterior-checks}
+   106: \end{figure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 127)
+  error: \label{fig:task2-gaussian-pp-check}
+  message: The label "fig:task2-gaussian-pp-check" is defined but unused in this file (possibly elsewhere).
+   126:     \caption{}
+>  127:     \label{fig:task2-gaussian-pp-check}
+   128:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 134)
+  error: \label{fig:task2-gaussian-pit-ecdf}
+  message: The label "fig:task2-gaussian-pit-ecdf" is defined but unused in this file (possibly elsewhere).
+   133:     \caption{}
+>  134:     \label{fig:task2-gaussian-pit-ecdf}
+   135:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 137)
+  error: \label{fig:task2-x-gaussian}
+  message: The label "fig:task2-x-gaussian" is defined but unused in this file (possibly elsewhere).
+   136:     \caption{Plots for \textbf{\texttt{HighestPoint}}\textsubscript{X} task for \textbf{error on the X-Axis}, except here we are using a Normal distribution instead of a Laplace distribution to model: (a) PIT-ECDF calibration chart, (b) Posterior predictive check with 100 draws. }
+>  137:     \label{fig:task2-x-gaussian}
+   138: \end{figure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 169)
+  error: \label{fig:task4-pp-check}
+  message: The label "fig:task4-pp-check" is defined but unused in this file (possibly elsewhere).
+   168:     \caption{}
+>  169:     \label{fig:task4-pp-check}
+   170:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 176)
+  error: \label{fig:task4-pit-ecdf}
+  message: The label "fig:task4-pit-ecdf" is defined but unused in this file (possibly elsewhere).
+   175:     \caption{}
+>  176:     \label{fig:task4-pit-ecdf}
+   177:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 179)
+  error: \label{fig:task4-posterior-checks}
+  message: The label "fig:task4-posterior-checks" is defined but unused in this file (possibly elsewhere).
+   178:     \caption{Plots for \MaxSlope: (a) Posterior predictive check with 100 draws, (b) PIT-ECDF calibration plot.}
+>  179:     \label{fig:task4-posterior-checks}
+   180: \end{figure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 191)
+  error: \label{fig:task1-ppcheck}
+  message: The label "fig:task1-ppcheck" is defined but unused in this file (possibly elsewhere).
+   190:     \caption{}
+>  191:     \label{fig:task1-ppcheck}
+   192:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 198)
+  error: \label{fig:Task1-pit-ecdf}
+  message: The label "fig:Task1-pit-ecdf" is defined but unused in this file (possibly elsewhere).
+   197:     \caption{}
+>  198:     \label{fig:Task1-pit-ecdf}
+   199:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 201)
+  error: \label{fig:task1-posterior-checks}
+  message: The label "fig:task1-posterior-checks" is defined but unused in this file (possibly elsewhere).
+   200:     \caption{Plots for \BisectArea. (a) Posterior predictive checks with 100 draws, where the plot is faceted to have three parts, where the label indicates whether the sign of $\lambda$, the skewness parameter, is negative, positive, or zero, and (b) PIT-ECDF calibration chart, where the plot is faceted to have three parts, where the label indicates whether the sign of $\lambda$, the skewness parameter, is negative, positive, or zero. (a) and (b) demonstrate good fits.}
+>  201:     \label{fig:task1-posterior-checks}
+   202: \end{figure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 215)
+  error: \label{fig:part2-task1-pp-check}
+  message: The label "fig:part2-task1-pp-check" is defined but unused in this file (possibly elsewhere).
+   214:     \caption{}
+>  215:     \label{fig:part2-task1-pp-check}
+   216:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 222)
+  error: \label{fig:part2-task1-pit-ecdf}
+  message: The label "fig:part2-task1-pit-ecdf" is defined but unused in this file (possibly elsewhere).
+   221:     \caption{}
+>  222:     \label{fig:part2-task1-pit-ecdf}
+   223:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 225)
+  error: \label{fig:part2-task1}
+  message: The label "fig:part2-task1" is defined but unused in this file (possibly elsewhere).
+   224:     \caption{Plots for \ProjToAxisY\ for \textbf{Experiment 2}. (a) Posterior predictive checks with 100 draws for the Y-Axis. (b) PIT-ECDF calibration plot for Y-Axis.}
+>  225:     \label{fig:part2-task1}
+   226: \end{figure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 238)
+  error: \label{fig:1proj_mean}
+  message: The label "fig:1proj_mean" is defined but unused in this file (possibly elsewhere).
+   237:         \caption{}
+>  238:         \label{fig:1proj_mean}
+   239:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 245)
+  error: \label{fig:1proj_median}
+  message: The label "fig:1proj_median" is defined but unused in this file (possibly elsewhere).
+   244:         \caption{}
+>  245:         \label{fig:1proj_median}
+   246:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 252)
+  error: \label{fig:1proj_weighted}
+  message: The label "fig:1proj_weighted" is defined but unused in this file (possibly elsewhere).
+   251:         \caption{}
+>  252:         \label{fig:1proj_weighted}
+   253:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 255)
+  error: \label{fig:1proj}
+  message: The label "fig:1proj" is defined but unused in this file (possibly elsewhere).
+   254:     \caption{\small Predictions composed under \textbf{project-once} strategy for (a) mean, (b) median, and (c) weighted.}
+>  255:     \label{fig:1proj}
+   256: \end{figure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 267)
+  error: \label{fig:2proj_mean}
+  message: The label "fig:2proj_mean" is defined but unused in this file (possibly elsewhere).
+   266:         \caption{}
+>  267:         \label{fig:2proj_mean}
+   268:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 274)
+  error: \label{fig:2proj_median}
+  message: The label "fig:2proj_median" is defined but unused in this file (possibly elsewhere).
+   273:         \caption{}
+>  274:         \label{fig:2proj_median}
+   275:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 281)
+  error: \label{fig:2proj_weighted}
+  message: The label "fig:2proj_weighted" is defined but unused in this file (possibly elsewhere).
+   280:         \caption{}
+>  281:         \label{fig:2proj_weighted}
+   282:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02220v1\06-appendix.tex (line 284)
+  error: \label{fig:2proj}
+  message: The label "fig:2proj" is defined but unused in this file (possibly elsewhere).
+   283:     \caption{\small Predictions composed under \textbf{project-twice} strategy for (a) mean, (b) median, and (c) weighted.}
+>  284:     \label{fig:2proj}
+   285: \end{figure}
+
+- file: sample\arxiv_sources\2604.02226v1\final_figure.tex (line 11)
+  error: \label{fig:sub:gym8}
+  message: The label "fig:sub:gym8" is defined but unused in this file (possibly elsewhere).
+    10:             \caption{State}
+>   11:             \label{fig:sub:gym8}
+    12:         \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02226v1\final_figure.tex (line 29)
+  error: \label{fig:sub:gym4}
+  message: The label "fig:sub:gym4" is defined but unused in this file (possibly elsewhere).
+    28:             \caption{State}
+>   29:             \label{fig:sub:gym4}
+    30:         \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02226v1\final_figure.tex (line 46)
+  error: \label{fig:frozenlake_schemas}
+  message: The label "fig:frozenlake_schemas" is defined but unused in this file (possibly elsewhere).
+    45:     }
+>   46:     \label{fig:frozenlake_schemas}
+    47: \end{figure}
+
+- file: sample\arxiv_sources\2604.02230v1\acl_latex.tex (line 152)
+  error: \label{fig:teaser}
+  message: The label "fig:teaser" is defined but unused in this file (possibly elsewhere).
+   151:     \caption{Prior approaches often underperform abstention in reasoning models. }
+>  152:     \label{fig:teaser}
+   153: \end{figure}
+
+- file: sample\arxiv_sources\2604.02230v1\acl_latex.tex (line 349)
+  error: \label{fig:placeholder}
+  message: The label "fig:placeholder" is defined but unused in this file (possibly elsewhere).
+   348:     \caption{Abstain Accuracy of each domain and method averaged across four LLMs.}
+>  349:     \label{fig:placeholder}
+   350: \end{figure}
+
+- file: sample\arxiv_sources\2604.02233v1\main.tex (line 658)
+  error: \label{fig:hp-illustration}
+  message: The label "fig:hp-illustration" is defined but unused in this file (possibly elsewhere).
+   657: \caption{Illustration of the recursive hypercube layering strategy. \Cref{fig:hp-ill-2-l} depicts the case for $k=2$ layers. The initial preprocessing layer $A_1$ is highlighted in blue. Its size, determined by parameter $\alpha_1$, is constrained by the available memory, represented by the blue striped region. The middle layer $A_2$ is highlighted in red. The diagram shows three levels of recursion. At the final level, the subcube is small enough that its entire solution fits within the memory budget and can be computed classically. \Cref{fig:hp-ill-3-l} illustrates the analogous structure for $k=3$ layers. The intermediate layer $A_2$ is highlighted in green.}
+>  658: \label{fig:hp-illustration}
+   659: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 469)
+  error: \label{fig_ip}
+  message: The label "fig_ip" is defined but unused in this file (possibly elsewhere).
+   468:     }
+>  469:     \label{fig_ip}
+   470: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 511)
+  error: \label{limit_alphas}
+  message: The label "limit_alphas" is defined but unused in this file (possibly elsewhere).
+   510:     \, (\alpha)$ [see \Eq{chapman2}].}
+>  511:     \label{limit_alphas}
+   512: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 580)
+  error: \label{tab:scales_fpz}
+  message: The label "tab:scales_fpz" is defined but unused in this file (possibly elsewhere).
+   579:     }
+>  580:     \label{tab:scales_fpz}
+   581:     \resizebox{\columnwidth}{!}{
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 762)
+  error: \label{fp2_fp20}
+  message: The label "fp2_fp20" is defined but unused in this file (possibly elsewhere).
+   761:     }
+>  762:     \label{fp2_fp20}
+   763: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 922)
+  error: \label{hybrids_closeto_vcj}
+  message: The label "hybrids_closeto_vcj" is defined but unused in this file (possibly elsewhere).
+   921:     }
+>  922:     \label{hybrids_closeto_vcj}
+   923: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 971)
+  error: \label{tabFITS}
+  message: The label "tabFITS" is defined but unused in this file (possibly elsewhere).
+   970:     }
+>  971:     \label{tabFITS}
+   972: \end{table}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 1019)
+  error: \label{fig:comparison_z1z2}
+  message: The label "fig:comparison_z1z2" is defined but unused in this file (possibly elsewhere).
+  1018:     }
+> 1019: \label{fig:comparison_z1z2}
+  1020: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 1060)
+  error: \label{fig:gamma_vs_vw}
+  message: The label "fig:gamma_vs_vw" is defined but unused in this file (possibly elsewhere).
+  1059:     }
+> 1060: \label{fig:gamma_vs_vw}
+  1061: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 1172)
+  error: \label{toy_velocity}
+  message: The label "toy_velocity" is defined but unused in this file (possibly elsewhere).
+  1171:     }
+> 1172:     \label{toy_velocity}
+  1173: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 1566)
+  error: \label{lcs}
+  message: The label "lcs" is defined but unused in this file (possibly elsewhere).
+  1565:     }
+> 1566:     \label{lcs}
+  1567: \end{center}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 1683)
+  error: \label{Bii_vs_xi}
+  message: The label "Bii_vs_xi" is defined but unused in this file (possibly elsewhere).
+  1682:     }
+> 1683:     \label{Bii_vs_xi}
+  1684: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 2059)
+  error: \label{fig:gammaexp_as}
+  message: The label "fig:gammaexp_as" is defined but unused in this file (possibly elsewhere).
+  2058:     }
+> 2059:     \label{fig:gammaexp_as}
+  2060: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 2155)
+  error: \label{kin_spec_av_nucl}
+  message: The label "kin_spec_av_nucl" is defined but unused in this file (possibly elsewhere).
+  2154:     }
+> 2155:     \label{kin_spec_av_nucl}
+  2156: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 2180)
+  error: \label{kin_spec_av_nucl2}
+  message: The label "kin_spec_av_nucl2" is defined but unused in this file (possibly elsewhere).
+  2179:     the value of $z_1$ investigated in \Sec{subsec_RiemannL}.}
+> 2180:     \label{kin_spec_av_nucl2}
+  2181: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 2630)
+  error: \label{kappas_alpha}
+  message: The label "kappas_alpha" is defined but unused in this file (possibly elsewhere).
+  2629:     }
+> 2630:     \label{kappas_alpha}
+  2631: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 2693)
+  error: \label{tab:kappas}
+  message: The label "tab:kappas" is defined but unused in this file (possibly elsewhere).
+  2692:     }
+> 2693:     \label{tab:kappas}
+  2694: \end{table}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 2895)
+  error: \label{fig:tcollnew}
+  message: The label "fig:tcollnew" is defined but unused in this file (possibly elsewhere).
+  2894:     }
+> 2895:     \label{fig:tcollnew}
+  2896: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 3360)
+  error: \label{fig:FL_ev}
+  message: The label "fig:FL_ev" is defined but unused in this file (possibly elsewhere).
+  3359:     }
+> 3360:     \label{fig:FL_ev}
+  3361: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 3595)
+  error: \label{newfits_FL_EXP}
+  message: The label "newfits_FL_EXP" is defined but unused in this file (possibly elsewhere).
+  3594:     }
+> 3595:     \label{newfits_FL_EXP}
+  3596: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 3612)
+  error: \label{newfits_FL_SIM}
+  message: The label "newfits_FL_SIM" is defined but unused in this file (possibly elsewhere).
+  3611:     }
+> 3612:     \label{newfits_FL_SIM}
+  3613: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 3679)
+  error: \label{fig:sigma_vs_vw}
+  message: The label "fig:sigma_vs_vw" is defined but unused in this file (possibly elsewhere).
+  3678:     }
+> 3679: \label{fig:sigma_vs_vw}
+  3680: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 4527)
+  error: \label{types_sol}
+  message: The label "types_sol" is defined but unused in this file (possibly elsewhere).
+  4526:     }
+> 4527:     \label{types_sol}
+  4528: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 4842)
+  error: \label{full_vs_toy_1}
+  message: The label "full_vs_toy_1" is defined but unused in this file (possibly elsewhere).
+  4841:     and toy models).}
+> 4842:     \label{full_vs_toy_1}
+  4843: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 4933)
+  error: \label{full_vs_toy_4}
+  message: The label "full_vs_toy_4" is defined but unused in this file (possibly elsewhere).
+  4932:     able to exactly reproduce both limits.}
+> 4933:     \label{full_vs_toy_4}
+  4934: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 4989)
+  error: \label{full_vs_toy_3}
+  message: The label "full_vs_toy_3" is defined but unused in this file (possibly elsewhere).
+  4988:     in the $z \to \infty$ limit.}
+> 4989:     \label{full_vs_toy_3}
+  4990: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 5479)
+  error: \label{hhs}
+  message: The label "hhs" is defined but unused in this file (possibly elsewhere).
+  5478:     }
+> 5479:     \label{hhs}
+  5480: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 5514)
+  error: \label{nbs_exp_sim}
+  message: The label "nbs_exp_sim" is defined but unused in this file (possibly elsewhere).
+  5513:     }
+> 5514:     \label{nbs_exp_sim}
+  5515: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 5675)
+  error: \label{tab:rel_error_nb}
+  message: The label "tab:rel_error_nb" is defined but unused in this file (possibly elsewhere).
+  5674:     and simultaneous nucleation, respectively.}
+> 5675:     \label{tab:rel_error_nb}
+  5676: \end{table}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 5847)
+  error: \label{hs_sims}
+  message: The label "hs_sims" is defined but unused in this file (possibly elsewhere).
+  5846:     found using \Eq{pt_sim_as}, is recovered.}
+> 5847:     \label{hs_sims}
+  5848: \end{figure}
+
+- file: sample\arxiv_sources\2604.02240v1\main.tex (line 6011)
+  error: \label{nuT_exp}
+  message: The label "nuT_exp" is defined but unused in this file (possibly elsewhere).
+  6010:     }
+> 6011:     \label{nuT_exp}
+  6012: \end{figure}
+
+- file: sample\arxiv_sources\2604.02248v1\Deep_survival.tex (line 2387)
+  error: \label{fig:epochs}
+  message: The label "fig:epochs" is defined but unused in this file (possibly elsewhere).
+  2386:         \caption{Loss curves} % Optional sub-caption
+> 2387:         \label{fig:epochs}
+  2388:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02248v1\Deep_survival.tex (line 2395)
+  error: \label{fig:time}
+  message: The label "fig:time" is defined but unused in this file (possibly elsewhere).
+  2394:         \caption{Accuracy curves} % Optional sub-caption
+> 2395:         \label{fig:time}
+  2396:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02248v1\Deep_survival.tex (line 2411)
+  error: \label{fig:epochs}
+  message: The label "fig:epochs" is defined but unused in this file (possibly elsewhere).
+  2410:         \caption{Loss curves} % Optional sub-caption
+> 2411:         \label{fig:epochs}
+  2412:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02248v1\Deep_survival.tex (line 2419)
+  error: \label{fig:time}
+  message: The label "fig:time" is defined but unused in this file (possibly elsewhere).
+  2418:         \caption{Accuracy curves} % Optional sub-caption
+> 2419:         \label{fig:time}
+  2420:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02248v1\Deep_survival.tex (line 2448)
+  error: \label{fig:epochs}
+  message: The label "fig:epochs" is defined but unused in this file (possibly elsewhere).
+  2447:         \caption{Loss curves} % Optional sub-caption
+> 2448:         \label{fig:epochs}
+  2449:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02248v1\Deep_survival.tex (line 2456)
+  error: \label{fig:time}
+  message: The label "fig:time" is defined but unused in this file (possibly elsewhere).
+  2455:         \caption{Accuracy curves} % Optional sub-caption
+> 2456:         \label{fig:time}
+  2457:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02248v1\Deep_survival.tex (line 2472)
+  error: \label{fig:epochs}
+  message: The label "fig:epochs" is defined but unused in this file (possibly elsewhere).
+  2471:         \caption{Loss curves} % Optional sub-caption
+> 2472:         \label{fig:epochs}
+  2473:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02248v1\Deep_survival.tex (line 2480)
+  error: \label{fig:time}
+  message: The label "fig:time" is defined but unused in this file (possibly elsewhere).
+  2479:         \caption{Accuracy curves} % Optional sub-caption
+> 2480:         \label{fig:time}
+  2481:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02248v1\Deep_survival.tex (line 2503)
+  error: \label{fig:epochs}
+  message: The label "fig:epochs" is defined but unused in this file (possibly elsewhere).
+  2502:         \caption{Without embedding output perturbation} % Optional sub-caption
+> 2503:         \label{fig:epochs}
+  2504:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02248v1\Deep_survival.tex (line 2511)
+  error: \label{fig:time}
+  message: The label "fig:time" is defined but unused in this file (possibly elsewhere).
+  2510:         \caption{With embedding output perturbation} % Optional sub-caption
+> 2511:         \label{fig:time}
+  2512:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02248v1\Deep_survival.tex (line 2546)
+  error: \label{fig:epochs}
+  message: The label "fig:epochs" is defined but unused in this file (possibly elsewhere).
+  2545:         \caption{Clinical+DNA+miRNA} % Optional sub-caption
+> 2546:         \label{fig:epochs}
+  2547:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02248v1\Deep_survival.tex (line 2554)
+  error: \label{fig:time}
+  message: The label "fig:time" is defined but unused in this file (possibly elsewhere).
+  2553:         \caption{miRNA+DNA} % Optional sub-caption
+> 2554:         \label{fig:time}
+  2555:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02277v1\article.tex (line 64)
+  error: \label{codeMetadata}
+  message: The label "codeMetadata" is defined but unused in this file (possibly elsewhere).
+    63: \caption{Code metadata}
+>   64: \label{codeMetadata}
+    65: \end{table}
+
+- file: sample\arxiv_sources\2604.02277v1\article.tex (line 130)
+  error: \label{mai-window}
+  message: The label "mai-window" is defined but unused in this file (possibly elsewhere).
+   129: 	\caption{Main window of the \texttt{Magboltz-GUI} application.}
+>  130: 	\label{mai-window}
+   131: \end{figure}
+
+- file: sample\arxiv_sources\2604.02277v1\article.tex (line 139)
+  error: \label{main-window}
+  message: The label "main-window" is defined but unused in this file (possibly elsewhere).
+   138: 	\caption{Gas selection window.}
+>  139: 	\label{main-window}
+   140: \end{figure}
+
+- file: sample\arxiv_sources\2604.02278v1\Paper_SANER_arXiv_notice.tex (line 148)
+  error: \label{fig:decompilation_pipeline}
+  message: The label "fig:decompilation_pipeline" is defined but unused in this file (possibly elsewhere).
+   147:     \caption{Decompilation pipeline: Dart/Swift source is compiled to binary, disassembled to x86-64 assembly, then decompiled by our fine-tuned models. We evaluate using \codebleu{} (code similarity) and \compileatk{} (syntactic correctness).}
+>  148:     \label{fig:decompilation_pipeline}
+   149: \end{figure}
+
+- file: sample\arxiv_sources\2604.02284v1\rigor_test.tex (line 1134)
+  error: \label{fig:cop-avghead-done-conv}
+  message: The label "fig:cop-avghead-done-conv" is defined but unused in this file (possibly elsewhere).
+  1133:         \caption{Average head Served adaptation}
+> 1134:         \label{fig:cop-avghead-done-conv}
+  1135:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02284v1\rigor_test.tex (line 1140)
+  error: \label{fig:cop-req-done-conv}
+  message: The label "fig:cop-req-done-conv" is defined but unused in this file (possibly elsewhere).
+  1139:         \caption{Requests convergence adaptation }
+> 1140:         \label{fig:cop-req-done-conv}
+  1141:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02284v1\rigor_test.tex (line 1146)
+  error: \label{fig:cop-rew-done-conv}
+  message: The label "fig:cop-rew-done-conv" is defined but unused in this file (possibly elsewhere).
+  1145:         \caption{Reward re-convergence}
+> 1146:         \label{fig:cop-rew-done-conv}
+  1147:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02284v1\rigor_test.tex (line 1152)
+  error: \label{fig:cop-cost-done-conv}
+  message: The label "fig:cop-cost-done-conv" is defined but unused in this file (possibly elsewhere).
+  1151:         \caption{Cost convergence}
+> 1152:         \label{fig:cop-cost-done-conv}
+  1153:     \end{subfigure}
+
+- file: sample\arxiv_sources\2604.02285v1\Group-A_.tex (line 15)
+  error: \label{fig:Group-A}
+  message: The label "fig:Group-A" is defined but unused in this file (possibly elsewhere).
+    14:     \caption{The graphical proof that no  $\epsilon_0$-SOSP exists in Group A.}
+>   15:     \label{fig:Group-A}
+    16: \end{figure}
+
+- file: sample\arxiv_sources\2604.02285v1\Group-A_.tex (line 25)
+  error: \label{fig:right_plot}
+  message: The label "fig:right_plot" is defined but unused in this file (possibly elsewhere).
+    24:     \includegraphics[width=0.95\textwidth]{figs/L_criteria.png}
+>   25:         \label{fig:right_plot}
+    26:     }
+
+- file: sample\arxiv_sources\2604.02285v1\Group-A_.tex (line 28)
+  error: \label{fig:main_figure}
+  message: The label "fig:main_figure" is defined but unused in this file (possibly elsewhere).
+    27:     \caption{Numerical visualization of the SOSP criteria in Group A.}
+>   28:     \label{fig:main_figure}
+    29: \end{figure}
+
+- file: sample\arxiv_sources\2604.02285v1\Group-A_.tex (line 81)
+  error: \label{fig:left_plot}
+  message: The label "fig:left_plot" is defined but unused in this file (possibly elsewhere).
+    80:         \includegraphics[width=0.35\textwidth]{figs/L_3D.png}
+>   81:         \label{fig:left_plot}
+    82:     }
+
+- file: sample\arxiv_sources\2604.02285v1\Group-A_.tex (line 84)
+  error: \label{fig:main_figure}
+  message: The label "fig:main_figure" is defined but unused in this file (possibly elsewhere).
+    83:     \caption{Numerical visualization of the function value in Group A}
+>   84:     \label{fig:main_figure}
+    85: \end{figure}
+
+- file: sample\arxiv_sources\2604.02285v1\Group-B_.tex (line 13)
+  error: \label{fig:Group-B}
+  message: The label "fig:Group-B" is defined but unused in this file (possibly elsewhere).
+    12:     \caption{The graphical proof that no  $\epsilon_0$-SOSP exists in Group B.}
+>   13:     \label{fig:Group-B}
+    14: \end{figure}
+
+- file: sample\arxiv_sources\2604.02285v1\Group-C_.tex (line 14)
+  error: \label{fig:Group-C}
+  message: The label "fig:Group-C" is defined but unused in this file (possibly elsewhere).
+    13:     \caption{The graphical proof that no  $\epsilon_0$-SOSP exists in Group C.}
+>   14:     \label{fig:Group-C}
+    15: \end{figure}
+
+- file: sample\arxiv_sources\2604.02285v1\Group-D_.tex (line 14)
+  error: \label{fig:Group-D}
+  message: The label "fig:Group-D" is defined but unused in this file (possibly elsewhere).
+    13:     \caption{The graphical proof that no  $\epsilon_0$-SOSP exists in Group D.}
+>   14:     \label{fig:Group-D}
+    15: \end{figure}
+
+- file: sample\arxiv_sources\2604.02285v1\Group-E_.tex (line 14)
+  error: \label{fig:Group-E}
+  message: The label "fig:Group-E" is defined but unused in this file (possibly elsewhere).
+    13:     \caption{The graphical proof that no  $\epsilon_0$-SOSP exists in Group E.}
+>   14:     \label{fig:Group-E}
+    15: \end{figure}
+
+- file: sample\arxiv_sources\2604.02285v1\Group-F_.tex (line 14)
+  error: \label{fig:Group-F}
+  message: The label "fig:Group-F" is defined but unused in this file (possibly elsewhere).
+    13:     \caption{The graphical proof that no  $\epsilon_0$-SOSP exists in Group F.}
+>   14:     \label{fig:Group-F}
+    15: \end{figure}
+
+- file: sample\arxiv_sources\2604.02285v1\Group-G_.tex (line 13)
+  error: \label{fig:Group-G}
+  message: The label "fig:Group-G" is defined but unused in this file (possibly elsewhere).
+    12:     \caption{The graphical proof  that no  $\epsilon_0$-SOSP exists in Group G.}
+>   13:     \label{fig:Group-G}
+    14: \end{figure}
+
+- file: sample\arxiv_sources\2604.02285v1\Original-Groups.tex (line 13)
+  error: \label{fig:original_groups}
+  message: The label "fig:original_groups" is defined but unused in this file (possibly elsewhere).
+    12:     \caption{The standard Groups 1--4 used in the hardness proofs of \cite{fearnley2022complexity,hollender2023computational,kontogiannis2024computational}. We show that the modified biquintic interpolation used in our reduction does not introduce any $\epsilon_0$-FOSPs in these groups.}
+>   13:     \label{fig:original_groups}
+    14: \end{figure}
+
+- file: sample\arxiv_sources\2604.02285v1\hardness.tex (line 145)
+  error: \label{fig:colors}
+  message: The label "fig:colors" is defined but unused in this file (possibly elsewhere).
+   144:     \caption{The color value regimes: The colors (B, M, R, G, O) are ordered according to decreasing value, from right to left. The direction of each arrow indicates the direction which decreases the value of the function in the x-y plane.}
+>  145:     \label{fig:colors}
+   146: \end{figure}
+
+- file: sample\arxiv_sources\2604.02285v1\hardness.tex (line 818)
+  error: \label{fig:left_plot}
+  message: The label "fig:left_plot" is defined but unused in this file (possibly elsewhere).
+   817:         \includegraphics[width=0.45\textwidth]{figs/plot2.png}
+>  818:         \label{fig:left_plot}
+   819:     }
+
+- file: sample\arxiv_sources\2604.02285v1\hardness.tex (line 824)
+  error: \label{fig:right_plot}
+  message: The label "fig:right_plot" is defined but unused in this file (possibly elsewhere).
+   823:     \includegraphics[width=0.45\textwidth]{figs/plot1.png}
+>  824:         \label{fig:right_plot}
+   825:     }
+
+- file: sample\arxiv_sources\2604.02291v1\comparison_table.tex (line 3)
+  error: \label{tab:comparison}
+  message: The label "tab:comparison" is defined but unused in this file (possibly elsewhere).
+     2: \caption{TensorPool improvement over TeraPool}
+>    3: \label{tab:comparison}
+     4: \resizebox{\columnwidth}{!}{
+
+- file: sample\arxiv_sources\2604.02291v1\table_ran_processors.tex (line 3)
+  error: \label{tab:archs}
+  message: The label "tab:archs" is defined but unused in this file (possibly elsewhere).
+     2: \caption{Many-Core Processors for Software-Defined RAN} 
+>    3: \label{tab:archs} 
+     4: \centering 
+
+- file: sample\arxiv_sources\2604.02302v1\Appendix.tex (line 342)
+  error: \label{fig:life sciences}
+  message: The label "fig:life sciences" is defined but unused in this file (possibly elsewhere).
+   341:     Retraction incidence over time across fields within the Life Sciences domain.} Each panel representing one of the fields in Health Sciences domain. Green triangles show the annual retraction incidence (in percentage), and blue lines represent the GLM exponential-growth incidence fits based on a negative binomial likelihood (growth rate significance levels $P \leq 0.05$) with shaded areas indicating the $95\%$ confidence intervals. The doubling times ($T_d$) with their $95\%$ CI are reported in the legend. The $y$-axis is shown on a logarithmic scale (zero values not shown; linear scale with 95\% prediction intervals in inset).}
+>  342:     \label{fig:life sciences}
+   343: \end{figure}
+
+- file: sample\arxiv_sources\2604.02302v1\Appendix.tex (line 353)
+  error: \label{fig:physical sciences}
+  message: The label "fig:physical sciences" is defined but unused in this file (possibly elsewhere).
+   352:     with shaded areas indicating the $95\%$ confidence intervals. The doubling times ($T_d$) with their $95\%$ CI are reported in the legend. The $y$-axis is shown on a logarithmic scale (zero values not shown; linear scale with 95\% prediction intervals in inset).}
+>  353:     \label{fig:physical sciences}
+   354: \end{figure}
+
+- file: sample\arxiv_sources\2604.02304v1\main.tex (line 1183)
+  error: \label{fig:cond_fields}
+  message: The label "fig:cond_fields" is defined but unused in this file (possibly elsewhere).
+  1182:   deviation are shown.}
+> 1183: \label{fig:cond_fields}
+  1184: \end{figure}
+
+- file: sample\arxiv_sources\2604.02304v1\main.tex (line 1200)
+  error: \label{fig:cond_traces}
+  message: The label "fig:cond_traces" is defined but unused in this file (possibly elsewhere).
+  1199:   auxiliary latent dimensions.}
+> 1200: \label{fig:cond_traces}
+  1201: \end{figure}
+
+- file: sample\arxiv_sources\2604.02304v1\main.tex (line 1333)
+  error: \label{fig:source_traces}
+  message: The label "fig:source_traces" is defined but unused in this file (possibly elsewhere).
+  1332:   latent dimensions.}
+> 1333: \label{fig:source_traces}
+  1334: \end{figure}
+
+- file: sample\arxiv_sources\2604.02304v1\main.tex (line 1582)
+  error: \label{fig:El-PDE_Post}
+  message: The label "fig:El-PDE_Post" is defined but unused in this file (possibly elsewhere).
+  1581:     \caption{Posterior samples for the elliptic PDE inverse problem.}
+> 1582:     \label{fig:El-PDE_Post}
+  1583: \end{figure}
+
+- file: sample\arxiv_sources\2604.02304v1\main.tex (line 1589)
+  error: \label{fig:El-PDE_Marginal}
+  message: The label "fig:El-PDE_Marginal" is defined but unused in this file (possibly elsewhere).
+  1588:     \caption{Marginal posterior distributions for the auxiliary variables.}
+> 1589:     \label{fig:El-PDE_Marginal}
+  1590: \end{figure}
+
+- file: sample\arxiv_sources\2604.02304v1\main.tex (line 1969)
+  error: \label{fig:posteriors}
+  message: The label "fig:posteriors" is defined but unused in this file (possibly elsewhere).
+  1968: sparse observation regime (34 sensors, $\sigma_\mathrm{noise}=0.50$).}
+> 1969: \label{fig:posteriors}
+  1970: \end{figure}
+
+- file: sample\arxiv_sources\2604.02304v1\main.tex (line 1982)
+  error: \label{fig:traces}
+  message: The label "fig:traces" is defined but unused in this file (possibly elsewhere).
+  1981: the correct values for all four dimensions.}
+> 1982: \label{fig:traces}
+  1983: \end{figure}
+
+- file: sample\arxiv_sources\2604.02320v1\datascale.tex (line 20)
+  error: \label{tab:datascale}
+  message: The label "tab:datascale" is defined but unused in this file (possibly elsewhere).
+    19: \vspace{-0.2in}
+>   20: \label{tab:datascale}
+    21: \end{table}
+
+- file: sample\arxiv_sources\2604.02320v1\figure.tex (line 21)
+  error: \label{fig:relighting}
+  message: The label "fig:relighting" is defined but unused in this file (possibly elsewhere).
+    20:     \caption{\textbf{Relightable LCA.} We demonstrate relighting under HDRI environment maps and point lights, alongside the recovered intrinsic properties of the avatar.}
+>   21:     \label{fig:relighting}
+    22:     \vspace{-0.2in}
+
+- file: sample\arxiv_sources\2604.02320v1\preposttrain.tex (line 37)
+  error: \label{tab:preposttrain}
+  message: The label "tab:preposttrain" is defined but unused in this file (possibly elsewhere).
+    36: \vspace{-0.2in}
+>   37: \label{tab:preposttrain}
+    38: \end{table}
+
+- file: sample\arxiv_sources\2604.02320v1\sota_comparison.tex (line 46)
+  error: \label{tab:sota}
+  message: The label "tab:sota" is defined but unused in this file (possibly elsewhere).
+    45: \vspace{-0.2in}
+>   46: \label{tab:sota}
+    47: \end{table}
+
 - file: sample\submodules\coursebook\appendix\appendix.tex (line 197)
   error: \label{fig:sloppy_struct}
-  message: Label "fig:sloppy_struct" is defined but never referenced.
+  message: The label "fig:sloppy_struct" is defined but unused in this file (possibly elsewhere).
    196: \caption{Eight box struct, two boxes of slop}
 >  197: \label{fig:sloppy_struct}
    198: \end{figure}
 
 - file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 701)
   error: \label{6895997}
-  message: Label "6895997" is defined but never referenced.
+  message: The label "6895997" is defined but unused in this file (possibly elsewhere).
    700: \caption{Probabilities for falling within 1, 2, and 3 standard deviations of the mean in a normal distribution.}
 >  701: \label{6895997}
    702: \end{figure}
 
 - file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 661)
   error: \label{rissosDolphin}
-  message: Label "rissosDolphin" is defined but never referenced.
+  message: The label "rissosDolphin" is defined but unused in this file (possibly elsewhere).
    660:    {\footnotesize Photo by Mike Baird (\oiRedirect{textbook-bairdphotos_com}{www.bairdphotos.com}). \oiRedirect{textbook-CC_BY_2}{CC~BY~2.0~license}.}\vspace{-8mm}}
 >  661:    \label{rissosDolphin}
    662: \end{minipage}
 
 - file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 1175)
   error: \label{textbooksSummaryStats}
-  message: Label "textbooksSummaryStats" is defined but never referenced.
+  message: The label "textbooksSummaryStats" is defined but unused in this file (possibly elsewhere).
   1174: \caption{Summary statistics for the \uclabookN{} price differences.}
 > 1175: \label{textbooksSummaryStats}
   1176: \end{figure}
 
 - file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1183)
   error: \label{quadcopter_david_j}
-  message: Label "quadcopter_david_j" is defined but never referenced.
+  message: The label "quadcopter_david_j" is defined but unused in this file (possibly elsewhere).
   1182:    This photo has been cropped and a border has been added.}}
 > 1183: \label{quadcopter_david_j}
   1184: \end{figure}
 
 - file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1571)
   error: \label{arrayOfFigureAreasForChiSquareDistribution}
-  message: Label "arrayOfFigureAreasForChiSquareDistribution" is defined but never referenced.
+  message: The label "arrayOfFigureAreasForChiSquareDistribution" is defined but unused in this file (possibly elsewhere).
   1570: }
 > 1571: \label{arrayOfFigureAreasForChiSquareDistribution}
   1572: \end{figure}
 
 - file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 448)
   error: \label{variables}
-  message: Label "variables" is defined but never referenced.
+  message: The label "variables" is defined but unused in this file (possibly elsewhere).
    447:   \caption{Breakdown of variables into their respective types.}
 >  448:   \label{variables}
    449: \end{figure}
 
 - file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 899)
   error: \label{mnWinter}
-  message: Label "mnWinter" is defined but never referenced.
+  message: The label "mnWinter" is defined but unused in this file (possibly elsewhere).
    898:         ``It's one storm, in one region, of one country.''
 >  899:     \label{mnWinter}}
    900:   \end{minipage}
 
 - file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 943)
   error: \label{popToSampleGraduates}
-  message: Label "popToSampleGraduates" is defined but never referenced.
+  message: The label "popToSampleGraduates" is defined but unused in this file (possibly elsewhere).
    942:       sample.}
 >  943:   \label{popToSampleGraduates}
    944: \end{figure}
 
 - file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 972)
   error: \label{popToSubSampleGraduates}
-  message: Label "popToSubSampleGraduates" is defined but never referenced.
+  message: The label "popToSubSampleGraduates" is defined but unused in this file (possibly elsewhere).
    971:       health-related majors.}
 >  972:   \label{popToSubSampleGraduates}
    973: \end{figure}
 
 - file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 1012)
   error: \label{surveySample}
-  message: Label "surveySample" is defined but never referenced.
+  message: The label "surveySample" is defined but unused in this file (possibly elsewhere).
   1011:       to completely fix this problem.}
 > 1012:   \label{surveySample}
   1013: \end{figure}
 
 - file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 777)
   error: \label{photoClassifyVenn}
-  message: Label "photoClassifyVenn" is defined but never referenced.
+  message: The label "photoClassifyVenn" is defined but unused in this file (possibly elsewhere).
    776:       \data{photo\us{}classify} data set.}
 >  777:   \label{photoClassifyVenn}
    778: \end{figure}
 
 - file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 2295)
   error: \label{fdicHeightContDistFilled}
-  message: Label "fdicHeightContDistFilled" is defined but never referenced.
+  message: The label "fdicHeightContDistFilled" is defined but unused in this file (possibly elsewhere).
   2294:       Compare this plot with Figure~\ref{usHeightsHist180185}.}
 > 2295:   \label{fdicHeightContDistFilled}
   2296: \end{figure}
 
 - file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1125)
   error: \label{county_pop_transformed}
-  message: Label "county_pop_transformed" is defined but never referenced.
+  message: The label "county_pop_transformed" is defined but unused in this file (possibly elsewhere).
   1124:       $10^4 =$ 10,000.}
 > 1125:     \label{county_pop_transformed}
   1126: \end{figure}
 
 - file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1190)
   error: \label{county_pop_change_v_pop_transform_main}
-  message: Label "county_pop_change_v_pop_transform_main" is defined but never referenced.
+  message: The label "county_pop_change_v_pop_transform_main" is defined but unused in this file (possibly elsewhere).
   1189:       size has been log-transformed.}
 > 1190:   \label{county_pop_change_v_pop_transform_main}
   1191: \end{figure}
 
 - file: sample\submodules\openintro-statistics\extraTeX\tables\TeX\chiSquareTable.tex (line 94)
   error: \label{arrayOfFigureAreasForChiSquareDistributionChiSqAppendix}
-  message: Label "arrayOfFigureAreasForChiSquareDistributionChiSqAppendix" is defined but never referenced.
+  message: The label "arrayOfFigureAreasForChiSquareDistributionChiSqAppendix" is defined but unused in this file (possibly elsewhere).
     93: }
 >   94: \label{arrayOfFigureAreasForChiSquareDistributionChiSqAppendix}
     95: \end{figure}

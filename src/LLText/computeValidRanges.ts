@@ -19,16 +19,17 @@ function computeLaTeXInvalidRanges(
   text: string,
   verbatimRanges: [number, number][] = []
 ): [number, number][] {
-  const verbatimEnvs = [
+  const verbatimLikeEnvs = [
     "verbatim",
-    "lstlisting",
+    "lstlisting", // source code listing, provided by listings package
+    "tikzpicture", // TikZ graphics, provided by TikZ package
     "minted",
     "Verbatim", // fancyvrb package
     "BVerbatim",
     "LVerbatim",
     "SaveVerbatim",
     "VerbatimOut",
-    "thebibliography",
+    "thebibliography", // bibliography environment
   ];
 
   // First, detect \if0 / \iffalse ... \fi ranges independently and treat them
@@ -68,7 +69,7 @@ function computeLaTeXInvalidRanges(
 
   // Detect all patterns
   // verbsBegin and verbsEnd
-  for (const env of verbatimEnvs) {
+  for (const env of verbatimLikeEnvs) {
     const beginRegex = new RegExp(`\\\\begin\\{${env}\\*?\\}`, "g");
     const endRegex = new RegExp(`\\\\end\\{${env}\\*?\\}`, "g");
 

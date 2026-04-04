@@ -4,6 +4,7 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 ## 1.7.6 - 2026-4-3
 
+- Disable checking for `tikzpicture` environments.
 - Improve `LLT` rule to exclude more cases of `^T` used in mathematical notations, such as `\int^T_0 f(t) dt`.
 
 ## 1.7.5 - 2026-4-3

@@ -1,22 +1,8 @@
-[CODE] LLBracketRound (3)
+[CODE] LLBracketRound (1)
 - file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 939)
   error: \sqrt(
   message: Did you mean "\sqrt{...}" instead of "\sqrt(...)"?
    938: \midrule
 >  939:  Real numbers $x$ and $y$ satisfy the following system:  $x^2 + y^2 = 25$ \\ $(x + y + 5)(-x + y + 5)(x - y + 5)(x + y - 5) = 100$  and $x + y = \sqrt(m)$. Determine $m$. &  & Positive control (no variant) \\
    940: \midrule
-
-- file: sample\arxiv_sources\2604.02049v1\examples_two_crossed_beams_convergence.tex (line 16)
-  error: ^(
-  message: Did you mean "^{...}" instead of "^(...)"?
-    15:     dashed
->   16: ] {2*x^(-1)};
-    17: \addlegendentry{$\order{h}$}
-
-- file: sample\arxiv_sources\2604.02049v1\examples_two_crossed_beams_convergence.tex (line 21)
-  error: ^(
-  message: Did you mean "^{...}" instead of "^(...)"?
-    20:     samples=2,
->   21: ] {5e-2*x^(-2)};
-    22: \addlegendentry{$\order{h^2}$}
 

@@ -1,4 +1,4 @@
-[CODE] LLENDash (548)
+[CODE] LLENDash (546)
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 455)
   error: Shannon-Kolmogorov-Sinai
   message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
@@ -2157,20 +2157,6 @@
    469: %
 >  470: After using the product rule and using the Novikov-Furutsu theorem~\cite{Article::Novikov_1965, Article::Furutsu_1963}, one has
    471: %
-
-- file: sample\arxiv_sources\2604.02100v1\paper.tex (line 333)
-  error: Non-Lorentz
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-   332:     \node[evap]  (e1) {Evap + Rocket $\Delta t/2$};
->  333:     \node[kick,  below=of e1] (k1) {Non-Lorentz half-kick};
-   334:     \node[boris, below=of k1] (bo) {Boris + Advect $\Delta t$};
-
-- file: sample\arxiv_sources\2604.02100v1\paper.tex (line 335)
-  error: Non-Lorentz
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-   334:     \node[boris, below=of k1] (bo) {Boris + Advect $\Delta t$};
->  335:     \node[kick,  below=of bo] (k2) {Non-Lorentz half-kick};
-   336:     \node[evap,  below=of k2] (e2) {Evap + Rocket $\Delta t/2$};
 
 - file: sample\arxiv_sources\2604.02101v1\CDC.tex (line 610)
   error: Fokker-Planck

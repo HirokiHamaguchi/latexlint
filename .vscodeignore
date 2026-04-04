@@ -2,7 +2,6 @@
 **
 
 # Include only necessary files
-!dist/**
 !package.json
 !README.md
 !CHANGELOG.md
@@ -11,4 +10,5 @@
 !images/mainIcon512.png
 
 # Exclude source maps
-dist/**/*.map
+!dist/**
+dist/extension.js.map

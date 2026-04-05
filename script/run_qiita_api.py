@@ -29,13 +29,13 @@ def maybe_update_qiita_from_readme(
 
     # Read README body
     body_text = _read_file_text(readme_path)
-    # https://raw.githubusercontent.com から始まり、.pngで終わるURLについて、その末尾に、?v=1を付与してキャッシュを回避する
+    # https://raw.githubusercontent.com から始まり、.pngで終わるURLについて、その末尾に、?v=nを付与してキャッシュを回避する
 
     for url_match in re.finditer(
         r"https://raw\.githubusercontent\.com[^\s]+?\.png", body_text
     ):
         url = url_match.group(0)
-        new_url = f"{url}?v=1"
+        new_url = f"{url}?v=2"
         body_text = body_text.replace(url, new_url)
 
     # Prepare prompts (allow dependency injection for tests)

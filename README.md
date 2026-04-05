@@ -696,7 +696,6 @@ This project consists of multiple components with different licenses:
 Although we do not use them directly, part of our extension is inspired by the following excellent LaTeX checking tools:
 
 * LaTeX package [chktex](https://ctan.org/pkg/chktex) (GNU General Public License, version 2 or newer)
-* Linter for natural language text [textlint](https://github.com/textlint/textlint) (MIT License)
 * Linter for LaTeX [latexcheck](https://github.com/dainiak/latexcheck) (MIT License)
 
 Additionally, our extension also resembles the following VS Code extensions in some features:

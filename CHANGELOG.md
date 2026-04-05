@@ -2,6 +2,10 @@
 
 All notable changes to the "latexlint" extension will be documented in this file.
 
+## 1.7.8 - 2026-4-5
+
+- Update `LLSortedCites` to warn only for specific `\bibliographystyle` values and when a `\cite{...}` argument actually contains multiple keys (comma).
+
 ## 1.7.7 - 2026-4-5
 
 - Improve `LLUnRef` to detect unreferenced labels in `table*` and `figure*` environments.

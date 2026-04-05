@@ -1,13 +1,13 @@
 \begin{thebibliography}{1}
 
-\bibitem{refA}
-A.
-\newblock Article.
-\newblock {\em Journal}, 2000.
-
 \bibitem{refB}
 B.
 \newblock {\em Book}.
 \newblock Publisher, 2000.
+
+\bibitem{refA}
+A.
+\newblock Article.
+\newblock {\em Journal}, 2000.
 
 \end{thebibliography}

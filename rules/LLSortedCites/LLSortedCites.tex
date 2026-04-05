@@ -1,3 +1,4 @@
+% !LW recipe=pdflatex+bibtex+pdflatex*2
 \documentclass[preview]{standalone}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -6,6 +7,8 @@
 \usepackage{geometry}
 \geometry{paperwidth=6cm, margin=0cm}
 
+% \usepackage{cite}
+% \usepackage[numbers]{natbib}
 \usepackage{natbib} % for LLSortedCites
 
 \usepackage{xcolor}
@@ -21,11 +24,11 @@
 
 \begin{document}
 
-Unsorted citations \cite{refB,refA}: \tC{ng?}
+You can sort citations by unsrt \tA{\cite{refB,refA}}.
 
-Automatically sortable like this: \cite{refA,refB}.
+However, unsrt does not sort this: \tD{\cite{refA,refB}}.
 
-\bibliographystyle{plain}
+\bibliographystyle{unsrt}
 \bibliography{../../sample/lint.bib}
 
 \end{document}

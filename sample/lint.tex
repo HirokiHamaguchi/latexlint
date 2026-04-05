@@ -206,7 +206,7 @@ Multi-line alignat environment is not detected.
 
 \section{LLArticle}
 
-A $n$-dimensional space. An $n$-dimensional space.
+A $n$-dimensional hypercube. An $n$-dimensional hypercube.
 
 \section{LLBig}
 
@@ -281,7 +281,7 @@ $\min(a,b)$ and $\min{a,b}$ are also checked.
 
 $x_23$, $x^ab$, and $x_ab$ are also checked.
 Cases like $x^a b$, $x^2\;$, and $e^i\pi$ are not detected.
-Disabled by default.
+Disabled by default. (It contains false positives, and may be too strict for some users.)
 
 Following examples are ignored.
 \begin{myVerbatim}
@@ -347,6 +347,7 @@ The label in Eq.~\eqref{eq:f(x_(k+1))<=m(x_(k+1))<=m(x_k)=f(x_k)} is ignored.
 \end{table}
 
 The difference is quite subtle, but the vertical position of the colon is different.
+This difference become clearer with some other math fonts.
 % $\Coloneqq, \Eqqcolon, \coloneqq, \eqqcolon$
 
 \section{LLColonForMapping}
@@ -601,6 +602,8 @@ Standard: \(\binom{n}{k}\)
 
 \section{LLPeriod}
 
+The period character (.) can be used in abbreviations, not as a sentence-ending period. In the former case, it should be followed by a backslash to prevent LaTeX from treating it as a sentence-ending period, which can affect spacing.
+
 \begin{table}[H]
 	\centering
 	\begin{tabular}{lll}
@@ -620,6 +623,8 @@ To refer to the equation, use~\eqref{eq:sample} with eqref instead of (\ref{eq:s
 Eq.~\ref{eq:sample} and Prob.~\ref{eq:sample} are allowed.
 
 \section{LLSharp}
+
+Some people mistake \verb|\sharp| to be a symbol for the number of elements in a set, but it is not. It is a musical symbol. The correct symbol for the number of elements in a set is \verb|\#|.
 
 \begin{table}[H]
 	\centering
@@ -656,7 +661,9 @@ If you really want to use $\sharp$, you can disable this rule.
 
 \section{LLSortedCites}
 
-Unsorted citations: \cite{refA,refB}.
+Unsorted citations \cite{refB,refA}: \tC{ng?}
+
+Automatically sortable like this: \cite{refA,refB}.
 
 \section{LLSpaceEnglish}
 
@@ -665,8 +672,8 @@ Missing spaces around inline math should be detected.
 Improper spacing: a\(x\)b and a$x$b.
 Proper spacing: a \(x\) b and a $x$ b.
 
-The following are excluded by rule exceptions: $n$th, \(m\)th, $\backslash$n, \(\backslash\)m, H\({}_2\)O, C\({}_{n}\)H\({}_{2n+2}\).
-No detection when token is not between letters:  1$x$, 1\(x\), $x$1, \(x\)1, $x$, \(x\), etc.
+The following are excluded by rule exceptions: $n$th, \(m\)th, $\backslash$n, \(\backslash\)m, H\({}_2\)O, C\({}_{n}\)H\({}_{2n+2}\).\\
+No detection in the following cases:  1$x$, 1\(x\), $x$1, \(x\)1, $x$, \(x\), etc.
 
 \section{LLSpaceJapanese}
 

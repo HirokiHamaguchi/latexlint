@@ -2,7 +2,11 @@
 
 All notable changes to the "latexlint" extension will be documented in this file.
 
-## 1.7.6 - 2026-4-3
+## 1.7.7 - 2026-4-5
+
+- Improve `LLUnRef` to detect unreferenced labels in `table*` and `figure*` environments.
+
+## 1.7.6 - 2026-4-4
 
 - Disable checking for `tikzpicture` environments.
 - Improve `LLT` rule to exclude more cases of `^T` used in mathematical notations, such as `\int^T_0 f(t) dt`.

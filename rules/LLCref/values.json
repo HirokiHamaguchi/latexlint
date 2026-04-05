@@ -1,5 +1,5 @@
 {
   "message": "Consider using \\\\cref instead of \\\\ref. \\\\cref automatically adds suffixes and handles multiple references more gracefully.",
   "severity": "INFO",
-  "lint_test_count": 6
+  "lint_test_count": 7
 }

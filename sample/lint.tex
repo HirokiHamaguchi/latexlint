@@ -254,7 +254,7 @@ This is a sample text.
 
 \section{LLBracketCurly}
 
-\begin{table}[h]
+\begin{table}[H]
 	\centering
 	\begin{tabular}{lll}
 		\verb|\max(a,b)|  & $\max(a,b)$  & \tA{ok}  \\
@@ -301,7 +301,7 @@ Following examples are ignored.
 
 \section{LLBracketRound}
 
-\begin{table}[h]
+\begin{table}[H]
 	\centering
 	\begin{tabular}{lll}
 		\verb|\sqrt{a}| & $\sqrt{a}$ & \tA{ok} \\
@@ -776,9 +776,36 @@ Only for Japanese texts.
 	\end{minipage}
 \end{figure}
 
+\begin{figure*}[htbp]
+	\centering
+	\includegraphics[width=0.4\textwidth]{example-image}
+	\caption{Unreferenced Wide Figure}
+	\label{fig:star-unreferenced}
+\end{figure*}
+
+\begin{table*}[htbp]
+	\centering
+	\begin{tabular}{cc}
+		A & B \\
+		1 & 2
+	\end{tabular}
+	\caption{Referenced Wide Table}
+	\label{tab:star-referenced}
+\end{table*}
+
+\begin{table*}[htbp]
+	\centering
+	\begin{tabular}{cc}
+		C & D \\
+		3 & 4
+	\end{tabular}
+	\caption{Unreferenced Wide Table}
+	\label{tab:star-unreferenced}
+\end{table*}
+
 \newcommand{\myRef}[1]{\cref{#1}}
 
-\Cref{fig:referenced} and \myRef{fig:referenced2} are referenced in the text, while the other figure is not.
+\Cref{fig:referenced}, \myRef{fig:referenced2}, and \ref{tab:star-referenced} are referenced in the text, while the other figure/table labels are not.
 
 \section{LLURL}
 

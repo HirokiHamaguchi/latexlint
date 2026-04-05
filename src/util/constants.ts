@@ -74,7 +74,7 @@ export const messages: Record<LLCode, string> = {
     LLTextLint: 'NO MESSAGE. SET EACH MESSAGE IN LL FILE.',
     LLThousands: 'Consider using "%1{,}%2" instead of "%1,%2". This can help avoid spacing issues and improve readability.',
     LLTitle: 'Should this be "%1"? Follow your preferred style guide and register as an exception if necessary.',
-    LLUnRef: 'The label "%1" is defined but unused in this file (possibly elsewhere).',
+    LLUnRef: 'The label "%1" in the %2 environment is defined but unused in this file (possibly elsewhere).',
     LLURL: 'Query parameter "?%1=" might be unnecessary and could be removed for cleaner URLs.',
     LLUserDefined: 'This violates your defined rule: %1',
 };

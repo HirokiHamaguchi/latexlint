@@ -63,6 +63,7 @@ def make_lint_tex():
         assert lines[0].startswith(r"\section{")
         assert lines[0][9:-2] == rule, f"{lines[0][9:-1]} != {rule}"
         assert lines[-1].endswith("\n"), lint_path
+        assert all("[h]" not in line for line in lines), f"{lint_path} contains [h]"
         CONTENTS.append("".join(lines))
 
     gen_contents = "\n".join(CONTENTS)

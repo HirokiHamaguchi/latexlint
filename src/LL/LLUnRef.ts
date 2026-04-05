@@ -35,9 +35,12 @@ export default function LLUnRef(doc: vscode.TextDocument, txt: LLText): vscode.D
         return null;
     };
 
+    const escapeRegExp = (str: string): string => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
     const processEnvironmentLabels = (envName: string) => {
-        const beginRegex = new RegExp(`\\\\begin\\{${envName}\\}`, 'g');
-        const endRegex = new RegExp(`\\\\end\\{${envName}\\}`, 'g');
+        const escapedEnvName = escapeRegExp(envName);
+        const beginRegex = new RegExp(`\\\\begin\\{${escapedEnvName}\\}`, 'g');
+        const endRegex = new RegExp(`\\\\end\\{${escapedEnvName}\\}`, 'g');
         const envHeaderLength = `\\begin{${envName}}`.length;
 
         let beginMatch: RegExpExecArray | null;
@@ -57,14 +60,14 @@ export default function LLUnRef(doc: vscode.TextDocument, txt: LLText): vscode.D
                 if (!txt.isValid(absoluteIndex)) continue;
                 if (allRefs.has(labelName)) continue;
 
-                message.push(messages[code].replaceAll("%1", labelName));
+                message.push(messages[code].replaceAll("%1", labelName).replaceAll("%2", envName));
                 ranges.push(match2range(doc, { ...labelMatch, index: absoluteIndex }));
             }
         }
     };
 
     const allRefs = collectRefs();
-    ['figure', 'table'].forEach(processEnvironmentLabels);
+    ['figure', 'table', 'figure*', 'table*'].forEach(processEnvironmentLabels);
 
     return ranges2diagnostics(code, message, ranges);
 }

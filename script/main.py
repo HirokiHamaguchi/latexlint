@@ -10,6 +10,7 @@ from make_readme import make_readme
 from make_rules_ts import make_rules_ts
 from make_screen_shot import make_screen_shot
 from make_web_readme import make_web_readme
+from make_web_samples import make_web_samples
 from make_web_svg import make_web_svg
 from run_diagnose import run_diagnose
 from run_fetch_arXiv import run_fetch_arXiv
@@ -48,6 +49,7 @@ def main():
     make_rules_ts()
     make_web_readme()
     make_web_svg()
+    make_web_samples()
     make_enumerate_diagnostics_test()
     test_command_names()
     test_disabled()

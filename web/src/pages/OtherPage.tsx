@@ -1,4 +1,5 @@
 import {
+    Box,
     Text,
     VStack
 } from '@chakra-ui/react';
@@ -19,6 +20,23 @@ export function OtherPage() {
                     Your input is processed entirely within your browser.
                     No data is sent to any server.
                 </Text>
+            </VStack>
+            <VStack align="stretch">
+                <SectionHeading>Sample PDF</SectionHeading>
+                <Box
+                    borderRadius="md"
+                    border="1px solid"
+                    borderColor="gray.200"
+                    overflow="hidden"
+                >
+                    <embed
+                        src="/latexlint/lint.pdf"
+                        type="application/pdf"
+                        width="100%"
+                        height="600"
+                        style={{ display: 'block' }}
+                    />
+                </Box>
             </VStack>
             <VStack align="stretch">
                 <SectionHeading>Japanese Vocabulary Check</SectionHeading>

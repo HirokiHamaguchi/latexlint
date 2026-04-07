@@ -128,7 +128,7 @@ const DiagnosticItem = ({ diagnostic, onOpenAboutWithHash, onDiagnosticClick, on
                         <Badge colorPalette={presentation.color} variant="solid" size="sm">
                             {presentation.label.endsWith('s') ? presentation.label.slice(0, -1) : presentation.label}
                         </Badge>
-                        <Text fontSize="sm" color="gray.600">
+                        <Text color="gray.600">
                             Line {diagnostic.startLineNumber}, Column {diagnostic.startColumn}
                         </Text>
                     </HStack>
@@ -138,7 +138,7 @@ const DiagnosticItem = ({ diagnostic, onOpenAboutWithHash, onDiagnosticClick, on
                         onDisableRule={onDisableRule}
                     />
                 </HStack>
-                <Text fontSize="sm">{diagnostic.message}</Text>
+                <Text>{diagnostic.message}</Text>
             </VStack>
         </Box>
     );

@@ -35,7 +35,6 @@ export function DocTypeSwitch({ docType, onChange }: DocTypeSwitchProps) {
                     px={3}
                     py={1.5}
                     borderRadius="full"
-                    fontSize="sm"
                     fontWeight="medium"
                     bg={docType === 'latex' ? '#2563eb' : 'transparent'}
                     color={docType === 'latex' ? 'white' : 'gray.700'}
@@ -47,7 +46,6 @@ export function DocTypeSwitch({ docType, onChange }: DocTypeSwitchProps) {
                     px={3}
                     py={1.5}
                     borderRadius="full"
-                    fontSize="sm"
                     fontWeight="medium"
                     bg={docType === 'markdown' ? '#2563eb' : 'transparent'}
                     color={docType === 'markdown' ? 'white' : 'gray.700'}

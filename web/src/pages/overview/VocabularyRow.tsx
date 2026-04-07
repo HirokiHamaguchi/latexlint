@@ -14,7 +14,7 @@ function formatList(value: string | string[]) {
 function formatMemo(memo: string) {
     if (!memo) return null;
     return memo.split('\n').map((line, index) => (
-        <Text key={index} fontSize="sm">{line}</Text>
+        <Text key={index}>{line}</Text>
     ));
 }
 

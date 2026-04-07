@@ -39,21 +39,23 @@ export function TopNavHeader() {
                 }}
             >
                 {/* Logo + LaTeX Lint */}
-                <Box
-                    display="flex"
-                    alignItems="center"
-                    gap={2}
-                    flexShrink={0}
-                >
-                    <Image
-                        src="lintIconLight_copied.svg"
-                        alt="LaTeX Lint Icon"
-                        boxSize="1.5rem"
-                    />
-                    <Text fontWeight="semibold" fontSize="sm" fontFamily="Times New Roman, serif">
-                        LaTeX Lint
-                    </Text>
-                </Box>
+                <RouterLink to={ROUTES.HOME} aria-label="Go to Home">
+                    <Box
+                        display="flex"
+                        alignItems="center"
+                        gap={2}
+                        flexShrink={0}
+                    >
+                        <Image
+                            src="lintIconLight_copied.svg"
+                            alt="LaTeX Lint Icon"
+                            boxSize="1.5rem"
+                        />
+                        <Text fontWeight="semibold" fontFamily="Times New Roman, serif">
+                            LaTeX Lint
+                        </Text>
+                    </Box>
+                </RouterLink>
 
                 {/* Divider */}
                 <Box

@@ -20,10 +20,10 @@ export function OtherPage() {
     return (
         <PageLayout>
             <VStack align="stretch">
-                <SectionHeading>Support latexlint</SectionHeading>
+                <SectionHeading>Support LaTeX Lint</SectionHeading>
                 <VStack align="stretch" gap={3}>
                     <Text>
-                        If latexlint helps your writing, please star our GitHub repository.
+                        If LaTeX Lint helps your writing, please star our GitHub repository.
                         It really motivates us and helps more users discover this project.
                     </Text>
                     <Link
@@ -43,7 +43,7 @@ export function OtherPage() {
             </VStack>
             <VStack align="stretch">
                 <SectionHeading>Privacy</SectionHeading>
-                <Text fontSize="sm">
+                <Text>
                     Your input is processed entirely within your browser.
                     No data is sent to any server.
                 </Text>

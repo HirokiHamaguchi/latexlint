@@ -1,10 +1,15 @@
 import {
     Box,
+    Button,
+    HStack,
+    Icon,
+    Link,
     Text,
     VStack
 } from '@chakra-ui/react';
 import { getVocabularyData } from '@latexlint/TextLint/vocabulary_loader';
 import { useMemo } from 'react';
+import { FaStar } from 'react-icons/fa';
 import { PageLayout } from '../components/layout/PageLayout';
 import { SectionHeading } from '../components/typography/SectionHeading';
 import { VocabularyTable } from './overview/VocabularyTable';
@@ -14,6 +19,28 @@ export function OtherPage() {
 
     return (
         <PageLayout>
+            <VStack align="stretch">
+                <SectionHeading>Support latexlint</SectionHeading>
+                <VStack align="stretch" gap={3}>
+                    <Text>
+                        If latexlint helps your writing, please star our GitHub repository.
+                        It really motivates us and helps more users discover this project.
+                    </Text>
+                    <Link
+                        href="https://github.com/HirokiHamaguchi/latexlint"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        alignSelf="flex-start"
+                    >
+                        <Button colorScheme="yellow" size="lg" aria-label="Star on GitHub">
+                            <HStack gap={2}>
+                                <Icon as={FaStar} aria-hidden="true" color="yellow.400" />
+                                <Text as="span">Star on GitHub</Text>
+                            </HStack>
+                        </Button>
+                    </Link>
+                </VStack>
+            </VStack>
             <VStack align="stretch">
                 <SectionHeading>Privacy</SectionHeading>
                 <Text fontSize="sm">

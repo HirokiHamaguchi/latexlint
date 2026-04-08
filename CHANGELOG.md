@@ -2,6 +2,10 @@
 
 All notable changes to the "latexlint" extension will be documented in this file.
 
+## 1.7.9 - 2026-4-8
+
+- Expand LLText LaTeX invalid-range detection to ignore `CCSXML`, `comment`, and `filecontents`/`filecontents*` environments.
+
 ## 1.7.8 - 2026-4-5
 
 - Update `LLSortedCites` to warn only for specific `\bibliographystyle` values and when a `\cite{...}` argument actually contains multiple keys (comma).

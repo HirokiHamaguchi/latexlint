@@ -1,4 +1,4 @@
-[CODE] LLAlignAnd (187)
+[CODE] LLAlignAnd (185)
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1317)
   error: = &
   message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
@@ -390,20 +390,6 @@
   1049: \begin{align*}
 > 1050: c_0(r,M,l):=&\Big(1-\frac{2M}{r}+\frac{r^2}{l^2}\Big)\left[-\dfrac{f(r)}{2}\dfrac{2M}{r^{3}}\de_{r}\Big(1-\frac{2M}{r}+\frac{r^2}{l^2}\Big)-\dfrac{\de_{r}f(r)}{4}\Big(\de_{r}\Big(1-\frac{2M}{r}+\frac{r^2}{l^2}\Big)\Big)^{2}\right] \\
   1051: &+o\Big(\Big(1-\frac{2M}{r}+\frac{r^2}{l^2}\Big)^2\Big),
-
-- file: sample\arxiv_sources\2604.02116v1\mainV2.tex (line 228)
-  error: = &
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
-   227: \begin{align}
->  228:     (Ha)_n = & \sum_k h(k-2n)a_k \\
-   229:     (Ga)_n = & \sum_kg(k -2n)a_k,
-
-- file: sample\arxiv_sources\2604.02116v1\mainV2.tex (line 229)
-  error: = &
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
-   228:     (Ha)_n = & \sum_k h(k-2n)a_k \\
->  229:     (Ga)_n = & \sum_kg(k -2n)a_k,
-   230: \end{align}
 
 - file: sample\arxiv_sources\2604.02116v1\mainV2.tex (line 415)
   error: = &

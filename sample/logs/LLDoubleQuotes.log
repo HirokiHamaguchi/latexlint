@@ -1,4 +1,4 @@
-[CODE] LLDoubleQuotes (2555)
+[CODE] LLDoubleQuotes (2545)
 - file: sample\arxiv_sources\1407.2927v2\JustMathPERC.revised.tex (line 93)
   error: "
   message: For double quotes, use ``...''.
@@ -6033,34 +6033,6 @@
 >   68: 2019 C8 & Alice has a map of Wonderland, a country consisting of \$n \textbackslash{}geqslant 2\$ towns. For every pair of towns, there is a narrow road going from one town to the other. One day, all the roads are declared to be "one way" only. Alice has no information on the direction of the roads, but the King of Hearts has offered to help her. She is allowed to ask him a number of questions. For each question in turn, Alice chooses a pair of towns and the King of Hearts tells her the direction of the road connecting those two towns.   Alice wants to know whether there is at least one town in Wonderland with at most one outgoing road. Prove that she can always find out by asking at most \$4n\$ questions. \\
     69: 2019 C9 & For any two different real numbers \$x\$ and \$y\$, we define \$D(x, y)\$ to be the unique integer \$d\$ satisfying \$2\textasciicircum{}\{d\} \textbackslash{}leqslant|x-y|<2\textasciicircum{}\{d+1\}\$. Given a set of reals \$\textbackslash{}mathcal\{F\}\$, and an element \$x \textbackslash{}in \textbackslash{}mathcal\{F\}\$, we say that the scales of \$x\$ in \$\textbackslash{}mathcal\{F\}\$ are the values of \$D(x, y)\$ for \$y \textbackslash{}in \textbackslash{}mathcal\{F\}\$ with \$x \textbackslash{}neq y\$.  Let \$k\$ be a given positive integer. Suppose that each member \$x\$ of \$\textbackslash{}mathcal\{F\}\$ has at most \$k\$ different scales in \$\textbackslash{}mathcal\{F\}\$ (note that these scales may depend on \$x\$ ). What is the maximum possible size of \$\textbackslash{}mathcal\{F\}\$ ? \\
 
-- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 148)
-  error: "
-  message: For double quotes, use ``...''.
-   147:     \item \textbf{Hand-coded heuristics: } Lenat's AM/EURISKO, Susan Epstein's Graph Theorist, Fajtlowicz's Graffiti (and now the new TxGraffiti), HR (automated theory formation using best-first search for quantitiave interestingness measures -> also wrote On the Notion of Interestingness. it formalizes the dimensions of interestingness for math discovery), De Bie: subjective interestingness defined using unexpectedness, template-based conjecturing for Isabelle/HOL 
->  148:     \item \textbf{Using LLMs to generate ideas: } Paper "Can LLMs Generate Novel Research Ideas?" -> yes, but they are lesser feasible than expert-generated ideas. AI scientist papers.
-   149: \end{itemize}
-
-- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 148)
-  error: "
-  message: For double quotes, use ``...''.
-   147:     \item \textbf{Hand-coded heuristics: } Lenat's AM/EURISKO, Susan Epstein's Graph Theorist, Fajtlowicz's Graffiti (and now the new TxGraffiti), HR (automated theory formation using best-first search for quantitiave interestingness measures -> also wrote On the Notion of Interestingness. it formalizes the dimensions of interestingness for math discovery), De Bie: subjective interestingness defined using unexpectedness, template-based conjecturing for Isabelle/HOL 
->  148:     \item \textbf{Using LLMs to generate ideas: } Paper "Can LLMs Generate Novel Research Ideas?" -> yes, but they are lesser feasible than expert-generated ideas. AI scientist papers.
-   149: \end{itemize}
-
-- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 229)
-  error: "
-  message: For double quotes, use ``...''.
-   228: \end{tabular}
->  229: \caption{Correlation between LLM vs. human judgments of interestingness and within each model family. We include the per-model $R^2$ against human ratings on questions from our Prolific dataset. The “Mean pairwise $r$” column reports the mean pairwise Pearson correlation between models within their own family (computed over per-problem predictions). The "thinking" tag indicates reasoning models. The correlations for difficulty judgments are provided in Table \ref{tab:llm_r2_challenge}.}
-   230: \label{tab:llm_r2}
-
-- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 229)
-  error: "
-  message: For double quotes, use ``...''.
-   228: \end{tabular}
->  229: \caption{Correlation between LLM vs. human judgments of interestingness and within each model family. We include the per-model $R^2$ against human ratings on questions from our Prolific dataset. The “Mean pairwise $r$” column reports the mean pairwise Pearson correlation between models within their own family (computed over per-problem predictions). The "thinking" tag indicates reasoning models. The correlations for difficulty judgments are provided in Table \ref{tab:llm_r2_challenge}.}
-   230: \label{tab:llm_r2}
-
 - file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 309)
   error: "
   message: For double quotes, use ``...''.
@@ -6109,20 +6081,6 @@
    311: \paragraph{Most LLMs do not reflect \emph{why} humans find problems interesting.} 
 >  312: To assess what factors of problems models and people find interesting, we next compared the distribution of reasons that humans and LLMs selected for problem interestingness. Since problems in our IMO survey mostly received 1-2 responses per problem, we don't focus on problem-level analysis for this. Instead, we focus on pre-survey questions which participants answered assigning importance to different interestingness reasons (e.g., ``Please indicate how important this factor generally is for a problem to be interesting to you: The problem statement is simple and elegant.''). The answers were collected on a four point scale of "not important" to "very important" with an option to mark if the criterion did not make sense to the participant. We replicate this experiment with all LLMs we examine, sampling 50 responses (to match the 48 participants from our IMO study). For each interestingness criterion, human participants' answers collectively spanned the allowed range of importance options. However, despite sampling each LLM 50 times at temperature 1.0, most LLMs only selected one to two importance scores for each reason. We include comparisons between the human and model distributions for all models we examine in Appendix~\ref{app:add_results_imo}. Only Mistral 7B Instruct (Figure~\ref{fig:mistral_7b_interestingness_importance}) and Mistral 24B Instruct (Figure~\ref{fig:mistral_24b_interestingness_importance}) reflect the human distributions of interestingness rationales well. Future work can better understand the drivers for such differences across model families. 
    313: 
-
-- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 413)
-  error: "
-  message: For double quotes, use ``...''.
-   412: \small
->  413: \caption{Agreement with human ratings ($R^2$). Not sure if a table is the best visualization (unless we are treating this as a "benchmark")}
-   414: \label{tab:llm_r2}
-
-- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 413)
-  error: "
-  message: For double quotes, use ``...''.
-   412: \small
->  413: \caption{Agreement with human ratings ($R^2$). Not sure if a table is the best visualization (unless we are treating this as a "benchmark")}
-   414: \label{tab:llm_r2}
 
 - file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 476)
   error: "
@@ -6158,34 +6116,6 @@
    646: \label{app:add_results_imo}
 >  647: \paragraph{Elegance played a key role in human interestingness judgments of the IMO problems.} For the IMO survey, each participant rated the interestingness of four problems and selected interestingness/uninterestingness rationales for their rating. In Appendix Figure \ref{fig:hist_int_unint}, we include a histogram of the frequency of different rationales for interestingness/uninterestingness. The three most frequently marked reasons for interestingness were ``the problem statement is simple and elegant," ``the solution does not require any sophisticated techniques/theorems," and ``the solution is elegant." We also include a correlation matrix depicting when people chose multiple reasons for interestingness/uninterestingness for the same problem in Appendix Figure~\ref{fig:int_unint_corr}.
    648: 
-
-- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 1307)
-  error: "
-  message: For double quotes, use ``...''.
-  1306: 
-> 1307: \item \verb+xfig+ "patterned" shapes are implemented with bitmap fonts.  Use
-  1308:   "solid" shapes instead.
-
-- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 1307)
-  error: "
-  message: For double quotes, use ``...''.
-  1306: 
-> 1307: \item \verb+xfig+ "patterned" shapes are implemented with bitmap fonts.  Use
-  1308:   "solid" shapes instead.
-
-- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 1308)
-  error: "
-  message: For double quotes, use ``...''.
-  1307: \item \verb+xfig+ "patterned" shapes are implemented with bitmap fonts.  Use
-> 1308:   "solid" shapes instead.
-  1309: 
-
-- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 1308)
-  error: "
-  message: For double quotes, use ``...''.
-  1307: \item \verb+xfig+ "patterned" shapes are implemented with bitmap fonts.  Use
-> 1308:   "solid" shapes instead.
-  1309: 
 
 - file: sample\arxiv_sources\2602.01135v2\example_paper.tex (line 764)
   error: "

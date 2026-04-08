@@ -1,4 +1,4 @@
-[CODE] LLUnRef (435)
+[CODE] LLUnRef (429)
 - file: sample\arxiv_sources\1609.03457v1\tables_for-avail-engines-chapter.tex (line 12)
   error: \label{table:Web-available-main}
   message: The label "table:Web-available-main" in the table environment is defined but unused in this file (possibly elsewhere).
@@ -1132,48 +1132,6 @@
    101:     \caption{Human interactions with mathematics involve not just solving problems, but deciding what problems are worth pursuing at all. LLMs, in many of their applications today, are asked to solve problems directly -- without ``choice'' in what to solve. Our work compares model and humans' judgments of problems at both the final judgment and the factors considered in that judgment.}%A gap remains: in settings where LLMs interact with mathematics in a human-like way, LLMs’ judgments of how interesting problems are and why they are interesting remains unexplored. In our work, we study two human participant pools, exploring how language models' assessments of interestigness can be compared to people both in the final assessment of whether the problem is interesting and in the \textit{process} by which a reasoner arrives at such a judgement (e.g., what factors are considered when judging interestingness).} %We conduct a first study comparing LLMs' judgments of problem interestingness to those of humans; we collect data from two human participant pools --- participants from a crowdsourcing website, and IMO participants --- and compare those to LLMs, showing ways in which LLMs' judgments align (and do not) with those of humans.}
 >  102:     \label{fig:interestingness}
    103: \end{figure}
-
-- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 194)
-  error: \label{fig:r2}
-  message: The label "fig:r2" in the figure environment is defined but unused in this file (possibly elsewhere).
-   193:     \caption{Correlation plots with $95\%$ bootstrapped confidence intervals for human vs. LLM interestingness ratings at temperature $1.0$. All plots for interestingness and difficulty correlations across temperatures and models are listed in Appendix \ref{app:model_corr}.}
->  194:     \label{fig:r2}
-   195: \end{figure}
-
-- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 244)
-  error: \label{fig:heatmap-prolific-int-1.0}
-  message: The label "fig:heatmap-prolific-int-1.0" in the figure environment is defined but unused in this file (possibly elsewhere).
-   243:     \caption{Interestingness (temp = 1.0)}
->  244:     \label{fig:heatmap-prolific-int-1.0}
-   245:   \end{subfigure}
-
-- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 252)
-  error: \label{fig:heatmap-prolific-chal-1.0}
-  message: The label "fig:heatmap-prolific-chal-1.0" in the figure environment is defined but unused in this file (possibly elsewhere).
-   251:     \caption{Difficulty (temp = 1.0)}
->  252:     \label{fig:heatmap-prolific-chal-1.0}
-   253:   \end{subfigure}
-
-- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 304)
-  error: \label{fig:prolific-wd-heatmaps-t1}
-  message: The label "fig:prolific-wd-heatmaps-t1" in the figure environment is defined but unused in this file (possibly elsewhere).
-   303:     }
->  304:     \label{fig:prolific-wd-heatmaps-t1}
-   305: \end{figure}
-
-- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 404)
-  error: \label{fig:placeholder}
-  message: The label "fig:placeholder" in the figure environment is defined but unused in this file (possibly elsewhere).
-   403:     \caption{Caption}
->  404:     \label{fig:placeholder}
-   405: \end{figure}\paragraph{Features of Problem Interestingness}
-
-- file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 430)
-  error: \label{fig:placeholder}
-  message: The label "fig:placeholder" in the figure environment is defined but unused in this file (possibly elsewhere).
-   429:     \caption{Caption}
->  430:     \label{fig:placeholder}
-   431: \end{figure}
 
 - file: sample\arxiv_sources\2511.08548v1\neurips_2025.tex (line 517)
   error: \label{fig:heatmap-prolific-int-0.3}

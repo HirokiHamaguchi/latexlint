@@ -23,6 +23,9 @@ function computeLaTeXInvalidRanges(
     "verbatim",
     "lstlisting", // source code listing, provided by listings package
     "tikzpicture", // TikZ graphics, provided by TikZ package
+    "CCSXML", // ACM CCS concepts XML block
+    "comment", // comment package (In Pattern interface, not comment type)
+    "filecontents", // filecontents / filecontents* environment
     "minted",
     "Verbatim", // fancyvrb package
     "BVerbatim",
@@ -59,6 +62,7 @@ function computeLaTeXInvalidRanges(
     type: "verbsBegin" | "verbsEnd" | "verbsInline" | "comment";
     index: number;
     env?: string; // for verbsBegin and verbsEnd
+    length?: number; // matched command length for begin/end
   }
 
   const ifFalseRanges = mergeRanges(computeIfFalseInvalidRanges(text));
@@ -68,23 +72,28 @@ function computeLaTeXInvalidRanges(
   const patterns: Pattern[] = [];
 
   // Detect all patterns
-  // verbsBegin and verbsEnd
-  for (const env of verbatimLikeEnvs) {
-    const beginRegex = new RegExp(`\\\\begin\\{${env}\\*?\\}`, "g");
-    const endRegex = new RegExp(`\\\\end\\{${env}\\*?\\}`, "g");
+  // verbsBegin and verbsEnd (single pass)
+  const escapedVerbatimLikeEnvs = verbatimLikeEnvs.map((env) =>
+    env.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+  );
+  const envAlternation = escapedVerbatimLikeEnvs.join("|");
+  const envCommandRegex = new RegExp(
+    `\\\\(begin|end)\\{(${envAlternation})\\*?\\}`,
+    "g"
+  );
 
-    let match;
-    while ((match = beginRegex.exec(text)) !== null)
-      if (!isInsideIfFalseRange(match.index))
-        patterns.push({ type: "verbsBegin", index: match.index, env });
-    while ((match = endRegex.exec(text)) !== null)
-      if (!isInsideIfFalseRange(match.index))
-        patterns.push({ type: "verbsEnd", index: match.index, env });
-  }
+  let match;
+  while ((match = envCommandRegex.exec(text)) !== null)
+    if (!isInsideIfFalseRange(match.index))
+      patterns.push({
+        type: match[1] === "begin" ? "verbsBegin" : "verbsEnd",
+        index: match.index,
+        env: match[2],
+        length: match[0].length,
+      });
 
   // verbsInline: \verb
   const verbRegex = /\\verb(?![a-zA-Z])/g;
-  let match;
   while ((match = verbRegex.exec(text)) !== null)
     if (!isInsideIfFalseRange(match.index))
       patterns.push({ type: "verbsInline", index: match.index });
@@ -112,15 +121,10 @@ function computeLaTeXInvalidRanges(
 
       for (let j = i + 1; j < patterns.length; j++)
         if (patterns[j].type === "verbsEnd" && patterns[j].env === env) {
-          const endMatch = text
-            .substring(patterns[j].index)
-            .match(new RegExp(`^\\\\end\\{${env}\\*?\\}`));
-          if (endMatch) {
-            endPos = patterns[j].index + endMatch[0].length;
-            // Remove all patterns between i and j (inclusive)
-            patterns.splice(i + 1, j - i);
-            break;
-          }
+          endPos = patterns[j].index + (patterns[j].length ?? 0);
+          // Remove all patterns between i and j (inclusive)
+          patterns.splice(i + 1, j - i);
+          break;
         }
 
       if (endPos !== -1) invalidRanges.push([beginPos, endPos]);

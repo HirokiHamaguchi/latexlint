@@ -20,6 +20,4 @@ sample/arxiv_sources/**
 
 .env
 azurePersonalAccessToken.txt
-TODO.md
-
 secret

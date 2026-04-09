@@ -17,35 +17,36 @@ export default async function fixJapaneseSpaceCommand() {
         return;
     }
 
-    // Calculate all replacements
-    const replacements: Array<{ range: vscode.Range; replacement: string }> = [];
+    // Convert ranges into insertion offsets so overlapping matches are handled safely.
+    const insertOffsets = new Set<number>();
     for (const range of ranges) {
         const matchText = document.getText(range);
-
-        let replacement: string;
-        if (matchText.startsWith('$'))
-            replacement = `$ ${matchText[1]}`;
-        else if (matchText.endsWith('$'))
-            replacement = `${matchText[0]} $`;
-        else if (matchText.startsWith('\\('))
-            replacement = `\\( ${matchText[2]}`;
-        else if (matchText.endsWith('\\)'))
-            replacement = `${matchText[0]} \\)`;
+        if (matchText.includes('$'))
+            insertOffsets.add(document.offsetAt(range.start) + 1);
+        else if (matchText.endsWith('\\('))
+            insertOffsets.add(document.offsetAt(range.start) + 1);
+        else if (matchText.startsWith('\\)'))
+            insertOffsets.add(document.offsetAt(range.start) + 2);
         else {
             console.assert(false, 'Unexpected match: ' + matchText);
             continue;
         }
-        replacements.push({ range, replacement });
     }
 
-    // Build the modified text
-    let modifiedText = document.getText();
-    for (const { range, replacement } of replacements) {
-        console.log(`Replacing "${document.getText(range)}" with "${replacement}" at range ${range.start.line}:${range.start.character} - ${range.end.line}:${range.end.character}`);
-        const startOffset = document.offsetAt(range.start);
-        const endOffset = document.offsetAt(range.end);
-        modifiedText = modifiedText.slice(0, startOffset) + replacement + modifiedText.slice(endOffset);
+    // Build modified text in one pass to avoid repeated full-string copies.
+    const originalText = document.getText();
+    const sortedOffsets = [...insertOffsets].sort((a, b) => a - b);
+    const chunks: string[] = [];
+    let cursor = 0;
+
+    for (const offset of sortedOffsets) {
+        chunks.push(originalText.slice(cursor, offset));
+        if (originalText[offset] !== ' ') chunks.push(' ');
+        cursor = offset;
     }
+    chunks.push(originalText.slice(cursor));
+    const modifiedText = chunks.join('');
+
 
     // Show diff and ask for confirmation
     const shouldApply = await showDiffAndConfirm(
@@ -56,10 +57,8 @@ export default async function fixJapaneseSpaceCommand() {
 
     if (shouldApply) {
         const workspaceEdit = new vscode.WorkspaceEdit();
-        for (let i = replacements.length - 1; i >= 0; i--) {
-            const { range, replacement } = replacements[i];
-            workspaceEdit.replace(document.uri, range, replacement);
-        }
+        const fullRange = new vscode.Range(document.positionAt(0), document.positionAt(document.getText().length));
+        workspaceEdit.replace(document.uri, fullRange, modifiedText);
 
         const applied = await vscode.workspace.applyEdit(workspaceEdit);
         if (!applied) {
@@ -67,7 +66,7 @@ export default async function fixJapaneseSpaceCommand() {
             return;
         }
 
-        vscode.window.showInformationMessage(`Fixed ${replacements.length} Japanese spacing issue(s).`);
+        vscode.window.showInformationMessage(`Fixed ${insertOffsets.size} Japanese spacing issue(s).`);
     } else
         vscode.window.showInformationMessage('Fix Japanese spacing canceled.');
 }

@@ -11,6 +11,11 @@
 		"rootDir": "src",
 		"resolveJsonModule": true,
 		"esModuleInterop": true,
+		"types": [
+			"node",
+			"mocha",
+			"vscode"
+		],
 		"strict": true, /* enable all strict type-checking options */
 		/* Additional Checks */
 		"noImplicitReturns": true, /* Report error when not all code paths in function return a value. */

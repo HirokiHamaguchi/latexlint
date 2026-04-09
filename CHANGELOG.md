@@ -2,9 +2,10 @@
 
 All notable changes to the "latexlint" extension will be documented in this file.
 
-## 1.7.9 - 2026-4-8
+## 1.7.9 - 2026-4-9
 
 - Expand LLText LaTeX invalid-range detection to ignore `CCSXML`, `comment`, and `filecontents`/`filecontents*` environments.
+- Fix `LLSpaceJapanese` boundary detection to count overlapping cases such as `...$x$と$y$...`, and update the command fixer to apply these cases safely.
 
 ## 1.7.8 - 2026-4-5
 

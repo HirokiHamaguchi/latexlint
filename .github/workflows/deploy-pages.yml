@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ["master"]
   workflow_dispatch:
 
 permissions:
@@ -24,10 +24,19 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: ./web/package-lock.json
+
+      - name: Cache web node_modules
+        id: cache-web-node-modules
+        uses: actions/cache@v4
+        with:
+          path: ./web/node_modules
+          key: ${{ runner.os }}-web-node-modules-${{ hashFiles('web/package-lock.json') }}
 
       - name: Install dependencies
+        if: ${{ steps.cache-web-node-modules.outputs.cache-hit != 'true' }}
         run: npm ci
         working-directory: ./web
 
@@ -41,7 +50,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './web/dist'
+          path: "./web/dist"
 
   deploy:
     environment:

@@ -2,6 +2,7 @@ import * as vscode from 'vscode';
 import findBeginEndTargets, { BeginEndResult } from '../util/findBeginEndTargets';
 import findLabelTargets, { LabelResult } from '../util/findLabelTargets';
 import getEditor from '../util/getEditor';
+import convertAlignBodyToEquationBody from '../util/renameCommandAlignConversion';
 import showDiffAndConfirm from '../util/showDiffAndConfirm';
 
 async function handleBeginEndRename(doc: vscode.TextDocument, editor: vscode.TextEditor, res: BeginEndResult) {
@@ -31,7 +32,7 @@ async function handleBeginEndRename(doc: vscode.TextDocument, editor: vscode.Tex
             const contentStart = doc.positionAt(res.firstWordEnd);
             const contentEnd = doc.positionAt(res.secondWordStart);
             const originalContent = doc.getText(new vscode.Range(contentStart, contentEnd));
-            const modifiedContent = originalContent.replace(/&/g, ' ').replace(/\\\\/g, '  ');
+            const modifiedContent = convertAlignBodyToEquationBody(originalContent);
             if (originalContent !== modifiedContent)
                 editBuilder.replace(new vscode.Range(contentStart, contentEnd), modifiedContent);
         }

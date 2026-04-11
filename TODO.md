@@ -9,7 +9,7 @@
 - x,...,yというのを検出(\cdots, \ldots)
 - 順序付き集合に{}か()か
 - 数式内におけるカンマ
-- Mr. Ms.
+- Mr. Ms. I watch TV.
 
 ## latexcheck が何をチェックしているか（体系整理）
 

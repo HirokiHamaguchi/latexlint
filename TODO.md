@@ -10,6 +10,7 @@
 - 順序付き集合に{}か()か
 - 数式内におけるカンマ
 - Mr. Ms. I watch TV.
+- dim, ker, rank?
 
 ## latexcheck が何をチェックしているか（体系整理）
 

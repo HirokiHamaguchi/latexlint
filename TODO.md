@@ -11,6 +11,7 @@
 - 数式内におけるカンマ
 - Mr. Ms. I watch TV.
 - dim, ker, rank?
+- \iint https://qiita.com/Yarakashi_Kikohshi/items/bac4ec7c59e78e44e390
 
 ## latexcheck が何をチェックしているか（体系整理）
 

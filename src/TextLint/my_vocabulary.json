@@ -10,7 +10,7 @@
     "https://www.merriam-webster.com/dictionary/et%20al.",
     "https://salon.mainichi-kotoba.jp/archives/95"
   ],
-  "entries": [
+  "entries_ja": [
     {
       "yes": "ご清聴ありがとうございました",
       "no": [
@@ -125,7 +125,9 @@
         "回導関数"
       ],
       "memo": "明確に誤りとされる表現ではないかも知れませんが、一般的には「二階導関数」などと表現されることが多く、Wikipediaの見出し語もそうなっています。同様に、「2回微分する」と動詞的に用いるか「二階微分可能である」と名詞的に用いるかなどで、表記が異なることもあります。"
-    },
+    }
+  ],
+  "entries_en": [
     {
       "yes": "et al.",
       "no": [

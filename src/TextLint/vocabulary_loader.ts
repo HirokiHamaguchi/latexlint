@@ -6,7 +6,12 @@ export interface VocabularyEntry {
     memo: string;
 }
 
-let cachedVocabularyData: VocabularyEntry[] | null = null;
+export interface VocabularyData {
+    entries_ja: VocabularyEntry[];
+    entries_en: VocabularyEntry[];
+}
+
+let cachedVocabularyData: VocabularyData | null = null;
 
 function preprocessMemo(memo: string | string[] | null | undefined): string {
     if (!memo) return '';
@@ -21,14 +26,20 @@ function preprocessMemo(memo: string | string[] | null | undefined): string {
     return processedMemo.join('\n');
 }
 
-export function getVocabularyData(): VocabularyEntry[] {
+export function getVocabularyData(): VocabularyData {
     if (cachedVocabularyData) return cachedVocabularyData;
 
-    cachedVocabularyData = dictRaw.entries.map(entry => ({
-        yes: entry.yes,
-        no: entry.no,
-        memo: preprocessMemo(entry.memo),
-    }));
+    const convertEntries = (entries: Array<{ yes: string; no: string | string[]; memo?: string | string[] | null | undefined }>): VocabularyEntry[] =>
+        entries.map(entry => ({
+            yes: entry.yes,
+            no: entry.no,
+            memo: preprocessMemo(entry.memo),
+        }));
+
+    cachedVocabularyData = {
+        entries_ja: convertEntries(dictRaw.entries_ja ?? []),
+        entries_en: convertEntries(dictRaw.entries_en ?? []),
+    };
 
     return cachedVocabularyData;
 }

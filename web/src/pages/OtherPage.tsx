@@ -24,6 +24,8 @@ export function OtherPage() {
                 <VStack align="stretch" gap={3}>
                     <Text>
                         If LaTeX Lint helps your writing, please star our GitHub repository.
+                    </Text>
+                    <Text>
                         It really motivates us and helps more users discover this project.
                     </Text>
                     <Link
@@ -45,6 +47,8 @@ export function OtherPage() {
                 <SectionHeading>Privacy</SectionHeading>
                 <Text>
                     Your input is processed entirely within your browser.
+                </Text>
+                <Text>
                     No data is sent to any server.
                 </Text>
             </VStack>
@@ -66,8 +70,15 @@ export function OtherPage() {
                 </Box>
             </VStack>
             <VStack align="stretch">
-                <SectionHeading>Japanese Vocabulary Check</SectionHeading>
-                <VocabularyTable entries={vocabularyData} />
+                <SectionHeading>Vocabulary Check</SectionHeading>
+                <Text>
+                    We run a subset of textlint features together with our custom vocabulary checks.
+                </Text>
+                <Text>
+                    At the word level, the table below lists patterns that may indicate potential mistakes.
+                </Text>
+                <VocabularyTable title="English Vocabulary" entries={vocabularyData.entries_en} />
+                <VocabularyTable title="Japanese Vocabulary" entries={vocabularyData.entries_ja} />
             </VStack>
         </PageLayout>
     );

@@ -1,0 +1,36 @@
+[CODE] LLTextLint (5)
+- file: sample\arxiv_sources\1609.03457v1\examples-screenshots.tex (line 21)
+  error: Latex
+  message: The phrase "Latex" may be better written as "LaTeX". The correct capitalization is "LaTeX" with a capital 'L', 'T', and 'X'.
+    20: 
+>   21: In the simple search shown in figure \ref{fig:LatexSearch-screen}, note the post-search filters located in three locations: within the tabs, just below the tabs, and in the left vertical side-bar.  In the display, equations from each paper are grouped together; the number of equations in each paper is listed to the left of the publication's name.  LaTeX code can be downloaded via the green ``View Latex Code'' links.
+    22: 
+
+- file: sample\arxiv_sources\2502.17387v1\main.tex (line 975)
+  error: Latex
+  message: The phrase "Latex" may be better written as "LaTeX". The correct capitalization is "LaTeX" with a capital 'L', 'T', and 'X'.
+   974:     \begin{text_full}{Llama-3.1-8B Rollout Prompt}
+>  975: You are a math expert. Given the following math problem, provide your solution in Latex format. Always format your final answer in perfect LaTeX \textbackslash boxed\{final\_answer\} format.
+   976:     \end{text_full}
+
+- file: sample\submodules\coursebook\background\background.tex (line 154)
+  error: Github
+  message: The phrase "Github" may be better written as "GitHub". The correct capitalization is "GitHub" with a capital 'G' and 'H'.
+   153: Now to explain git well, you need to understand that git for our purposes will look like a linked list.
+>  154: You will always be at the head of master, and you will do the edit-add-commit-push loop. We have a separate branch on Github that we push feedback to under a specific branch which you can view on Github website. The markdown file will have information on the test cases and results (like standard out).
+   155: 
+
+- file: sample\submodules\coursebook\background\background.tex (line 154)
+  error: Github
+  message: The phrase "Github" may be better written as "GitHub". The correct capitalization is "GitHub" with a capital 'G' and 'H'.
+   153: Now to explain git well, you need to understand that git for our purposes will look like a linked list.
+>  154: You will always be at the head of master, and you will do the edit-add-commit-push loop. We have a separate branch on Github that we push feedback to under a specific branch which you can view on Github website. The markdown file will have information on the test cases and results (like standard out).
+   155: 
+
+- file: sample\submodules\openintro-statistics\extraTeX\preamble\copyright.tex (line 15)
+  error: Github
+  message: The phrase "Github" may be better written as "GitHub". The correct capitalization is "GitHub" with a capital 'G' and 'H'.
+    14: with the source files hosted on
+>   15: \oiRedirect{os_source}{Github}. \\
+    16: 
+

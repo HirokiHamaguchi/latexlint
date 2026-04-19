@@ -44,7 +44,6 @@ export function VocabularyRow({ entry }: VocabularyRowProps) {
                         <Collapsible.Root open={isOpen}>
                             <Collapsible.Content>
                                 <Box width="100%" bg="gray.50" p={3}>
-                                    <Text fontSize="xs" fontWeight="bold" mb={1} color="gray.600">詳細:</Text>
                                     {formatMemo(entry.memo)}
                                 </Box>
                             </Collapsible.Content>

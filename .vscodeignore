@@ -4,3 +4,4 @@
 # Include only necessary files
 !dist/**
 !package.json
+!LICENSE

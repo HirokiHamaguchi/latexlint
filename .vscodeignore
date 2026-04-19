@@ -5,3 +5,6 @@
 !dist/**
 !package.json
 !LICENSE
+!images/lintIconDark.svg
+!images/lintIconLight.svg
+!images/mainIcon512.png

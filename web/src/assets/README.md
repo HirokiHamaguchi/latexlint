@@ -1,12 +1,6 @@
 <!-- !! AUTO_GENERATED !! -->
 <!-- markdownlint-disable heading-start-left first-line-h1 -->
 
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/mainIcon512.png" alt="mainIcon" width="150">
-
-</div>
-
 # LaTeX Lint
 
 ## Abstract
@@ -21,11 +15,11 @@ LaTex Lint is a LaTeX Linter for `.tex` and `.md` files.
 
 ![abstract_web](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/abstract_web.png)
 
-We welcome any kind of [feedback](https://marketplace.visualstudio.com/items?itemName=hari64boli64.latexlint&ssr=false#review-details), [suggestions](https://github.com/HirokiHamaguchi/latexlint/issues), and [pull requests](https://github.com/HirokiHamaguchi/latexlint/pulls)!
-
 ## Rules
 
 Here is the list of rules we detect.
+
+**We highly recommend selecting the rules you want to detect based on your preference and writing style.** Please refer to [LaTeX Lint: Choose Detection Rules](#latex-lint-choose-detection-rules) for how to select rules.
 
 1. [LLAlignAnd](#llalignand) (detect `=&`, `\leq&`, `\geq&`, etc.)
 2. [LLAlignEnd](#llalignend) (detect `align` environment ends with `\\`)
@@ -667,7 +661,7 @@ You can see the result on the Wolfram Alpha page. We remove some unnecessary com
 
 ## Note
 
-As stated in the [Rules](#rules), false positives and false negatives may occur. We apologize for the inconvenience. If you find any errors, please report them via [GitHub Issues](https://github.com/hari64boli64/latexlint/issues).
+As stated in the [Rules](#rules), false positives and false negatives may occur. We welcome any kind of [feedback](https://marketplace.visualstudio.com/items?itemName=hari64boli64.latexlint&ssr=false#review-details), [suggestions](https://github.com/HirokiHamaguchi/latexlint/issues), and [pull requests](https://github.com/HirokiHamaguchi/latexlint/pulls).
 
 When writing papers, please ensure you follow the style specified by the academic society or publisher.
 

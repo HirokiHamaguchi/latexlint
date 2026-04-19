@@ -4,6 +4,7 @@ All notable changes to the "latexlint" extension will be documented in this file
 
 ## 1.7.10 - 2026-4-19
 
+- Update `README.md` and `README_ja.md`.
 - Improve `LLTextLint`.
 
 ## 1.7.9 - 2026-4-10

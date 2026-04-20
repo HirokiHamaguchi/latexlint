@@ -63,7 +63,7 @@ export const messages: Record<LLCode, string> = {
     LLLlGg: 'Consider using %1 instead of %2.',
     LLNonASCII: 'This is a non-ASCII character. Is this intentional?',
     LLNonstandard: 'This notation might be nonstandard in formal academic writing. Refer to the link for more details.',
-    LLPeriod: 'Consider adding a comma "%1," or using "%1\\ " to avoid spacing issues.',
+    LLPeriod: 'Use "%1\\ " (backslash space) to avoid spacing issues.',
     LLRefEq: 'Consider using \\eqref instead of \\ref for equations.',
     LLSharp: 'If this sharp is for a number sign, consider using \\#.',
     LLSI: 'If this is a unit, consider using the siunitx(\\SI{number}{unit}). It provides better spacing and formatting for units.',

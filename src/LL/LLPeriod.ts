@@ -17,13 +17,19 @@ export default function LLPeriod(doc: vscode.TextDocument, txt: LLText): vscode.
         "i\\.i\\.d\\.",
         "w\\.r\\.t\\.",
         "w\\.l\\.o\\.g\\.",
+        "resp\\.",
     ];
     const pattern = new RegExp(`\\b(?:${abbreviations.join("|")}) `, "g");
 
     for (const match of txt.text.matchAll(pattern)) {
         if (!txt.isValid(match.index)) continue;
         const abbreviation = match[0].trim();
-        const customizedMessage = messages[code].replaceAll("%1", abbreviation);
+        let customizedMessage: string;
+        if (abbreviation === "i.e." || abbreviation === "e.g.")
+            customizedMessage = messages[code].replaceAll("%1", abbreviation).slice(0, -1) + ", or a comma \"" + abbreviation + ",\" in American English.";
+        else
+            customizedMessage = messages[code].replaceAll("%1", abbreviation);
+
         message.push(customizedMessage);
         ranges.push(match2range(doc, match));
     }

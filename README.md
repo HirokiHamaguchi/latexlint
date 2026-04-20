@@ -314,13 +314,13 @@ Detect nonstandard mathematical notations in `.tex` and `.md` files that are not
 
 This rule detects the following notations:
 
-#### \therefore and \because commands
-
-These symbols are not generally used in formal writing.
-
 #### The word "iff"
 
 While commonly used in informal mathematical writing, "iff" (if and only if) is preferred to be written out fully in formal academic writing.
+
+#### \therefore and \because commands
+
+These symbols are not generally used in formal writing.
 
 #### \fallingdotseq and \risingdotseq commands
 
@@ -328,7 +328,7 @@ These are nonstandard notation symbols. `\approx` is preferred in formal writing
 
 #### {}_n C_k notation for combinations
 
-The notation `{}_n C_k` for combinations is often used in Japan, but not standard in international academic writing. We recommend the standard binomial notation $\binom{n}{k}$ instead.
+The notation `{}_n C_k` for combinations is often used in Japan, but not standard in international academic writing. We recommend the standard binomial notation `\binom{n}{k}` instead.
 
 This rule only detects exact matches to avoid false positives.
 
@@ -356,8 +356,9 @@ References:
 ### LLPeriod
 
 Detect abbreviation periods in `.tex` files.
-This rule checks `e.g.`, `i.e.`, `i.i.d.`, `w.r.t.`, and `w.l.o.g.` when followed by a space.
-You should likely add a comma (e.g., `e.g.,`) or use `\ ` (e.g., `e.g.\ `) to avoid spacing issues.
+This rule checks `e.g.`, `i.e.`, `i.i.d.`, `w.r.t.`, `w.l.o.g.`, and `resp.` when followed by a space.
+LaTeX considers the period in these abbreviations as the end of a sentence, which can lead to extra spacing.
+You should use `\ ` (e.g., `e.g.\ `) to avoid spacing issues, or add a comma (e.g., `e.g.,`).
 
 ![rules/LLPeriod](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLPeriod/LLPeriod.png)
 
@@ -385,7 +386,9 @@ From Fig. 1 and Eq. 1, we can see that...
 In many cases, equation numbers are expected to be referenced in a parenthesized format like (1). This is the standard style and is commonly used in the amsmath package and many papers and books.
 
 ```tex
-From Fig.~\ref{fig:sample} and Eq.~\ref{eq:sample}, we can see that...
+From Fig.~\ref{fig:sample} and Eq.~(\ref{eq:sample}), we can see that...
+From Fig.~\ref{fig:sample} and Eq.~\eqref{eq:sample}, we can see that...
+From \cref{fig:sample} and \cref{eq:sample}, we can see that...
 ```
 
 ```txt
@@ -394,7 +397,8 @@ From Fig. 1 and Eq. (1), we can see that...
 
 However, not all `\ref{eq:` are necessarily wrong, and there may be intentional uses. Therefore, it is not desirable to mechanically detect such cases.
 
-As a preventive measure, we aim to detect `(\ref{eq:` and encourage the use of `\eqref{eq:`. Since this is somewhat off from the cases we originally wanted to detect, this specification may be changed in the future.
+As a preventive measure, we aim to detect `(\ref{eq:` and encourage the use of `\eqref{eq:`. Then, you can manually check the cases `\ref{eq:` that are not detected and decide whether they are intentional or not.
+Although it may not be perfect, this approach can help reduce the likelihood of overlooking such typos.
 
 ### LLSharp
 

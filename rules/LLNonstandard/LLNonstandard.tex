@@ -2,10 +2,8 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage{siunitx}
-\usepackage[T1]{fontenc}
 \usepackage{geometry}
-\geometry{paperwidth=5.5cm, margin=0cm}
+\geometry{paperwidth=6.5cm, margin=0cm}
 
 \usepackage{xcolor}
 \definecolor{cA}{HTML}{0072BD}
@@ -21,10 +19,12 @@
 \begin{document}
 \begin{table}[h]
 	\centering
-	\begin{tabular}{lll}
-		\verb|e.g., Test.| & e.g., Test. & \tA{ok} \\
-		\verb|e.g.\ Test.| & e.g.\ Test. & \tA{ok} \\
-		\verb|e.g. Test.|  & e.g. Test.  & \tD{ng} \\
+	\begin{tabular}{cc}
+		\tA{Standard}                      & \tC{Not Standard?}                 \\
+		if and only if                     & iff                                \\
+		Therefore / Because                & $\therefore$ / $\because$          \\
+		\verb|\approx| $\approx$           & $\fallingdotseq$ / $\risingdotseq$ \\
+		\verb|\binom{n}{k}| $\binom{n}{k}$ & ${}_n C_k$ / ${}_n \mathrm{C}_k$   \\
 	\end{tabular}
 \end{table}
 \end{document}

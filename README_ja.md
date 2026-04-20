@@ -316,13 +316,13 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 
 このルールは以下の表記法を検出します。
 
-#### \therefore と \because コマンド
-
-これらの記号は、フォーマルな場面では一般的に使用されていません。
-
 #### 「iff」という単語
 
 "iff"（if and only if）はラフな文章では一般的に使用されていますが、正式な学術文章では完全に書き出されることが好まれます。
+
+#### \therefore と \because コマンド
+
+これらの記号は、フォーマルな場面では一般的に使用されていません。
 
 #### \fallingdotseq と \risingdotseq コマンド
 
@@ -330,7 +330,7 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 
 #### 組み合わせの {}_n C_k 表記
 
-組み合わせの`{}_n C_k`表記は日本でよく使用されていますが、国際学術文献では標準ではありません。代わりに標準的な二項記号 $\binom{n}{k}$ を推奨します。
+組み合わせの`{}_n C_k`表記は日本でよく使用されていますが、国際学術文献では標準ではありません。代わりに標準的な二項記号 `\binom{n}{k}` を推奨します。
 
 このルールは、偽陽性を避けるために正確なマッチのみを検出します。
 
@@ -358,8 +358,9 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 ### LLPeriod
 
 LaTeXファイル中の略語ピリオドを検出します。
-このルールは、空白が続く `e.g.`, `i.e.`, `i.i.d.`, `w.r.t.`, `w.l.o.g.` を検出します。
-`e.g.,` のようにコンマを追加するか、`e.g.\ ` のように `\ ` を使って空白の問題を回避してください。
+このルールは、空白が続く `e.g.`, `i.e.`, `i.i.d.`, `w.r.t.`, `w.l.o.g.`, `resp.` を検出します。
+LaTeXはこれらの略語のピリオドを文の終わりとみなすため、余分なスペースが生じることがあります。
+`e.g.\ ` のように `\ ` を使って空白の問題を回避するか、`e.g.,` のようにコンマを追加してください。
 
 ![rules/LLPeriod](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLPeriod/LLPeriod.png)
 
@@ -386,7 +387,9 @@ From Fig. 1 and Eq. 1, we can see that...
 多くの場合、数式番号は以下のように(1)などと括弧で括られた形式で参照されることが期待されます。これは標準的なスタイルであり、amsmathパッケージや多くの論文や書籍で一般的に使用されています。
 
 ```tex
-From Fig.~\ref{fig:sample} and Eq.~\ref{eq:sample}, we can see that...
+From Fig.~\ref{fig:sample} and Eq.~(\ref{eq:sample}), we can see that...
+From Fig.~\ref{fig:sample} and Eq.~\eqref{eq:sample}, we can see that...
+From \cref{fig:sample} and \cref{eq:sample}, we can see that...
 ```
 
 ```txt
@@ -395,7 +398,9 @@ From Fig. 1 and Eq. (1), we can see that...
 
 しかし、全ての`\ref{eq:`が誤りというわけではなく、意図的に使用される場合もあります。その為、このようなケースを機械的に検出するのは望ましくありません。
 
-そこで予防的な意味合いとして、`(\ref{eq:`を検出し、`\eqref{eq:`の使用を促すことを目的としています。本来検出したいケースからはややずれているため、今後この仕様は変更されるかも知れません。
+そこで予防的な意味合いとして、`(\ref{eq:`を検出し、`\eqref{eq:`の使用を促すことを目的としています。
+そうすれば、検出されない`\ref{eq:`のケースを手動で確認し、意図的なものかどうかを判断することができます。
+不完全ではありますが、このアプローチはそのような間違いを見落とす可能性を減らすのに役立ちます。
 
 ### LLSharp
 

@@ -312,6 +312,8 @@ We do not detect the following characters because they are often used in Japanes
 
 Detect nonstandard mathematical notations in `.tex` and `.md` files that are not commonly used in formal academic writing.
 
+![rules/LLNonstandard](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLNonstandard/LLNonstandard.png)
+
 This rule detects the following notations:
 
 #### The word "iff"
@@ -470,7 +472,7 @@ This rule is disabled by default.
 ![rules/LLT](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLT/LLT.png)
 
 Otherwise, we cannot distinguish between the transpose and the power by a variable `T` (you can use `^{T}` for the power).
-We also do not detect $\sum_{i=1}^T$ or $\prod_{i=1}^T$ as errors.
+We also do not detect `\sum_{i=1}^T` or `\prod_{i=1}^T` as errors.
 
 References:
 

@@ -26,7 +26,7 @@ export function OtherPage() {
                         If LaTeX Lint helps your writing, please star our GitHub repository.
                     </Text>
                     <Text>
-                        It really motivates us and helps more users discover this project.
+                        It really motivates us! We appreciate your attention.
                     </Text>
                     <Link
                         href="https://github.com/HirokiHamaguchi/latexlint"

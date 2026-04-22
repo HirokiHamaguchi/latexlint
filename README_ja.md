@@ -314,6 +314,8 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 
 `.tex`と`.md`ファイルの、正式な学術文献では一般的に使用されない非標準的な数学記号を検出します。
 
+![rules/LLNonstandard](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLNonstandard/LLNonstandard.png)
+
 このルールは以下の表記法を検出します。
 
 #### 「iff」という単語
@@ -471,7 +473,7 @@ From Fig. 1 and Eq. (1), we can see that...
 ![rules/LLT](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLT/LLT.png)
 
 そうしないと、変数`T`による累乗と転置を区別できません（累乗には`^{T}`を使えます）。
-また、$\sum_{i=1}^T$ や $\prod_{i=1}^T$ などもエラーとして検出しません。
+また、`\sum_{i=1}^T` や `\prod_{i=1}^T` などもエラーとして検出しません。
 
 参考文献:
 

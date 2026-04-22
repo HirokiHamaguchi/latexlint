@@ -2,6 +2,8 @@
 
 Detect nonstandard mathematical notations in `.tex` and `.md` files that are not commonly used in formal academic writing.
 
+![rules/LLNonstandard](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLNonstandard/LLNonstandard.png)
+
 This rule detects the following notations:
 
 #### The word "iff"

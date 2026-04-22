@@ -2,6 +2,8 @@
 
 `.tex`と`.md`ファイルの、正式な学術文献では一般的に使用されない非標準的な数学記号を検出します。
 
+![rules/LLNonstandard](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLNonstandard/LLNonstandard.png)
+
 このルールは以下の表記法を検出します。
 
 #### 「iff」という単語

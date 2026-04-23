@@ -104,23 +104,12 @@ LaTeX Lintは、`.tex`および`.md`ファイル用のLaTeXリンターです。
 具体例は以下の通りです。
 
 1. 単一文字:
-
    - NG: `a $a$` → OK: `an $a$`
-   - NG: `a $e$` → OK: `an $e$`
-   - NG: `a $f$` → OK: `an $f$`
-   - NG: `a $h$` → OK: `an $h$`
-   - NG: `a $i$` → OK: `an $i$`
-   - NG: `a $l$` → OK: `an $l$`
-   - NG: `a $m$` → OK: `an $m$`
    - NG: `a $n$` → OK: `an $n$`
-   - NG: `a $o$` → OK: `an $o$`
-   - NG: `a $r$` → OK: `an $r$`
-   - NG: `a $s$` → OK: `an $s$`
    - NG: `a $x$` → OK: `an $x$`
    - NG: `an $u$` → OK: `a $u$`
 
 2. 略語:
-
    - NG: `a EM` → OK: `an EM` (Expectation–Maximization)
    - NG: `a EVD` → OK: `an EVD` (Eigenvalue Decomposition)
    - NG: `a FFT` → OK: `an FFT` (Fast Fourier Transform)
@@ -138,15 +127,10 @@ LaTeX Lintは、`.tex`および`.md`ファイル用のLaTeXリンターです。
    - NG: `a XOR` → OK: `an XOR` (Exclusive OR)
 
 3. LaTeXのコマンド:
-
-   - NG: `a $\mathbb{R}$-valued function` → OK: `an $\mathbb{R}$-valued function`
-   - NG: `a $L^1$ norm` → OK: `an $L^1$ norm`
-   - NG: `a $L^2$ norm` → OK: `an $L^2$ norm`
-   - NG: `a $L^\infty$ norm` → OK: `an $L^\infty$ norm`
-   - NG: `a $\ell^1$ regularization` → OK: `an $\ell^1$ regularization`
-   - NG: `a $\ell^2$ regularization` → OK: `an $\ell^2$ regularization`
-   - NG: `a $\ell^\infty$ regularization` → OK: `an $\ell^\infty$ regularization`
-   - NG: `a $x$-axis` → OK: `an $x$-axis`
+   - NG: `a $\mathbb{R}$-valued` → OK: `an $\mathbb{R}$-valued`
+   - NG: `a $L^1$` → OK: `an $L^1$`
+   - NG: `a $\ell^2$` → OK: `an $\ell^2$`
+   - NG: `a $\mathcal{L}^\infty$` → OK: `an $\ell^\infty$`
 
 参考文献:
 

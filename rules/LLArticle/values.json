@@ -1,5 +1,5 @@
 {
-  "message": "Did you mean \"%1\" instead?",
+  "message": "Before \"%1\", \"%2\" might be more appropriate than \"%3\".",
   "severity": "WARN",
-  "lint_test_count": 43
+  "lint_test_count": 42
 }

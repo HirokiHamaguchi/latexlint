@@ -1,0 +1,22 @@
+[CODE] LLArticle (3)
+- file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 621)
+  error: a $\mathcal{F}$
+  message: Before "$\mathcal{F}$", "an" might be more appropriate than "a".
+   620: \end{equation*}
+>  621: $D$ is a $\mathcal{F}$-measurable, e.g. one can see it quickly as
+   622: follows. Let's abbreviate $w^0_m(\sigma):=w_{\sigma_0}\circ ...
+
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3170)
+  error: An $\mathbb{C}$
+  message: Before "$\mathbb{C}$", "A" might be more appropriate than "An".
+  3169: 
+> 3170: An $\mathbb{C}$-vector space $\mathcal{A}$ of functions $a:\mathbb{R}\rightarrow\mathbb{C}$
+  3171: is a \textbf{\emph{space of coefficients}} if for every $a\in\mathcal{A}\setminus\{ 0\} $
+
+- file: sample\arxiv_sources\2604.02260v1\main.tex (line 695)
+  error: a RKHS
+  message: Before "RKHS", "an" might be more appropriate than "a".
+   694: \label{ass:rkhs}
+>  695: We assume that the functions $f^*_{n,j}$, $j \in \set{1, \ldots, d_x}$ lie in a RKHS with kernel $k$ and have a bounded norm $B$, that is 
+   696: \[
+

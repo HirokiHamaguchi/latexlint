@@ -2,6 +2,10 @@
 
 All notable changes to the "latexlint" extension will be documented in this file.
 
+## 1.7.14 - 2026-4-23
+
+- Update `LLArticle` implementation to support expanded article checks for inline math expressions and uppercase abbreviations.
+
 ## 1.7.11 - 2026-4-21
 
 - Update diagnostics, improve LLPeriod handling, and refine documentation.

@@ -1,5 +1,5 @@
 {
-  "message": "The footnote marker will appear after unnecessary space. Consider moving the command position or %1",
+  "message": "The footnote marker will appear after unnecessary space.",
   "severity": "WARN",
   "lint_test_count": 5
 }

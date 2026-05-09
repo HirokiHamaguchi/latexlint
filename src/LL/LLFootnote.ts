@@ -1,7 +1,6 @@
 import * as vscode from "vscode";
 import type { LLText } from "../LLText/LLText";
 import { messages } from "../util/constants";
-import match2range from "../util/match2range";
 import ranges2diagnostics from "../util/ranges2diagnostics";
 
 export default function LLFootnote(
@@ -11,59 +10,57 @@ export default function LLFootnote(
   if (doc.languageId !== "latex") return [];
 
   const code = "LLFootnote";
-  let message: string[] = [];
   let ranges: vscode.Range[] = [];
+  let localMessages: string[] = [];
 
-  for (const match of txt.text.matchAll(/\\footnote{/g)) {
+  for (const match of txt.text.matchAll(/\s\\footnote{/g)) {
+    if (txt.isPreamble(match.index)) continue;
     if (!txt.isValid(match.index)) continue;
 
-    let idx = match.index - 1;
-    const char = txt.text[idx];
+    let lineEnd = match.index + 1;
+    let isProblematic = false;
+    let message = messages[code];
 
-    // If non-whitespace found, stop - not a violation
-    if (/\S/.test(char)) continue;
-
-    let suggestion = "";
-
-    // If whitespace is not a newline, it's a violation
-    if (char !== "\n") suggestion = "removing the space.";
-
-    while (idx >= 0 && suggestion === "") {
-      // Get the line before the newline
-      let lineStart = idx;
-      while (lineStart > 0 && txt.text[lineStart - 1] !== "\n") lineStart--;
-      const line = txt.text.substring(lineStart, idx);
-
-      // If line is empty, it's a violation
-      if (line.trim() === "") {
-        suggestion = "adding % at the end of the previous line.";
-        break;
+    let lineStart = lineEnd;
+    while (lineStart > 0 && txt.text[lineStart - 1] !== "\n") lineStart--;
+    const firstLine = txt.text.substring(lineStart, lineEnd);
+    if (firstLine.match(/\S/))
+      isProblematic = true;
+    else
+      while (lineEnd > 0) { // to ensure the decreasing of lineEnd
+        lineEnd = lineStart;
+        lineStart = lineEnd - 1;
+        while (lineStart > 0 && txt.text[lineStart - 1] !== "\n") lineStart--;
+        if (lineStart === 0) break;
+        const line = txt.text.substring(lineStart, lineEnd);
+        console.log({ line });
+        const commentIdx = line.indexOf("%");
+        console.log({ commentIdx });
+        if (commentIdx === -1) {
+          isProblematic = true;
+          message += " Adding % at the end of the line before the footnote can prevent this issue.";
+          break;
+        } else {
+          const lineValid = txt.text.substring(lineStart, lineStart + commentIdx);
+          const SMatches = [...lineValid.matchAll(/\S/g)];
+          if (SMatches.length === 0) continue;
+          const lastSIdx = SMatches[SMatches.length - 1].index;
+          if (lastSIdx !== undefined && lastSIdx + 1 === commentIdx)
+            isProblematic = false;
+          else
+            isProblematic = true;
+          break;
+        }
       }
 
-      // Check character before % in the line
-      let commentIdx = line.indexOf("%");
-      if (commentIdx === -1) {
-        // No comment on this line, so it's a violation
-        suggestion = "adding % at the end of the previous line.";
-        break;
-      }
-
-      // If entire line is a comment, go back one more line
-      if (commentIdx === 0) {
-        idx = lineStart - 1;
-        continue;
-      }
-
-      // If whitespace before %, it's a violation
-      if (/\s/.test(line[commentIdx - 1])) suggestion = "removing the space.";
-      break;
-    }
-
-    if (suggestion !== "") {
-      message.push(messages[code].replace("%1", suggestion));
-      ranges.push(match2range(doc, match));
+    if (isProblematic) {
+      // remove the first \s
+      const startPos = doc.positionAt(match.index + 1);
+      const endPos = doc.positionAt(match.index + match[0].length);
+      ranges.push(new vscode.Range(startPos, endPos));
+      localMessages.push(message);
     }
   }
 
-  return ranges2diagnostics(code, message, ranges);
+  return ranges2diagnostics(code, localMessages, ranges);
 }

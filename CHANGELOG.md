@@ -2,6 +2,11 @@
 
 All notable changes to the "latexlint" extension will be documented in this file.
 
+## 1.7.15 - 2026-5-9
+
+- Fix bug of `LLFootnote`.
+- Update lint.pdf and README.md with corrections and formatting improvements
+
 ## 1.7.14 - 2026-4-23
 
 - Update `LLArticle` implementation to support expanded article checks for inline math expressions and uppercase abbreviations.

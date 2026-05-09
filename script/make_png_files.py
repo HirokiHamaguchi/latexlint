@@ -1,11 +1,11 @@
 import glob
 import os
 
-import fitz  # type:ignore[import]
+import pymupdf
 
 
 def pdf2png(pdf_file):
-    doc = fitz.open(pdf_file)
+    doc = pymupdf.open(pdf_file)
     page = doc.load_page(0)
     pixmap = page.get_pixmap(dpi=600)  # type:ignore
     pixmap.save(pdf_file.replace(".pdf", ".png"), "png")

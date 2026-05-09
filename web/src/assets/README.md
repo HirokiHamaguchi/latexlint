@@ -102,33 +102,33 @@ Detect wrong article usage in `.tex` and `.md` files.
 Examples are as follows:
 
 1. Single letters:
-   - NG: `a $a$` → OK: `an $a$`
-   - NG: `a $n$` → OK: `an $n$`
-   - NG: `a $x$` → OK: `an $x$`
-   - NG: `an $u$` → OK: `a $u$`
+   * NG: `a $a$` → OK: `an $a$`
+   * NG: `a $n$` → OK: `an $n$`
+   * NG: `a $x$` → OK: `an $x$`
+   * NG: `an $u$` → OK: `a $u$`
 
 2. abbreviations:
-   - NG: `a EM` → OK: `an EM` (Expectation–Maximization)
-   - NG: `a EVD` → OK: `an EVD` (Eigenvalue Decomposition)
-   - NG: `a FFT` → OK: `an FFT` (Fast Fourier Transform)
-   - NG: `a NP-hard` → OK: `an NP-hard` (Non-deterministic Polynomial-time hard)
-   - NG: `a LSTM` → OK: `an LSTM` (Long Short-Term Memory)
-   - NG: `a LTI` → OK: `an LTI` (Linear Time-Invariant)
-   - NG: `a MLE` → OK: `an MLE` (Maximum Likelihood Estimation)
-   - NG: `a MSE` → OK: `an MSE` (Mean Squared Error)
-   - NG: `a ODE` → OK: `an ODE` (Ordinary Differential Equation)
-   - NG: `a RNN` → OK: `an RNN` (Recurrent Neural Network)
-   - NG: `a RKHS` → OK: `an RKHS` (Reproducing Kernel Hilbert Space)
-   - NG: `a SDE` → OK: `an SDE` (Stochastic Differential Equation)
-   - NG: `a SVD` → OK: `an SVD` (Singular Value Decomposition)
-   - NG: `a SVM` → OK: `an SVM` (Support Vector Machine)
-   - NG: `a XOR` → OK: `an XOR` (Exclusive OR)
+   * NG: `a EM` → OK: `an EM` (Expectation–Maximization)
+   * NG: `a EVD` → OK: `an EVD` (Eigenvalue Decomposition)
+   * NG: `a FFT` → OK: `an FFT` (Fast Fourier Transform)
+   * NG: `a NP-hard` → OK: `an NP-hard` (Non-deterministic Polynomial-time hard)
+   * NG: `a LSTM` → OK: `an LSTM` (Long Short-Term Memory)
+   * NG: `a LTI` → OK: `an LTI` (Linear Time-Invariant)
+   * NG: `a MLE` → OK: `an MLE` (Maximum Likelihood Estimation)
+   * NG: `a MSE` → OK: `an MSE` (Mean Squared Error)
+   * NG: `a ODE` → OK: `an ODE` (Ordinary Differential Equation)
+   * NG: `a RNN` → OK: `an RNN` (Recurrent Neural Network)
+   * NG: `a RKHS` → OK: `an RKHS` (Reproducing Kernel Hilbert Space)
+   * NG: `a SDE` → OK: `an SDE` (Stochastic Differential Equation)
+   * NG: `a SVD` → OK: `an SVD` (Singular Value Decomposition)
+   * NG: `a SVM` → OK: `an SVM` (Support Vector Machine)
+   * NG: `a XOR` → OK: `an XOR` (Exclusive OR)
 
 3. LaTeX commands:
-   - NG: `a $\mathbb{R}$-valued` → OK: `an $\mathbb{R}$-valued`
-   - NG: `a $L^1$` → OK: `an $L^1$`
-   - NG: `a $\ell^2$` → OK: `an $\ell^2$`
-   - NG: `a $\mathcal{L}^\infty$` → OK: `an $\ell^\infty$`
+   * NG: `a $\mathbb{R}$-valued` → OK: `an $\mathbb{R}$-valued`
+   * NG: `a $L^1$` → OK: `an $L^1$`
+   * NG: `a $\ell^2$` → OK: `an $\ell^2$`
+   * NG: `a $\mathcal{L}^\infty$` → OK: `an $\ell^\infty$`
 
 References:
 
@@ -280,11 +280,35 @@ Whether putting footnote markers before or after punctuation marks is a style ch
 
 References:
 
-[Where do I place a note number in relation to punctuation? (MLA Style Center)](https://style.mla.org/note-numbers-punctuation)
+[Where do I place a note number in relation to punctuation? (MLA Style Center)](https://style.mla.org/note-numbers-punctuation):
 
-[Best practice for source editing of footnotes (Stack Exchange)](https://tex.stackexchange.com/questions/329589/best-practice-for-source-editing-of-footnotes)
+> Whenever possible, a note number should be placed at the end of a sentence.
+>
+> > Young wizards at Hogwarts learn how to throw flames by incanting “incendio.”2
+>
+> If clarity requires that a note be placed somewhere other than at the end of a sentence, the note should generally be placed after a punctuation mark.
+>
+> > Despite Fredric Jameson’s influential imperative to historicize,5 Chakrabarty has criticized the “continuous, homogenous” characteristics of this understanding of history (111).
+>
+> An exception is the dash, which follows a note number.
+>
+> > Positioned in the margins of each scene, the servant4—immobilized, silent, cast in shadow—uncannily substantiates Rodriguez’s claim.
+>
+> In general, a note number should follow a closing parenthesis.
+>
+> > Woolf’s first novel, The Voyage Out, was published in 1915. (The original title of the novel was Melymbrosia.)8
+>
+> Occasionally, however, placing a note number inside a closing parenthesis may help clarify the referent. In the following sentence, for instance, the author intends to elaborate on the meaning of the German word Binnenerzählung in a note.
+>
+> > According to Gail Finney, the frame narrative (as distinct from the embedded narrative, or Binnenerzählung3) prevents “penetration of, and subjective identification with, the protagonist” (322).
 
-[How to properly typeset footnotes/superscripts after punctuation marks? (Stack Exchange)](https://tex.stackexchange.com/questions/56063/how-to-properly-typeset-footnotes-superscripts-after-punctuation-marks)
+[Best practice for source editing of footnotes (Stack Exchange)](https://tex.stackexchange.com/questions/329589/best-practice-for-source-editing-of-footnotes):
+
+> You can use the `semantic-markup` package, which provides a Footnote environment. You have to "escape" the end-of-line character by putting a % at the end of the line before the footnote. (Slightly modified by Hiroki Hamaguchi)
+
+[Placing footnote mark before or after punctuation?](https://ell.stackexchange.com/questions/288186/placing-footnote-mark-before-or-after-punctuation):
+
+> The Chicago Manual of Style (CMS) uses footnotes for citations. The footnote mark is placed before the punctuation and links to a reference1. On the other hand, the Modern Language Association (MLA) only uses footnotes for directing the reader to other pertinent information, not for citations,2 and they instruct authors to place the mark after any commas or full-stops (but before — dashes).Some people recommend a "logical" style. Place the footnote mark after the punctuation if the note is pertinent to the whole sentence, and before if it is only relevant to part of it. (Slightly modified by Hiroki Hamaguchi)
 
 ### LLHeading
 
@@ -376,18 +400,13 @@ References:
 
 [数学英語 (河東泰之, Japanese article)](https://www.ms.u-tokyo.ac.jp/~yasuyuki/english2.htm):
 
-> ∀ や ∃ の記号は数理論理学でない限り，黒板などに書く時の略記法なので論文では使わないとされている．実は私の論文で ∀ が使われている例がいくつかあるのだが，それは共著者が書いたものを直し切れなかったのだ．これと同様のものとして，if and only if の意味の iff も略記法であって論文には不適切とされている
+> The symbols ∀ and ∃ are considered shorthand notations for writing on blackboards, etc., and are not used in papers unless in mathematical logic. In fact, there are some examples of ∀ being used in my papers, but that is because I couldn't fully correct what my co-authors wrote. Similarly, the abbreviation "iff" for "if and only if" is also considered a shorthand notation and is inappropriate for use in papers.
 >
-> (The symbols ∀ and ∃ are considered shorthand notations for writing on blackboards, etc., and are not used in papers unless in mathematical logic. In fact, there are some examples of ∀ being used in my papers, but that is because I couldn't fully correct what my co-authors wrote. Similarly, the abbreviation "iff" for "if and only if" is also considered a shorthand notation and is inappropriate for use in papers.)
-
-> ∵という記号は今ここに書いている通り JIS コードにもあるし，TeX でも \because という名前がついているのだが，私の知っている限り欧米ではほとんど使わない．(∴のほうはこれよりは使われている．) これを日本人が黒板に書いて，「それは何か」と聞かれているところを見たことが何度もある．同じく欧米で使わない数学記号として≒がある．「大体等しい」ことを表すのによく使われる記号は≈である．
->
-> (The symbol ∵ is included in the JIS code and is named \because in TeX, but as far as I know, it is rarely used in Western countries. (The symbol ∴ is used more than this.) I've seen Japanese people write this on blackboards and ask "What does that mean?" many times. Another mathematical symbol that is not used in Western countries is ≒. The symbol commonly used to represent "approximately equal" is ≈.)
+> The symbol ∵ is included in the JIS code and is named \because in TeX, but as far as I know, it is rarely used in Western countries. (The symbol ∴ is used more than this.) I've seen Japanese people write this on blackboards and ask "What does that mean?" many times. Another mathematical symbol that is not used in Western countries is ≒. The symbol commonly used to represent "approximately equal" is ≈. (Translated by Hiroki Hamaguchi)
 
 [組合せ (数学) (Japanese Wikipedia)](https://ja.wikipedia.org/wiki/%E7%B5%84%E5%90%88%E3%81%9B_(%E6%95%B0%E5%AD%A6)):
 
-> ピエール・エリゴン（フランス語版）が1634年の『実用算術』で ${}_n C_k$ の記号を定義した。ただし、この数は数学のあらゆる分野に頻繁に現れ、大抵の場合 $\binom{n}{k}$ と書かれる。
-> (Pierre Hérigone defined the ${}_n C_k$ notation in his 1634 work "Practical Arithmetic". However, this number appears frequently in all areas of mathematics and is usually written as $\binom{n}{k}$.)
+> Pierre Hérigone defined the ${}_n C_k$ notation in his 1634 work "Practical Arithmetic". However, this number appears frequently in all areas of mathematics and is usually written as $\binom{n}{k}$. (Translated by Hiroki Hamaguchi)
 
 ### LLPeriod
 

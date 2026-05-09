@@ -58,7 +58,7 @@ export const messages: Record<LLCode, string> = {
     LLENDash: 'If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.',
     LLEqnarray: 'Eqnarray is not recommended. Use align or gather instead.',
     LLErrCompOps: 'These comparison operators seem to be incorrect.',
-    LLFootnote: 'The footnote marker will appear after unnecessary space. Consider moving the command position or %1',
+    LLFootnote: 'The footnote marker will appear after unnecessary space.',
     LLHeading: 'Found \\%1 without a preceding \\%2.',
     LLLlGg: 'Consider using %1 instead of %2.',
     LLNonASCII: 'This is a non-ASCII character. Is this intentional?',

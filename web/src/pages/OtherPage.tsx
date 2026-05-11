@@ -46,10 +46,13 @@ export function OtherPage() {
             <VStack align="stretch">
                 <SectionHeading>Privacy</SectionHeading>
                 <Text>
-                    Your input is processed entirely within your browser.
+                    LaTeX Lint runs locally in your browser.
                 </Text>
                 <Text>
-                    No data is sent to any server.
+                    Your LaTeX source code and linting results are never uploaded to any server.
+                </Text>
+                <Text>
+                    This is a non-commercial project. We do not collect, inspect, sell, or monetize your content.
                 </Text>
             </VStack>
             <VStack align="stretch">

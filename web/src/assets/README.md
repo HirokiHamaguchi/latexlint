@@ -39,22 +39,23 @@ Here is the list of rules we detect.
 16. [LLFootnote](#llfootnote) (detect space before `\footnote`)
 17. [LLHeading](#llheading) (detect heading level jumps)
 18. [LLLlGg](#llllgg) (detect `<<` and `>>`)
-19. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters)
-20. [LLNonstandard](#llnonstandard) (detect nonstandard mathematical notations)
-21. [LLPeriod](#llperiod) (detect abbreviation periods in LaTeX)
-22. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
-23. [LLSharp](#llsharp) (detect `\sharp` likely to be a misuse of `\#`)
-24. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
-25. [LLSortedCites](#llsortedcites) (detect unsorted cites)
-26. [LLSpaceEnglish](#llspaceenglish) (detect the lack of space for English)
-27. [LLSpaceJapanese](#llspacejapanese) (detect the lack of space for Japanese, disabled by default)
-28. [LLT](#llt) (detect `^T`, disabled by default)
-29. [LLTextLint](#lltextlint) (part of textlint features)
-30. [LLThousands](#llthousands) (detect `1,000` etc.)
-31. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
-32. [LLUnRef](#llunref) (detect unreferenced figure and table labels)
-33. [LLURL](#llurl) (detect unnecessary info in URLs)
-34. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
+19. [LLMathPunctuation](#llmathpunctuation) (detect wrong punctuations in math environments)
+20. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters)
+21. [LLNonstandard](#llnonstandard) (detect nonstandard mathematical notations)
+22. [LLPeriod](#llperiod) (detect abbreviation periods in LaTeX)
+23. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
+24. [LLSharp](#llsharp) (detect `\sharp` likely to be a misuse of `\#`)
+25. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
+26. [LLSortedCites](#llsortedcites) (detect unsorted cites)
+27. [LLSpaceEnglish](#llspaceenglish) (detect the lack of space for English)
+28. [LLSpaceJapanese](#llspacejapanese) (detect the lack of space for Japanese, disabled by default)
+29. [LLT](#llt) (detect `^T`, disabled by default)
+30. [LLTextLint](#lltextlint) (part of textlint features)
+31. [LLThousands](#llthousands) (detect `1,000` etc.)
+32. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
+33. [LLUnRef](#llunref) (detect unreferenced figure and table labels)
+34. [LLURL](#llurl) (detect unnecessary info in URLs)
+35. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
 
 Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
@@ -334,6 +335,14 @@ We do not detect `<<` like this one.
 ```md
 I like human $<<<$ cat $<<<<<<<$ dog.
 ```
+
+### LLMathPunctuation
+
+Detect wrong punctuations at the end of display math environments in `.tex` and `.md` files.
+
+![rules/LLMathPunctuation](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLMathPunctuation/LLMathPunctuation.png)
+
+This rule is intended to be further refined in the future.
 
 ### LLNonASCII
 

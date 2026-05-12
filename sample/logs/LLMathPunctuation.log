@@ -1,0 +1,176 @@
+[CODE] LLMathPunctuation (25)
+- file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3938)
+  error: . (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+  3937:     &= \sum_{j\in J} f_j\left(x\right) \prod_{\left(\gamma,k\right)\in\Gamma}\left(\mathrm{e}^{2\pi \mathrm{i}  
+> 3938:     \psi_{\gamma,k}\left(x\right)}\right)^{\alpha_{j;\gamma,k}}= F\left(x, \left(\psi_{\gamma,k}\left(x\right)\right)_{\left(\gamma,k\right)\in \Gamma}\right).
+  3939: \end{align*}
+
+- file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 427)
+  error: , (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+   426: \begin{equation} \label{ZA = HF^lag}
+>  427:     \mathcal{Z}_{A,L}\big(\tau, \mathcal{M}^G_{\text{Higgs}}(C)\big) = \sum_i \text{HF}^{\text{Lagr}}_{n_i}\big(\mathcal{M}^G_{\text{Higgs}}(C), L_0, L_1, \tau\big),
+   428: \end{equation}
+
+- file: sample\arxiv_sources\2308.07921v1\iclr2023_conference.tex (line 613)
+  error: , (and 5 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+   612: \label{eq1}
+>  613: \text{Score}(a) = \sum_{\{v^i\}} w_v (\#\{i \mid  a^{i}=a~ \text{and} ~ v^{i}=v\}), \quad v\in\{\text{True}, \text{Uncertain}, \text{False}\},
+   614: \end{equation}
+
+- file: sample\arxiv_sources\2501.05096v2\arxiv25.tex (line 14638)
+  error: . (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+ 14637: \begin{equation}
+>14638: b^2f(a)+2ab f(a)+a^2f(b)+2ab f(b)=3f(a^2b)+3f(ab^2).
+ 14639: \end{equation}
+
+- file: sample\arxiv_sources\2604.02064v1\main.tex (line 918)
+  error: , (and 3 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+   917: \begin{equation}
+>  918: N_{2\Qg} \approx \frac{n\nf}{15}  = \frac{n \cdot \lceil \log_2(4n + n_{0}) \rceil}{15},
+   919: \end{equation}
+
+- file: sample\arxiv_sources\2604.02100v1\paper.tex (line 201)
+  error: , (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+   200: \label{eq:qd}
+>  201: q_d = 4\pi\epsilon_0 r_d\,\varphi,
+   202: \end{equation}
+
+- file: sample\arxiv_sources\2604.02100v1\paper.tex (line 231)
+  error: , (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+   230: \begin{equation}
+>  231: Q_g = Q_e + Q_i + Q_{\rm rad} + Q_{\rm n},
+   232: \end{equation}
+
+- file: sample\arxiv_sources\2604.02100v1\paper.tex (line 237)
+  error: , (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+   236: \begin{equation}
+>  237: \dot{m}_d = \frac{Q_g}{L_\mathrm{vap} + C_p (T_b - T_d)},
+   238: \end{equation}
+
+- file: sample\arxiv_sources\2604.02100v1\paper.tex (line 298)
+  error: , (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+   297: =
+>  298: \mathbf{v}-\mathbf{u},
+   299: \end{equation}
+
+- file: sample\arxiv_sources\2604.02100v1\paper.tex (line 310)
+  error: , (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+   309: +\mathbf{a}_{\rm drag}\!\left(\mathbf{v}^{n+1/2}-\mathbf{u}^{n}\right)
+>  310: \right],
+   311: \end{equation}
+
+- file: sample\arxiv_sources\2604.02121v1\main.tex (line 630)
+  error: . (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+   629:     \log k_{\rm p} &\mapsto \log k_{\rm p} - \alpha \frac{{\rm d} \mathcal{L}}{{\rm d} \log k_{\rm p}} , \\
+>  630:     \log K_{\rm d} &\mapsto \log K_{\rm d} - \alpha \frac{{\rm d} \mathcal{L}}{{\rm d} \log K_{\rm d}} .
+   631: \end{align*}
+
+- file: sample\arxiv_sources\2604.02173v1\main.tex (line 198)
+  error: . (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+   197: \begin{equation}\label{eq:conformal}
+>  198:     \hat{q} = \text{Quantile}\Big(\{s_i\}_{i=1}^{n_\text{cal}}, \; \frac{\lceil (n_\text{cal}+1)(1-\delta) \rceil}{n_\text{cal}}\Big).
+   199: \end{equation}
+
+- file: sample\arxiv_sources\2604.02179v1\GJIreferee.tex (line 3091)
+  error: . (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+  3090:     \frac{(z^2/4)^k}{k!\Gamma(\nu+k+1)}
+> 3091:     .
+  3092: \end{equation}
+
+- file: sample\arxiv_sources\2604.02214v1\main.tex (line 222)
+  error: . (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+   221: \begin{equation}
+>  222:     \psi^{(0)}\equiv A^{(0)}\tilde{\psi}^{(0)}, \quad \psi^{(1)}\equiv A^{(0)}\tilde{\psi}^{(1)} + A^{(1)}\tilde{\psi}^{(0)}.
+   223: \end{equation}
+
+- file: sample\arxiv_sources\2604.02214v1\main.tex (line 235)
+  error: , (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+   234: \begin{equation}\label{eq:D0_reg}
+>  235:     \tilde{\mathcal{D}}^{(0)}[\tilde{\psi}]\equiv\frac{1}{A^{(0)}}\mathcal{D}^{(0)}[A^{(0)}\tilde{\psi}],
+   236: \end{equation}
+
+- file: sample\arxiv_sources\2604.02233v1\main.tex (line 560)
+  error: , (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+   559: \begin{equation}\label{eq:hp-recursive}
+>  560: T_{i+1} = \sqrt{\binom{\alpha_{i+1}n}{\alpha_i n}} \left( \gamma^{(\alpha_{i+1}-\alpha_i)n} + T_i \right),
+   561: \end{equation}
+
+- file: sample\arxiv_sources\2604.02233v1\main.tex (line 564)
+  error: , (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+   563: \begin{equation}\label{eq:hp-balance}
+>  564:     \gamma^n = \binom{n}{\leq \alpha_1n} + \sqrt{\binom{n}{n/2}}T_{k+1},
+   565: \end{equation}
+
+- file: sample\arxiv_sources\2604.02275v1\secretSharingOverClassicalQuantumBroadcastChannel.tex (line 355)
+  error: . (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+   354:     \begin{align}
+>  355:         R \geq \max_{P_X}\Big[\min_{\mathcal{B\in\mathbb{B}}}H^{\epsilon'}_\textnormal{min}(X|Y_\mathcal{B})_\psi -  H_\textnormal{max}^{\epsilon_1}\big(X|Y_{[1:L]}\big)_\psi - \delta -2\log\frac{1}{\epsilon_2} - 6\Big].
+   356:     \end{align}
+
+- file: sample\arxiv_sources\2604.02301v1\main.tex (line 750)
+  error: ,  (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+   749: \begin{equation}
+>  750:   \delta\theta_2 = -\frac{(\avg{S_x^6} - \avg{S_x^4}\avg{S_x^2})}{(\avg{S_x^4} - \avg{S_x^2}^2)}\theta_4, 
+   751: \end{equation}
+
+- file: sample\arxiv_sources\2604.02306v1\Exp_Sums_Multi_GL.tex (line 845)
+  error: . (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+   844: & = 
+>  845: \phi(q)\sum_{n=1}^{\infty}\frac{|f(n)|^2}{n^2}+ O\left(\frac{\phi(q)(\log y)^2}{q}\right).
+   846: \end{align*}
+
+- file: sample\arxiv_sources\2604.02306v1\Exp_Sums_Multi_GL.tex (line 1633)
+  error: , (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+  1632:  &  (\log x)^A \leq  q\leq \exp\left(c_1\frac{\sqrt{\log x}}{\log\log x}\right) ,\nonumber\\
+> 1633:    \text{ and } \quad \quad    & \max\left(q^{c_2}, (\log x)^{B\log(1+\omega(q))}\right)\leq y\leq \exp\left(c_3\frac{\log x}{\log q(\log\log q)^2}\right),
+  1634: \end{align}
+
+- file: sample\submodules\OpenLogic\content\computability\recursive-functions\examples.tex (line 72)
+  error: . (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+    71:    \fn{pred}'(x, 0) & = \Zero(x) = 0,\\
+>   72:    \fn{pred}'(x, y+1) & = \Proj{3}{1}(x, y, \fn{pred'}(x, y)) = y.
+    73:  \end{align*}
+
+- file: sample\submodules\OpenLogic\content\first-order-logic\axiomatic-deduction\axioms-rules-quantifiers.tex (line 18)
+  error: . (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+    17: \ollabel{ax:q1} & \lforall[x][!B] \lif !B(t), \\
+>   18: \ollabel{ax:q2} & !B(t) \lif \lexists[x][!B].
+    19: \end{align}
+
+- file: sample\submodules\OpenLogic\content\first-order-logic\syntax-and-semantics\satisfaction.tex (line 205)
+  error: , (and 3 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+   204: \Value{f(f(a,b),x)}{M}[s] & = \Assign{f}{M}(\Value{f(a, b)}{M}[s],
+>  205: \Value{x}{M}[s]) = \Assign{f}{M}(3, 1) = 3,
+   206: \end{align*}
+
+- file: sample\submodules\OpenLogic\content\incompleteness\representability-in-q\composition-representable.tex (line 66)
+  error: . (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+    65:   \Th{Q} & \Proves \lforall[z][(\lexists[y][(!A_g(\num{n}, y) \land
+>   66:       !A_f(y, z))] \lif \eq[z][\num{m}])].
+    67: \end{align*}
+

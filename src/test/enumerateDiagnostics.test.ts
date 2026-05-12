@@ -19,7 +19,7 @@ async function testEnumerateDiagnostics(fileName: string) {
 
 // !! AUTO_GENERATED !!
 async function testEnumerateDiagnosticsTex() {
-  const expected = 214;
+  const expected = 216;
   const diagnostics = await testEnumerateDiagnostics("sample/lint.tex");
   assert.strictEqual(diagnostics.length, expected);
 }

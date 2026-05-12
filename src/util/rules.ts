@@ -18,6 +18,7 @@ import LLErrCompOps from '../LL/LLErrCompOps';
 import LLFootnote from '../LL/LLFootnote';
 import LLHeading from '../LL/LLHeading';
 import LLLlGg from '../LL/LLLlGg';
+import LLMathPunctuation from '../LL/LLMathPunctuation';
 import LLNonASCII from '../LL/LLNonASCII';
 import LLNonstandard from '../LL/LLNonstandard';
 import LLPeriod from '../LL/LLPeriod';
@@ -58,6 +59,7 @@ export const standardRules: Record<string, StandardRuleFunction> = {
     LLFootnote,
     LLHeading,
     LLLlGg,
+    LLMathPunctuation,
     LLNonASCII,
     LLNonstandard,
     LLPeriod,

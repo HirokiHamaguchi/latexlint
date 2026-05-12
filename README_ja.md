@@ -41,22 +41,23 @@ LaTeX Lintは、`.tex`および`.md`ファイル用のLaTeXリンターです。
 16. [LLFootnote](#llfootnote) (`\footnote`の前の空白を検出)
 17. [LLHeading](#llheading) (見出しレベルのジャンプを検出)
 18. [LLLlGg](#llllgg) (`<<`と`>>`を検出)
-19. [LLNonASCII](#llnonascii) (全角ASCII文字を検出)
-20. [LLNonstandard](#llnonstandard) (非標準的な数学記号を検出)
-21. [LLPeriod](#llperiod) (LaTeX中の略語ピリオドを検出)
-22. [LLRefEq](#llrefeq) (`\ref{eq:`を検出)
-23. [LLSharp](#llsharp) (`\#`の誤用とおぼしき`\sharp`を検出)
-24. [LLSI](#llsi) (`\SI`なしの`KB`、`MB`、`GB`などを検出)
-25. [LLSortedCites](#llsortedcites) (ソートされていない引用を検出)
-26. [LLSpaceEnglish](#llspaceenglish) (英語での空白の不足を検出)
-27. [LLSpaceJapanese](#llspacejapanese) (日本語での空白の不足を検出 (デフォルトで無効))
-28. [LLT](#llt) (`^T`を検出 (デフォルトで無効))
-29. [LLTextLint](#lltextlint) (textlintの一部機能)
-30. [LLThousands](#llthousands) (`1,000`などを検出)
-31. [LLTitle](#lltitle) (`\title{}`、`\section{}`などでの疑わしいタイトルケースを検出)
-32. [LLUnRef](#llunref) (参照されていない図表ラベルを検出)
-33. [LLURL](#llurl) (URLの不要な情報を検出)
-34. [LLUserDefined](#lluserdefined) (`latexlint.userDefinedRules`内の正規表現を検出)
+19. [LLMathPunctuation](#llmathpunctuation) (数式環境内の誤った句読点を検出)
+20. [LLNonASCII](#llnonascii) (全角ASCII文字を検出)
+21. [LLNonstandard](#llnonstandard) (非標準的な数学記号を検出)
+22. [LLPeriod](#llperiod) (LaTeX中の略語ピリオドを検出)
+23. [LLRefEq](#llrefeq) (`\ref{eq:`を検出)
+24. [LLSharp](#llsharp) (`\#`の誤用とおぼしき`\sharp`を検出)
+25. [LLSI](#llsi) (`\SI`なしの`KB`、`MB`、`GB`などを検出)
+26. [LLSortedCites](#llsortedcites) (ソートされていない引用を検出)
+27. [LLSpaceEnglish](#llspaceenglish) (英語での空白の不足を検出)
+28. [LLSpaceJapanese](#llspacejapanese) (日本語での空白の不足を検出 (デフォルトで無効))
+29. [LLT](#llt) (`^T`を検出 (デフォルトで無効))
+30. [LLTextLint](#lltextlint) (textlintの一部機能)
+31. [LLThousands](#llthousands) (`1,000`などを検出)
+32. [LLTitle](#lltitle) (`\title{}`、`\section{}`などでの疑わしいタイトルケースを検出)
+33. [LLUnRef](#llunref) (参照されていない図表ラベルを検出)
+34. [LLURL](#llurl) (URLの不要な情報を検出)
+35. [LLUserDefined](#lluserdefined) (`latexlint.userDefinedRules`内の正規表現を検出)
 
 必要に応じて、[sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf)も参照してください。
 
@@ -336,6 +337,14 @@ Markdown では `<=` と `=>` は検出しません。
 ```md
 I like human $<<<$ cat $<<<<<<<$ dog.
 ```
+
+### LLMathPunctuation
+
+`.tex`と`.md`ファイルの数式の末尾にある句読点に関する不備を検出します。
+
+![rules/LLMathPunctuation](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLMathPunctuation/LLMathPunctuation.png)
+
+このルールは将来的にもっと精緻化したいと考えています。
 
 ### LLNonASCII
 

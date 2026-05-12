@@ -1,0 +1,33 @@
+\documentclass[preview]{standalone}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{paperwidth=10cm, margin=0cm}
+
+\usepackage{xcolor}
+\definecolor{cA}{HTML}{0072BD}
+\definecolor{cB}{HTML}{EDB120}
+\definecolor{cC}{HTML}{77AC30}
+\definecolor{cD}{HTML}{D95319}
+
+\newcommand{\tA}[1]{\textcolor{cA}{#1}}
+\newcommand{\tB}[1]{\textcolor{cB}{#1}}
+\newcommand{\tC}[1]{\textcolor{cC}{#1}}
+\newcommand{\tD}[1]{\textcolor{cD}{#1}}
+
+\begin{document}
+\begin{equation*}
+	E=mc^2.
+\end{equation*}
+This is \tA{correct}.
+\begin{align}
+	f(x) & = (x+a)(x+b)         \\
+	     & = x^2 + (a+b)x + ab,
+\end{align}
+This is \tD{incorrect} since the last comma should be a period.
+\begin{equation*}
+	e^{i \pi}+1=0.
+\end{equation*}
+which is \tD{incorrect} since the last period should be a comma.
+\end{document}

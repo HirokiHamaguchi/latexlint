@@ -33,9 +33,7 @@ export default function LLFootnote(
         while (lineStart > 0 && txt.text[lineStart - 1] !== "\n") lineStart--;
         if (lineStart === 0) break;
         const line = txt.text.substring(lineStart, lineEnd);
-        console.log({ line });
         const commentIdx = line.indexOf("%");
-        console.log({ commentIdx });
         if (commentIdx === -1) {
           isProblematic = true;
           message += " Adding % at the end of the line before the footnote can prevent this issue.";

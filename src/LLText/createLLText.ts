@@ -65,6 +65,7 @@ const alignLikeEnvCommandRegexSource =
     "\\\\(begin|end)\\{(" +
     alignLikeEnvs.slice().sort((a, b) => b.length - a.length).join("|") +
     ")(\\*?)\\}";
+const envCommandRegex = new RegExp(alignLikeEnvCommandRegexSource, "g");
 
 const alignLikeEnvDeltas: Record<string, number> = {};
 for (let i = 0; i < alignLikeEnvs.length; i++)
@@ -77,7 +78,6 @@ function enumAlignEnvs(
     validRanges: [number, number][],
     computeLinePos: (index: number) => { line: number; character: number }
 ): [number, number][] {
-    const envCommandRegex = new RegExp(alignLikeEnvCommandRegexSource, "g");
     const cmdPairs: Array<{ index: number; delta: number; depth: number }> = [];
 
     for (const match of txt.matchAll(envCommandRegex)) {

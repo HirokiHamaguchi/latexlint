@@ -1,19 +1,24 @@
 import type { LLTextLintErrorResult } from "./types";
-import { getVocabularyData } from './vocabulary_loader';
+import { getVocabularyData } from "./vocabulary_loader";
 
+const NUMBER_PLACEHOLDER = "__LLTEXTLINT_NUM_PLACEHOLDER__";
 
-const NUMBER_PLACEHOLDER = '__LLTEXTLINT_NUM_PLACEHOLDER__';
+type MessageFormatter = (wrong: string, correct: string, memo: string) => string;
 
+type CompiledUsageRule = {
+    regex: RegExp;
+    yesPattern: string;
+    memo: string;
+    messageFormatter: MessageFormatter;
+};
 
 function escapeRegexLiteral(text: string): string {
-    return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
-
 
 function isRegexStylePattern(pattern: string): boolean {
     return /\\|\(\?|\[[^\]]*\]|\|/.test(pattern);
 }
-
 
 function toPatternSource(noPattern: string): string {
     const withPlaceholder = noPattern.replace(/\$num/g, NUMBER_PLACEHOLDER);
@@ -21,78 +26,127 @@ function toPatternSource(noPattern: string): string {
         ? withPlaceholder
         : escapeRegexLiteral(withPlaceholder);
 
-    return source.replace(new RegExp(NUMBER_PLACEHOLDER, 'g'), '(\\d+|[〇一二三四五六七八九十百千万億兆]+)');
+    return source.replace(
+        new RegExp(NUMBER_PLACEHOLDER, "g"),
+        "(\\d+|[〇一二三四五六七八九十百千万億兆]+)"
+    );
 }
 
-
-function regexCheck(
-    text: string,
-    noPattern: string,
-    yesPattern: string,
-    memo: string,
-    messageFormatter: (wrong: string, correct: string, memo: string) => string,
-    disallowWordContinuation: boolean,
-    errors: LLTextLintErrorResult[],
-    matchedRanges: [number, number][]
-): void {
+function compileUsageRegex(noPattern: string, disallowWordContinuation: boolean): RegExp {
     const patternSource = toPatternSource(noPattern);
     const pattern = disallowWordContinuation
         ? `(?<![A-Za-z0-9_-])(?:${patternSource})(?![A-Za-z0-9_-])`
         : patternSource;
-    const regex = new RegExp(pattern, 'g');
-    let match: RegExpExecArray | null;
-    while ((match = regex.exec(text)) !== null) {
-        const index = match.index;
-        const endIndex = index + match[0].length;
-        if (!matchedRanges.some(([rStart, rEnd]) => index < rEnd && endIndex > rStart)) {
-            errors.push({
-                startOffset: index,
-                endOffset: endIndex,
-                message: messageFormatter(match[0], yesPattern.replace('$num', match[1]), memo),
-                code: "usage-error",
-            });
-            matchedRanges.push([index, endIndex]);
-        }
-    }
-}
 
+    return new RegExp(pattern, "g");
+}
 
 function formatEnglishUsageError(wrong: string, correct: string, memo: string): string {
     return `The phrase "${wrong}" may be better written as "${correct}". ${memo}`;
 }
 
-
 function formatJapaneseUsageError(wrong: string, correct: string, memo: string): string {
     return `「${wrong}」という箇所は「${correct}」の方が正しいかも知れません。${memo}`;
 }
 
+function compileUsageRules(): {
+    entriesEn: CompiledUsageRule[];
+    entriesJa: CompiledUsageRule[];
+} {
+    const dict = getVocabularyData();
+
+    const entriesEn: CompiledUsageRule[] = [];
+    const entriesJa: CompiledUsageRule[] = [];
+
+    for (const entry of dict.entries_en) {
+        const noPatterns = Array.isArray(entry.no) ? entry.no : [entry.no];
+
+        for (const noPattern of noPatterns)
+            entriesEn.push({
+                regex: compileUsageRegex(noPattern, true),
+                yesPattern: entry.yes,
+                memo: entry.memo,
+                messageFormatter: formatEnglishUsageError,
+            });
+
+    }
+
+    for (const entry of dict.entries_ja) {
+        const noPatterns = Array.isArray(entry.no) ? entry.no : [entry.no];
+
+        for (const noPattern of noPatterns)
+            entriesJa.push({
+                regex: compileUsageRegex(noPattern, false),
+                yesPattern: entry.yes,
+                memo: entry.memo,
+                messageFormatter: formatJapaneseUsageError,
+            });
+
+    }
+
+    return { entriesEn, entriesJa };
+}
+
+const COMPILED_USAGE_RULES = compileUsageRules();
+
+function regexCheck(
+    text: string,
+    rule: CompiledUsageRule,
+    errors: LLTextLintErrorResult[],
+    matchedRanges: [number, number][]
+): void {
+    const { regex, yesPattern, memo, messageFormatter } = rule;
+
+    regex.lastIndex = 0;
+
+    let match: RegExpExecArray | null;
+    while ((match = regex.exec(text)) !== null) {
+        const index = match.index;
+        const endIndex = index + match[0].length;
+
+        if (!matchedRanges.some(([rStart, rEnd]) => index < rEnd && endIndex > rStart)) {
+            errors.push({
+                startOffset: index,
+                endOffset: endIndex,
+                message: messageFormatter(
+                    match[0],
+                    yesPattern.replace("$num", match[1] ?? ""),
+                    memo
+                ),
+                code: "usage-error",
+            });
+
+            matchedRanges.push([index, endIndex]);
+        }
+
+        // Defensive guard against zero-length regex matches.
+        if (match[0].length === 0)
+            regex.lastIndex++;
+
+    }
+}
 
 function finalizeErrors(errors: LLTextLintErrorResult[]): LLTextLintErrorResult[] {
     errors.sort((a, b) => a.startOffset - b.startOffset);
     return errors;
 }
 
-
 export function checkUsageError(text: string): LLTextLintErrorResult[] {
-    const dict = getVocabularyData();
     const errors: LLTextLintErrorResult[] = [];
     const matchedRanges: [number, number][] = [];
     const hasJapaneseHiragana = /[ぁ-ん]/.test(text);
 
-    for (const entry of dict.entries_en) {
-        const noPatterns = Array.isArray(entry.no) ? entry.no : [entry.no];
-        for (const noPattern of noPatterns)
-            regexCheck(text, noPattern, entry.yes, entry.memo, formatEnglishUsageError, true, errors, matchedRanges);
-    }
+    for (const rule of COMPILED_USAGE_RULES.entriesEn)
+        regexCheck(text, rule, errors, matchedRanges);
+
 
     if (!hasJapaneseHiragana)
         return finalizeErrors(errors);
 
-    for (const entry of dict.entries_ja) {
-        const noPatterns = Array.isArray(entry.no) ? entry.no : [entry.no];
-        for (const noPattern of noPatterns)
-            regexCheck(text, noPattern, entry.yes, entry.memo, formatJapaneseUsageError, false, errors, matchedRanges);
-    }
+
+    for (const rule of COMPILED_USAGE_RULES.entriesJa)
+        regexCheck(text, rule, errors, matchedRanges);
+
 
     return finalizeErrors(errors);
 }

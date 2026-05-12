@@ -10,6 +10,13 @@ import ranges2diagnostics from "../util/ranges2diagnostics";
 // https://arxiv.org/pdf/2511.08548
 // https://arxiv.org/pdf/2604.02137v1
 
+const bibliographyPackagePattern = /\\usepackage(?:\[[^\]]*\])?\{(?:cite|biblatex)\}/;
+
+const stylePattern = /\\bibliographystyle\{(plain|unsrt|abbrv|plainnat|unsrtnat|abbrvnat)\}/g;
+
+const natbibPattern = /\\usepackage(\[[^\]]*\])?\{natbib\}/g;
+const citePattern = /\\cite[tp]?\{/g;
+
 export default function LLSortedCites(
   doc: vscode.TextDocument,
   txt: LLText
@@ -17,9 +24,7 @@ export default function LLSortedCites(
   if (doc.languageId !== "latex") return [];
 
   // If cite or biblatex package is used, we assume the user is aware of sorting options and do not report.
-  const citePackagePattern = /\\usepackage(\[[^\]]*\])?\{cite\}/;
-  const biblatexPattern = /\\usepackage(\[[^\]]*\])?\{biblatex\}/;
-  if (citePackagePattern.test(txt.text) || biblatexPattern.test(txt.text))
+  if (bibliographyPackagePattern.test(txt.text))
     return [];
 
   // Find the first \bibliography{...}
@@ -37,23 +42,12 @@ export default function LLSortedCites(
   // Check if the bibliography style is one of the target styles
   let hasTargetStyle = false;
   let styleName = "";
-  const stylePattern = /\\bibliographystyle\s*\{([^}]*)\}/g;
-  const TARGET_STYLES = new Set([
-    "plain",
-    "unsrt",
-    "abbrv",
-    "plainnat",
-    "unsrtnat",
-    "abbrvnat",
-  ]);
   for (const match of txt.text.matchAll(stylePattern)) {
     const idx = match.index;
     if (idx !== null && txt.isValid(idx)) {
+      hasTargetStyle = true;
       styleName = match[1]?.trim() ?? "";
-      if (TARGET_STYLES.has(styleName)) {
-        hasTargetStyle = true;
-        break;
-      }
+      break;
     }
   }
   if (!hasTargetStyle) return [];
@@ -68,7 +62,6 @@ export default function LLSortedCites(
   let haveNatbib = false;
   let hasNatbibSort = false;
   let hasNatbibNumbers = false;
-  const natbibPattern = /\\usepackage(\[[^\]]*\])?\{natbib\}/g;
   for (const match of txt.text.matchAll(natbibPattern)) {
     const idx = match.index;
     if (idx === null || !txt.isValid(idx)) continue;
@@ -83,7 +76,6 @@ export default function LLSortedCites(
 
   // Check if any \cite{...} contains a comma (heuristic for multiple keys).
   let hasCommaInAnyCiteArgument = false;
-  const citePattern = /\\cite\{/g;
   for (const match of txt.text.matchAll(citePattern)) {
     const openBraceIndex = (match.index ?? -1) + match[0].length - 1;
     if (openBraceIndex < 0) continue;
@@ -96,7 +88,6 @@ export default function LLSortedCites(
     }
   }
   if (!hasCommaInAnyCiteArgument) return [];
-
 
   const range = match2range(doc, firstMatch as RegExpExecArray);
   const message = messages["LLSortedCites"];

@@ -501,6 +501,8 @@ From Fig. 1 and Eq. (1), we can see that...
 
 `\cite{b,a}`のような複数引用は、ソート順の`[1,2]`ではなく`[2,1]`と表示されることがあります。これは、`unsrt`スタイルのような出現順に番号を付けるスタイルを使用しているかどうかとは無関係の話であることに注意してください。
 
+(実際、私が論文をジャーナルに提出したとき、査読者からこの点についてコメントがありました。これは、`plain`のようなスタイルで特に顕著です。)
+
 このルールはそのようなケースをヒューリスティックに検出します。一般には、`\usepackage{cite}`を使ったり、`\usepackage[sort&compress]{natbib}`を使ったりすることで解決できます。
 
 ![rules/LLSortedCites](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLSortedCites/LLSortedCites.png)

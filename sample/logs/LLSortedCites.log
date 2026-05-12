@@ -1,10 +1,17 @@
-[CODE] LLSortedCites (7)
+[CODE] LLSortedCites (8)
 - file: sample\arxiv_sources\2310.09590v2\Pseudo-Dual.tex (line 354)
   error: \bibliography{
   message: Consider automatically sorting citations. See the link for details.
    353: 
 >  354: \bibliography{Pseudo-Dual}
    355: 
+
+- file: sample\arxiv_sources\2507.20527v3\neurips_2025.tex (line 685)
+  error: \bibliography{
+  message: Consider automatically sorting citations. See the link for details.
+   684: \bibliographystyle{unsrtnat}
+>  685: \bibliography{custom}
+   686: 
 
 - file: sample\arxiv_sources\2509.19112v2\neurips_2025.tex (line 567)
   error: \bibliography{

@@ -19,10 +19,10 @@
 
 \begin{document}
 \begin{table}[h]
-    \centering
-    \begin{tabular}{lll}
-        \verb|\#|     & $\#A$      & \tA{ok} \\
-        \verb|\sharp| & $\sharp A$ & \tD{ng}
-    \end{tabular}
+	\centering
+	\begin{tabular}{lll}
+		\verb|\#|     & $\#\{ x \mid x \geq 0 \}$                      & \tA{ok} \\
+		\verb|\sharp| & \hspace{0.11em} $\sharp \{ x \mid x \geq 0 \}$ & \tD{ng} \\
+	\end{tabular}
 \end{table}
 \end{document}

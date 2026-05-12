@@ -52,7 +52,7 @@ export function OtherPage() {
                     Your LaTeX source code and linting results are never uploaded to any server.
                 </Text>
                 <Text>
-                    This is a non-commercial project. We do not collect, inspect, sell, or monetize your content.
+                    We strictly pledge never to collect, inspect, sell, or monetize your content.
                 </Text>
             </VStack>
             <VStack align="stretch">

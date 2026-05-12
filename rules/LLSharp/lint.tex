@@ -1,12 +1,14 @@
 \section{LLSharp}
 
-Some people mistake \verb|\sharp| to be a symbol for the number of elements in a set, but it is not. It is a musical symbol. The correct symbol for the number of elements in a set is \verb|\#|.
+Some people mistake \verb|\sharp| to be a symbol for the number of elements in a set, but it is not.
+It is a musical symbol.
+The correct symbol for the number of elements in a set is \verb|\#|.
 
 \begin{table}[H]
 	\centering
 	\begin{tabular}{lll}
-		\verb|\#|     & $\#A$      & \tA{ok} \\
-		\verb|\sharp| & $\sharp A$ & \tD{ng}
+		\verb|\#|     & $\#\{ x \mid x \geq 0 \}$                      & \tA{ok} \\
+		\verb|\sharp| & \hspace{0.11em} $\sharp \{ x \mid x \geq 0 \}$ & \tD{ng} \\
 	\end{tabular}
 \end{table}
 

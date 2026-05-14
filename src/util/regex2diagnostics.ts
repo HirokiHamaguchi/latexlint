@@ -10,12 +10,10 @@ export default function regex2diagnostics(
     code: LLCode,
     pattern: RegExp
 ): vscode.Diagnostic[] {
-    let message: string[] = [];
     let ranges: vscode.Range[] = [];
     for (const match of txt.text.matchAll(pattern)) {
         if (!txt.isValid(match.index)) continue;
-        message.push(messages[code]);
         ranges.push(match2range(doc, match));
     }
-    return ranges2diagnostics(code, message, ranges);
+    return ranges2diagnostics(code, messages[code], ranges);
 }

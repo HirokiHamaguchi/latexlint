@@ -44,20 +44,21 @@ LaTeX Lintは、`.tex`および`.md`ファイル用のLaTeXリンターです。
 19. [LLMathPunctuation](#llmathpunctuation) (数式環境内の誤った句読点を検出)
 20. [LLNonASCII](#llnonascii) (全角ASCII文字を検出)
 21. [LLNonstandard](#llnonstandard) (非標準的な数学記号を検出)
-22. [LLPeriod](#llperiod) (LaTeX中の略語ピリオドを検出)
-23. [LLRefEq](#llrefeq) (`\ref{eq:`を検出)
-24. [LLSharp](#llsharp) (`\#`の誤用とおぼしき`\sharp`を検出)
-25. [LLSI](#llsi) (`\SI`なしの`KB`、`MB`、`GB`などを検出)
-26. [LLSortedCites](#llsortedcites) (ソートされていない引用を検出)
-27. [LLSpaceEnglish](#llspaceenglish) (英語での空白の不足を検出)
-28. [LLSpaceJapanese](#llspacejapanese) (日本語での空白の不足を検出 (デフォルトで無効))
-29. [LLT](#llt) (`^T`を検出 (デフォルトで無効))
-30. [LLTextLint](#lltextlint) (textlintの一部機能)
-31. [LLThousands](#llthousands) (`1,000`などを検出)
-32. [LLTitle](#lltitle) (`\title{}`、`\section{}`などでの疑わしいタイトルケースを検出)
-33. [LLUnRef](#llunref) (参照されていない図表ラベルを検出)
-34. [LLURL](#llurl) (URLの不要な情報を検出)
-35. [LLUserDefined](#lluserdefined) (`latexlint.userDefinedRules`内の正規表現を検出)
+22. [LLOperator](#lloperator) (空白がおかしくなる演算子を検出)
+23. [LLPeriod](#llperiod) (LaTeX中の略語ピリオドを検出)
+24. [LLRefEq](#llrefeq) (`\ref{eq:`を検出)
+25. [LLSharp](#llsharp) (`\#`の誤用とおぼしき`\sharp`を検出)
+26. [LLSI](#llsi) (`\SI`なしの`KB`、`MB`、`GB`などを検出)
+27. [LLSortedCites](#llsortedcites) (ソートされていない引用を検出)
+28. [LLSpaceEnglish](#llspaceenglish) (英語での空白の不足を検出)
+29. [LLSpaceJapanese](#llspacejapanese) (日本語での空白の不足を検出 (デフォルトで無効))
+30. [LLT](#llt) (`^T`を検出 (デフォルトで無効))
+31. [LLTextLint](#lltextlint) (textlintの一部機能)
+32. [LLThousands](#llthousands) (`1,000`などを検出)
+33. [LLTitle](#lltitle) (`\title{}`、`\section{}`などでの疑わしいタイトルケースを検出)
+34. [LLUnRef](#llunref) (参照されていない図表ラベルを検出)
+35. [LLURL](#llurl) (URLの不要な情報を検出)
+36. [LLUserDefined](#lluserdefined) (`latexlint.userDefinedRules`内の正規表現を検出)
 
 必要に応じて、[sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf)も参照してください。
 
@@ -418,6 +419,20 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 [組合せ (数学) (Japanese Wikipedia)](https://ja.wikipedia.org/wiki/%E7%B5%84%E5%90%88%E3%81%9B_(%E6%95%B0%E5%AD%A6)):
 
 > Pierre Hérigone defined the ${}_n C_k$ notation in his 1634 work "Practical Arithmetic". However, this number appears frequently in all areas of mathematics and is usually written as $\binom{n}{k}$. (Translated by Hiroki Hamaguchi)
+
+### LLOperator
+
+`.tex`と`.md`ファイルの`\mathrm{...}`や`\text{...}`という形の、空白がおかしくなる演算子を検出します。
+
+![rules/LLOperator](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLOperator/LLOperator.png)
+
+例えば、rank関数を出力するには、amsmath packageを読み込んだうえで、`\operatorname{rank} A` を使うか、`\rank A` を `\DeclareMathOperator{\rank}{rank}`とプリアンブルに書いたうえで使うことが挙げられます。
+
+偽陽性を避けるため、特定のケースのみを検出します。多くの偽陰性がある可能性があります。LaTeX Lintが問題を検出しない場合でも、上記の代替案を使用することを強くお勧めします。スペーシングや可読性が向上し、潜在的な問題を回避できます。
+
+参考文献:
+
+[What's the difference between \mathrm and \operatorname? (Stack Exchange)](https://tex.stackexchange.com/questions/48459/whats-the-difference-between-mathrm-and-operatorname)
 
 ### LLPeriod
 

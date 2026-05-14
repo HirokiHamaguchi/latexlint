@@ -1,0 +1,5 @@
+{
+  "message": "If this is an operator, consider using other commands to avoid a spacing issue.",
+  "severity": "WARN",
+  "lint_test_count": 9
+}

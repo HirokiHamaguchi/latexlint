@@ -21,6 +21,7 @@ import LLLlGg from '../LL/LLLlGg';
 import LLMathPunctuation from '../LL/LLMathPunctuation';
 import LLNonASCII from '../LL/LLNonASCII';
 import LLNonstandard from '../LL/LLNonstandard';
+import LLOperator from '../LL/LLOperator';
 import LLPeriod from '../LL/LLPeriod';
 import LLRefEq from '../LL/LLRefEq';
 import LLSharp from '../LL/LLSharp';
@@ -62,6 +63,7 @@ export const standardRules: Record<string, StandardRuleFunction> = {
     LLMathPunctuation,
     LLNonASCII,
     LLNonstandard,
+    LLOperator,
     LLPeriod,
     LLRefEq,
     LLSharp,

@@ -146,6 +146,7 @@
               "LLMathPunctuation",
               "LLNonASCII",
               "LLNonstandard",
+              "LLOperator",
               "LLPeriod",
               "LLRefEq",
               "LLSharp",

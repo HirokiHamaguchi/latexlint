@@ -42,20 +42,21 @@ Here is the list of rules we detect.
 19. [LLMathPunctuation](#llmathpunctuation) (detect wrong punctuations in math environments)
 20. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters)
 21. [LLNonstandard](#llnonstandard) (detect nonstandard mathematical notations)
-22. [LLPeriod](#llperiod) (detect abbreviation periods in LaTeX)
-23. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
-24. [LLSharp](#llsharp) (detect `\sharp` likely to be a misuse of `\#`)
-25. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
-26. [LLSortedCites](#llsortedcites) (detect unsorted cites)
-27. [LLSpaceEnglish](#llspaceenglish) (detect the lack of space for English)
-28. [LLSpaceJapanese](#llspacejapanese) (detect the lack of space for Japanese, disabled by default)
-29. [LLT](#llt) (detect `^T`, disabled by default)
-30. [LLTextLint](#lltextlint) (part of textlint features)
-31. [LLThousands](#llthousands) (detect `1,000` etc.)
-32. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
-33. [LLUnRef](#llunref) (detect unreferenced figure and table labels)
-34. [LLURL](#llurl) (detect unnecessary info in URLs)
-35. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
+22. [LLOperator](#lloperator) (detect operators with incorrect spacing)
+23. [LLPeriod](#llperiod) (detect abbreviation periods in LaTeX)
+24. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
+25. [LLSharp](#llsharp) (detect `\sharp` likely to be a misuse of `\#`)
+26. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
+27. [LLSortedCites](#llsortedcites) (detect unsorted cites)
+28. [LLSpaceEnglish](#llspaceenglish) (detect the lack of space for English)
+29. [LLSpaceJapanese](#llspacejapanese) (detect the lack of space for Japanese, disabled by default)
+30. [LLT](#llt) (detect `^T`, disabled by default)
+31. [LLTextLint](#lltextlint) (part of textlint features)
+32. [LLThousands](#llthousands) (detect `1,000` etc.)
+33. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
+34. [LLUnRef](#llunref) (detect unreferenced figure and table labels)
+35. [LLURL](#llurl) (detect unnecessary info in URLs)
+36. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
 
 Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
@@ -416,6 +417,20 @@ References:
 [組合せ (数学) (Japanese Wikipedia)](https://ja.wikipedia.org/wiki/%E7%B5%84%E5%90%88%E3%81%9B_(%E6%95%B0%E5%AD%A6)):
 
 > Pierre Hérigone defined the ${}_n C_k$ notation in his 1634 work "Practical Arithmetic". However, this number appears frequently in all areas of mathematics and is usually written as $\binom{n}{k}$. (Translated by Hiroki Hamaguchi)
+
+### LLOperator
+
+Detect operators in the form of `\mathrm{...}` that have incorrect spacing in `.tex` and `.md` files.
+
+![rules/LLOperator](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLOperator/LLOperator.png)
+
+For example, to typeset the rank function, we can load the amsmath package and use `\operatorname{rank} A`, or use `\rank A` with `\DeclareMathOperator{\rank}{rank}` in the preamble.
+
+To avoid false positives, we only detect specific cases. There may be many false negatives. Even if LaTeX Lint does not detect an issue, we highly recommend using the alternatives mentioned above for better spacing, readability, and to avoid potential issues.
+
+References:
+
+[What's the difference between \mathrm and \operatorname? (Stack Exchange)](https://tex.stackexchange.com/questions/48459/whats-the-difference-between-mathrm-and-operatorname)
 
 ### LLPeriod
 

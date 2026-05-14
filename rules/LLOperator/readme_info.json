@@ -1,0 +1,7 @@
+{
+  "description": "detect operators with incorrect spacing",
+  "description_ja": "空白がおかしくなる演算子を検出",
+  "references": [
+    "[What's the difference between \\mathrm and \\operatorname? (Stack Exchange)](https://tex.stackexchange.com/questions/48459/whats-the-difference-between-mathrm-and-operatorname)"
+  ]
+}

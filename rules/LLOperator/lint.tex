@@ -1,0 +1,22 @@
+\section{LLOperator}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		\verb|2\operatorname{rank}A| & $2\operatorname{rank}A$ & \tA{ok}  \\
+		\verb|2\rank A|              & $2\rank A$              & \tA{ok}  \\
+		\verb|2\,\mathrm{rank}\,A|   & $2\,\mathrm{rank}\,A$   & \tC{ok?} \\
+		\verb|2 \mathrm{rank} A|     & $2  \mathrm{rank}  A$   & \tD{ng}  \\
+		\verb|n_{\mathrm{rank}}|     & $n_{\mathrm{rank}}$     & \tA{ok}  \\
+	\end{tabular}
+\end{table}
+
+\begin{itemize}
+	\item $\mathrm{dim}\,A$ vs $\mathrm{dim} A$
+	\item $\mathrm{rank}\,A$ vs $\mathrm{rank} A$
+	\item $\mathrm{tr}\,A$ vs $\mathrm{tr} A$
+	\item $\mathrm{det}\,A$ vs $\mathrm{det} A$
+	\item $\mathrm{arg}\,z$ vs $\mathrm{arg} z$
+	\item $\mathrm{Re}\,z$ vs $\mathrm{Re} z$
+	\item $\mathrm{Im}\,z$ vs $\mathrm{Im} z$
+\end{itemize}

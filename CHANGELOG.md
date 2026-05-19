@@ -2,6 +2,11 @@
 
 All notable changes to the "latexlint" extension will be documented in this file.
 
+## 1.7.17 - 2026-5-??
+
+- Improve `LLPeriod`.
+- Add `LLOperator` to detect invalid operator usage in LaTeX and Markdown files.
+
 ## 1.7.16 - 2026-5-12
 
 - Add `LLMathPunctuation` to detect punctuation placed before the closing display-math environment tag when prose follows.

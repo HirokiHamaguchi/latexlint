@@ -1,4 +1,4 @@
-[CODE] LLPeriod (330)
+[CODE] LLPeriod (337)
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 112)
   error: i.e. 
   message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
@@ -370,6 +370,27 @@
 >   43: Specifically, probabilities are expressed as simplified fractions. Moreover, matrix entry fractions are encoded with \verb|x/y|, while all other fractions are consistently encoded with the \verb|\frac{x}{y}| command. Coefficients are encoded without a multiplication symbol (e.g. \verb|5x| not \verb|5*x|). Expressions with multiple variables are entered in alphabetical order; polynomials are expressed in decreasing degree order. Different fraction encodings equivalent, such as \texttt{\textbackslash frac\{x\}\{y\}} and \texttt{\textbackslash dfrac\{x\}\{y\}} and \texttt{x/y}. Different parenthesis encodings, such as \texttt{\textbackslash left(} and \texttt{(}, are treated as equivalent.
     44: 
 
+- file: sample\arxiv_sources\2103.03874v2\6-appendix.tex (line 17)
+  error: Mr. 
+  message: Use "Mr.\ " (backslash space) to avoid spacing issues.
+    16: 
+>   17: We analyze Transformers on LogiQA \citep{Liu2020LogiQAAC}, a task with logical reasoning questions such as ``David knows Mr. Zhang's friend Jack, and Jack knows David's friend Ms. Lin. Everyone of them who knows Jack has a master's degree, and everyone of them who knows Ms. Lin is from Shanghai. Who is from Shanghai and has a master's degree?'' As shown in \Cref{fig:logiqa}, Transformers are improving on LogiQA, so much so that they will attain human-level performance relatively soon, should trends continue. 
+    18: 
+
+- file: sample\arxiv_sources\2103.03874v2\6-appendix.tex (line 17)
+  error: Ms. 
+  message: Use "Ms.\ " (backslash space) to avoid spacing issues.
+    16: 
+>   17: We analyze Transformers on LogiQA \citep{Liu2020LogiQAAC}, a task with logical reasoning questions such as ``David knows Mr. Zhang's friend Jack, and Jack knows David's friend Ms. Lin. Everyone of them who knows Jack has a master's degree, and everyone of them who knows Ms. Lin is from Shanghai. Who is from Shanghai and has a master's degree?'' As shown in \Cref{fig:logiqa}, Transformers are improving on LogiQA, so much so that they will attain human-level performance relatively soon, should trends continue. 
+    18: 
+
+- file: sample\arxiv_sources\2103.03874v2\6-appendix.tex (line 17)
+  error: Ms. 
+  message: Use "Ms.\ " (backslash space) to avoid spacing issues.
+    16: 
+>   17: We analyze Transformers on LogiQA \citep{Liu2020LogiQAAC}, a task with logical reasoning questions such as ``David knows Mr. Zhang's friend Jack, and Jack knows David's friend Ms. Lin. Everyone of them who knows Jack has a master's degree, and everyone of them who knows Ms. Lin is from Shanghai. Who is from Shanghai and has a master's degree?'' As shown in \Cref{fig:logiqa}, Transformers are improving on LogiQA, so much so that they will attain human-level performance relatively soon, should trends continue. 
+    18: 
+
 - file: sample\arxiv_sources\2105.03843v1\IsMathUseful.tex (line 154)
   error: i.e. 
   message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
@@ -474,6 +495,13 @@
    827: 
 >  828: \paragraph{Sensitive to Prompt} The models are sensitive to format and given instruction prompts. If we give different prompts before the question (e.g. Question:, Q:, Please solve this question step by step), it may obtain different performances.
    829: 
+
+- file: sample\arxiv_sources\2402.14804v1\error_vision_recognition_example1.tex (line 10)
+  error: Mrs. 
+  message: Use "Mrs.\ " (backslash space) to avoid spacing issues.
+     9:            \textbf{\large Question:} 
+>   10:              \question{The students in Mrs. Sawyer's class were asked to do a taste test of five kinds of candy. Each student chose one kind of candy. A bar graph of their preferences is shown. What percent of her class chose candy E?
+    11:              
 
 - file: sample\arxiv_sources\2407.13690v2\appendix.tex (line 275)
   error: i.e. 
@@ -754,6 +782,20 @@
  15323: 
 >15324: Since the set  $\{\frac{2^n}{3^k}:n,k\in \N\}$ is dense in $[0,\infty[$ (see e.g. \cite[p. 1879]{moru}), 
  15325: continuity of $F$ in $[0,\infty[$  yields that $F(\mu x)=\mu F(x)$ for every  $\mu>0$ and $x>0$. Therefore, for $x=1$, $F(\mu)= \mu F(1)$. Consequently,
+
+- file: sample\arxiv_sources\2502.17387v1\main.tex (line 1151)
+  error: E.g. 
+  message: Use "E.g.\ " (backslash space) to avoid spacing issues, or a comma "E.g.," in American English.
+  1150: - Reformulated problems should have the same final answer as the original problem (just not in the multiple-choice format)\\
+> 1151: - It must be reasonably clear from the problem what the student is expected to write inside of \boxed{final\_answer}. E.g. "What are its key properties and characteristics?" is almost always a bad reformulation because it is ambiguous what the student should write inside of the `\boxed{}`. "Express your answer in centimeters." is a good answer format specification because it does NOT give away the answer but does specify a clear format.\\
+  1152: - Do NOT reformulate problems that are not actually multiple choice or are impossible to reformulate\\
+
+- file: sample\arxiv_sources\2502.17387v1\main.tex (line 1486)
+  error: E.g. 
+  message: Use "E.g.\ " (backslash space) to avoid spacing issues, or a comma "E.g.," in American English.
+  1485: - Problems you review are being transformed from multiple choice problems into open-ended, solvable questions suitable for an automatic grading system that relies on regex pattern matching within `\boxed{}`. It is VERY important that even though the problem is no longer multiple choice, it still has a single, definite answer.\\
+> 1486: - It must be reasonably clear from the problem what the student is expected to write inside of \boxed{final\_answer}. E.g. "What are its key properties and characteristics?" is almost always a bad reformulation because it is ambiguous what the student should write inside of the `\boxed{}`. "Express your answer in centimeters." is a good answer format specification because it does NOT give away the answer but does specify a clear format.\\
+  1487: 
 
 - file: sample\arxiv_sources\2502.17387v1\main.tex (line 1492)
   error: e.g. 
@@ -1559,6 +1601,13 @@
    815: \begin{enumerate}
 >  816:     \item \keyword{open} -- will use the lowest available file descriptor (i.e. 1), so standard out (stdout) is now redirected to the log file.
    817:     \item \keyword{chdir} -- Change the current directory to /usr/include.
+
+- file: sample\submodules\coursebook\processes\processes.tex (line 962)
+  error: E.g. 
+  message: Use "E.g.\ " (backslash space) to avoid spacing issues, or a comma "E.g.," in American English.
+   961: \item Using exec with a path
+>  962: \item Understanding what fork and exec and waitpid do. E.g. how to use their return values.
+   963: \item SIGKILL vs SIGSTOP vs SIGINT.
 
 - file: sample\submodules\coursebook\security\security.tex (line 377)
   error: e.g. 

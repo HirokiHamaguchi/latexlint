@@ -1,0 +1,18 @@
+\section{LLDots}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{lll}
+		\verb|\dots|  & $x,\dots,y$   & \tA{ok} \\
+		\verb|\ldots| & $x,\ldots,y$  & \tA{ok} \\
+		\verb|,...,|  & $x,...,y$     & \tD{ng} \\[0.5em]
+		\verb|\dots|  & $x+\dots+y$   & \tA{ok} \\
+		\verb|\cdots| & $x+\cdots+y$  & \tA{ok} \\
+		\verb|,...,|  & $x+...+y$     & \tD{ng} \\[0.5em]
+		\verb|\dots|  & $0.333\dots$  & \tA{ok} \\
+		\verb|\dotso| & $0.333\dotso$ & \tA{ok} \\
+		\verb|...|    & $0.333...$    & \tD{ng} \\
+	\end{tabular}
+\end{table}
+
+Unicode: ……, dots: \dots, textellipsis: \textellipsis, textelldots: \textelldots, dotso: \dotso

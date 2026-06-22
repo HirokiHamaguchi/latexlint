@@ -1,0 +1,5 @@
+{
+  "message": "Consider using \\dots instead of ... since it adjusts the position of dots and spacing.",
+  "severity": "WARN",
+  "lint_test_count": 3
+}

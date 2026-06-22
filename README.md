@@ -32,31 +32,32 @@ Here is the list of rules we detect.
 9. [LLColonEqq](#llcoloneqq) (detect `:=`, `=:`,`::=`, and `=::`)
 10. [LLColonForMapping](#llcolonformapping) (detect `:` for mapping)
 11. [LLCref](#llcref) (detect `\ref`, disabled by default)
-12. [LLDoubleQuotes](#lldoublequotes) (detect `"`)
-13. [LLENDash](#llendash) (detect the dubious use of `-`(hyphen))
-14. [LLEqnarray](#lleqnarray) (detect `eqnarray` environment)
-15. [LLErrCompOps](#llerrcompops) (detect incorrect comparison operator orders)
-16. [LLFootnote](#llfootnote) (detect space before `\footnote`)
-17. [LLHeading](#llheading) (detect heading level jumps)
-18. [LLLlGg](#llllgg) (detect `<<` and `>>`)
-19. [LLMathPunctuation](#llmathpunctuation) (detect wrong punctuations in math environments)
-20. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters)
-21. [LLNonstandard](#llnonstandard) (detect nonstandard mathematical notations)
-22. [LLOperator](#lloperator) (detect operators with incorrect spacing)
-23. [LLPeriod](#llperiod) (detect abbreviation periods in LaTeX)
-24. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
-25. [LLSharp](#llsharp) (detect `\sharp` likely to be a misuse of `\#`)
-26. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
-27. [LLSortedCites](#llsortedcites) (detect unsorted cites)
-28. [LLSpaceEnglish](#llspaceenglish) (detect the lack of space for English)
-29. [LLSpaceJapanese](#llspacejapanese) (detect the lack of space for Japanese, disabled by default)
-30. [LLT](#llt) (detect `^T`, disabled by default)
-31. [LLTextLint](#lltextlint) (part of textlint features)
-32. [LLThousands](#llthousands) (detect `1,000` etc.)
-33. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
-34. [LLUnRef](#llunref) (detect unreferenced figure and table labels)
-35. [LLURL](#llurl) (detect unnecessary info in URLs)
-36. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
+12. [LLDots](#lldots) (detect `...`)
+13. [LLDoubleQuotes](#lldoublequotes) (detect `"`)
+14. [LLENDash](#llendash) (detect the dubious use of `-`(hyphen))
+15. [LLEqnarray](#lleqnarray) (detect `eqnarray` environment)
+16. [LLErrCompOps](#llerrcompops) (detect incorrect comparison operator orders)
+17. [LLFootnote](#llfootnote) (detect space before `\footnote`)
+18. [LLHeading](#llheading) (detect heading level jumps)
+19. [LLLlGg](#llllgg) (detect `<<` and `>>`)
+20. [LLMathPunctuation](#llmathpunctuation) (detect wrong punctuations in math environments)
+21. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters)
+22. [LLNonstandard](#llnonstandard) (detect nonstandard mathematical notations)
+23. [LLOperator](#lloperator) (detect operators with incorrect spacing)
+24. [LLPeriod](#llperiod) (detect abbreviation periods in LaTeX)
+25. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
+26. [LLSharp](#llsharp) (detect `\sharp` likely to be a misuse of `\#`)
+27. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
+28. [LLSortedCites](#llsortedcites) (detect unsorted cites)
+29. [LLSpaceEnglish](#llspaceenglish) (detect the lack of space for English)
+30. [LLSpaceJapanese](#llspacejapanese) (detect the lack of space for Japanese, disabled by default)
+31. [LLT](#llt) (detect `^T`, disabled by default)
+32. [LLTextLint](#lltextlint) (part of textlint features)
+33. [LLThousands](#llthousands) (detect `1,000` etc.)
+34. [LLTitle](#lltitle) (detect dubious title case in `\title{}`, `\section{}`, etc.)
+35. [LLUnRef](#llunref) (detect unreferenced figure and table labels)
+36. [LLURL](#llurl) (detect unnecessary info in URLs)
+37. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
 
 Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
@@ -209,6 +210,25 @@ This rule is disabled by default.
 
 We prefer this package because it can automatically add prefixes like "Sec." or "Fig.". We can keep the consistency of the reference format.
 This rule is disabled in the preamble (only if `\begin{document}` exists, before that).
+
+### LLDots
+
+Detect `...` in `.tex` and `.md` files.
+Since `\dots` automatically selects the appropriate dots and adjusts the spacing, it is recommended to use `\dots` instead of `...`.
+
+![rules/LLDots](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLDots/LLDots.png)
+
+We also detect `+...+` (`...` surrounded by operators) and `0.333...` (`...` following a number).
+
+(Admittedly, there is probably no very objective evidence that `\dots` is superior to `...`, so it may be a matter of style preference. However, as the references suggest, `\dots` is recommended by many people.)
+
+References:
+
+[some common (la)tex errors](https://www.economics.utoronto.ca/osborne/latex/LTXERR.HTM)
+
+[Is there a difference between \ldots and \textellipsis? (Stack Exchange)](https://tex.stackexchange.com/questions/258591/is-there-a-difference-between-ldots-and-textellipsis)
+
+[16.2.6 Dots, horizontal or vertical](https://latexref.xyz/Dots.html)
 
 ### LLDoubleQuotes
 
@@ -435,7 +455,7 @@ References:
 ### LLPeriod
 
 Detect abbreviation periods in `.tex` files.
-This rule checks `e.g.`, `i.e.`, `i.i.d.`, `w.r.t.`, `w.l.o.g.`, and `resp.` when followed by a space.
+This rule checks `e.g.`, `i.e.`, `a.k.a.`, `i.i.d.`, `w.r.t.`, `w.l.o.g.`, and `resp.` when followed by a space.
 LaTeX considers the period in these abbreviations as the end of a sentence, which can lead to extra spacing.
 You should use `\ ` (e.g., `e.g.\ `) to avoid spacing issues, or add a comma (e.g., `e.g.,`).
 

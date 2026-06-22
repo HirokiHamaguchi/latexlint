@@ -11,6 +11,7 @@ import LLBracketRound from '../LL/LLBracketRound';
 import LLColonEqq from '../LL/LLColonEqq';
 import LLColonForMapping from '../LL/LLColonForMapping';
 import LLCref from '../LL/LLCref';
+import LLDots from '../LL/LLDots';
 import LLDoubleQuotes from '../LL/LLDoubleQuotes';
 import LLENDash from '../LL/LLENDash';
 import LLEqnarray from '../LL/LLEqnarray';
@@ -53,6 +54,7 @@ export const standardRules: Record<string, StandardRuleFunction> = {
     LLBracketRound,
     LLColonEqq,
     LLColonForMapping,
+    LLDots,
     LLDoubleQuotes,
     LLENDash,
     LLEqnarray,

@@ -43,7 +43,7 @@ def make_constants_ts():
             "",
             "export const messages: Record<LLCode, string> = {",
         ]
-        + [f"    {rule}: '{messages[rule]}'," for rule in rule_names]
+        + [f"    {rule}: {json.dumps(messages[rule], ensure_ascii=False)}," for rule in rule_names]
         + [
             "};",
             "",

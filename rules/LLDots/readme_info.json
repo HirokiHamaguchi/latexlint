@@ -1,6 +1,6 @@
 {
-  "description": "detect `:=`, `=:`,`::=`, and `=::`",
-  "description_ja": "`:=`、`=:`、`::=`、`=::`を検出",
+  "description": "detect `...`",
+  "description_ja": "`...`を検出",
   "references": [
     "[some common (la)tex errors](https://www.economics.utoronto.ca/osborne/latex/LTXERR.HTM)",
     "[Is there a difference between \\ldots and \\textellipsis? (Stack Exchange)](https://tex.stackexchange.com/questions/258591/is-there-a-difference-between-ldots-and-textellipsis)",

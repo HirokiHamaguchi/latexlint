@@ -34,31 +34,32 @@ LaTeX Lintは、`.tex`および`.md`ファイル用のLaTeXリンターです。
 9. [LLColonEqq](#llcoloneqq) (`:=`、`=:`、`::=`、`=::`を検出)
 10. [LLColonForMapping](#llcolonformapping) (写像に使われた`:`を検出)
 11. [LLCref](#llcref) (`\ref`を検出 (デフォルトで無効))
-12. [LLDoubleQuotes](#lldoublequotes) (`"`を検出)
-13. [LLENDash](#llendash) (疑わしい`-`(ハイフン)の使用を検出)
-14. [LLEqnarray](#lleqnarray) (`eqnarray`環境を検出)
-15. [LLErrCompOps](#llerrcompops) (誤った比較演算子の並びを検出)
-16. [LLFootnote](#llfootnote) (`\footnote`の前の空白を検出)
-17. [LLHeading](#llheading) (見出しレベルのジャンプを検出)
-18. [LLLlGg](#llllgg) (`<<`と`>>`を検出)
-19. [LLMathPunctuation](#llmathpunctuation) (数式環境内の誤った句読点を検出)
-20. [LLNonASCII](#llnonascii) (全角ASCII文字を検出)
-21. [LLNonstandard](#llnonstandard) (非標準的な数学記号を検出)
-22. [LLOperator](#lloperator) (空白がおかしくなる演算子を検出)
-23. [LLPeriod](#llperiod) (LaTeX中の略語ピリオドを検出)
-24. [LLRefEq](#llrefeq) (`\ref{eq:`を検出)
-25. [LLSharp](#llsharp) (`\#`の誤用とおぼしき`\sharp`を検出)
-26. [LLSI](#llsi) (`\SI`なしの`KB`、`MB`、`GB`などを検出)
-27. [LLSortedCites](#llsortedcites) (ソートされていない引用を検出)
-28. [LLSpaceEnglish](#llspaceenglish) (英語での空白の不足を検出)
-29. [LLSpaceJapanese](#llspacejapanese) (日本語での空白の不足を検出 (デフォルトで無効))
-30. [LLT](#llt) (`^T`を検出 (デフォルトで無効))
-31. [LLTextLint](#lltextlint) (textlintの一部機能)
-32. [LLThousands](#llthousands) (`1,000`などを検出)
-33. [LLTitle](#lltitle) (`\title{}`、`\section{}`などでの疑わしいタイトルケースを検出)
-34. [LLUnRef](#llunref) (参照されていない図表ラベルを検出)
-35. [LLURL](#llurl) (URLの不要な情報を検出)
-36. [LLUserDefined](#lluserdefined) (`latexlint.userDefinedRules`内の正規表現を検出)
+12. [LLDots](#lldots) (`...`を検出)
+13. [LLDoubleQuotes](#lldoublequotes) (`"`を検出)
+14. [LLENDash](#llendash) (疑わしい`-`(ハイフン)の使用を検出)
+15. [LLEqnarray](#lleqnarray) (`eqnarray`環境を検出)
+16. [LLErrCompOps](#llerrcompops) (誤った比較演算子の並びを検出)
+17. [LLFootnote](#llfootnote) (`\footnote`の前の空白を検出)
+18. [LLHeading](#llheading) (見出しレベルのジャンプを検出)
+19. [LLLlGg](#llllgg) (`<<`と`>>`を検出)
+20. [LLMathPunctuation](#llmathpunctuation) (数式環境内の誤った句読点を検出)
+21. [LLNonASCII](#llnonascii) (全角ASCII文字を検出)
+22. [LLNonstandard](#llnonstandard) (非標準的な数学記号を検出)
+23. [LLOperator](#lloperator) (空白がおかしくなる演算子を検出)
+24. [LLPeriod](#llperiod) (LaTeX中の略語ピリオドを検出)
+25. [LLRefEq](#llrefeq) (`\ref{eq:`を検出)
+26. [LLSharp](#llsharp) (`\#`の誤用とおぼしき`\sharp`を検出)
+27. [LLSI](#llsi) (`\SI`なしの`KB`、`MB`、`GB`などを検出)
+28. [LLSortedCites](#llsortedcites) (ソートされていない引用を検出)
+29. [LLSpaceEnglish](#llspaceenglish) (英語での空白の不足を検出)
+30. [LLSpaceJapanese](#llspacejapanese) (日本語での空白の不足を検出 (デフォルトで無効))
+31. [LLT](#llt) (`^T`を検出 (デフォルトで無効))
+32. [LLTextLint](#lltextlint) (textlintの一部機能)
+33. [LLThousands](#llthousands) (`1,000`などを検出)
+34. [LLTitle](#lltitle) (`\title{}`、`\section{}`などでの疑わしいタイトルケースを検出)
+35. [LLUnRef](#llunref) (参照されていない図表ラベルを検出)
+36. [LLURL](#llurl) (URLの不要な情報を検出)
+37. [LLUserDefined](#lluserdefined) (`latexlint.userDefinedRules`内の正規表現を検出)
 
 必要に応じて、[sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf)も参照してください。
 
@@ -211,6 +212,25 @@ LaTeX Lintは、`.tex`および`.md`ファイル用のLaTeXリンターです。
 
 このパッケージが推奨される理由は、「Sec.」や「Fig.」のようなプレフィックスを自動的に追加でき、参照形式の一貫性を保つことができるからです。
 このルールはプリアンブル（`\begin{document}`より前、存在する場合のみ）の部分では無効です。
+
+### LLDots
+
+`.tex`と`.md`ファイルの`...`を検出します。
+`\dots`は適切なドットを自動的に選択し、スペースも調整するため、`...`の代わりに`\dots`を使用することをお勧めします。
+
+![rules/LLDots](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLDots/LLDots.png)
+
+また、`+...+`（演算子に囲まれた`...`）や`0.333...`（数値の後に続く`...`）も検出します。
+
+（尤も、`\dots`が`...`より優れているという完全に客観的な証拠は恐らく無いので、スタイルの好みの問題かもしれません。しかし、参考文献が示すように、`\dots`は多くの人から推奨されています。）
+
+参考文献:
+
+[some common (la)tex errors](https://www.economics.utoronto.ca/osborne/latex/LTXERR.HTM)
+
+[Is there a difference between \ldots and \textellipsis? (Stack Exchange)](https://tex.stackexchange.com/questions/258591/is-there-a-difference-between-ldots-and-textellipsis)
+
+[16.2.6 Dots, horizontal or vertical](https://latexref.xyz/Dots.html)
 
 ### LLDoubleQuotes
 
@@ -437,7 +457,7 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 ### LLPeriod
 
 LaTeXファイル中の略語ピリオドを検出します。
-このルールは、空白が続く `e.g.`, `i.e.`, `i.i.d.`, `w.r.t.`, `w.l.o.g.`, `resp.` を検出します。
+このルールは、空白が続く `e.g.`, `i.e.`, `a.k.a.`, `i.i.d.`, `w.r.t.`, `w.l.o.g.`, `resp.` を検出します。
 LaTeXはこれらの略語のピリオドを文の終わりとみなすため、余分なスペースが生じることがあります。
 `e.g.\ ` のように `\ ` を使って空白の問題を回避するか、`e.g.,` のようにコンマを追加してください。
 

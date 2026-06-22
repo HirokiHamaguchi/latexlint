@@ -501,6 +501,25 @@ Thus, we don't detect \verb|\ref{line:1}| like this: Line~\ref{line:1}.
 We detect other formats \verb|\ref{myline:2}| like this: Line~\ref{myline:2}.
 You can change these behaviors via settings.
 
+\section{LLDots}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		\verb|\dots|  & $x,\dots,y$   & \tA{ok} \\
+		\verb|\ldots| & $x,\ldots,y$  & \tA{ok} \\
+		\verb|,...,|  & $x,...,y$     & \tD{ng} \\[0.5em]
+		\verb|\dots|  & $x+\dots+y$   & \tA{ok} \\
+		\verb|\cdots| & $x+\cdots+y$  & \tA{ok} \\
+		\verb|,...,|  & $x+...+y$     & \tD{ng} \\[0.5em]
+		\verb|\dots|  & $0.333\dots$  & \tA{ok} \\
+		\verb|\dotso| & $0.333\dotso$ & \tA{ok} \\
+		\verb|...|    & $0.333...$    & \tD{ng} \\
+	\end{tabular}
+\end{table}
+
+Unicode: ……, dots: \dots, textellipsis: \textellipsis, dotso: \dotso
+
 \section{LLDoubleQuotes}
 
 Use ``XXX'' instead of “XXX” or "XXX".
@@ -729,8 +748,8 @@ The period character (.) can be used in abbreviations, not as a sentence-ending 
 	\end{tabular}
 \end{table}
 
-Without a backslash: e.g. blah i.e. blah i.i.d. blah w.r.t. blah w.l.o.g. blah resp. blah etc.\\
-\phantom{out}With a backslash: e.g.\ blah i.e.\ blah i.i.d.\ blah w.r.t.\ blah w.l.o.g.\ blah resp.\ blah etc.
+Without a backslash: e.g. blah i.e. blah a.k.a. blah i.i.d. blah w.r.t. blah w.l.o.g. blah resp. blah etc.\\
+\phantom{out}With a backslash: e.g.\ blah i.e.\ blah a.k.a.\ blah i.i.d.\ blah w.r.t.\ blah w.l.o.g.\ blah resp.\ blah etc.
 
 \section{LLRefEq}
 

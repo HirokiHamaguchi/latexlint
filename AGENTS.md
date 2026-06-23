@@ -1,4 +1,4 @@
-# latexlint: Copilot Instructions
+# latexlint: AGENTS.md
 
 ## 概要
 

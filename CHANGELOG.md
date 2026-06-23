@@ -2,8 +2,12 @@
 
 All notable changes to the "latexlint" extension will be documented in this file.
 
-## 1.7.17 - 2026-5-??
+## 1.8.0 - 2026-6-23
 
+- fix bug of LLBig
+- fix readme typos
+- add `LLDots` to detect `...` in LaTeX and Markdown files.
+- Refactor LLSharp section for improved clarity
 - Improve `LLPeriod`.
 - Add `LLOperator` to detect invalid operator usage in LaTeX and Markdown files.
 

@@ -1,59 +1,10 @@
-[CODE] LLBig (43)
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 178)
-  error: \otimes_
-  message: Consider using \bigotimes for subscripts and superscripts.
-   177: \begin{equation}
->  178: 	\what{M}_{k}:=\mrm{Ind}_{\what{\mfrak{p}}}^{\what{\mfrak{g}}}M_{k}=U(\what{\mfrak{g}})\otimes_{U(\what{\mfrak{p}})}M_{k}.
-   179: \end{equation}
-
-- file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 180)
-  error: \otimes_
-  message: Consider using \bigotimes for subscripts and superscripts.
-   179: \end{equation}
->  180: By the Poincar\'{e}--Birkhoff--Witt theorem, it is isomorphic to $U(\mfrak{g}\otimes t^{-1}\mbb{C}[t^{-1}])\otimes_{\mbb{C}}M_{k}$ as a vector space.
-   181: For a finite-dimensional irreducible representation $L(\Lambda)$ of $\mfrak{g}$, $\what{L(\Lambda)}_{k}$, called a Weyl module,
-
+[CODE] LLBig (33)
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 220)
   error: \otimes_
   message: Consider using \bigotimes for subscripts and superscripts.
    219: on which $C$ and $L_{0}$ act as multiplication by $c$ and $h$, respectively.
 >  220: The highest weight Verma module $M(c,h)$ of highest weight $(c,h)$ is defined by induction $M(c,h)=U(\mrm{Vir})\otimes_{U(\mrm{Vir}_{\ge 0})}\mbb{C}_{(c,h)}$,
    221: which is isomorphic to $U(\mrm{Vir}_{<0})\otimes \mbb{C}_{(c,h)}$ as a vector space or a $\mrm{Vir}_{<0}$-module.
-
-- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 603)
-  error: \otimes_
-  message: Consider using \bigotimes for subscripts and superscripts.
-   602: \begin{equation}
->  603: 	\what{M}_{k}=\mrm{Ind}_{\mfrak{g}\otimes\mbb{C}[\zeta]\oplus\mbb{C}K}^{\what{\mfrak{g}}}M=U(\what{\mfrak{g}})\otimes_{U(\mfrak{g}\otimes\mbb{C}[\zeta]\oplus\mbb{C}K)}M.
-   604: \end{equation}
-
-- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 606)
-  error: \otimes_
-  message: Consider using \bigotimes for subscripts and superscripts.
-   605: Here {{the}} introduced complex number $k$ is called the level of the representation.
->  606: By the Poincar\'{e}-Birkhoff-Witt theorem, $\what{M}_{k}$ is isomorphic to $U(\mfrak{g}\otimes \zeta^{-1}\mbb{C}[\zeta^{-1}])\otimes_{\mbb{C}}M$ as a vector space
-   607: or a $U(\mfrak{g}\otimes \zeta^{-1}\mbb{C}[\zeta^{-1}])$-module.
-
-- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1054)
-  error: \otimes_
-  message: Consider using \bigotimes for subscripts and superscripts.
-  1053: \begin{equation}
-> 1054: 	V_{Q+\Lambda}= \bigoplus_{\beta\in Q}L_{\mbb{C}\otimes_{\mbb{Z}}Q}(0,1)\otimes e^{\beta+\Lambda}.
-  1055: \end{equation}
-
-- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1056)
-  error: \otimes_
-  message: Consider using \bigotimes for subscripts and superscripts.
-  1055: \end{equation}
-> 1056: Here $L_{\mbb{C}\otimes_{\mbb{Z}}Q}(0,1)$ is the vacuum Fock space introduced in Sect.\ref{sect:rep_aff_alg}.
-  1057: Let the top space of $L_{\mfrak{sl}_{2}}(\Lambda,1)$ be realized as  $L(\Lambda)=\mbb{C}v_{0}\oplus\mbb{C}v_{1}$ so that $Ev_{0}=0$.
-
-- file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 1753)
-  error: \otimes_
-  message: Consider using \bigotimes for subscripts and superscripts.
-  1752: 
-> 1753: We set $\mfrak{h}=\mbb{C}\otimes_{\mbb{Z}}L$ and extend the symmetric $\mbb{Z}$-bilinear form $(\cdot|\cdot)$ on $L$
-  1754: to a symmetric $\mbb{C}$-bilinear form on $\mfrak{h}$.
 
 - file: sample\arxiv_sources\1809.03940v3\DPBpaper.tex (line 744)
   error: \cap_
@@ -229,27 +180,6 @@
   2572: The subtle difference lies in the fact that if 
 > 2573: $X \in \makeset{\cup_{i<\ell} T_i}$, the evaluation map 
   2574: for $X$ in that code must also prove that 
-
-- file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 283)
-  error: \cup_
-  message: Consider using \bigcup for subscripts and superscripts.
-   282: \section{A Novel Floer Homology from Boundary Vafa-Witten Theory}\label{vwsqm}
->  283: In this section, we will show how we can physically derive a novel Floer homology by considering boundary VW theory on $M_4 = M_3 \times \mathbb{R}^+$ to physically derive a VW Floer homology assigned to $M_3$.\footnote{To be precise, VW theory is still being defined on an $M_4$ with no boundary. However, to make contact with Floer theory, we will need to examine a hyper-slice of $M_4$, which we can topologically regard as $M_3 \times \mathbb{R}^- \cup_{M_3} M_3 \times \mathbb{R}^+$. 
-   284: %We have exploited the topological invariance of the theory to formally bring the $-\infty$ end of $\mathbb{R}$ to zero, 
-
-- file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 382)
-  error: \cup_
-  message: Consider using \bigcup for subscripts and superscripts.
-   381: In this section, we continue with a Heegaard split of $M_3$ into $M'_3$ and $M''_3$ along a Riemann surface $C$, as shown in Fig.~\ref{fig:heegaardsplit} (left), allowing us to relate Vafa-Witten Floer homology obtained in the previous section to Lagrangian Floer homology, in what is a novel Vafa-Witten version of the Atiyah-Floer correspondence~\cite{A81} based on instantons. In doing so, we would be able to physically prove and generalize a conjecture by mathematicians Abouzaid-Manolescu about the hypercohomology of a perverse sheaf of vanishing cycles in the moduli space of irreducible flat $SL(2, \mathbb{C})$-connections on $M_3$.  
->  382:  We can thus write $M_4=\big(\mathbb{R}^+ \times I'\times C\big) \cup_{C} \big(\mathbb{R}^+ \times I''\times C\big)$, where $M'_3=I'\times C$ and $M''_3 = I''\times C$. This is illustrated in Fig.~\ref{fig:heegaardsplit} (right), where taking $C \to 0$, we indeed have $\mathbb{R}^+ \times I'$ and $\mathbb{R}^+ \times I''$.
-   383:  \begin{figure}
-
-- file: sample\arxiv_sources\2305.15948v3\String_Math_2022_Proc__Tan_.tex (line 450)
-  error: \cup_
-  message: Consider using \bigcup for subscripts and superscripts.
-   449: A hypercohomology $\text{HP}^*(M_3)$ was constructed by Abouzaid-Manolescu in \cite{AM20}, where it was conjectured to be isomorphic to instanton Floer homology assigned to $M_3$ for the complex gauge group $SL(2,\mathbb{C})$.  
->  450: Its construction  was via a Heegaard split of $M_3=M'_3 \cup_{C}M''_3$ along $C$ of genus $g$, and the intersection of the two associated Lagrangians in the moduli space $X_{\text{irr}}(C)$  of irreducible flat $SL(2, \mathbb{C})$-connections on $C$ (that represent solutions extendable to $M'_3$ and $M''_3$, respectively), to which one can associate a perverse sheaf of vanishing cycles. $\text{HP}^*(M_3)$ is then the hypercohomology of this perverse sheaf of vanishing cycles in $X_{\text{irr}}(M_3)$, where it is an invariant of $M_3$ independent of the Heegaard split. 
-   451: 
 
 - file: sample\arxiv_sources\2604.02116v1\mainV2.tex (line 95)
   error: \oplus_

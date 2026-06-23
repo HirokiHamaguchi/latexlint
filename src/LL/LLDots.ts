@@ -7,6 +7,7 @@ const PATTERNS = [
     /\W[ \t]*\.[ \t]*\.[ \t]*\.[ \t]*\W/g,
     /[0-9]\.?[0-9]\.[ \t]*\.[ \t]*\./g,
 ];
+const DOTS_PATTERN = /\.[ \t]*\.[ \t]*\./;
 
 export default function LLDots(doc: vscode.TextDocument, txt: LLText): vscode.Diagnostic[] {
     const ranges: vscode.Range[] = [];
@@ -14,10 +15,10 @@ export default function LLDots(doc: vscode.TextDocument, txt: LLText): vscode.Di
     for (const pattern of PATTERNS)
         for (const match of txt.text.matchAll(pattern)) {
             if (!txt.isValid(match.index)) continue;
-            const dotsIndex = match[0].search(/\.[ \t]*\.[ \t]*\./);
-            const dots = match[0].slice(dotsIndex).match(/^\.[ \t]*\.[ \t]*\./);
-            console.assert(dotsIndex >= 0 && dots !== null);
+            const dots = DOTS_PATTERN.exec(match[0]);
+            console.assert(dots !== null);
 
+            const dotsIndex = dots!.index;
             const startPos = doc.positionAt(match.index + dotsIndex);
             const endPos = doc.positionAt(match.index + dotsIndex + dots![0].length);
             const range = new vscode.Range(startPos, endPos);

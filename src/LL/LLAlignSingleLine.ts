@@ -11,7 +11,7 @@ export default function LLAlignSingleLine(
   const message = messages[code];
   const ranges = [];
   for (const [s, t] of txt.alignLikeEnvs)
-    if (!/\\\\/.test(txt.text.slice(s, t))) {
+    if (!txt.text.slice(s, t).includes("\\\\")) {
       const startPos = doc.positionAt(s);
       console.assert(txt.text.slice(s, s + 7) === "\\begin{");
       let endPosIdx = s + 7;

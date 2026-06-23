@@ -4,13 +4,15 @@ import { messages } from '../util/constants';
 import match2range from '../util/match2range';
 import ranges2diagnostics from '../util/ranges2diagnostics';
 
+const ALIGN_OPERATOR_BEFORE_AMPERSAND_PATTERN = /(=|<|>|\\neq|\\leq|\\geq|\\le|\\ge|\\succ|\\prec|\\succeq|\\preceq|\\approx|\\asymp|\\iff|\\implies|\\impliedby)\s*&/g;
+
 export default function LLAlignAnd(doc: vscode.TextDocument, txt: LLText): vscode.Diagnostic[] {
     const code = 'LLAlignAnd';
     const message = messages[code];
     const replacedMessages = [];
     const ranges = [];
     for (const [s, t] of txt.alignLikeEnvs) {
-        const match = txt.text.slice(s, t).matchAll(/(=|<|>|\\neq|\\leq|\\geq|\\le|\\ge|\\succ|\\prec|\\succeq|\\preceq|\\approx|\\asymp|\\iff|\\implies|\\impliedby)\s*&/g);
+        const match = txt.text.slice(s, t).matchAll(ALIGN_OPERATOR_BEFORE_AMPERSAND_PATTERN);
         for (const m of match) {
             const range = match2range(doc, m, s);
             if (!txt.isValid(doc.offsetAt(range.start))) continue;

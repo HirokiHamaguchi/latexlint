@@ -12,6 +12,7 @@ import ranges2diagnostics from "../util/ranges2diagnostics";
 
 const bibliographyPackagePattern = /\\usepackage(?:\[[^\]]*\])?\{(?:cite|biblatex)\}/;
 
+const bibtexPattern = /\\bibliography\{/g;
 const stylePattern = /\\bibliographystyle\{(plain|unsrt|abbrv|plainnat|unsrtnat|abbrvnat)\}/g;
 
 const natbibPattern = /\\usepackage(\[[^\]]*\])?\{natbib\}/g;
@@ -28,11 +29,10 @@ export default function LLSortedCites(
     return [];
 
   // Find the first \bibliography{...}
-  const bibtexMatches = [...txt.text.matchAll(/\\bibliography\{/g)];
   let firstMatch: RegExpMatchArray | undefined;
-  for (const match of bibtexMatches) {
+  for (const match of txt.text.matchAll(bibtexPattern)) {
     const idx = match.index;
-    if (idx !== null && txt.isValid(idx)) {
+    if (idx !== undefined && txt.isValid(idx)) {
       firstMatch = match;
       break;
     }
@@ -79,10 +79,9 @@ export default function LLSortedCites(
   for (const match of txt.text.matchAll(citePattern)) {
     const openBraceIndex = (match.index ?? -1) + match[0].length - 1;
     if (openBraceIndex < 0) continue;
-    let closeBraceIndex = openBraceIndex;
-    while (closeBraceIndex < txt.text.length && txt.text[closeBraceIndex] !== "}") closeBraceIndex++;
-    const content = txt.text.slice(openBraceIndex, closeBraceIndex);
-    if (content.includes(",")) {
+    const closeBraceIndex = txt.text.indexOf("}", openBraceIndex);
+    const commaIndex = txt.text.indexOf(",", openBraceIndex);
+    if (commaIndex !== -1 && (closeBraceIndex === -1 || commaIndex < closeBraceIndex)) {
       hasCommaInAnyCiteArgument = true;
       break;
     }

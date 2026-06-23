@@ -4,7 +4,7 @@
 
 ## Abstract
 
-LaTex Lint is a LaTeX Linter for `.tex` and `.md` files.
+LaTeX Lint is a linter for `.tex` and `.md` files.
 
 [VS Code Extension Version](https://marketplace.visualstudio.com/items?itemName=hari64boli64.latexlint) is available.
 
@@ -16,9 +16,9 @@ LaTex Lint is a LaTeX Linter for `.tex` and `.md` files.
 
 ## Rules
 
-Here is the list of rules we detect.
+The detected rules are listed below.
 
-**We highly recommend selecting the rules you want to detect based on your preference and writing style.** Please refer to [LaTeX Lint: Choose Detection Rules](#latex-lint-choose-detection-rules) for how to select rules.
+**We strongly recommend enabling only the rules that match your preferences and writing style.** See [LaTeX Lint: Choose Detection Rules](#latex-lint-choose-detection-rules) for details.
 
 <!-- AUTO_GENERATED_LIST -->
 
@@ -31,11 +31,11 @@ Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint
 To disable a rule, add `% LLDisable` at the beginning of the line for LaTeX or `<!-- LLDisable -->` for Markdown.
 
 ```tex
-Some error contained line. % LLDisable
+Line containing an error. % LLDisable
 ```
 
 ```md
-Some error contained line. <!-- LLDisable -->
+Line containing an error. <!-- LLDisable -->
 ```
 
 To toggle the entire rule on or off, use [LaTeX Lint: Choose Detection Rules](#latex-lint-choose-detection-rules).
@@ -48,7 +48,7 @@ You can also use the following features in VS Code. These commands are available
 
 ### LaTeX Lint: Add Custom Detection Rule
 
-Add your own rule to detect.
+Add a custom detection rule.
 For example, we can detect `f^a` by the following steps.
 
 #### 1. Select the string you want to detect (optional)
@@ -57,14 +57,14 @@ For example, we can detect `f^a` by the following steps.
 
 #### 2. Run the command (Add Custom Detection Rule)
 
-Run the commands by clicking the icon or opening the command palette (`Ctrl`+`Shift`+`P`) and type `LaTeX Lint: Add Custom Detection Rule`.
+Run the command by clicking the icon or by opening the command palette (`Ctrl`+`Shift`+`P`) and typing `LaTeX Lint: Add Custom Detection Rule`.
 
 ![addRule2](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/addRule2.png)
 
 #### 3. Follow the instructions
 
 If you choose `string`, we detect the input itself.
-If you choose `Regex`, we detect the pattern using Regex.
+If you choose `Regex`, we detect the pattern using a regular expression.
 
 Then, you can define your own rule.
 
@@ -84,7 +84,7 @@ Rename by pressing `F2` on the `\begin{name}`, `\end{name}` or `\label{name}`.
 
 Jump to the corresponding `\label{xxx}` definition by pressing `F12` on `\ref{xxx}`, `\cref{xxx}`, or `\Cref{xxx}`.
 
-This feature searches for the matching `\label{xxx}` in the current file and jumps to the first non-commented occurrence
+This feature searches for the matching `\label{xxx}` in the current file and jumps to the first non-commented occurrence.
 
 ### LaTeX Lint: Query Wolfram Alpha
 
@@ -96,13 +96,13 @@ Query Wolfram Alpha to solve the equation.
 
 #### 2. Run the command (Query Wolfram Alpha)
 
-Run the commands by clicking the icon or opening the command palette (`Ctrl`+`Shift`+`P`) and type `LaTeX Lint: Query Wolfram Alpha`.
+Run the command by clicking the icon or by opening the command palette (`Ctrl`+`Shift`+`P`) and typing `LaTeX Lint: Query Wolfram Alpha`.
 
 ![askWolframAlpha2](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/askWolframAlpha2.png)
 
 #### 3. Check the Wolfram Alpha page
 
-You can see the result on the Wolfram Alpha page. We remove some unnecessary commands when sending the equation.
+You can see the result on the Wolfram Alpha page. Some unnecessary commands are removed before the equation is sent.
 
 ![askWolframAlpha3](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/askWolframAlpha3.png)
 
@@ -112,7 +112,7 @@ As stated in the [Rules](#rules), false positives and false negatives may occur.
 
 When writing papers, please ensure you follow the style specified by the academic society or publisher.
 
-We hope our extension would be helpful for your academic writing.
+We hope this extension will be helpful for your academic writing.
 
 ## License
 

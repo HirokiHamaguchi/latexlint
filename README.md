@@ -5,7 +5,7 @@
 
 ## Abstract
 
-LaTex Lint is a LaTeX Linter for `.tex` and `.md` files.
+LaTeX Lint is a linter for `.tex` and `.md` files.
 
 [VS Code Extension Version](https://marketplace.visualstudio.com/items?itemName=hari64boli64.latexlint) is available.
 
@@ -17,9 +17,9 @@ LaTex Lint is a LaTeX Linter for `.tex` and `.md` files.
 
 ## Rules
 
-Here is the list of rules we detect.
+The detected rules are listed below.
 
-**We highly recommend selecting the rules you want to detect based on your preference and writing style.** Please refer to [LaTeX Lint: Choose Detection Rules](#latex-lint-choose-detection-rules) for how to select rules.
+**We strongly recommend enabling only the rules that match your preferences and writing style.** See [LaTeX Lint: Choose Detection Rules](#latex-lint-choose-detection-rules) for details.
 
 1. [LLAlignAnd](#llalignand) (detect `=&`, `\leq&`, `\geq&`, etc.)
 2. [LLAlignEnd](#llalignend) (detect `align` environment ends with `\\`)
@@ -40,12 +40,12 @@ Here is the list of rules we detect.
 17. [LLFootnote](#llfootnote) (detect space before `\footnote`)
 18. [LLHeading](#llheading) (detect heading level jumps)
 19. [LLLlGg](#llllgg) (detect `<<` and `>>`)
-20. [LLMathPunctuation](#llmathpunctuation) (detect wrong punctuations in math environments)
+20. [LLMathPunctuation](#llmathpunctuation) (detect incorrect punctuation in math environments)
 21. [LLNonASCII](#llnonascii) (detect fullwidth ASCII characters)
 22. [LLNonstandard](#llnonstandard) (detect nonstandard mathematical notations)
 23. [LLOperator](#lloperator) (detect operators with incorrect spacing)
 24. [LLPeriod](#llperiod) (detect abbreviation periods in LaTeX)
-25. [LLRefEq](#llrefeq) (detect `\ref{eq:`)
+25. [LLRefEq](#llrefeq) (detect `(\ref{eq:`)
 26. [LLSharp](#llsharp) (detect `\sharp` likely to be a misuse of `\#`)
 27. [LLSI](#llsi) (detect `KB`, `MB`, `GB`, etc. without `\SI`)
 28. [LLSortedCites](#llsortedcites) (detect unsorted cites)
@@ -88,7 +88,7 @@ Single-line equations are recommended to use the `equation` environment.
 
 ![rules/LLAlignSingleLine](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLAlignSingleLine/LLAlignSingleLine.png)
 
-The spacing of the `align` environment is different from the `equation` environment with only one equation. [Official documentation of `amsmath` package](https://ctan.org/pkg/amsmath) suggests using the `equation` environment for only one equation.
+The spacing of the `align` environment is different from the `equation` environment with only one equation. [Official documentation of `amsmath` package](https://ctan.org/pkg/amsmath) assumes the use of the equation environment for a single equation.
 
 To rewrite `\begin{align} ... \end{align}` to `\begin{equation} ... \end{equation}`, you can rename the command by [LaTeX Lint: Rename Command or Label](#latex-lint-rename-command-or-label).
 
@@ -110,7 +110,7 @@ Examples are as follows:
    * NG: `a $x$` → OK: `an $x$`
    * NG: `an $u$` → OK: `a $u$`
 
-2. abbreviations:
+2. Abbreviations:
    * NG: `a EM` → OK: `an EM` (Expectation–Maximization)
    * NG: `a EVD` → OK: `an EVD` (Eigenvalue Decomposition)
    * NG: `a FFT` → OK: `an FFT` (Fast Fourier Transform)
@@ -131,7 +131,7 @@ Examples are as follows:
    * NG: `a $\mathbb{R}$-valued` → OK: `an $\mathbb{R}$-valued`
    * NG: `a $L^1$` → OK: `an $L^1$`
    * NG: `a $\ell^2$` → OK: `an $\ell^2$`
-   * NG: `a $\mathcal{L}^\infty$` → OK: `an $\ell^\infty$`
+   * NG: `a $\mathcal{L}^\infty$` → OK: `an $\mathcal{L}^\infty$`
 
 References:
 
@@ -139,7 +139,7 @@ References:
 
 ### LLBig
 
-Detect `\cap_`, `\cup_`, `\odot_`, `\oplus_`, `\otimes_`, `\sqcup_`, `uplus_`, `\vee_`, and `\wedge_` in `.tex` and `.md` files.
+Detect `\cap_`, `\cup_`, `\odot_`, `\oplus_`, `\otimes_`, `\sqcup_`, `\uplus_`, `\vee_`, and `\wedge_` in `.tex` and `.md` files.
 
 You should likely use `\bigcap`, `\bigcup`, `\bigodot`, `\bigoplus`, `\bigotimes`, `\bigsqcup`, `\biguplus`, `\bigvee`, and `\bigwedge` instead.
 
@@ -285,7 +285,7 @@ References:
 
 Detect suspected typographical errors in the sequence of comparison operators in `.tex` and `.md` files.
 
-The target of detection includes `<=`, `\\le =`, `\\leq =`, etc.
+The target of detection includes `<=`, `\le =`, `\leq =`, etc.
 
 ![rules/LLErrCompOps](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLErrCompOps/LLErrCompOps.png)
 
@@ -359,7 +359,7 @@ I like human $<<<$ cat $<<<<<<<$ dog.
 
 ### LLMathPunctuation
 
-Detect wrong punctuations at the end of display math environments in `.tex` and `.md` files.
+Detect incorrect punctuation at the end of display math environments in `.tex` and `.md` files.
 
 ![rules/LLMathPunctuation](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLMathPunctuation/LLMathPunctuation.png)
 
@@ -467,12 +467,12 @@ References:
 
 ### LLRefEq
 
-Detect `\ref{eq:` in `.tex` files.
+Detect `(\ref{eq:` in `.tex` files.
 You should likely use `\eqref{eq:` instead. This command automatically adds parentheses around the reference.
 
 ![rules/LLRefEq](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLRefEq/LLRefEq.png)
 
-What we really want to detect are typos like the following:
+What we want to detect are typos like the following:
 
 ```tex
 From Fig.~\ref{fig:sample} and Eq.~\ref{eq:sample}, we can see that...
@@ -582,7 +582,7 @@ References:
 Detect dubious text in `.tex` and `.md` files.
 
 In web version, we use some of the proofreading rules used in the open source textlint to detect some errors. Currently, only Japanese text is checked.
-In the VSCode version, we mainly use some pattern matching to detect text that is likely to be incorrect.
+In the VS Code version, we mainly use some pattern matching to detect text that is likely to be incorrect.
 
 ![rules/LLTextLint](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLTextLint/LLTextLint.png)
 
@@ -656,15 +656,15 @@ The other query strings are allowed:
 
 You can define your own regular expressions to detect in `.tex` and `.md` files.
 
-Check [LaTex Lint: Add Custom Detection Rule](#latex-lint-add-custom-detection-rule) for more details.
+Check [LaTeX Lint: Add Custom Detection Rule](#latex-lint-add-custom-detection-rule) for more details.
 
 We listed some examples in the following.
 
 #### Example 1: Use mathrm for English letters
 
-When you use English letters in math mode for an explanation, you should use `\mathrm`.
+When you use English letters in math mode for an explanation, consider using `\mathrm`.
 
-For example, if the character `a` is not a variable and represents something like **a**tractive force, `f^a(x)` should be written as `f^{\mathrm{a}}(x)`.
+For example, if the character `a` is not a variable and represents something like **a**tractive force, consider writing `f^a(x)` as `f^{\mathrm{a}}(x)`.
 
 ![rules/LLUserDefined](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLUserDefined/LLUserDefined1.png)
 
@@ -674,7 +674,7 @@ However, it is difficult to detect without context. You can define the rule `f\^
 
 When you use operators, you should use `\DeclareMathOperator`.
 
-For example, if you use `\Box` as a [infimal convolution](https://en.wikipedia.org/wiki/Convex_conjugate#Infimal_convolution), you should define it as an operator.
+For example, if you use `\Box` as an [infimal convolution](https://en.wikipedia.org/wiki/Convex_conjugate#Infimal_convolution), you should define it as an operator.
 
 ```tex
 \DeclareMathOperator{\infConv}{\Box}
@@ -689,11 +689,11 @@ Then, you can use `\infConv` instead of `\Box`, and you can define `\\Box` as a 
 To disable a rule, add `% LLDisable` at the beginning of the line for LaTeX or `<!-- LLDisable -->` for Markdown.
 
 ```tex
-Some error contained line. % LLDisable
+Line containing an error. % LLDisable
 ```
 
 ```md
-Some error contained line. <!-- LLDisable -->
+Line containing an error. <!-- LLDisable -->
 ```
 
 To toggle the entire rule on or off, use [LaTeX Lint: Choose Detection Rules](#latex-lint-choose-detection-rules).
@@ -706,7 +706,7 @@ You can also use the following features in VS Code. These commands are available
 
 ### LaTeX Lint: Add Custom Detection Rule
 
-Add your own rule to detect.
+Add a custom detection rule.
 For example, we can detect `f^a` by the following steps.
 
 #### 1. Select the string you want to detect (optional)
@@ -715,14 +715,14 @@ For example, we can detect `f^a` by the following steps.
 
 #### 2. Run the command (Add Custom Detection Rule)
 
-Run the commands by clicking the icon or opening the command palette (`Ctrl`+`Shift`+`P`) and type `LaTeX Lint: Add Custom Detection Rule`.
+Run the command by clicking the icon or by opening the command palette (`Ctrl`+`Shift`+`P`) and typing `LaTeX Lint: Add Custom Detection Rule`.
 
 ![addRule2](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/addRule2.png)
 
 #### 3. Follow the instructions
 
 If you choose `string`, we detect the input itself.
-If you choose `Regex`, we detect the pattern using Regex.
+If you choose `Regex`, we detect the pattern using a regular expression.
 
 Then, you can define your own rule.
 
@@ -742,7 +742,7 @@ Rename by pressing `F2` on the `\begin{name}`, `\end{name}` or `\label{name}`.
 
 Jump to the corresponding `\label{xxx}` definition by pressing `F12` on `\ref{xxx}`, `\cref{xxx}`, or `\Cref{xxx}`.
 
-This feature searches for the matching `\label{xxx}` in the current file and jumps to the first non-commented occurrence
+This feature searches for the matching `\label{xxx}` in the current file and jumps to the first non-commented occurrence.
 
 ### LaTeX Lint: Query Wolfram Alpha
 
@@ -754,13 +754,13 @@ Query Wolfram Alpha to solve the equation.
 
 #### 2. Run the command (Query Wolfram Alpha)
 
-Run the commands by clicking the icon or opening the command palette (`Ctrl`+`Shift`+`P`) and type `LaTeX Lint: Query Wolfram Alpha`.
+Run the command by clicking the icon or by opening the command palette (`Ctrl`+`Shift`+`P`) and typing `LaTeX Lint: Query Wolfram Alpha`.
 
 ![askWolframAlpha2](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/askWolframAlpha2.png)
 
 #### 3. Check the Wolfram Alpha page
 
-You can see the result on the Wolfram Alpha page. We remove some unnecessary commands when sending the equation.
+You can see the result on the Wolfram Alpha page. Some unnecessary commands are removed before the equation is sent.
 
 ![askWolframAlpha3](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/askWolframAlpha3.png)
 
@@ -770,7 +770,7 @@ As stated in the [Rules](#rules), false positives and false negatives may occur.
 
 When writing papers, please ensure you follow the style specified by the academic society or publisher.
 
-We hope our extension would be helpful for your academic writing.
+We hope this extension will be helpful for your academic writing.
 
 ## License
 

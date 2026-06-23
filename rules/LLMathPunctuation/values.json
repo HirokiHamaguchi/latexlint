@@ -1,5 +1,5 @@
 {
-  "message": "The punctuation or the following sentence\\'s capitalization seems to be wrong.",
+  "message": "The punctuation or the following sentence's capitalization seems to be wrong.",
   "severity": "WARN",
   "lint_test_count": 2
 }

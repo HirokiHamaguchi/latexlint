@@ -1,5 +1,5 @@
 {
-  "message": "Use \"%1\\\\ \" (backslash space) to avoid spacing issues.",
+  "message": "Use \"%1\\ \" (backslash space) to avoid spacing issues.",
   "severity": "WARN",
   "lint_test_count": 8
 }

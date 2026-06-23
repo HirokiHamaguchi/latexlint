@@ -4,7 +4,7 @@
 
 ![rules/LLRefEq](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLRefEq/LLRefEq.png)
 
-実のところ、本当に我々が検出したいのは、例えば次のような打ち間違いです。
+実際に検出したいのは、例えば次のような打ち間違いです。
 
 ```tex
 From Fig.~\ref{fig:sample} and Eq.~\ref{eq:sample}, we can see that...

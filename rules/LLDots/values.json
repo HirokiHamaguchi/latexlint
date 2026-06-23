@@ -1,5 +1,5 @@
 {
-  "message": "Consider using \\dots instead of ... since it adjusts the position of dots and spacing.",
+  "message": "Consider using an ellipsis command such as \\dots, \\ldots, \\cdots, or \\textellipsis instead of ... to avoid spacing issues.",
   "severity": "WARN",
   "lint_test_count": 3
 }

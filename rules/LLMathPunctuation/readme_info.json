@@ -1,5 +1,5 @@
 {
-  "description": "detect wrong punctuations in math environments",
-  "description_ja": "数式環境内の誤った句読点を検出",
+  "description": "detect incorrect punctuation in math environments",
+  "description_ja": "数式環境内の不適切な句読点を検出",
   "references": []
 }

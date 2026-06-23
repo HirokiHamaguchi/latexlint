@@ -2,15 +2,15 @@
 
 You can define your own regular expressions to detect in `.tex` and `.md` files.
 
-Check [LaTex Lint: Add Custom Detection Rule](#latex-lint-add-custom-detection-rule) for more details.
+Check [LaTeX Lint: Add Custom Detection Rule](#latex-lint-add-custom-detection-rule) for more details.
 
 We listed some examples in the following.
 
 #### Example 1: Use mathrm for English letters
 
-When you use English letters in math mode for an explanation, you should use `\mathrm`.
+When you use English letters in math mode for an explanation, consider using `\mathrm`.
 
-For example, if the character `a` is not a variable and represents something like **a**tractive force, `f^a(x)` should be written as `f^{\mathrm{a}}(x)`.
+For example, if the character `a` is not a variable and represents something like **a**tractive force, consider writing `f^a(x)` as `f^{\mathrm{a}}(x)`.
 
 ![rules/LLUserDefined](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLUserDefined/LLUserDefined1.png)
 
@@ -20,7 +20,7 @@ However, it is difficult to detect without context. You can define the rule `f\^
 
 When you use operators, you should use `\DeclareMathOperator`.
 
-For example, if you use `\Box` as a [infimal convolution](https://en.wikipedia.org/wiki/Convex_conjugate#Infimal_convolution), you should define it as an operator.
+For example, if you use `\Box` as an [infimal convolution](https://en.wikipedia.org/wiki/Convex_conjugate#Infimal_convolution), you should define it as an operator.
 
 ```tex
 \DeclareMathOperator{\infConv}{\Box}

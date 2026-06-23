@@ -33,4 +33,4 @@
    * NG: `a $\mathbb{R}$-valued` → OK: `an $\mathbb{R}$-valued`
    * NG: `a $L^1$` → OK: `an $L^1$`
    * NG: `a $\ell^2$` → OK: `an $\ell^2$`
-   * NG: `a $\mathcal{L}^\infty$` → OK: `an $\ell^\infty$`
+   * NG: `a $\mathcal{L}^\infty$` → OK: `an $\mathcal{L}^\infty$`

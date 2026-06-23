@@ -1,4 +1,4 @@
-[CODE] LLPeriod (337)
+[CODE] LLPeriod (339)
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 112)
   error: i.e. 
   message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
@@ -201,6 +201,13 @@
    143: 
 >  144: When finding similar equations, the engine allows constants' values and variables' names to change. \cite{Liska-PhD-Prop}  However, it distinguishes between variables with and without subscripts (e.g. $x_1$ vs $x$), and does not allow them to be interchanged.  For example, the query $x_1 + y_1$ would \emph{not} retrieve $x + y$.  \cite{Liska-PhD-Prop}  This treatment of subscripts can be problematic for physics applications, because subscripts are often used to denote which physical characteristics a variable is attached to (such as $x_i$ for the position at a certain time, or $d_s$ for the distance to Saturn); these subscripts have no mathematical significance, except to distinguish one variable from another.  Another equation characteristic which is allowed to vary is that subexpressions in the query are searched for: for example, the query $a + b^{c+2}$ has the subexpressions $b^{c+2}$ and $c+2$. \cite{Liska-PhD-Prop}  Furthermore, the structure of equations is recently able to be considered in matching formulae: $x + y/z$ would structurally match $a + \sqrt{b}/c$, having the form ``item1 + item2 / item3''.  Finally, the mathematical equivalency of commutativity is accounted for, so that $a + 5$ is considered equal to $5 + a$. \cite{Liska-PhD-Prop}  
    145: 
+
+- file: sample\arxiv_sources\1609.03457v1\extent-abilities.tex (line 150)
+  error: a.k.a. 
+  message: Use "a.k.a.\ " (backslash space) to avoid spacing issues, or a comma "a.k.a.," in American English.
+   149: 
+>  150: To include drastically more math understanding in the engine's procedures, the developers also plan to investigate the inclusion of \emph{Mathematica}-like systems (a.k.a. ``Computer Algebra Systems'') in their mathematics parsing stages. \cite{Liska-PhD-Prop}  Their successful incorporation would transform MIaS into an engine which can translate math - and find matching and similar equations based on that - on par with Wolfram Alpha. This approach has already been partially implemented in an under-development search engine (geared towards physicists), as is discussed in section \ref{sec:5e-descrip}. \cite{Oviedo-Th}
+   151: 
 
 - file: sample\arxiv_sources\1609.03457v1\extent-abilities.tex (line 175)
   error: e.g. 
@@ -1055,6 +1062,13 @@
   1189: combinations where the DIB was too weak or contaminated by stellar features. For cases with multiple Gaussians we were even more 
 > 1190: strict in the stars we selected, excluding those where some circumstance (e.g. kinematic broadening, see above) led to a poor fit.
   1191: Finally, the $\lambda_0$ and FWHM of each fitted Gaussian was averaged among the selected stars in each case to yield the final
+
+- file: sample\arxiv_sources\2604.02111v1\ms.tex (line 1249)
+  error: a.k.a. 
+  message: Use "a.k.a.\ " (backslash space) to avoid spacing issues, or a comma "a.k.a.," in American English.
+  1248: 
+> 1249: \textit{DIBB4884 (a.k.a. the H$\beta$ DIB).} As this DIB is located right next to the (almost always present in early-type stars) 
+  1250: H$\beta$ line, its properties are difficult to determine. We did so by forcing the stellar profile to be symmetric with respect to 
 
 - file: sample\arxiv_sources\2604.02111v1\ms.tex (line 1272)
   error: e.g. 

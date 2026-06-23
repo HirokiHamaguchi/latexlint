@@ -2,15 +2,15 @@
 
 `.tex`と`.md`ファイルで検出する独自の正規表現を定義できます。
 
-詳しくは[LaTex Lint: Add Custom Detection Rule](#latex-lint-add-custom-detection-rule)を参照してください。
+詳しくは[LaTeX Lint: Add Custom Detection Rule](#latex-lint-add-custom-detection-rule)を参照してください。
 
 以下にいくつか例を挙げます。
 
-#### 例1: 英字には\mathrm を使う
+#### 例1: 英字には`\mathrm`を使う
 
-数式中で説明のために英字を使う場合、`\mathrm`を使うべきです。
+数式中で説明のために英字を使う場合、`\mathrm`の使用を検討してください。
 
-例えば文字`a`が変数ではなく**a**ttractive forceのような意味を持つなら、`f^a(x)`は`f^{\mathrm{a}}(x)`と書くべきです。
+例えば文字`a`が変数ではなく**a**ttractive forceのような意味を持つなら、`f^a(x)`は`f^{\mathrm{a}}(x)`と書くことを検討してください。
 
 ![rules/LLUserDefined](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLUserDefined/LLUserDefined1.png)
 

@@ -12,7 +12,7 @@ Examples are as follows:
    * NG: `a $x$` → OK: `an $x$`
    * NG: `an $u$` → OK: `a $u$`
 
-2. abbreviations:
+2. Abbreviations:
    * NG: `a EM` → OK: `an EM` (Expectation–Maximization)
    * NG: `a EVD` → OK: `an EVD` (Eigenvalue Decomposition)
    * NG: `a FFT` → OK: `an FFT` (Fast Fourier Transform)
@@ -33,4 +33,4 @@ Examples are as follows:
    * NG: `a $\mathbb{R}$-valued` → OK: `an $\mathbb{R}$-valued`
    * NG: `a $L^1$` → OK: `an $L^1$`
    * NG: `a $\ell^2$` → OK: `an $\ell^2$`
-   * NG: `a $\mathcal{L}^\infty$` → OK: `an $\ell^\infty$`
+   * NG: `a $\mathcal{L}^\infty$` → OK: `an $\mathcal{L}^\infty$`

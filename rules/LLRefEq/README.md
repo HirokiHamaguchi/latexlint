@@ -1,11 +1,11 @@
 <!-- markdownlint-disable MD041 -->
 
-Detect `\ref{eq:` in `.tex` files.
+Detect `(\ref{eq:` in `.tex` files.
 You should likely use `\eqref{eq:` instead. This command automatically adds parentheses around the reference.
 
 ![rules/LLRefEq](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLRefEq/LLRefEq.png)
 
-What we really want to detect are typos like the following:
+What we want to detect are typos like the following:
 
 ```tex
 From Fig.~\ref{fig:sample} and Eq.~\ref{eq:sample}, we can see that...

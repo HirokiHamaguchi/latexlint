@@ -1,4 +1,4 @@
-Checked 1313 files. Diagnostics: 10459. Files with diagnostics: 699. Codes: 30. Failures: 0.
+Checked 1313 files. Diagnostics: 10784. Files with diagnostics: 700. Codes: 31. Failures: 0.
 Per-code logs:
 - LLAlignAnd.log
 - LLAlignEnd.log
@@ -9,6 +9,7 @@ Per-code logs:
 - LLBracketRound.log
 - LLColonEqq.log
 - LLColonForMapping.log
+- LLDots.log
 - LLDoubleQuotes.log
 - LLENDash.log
 - LLEqnarray.log

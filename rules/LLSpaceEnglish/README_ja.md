@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD041 -->
 
-`.tex`と`.md`ファイルの日本語・英語の文字とインライン数式の間の空白の不足を検出します。\
+`.tex`と`.md`ファイルの英語文字とインライン数式の間の空白不足を検出します。
 
 ![rules/LLSpaceEnglish](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLSpaceEnglish/LLSpaceEnglish.png)
 

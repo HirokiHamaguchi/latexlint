@@ -154,18 +154,21 @@
     {
       "yes": "VS Code",
       "no": [
+        "VSCode",
         "VScode",
-        "VS code",
         "VsCode",
-        "Vs Code",
         "Vscode",
+        "VS code",
+        "Vs Code",
         "Vs code"
       ],
-      "memo": "The correct capitalization is \"VS Code\" with a capital 'V', 'S', and 'C'."
+      "memo": "The correct capitalization is \"VS Code\" with a capital 'V', 'S', and 'C'. There is an space between VS and Code."
     },
     {
       "yes": "LaTeX",
       "no": [
+        "LaTex",
+        "LateX",
         "Latex"
       ],
       "memo": "The correct capitalization is \"LaTeX\" with a capital 'L', 'T', and 'X'."

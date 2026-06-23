@@ -1,203 +1,203 @@
 [CODE] LLOperator (29)
 - file: sample\arxiv_sources\1710.03835v3\sle_wzw_corresp_arxiv_ver3.tex (line 18)
   error: \newcommand{\sgn}{\mathrm{sgn}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
     17: \newcommand{\vc}[1]{\boldsymbol #1}
 >   18: \newcommand{\sgn}{\mathrm{sgn}}
     19: \newcommand{\mfrak}[1]{\mathfrak{#1}}
 
 - file: sample\arxiv_sources\1803.06808v3\SLE_martingale_arXiv.tex (line 16)
   error: \newcommand{\sgn}{\mathrm{sgn}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
     15: \newcommand{\vc}[1]{\boldsymbol #1}
 >   16: \newcommand{\sgn}{\mathrm{sgn}}
     17: \newcommand{\mfrak}[1]{\mathfrak{#1}}
 
 - file: sample\arxiv_sources\2308.07921v1\math_commands.tex (line 489)
   error: \newcommand{\Var}{\mathrm{Var}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    488: \newcommand{\KL}{D_{\mathrm{KL}}}
 >  489: \newcommand{\Var}{\mathrm{Var}}
    490: \newcommand{\standarderror}{\mathrm{SE}}
 
 - file: sample\arxiv_sources\2308.07921v1\math_commands.tex (line 490)
   error: \newcommand{\standarderror}{\mathrm{SE}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    489: \newcommand{\Var}{\mathrm{Var}}
 >  490: \newcommand{\standarderror}{\mathrm{SE}}
    491: \newcommand{\Cov}{\mathrm{Cov}}
 
 - file: sample\arxiv_sources\2308.07921v1\math_commands.tex (line 491)
   error: \newcommand{\Cov}{\mathrm{Cov}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    490: \newcommand{\standarderror}{\mathrm{SE}}
 >  491: \newcommand{\Cov}{\mathrm{Cov}}
    492: % Wolfram Mathworld says $L^2$ is for function spaces and $\ell^2$ is for vectors
 
 - file: sample\arxiv_sources\2407.13690v2\math_commands.tex (line 487)
   error: \newcommand{\Var}{\mathrm{Var}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    486: \newcommand{\KL}{D_{\mathrm{KL}}}
 >  487: \newcommand{\Var}{\mathrm{Var}}
    488: \newcommand{\standarderror}{\mathrm{SE}}
 
 - file: sample\arxiv_sources\2407.13690v2\math_commands.tex (line 488)
   error: \newcommand{\standarderror}{\mathrm{SE}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    487: \newcommand{\Var}{\mathrm{Var}}
 >  488: \newcommand{\standarderror}{\mathrm{SE}}
    489: \newcommand{\Cov}{\mathrm{Cov}}
 
 - file: sample\arxiv_sources\2407.13690v2\math_commands.tex (line 489)
   error: \newcommand{\Cov}{\mathrm{Cov}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    488: \newcommand{\standarderror}{\mathrm{SE}}
 >  489: \newcommand{\Cov}{\mathrm{Cov}}
    490: % Wolfram Mathworld says $L^2$ is for function spaces and $\ell^2$ is
 
 - file: sample\arxiv_sources\2501.04519v1\math_commands.tex (line 489)
   error: \newcommand{\Var}{\mathrm{Var}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    488: \newcommand{\KL}{D_{\mathrm{KL}}}
 >  489: \newcommand{\Var}{\mathrm{Var}}
    490: \newcommand{\standarderror}{\mathrm{SE}}
 
 - file: sample\arxiv_sources\2501.04519v1\math_commands.tex (line 490)
   error: \newcommand{\standarderror}{\mathrm{SE}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    489: \newcommand{\Var}{\mathrm{Var}}
 >  490: \newcommand{\standarderror}{\mathrm{SE}}
    491: \newcommand{\Cov}{\mathrm{Cov}}
 
 - file: sample\arxiv_sources\2501.04519v1\math_commands.tex (line 491)
   error: \newcommand{\Cov}{\mathrm{Cov}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    490: \newcommand{\standarderror}{\mathrm{SE}}
 >  491: \newcommand{\Cov}{\mathrm{Cov}}
    492: % Wolfram Mathworld says $L^2$ is for function spaces and $\ell^2$ is for vectors
 
 - file: sample\arxiv_sources\2604.02064v1\commands.tex (line 61)
   error: \newcommand{\Tr}{\mathrm{Tr}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
     60: \newcommand{\Df}{\mathrm{D}}
 >   61: \newcommand{\Tr}{\mathrm{Tr}}
     62: \newcommand{\Aa}{\mathcal{A}}
 
 - file: sample\arxiv_sources\2604.02064v1\commands.tex (line 150)
   error: \newcommand{\tr}{\mathrm{tr}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    149: \newcommand{\N}{\mathbb{N}}
 >  150: \newcommand{\tr}{\mathrm{tr}}
    151: \newcommand{\Pol}{\mathrm{Pol}}
 
 - file: sample\arxiv_sources\2604.02104v1\main.tex (line 114)
   error: \newcommand{\diver}{\mathrm{div}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    113: 
 >  114: \newcommand{\diver}{\mathrm{div}}
    115: \newcommand{\ric}{\mathrm{Ric}}
 
 - file: sample\arxiv_sources\2604.02104v1\main.tex (line 115)
   error: \newcommand{\ric}{\mathrm{Ric}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    114: \newcommand{\diver}{\mathrm{div}}
 >  115: \newcommand{\ric}{\mathrm{Ric}}
    116: \newcommand{\tr}{\mathrm{tr}}
 
 - file: sample\arxiv_sources\2604.02104v1\main.tex (line 116)
   error: \newcommand{\tr}{\mathrm{tr}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    115: \newcommand{\ric}{\mathrm{Ric}}
 >  116: \newcommand{\tr}{\mathrm{tr}}
    117: \newcommand{\Ric}{\mathfrak{Ric}}
 
 - file: sample\arxiv_sources\2604.02104v1\main.tex (line 176)
   error: \newcommand{\vol}{\mathrm{vol}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    175: \newcommand{\muref}{\mu_{\mathrm{ref}}}
 >  176: \newcommand{\vol}{\mathrm{vol}}
    177: 
 
 - file: sample\arxiv_sources\2604.02117v1\main.tex (line 234)
   error: \newcommand{\op}{\mathrm{op}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    233: 
 >  234: \newcommand{\op}{\mathrm{op}}
    235: \newcommand{\diag}{\mathrm{diag}}
 
 - file: sample\arxiv_sources\2604.02117v1\main.tex (line 235)
   error: \newcommand{\diag}{\mathrm{diag}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    234: \newcommand{\op}{\mathrm{op}}
 >  235: \newcommand{\diag}{\mathrm{diag}}
    236: 
 
 - file: sample\arxiv_sources\2604.02119v1\math_commands.tex (line 489)
   error: \newcommand{\Var}{\mathrm{Var}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    488: \newcommand{\KL}{D_{\mathrm{KL}}}
 >  489: \newcommand{\Var}{\mathrm{Var}}
    490: \newcommand{\standarderror}{\mathrm{SE}}
 
 - file: sample\arxiv_sources\2604.02119v1\math_commands.tex (line 490)
   error: \newcommand{\standarderror}{\mathrm{SE}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    489: \newcommand{\Var}{\mathrm{Var}}
 >  490: \newcommand{\standarderror}{\mathrm{SE}}
    491: \newcommand{\Cov}{\mathrm{Cov}}
 
 - file: sample\arxiv_sources\2604.02119v1\math_commands.tex (line 491)
   error: \newcommand{\Cov}{\mathrm{Cov}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    490: \newcommand{\standarderror}{\mathrm{SE}}
 >  491: \newcommand{\Cov}{\mathrm{Cov}}
    492: % Wolfram Mathworld says $L^2$ is for function spaces and $\ell^2$ is for vectors
 
 - file: sample\arxiv_sources\2604.02285v1\math-commands.tex (line 533)
   error: \newcommand{\sign}{\mathrm{sign}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    532: \newcommand{\adv}{\text{adv}}
 >  533: \newcommand{\sign}{\mathrm{sign}}
    534: \newcommand{\diag}{\mathrm{diag}}
 
 - file: sample\arxiv_sources\2604.02285v1\math-commands.tex (line 534)
   error: \newcommand{\diag}{\mathrm{diag}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    533: \newcommand{\sign}{\mathrm{sign}}
 >  534: \newcommand{\diag}{\mathrm{diag}}
    535: 
 
 - file: sample\arxiv_sources\2604.02285v1\math-commands.tex (line 572)
   error: \newcommand{\prox}{\mathrm{prox}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    571: \DeclareMathOperator{\dist}{dist}
 >  572: \newcommand{\prox}{\mathrm{prox}}
    573: \newcommand{\paren}[1]{\left(#1\right)}
 
 - file: sample\arxiv_sources\2604.02285v1\paper-specific-macros.tex (line 85)
   error: \newcommand{\diam}{\mathrm{Diam}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
     84: \newcommand{\sumactspa}{\sum_{i=1}^n|\calA_i| + |\calB|}
 >   85: \newcommand{\diam}{\mathrm{Diam}}
     86: \newcommand{\parsa}{\frac{\partial}{\partial x_{i,s,a}}}
 
 - file: sample\arxiv_sources\2604.02320v1\preamble.tex (line 529)
   error: \newcommand{\Var}{\mathrm{Var}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    528: \newcommand{\KL}{D_{\mathrm{KL}}}
 >  529: \newcommand{\Var}{\mathrm{Var}}
    530: \newcommand{\standarderror}{\mathrm{SE}}
 
 - file: sample\arxiv_sources\2604.02320v1\preamble.tex (line 530)
   error: \newcommand{\standarderror}{\mathrm{SE}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    529: \newcommand{\Var}{\mathrm{Var}}
 >  530: \newcommand{\standarderror}{\mathrm{SE}}
    531: \newcommand{\Cov}{\mathrm{Cov}}
 
 - file: sample\arxiv_sources\2604.02320v1\preamble.tex (line 531)
   error: \newcommand{\Cov}{\mathrm{Cov}}
-  message: If this is an operator, consider using other commands to avoid a spacing issue.
+  message: For operators, use \operatorname{...} or define a command with \DeclareMathOperator to avoid spacing issues.
    530: \newcommand{\standarderror}{\mathrm{SE}}
 >  531: \newcommand{\Cov}{\mathrm{Cov}}
    532: % Wolfram Mathworld says $L^2$ is for function spaces and $\ell^2$ is for vectors

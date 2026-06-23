@@ -68,7 +68,7 @@ export const messages: Record<LLCode, string> = {
     LLMathPunctuation: "The punctuation or the following sentence's capitalization seems to be wrong.",
     LLNonASCII: "This is a non-ASCII character. Is this intentional?",
     LLNonstandard: "This notation might be nonstandard in formal academic writing. Refer to the link for more details.",
-    LLOperator: "If this is an operator, consider using other commands to avoid a spacing issue.",
+    LLOperator: "For operators, use \\operatorname{...} or define a command with \\DeclareMathOperator to avoid spacing issues.",
     LLPeriod: "Use \"%1\\ \" (backslash space) to avoid spacing issues.",
     LLRefEq: "Consider using \\eqref instead of \\ref for equations.",
     LLSharp: "If this sharp is for a number sign, consider using \\#.",

@@ -457,7 +457,7 @@ References:
 Detect abbreviation periods in `.tex` files.
 This rule checks `e.g.`, `i.e.`, `a.k.a.`, `i.i.d.`, `w.r.t.`, `w.l.o.g.`, and `resp.` when followed by a space.
 LaTeX considers the period in these abbreviations as the end of a sentence, which can lead to extra spacing.
-You should use `\ ` (e.g., `e.g.\ `) to avoid spacing issues, or add a comma (e.g., `e.g.,`).
+You should use `\ ` (e.g., `e.g.\ `) to avoid spacing issues, or add a comma (e.g., `e.g.,`). <!-- markdownlint-disable-line MD038 -->
 
 ![rules/LLPeriod](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLPeriod/LLPeriod.png)
 

@@ -10,6 +10,8 @@ const PATTERNS = [
 const DOTS_PATTERN = /\.[ \t]*\.[ \t]*\./;
 
 export default function LLDots(doc: vscode.TextDocument, txt: LLText): vscode.Diagnostic[] {
+    if (doc.languageId !== "latex") return [];
+
     const ranges: vscode.Range[] = [];
 
     for (const pattern of PATTERNS)

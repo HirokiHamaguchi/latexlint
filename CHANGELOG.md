@@ -2,6 +2,10 @@
 
 All notable changes to the "latexlint" extension will be documented in this file.
 
+## 1.8.1 - 2026-7-6
+
+- Fix `LLDots` to skip Markdown files.
+
 ## 1.8.0 - 2026-6-23
 
 - fix bug of LLBig

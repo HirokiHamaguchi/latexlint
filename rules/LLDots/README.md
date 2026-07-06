@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD041 -->
 
-Detect `...` in `.tex` and `.md` files.
+Detect `...` in `.tex` files.
 Since `\dots` automatically selects the appropriate dots and adjusts the spacing, it is recommended to use `\dots` instead of `...`.
 
 ![rules/LLDots](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLDots/LLDots.png)

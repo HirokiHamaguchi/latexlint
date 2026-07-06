@@ -215,7 +215,7 @@ LaTeX Lintは、`.tex`および`.md`ファイル用のLaTeXリンターです。
 
 ### LLDots
 
-`.tex`と`.md`ファイルの`...`を検出します。
+`.tex`ファイルの`...`を検出します。
 `\dots`は適切なドットを自動的に選択し、スペースも調整するため、`...`の代わりに`\dots`を使用することをお勧めします。
 
 ![rules/LLDots](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLDots/LLDots.png)

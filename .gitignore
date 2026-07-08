@@ -20,4 +20,3 @@ sample/arxiv_sources/**
 
 .env
 azurePersonalAccessToken.txt
-secret

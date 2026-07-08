@@ -22,10 +22,11 @@ def load_package_json_config():
 
 
 def load_web_config() -> Dict[str, Any]:
-    """Load configuration from web/src/assets/auto_generated_config.json."""
+    """Load configuration from latexpages/src/assets/auto_generated_config.json."""
     config_path = (
         Path(__file__).parent.parent
-        / "web"
+        .parent
+        / "latexpages"
         / "src"
         / "assets"
         / "auto_generated_config.json"
@@ -36,7 +37,7 @@ def load_web_config() -> Dict[str, Any]:
 
 
 def test_web_config():
-    """Test consistency between package.json and web/src/assets/auto_generated_config.json."""
+    """Test consistency between package.json and latexpages web config."""
     package_config = load_package_json_config()
     web_config = load_web_config()
 

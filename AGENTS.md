@@ -3,7 +3,7 @@
 ## 概要
 
 - このレポジトリは、LaTeXもしくはMarkdown向けのLinterであるVSCode 拡張機能「latexlint」の開発を行っている。
-- 殆どのフォルダはVSCode向けの実装である。`web/`にはwebサイトのUIに関する実装があり、lint処理はsrcなどから共通のコードを参照している。
+- 殆どのフォルダはVSCode向けの実装である。WebサイトのUIは隣接する `latexpages/` に移され、lint処理はこのレポジトリの `src` を参照している。
 
 ## 変更対象の原則
 

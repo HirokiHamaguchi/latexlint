@@ -6,7 +6,9 @@ def make_web_svg():
     root_dir = Path(__file__).parent.parent
     for mode in ["Dark", "Light"]:
         source_file = root_dir / "images" / f"lintIcon{mode}.svg"
-        dest_file = root_dir / "web" / "public" / f"lintIcon{mode}_copied.svg"
+        dest_file = (
+            root_dir.parent / "latexpages" / "public" / f"lintIcon{mode}_copied.svg"
+        )
 
         try:
             dest_file.parent.mkdir(parents=True, exist_ok=True)

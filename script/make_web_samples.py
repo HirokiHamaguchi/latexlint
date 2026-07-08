@@ -3,12 +3,12 @@ from pathlib import Path
 
 
 def make_web_samples():
-    """Copy sample PDF files to web/public for web site to use."""
+    """Copy sample PDF files to latexpages/public for web site to use."""
     root_dir = Path(__file__).parent.parent
 
-    # Copy lint.pdf from sample/ to web/public/
+    # Copy lint.pdf from sample/ to latexpages/public/
     source_pdf = root_dir / "sample" / "lint.pdf"
-    dest_pdf = root_dir / "web" / "public" / "lint.pdf"
+    dest_pdf = root_dir.parent / "latexpages" / "public" / "lint.pdf"
 
     try:
         dest_pdf.parent.mkdir(parents=True, exist_ok=True)

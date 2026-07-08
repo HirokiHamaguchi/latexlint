@@ -34,7 +34,7 @@ def make_package_json():
         json.dump(package_data, f, indent=2, ensure_ascii=False)
         f.write("\n")
 
-    # Update web/src/assets/auto_generated_config.json
+    # Update latexpages/src/assets/auto_generated_config.json
     web_config_data = package_data["contributes"]["configuration"]["properties"]
     # replace "latexlint." prefix to ""
     web_config_data = {
@@ -44,7 +44,8 @@ def make_package_json():
     web_config_data["disabledRules"]["default"] = []
     web_config_path = (
         Path(__file__).parent.parent
-        / "web"
+        .parent
+        / "latexpages"
         / "src"
         / "assets"
         / "auto_generated_config.json"

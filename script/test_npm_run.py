@@ -26,8 +26,6 @@ def run_cmd(cmd, cwd, name=None):
 def test_npm_run():
     tasks = [
         (["npm.cmd", "run", "test"], "", "root: npm run test"),
-        (["npm.cmd", "run", "test"], "web", "web: npm run test"),
-        (["npm.cmd", "run", "build"], "web", "web: npm run build"),
     ]
 
     failed = []

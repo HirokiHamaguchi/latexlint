@@ -32,7 +32,7 @@ function applyDefaultConfig() {
 
 function bundleAndLoad(repoRoot) {
     const entryTs = path.join(repoRoot, 'src', 'util', 'enumerateDiagnostics.ts');
-    const mockTs = path.join(repoRoot, 'web', 'src', 'utils', 'vscode-mock.ts');
+    const mockTs = path.join(repoRoot, 'script', 'vscode-mock.ts');
 
     const entryTmp = path.join(
         os.tmpdir(),

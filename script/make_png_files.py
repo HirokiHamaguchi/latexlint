@@ -1,6 +1,4 @@
 import glob
-import os
-from pathlib import Path
 
 import pymupdf
 
@@ -18,17 +16,6 @@ def make_png_files():
     for pdf_file in pdf_files:
         print(f"Converting {pdf_file} to PNG...")
         pdf2png(pdf_file)
-
-    latexpages_dir = Path(__file__).parent.parent.parent / "latexpages"
-    web_sample_files = glob.glob(str(latexpages_dir / "sample" / "**" / "*.pdf"), recursive=True)
-    for pdf_file in web_sample_files:
-        print(f"Converting {pdf_file} to PNG...")
-        pdf2png(pdf_file)
-        png_file = pdf_file.replace(".pdf", ".png")
-        assert os.path.exists(png_file)
-        dest_file = str(latexpages_dir / "public" / Path(png_file).relative_to(latexpages_dir / "sample"))
-        os.makedirs(os.path.dirname(dest_file), exist_ok=True)
-        os.replace(png_file, dest_file)
 
 
 if __name__ == "__main__":

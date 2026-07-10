@@ -124,9 +124,9 @@ This project consists of multiple components with different licenses:
 
    (The library [to-title-case](https://github.com/gouch/to-title-case/tree/master) is also under MIT License.)
 
-2. Web Component
+2. Web Component (latexpages repository)
    Licensed under the Apache License 2.0.
-   See the webpage repository for details.
+   See the latexpages repository for details.
 
    The web component includes code from:
    * textlint (MIT License)

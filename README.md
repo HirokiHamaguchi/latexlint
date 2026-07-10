@@ -776,15 +776,15 @@ We hope this extension will be helpful for your academic writing.
 
 This project consists of multiple components with different licenses:
 
-1. Main Extension (Root Directory)
+1. Main Extension
    Licensed under the [MIT License](LICENSE).
    See LICENSE file for details.
 
    (The library [to-title-case](https://github.com/gouch/to-title-case/tree/master) is also under MIT License.)
 
-2. Web Component (web/ directory)
-   Licensed under the [Apache License 2.0](web/LICENSE).
-   See web/LICENSE file for details.
+2. Web Component (latexpages repository)
+   Licensed under the Apache License 2.0.
+   See the latexpages repository for details.
 
    The web component includes code from:
    * textlint (MIT License)

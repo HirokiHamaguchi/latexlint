@@ -13,7 +13,7 @@ LaTeX Lintは、`.tex`および`.md`ファイル用のLaTeXリンターです。
 
 ![abstract](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/abstract.png)
 
-[Web版](https://hirokihamaguchi.github.io/latexlint/)も利用可能です。
+[Web版](https://hirokihamaguchi.github.io/latexpages/latexlint/)も利用可能です。
 
 ![abstract_web](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/abstract_web.png)
 

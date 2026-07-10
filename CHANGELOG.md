@@ -2,7 +2,11 @@
 
 All notable changes to the "latexlint" extension will be documented in this file.
 
-## 1.8.1 - 2026-7-6
+## 1.9.1 - 2026-7-10
+
+- Move web assets to `latexpages` repository.
+
+## 1.9.0 - 2026-7-6
 
 - Fix `LLDots` to skip Markdown files.
 

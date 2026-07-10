@@ -15,7 +15,7 @@ def make_screen_shot() -> None:
 
     try:
         driver.set_window_size(1300, 700)
-        driver.get("https://hirokihamaguchi.github.io/latexlint/")
+        driver.get("https://hirokihamaguchi.github.io/latexpages/latexlint/")
         driver.execute_script("""
             const style = document.createElement('style');
             style.innerHTML = `

@@ -11,7 +11,7 @@ LaTeX Lint is a linter for `.tex` and `.md` files.
 
 ![abstract](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/abstract.png)
 
-[Web Version](https://hirokihamaguchi.github.io/latexlint/) is also available.
+[Web Version](https://hirokihamaguchi.github.io/latexpages/latexlint/) is also available.
 
 ![abstract_web](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/abstract_web.png)
 

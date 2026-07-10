@@ -23,28 +23,9 @@ jobs:
 
       - name: Build redirect page
         run: |
-          mkdir -p redirect-site
-          cat > redirect-site/index.html <<'EOF'
-          <!doctype html>
-          <html lang="en">
-            <head>
-              <meta charset="utf-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1">
-              <meta http-equiv="refresh" content="0; url=https://hirokihamaguchi.github.io/latexpages/latexlint/">
-              <title>LaTeX Lint moved</title>
-              <script>
-                window.location.replace("https://hirokihamaguchi.github.io/latexpages/latexlint/" + window.location.hash);
-              </script>
-            </head>
-            <body>
-              <p>
-                LaTeX Lint has moved to
-                <a href="https://hirokihamaguchi.github.io/latexpages/latexlint/">https://hirokihamaguchi.github.io/latexpages/latexlint/</a>.
-              </p>
-            </body>
-          </html>
-          EOF
-          cp redirect-site/index.html redirect-site/404.html
+          mkdir -p redirect-dist
+          cp redirect-site/index.html redirect-dist/index.html
+          cp redirect-site/index.html redirect-dist/404.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -52,7 +33,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./redirect-site"
+          path: "./redirect-dist"
 
   deploy:
     environment:

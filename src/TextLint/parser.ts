@@ -60,6 +60,14 @@ export interface Token {
 let tokenizerCache: Tokenizer | null = null;
 let tokenizerPromise: Promise<Tokenizer> | null = null;
 
+function getKuromojiDictPath(): string {
+    const script = document.querySelector<HTMLScriptElement>('script[src$="kuromoji.js"]');
+    if (!script?.src) return "dict";
+
+    const dictUrl = new URL("dict", script.src);
+    return dictUrl.pathname;
+}
+
 /**
  * kuromojiのtokenizerを取得（初回のみビルド、以降はキャッシュを使用）
  */
@@ -68,7 +76,7 @@ async function getTokenizer(): Promise<Tokenizer> {
     if (tokenizerPromise) return tokenizerPromise;
 
     tokenizerPromise = new Promise((resolve, reject) => {
-        const dicPath = `/latexlint/dict`;
+        const dicPath = getKuromojiDictPath();
         kuromoji.builder({
             dicPath: dicPath,
         }).build((err: Error | null, tokenizer: Tokenizer) => {

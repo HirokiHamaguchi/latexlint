@@ -1,6 +1,6 @@
 # Change Log
 
-All notable changes to the "latexlint" extension will be documented in this file.
+All notable changes to the "latexlint" will be documented in this file.
 
 ## 1.9.1 - 2026-7-10
 

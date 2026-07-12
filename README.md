@@ -59,7 +59,7 @@ The detected rules are listed below.
 36. [LLURL](#llurl) (detect unnecessary info in URLs)
 37. [LLUserDefined](#lluserdefined) (detect Regexes in `latexlint.userDefinedRules`)
 
-Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
+Please also refer to [sample/lint.pdf](https://github.com/HirokiHamaguchi/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
 ### LLAlignAnd
 

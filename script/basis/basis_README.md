@@ -22,7 +22,7 @@ The detected rules are listed below.
 
 <!-- AUTO_GENERATED_LIST -->
 
-Please also refer to [sample/lint.pdf](https://github.com/hari64boli64/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
+Please also refer to [sample/lint.pdf](https://github.com/HirokiHamaguchi/latexlint/blob/master/sample/lint.pdf) and [our Japanese article (日本語解説記事)](https://qiita.com/hari64/items/3f973625551fbce3a08a) if needed.
 
 <!-- AUTO_GENERATED_RULES -->
 

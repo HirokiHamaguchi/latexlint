@@ -7,9 +7,6 @@ repos:
         exclude: ^submodules/|sample/logs/
       - id: end-of-file-fixer
         exclude: ^submodules/|sample/logs/
-      - id: mixed-line-ending
-        args: ["--fix=lf"]
-        exclude: ^submodules/|sample/logs/
       - id: check-added-large-files
         args: ["--maxkb=5000"]
         exclude: ^submodules/|sample/logs/

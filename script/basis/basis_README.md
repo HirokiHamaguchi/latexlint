@@ -4,7 +4,7 @@
 
 ## Abstract
 
-LaTeX Lint is a linter for `.tex` and `.md` files.
+LaTeX Lint is a linter to detect common LaTeX and academic writing issues.
 
 [VS Code Extension Version](https://marketplace.visualstudio.com/items?itemName=hari64boli64.latexlint) is available.
 

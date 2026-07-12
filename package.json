@@ -1,7 +1,7 @@
 {
   "name": "latexlint",
   "displayName": "LaTeX Lint",
-  "description": "Linter for LaTeX with useful commands for academic writing",
+  "description": "Linter to detect common LaTeX and academic writing issues",
   "version": "1.9.0",
   "icon": "images/mainIcon512.png",
   "author": {

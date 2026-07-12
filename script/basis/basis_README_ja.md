@@ -6,7 +6,7 @@
 
 ## 概要
 
-LaTeX Lintは、`.tex`および`.md`ファイル用のLaTeXリンターです。
+LaTeX Lintは、LaTeXおよび学術執筆上の一般的な問題を検出するリンターです。
 
 [VS Code拡張機能版](https://marketplace.visualstudio.com/items?itemName=hari64boli64.latexlint)が利用可能です。
 

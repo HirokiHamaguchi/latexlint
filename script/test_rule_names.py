@@ -1,6 +1,10 @@
 import json
 import os
 from glob import glob
+from pathlib import Path
+
+
+os.chdir(Path(__file__).resolve().parent.parent)
 
 
 def getPackageJson():
@@ -20,7 +24,7 @@ def getMarkDown():
         for line in lines:
             if line.startswith("### LL"):
                 LLs.append(line[4:].strip())
-    return set(LLs)
+    return set(LLs) - {"LLDisable"}
 
 
 def getFileNames():
@@ -35,7 +39,7 @@ def test_rule_names():
     packageJsonSet = getPackageJson()
     markdownSet = getMarkDown()
     fileNames = getFileNames()
-    assert markdownSet == packageJsonSet == fileNames
+    assert markdownSet == packageJsonSet == fileNames, (markdownSet,packageJsonSet,fileNames)
     print("test_rule_names ok!")
 
 

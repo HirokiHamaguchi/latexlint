@@ -19,7 +19,9 @@ LaTeX Lint is a linter to detect common LaTeX and academic writing issues.
 
 The detected rules are listed below.
 
-**We strongly recommend enabling only the rules that match your preferences and writing style.** See [LaTeX Lint: Choose Detection Rules](#latex-lint-choose-detection-rules) for details.
+**We strongly recommend enabling only the rules that match your preferences and writing style.**
+
+See [LaTeX Lint: Choose Detection Rules](#latex-lint-choose-detection-rules) for details.
 
 1. [LLAlignAnd](#llalignand) (detect `=&`, `\leq&`, `\geq&`, etc.)
 2. [LLAlignEnd](#llalignend) (detect `align` environment ends with `\\`)
@@ -684,7 +686,60 @@ For example, if you use `\Box` as an [infimal convolution](https://en.wikipedia.
 
 Then, you can use `\infConv` instead of `\Box`, and you can define `\\Box` as a regular expression to detect this pattern.
 
+## Command Palette
+
+In VS Code, you can run commands by clicking the icon or by opening the command palette (`Ctrl`+`Shift`+`P`) and typing `LaTeX Lint`.
+
+![enableDisableButton](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/enableDisableButton.png)
+
+![ctrl+shift+P](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/ctrl+shift+P.png)
+
+The following sections explain some commands.
+
+### LaTeX Lint: Add Custom Detection Rule
+
+Add a custom detection rule.
+For example, we can detect `f^a` by the following steps.
+
+1. Select the string you want to detect (optional).
+2. Run the Add Custom Detection Rule command.
+3. Follow the instructions.
+   If you choose `string`, we detect the input itself.
+   If you choose `Regex`, we detect the pattern using a regular expression.
+
+Then, you can define your own rule.
+
+In the web version, you can add regular expressions in the `User defined Regex rules` input box at the bottom of the page.
+
+### LaTeX Lint: Choose Detection Rules
+
+Select which rules to detect. Check the rules you want to detect.
+
+![selectRulesToDetect](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/selectRulesToDetect.png)
+
+In the web version, you can turn individual rules off using the `Disabled rules` checkboxes at the bottom of the page.
+
+### LaTeX Lint: Rename Command or Label
+
+Rename by pressing `F2` on the `\begin{name}`, `\end{name}` or `\label{name}`.
+
+![renameCommand](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/renameCommand.png)
+
+### LaTeX Lint: Query Wolfram Alpha
+
+Query Wolfram Alpha to solve the equation.
+
+1. Select the equation you want to solve.
+2. Run the Query Wolfram Alpha command.
+3. Check the Wolfram Alpha page.
+
+You can see the result on the Wolfram Alpha page. Some unnecessary commands are removed before the equation is sent.
+
+![askWolframAlpha3](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/askWolframAlpha3.png)
+
 ## Disabling Rules
+
+### LLDisable
 
 To disable a rule, add `% LLDisable` at the beginning of the line for LaTeX or `<!-- LLDisable -->` for Markdown.
 
@@ -698,71 +753,15 @@ Line containing an error. <!-- LLDisable -->
 
 To toggle the entire rule on or off, use [LaTeX Lint: Choose Detection Rules](#latex-lint-choose-detection-rules).
 
-## Other Features
+### LaTeX Lint: Add Exception Word
 
-You can also use the following features in VS Code. These commands are available by clicking the icon on the editor toolbar.
+Add an exception word to suppress detections for a specific word.
 
-![enableDisableButton](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/enableDisableButton.png)
+1. Select the word you want to add as an exception (optional).
+2. Run the Add Exception Word command.
+3. Follow the instructions. Then, the word is added to the exception list and will be ignored by supported rules.
 
-### LaTeX Lint: Add Custom Detection Rule
-
-Add a custom detection rule.
-For example, we can detect `f^a` by the following steps.
-
-#### 1. Select the string you want to detect (optional)
-
-![addRule1](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/addRule1.png)
-
-#### 2. Run the command (Add Custom Detection Rule)
-
-Run the command by clicking the icon or by opening the command palette (`Ctrl`+`Shift`+`P`) and typing `LaTeX Lint: Add Custom Detection Rule`.
-
-![addRule2](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/addRule2.png)
-
-#### 3. Follow the instructions
-
-If you choose `string`, we detect the input itself.
-If you choose `Regex`, we detect the pattern using a regular expression.
-
-Then, you can define your own rule.
-
-### LaTeX Lint: Choose Detection Rules
-
-Select which rules to detect. Check the rules you want to detect.
-
-![selectRules](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/selectRulesToDetect.png)
-
-### LaTeX Lint: Rename Command or Label
-
-Rename by pressing `F2` on the `\begin{name}`, `\end{name}` or `\label{name}`.
-
-![renameCommand](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/renameCommand.png)
-
-### Go to Label Definition
-
-Jump to the corresponding `\label{xxx}` definition by pressing `F12` on `\ref{xxx}`, `\cref{xxx}`, or `\Cref{xxx}`.
-
-This feature searches for the matching `\label{xxx}` in the current file and jumps to the first non-commented occurrence.
-
-### LaTeX Lint: Query Wolfram Alpha
-
-Query Wolfram Alpha to solve the equation.
-
-#### 1. Select the equation you want to solve
-
-![askWolframAlpha1](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/askWolframAlpha1.png)
-
-#### 2. Run the command (Query Wolfram Alpha)
-
-Run the command by clicking the icon or by opening the command palette (`Ctrl`+`Shift`+`P`) and typing `LaTeX Lint: Query Wolfram Alpha`.
-
-![askWolframAlpha2](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/askWolframAlpha2.png)
-
-#### 3. Check the Wolfram Alpha page
-
-You can see the result on the Wolfram Alpha page. Some unnecessary commands are removed before the equation is sent.
-
-![askWolframAlpha3](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/askWolframAlpha3.png)
+In the web version, you can also add an exception word by filling in the input box at the bottom of the page.
 
 ## Note
 

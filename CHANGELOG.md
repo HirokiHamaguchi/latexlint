@@ -2,8 +2,10 @@
 
 All notable changes to the "latexlint" will be documented in this file.
 
-## 1.9.1 - 2026-7-10
+## 1.9.1 - 2026-7-20
 
+- Fix `LLCref` and `LLUnRef` to track balanced braces in `\ref{...}` and `\label{...}` arguments, including nested `{...}` content.
+- Update the links in the README.md
 - Move web assets to `latexpages` repository.
 
 ## 1.9.0 - 2026-7-6

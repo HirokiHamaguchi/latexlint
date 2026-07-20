@@ -4,9 +4,9 @@
  * Output: JSON on stdout with diagnostics or error info.
  */
 const fs = require('fs');
-const os = require('os');
+const Module = require('module');
 const path = require('path');
-const { buildSync } = require('esbuild');
+const ts = require('typescript');
 
 function ensureLocalStorage() {
     if (typeof global.localStorage !== 'undefined') return;
@@ -30,43 +30,56 @@ function applyDefaultConfig() {
             global.localStorage.setItem(k, v);
 }
 
-function bundleAndLoad(repoRoot) {
-    const entryTs = path.join(repoRoot, 'src', 'util', 'enumerateDiagnostics.ts');
-    const mockTs = path.join(repoRoot, 'script', 'vscode-mock.ts');
-
-    const entryTmp = path.join(
-        os.tmpdir(),
-        `ll-entry-${Date.now()}-${Math.random().toString(16).slice(2)}.ts`
-    );
-    const outFile = path.join(
-        os.tmpdir(),
-        `ll-bundle-${Date.now()}-${Math.random().toString(16).slice(2)}.cjs`
-    );
-
-    const entrySource = `import enumerateDiagnostics from "${entryTs.replace(/\\/g, '\\\\')}";\n` +
-        `import vscode from "${mockTs.replace(/\\/g, '\\\\')}";\n` +
-        `export const createMockTextDocument = vscode.createMockTextDocument;\n` +
-        `export const Uri = vscode.Uri;\n` +
-        `export { enumerateDiagnostics };\n`;
-    fs.writeFileSync(entryTmp, entrySource, 'utf8');
-
-    buildSync({
-        entryPoints: [entryTmp],
-        outfile: outFile,
-        bundle: true,
-        platform: 'node',
-        format: 'cjs',
-        target: 'node20',
-        sourcemap: false,
-        alias: { vscode: mockTs },
-        logLevel: 'silent',
+function loadTypeScriptModule(modulePath) {
+    const source = fs.readFileSync(modulePath, 'utf8');
+    const transpiled = ts.transpileModule(source, {
+        compilerOptions: {
+            module: ts.ModuleKind.CommonJS,
+            target: ts.ScriptTarget.ES2022,
+            esModuleInterop: true,
+        },
+        fileName: modulePath,
     });
 
-    const mod = require(outFile);
+    const mod = new Module(modulePath, module);
+    mod.filename = modulePath;
+    mod.paths = Module._nodeModulePaths(path.dirname(modulePath));
+    mod._compile(transpiled.outputText, modulePath);
+    return mod.exports;
+}
+
+function bundleAndLoad(repoRoot) {
+    const mockPath = path.join(repoRoot, 'script', 'vscode-mock.ts');
+    const enumerateDiagnosticsPath = path.join(
+        repoRoot,
+        'out',
+        'util',
+        'enumerateDiagnostics.js'
+    );
+
+    if (!fs.existsSync(enumerateDiagnosticsPath))
+        throw new Error(
+            `compiled file not found: ${enumerateDiagnosticsPath}. Run "npm.cmd run compile-tests" first.`
+        );
+
+    const vscodeMock = loadTypeScriptModule(mockPath);
+    const originalLoad = Module._load;
+    Module._load = function patchedLoad(request, parent, isMain) {
+        if (request === 'vscode') return vscodeMock;
+        return originalLoad.call(this, request, parent, isMain);
+    };
+
     try {
-        fs.unlinkSync(entryTmp);
-    } catch (_) { /* ignore */ }
-    return { ...mod, bundlePath: outFile };
+        delete require.cache[enumerateDiagnosticsPath];
+        const mod = require(enumerateDiagnosticsPath);
+        return {
+            enumerateDiagnostics: mod.default,
+            createMockTextDocument: vscodeMock.createMockTextDocument,
+            Uri: vscodeMock.Uri,
+        };
+    } finally {
+        Module._load = originalLoad;
+    }
 }
 
 function processFile(filePath, enumerateDiagnostics, createMockTextDocument, Uri) {
@@ -115,9 +128,9 @@ function main() {
     const repoRoot = path.resolve(__dirname, '..');
 
     // Bundle once for all files
-    let enumerateDiagnostics, createMockTextDocument, Uri, bundlePath;
+    let enumerateDiagnostics, createMockTextDocument, Uri;
     try {
-        ({ enumerateDiagnostics, createMockTextDocument, Uri, bundlePath } = bundleAndLoad(repoRoot));
+        ({ enumerateDiagnostics, createMockTextDocument, Uri } = bundleAndLoad(repoRoot));
     } catch (err) {
         console.error(JSON.stringify({ ok: false, error: `bundle failed: ${err.message}` }));
         process.exit(1);
@@ -146,8 +159,6 @@ function main() {
     } catch (err) {
         console.error(JSON.stringify({ ok: false, error: `processing failed: ${err.message}`, stack: err && err.stack }));
         process.exit(1);
-    } finally {
-        try { fs.unlinkSync(bundlePath); } catch (_) { /* ignore */ }
     }
 }
 

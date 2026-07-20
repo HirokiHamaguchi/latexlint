@@ -4,6 +4,7 @@ All notable changes to the "latexlint" will be documented in this file.
 
 ## 1.9.1 - 2026-7-20
 
+- Skip `LLUnRef` for files that consist only of `table` / `table*` environments.
 - Fix `LLCref` and `LLUnRef` to track balanced braces in `\ref{...}` and `\label{...}` arguments, including nested `{...}` content.
 - Update the links in the README.md
 - Move web assets to `latexpages` repository.

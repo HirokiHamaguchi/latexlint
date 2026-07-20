@@ -1,4 +1,4 @@
-[CODE] LLUnRef (429)
+[CODE] LLUnRef (331)
 - file: sample\arxiv_sources\1609.03457v1\tables_for-avail-engines-chapter.tex (line 12)
   error: \label{table:Web-available-main}
   message: The label "table:Web-available-main" in the table environment is defined but unused in this file (possibly elsewhere).
@@ -160,20 +160,6 @@
 > 1568:     \label{tab:verify_example2}
   1569: \end{table*}
 
-- file: sample\arxiv_sources\2312.01661v2\editchatgpt.tex (line 3)
-  error: \label{daposedit}
-  message: The label "daposedit" in the table* environment is defined but unused in this file (possibly elsewhere).
-     2: \section{Dataset Post-editing}
->    3: \label{daposedit}    
-     4:     
-
-- file: sample\arxiv_sources\2312.01661v2\editchatgpt.tex (line 34)
-  error: \label{tab:post-edit}
-  message: The label "tab:post-edit" in the table* environment is defined but unused in this file (possibly elsewhere).
-    33:     \caption{Data collecting and annotating process with the edit rate of 12.75\%. \textcolor{red}{Red} text denotes the deleted part of ChatGPT's answer,  \textcolor{green}{green} text denotes the corrected part.}
->   34:     \label{tab:post-edit}
-    35: 
-
 - file: sample\arxiv_sources\2312.01661v2\gpt2.tex (line 6)
   error: \label{appdx:nonsense-gpt2}
   message: The label "appdx:nonsense-gpt2" in the table* environment is defined but unused in this file (possibly elsewhere).
@@ -265,104 +251,6 @@
 >   46: \label{fig:sotas}
     47: \end{figure}
 
-- file: sample\arxiv_sources\2402.14804v1\caption_algebra.tex (line 68)
-  error: \label{fig:algebra_caption_example1}
-  message: The label "fig:algebra_caption_example1" in the table* environment is defined but unused in this file (possibly elsewhere).
-    67: \captionof{figure}{An example of algebra question of GPT-4 with image caption. Although there are small hallucinations marked in red, The model correctly solves the problem based on the image description. Gemini Pro and Qwen-VL-Max fail to solve it because of weak visual recognition and reasoning ability.}
->   68:     \label{fig:algebra_caption_example1}
-    69: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\caption_analytic.tex (line 95)
-  error: \label{fig:analytic_geometry_caption_example1}
-  message: The label "fig:analytic_geometry_caption_example1" in the table* environment is defined but unused in this file (possibly elsewhere).
-    94: \captionof{figure}{An example of analytic geometry question of GPT-4 with image caption. Although there are small hallucinations marked in red, The model correctly solves the problem based on the image description while GPT-4V fails because of inaccurate image recognition. }
->   95:     \label{fig:analytic_geometry_caption_example1}
-    96: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\caption_arithmetic.tex (line 77)
-  error: \label{fig:arithmetic_caption_example1}
-  message: The label "fig:arithmetic_caption_example1" in the table* environment is defined but unused in this file (possibly elsewhere).
-    76: \captionof{figure}{An example of arithmetic question of GPT-4 with image caption. Although there are small hallucinations marked in red, The model correctly solves the problem based on the image description. GPT-4V also does it correct while Gemini Pro and Qwen-VL-Max fail because of weak visual recognition ability.}
->   77:     \label{fig:arithmetic_caption_example1}
-    78: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\caption_combinatorial.tex (line 85)
-  error: \label{fig:combinatorial_caption_example1}
-  message: The label "fig:combinatorial_caption_example1" in the table* environment is defined but unused in this file (possibly elsewhere).
-    84: \captionof{figure}{An example of combinatorial geometry question of GPT-4 with image caption. The model fails to solve the problem because of the inaccurate image description. GPT-4V also misinterprets the image, but gives the correct answer.}
->   85:     \label{fig:combinatorial_caption_example1}
-    86: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\caption_combinatorics1.tex (line 76)
-  error: \label{fig:combinatorics_caption_example1}
-  message: The label "fig:combinatorics_caption_example1" in the table* environment is defined but unused in this file (possibly elsewhere).
-    75: \captionof{figure}{An example of combinatorics question of GPT-4 with image caption. The model correctly solves the problem based on the accurate and detailed image description while Gemini Pro and Qwen-VL-Max fail.}
->   76:     \label{fig:combinatorics_caption_example1}
-    77: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\caption_combinatorics2.tex (line 61)
-  error: \label{fig:combinatorics_caption_example2}
-  message: The label "fig:combinatorics_caption_example2" in the table* environment is defined but unused in this file (possibly elsewhere).
-    60: \captionof{figure}{An example of combinatorics question of GPT-4 with image caption. The model correctly solves the problem based on the accurate and detailed image description while GPT-4V and Gemini Pro fail.}
->   61:     \label{fig:combinatorics_caption_example2}
-    62: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\caption_counting1.tex (line 72)
-  error: \label{fig:counting_caption_example1}
-  message: The label "fig:counting_caption_example1" in the table* environment is defined but unused in this file (possibly elsewhere).
-    71: \captionof{figure}{An example of counting question of GPT-4 with image caption. Although there are small hallucinations marked in red, The model correctly solves the problem based on the image description.}
->   72:     \label{fig:counting_caption_example1}
-    73: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\caption_counting2.tex (line 75)
-  error: \label{fig:counting_caption_example2}
-  message: The label "fig:counting_caption_example2" in the table* environment is defined but unused in this file (possibly elsewhere).
-    74: \captionof{figure}{An example of counting question of GPT-4 with image caption. The model correctly solves the problem based on the accurate and detailed image description while GPT-4V and Gemini Pro fail.}
->   75:     \label{fig:counting_caption_example2}
-    76: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\caption_descriptive.tex (line 55)
-  error: \label{fig:descriptive_caption_example}
-  message: The label "fig:descriptive_caption_example" in the table* environment is defined but unused in this file (possibly elsewhere).
-    54: \captionof{figure}{An example of descriptive geometry question of GPT-4 with image caption. The models fail to correctly interpret the spacial relationships between the cards.}
->   55:     \label{fig:descriptive_caption_example}
-    56: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\caption_logic.tex (line 50)
-  error: \label{fig:logic_caption_example}
-  message: The label "fig:logic_caption_example" in the table* environment is defined but unused in this file (possibly elsewhere).
-    49: \captionof{figure}{An example of logic question of GPT-4 with image caption. GPT-4 fails to correctly find all the necessary equations and does not reach an answer. GPT-4V correctly solves the problems.}
->   50:     \label{fig:logic_caption_example}
-    51: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\caption_metric.tex (line 53)
-  error: \label{fig:metric_caption_example}
-  message: The label "fig:metric_caption_example" in the table* environment is defined but unused in this file (possibly elsewhere).
-    52: \captionof{figure}{An example of metric geometry question of GPT-4 with image caption. GPT-4 fails to find the correct relationship between the variables. GPT-4V correctly solves the problems.}
->   53:     \label{fig:metric_caption_example}
-    54: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\caption_topology.tex (line 77)
-  error: \label{fig:topology_caption_example1}
-  message: The label "fig:topology_caption_example1" in the table* environment is defined but unused in this file (possibly elsewhere).
-    76: \captionof{figure}{An example of topology question of GPT-4 with image caption. The model fails to solve the problem because of the inaccurate image description while GPT-4V succeeds.}
->   77:     \label{fig:topology_caption_example1}
-    78: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\caption_trasformation.tex (line 73)
-  error: \label{fig:transformation_caption_example1}
-  message: The label "fig:transformation_caption_example1" in the table* environment is defined but unused in this file (possibly elsewhere).
-    72: \captionof{figure}{An example of transformation geometry question of GPT-4 with image caption. The model fails to solve the problem because of the inaccurate image description. GPT-4V also misinterprets the image, but gives the correct answer.}
->   73:     \label{fig:transformation_caption_example1}
-    74: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\cot_comparison.tex (line 36)
-  error: \label{tab:cot_comparison}
-  message: The label "tab:cot_comparison" in the table* environment is defined but unused in this file (possibly elsewhere).
-    35: \caption{Influence of Chain-of-Thought on model performances across various mathematical subjects} 
->   36: \label{tab:cot_comparison} 
-    37: \end{table*}
-
 - file: sample\arxiv_sources\2402.14804v1\dataset_overview.tex (line 41)
   error: \label{tab:overview}
   message: The label "tab:overview" in the figure* environment is defined but unused in this file (possibly elsewhere).
@@ -376,97 +264,6 @@
     49:  \caption{Levels, subjects and sources distribution of \datasetname.}
 >   50:  \label{fig:overview}
     51:  \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\error_calculation_example1.tex (line 65)
-  error: \label{fig:error_calculation_example1}
-  message: The label "fig:error_calculation_example1" in the table* environment is defined but unused in this file (possibly elsewhere).
-    64: \captionof{figure}{Full example of calculation error. The wrong steps are highlighted in \wrong{red}.}
->   65:     \label{fig:error_calculation_example1}
-    66: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\error_calculation_example2.tex (line 64)
-  error: \label{fig:error_calculation_example2}
-  message: The label "fig:error_calculation_example2" in the table* environment is defined but unused in this file (possibly elsewhere).
-    63: \captionof{figure}{An example of calculation error. The wrong steps are highlighted in \wrong{red}.}
->   64:     \label{fig:error_calculation_example2}
-    65: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\error_knowledge_example1.tex (line 62)
-  error: \label{fig:error_knowledge_example1}
-  message: The label "fig:error_knowledge_example1" in the table* environment is defined but unused in this file (possibly elsewhere).
-    61: \captionof{figure}{An example of knowledge error.}
->   62:     \label{fig:error_knowledge_example1}
-    63: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\error_knowledge_example2.tex (line 39)
-  error: \label{fig:error_knowledge_example2}
-  message: The label "fig:error_knowledge_example2" in the table* environment is defined but unused in this file (possibly elsewhere).
-    38: \captionof{figure}{An example of knowledge error.}
->   39:     \label{fig:error_knowledge_example2}
-    40: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\error_question_misunderstood_example1.tex (line 60)
-  error: \label{fig:error_question_misunderstood_example1}
-  message: The label "fig:error_question_misunderstood_example1" in the table* environment is defined but unused in this file (possibly elsewhere).
-    59: \captionof{figure}{An example of question understood error.}
->   60:     \label{fig:error_question_misunderstood_example1}
-    61: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\error_question_misunderstood_example2.tex (line 65)
-  error: \label{fig:error_question_misunderstood_example2}
-  message: The label "fig:error_question_misunderstood_example2" in the table* environment is defined but unused in this file (possibly elsewhere).
-    64: \captionof{figure}{An example of question understood error. The model mistakenly believes that keys and locks are in one-to-one correspondence, but there is no such condition in the question.}
->   65:     \label{fig:error_question_misunderstood_example2}
-    66: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\error_reasoning_example1.tex (line 69)
-  error: \label{fig:error_reasoning_example1}
-  message: The label "fig:error_reasoning_example1" in the table* environment is defined but unused in this file (possibly elsewhere).
-    68: \captionof{figure}{An example of reasoning error.}
->   69:     \label{fig:error_reasoning_example1}
-    70: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\error_reasoning_example2.tex (line 38)
-  error: \label{fig:error_reasoning_example2}
-  message: The label "fig:error_reasoning_example2" in the table* environment is defined but unused in this file (possibly elsewhere).
-    37: \captionof{figure}{An example of reasoning error.}
->   38:     \label{fig:error_reasoning_example2}
-    39: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\error_reject_answer_example1.tex (line 25)
-  error: \label{fig:error_reject_answer_example1}
-  message: The label "fig:error_reject_answer_example1" in the table* environment is defined but unused in this file (possibly elsewhere).
-    24: \captionof{figure}{An example of reject to answer error.}
->   25:     \label{fig:error_reject_answer_example1}
-    26: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\error_reject_answer_example2.tex (line 29)
-  error: \label{fig:error_reject_answer_example2}
-  message: The label "fig:error_reject_answer_example2" in the table* environment is defined but unused in this file (possibly elsewhere).
-    28: \captionof{figure}{An example of reject to answer error.}
->   29:     \label{fig:error_reject_answer_example2}
-    30: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\error_vision_recognition_example1.tex (line 72)
-  error: \label{fig:error_vision_recognition_example1}
-  message: The label "fig:error_vision_recognition_example1" in the table* environment is defined but unused in this file (possibly elsewhere).
-    71: \captionof{figure}{An example of vision recognition error.}
->   72:     \label{fig:error_vision_recognition_example1}
-    73: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\error_vision_recognition_example2.tex (line 62)
-  error: \label{fig:error_vision_recognition_example2}
-  message: The label "fig:error_vision_recognition_example2" in the table* environment is defined but unused in this file (possibly elsewhere).
-    61: \captionof{figure}{An example of vision recognition error.}
->   62:     \label{fig:error_vision_recognition_example2}
-    63: % \end{minipage}
-
-- file: sample\arxiv_sources\2402.14804v1\error_vision_recognition_example3.tex (line 44)
-  error: \label{fig:error_vision_recognition_example3}
-  message: The label "fig:error_vision_recognition_example3" in the table* environment is defined but unused in this file (possibly elsewhere).
-    43: \captionof{figure}{An example of vision recognition error. Model is experiencing severe hallucinations in this example}
->   44:     \label{fig:error_vision_recognition_example3}
-    45: % \end{minipage}
 
 - file: sample\arxiv_sources\2402.14804v1\images_by_subjects.tex (line 6)
   error: \label{fig:imgs_algebra}
@@ -580,111 +377,6 @@
 >  111: \label{fig:imgs_trans_geo}
    112: \end{figure*}
 
-- file: sample\arxiv_sources\2402.14804v1\instruction_subject.tex (line 24)
-  error: \label{tab:instruction_subject}
-  message: The label "tab:instruction_subject" in the table* environment is defined but unused in this file (possibly elsewhere).
-    23: \caption{Instructions for annotators on how to label questions into 16 categories and the prompt for models to get subject advice.}
->   24: \label{tab:instruction_subject}
-    25: \end{table*}
-
-- file: sample\arxiv_sources\2402.14804v1\main_model_performance.tex (line 49)
-  error: \label{tab:main_model_performance}
-  message: The label "tab:main_model_performance" in the table* environment is defined but unused in this file (possibly elsewhere).
-    48: \caption{Comparison of model performances across various mathematical subjects. Subjects: Alg: algebra, AnaG: analytic geometry, Ari: arithmetic, CombG: combinatorial geometry, Comb: combinatorics, Cnt: counting, DescG: descriptive geometry, GrphT: graph theory, Log: logic, Angle: metric geometry - angle, Area: metric geometry - area, Len: metric geometry-length, SolG: solid geometry, Stat: statistics, Topo: topology, TransG: transformation geometry. The \colorbox{wkred}{first} and \colorbox{wkblue}{second} highest accuracy of LMMs are marked in {red} and {blue}, respectively.}
->   49: \label{tab:main_model_performance}
-    50: \end{table*}
-
-- file: sample\arxiv_sources\2402.14804v1\mathvista_template.tex (line 48)
-  error: \label{tab:mathvista_template}
-  message: The label "tab:mathvista_template" in the table* environment is defined but unused in this file (possibly elsewhere).
-    47:     \caption{Some source datasets of MathVista featuring similar questions. The table shows the template, proportion within the whole dataset and typical examples of them.}
->   48:     \label{tab:mathvista_template}
-    49: \end{table*}
-
-- file: sample\arxiv_sources\2402.14804v1\mmmu_graph_theory_3_example.tex (line 51)
-  error: \label{fig:mmmu_graph_theory}
-  message: The label "fig:mmmu_graph_theory" in the table* environment is defined but unused in this file (possibly elsewhere).
-    50: 
->   51: \label{fig:mmmu_graph_theory}
-    52: \end{table*}
-
-- file: sample\arxiv_sources\2402.14804v1\mmmu_group_theory_3_example.tex (line 51)
-  error: \label{fig:mmmu_group_theory}
-  message: The label "fig:mmmu_group_theory" in the table* environment is defined but unused in this file (possibly elsewhere).
-    50: 
->   51: \label{fig:mmmu_group_theory}
-    52: \end{table*}
-
-- file: sample\arxiv_sources\2402.14804v1\mmmu_operation_research_3_example.tex (line 59)
-  error: \label{fig:mmmu_operation_research}
-  message: The label "fig:mmmu_operation_research" in the table* environment is defined but unused in this file (possibly elsewhere).
-    58: 
->   59: \label{fig:mmmu_operation_research}
-    60: \end{table*}
-
-- file: sample\arxiv_sources\2402.14804v1\model_prompts.tex (line 66)
-  error: \label{tab:model_prompts}
-  message: The label "tab:model_prompts" in the table* environment is defined but unused in this file (possibly elsewhere).
-    65:     \caption{The prompts used in the evaluation for response generation.}
->   66:     \label{tab:model_prompts}
-    67: \end{table*}
-
-- file: sample\arxiv_sources\2402.14804v1\model_sources.tex (line 35)
-  error: \label{tab:model_sources}
-  message: The label "tab:model_sources" in the table* environment is defined but unused in this file (possibly elsewhere).
-    34:     \caption{The source of the models used in the evaluation.}
->   35:     \label{tab:model_sources}
-    36: \end{table*}
-
-- file: sample\arxiv_sources\2402.14804v1\ours_analytic_3_example.tex (line 63)
-  error: \label{fig:ours_analytic_3_example}
-  message: The label "fig:ours_analytic_3_example" in the table* environment is defined but unused in this file (possibly elsewhere).
-    62: \captionof{figure}{Three examples from~\datasetname~on analytic geometry, which are about mutual symmetry of functions, quadratic function discriminant, and roots of iterative functions. We omit some choices for brevity.}
->   63: \label{fig:ours_analytic_3_example}
-    64: \end{table*}
-
-- file: sample\arxiv_sources\2402.14804v1\ours_graph_theory_3_example.tex (line 61)
-  error: \label{fig:ours_graph_theory_3_example}
-  message: The label "fig:ours_graph_theory_3_example" in the table* environment is defined but unused in this file (possibly elsewhere).
-    60: \captionof{figure}{Three examples from~\datasetname~on graph theory. We omit some choices for brevity.}
->   61: \label{fig:ours_graph_theory_3_example}
-    62: \end{table*}
-
-- file: sample\arxiv_sources\2402.14804v1\ours_topology_3_example.tex (line 65)
-  error: \label{fig:ours_topology_3_example}
-  message: The label "fig:ours_topology_3_example" in the table* environment is defined but unused in this file (possibly elsewhere).
-    64: \captionof{figure}{Three examples from~\datasetname~on topology. We omit some choices for brevity.}
->   65: \label{fig:ours_topology_3_example}
-    66: \end{table*}
-
-- file: sample\arxiv_sources\2402.14804v1\testmini.tex (line 90)
-  error: \label{tab:full_testmini_comparison}
-  message: The label "tab:full_testmini_comparison" in the table* environment is defined but unused in this file (possibly elsewhere).
-    89: \caption{Comparison of model performances between the entire set and testmini across various mathematical subjects. Subjects: Alg: algebra, AnaG: analytic geometry, Ari: arithmetic, CombG: combinatorial geometry, Comb: combinatorics, Cnt: counting, DescG: descriptive geometry, GrphT: graph theory, Log: logic, Angle: metric geometry - angle, Area: metric geometry - area, Len: metric geometry-length, SolG: solid geometry, Stat: statistics, Topo: topology, TransG: transformation geometry. The \colorbox{wkred}{first} and \colorbox{wkblue}{second} highest accuracy of LMMs are marked in {red} and {blue}, respectively.}
->   90: \label{tab:full_testmini_comparison}
-    91: \end{table*}
-
-- file: sample\arxiv_sources\2402.14804v1\vista_abstract_3_example.tex (line 51)
-  error: \label{fig:abstract_exam}
-  message: The label "fig:abstract_exam" in the table* environment is defined but unused in this file (possibly elsewhere).
-    50: \captionof{figure}{Three main types of questions among the 375 questions with an abstract scene in MathVista: Object Counting, Length Measurement, and Time Inquiry. Among the 200 sampled questions, the percentage of each category is in the figure. Text marked in red indicates that it belongs to a fixed template and is used in other similar questions.}
->   51: \label{fig:abstract_exam}
-    52: \end{table*}
-
-- file: sample\arxiv_sources\2402.14804v1\vista_function_3_example.tex (line 2)
-  error: \label{fig:vista_function_exam}
-  message: The label "fig:vista_function_exam" in the table* environment is defined but unused in this file (possibly elsewhere).
-     1: 
->    2: \begin{table*}[htbp] \label{fig:vista_function_exam}
-     3: \centering
-
-- file: sample\arxiv_sources\2402.14804v1\vista_function_3_example.tex (line 123)
-  error: \label{fig:vista_function_3_example}
-  message: The label "fig:vista_function_3_example" in the table* environment is defined but unused in this file (possibly elsewhere).
-   122: }
->  123: \label{fig:vista_function_3_example}
-   124: \end{table*}
-
 - file: sample\arxiv_sources\2404.05091v4\003evaluation.tex (line 133)
   error: \label{fig:three_images}
   message: The label "fig:three_images" in the figure* environment is defined but unused in this file (possibly elsewhere).
@@ -699,47 +391,12 @@
 >  232:   \label{tab:train_time}
    233: \end{table}
 
-- file: sample\arxiv_sources\2407.13690v2\comparison_to_non_vanilla.tex (line 27)
-  error: \label{tab:comparison_to_non_vanilla}
-  message: The label "tab:comparison_to_non_vanilla" in the table environment is defined but unused in this file (possibly elsewhere).
-    26:   the official implementations have not been open-sourced.}
->   27:   \label{tab:comparison_to_non_vanilla}
-    28: \end{table}
-
-- file: sample\arxiv_sources\2407.13690v2\datasets.tex (line 37)
-  error: \label{tab:datasets}
-  message: The label "tab:datasets" in the table environment is defined but unused in this file (possibly elsewhere).
-    36:   }
->   37:   \label{tab:datasets}
-    38:   \vspace{-15pt}
-
-- file: sample\arxiv_sources\2407.13690v2\domain_wise_math.tex (line 50)
-  error: \label{tab:domain_wise_math}
-  message: The label "tab:domain_wise_math" in the table environment is defined but unused in this file (possibly elsewhere).
-    49:   score within the respective base model.}
->   50:   \label{tab:domain_wise_math}
-    51: \end{table}
-
-- file: sample\arxiv_sources\2407.13690v2\dsmath_dart_rl.tex (line 24)
-  error: \label{tab:dsmath_dart_rl}
-  message: The label "tab:dsmath_dart_rl" in the table environment is defined but unused in this file (possibly elsewhere).
-    23:   respective base model.}
->   24:   \label{tab:dsmath_dart_rl}
-    25: \end{table}
-
 - file: sample\arxiv_sources\2407.13690v2\level_wise_math_coverage.tex (line 25)
   error: \label{tab:level_wise_math_coverage}
   message: The label "tab:level_wise_math_coverage" in the table environment is defined but unused in this file (possibly elsewhere).
     24:   ensure there is at least one correct response for each query.}
 >   25:   \label{tab:level_wise_math_coverage}
     26: \end{table}
-
-- file: sample\arxiv_sources\2407.13690v2\main_results.tex (line 194)
-  error: \label{tab:main-results}
-  message: The label "tab:main-results" in the table environment is defined but unused in this file (possibly elsewhere).
-   193:   }
->  194:   \label{tab:main-results}
-   195:   \vspace{-15pt}
 
 - file: sample\arxiv_sources\2407.13690v2\neurips_2024.tex (line 193)
   error: \label{fig:main_perf_and_ds}
@@ -797,76 +454,6 @@
 >   62:   \label{fig:model_framework}
     63:   \vspace{-3mm}
 
-- file: sample\arxiv_sources\2409.02834v3\comparison_accuracy_level.tex (line 7)
-  error: \label{table: comparison_accuracy_level}
-  message: The label "table: comparison_accuracy_level" in the table* environment is defined but unused in this file (possibly elsewhere).
-     6: }
->    7: \label{table: comparison_accuracy_level}
-     8: \vspace{-2mm}
-
-- file: sample\arxiv_sources\2409.02834v3\comparison_accuracy_subject.tex (line 6)
-  error: \label{table: comparison_accuracy_subject}
-  message: The label "table: comparison_accuracy_subject" in the table* environment is defined but unused in this file (possibly elsewhere).
-     5: }
->    6: \label{table: comparison_accuracy_subject}
-     7: \vspace{-2mm}
-
-- file: sample\arxiv_sources\2409.02834v3\comparison_datasets.tex (line 5)
-  error: \label{table: comparison}
-  message: The label "table: comparison" in the table* environment is defined but unused in this file (possibly elsewhere).
-     4: \caption{Comparison with existing datasets. EN and CN mean English and Chinese.}
->    5: \label{table: comparison}
-     6: \vspace{-3mm}
-
-- file: sample\arxiv_sources\2409.02834v3\comparison_math_V.tex (line 8)
-  error: \label{tab:math-v}
-  message: The label "tab:math-v" in the table* environment is defined but unused in this file (possibly elsewhere).
-     7: }
->    8: \label{tab:math-v}
-     9: \vspace{-2mm}
-
-- file: sample\arxiv_sources\2409.02834v3\comparison_mathvista.tex (line 9)
-  error: \label{tab:mathvista}
-  message: The label "tab:mathvista" in the table* environment is defined but unused in this file (possibly elsewhere).
-     8:     }
->    9: \label{tab:mathvista}
-    10: \vspace{-2mm}
-
-- file: sample\arxiv_sources\2409.02834v3\comparison_score_level.tex (line 7)
-  error: \label{table: comparison_score_level}
-  message: The label "table: comparison_score_level" in the table* environment is defined but unused in this file (possibly elsewhere).
-     6: }
->    7: \label{table: comparison_score_level}
-     8: \vspace{-2mm}
-
-- file: sample\arxiv_sources\2409.02834v3\comparison_score_subject.tex (line 8)
-  error: \label{table: comparison_score_subject}
-  message: The label "table: comparison_score_subject" in the table* environment is defined but unused in this file (possibly elsewhere).
-     7: }
->    8: \label{table: comparison_score_subject}
-     9: \vspace{-2mm}
-
-- file: sample\arxiv_sources\2409.02834v3\dataset_overview.tex (line 5)
-  error: \label{table: Overview}
-  message: The label "table: Overview" in the table environment is defined but unused in this file (possibly elsewhere).
-     4: \caption{Key statistics of CMM-Math. }
->    5: \label{table: Overview}
-     6: \vspace{-3mm}
-
-- file: sample\arxiv_sources\2409.02834v3\model_params.tex (line 5)
-  error: \label{table: model_param}
-  message: The label "table: model_param" in the table environment is defined but unused in this file (possibly elsewhere).
-     4: \caption{Detail of \texttt{Math-LMM} parameters}
->    5: \label{table: model_param}
-     6: \vspace{-2mm}
-
-- file: sample\arxiv_sources\2409.02834v3\test_dataset.tex (line 6)
-  error: \label{table: detailed statics}
-  message: The label "table: detailed statics" in the table environment is defined but unused in this file (possibly elsewhere).
-     5: \caption{Detailed statistics of CMM-Math datasets. }
->    6: \label{table: detailed statics}
-     7: \vspace{-2mm}
-
 - file: sample\arxiv_sources\2410.13293v2\neurips_2024.tex (line 239)
   error: \label{fig:SBI-RAG}
   message: The label "fig:SBI-RAG" in the figure environment is defined but unused in this file (possibly elsewhere).
@@ -902,61 +489,12 @@
 >    5:     \label{fig:MathNeuro}
      6: \end{figure*}
 
-- file: sample\arxiv_sources\2411.00387v3\dataset_structure.tex (line 17)
-  error: \label{tab: dataset structure}
-  message: The label "tab: dataset structure" in the table* environment is defined but unused in this file (possibly elsewhere).
-    16: \caption{\ours Dataset Structure}
->   17: \label{tab: dataset structure}
-    18: 
-
-- file: sample\arxiv_sources\2411.00387v3\finetune.tex (line 27)
-  error: \label{tab:first_level_finetune}
-  message: The label "tab:first_level_finetune" in the table* environment is defined but unused in this file (possibly elsewhere).
-    26: 
->   27: \label{tab:first_level_finetune}
-    28: \vspace{-5pt}
-
-- file: sample\arxiv_sources\2411.00387v3\finetune_gpt.tex (line 23)
-  error: \label{tab:fine_tune}
-  message: The label "tab:fine_tune" in the table environment is defined but unused in this file (possibly elsewhere).
-    22: \caption{First-level classification with various context lengths on GPT-3.5 and fine-tuned GPT-3.5.}
->   23: \label{tab:fine_tune}
-    24: \end{table}
-
-- file: sample\arxiv_sources\2411.00387v3\first_level.tex (line 73)
-  error: \label{tab:first_level}
-  message: The label "tab:first_level" in the table* environment is defined but unused in this file (possibly elsewhere).
-    72: 
->   73: \label{tab:first_level}
-    74: \end{table*}
-
-- file: sample\arxiv_sources\2411.00387v3\lstm_acc_data.tex (line 15)
-  error: \label{tab: input_length}
-  message: The label "tab: input_length" in the table environment is defined but unused in this file (possibly elsewhere).
-    14: \caption{LSTM first-level classification accuracy based on different input context lengths. }
->   15: \label{tab: input_length}
-    16: \end{table}
-
-- file: sample\arxiv_sources\2411.00387v3\lstm_acc_model.tex (line 15)
-  error: \label{tab: model_sizes}
-  message: The label "tab: model_sizes" in the table environment is defined but unused in this file (possibly elsewhere).
-    14: \caption{LSTM first-level classification accuracy based on different model sizes}
->   15: \label{tab: model_sizes}
-    16: \end{table}
-
 - file: sample\arxiv_sources\2411.00387v3\math_reasoning_res.tex (line 25)
   error: \label{tab:math_reason_res}
   message: The label "tab:math_reason_res" in the table environment is defined but unused in this file (possibly elsewhere).
     24: \caption{Evaluation of LLMs on downstream mathematical reasoning tasks. \textbf{+ LoRA (\ours)} indicates that the corresponding model is first fine-tuned using LoRA on \ours before being evaluated on downstream mathematical reasoning tasks. The improvements from LoRA fine-tuning on \ours are highlighted in \textcolor{darkgreen}{darkgreen} (\(\uparrow x\)).}
 >   25: \label{tab:math_reason_res}
     26: \end{table}
-
-- file: sample\arxiv_sources\2411.00387v3\second_level.tex (line 36)
-  error: \label{tab:second_level}
-  message: The label "tab:second_level" in the table* environment is defined but unused in this file (possibly elsewhere).
-    35: }
->   36: \label{tab:second_level}
-    37: \vspace{-10pt}
 
 - file: sample\arxiv_sources\2411.00387v3\statistics.tex (line 31)
   error: \label{tab: dataset_statistics}
@@ -1182,13 +720,6 @@
 > 1759:     \label{tab:data_comparison}
   1760:     \resizebox{\columnwidth}{!}{%
 
-- file: sample\arxiv_sources\2603.10767v2\results_appendix.tex (line 29)
-  error: \label{tab:results_avg_appendix}
-  message: The label "tab:results_avg_appendix" in the table* environment is defined but unused in this file (possibly elsewhere).
-    28: \caption{Accuracy (\%) of different models across languages on our dataset. We report pass@1 with a single sampled response per prompt for closed models (classic accuracy) and the average accuracy over eight sampled responses per prompt (avg@8) for open-weight models. Best result per language is marked in \textbf{bold}. The Average column reports mean $\pm$ std across languages.}
->   29: \label{tab:results_avg_appendix}
-    30: \vspace{-4mm}
-
 - file: sample\arxiv_sources\2603.16313v2\appendix_a.tex (line 56)
   error: \label{fig:randomhead}
   message: The label "fig:randomhead" in the figure environment is defined but unused in this file (possibly elsewhere).
@@ -1343,13 +874,6 @@
 >   51: \label{tab:comparison}
     52: \end{table}
 
-- file: sample\arxiv_sources\2604.02108v1\Table_1.tex (line 4)
-  error: \label{tab:noisecorr}
-  message: The label "tab:noisecorr" in the table environment is defined but unused in this file (possibly elsewhere).
-     3: \caption{Perturbation study on noise and corruption, with heatmap in cells. Brighter hue signifies higher error and worst performance, values are scaled by 100 to improve clarity of presentation.}
->    4: \label{tab:noisecorr}
-     5: \begin{tabular*}{\textwidth}{@{\extracolsep\fill}ccccccc}
-
 - file: sample\arxiv_sources\2604.02108v1\supplementary_content.tex (line 53)
   error: \label{fig:placeholder}
   message: The label "fig:placeholder" in the figure environment is defined but unused in this file (possibly elsewhere).
@@ -1370,27 +894,6 @@
     90:     \caption{Temporal evolution of the NMSE error of pose estimation, with the shaded region depicting $\pm 0.1$ standard deviation, representing the variability of the mean error. }
 >   91:     \label{fig:poseregression}
     92: \end{figure}
-
-- file: sample\arxiv_sources\2604.02111v1\dibs_all1.tex (line 78)
-  error: \label{dibs_all}
-  message: The label "dibs_all" in the table* environment is defined but unused in this file (possibly elsewhere).
-    77: \addtolength{\tabcolsep}{1mm}
->   78: \label{dibs_all}
-    79: \end{table*}
-
-- file: sample\arxiv_sources\2604.02111v1\dibs_mult.tex (line 58)
-  error: \label{dibs_mult}
-  message: The label "dibs_mult" in the table* environment is defined but unused in this file (possibly elsewhere).
-    57: \vspace{-5mm}
->   58: \label{dibs_mult}
-    59: \end{table*}
-
-- file: sample\arxiv_sources\2604.02111v1\epochs.tex (line 34)
-  error: \label{epochs}
-  message: The label "epochs" in the table* environment is defined but unused in this file (possibly elsewhere).
-    33: \addtolength{\tabcolsep}{1.5mm}
->   34: \label{epochs}
-    35: \end{table*}
 
 - file: sample\arxiv_sources\2604.02119v1\main.tex (line 818)
   error: \label{fig:q_rel_norm}
@@ -1490,20 +993,6 @@
 >  326:     \label{fig:systems}
    327: \end{figure}
 
-- file: sample\arxiv_sources\2604.02157v1\ablation_table.tex (line 4)
-  error: \label{tab:ablation}
-  message: The label "tab:ablation" in the table environment is defined but unused in this file (possibly elsewhere).
-     3: \caption{Ablation study for $K=2$, $N_s=3$.}
->    4: \label{tab:ablation}
-     5: \setlength{\tabcolsep}{4pt}
-
-- file: sample\arxiv_sources\2604.02157v1\ira_speedup_table.tex (line 4)
-  error: \label{tab:ira_speedup}
-  message: The label "tab:ira_speedup" in the table environment is defined but unused in this file (possibly elsewhere).
-     3: \caption{Speedup of IRA and TA-IRA over DD for varying $K$ and $N_s$.}
->    4: \label{tab:ira_speedup}
-     5: \setlength{\tabcolsep}{5pt}
-
 - file: sample\arxiv_sources\2604.02157v1\main.tex (line 540)
   error: \label{fig:ira_x1x2}
   message: The label "fig:ira_x1x2" in the figure* environment is defined but unused in this file (possibly elsewhere).
@@ -1546,40 +1035,12 @@
 >  580:         \label{fig:ta_ira_x4x5}
    581:     \end{subfigure}
 
-- file: sample\arxiv_sources\2604.02157v1\timing_table.tex (line 4)
-  error: \label{tab:timing}
-  message: The label "tab:timing" in the table environment is defined but unused in this file (possibly elsewhere).
-     3: \caption{Per-step wall-clock cost (ms) for $K{=}2$, $N_s{=}3$. Steps marked $\dagger$ run in parallel.}
->    4: \label{tab:timing}
-     5: \setlength{\tabcolsep}{4pt}
-
-- file: sample\arxiv_sources\2604.02157v1\tradeoff_table.tex (line 4)
-  error: \label{tab:tradeoff}
-  message: The label "tab:tradeoff" in the table environment is defined but unused in this file (possibly elsewhere).
-     3: \caption{Runtime--conservatism trade-off of IRA for varying $K$ and $N_s$. Width ratios are mean IH width of the numerator divided by the denominator.}
->    4: \label{tab:tradeoff}
-     5: \setlength{\tabcolsep}{2.5pt}
-
 - file: sample\arxiv_sources\2604.02158v1\manuscript.tex (line 202)
   error: \label{tab:stage-2-perf-metrics}
   message: The label "tab:stage-2-perf-metrics" in the table environment is defined but unused in this file (possibly elsewhere).
    201:   \caption{Runtime Power Prediction Performance for VASP Jobs}
 >  202:   \label{tab:stage-2-perf-metrics}
    203:   \rowcolors{2}{white}{gray!10}
-
-- file: sample\arxiv_sources\2604.02158v1\table1.tex (line 3)
-  error: \label{tab:slurm_selected_metrics}
-  message: The label "tab:slurm_selected_metrics" in the table environment is defined but unused in this file (possibly elsewhere).
-     2: \caption{Selected Slurm job accounting fields.}
->    3: \label{tab:slurm_selected_metrics}
-     4: \centering
-
-- file: sample\arxiv_sources\2604.02158v1\table2.tex (line 4)
-  error: \label{tab:dcgm_metrics}
-  message: The label "tab:dcgm_metrics" in the table environment is defined but unused in this file (possibly elsewhere).
-     3: \caption{Selected GPU profiling metrics from NVIDIA DCGM.}
->    4: \label{tab:dcgm_metrics}
-     5: \centering
 
 - file: sample\arxiv_sources\2604.02159v1\main.tex (line 879)
   error: \label{fig:projSetA}
@@ -1713,104 +1174,6 @@
    898:         \caption{$C_c$: pairwise}
 >  899:         \label{fig:tf_Cc}
    900:     \end{subfigure}
-
-- file: sample\arxiv_sources\2604.02176v1\appendix_comet.tex (line 28)
-  error: \label{np}
-  message: The label "np" in the table environment is defined but unused in this file (possibly elsewhere).
-    27: \end{tabular}
->   28: \caption{\label{np}
-    29: The list of 37 languages supported by our COMET model for evaluation on machine translation.
-
-- file: sample\arxiv_sources\2604.02176v1\appendix_comet_(1).tex (line 28)
-  error: \label{np}
-  message: The label "np" in the table environment is defined but unused in this file (possibly elsewhere).
-    27: \end{tabular}
->   28: \caption{\label{np}
-    29: The list of 37 languages supported by our COMET model for evaluation on machine translation.
-
-- file: sample\arxiv_sources\2604.02176v1\appendix_freqstat.tex (line 30)
-  error: \label{freqstat}
-  message: The label "freqstat" in the table environment is defined but unused in this file (possibly elsewhere).
-    29: \end{tabular}
->   30: \caption{\label{freqstat}
-    31: The statistics are based on the TFD calculations: We first statistically calculate the occurrence frequencies of unigrams and bigrams from both the web resources and the generated corpus, then assign different weights to the two corpora, and finally calculate the weighted geometric average of the unigram and bigram frequencies.
-
-- file: sample\arxiv_sources\2604.02176v1\appendix_freqstat.tex (line 52)
-  error: \label{scaling}
-  message: The label "scaling" in the table environment is defined but unused in this file (possibly elsewhere).
-    51: \end{tabular}
->   52: \caption{\label{scaling}
-    53: The evaluation on different model sizes using qwen-2.5. The results are reported on the task of MR.
-
-- file: sample\arxiv_sources\2604.02176v1\appendix_freqstat.tex (line 87)
-  error: \label{np}
-  message: The label "np" in the table environment is defined but unused in this file (possibly elsewhere).
-    86: \end{tabular}
->   87: \caption{\label{np}
-    88: A list of hyperparameters used in our fine-tuning experiments.
-
-- file: sample\arxiv_sources\2604.02176v1\appendix_freqstat.tex (line 112)
-  error: \label{lc}
-  message: The label "lc" in the table environment is defined but unused in this file (possibly elsewhere).
-   111: \end{tabular}
->  112: \caption{\label{lc}
-   113: A list of language classes of the 100 languages used in our experiments. More than half of the languages used in our study are relatively low-resource according to \citet{joshi-etal-2020-state}.
-
-- file: sample\arxiv_sources\2604.02176v1\appendix_freqstat.tex (line 132)
-  error: \label{chain-of-thought-evaluation}
-  message: The label "chain-of-thought-evaluation" in the table environment is defined but unused in this file (possibly elsewhere).
-   131: \end{tabular}
->  132: \caption{\label{chain-of-thought-evaluation}
-   133: The evaluation of the chain-of-thought process on the MR partition of our proposed TFPD dataset.
-
-- file: sample\arxiv_sources\2604.02176v1\appendix_freqstat_(1).tex (line 30)
-  error: \label{freqstat}
-  message: The label "freqstat" in the table environment is defined but unused in this file (possibly elsewhere).
-    29: \end{tabular}
->   30: \caption{\label{freqstat}
-    31: The statistics are based on the TFD calculations: We first statistically calculate the occurrence frequencies of unigrams and bigrams from both the web resources and the generated corpus, then assign different weights to the two corpora, and finally calculate the weighted geometric average of the unigram and bigram frequencies.
-
-- file: sample\arxiv_sources\2604.02176v1\appendix_freqstat_(1).tex (line 52)
-  error: \label{scaling}
-  message: The label "scaling" in the table environment is defined but unused in this file (possibly elsewhere).
-    51: \end{tabular}
->   52: \caption{\label{scaling}
-    53: The evaluation on different model sizes using qwen-2.5. The results are reported on the task of MR.
-
-- file: sample\arxiv_sources\2604.02176v1\appendix_freqstat_(1).tex (line 87)
-  error: \label{np}
-  message: The label "np" in the table environment is defined but unused in this file (possibly elsewhere).
-    86: \end{tabular}
->   87: \caption{\label{np}
-    88: A list of hyperparameters used in our fine-tuning experiments.
-
-- file: sample\arxiv_sources\2604.02176v1\appendix_freqstat_(1).tex (line 112)
-  error: \label{lc}
-  message: The label "lc" in the table environment is defined but unused in this file (possibly elsewhere).
-   111: \end{tabular}
->  112: \caption{\label{lc}
-   113: A list of language classes of the 100 languages used in our experiments. More than half of the languages used in our study are relatively low-resource according to \citet{joshi-etal-2020-state}.
-
-- file: sample\arxiv_sources\2604.02176v1\appendix_freqstat_(1).tex (line 132)
-  error: \label{chain-of-thought-evaluation}
-  message: The label "chain-of-thought-evaluation" in the table environment is defined but unused in this file (possibly elsewhere).
-   131: \end{tabular}
->  132: \caption{\label{chain-of-thought-evaluation}
-   133: The evaluation of the chain-of-thought process on the MR partition of our proposed TFPD dataset.
-
-- file: sample\arxiv_sources\2604.02176v1\appendix_pearson.tex (line 20)
-  error: \label{pptable}
-  message: The label "pptable" in the table environment is defined but unused in this file (possibly elsewhere).
-    19: \end{tabular}
->   20: \caption{\label{pptable}
-    21: The correlation between textual frequency and the final translation BLEU scores on translating from English into other languages. We compute Pearson correlation coefficients \citep{freedman2007statistics} using numpy.corrcoef().
-
-- file: sample\arxiv_sources\2604.02176v1\appendix_pearson_(1).tex (line 20)
-  error: \label{pptable}
-  message: The label "pptable" in the table environment is defined but unused in this file (possibly elsewhere).
-    19: \end{tabular}
->   20: \caption{\label{pptable}
-    21: The correlation between textual frequency and the final translation BLEU scores on translating from English into other languages. We compute Pearson correlation coefficients \citep{freedman2007statistics} using numpy.corrcoef().
 
 - file: sample\arxiv_sources\2604.02176v1\appendix_tables.tex (line 39)
   error: \label{tab:language_metrics1}
@@ -2323,13 +1686,6 @@
 >   46:     \label{fig:frozenlake_schemas}
     47: \end{figure}
 
-- file: sample\arxiv_sources\2604.02226v1\result.tex (line 5)
-  error: \label{tab:combined_results}
-  message: The label "tab:combined_results" in the table* environment is defined but unused in this file (possibly elsewhere).
-     4: \caption{Comparison of PPO baseline and \abbrev on FrozenLake: same-size evaluation and downward generalization.}
->    5: \label{tab:combined_results}
-     6: \setlength{\belowrulesep}{0.5pt}
-
 - file: sample\arxiv_sources\2604.02230v1\acl_latex.tex (line 152)
   error: \label{fig:teaser}
   message: The label "fig:teaser" in the figure environment is defined but unused in this file (possibly elsewhere).
@@ -2806,27 +2162,6 @@
 >  824:         \label{fig:right_plot}
    825:     }
 
-- file: sample\arxiv_sources\2604.02291v1\comparison_table.tex (line 3)
-  error: \label{tab:comparison}
-  message: The label "tab:comparison" in the table environment is defined but unused in this file (possibly elsewhere).
-     2: \caption{TensorPool improvement over TeraPool}
->    3: \label{tab:comparison}
-     4: \resizebox{\columnwidth}{!}{
-
-- file: sample\arxiv_sources\2604.02291v1\soa_table.tex (line 4)
-  error: \label{tab:soa_table}
-  message: The label "tab:soa_table" in the table* environment is defined but unused in this file (possibly elsewhere).
-     3: \caption{Comparison of tensor-accelerated platforms for AI-Native RAN.}
->    4: \label{tab:soa_table}
-     5: \footnotesize
-
-- file: sample\arxiv_sources\2604.02291v1\table_ran_processors.tex (line 3)
-  error: \label{tab:archs}
-  message: The label "tab:archs" in the table environment is defined but unused in this file (possibly elsewhere).
-     2: \caption{Many-Core Processors for Software-Defined RAN} 
->    3: \label{tab:archs} 
-     4: \centering 
-
 - file: sample\arxiv_sources\2604.02302v1\Appendix.tex (line 342)
   error: \label{fig:life sciences}
   message: The label "fig:life sciences" in the figure environment is defined but unused in this file (possibly elsewhere).
@@ -2862,33 +2197,12 @@
 > 1333: \label{fig:source_traces}
   1334: \end{figure}
 
-- file: sample\arxiv_sources\2604.02320v1\datascale.tex (line 20)
-  error: \label{tab:datascale}
-  message: The label "tab:datascale" in the table environment is defined but unused in this file (possibly elsewhere).
-    19: \vspace{-0.2in}
->   20: \label{tab:datascale}
-    21: \end{table}
-
 - file: sample\arxiv_sources\2604.02320v1\figure.tex (line 21)
   error: \label{fig:relighting}
   message: The label "fig:relighting" in the figure environment is defined but unused in this file (possibly elsewhere).
     20:     \caption{\textbf{Relightable LCA.} We demonstrate relighting under HDRI environment maps and point lights, alongside the recovered intrinsic properties of the avatar.}
 >   21:     \label{fig:relighting}
     22:     \vspace{-0.2in}
-
-- file: sample\arxiv_sources\2604.02320v1\preposttrain.tex (line 37)
-  error: \label{tab:preposttrain}
-  message: The label "tab:preposttrain" in the table environment is defined but unused in this file (possibly elsewhere).
-    36: \vspace{-0.2in}
->   37: \label{tab:preposttrain}
-    38: \end{table}
-
-- file: sample\arxiv_sources\2604.02320v1\sota_comparison.tex (line 46)
-  error: \label{tab:sota}
-  message: The label "tab:sota" in the table environment is defined but unused in this file (possibly elsewhere).
-    45: \vspace{-0.2in}
->   46: \label{tab:sota}
-    47: \end{table}
 
 - file: sample\submodules\coursebook\appendix\appendix.tex (line 197)
   error: \label{fig:sloppy_struct}

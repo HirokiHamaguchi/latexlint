@@ -7,6 +7,7 @@ import ranges2diagnostics from '../util/ranges2diagnostics';
 
 export default function LLUnRef(doc: vscode.TextDocument, txt: LLText): vscode.Diagnostic[] {
     if (doc.languageId !== "latex") return [];
+    if (txt.idxOfBeginDocument === -1 && isTableOnlyFragment(txt)) return [];
 
     const code = "LLUnRef";
     const message: string[] = [];
@@ -72,4 +73,63 @@ export default function LLUnRef(doc: vscode.TextDocument, txt: LLText): vscode.D
     ['figure', 'table', 'figure*', 'table*'].forEach(processEnvironmentLabels);
 
     return ranges2diagnostics(code, message, ranges);
+}
+
+function isTableOnlyFragment(txt: LLText): boolean {
+    const tableRanges = collectEnvironmentRanges(txt, ['table', 'table*']);
+    if (tableRanges.length === 0) return false;
+
+    let tableRangeIndex = 0;
+    for (const [validStart, validEnd] of txt.validRanges) {
+        let cursor = validStart;
+
+        while (tableRangeIndex < tableRanges.length && tableRanges[tableRangeIndex][1] <= cursor)
+            tableRangeIndex++;
+
+        let scanIndex = tableRangeIndex;
+        while (scanIndex < tableRanges.length && tableRanges[scanIndex][0] < validEnd) {
+            const [tableStart, tableEnd] = tableRanges[scanIndex];
+            if (cursor < tableStart && /\S/.test(txt.text.slice(cursor, tableStart))) return false;
+            cursor = Math.max(cursor, tableEnd);
+            scanIndex++;
+        }
+
+        if (cursor < validEnd && /\S/.test(txt.text.slice(cursor, validEnd))) return false;
+    }
+
+    return true;
+}
+
+function collectEnvironmentRanges(txt: LLText, envNames: string[]): [number, number][] {
+    const ranges: [number, number][] = [];
+    const escapeRegExp = (str: string): string => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+    for (const envName of envNames) {
+        const escapedEnvName = escapeRegExp(envName);
+        const beginRegex = new RegExp(`\\\\begin\\{${escapedEnvName}\\}`, 'g');
+        const endRegex = new RegExp(`\\\\end\\{${escapedEnvName}\\}`, 'g');
+
+        let beginMatch: RegExpExecArray | null;
+        while ((beginMatch = beginRegex.exec(txt.text)) !== null) {
+            if (!txt.isValid(beginMatch.index)) continue;
+
+            const endMatch = findNextValidMatchInText(txt, endRegex, beginMatch.index);
+            if (!endMatch) continue;
+
+            ranges.push([beginMatch.index, endMatch.index + endMatch[0].length]);
+        }
+    }
+
+    ranges.sort((a, b) => a[0] - b[0]);
+    return ranges;
+}
+
+function findNextValidMatchInText(txt: LLText, regex: RegExp, start: number): RegExpExecArray | null {
+    regex.lastIndex = start;
+    let match: RegExpExecArray | null;
+    while ((match = regex.exec(txt.text)) !== null) {
+        if (!txt.isValid(match.index)) continue;
+        return match;
+    }
+    return null;
 }

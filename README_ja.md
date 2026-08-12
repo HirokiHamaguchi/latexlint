@@ -546,6 +546,8 @@ From Fig. 1 and Eq. (1), we can see that...
 
 このルールはヒューリスティックに基づいた検出を行うため、偽陽性が含まれる可能性があります。
 
+ドキュメントクラスが`subfiles`の場合、このルールはスキップされます。
+
 参考文献:
 
 [Numbered ordering of multiple citations (Stack Exchange)](https://tex.stackexchange.com/questions/69230/numbered-ordering-of-multiple-citations)

@@ -11,6 +11,7 @@ import ranges2diagnostics from "../util/ranges2diagnostics";
 // https://arxiv.org/pdf/2604.02137v1
 
 const bibliographyPackagePattern = /\\usepackage(?:\[[^\]]*\])?\{(?:cite|biblatex)\}/;
+const subfilesDocumentClassPattern = /\\documentclass(?:\s*\[[^\]]*\])?\s*\{\s*subfiles\s*\}/g;
 
 const bibtexPattern = /\\bibliography\{/g;
 const stylePattern = /\\bibliographystyle\{(plain|unsrt|abbrv|plainnat|unsrtnat|abbrvnat)\}/g;
@@ -23,6 +24,9 @@ export default function LLSortedCites(
   txt: LLText
 ): vscode.Diagnostic[] {
   if (doc.languageId !== "latex") return [];
+
+  for (const match of txt.text.matchAll(subfilesDocumentClassPattern))
+    if (txt.isValid(match.index)) return [];
 
   // If cite or biblatex package is used, we assume the user is aware of sorting options and do not report.
   if (bibliographyPackagePattern.test(txt.text))

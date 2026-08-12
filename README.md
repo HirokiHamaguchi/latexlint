@@ -544,6 +544,8 @@ This rule heuristically detects such cases. In general, this can be resolved by 
 
 Since this rule performs heuristic-based detection, it may produce false positives.
 
+This rule is skipped when the document class is `subfiles`.
+
 References:
 
 [Numbered ordering of multiple citations (Stack Exchange)](https://tex.stackexchange.com/questions/69230/numbered-ordering-of-multiple-citations)

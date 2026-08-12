@@ -11,3 +11,5 @@
 ![rules/LLSortedCites](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/rules/LLSortedCites/LLSortedCites.png)
 
 このルールはヒューリスティックに基づいた検出を行うため、偽陽性が含まれる可能性があります。
+
+ドキュメントクラスが`subfiles`の場合、このルールはスキップされます。

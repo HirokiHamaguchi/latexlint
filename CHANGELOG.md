@@ -2,6 +2,10 @@
 
 All notable changes to the "latexlint" will be documented in this file.
 
+## 1.9.2 - 2026-8-12
+
+- Skip `LLSortedCites` when the document class is `subfiles`.
+
 ## 1.9.1 - 2026-7-20
 
 - Skip `LLUnRef` for files that consist only of `table` / `table*` environments.

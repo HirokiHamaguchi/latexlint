@@ -2,6 +2,13 @@
 
 All notable changes to the "latexlint" will be documented in this file.
 
+## 1.9.3 - 2026-10-23
+
+- Schedule diagnostics per document so saving multiple files skips none.
+- Cancel pending diagnostics when a document closes or the extension stops.
+- Include TypeScript and TSX files in the pre-commit ESLint hook.
+- Keep per-document diagnostic scheduling in the extension entry point.
+
 ## 1.9.2 - 2026-8-12
 
 - Skip `LLSortedCites` when the document class is `subfiles`.

@@ -116,29 +116,37 @@ export function activate(context: vscode.ExtensionContext) {
   // ? Can we re-add this in the future?
   // ? See c06c00b8f738e9f3a86f89c15951dfcb96baa6a7
 
-  // Register events.
-  let debounceTimeout: NodeJS.Timeout | undefined = undefined;
-  vscode.workspace.onDidSaveTextDocument(doc => {
-    clearTimeout(debounceTimeout);
+  // Debounce per document so one file's events cannot cancel another's diagnosis.
+  const pendingDiagnoses = new Map<string, ReturnType<typeof setTimeout>>();
+  const cancelDiagnosis = (doc: vscode.TextDocument) => {
+    const key = doc.uri.toString();
+    clearTimeout(pendingDiagnoses.get(key));
+    pendingDiagnoses.delete(key);
+  };
+  const scheduleDiagnosis = (doc: vscode.TextDocument) => {
     if (doc.languageId !== 'latex' && doc.languageId !== 'markdown') return;
     if (!isEnabled) return;
-    debounceTimeout = setTimeout(() => {
-      diagnose(doc, diagnosticsCollection, false);
-    }, 1000);
-  });
+    cancelDiagnosis(doc);
+    const key = doc.uri.toString();
+    pendingDiagnoses.set(key, setTimeout(() => {
+      pendingDiagnoses.delete(key);
+      if (!doc.isClosed && isEnabled) diagnose(doc, diagnosticsCollection, false);
+    }, 1000));
+  };
 
-  vscode.workspace.onDidOpenTextDocument(doc => {
-    clearTimeout(debounceTimeout);
-    if (doc.languageId !== 'latex' && doc.languageId !== 'markdown') return;
-    if (!isEnabled) return;
-    debounceTimeout = setTimeout(() => {
-      diagnose(doc, diagnosticsCollection, false);
-    }, 1000);
-  });
-
-  vscode.workspace.onDidCloseTextDocument(doc => {
-    diagnosticsCollection.delete(doc.uri);
-  });
+  // Dispose event listeners and pending work together when the extension stops.
+  context.subscriptions.push(
+    { dispose: () => {
+      for (const timeout of pendingDiagnoses.values()) clearTimeout(timeout);
+      pendingDiagnoses.clear();
+    } },
+    vscode.workspace.onDidSaveTextDocument(scheduleDiagnosis),
+    vscode.workspace.onDidOpenTextDocument(scheduleDiagnosis),
+    vscode.workspace.onDidCloseTextDocument(doc => {
+      cancelDiagnosis(doc);
+      diagnosticsCollection.delete(doc.uri);
+    }),
+  );
 }
 
 export function deactivate() {

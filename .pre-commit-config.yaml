@@ -26,6 +26,10 @@ repos:
     rev: v9.39.1
     hooks:
       - id: eslint
+        # Override the upstream JavaScript-only filter so TypeScript also runs.
+        # https://pre-commit.com/#filtering-files-with-types
+        types: [file]
+        types_or: [javascript, jsx, ts, tsx]
         files: \.(ts|tsx|js|jsx)$
         args: ["--fix"]
         exclude: ^submodules/|sample/logs/

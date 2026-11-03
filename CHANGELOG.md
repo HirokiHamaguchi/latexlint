@@ -15,6 +15,8 @@ All notable changes to the "latexlint" will be documented in this file.
 - Fix CRLF position handling in the standalone diagnostic mock.
 - Treat directory names containing glob syntax literally during CLI discovery.
 - Read optional diagnostic corpora from the separate latexlint-externals checkout.
+- Separate npm packaging exclusions from the VS Code extension package.
+- Publish a typed browser entry instead of sources and extension assets.
 
 ## 1.9.2 - 2026-8-12
 

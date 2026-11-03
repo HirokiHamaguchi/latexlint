@@ -232,6 +232,31 @@ test('vocabulary data and user-defined rules work without external assets', t =>
     assert.match(f.run('paper.md').stderr, /LLTextLint/);
 });
 
+test('published browser entry loads without a DOM and shares diagnostic behavior', t => {
+    const f = fixture(t);
+    const output = path.join(f.directory, 'browser.cjs');
+    // The Web host supplies vscode; use the existing Node adapter for this test.
+    require('esbuild').buildSync({
+        stdin: {
+            contents: `export * from './dist/browser.mjs'; export { createDocument } from './src/cli/vscode';`,
+            resolveDir: root
+        },
+        outfile: output, bundle: true, platform: 'node', format: 'cjs',
+        alias: { vscode: path.join(root, 'src/cli/vscode.ts') }, logLevel: 'silent'
+    });
+    const browser = require(output);
+    const text = '本文$x$本文 ^T';
+    const result = browser.lintWithPerformanceTracking({
+        doc: browser.createDocument(text, 'latex'),
+        disabledRules: packageData.contributes.configuration.properties['latexlint.disabledRules'].items.enum
+            .filter(name => name !== 'LLSpaceJapanese' && name !== 'LLT'),
+        getConfigValue: () => []
+    });
+    assert.equal(result.diagnostics.length, 3);
+    assert.ok(browser.getVocabularyData().entries_ja.length > 0);
+    assert.equal(typeof browser.parseSentence, 'function');
+});
+
 // Expected text remains independent of the fixer. JSON consolidates the edge
 // cases without losing byte comparisons, BOM/CRLF or the two runnable examples.
 const manualDirectory = path.join(root, 'sample/cli');

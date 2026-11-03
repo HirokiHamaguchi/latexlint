@@ -1,0 +1,12 @@
+# Keep npm's distribution separate from the extension's .vscodeignore.
+# https://docs.npmjs.com/cli/v11/using-npm/developers/#keeping-files-out-of-your-package
+**
+
+!dist/
+!dist/cli.cjs
+!dist/cli-licenses.txt
+!dist/browser.mjs
+!dist/browser-types/
+!dist/browser-types/**
+!CLI.md
+!CLI_ja.md

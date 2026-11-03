@@ -220,16 +220,11 @@
   "bin": {
     "latexlint": "dist/cli.cjs"
   },
-  "files": [
-    "dist/",
-    "src/",
-    "script/build-cli.cjs",
-    "CLI.md",
-    "CLI_ja.md",
-    "sample/cli/spacing.tex",
-    "sample/cli/spacing.md",
-    "images/lintIconDark.svg",
-    "images/lintIconLight.svg",
-    "images/mainIcon512.png"
-  ]
+  "exports": {
+    "./browser": {
+      "types": "./dist/browser-types/browser.d.ts",
+      "import": "./dist/browser.mjs"
+    },
+    "./package.json": "./package.json"
+  }
 }

@@ -1,6 +1,7 @@
 const path = require('node:path');
 const fs = require('node:fs');
 const { buildSync } = require('esbuild');
+const ts = require('typescript');
 const metadata = require('../package.json');
 
 const root = path.resolve(__dirname, '..');
@@ -58,4 +59,28 @@ function writeLicenses(metafile) {
 }
 
 module.exports = buildOptions;
-if (require.main === module) writeLicenses(buildSync(buildOptions).metafile);
+if (require.main === module) {
+    writeLicenses(buildSync(buildOptions).metafile);
+    const browserEntry = path.join(root, 'src/browser.ts');
+    buildSync({
+        absWorkingDir: root,
+        entryPoints: [browserEntry], outfile: 'dist/browser.mjs',
+        bundle: true, platform: 'browser', format: 'esm', target: 'es2022',
+        // Keep the adapter supplied by the Web application, not the Node CLI's.
+        external: ['vscode'], minify: true, legalComments: 'eof', logLevel: 'info'
+    });
+    // Generate declarations from the same source instead of maintaining a copy.
+    // https://www.typescriptlang.org/tsconfig/emitDeclarationOnly.html
+    const config = ts.readConfigFile(path.join(root, 'tsconfig.json'), ts.sys.readFile);
+    if (config.error) throw new Error(ts.flattenDiagnosticMessageText(config.error.messageText, '\n'));
+    const parsed = ts.parseJsonConfigFileContent(config.config, ts.sys, root);
+    const program = ts.createProgram([browserEntry], {
+        ...parsed.options, declaration: true, emitDeclarationOnly: true,
+        outDir: path.join(root, 'dist/browser-types'), sourceMap: false
+    });
+    const result = program.emit();
+    const diagnostics = [...parsed.errors, ...ts.getPreEmitDiagnostics(program), ...result.diagnostics];
+    if (diagnostics.length) throw new Error(ts.formatDiagnosticsWithColorAndContext(diagnostics, {
+        getCanonicalFileName: name => name, getCurrentDirectory: () => root, getNewLine: () => '\n'
+    }));
+}

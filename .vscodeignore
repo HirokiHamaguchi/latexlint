@@ -2,7 +2,8 @@
 **
 
 # Include only necessary files
-!dist/**
+!dist/extension.js
+!dist/extension.js.map
 !package.json
 !LICENSE
 !images/lintIconDark.svg

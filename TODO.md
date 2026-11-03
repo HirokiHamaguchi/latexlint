@@ -1,5 +1,6 @@
 # TODO
 
+- Reduce pre-commit setup downloads by installing the published npm package.
 - Make a tab containing latex tips:
   - `LLSetBar`: Detect `mid` in `\left` and `\right`.
   - `LLDx`: Detect `dx` after `\int`. It should be `\ddx`. Disabled by default.

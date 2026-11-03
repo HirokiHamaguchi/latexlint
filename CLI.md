@@ -127,7 +127,8 @@ repos:
       - id: latexlint
 ```
 
-Replace `REVISION` with the release tag or commit you want to use.
+Replace `REVISION` with the tag for the version you want to use (2.0.0 or later)
+from the [published tags](https://github.com/HirokiHamaguchi/latexlint/tags).
 To also fix files, replace the hook entry with:
 
 ```yaml

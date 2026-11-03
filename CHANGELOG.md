@@ -2,7 +2,7 @@
 
 All notable changes to the "latexlint" will be documented in this file.
 
-## 1.9.3 - 2026-11-03
+## 2.0.0 - 2026-11-03
 
 - Schedule diagnostics per document so saving multiple files skips none.
 - Cancel pending diagnostics when a document closes or the extension stops.

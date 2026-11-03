@@ -15,6 +15,8 @@ LaTeX Lint is a linter to detect common LaTeX and academic writing issues.
 
 ![abstract_web](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/abstract_web.png)
 
+[CLI version](CLI.md) can also be used with pre-commit and CI.
+
 ## Rules
 
 The detected rules are listed below.

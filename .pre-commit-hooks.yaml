@@ -1,0 +1,18 @@
+# Hook definitions consumed by projects using this repository with pre-commit:
+# https://pre-commit.com/#creating-new-hooks
+# Follow markdownlint-cli's check/fix hook split:
+# https://github.com/igorshubovych/markdownlint-cli/blob/master/.pre-commit-hooks.yaml
+- id: latexlint
+  name: latexlint
+  description: Check LaTeX and Markdown files.
+  entry: latexlint
+  language: node
+  files: \.(tex|md)$
+  types: [file]
+- id: latexlint-fix
+  name: latexlint-fix
+  description: Fix active Japanese spacing diagnostics, then check remaining issues.
+  entry: latexlint --fix
+  language: node
+  files: \.(tex|md)$
+  types: [file]

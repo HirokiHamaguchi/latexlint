@@ -2,6 +2,9 @@ import type * as vscode from "vscode";
 import createLLTextVSCode from "../LLText/createLLTextVSCode";
 import { configuredRules, standardRules } from "./rules";
 
+import filterDisabledLineDiagnostics from './filterDisabledLineDiagnostics';
+import formatException from './formatException';
+
 export interface PerformanceTiming {
   name: string;
   time: number;
@@ -72,6 +75,15 @@ export function lintWithPerformanceTracking(options: LintOptions): {
   diagnostics.sort(compareDiagnosticsByPosition);
 
   return { diagnostics, disabledLines: txt.disabledLines, timings };
+}
+
+/** Apply the same diagnostic exclusions in the editor and the CLI. */
+export function lintDocument(options: LintOptions & { exceptions: string[] }) {
+    const result = lintWithPerformanceTracking(options);
+    const diagnostics = filterDisabledLineDiagnostics(result.diagnostics, result.disabledLines)
+        .filter((diag) =>
+            !options.exceptions.includes(formatException(options.doc.getText(diag.range))));
+    return { ...result, diagnostics };
 }
 
 function compareDiagnosticsByPosition(a: vscode.Diagnostic, b: vscode.Diagnostic) {

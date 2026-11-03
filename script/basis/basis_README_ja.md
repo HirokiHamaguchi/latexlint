@@ -16,6 +16,8 @@ LaTeX Lintは、LaTeXおよび学術執筆上の一般的な問題を検出す�
 
 ![abstract_web](https://raw.githubusercontent.com/HirokiHamaguchi/latexlint/master/images/abstract_web.png)
 
+[CLI版](CLI_ja.md)はpre-commitやCIに組み込むこともできます。
+
 ## ルール
 
 検出するルールの一覧です。

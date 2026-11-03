@@ -1,0 +1,13 @@
+% CLI fixture: missing spaces are intentional.
+\documentclass{article}
+\begin{document}
+ここで$x$を変数とする。
+% 「𠮷」はUTF-16で2コード単位になるため、後続の診断・修正位置のずれを確認する例です。
+𠮷田さんは\(y\)を考える。
+既に $z$ は正しい空白を持つ。
+この行の$x$は変更しない。 % LLDisable
+% コメント内の$x$は変更しない。
+\begin{verbatim}
+この$x$は変更しない。
+\end{verbatim}
+\end{document}

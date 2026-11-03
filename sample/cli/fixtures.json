@@ -1,0 +1,59 @@
+{
+  "configurations": {
+    "spacing": {
+      "default": false,
+      "LLSpaceJapanese": true
+    },
+    "exceptions": {
+      "default": false,
+      "LLSpaceJapanese": true,
+      "exceptions": [
+        "外$",
+        "$例"
+      ]
+    },
+    "with-unfixable": {
+      "default": false,
+      "LLSpaceJapanese": true,
+      "LLT": true
+    },
+    "unknown-rule": {
+      "LLJapaneseSpace": true
+    }
+  },
+  "cases": [
+    {
+      "file": "spacing.tex",
+      "config": "spacing",
+      "expected": "% CLI fixture: missing spaces are intentional.\n\\documentclass{article}\n\\begin{document}\nここで $x$ を変数とする。\n% 「𠮷」はUTF-16で2コード単位になるため、後続の診断・修正位置のずれを確認する例です。\n𠮷田さんは \\(y\\) を考える。\n既に $z$ は正しい空白を持つ。\nこの行の$x$は変更しない。 % LLDisable\n% コメント内の$x$は変更しない。\n\\begin{verbatim}\nこの$x$は変更しない。\n\\end{verbatim}\n\\end{document}\n",
+      "fixedStatus": 0
+    },
+    {
+      "file": "spacing.md",
+      "config": "spacing",
+      "expected": "# Markdown用CLIテスト\n\nここで $x$ を変数とする。\n<!-- 「𠮷」はUTF-16で2コード単位になるため、後続の診断・修正位置のずれを確認する例です。 -->\n𠮷田さんは \\(y\\) を考える。\n既に $z$ は正しい空白を持つ。\nこの行の$x$は変更しない。 <!-- LLDisable -->\n\n```tex\nこの$x$は変更しない。\n```\n\nインラインコード `日本語 $x$ 日本語` も既存仕様では検査対象です。\n",
+      "fixedStatus": 0
+    },
+    {
+      "file": "exceptions.tex",
+      "config": "exceptions",
+      "input": "% The first body line is configured as an exception.\n\\documentclass{article}\n\\begin{document}\n例外$x$例外\n本文$x$本文\n\\end{document}\n",
+      "expected": "% The first body line is configured as an exception.\n\\documentclass{article}\n\\begin{document}\n例外$x$例外\n本文 $x$ 本文\n\\end{document}\n",
+      "fixedStatus": 0
+    },
+    {
+      "file": "encoding-crlf-bom.tex",
+      "config": "spacing",
+      "input": "\uFEFF% UTF-8 BOM and CRLF are intentional.\r\n% Preserve both when fixing.\r\n% 「𠮷」はUTF-16で2コード単位になるため、後続の診断・修正位置のずれを確認する例です。\r\n𠮷田さんは$x$を変数とする。\r\n次に\\(y\\)を考える。\r\n",
+      "expected": "\uFEFF% UTF-8 BOM and CRLF are intentional.\r\n% Preserve both when fixing.\r\n% 「𠮷」はUTF-16で2コード単位になるため、後続の診断・修正位置のずれを確認する例です。\r\n𠮷田さんは $x$ を変数とする。\r\n次に \\(y\\) を考える。\r\n",
+      "fixedStatus": 0
+    },
+    {
+      "file": "remaining.tex",
+      "config": "with-unfixable",
+      "input": "% LLT must remain after spacing fixes.\n\\documentclass{article}\n\\begin{document}\nここで$x$を変数とする。\n転置を$A^T$と書く。\n\\end{document}\n",
+      "expected": "% LLT must remain after spacing fixes.\n\\documentclass{article}\n\\begin{document}\nここで $x$ を変数とする。\n転置を $A^T$ と書く。\n\\end{document}\n",
+      "fixedStatus": 1
+    }
+  ]
+}

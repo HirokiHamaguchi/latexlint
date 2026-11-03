@@ -29,7 +29,9 @@ export function collectFiles(inputs: string[], options: FileOptions): string[] {
         const absolute = resolve(cwd, input);
         if (existsSync(absolute)) {
             if (statSync(absolute).isDirectory())
-                return globSync(`${posix(absolute)}/**/*.{tex,md}`, globOptions);
+                // Literal directory names may contain glob syntax such as [1].
+                // Keep them in cwd so discovery cannot select a sibling instead.
+                return globSync('**/*.{tex,md}', { ...globOptions, cwd: absolute });
             return [absolute];
         }
         if (hasMagic(input, { magicalBraces: true, windowsPathsNoEscape: true })) return globSync(input, globOptions);

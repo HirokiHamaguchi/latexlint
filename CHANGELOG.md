@@ -13,6 +13,8 @@ All notable changes to the "latexlint" will be documented in this file.
 - Preserve UTF-8 BOM and line endings in CLI fixes.
 - Document npm usage and pre-commit integration in English and Japanese CLI guides.
 - Fix CRLF position handling in the standalone diagnostic mock.
+- Treat directory names containing glob syntax literally during CLI discovery.
+- Read optional diagnostic corpora from the separate latexlint-externals checkout.
 
 ## 1.9.2 - 2026-8-12
 

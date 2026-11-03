@@ -194,6 +194,29 @@ test('directories, globs, dotfiles, ignore patterns and ignore files', t => {
     assert.equal(f.run('empty/**/*.tex').status, 0);
 });
 
+test('literal directories with glob characters do not inspect or fix siblings', t => {
+    const original = '本文$x$本文';
+    const fixed = '本文 $x$ 本文';
+    const f = fixture(t, {
+        'draft[1]/paper.tex': original, 'draft1/paper.tex': original,
+        'draft{a,b}/notes.md': original, 'drafta/notes.md': original,
+        'draftb/notes.md': original
+    });
+    for (const [directory, filename] of [['draft[1]', 'paper.tex'], ['draft{a,b}', 'notes.md']]) {
+        const check = f.run(directory);
+        assert.equal(check.status, 1, check.stderr);
+        assert.ok(check.stderr.includes(directory));
+        assert.equal(f.run('--fix', directory).status, 0);
+        assert.equal(f.read(`${directory}/${filename}`).toString(), fixed);
+    }
+    for (const filename of ['draft1/paper.tex', 'drafta/notes.md', 'draftb/notes.md'])
+        assert.equal(f.read(filename).toString(), original, 'unrequested siblings must stay unchanged');
+    assert.equal(f.run('.', '--ignore', 'draft[1]', '--ignore', 'draft{a,b}').status, 1);
+    const excluded = f.run('.', '--ignore', 'draft[1]', '--ignore', 'draft{a,b}');
+    assert.ok(!excluded.stderr.includes('draft[1]') && !excluded.stderr.includes('draft{a,b}'));
+    assert.match(excluded.stderr, /draft1|drafta|draftb/);
+});
+
 test('vocabulary data and user-defined rules work without external assets', t => {
     const f = fixture(t, { 'paper.md': 'marker\n' }, {
         default: false, LLUserDefined: true, userDefinedRules: ['marker']

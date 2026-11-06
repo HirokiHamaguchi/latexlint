@@ -1,4 +1,11 @@
 [CODE] LLThousands (60)
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1749)
+  error: 11,785
+  message: Consider using "11{,}785" instead of "11,785". This can help avoid spacing issues and improve readability.
+  1748: \end{align*}
+> 1749: Thus, the bookstore should expect to generate about $\$7,535 + \$4,250 = \$11,785$ from these 100 students for this one class. However, there might be some \emph{sampling variability} so the actual amount may differ by a little bit.
+  1750: \end{nexample}
+
 - file: sample\arxiv_sources\2103.03874v2\1-intro.tex (line 34)
   error: 12,500
   message: Consider using "12{,}500" instead of "12,500". This can help avoid spacing issues and improve readability.
@@ -411,11 +418,4 @@
     24: \subsection{Data Sources and Incidence Metrics}
 >   25: Here, we analyze published works in the OpenAlex dataset~\cite{priem2022openalex} (October $2025$ updated snapshot). OpenAlex is one of the largest open bibliometric dataset, and we restrict the analysis to records with a known publication year, article type, and sources classified as journal or conference proceedings. This results in over $107$M works published from $1992$ to $2021$, of which about $31,000$ are flagged as retracted in OpenAlex  through a boolean entry sourced from the Retraction Watch database~\cite{retractionwatch2023}. OpenAlex also provides additional metadata such as active-author counts, topic tags mapped to fields and domains, institutional affiliations, and publisher identifiers, enabling multi-level analyses across disciplines, countries, and publishers. For each publication year $t$, we record the total number of works published in that year and the subset that were retracted at any point in time (i.e., counts are indexed by publication cohort). This is an important point as we consider the incidence per year of publication and not retraction date. Because retractions typically occur with a delay after publication, we analyze the delay distribution for works published since $1992$; in the last decade we observe a median lag of approximately $2.0$ years ($95\%$ confidence interval (CI) $[1.0\text{–}3.0]$) (Appendix Fig.~\ref{fig:time to retraction}), consistent with previous findings~\cite{steen2016has}. To prevent right-censoring in recent cohorts, we limit our analysis to papers published before $2021$, ensuring that retraction counts are sufficiently stable for the incidence analyses that follow (see \methods section and the Appendix for additional details). 
     26: 
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1749)
-  error: 11,785
-  message: Consider using "11{,}785" instead of "11,785". This can help avoid spacing issues and improve readability.
-  1748: \end{align*}
-> 1749: Thus, the bookstore should expect to generate about $\$7,535 + \$4,250 = \$11,785$ from these 100 students for this one class. However, there might be some \emph{sampling variability} so the actual amount may differ by a little bit.
-  1750: \end{nexample}
 

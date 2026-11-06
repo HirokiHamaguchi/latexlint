@@ -1,15 +1,15 @@
 [CODE] LLSpaceEnglish (2)
+- file: ..\latexlint-externals\submodules\OpenLogic\content\intuitionistic-logic\propositions-as-types\proof-terms.tex (line 44)
+  error: $
+  message: Consider adding a space at here.
+    43: !B$ is inferred from $!A$ or from~$!B$. Suppose $M$ is the term
+>   44: assigned to~$!A$from which $!A \lor !B$ is inferred. Then the proof
+    45: term assigned to $!A \lor !B$ is $\ori{1}{!A}{!M}$. If we instead
+
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 573)
   error: $
   message: Consider adding a space at here.
    572: \]
 >  573: where $r$ is a positive integer not depending on $f$ and $p$is $\in\NN\setminus\{0\}$
    574: (see \cite{malgrange:integrales_asymptotiques} Section 7 and \cite{arnold_gusein_varchenko:singularities_2},
-
-- file: sample\submodules\OpenLogic\content\intuitionistic-logic\propositions-as-types\proof-terms.tex (line 44)
-  error: $
-  message: Consider adding a space at here.
-    43: !B$ is inferred from $!A$ or from~$!B$. Suppose $M$ is the term
->   44: assigned to~$!A$from which $!A \lor !B$ is inferred. Then the proof
-    45: term assigned to $!A \lor !B$ is $\ori{1}{!A}{!M}$. If we instead
 

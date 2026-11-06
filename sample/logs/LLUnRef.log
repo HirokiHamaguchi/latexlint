@@ -1,4 +1,116 @@
 [CODE] LLUnRef (331)
+- file: ..\latexlint-externals\submodules\coursebook\appendix\appendix.tex (line 197)
+  error: \label{fig:sloppy_struct}
+  message: The label "fig:sloppy_struct" in the figure environment is defined but unused in this file (possibly elsewhere).
+   196: \caption{Eight box struct, two boxes of slop}
+>  197: \label{fig:sloppy_struct}
+   198: \end{figure}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 701)
+  error: \label{6895997}
+  message: The label "6895997" in the figure environment is defined but unused in this file (possibly elsewhere).
+   700: \caption{Probabilities for falling within 1, 2, and 3 standard deviations of the mean in a normal distribution.}
+>  701: \label{6895997}
+   702: \end{figure}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 661)
+  error: \label{rissosDolphin}
+  message: The label "rissosDolphin" in the figure environment is defined but unused in this file (possibly elsewhere).
+   660:    {\footnotesize Photo by Mike Baird (\oiRedirect{textbook-bairdphotos_com}{www.bairdphotos.com}). \oiRedirect{textbook-CC_BY_2}{CC~BY~2.0~license}.}\vspace{-8mm}}
+>  661:    \label{rissosDolphin}
+   662: \end{minipage}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 1175)
+  error: \label{textbooksSummaryStats}
+  message: The label "textbooksSummaryStats" in the figure environment is defined but unused in this file (possibly elsewhere).
+  1174: \caption{Summary statistics for the \uclabookN{} price differences.}
+> 1175: \label{textbooksSummaryStats}
+  1176: \end{figure}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1183)
+  error: \label{quadcopter_david_j}
+  message: The label "quadcopter_david_j" in the figure environment is defined but unused in this file (possibly elsewhere).
+  1182:    This photo has been cropped and a border has been added.}}
+> 1183: \label{quadcopter_david_j}
+  1184: \end{figure}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1571)
+  error: \label{arrayOfFigureAreasForChiSquareDistribution}
+  message: The label "arrayOfFigureAreasForChiSquareDistribution" in the figure environment is defined but unused in this file (possibly elsewhere).
+  1570: }
+> 1571: \label{arrayOfFigureAreasForChiSquareDistribution}
+  1572: \end{figure}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 448)
+  error: \label{variables}
+  message: The label "variables" in the figure environment is defined but unused in this file (possibly elsewhere).
+   447:   \caption{Breakdown of variables into their respective types.}
+>  448:   \label{variables}
+   449: \end{figure}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 899)
+  error: \label{mnWinter}
+  message: The label "mnWinter" in the figure environment is defined but unused in this file (possibly elsewhere).
+   898:         ``It's one storm, in one region, of one country.''
+>  899:     \label{mnWinter}}
+   900:   \end{minipage}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 943)
+  error: \label{popToSampleGraduates}
+  message: The label "popToSampleGraduates" in the figure environment is defined but unused in this file (possibly elsewhere).
+   942:       sample.}
+>  943:   \label{popToSampleGraduates}
+   944: \end{figure}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 972)
+  error: \label{popToSubSampleGraduates}
+  message: The label "popToSubSampleGraduates" in the figure environment is defined but unused in this file (possibly elsewhere).
+   971:       health-related majors.}
+>  972:   \label{popToSubSampleGraduates}
+   973: \end{figure}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 1012)
+  error: \label{surveySample}
+  message: The label "surveySample" in the figure environment is defined but unused in this file (possibly elsewhere).
+  1011:       to completely fix this problem.}
+> 1012:   \label{surveySample}
+  1013: \end{figure}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 777)
+  error: \label{photoClassifyVenn}
+  message: The label "photoClassifyVenn" in the figure environment is defined but unused in this file (possibly elsewhere).
+   776:       \data{photo\us{}classify} data set.}
+>  777:   \label{photoClassifyVenn}
+   778: \end{figure}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 2295)
+  error: \label{fdicHeightContDistFilled}
+  message: The label "fdicHeightContDistFilled" in the figure environment is defined but unused in this file (possibly elsewhere).
+  2294:       Compare this plot with Figure~\ref{usHeightsHist180185}.}
+> 2295:   \label{fdicHeightContDistFilled}
+  2296: \end{figure}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1125)
+  error: \label{county_pop_transformed}
+  message: The label "county_pop_transformed" in the figure environment is defined but unused in this file (possibly elsewhere).
+  1124:       $10^4 =$ 10,000.}
+> 1125:     \label{county_pop_transformed}
+  1126: \end{figure}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1190)
+  error: \label{county_pop_change_v_pop_transform_main}
+  message: The label "county_pop_change_v_pop_transform_main" in the figure environment is defined but unused in this file (possibly elsewhere).
+  1189:       size has been log-transformed.}
+> 1190:   \label{county_pop_change_v_pop_transform_main}
+  1191: \end{figure}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\tables\TeX\chiSquareTable.tex (line 94)
+  error: \label{arrayOfFigureAreasForChiSquareDistributionChiSqAppendix}
+  message: The label "arrayOfFigureAreasForChiSquareDistributionChiSqAppendix" in the figure environment is defined but unused in this file (possibly elsewhere).
+    93: }
+>   94: \label{arrayOfFigureAreasForChiSquareDistributionChiSqAppendix}
+    95: \end{figure}
+
 - file: sample\arxiv_sources\1609.03457v1\tables_for-avail-engines-chapter.tex (line 12)
   error: \label{table:Web-available-main}
   message: The label "table:Web-available-main" in the table environment is defined but unused in this file (possibly elsewhere).
@@ -2203,116 +2315,4 @@
     20:     \caption{\textbf{Relightable LCA.} We demonstrate relighting under HDRI environment maps and point lights, alongside the recovered intrinsic properties of the avatar.}
 >   21:     \label{fig:relighting}
     22:     \vspace{-0.2in}
-
-- file: sample\submodules\coursebook\appendix\appendix.tex (line 197)
-  error: \label{fig:sloppy_struct}
-  message: The label "fig:sloppy_struct" in the figure environment is defined but unused in this file (possibly elsewhere).
-   196: \caption{Eight box struct, two boxes of slop}
->  197: \label{fig:sloppy_struct}
-   198: \end{figure}
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 701)
-  error: \label{6895997}
-  message: The label "6895997" in the figure environment is defined but unused in this file (possibly elsewhere).
-   700: \caption{Probabilities for falling within 1, 2, and 3 standard deviations of the mean in a normal distribution.}
->  701: \label{6895997}
-   702: \end{figure}
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 661)
-  error: \label{rissosDolphin}
-  message: The label "rissosDolphin" in the figure environment is defined but unused in this file (possibly elsewhere).
-   660:    {\footnotesize Photo by Mike Baird (\oiRedirect{textbook-bairdphotos_com}{www.bairdphotos.com}). \oiRedirect{textbook-CC_BY_2}{CC~BY~2.0~license}.}\vspace{-8mm}}
->  661:    \label{rissosDolphin}
-   662: \end{minipage}
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 1175)
-  error: \label{textbooksSummaryStats}
-  message: The label "textbooksSummaryStats" in the figure environment is defined but unused in this file (possibly elsewhere).
-  1174: \caption{Summary statistics for the \uclabookN{} price differences.}
-> 1175: \label{textbooksSummaryStats}
-  1176: \end{figure}
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1183)
-  error: \label{quadcopter_david_j}
-  message: The label "quadcopter_david_j" in the figure environment is defined but unused in this file (possibly elsewhere).
-  1182:    This photo has been cropped and a border has been added.}}
-> 1183: \label{quadcopter_david_j}
-  1184: \end{figure}
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1571)
-  error: \label{arrayOfFigureAreasForChiSquareDistribution}
-  message: The label "arrayOfFigureAreasForChiSquareDistribution" in the figure environment is defined but unused in this file (possibly elsewhere).
-  1570: }
-> 1571: \label{arrayOfFigureAreasForChiSquareDistribution}
-  1572: \end{figure}
-
-- file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 448)
-  error: \label{variables}
-  message: The label "variables" in the figure environment is defined but unused in this file (possibly elsewhere).
-   447:   \caption{Breakdown of variables into their respective types.}
->  448:   \label{variables}
-   449: \end{figure}
-
-- file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 899)
-  error: \label{mnWinter}
-  message: The label "mnWinter" in the figure environment is defined but unused in this file (possibly elsewhere).
-   898:         ``It's one storm, in one region, of one country.''
->  899:     \label{mnWinter}}
-   900:   \end{minipage}
-
-- file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 943)
-  error: \label{popToSampleGraduates}
-  message: The label "popToSampleGraduates" in the figure environment is defined but unused in this file (possibly elsewhere).
-   942:       sample.}
->  943:   \label{popToSampleGraduates}
-   944: \end{figure}
-
-- file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 972)
-  error: \label{popToSubSampleGraduates}
-  message: The label "popToSubSampleGraduates" in the figure environment is defined but unused in this file (possibly elsewhere).
-   971:       health-related majors.}
->  972:   \label{popToSubSampleGraduates}
-   973: \end{figure}
-
-- file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 1012)
-  error: \label{surveySample}
-  message: The label "surveySample" in the figure environment is defined but unused in this file (possibly elsewhere).
-  1011:       to completely fix this problem.}
-> 1012:   \label{surveySample}
-  1013: \end{figure}
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 777)
-  error: \label{photoClassifyVenn}
-  message: The label "photoClassifyVenn" in the figure environment is defined but unused in this file (possibly elsewhere).
-   776:       \data{photo\us{}classify} data set.}
->  777:   \label{photoClassifyVenn}
-   778: \end{figure}
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 2295)
-  error: \label{fdicHeightContDistFilled}
-  message: The label "fdicHeightContDistFilled" in the figure environment is defined but unused in this file (possibly elsewhere).
-  2294:       Compare this plot with Figure~\ref{usHeightsHist180185}.}
-> 2295:   \label{fdicHeightContDistFilled}
-  2296: \end{figure}
-
-- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1125)
-  error: \label{county_pop_transformed}
-  message: The label "county_pop_transformed" in the figure environment is defined but unused in this file (possibly elsewhere).
-  1124:       $10^4 =$ 10,000.}
-> 1125:     \label{county_pop_transformed}
-  1126: \end{figure}
-
-- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1190)
-  error: \label{county_pop_change_v_pop_transform_main}
-  message: The label "county_pop_change_v_pop_transform_main" in the figure environment is defined but unused in this file (possibly elsewhere).
-  1189:       size has been log-transformed.}
-> 1190:   \label{county_pop_change_v_pop_transform_main}
-  1191: \end{figure}
-
-- file: sample\submodules\openintro-statistics\extraTeX\tables\TeX\chiSquareTable.tex (line 94)
-  error: \label{arrayOfFigureAreasForChiSquareDistributionChiSqAppendix}
-  message: The label "arrayOfFigureAreasForChiSquareDistributionChiSqAppendix" in the figure environment is defined but unused in this file (possibly elsewhere).
-    93: }
->   94: \label{arrayOfFigureAreasForChiSquareDistributionChiSqAppendix}
-    95: \end{figure}
 

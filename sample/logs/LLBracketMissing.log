@@ -1,4 +1,431 @@
 [CODE] LLBracketMissing (877)
+- file: ..\latexlint-externals\submodules\OpenLogic\content\lambda-calculus\lambda-definability\arithmetical-functions.tex (line 30)
+  error: ^nx
+  message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
+    29:    \intertext{The embedded term $\num{n}fx$ is a redex, since
+>   30:      $\num{n}$ is $\lambd[fx][f^nx]$. So $\num{n}fx \redone f^nx$ and
+    31:      so, for the entire term we have}
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\lambda-calculus\lambda-definability\arithmetical-functions.tex (line 30)
+  error: ^nx
+  message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
+    29:    \intertext{The embedded term $\num{n}fx$ is a redex, since
+>   30:      $\num{n}$ is $\lambd[fx][f^nx]$. So $\num{n}fx \redone f^nx$ and
+    31:      so, for the entire term we have}
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\lambda-calculus\lambda-definability\fixpoints.tex (line 172)
+  error: _Cg
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   171: \end{align*}
+>  172: In other words, $Y_Cg$ and $g(Y_Cg)$ reduce to a common term $g(VV)$; so $Y_Cg
+   173: \equal[\beta] g(Y_Cg)$. This is often enough for applications.
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\lambda-calculus\lambda-definability\fixpoints.tex (line 172)
+  error: _Cg
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   171: \end{align*}
+>  172: In other words, $Y_Cg$ and $g(Y_Cg)$ reduce to a common term $g(VV)$; so $Y_Cg
+   173: \equal[\beta] g(Y_Cg)$. This is often enough for applications.
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\lambda-calculus\lambda-definability\fixpoints.tex (line 172)
+  error: _Cg
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   171: \end{align*}
+>  172: In other words, $Y_Cg$ and $g(Y_Cg)$ reduce to a common term $g(VV)$; so $Y_Cg
+   173: \equal[\beta] g(Y_Cg)$. This is often enough for applications.
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\lambda-calculus\lambda-definability\fixpoints.tex (line 173)
+  error: _Cg
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   172: In other words, $Y_Cg$ and $g(Y_Cg)$ reduce to a common term $g(VV)$; so $Y_Cg
+>  173: \equal[\beta] g(Y_Cg)$. This is often enough for applications.
+   174: 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\binomial_distribution.tex (line 104)
+  error: _BY
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   103:   (\oiRedirect{textbook-flickr_staccabees_dreidels}{http://flic.kr/p/7gLZTf}) \\
+>  104:   \oiRedirect{textbook-CC_BY_2}{CC~BY~2.0~license}} \\
+   105: \end{minipage}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 11)
+  error: _di
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+    10: \end{chapterpage}
+>   11: \renewcommand{\chapterfolder}{ch_distributions}
+    12: 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 370)
+  error: _vi
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   369:     \begin{center}
+>  370:     \oiRedirect{textbook-openintro_videos}
+   371:         {www.openintro.org/videos}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1425)
+  error: _nC
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+  1424: \term{n choose k}.\footnote{Other notation for
+> 1425:   $n$ choose $k$ includes $_nC_k$, $C_n^k$, and $C(n,k)$.}
+  1426: The exclamation point notation (e.g. $k!$) denotes
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 419)
+  error: _10
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   418:    \centering
+>  419:    \Figure[A histogram is shown for 10,000 sample proportions where each sample is taken from a population where the population proportion is \pewsolarparprop{} and the sample size is $n = \pewsolarpollsize{}$. The distribution is bell-shaped (appears nearly normal), is centered at 0.88 and has a standard deviation of about 0.01.]{0.8}{sampling_10k_prop_88p}
+   420:    %\Figure{0.8}{sampling_10k_prop_887p}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 419)
+  error: _pr
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   418:    \centering
+>  419:    \Figure[A histogram is shown for 10,000 sample proportions where each sample is taken from a population where the population proportion is \pewsolarparprop{} and the sample size is $n = \pewsolarpollsize{}$. The distribution is bell-shaped (appears nearly normal), is centered at 0.88 and has a standard deviation of about 0.01.]{0.8}{sampling_10k_prop_88p}
+   420:    %\Figure{0.8}{sampling_10k_prop_887p}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 419)
+  error: _88
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   418:    \centering
+>  419:    \Figure[A histogram is shown for 10,000 sample proportions where each sample is taken from a population where the population proportion is \pewsolarparprop{} and the sample size is $n = \pewsolarpollsize{}$. The distribution is bell-shaped (appears nearly normal), is centered at 0.88 and has a standard deviation of about 0.01.]{0.8}{sampling_10k_prop_88p}
+   420:    %\Figure{0.8}{sampling_10k_prop_887p}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 755)
+  error: _10
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   754:    \centering
+>  755:    \Figure[There are two plots. The first plot is a histogram of 10,000 simulations of p-hat when the sample size is n equals 10 and the population proportion is p equals 0.25. The possible values are 0.0, 0.1, 0.2, and so on up to 1.0, though the graph only shows values up to 0.8. The distribution is centered at about 0.25, and is slightly right-skewed. The frequencies are about 500 for 0.0, 1900 for 0.1, 2800 for 0.2, 2400 for 0.3, 1500 for 0.4, 500 for 0.5, 100 for 0.6, and the bin heights for the remaining values have bin heights that are not visually distinguishable from zero. The second plot shows a normal distribution centered at 0.25 with a standard deviation of 0.137. The plot has a vertical line located at 0.0, which makes it more visually evident that a portion of the area under the normal distribution -- about 5\% of this area -- represents values below 0.0.]{0.97}{sampling_10_prop_25p}
+   756:    \caption{Left: simulations of $\hat{p}$ when the sample size
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 755)
+  error: _pr
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   754:    \centering
+>  755:    \Figure[There are two plots. The first plot is a histogram of 10,000 simulations of p-hat when the sample size is n equals 10 and the population proportion is p equals 0.25. The possible values are 0.0, 0.1, 0.2, and so on up to 1.0, though the graph only shows values up to 0.8. The distribution is centered at about 0.25, and is slightly right-skewed. The frequencies are about 500 for 0.0, 1900 for 0.1, 2800 for 0.2, 2400 for 0.3, 1500 for 0.4, 500 for 0.5, 100 for 0.6, and the bin heights for the remaining values have bin heights that are not visually distinguishable from zero. The second plot shows a normal distribution centered at 0.25 with a standard deviation of 0.137. The plot has a vertical line located at 0.0, which makes it more visually evident that a portion of the area under the normal distribution -- about 5\% of this area -- represents values below 0.0.]{0.97}{sampling_10_prop_25p}
+   756:    \caption{Left: simulations of $\hat{p}$ when the sample size
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 755)
+  error: _25
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   754:    \centering
+>  755:    \Figure[There are two plots. The first plot is a histogram of 10,000 simulations of p-hat when the sample size is n equals 10 and the population proportion is p equals 0.25. The possible values are 0.0, 0.1, 0.2, and so on up to 1.0, though the graph only shows values up to 0.8. The distribution is centered at about 0.25, and is slightly right-skewed. The frequencies are about 500 for 0.0, 1900 for 0.1, 2800 for 0.2, 2400 for 0.3, 1500 for 0.4, 500 for 0.5, 100 for 0.6, and the bin heights for the remaining values have bin heights that are not visually distinguishable from zero. The second plot shows a normal distribution centered at 0.25 with a standard deviation of 0.137. The plot has a vertical line located at 0.0, which makes it more visually evident that a portion of the area under the normal distribution -- about 5\% of this area -- represents values below 0.0.]{0.97}{sampling_10_prop_25p}
+   756:    \caption{Left: simulations of $\hat{p}$ when the sample size
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 1516)
+  error: _fa
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+  1515: Hans Rosling, Anna Rosling R{\"o}nnlund, and Ola Rosling
+> 1516: called \emph{\oiRedirect{amazon_factfulness}{Factfulness}}:
+  1517: \begin{quote}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 1962)
+  error: _fa
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+  1961: the Roslings' book,
+> 1962: \emph{\oiRedirect{amazon_factfulness}{Factfulness}}.
+  1963: 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 660)
+  error: _co
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   659:    -----------------------------\vspace{-2mm}\\
+>  660:    {\footnotesize Photo by Mike Baird (\oiRedirect{textbook-bairdphotos_com}{www.bairdphotos.com}). \oiRedirect{textbook-CC_BY_2}{CC~BY~2.0~license}.}\vspace{-8mm}}
+   661:    \label{rissosDolphin}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 660)
+  error: _BY
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   659:    -----------------------------\vspace{-2mm}\\
+>  660:    {\footnotesize Photo by Mike Baird (\oiRedirect{textbook-bairdphotos_com}{www.bairdphotos.com}). \oiRedirect{textbook-CC_BY_2}{CC~BY~2.0~license}.}\vspace{-8mm}}
+   661:    \label{rissosDolphin}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 1827)
+  error: _to
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+  1826:   Please be aware that there is some adult language:
+> 1827:   \oiRedirect{textbook-johnoliver_tobacco}{youtu.be/6UsHHOCH4q8}.}
+  1828: % Resource on this topic:
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 2366)
+  error: _nu
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+  2365:   \indent%
+> 2366:   \Figures[A normal distribution is shown for "x-bar-sub-treatment minus x-bar-sub-control", where the distribution is centered at zero and has a standard deviation of about 0.76 (note that this is a much smaller than in earlier plots). The distribution is labeled as "Null distribution". A second normal distribution is also shown centered at -3 with a standard deviation of about 0.76, and this distribution is labeled "Distribution with mu-sub-treatment minus mu-sub-control equals -3". The overlap of these two normal distributions is much smaller than in the last plot. Lines are shown demarking "reject" regions for the null distribution are shown at about -1.5 and positive 1.5, and the region of the second distribution centered at -3 that is below the lower demarkation line at about -1.5 is shaded, representing a bit over 95\% of the distribution.]{0.7}{power_null_0_0-76}
+  2367:       {power_null_0_0-76_with_alt_at_3_and_shaded} \\
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 2889)
+  error: _fa
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+  2888: \term{prosecutor's fallacy}.\footnote{See, for example,
+> 2889:   \oiRedirect{textbook-prosecutors_fallacy}
+  2890:       {statmodeling.stat.columbia.edu/2007/05/18/the\_prosecutors}.}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1181)
+  error: _BY
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+  1180:        {http://flic.kr/p/oiWLNu}).
+> 1181:    \oiRedirect{textbook-CC_BY_2}{CC-BY 2.0 license.}
+  1182:    This photo has been cropped and a border has been added.}}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\testing_for_goodness_of_fit_using_chi-square.tex (line 96)
+  error: _BY
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+    95: \Figures[A photo of a barking deer, which has pronged horns and a reddish brown color, looking out through leaves and foliage.]{0.7}{eoce/barking_deer_chisq_GOF}{barking_deer.jpg} \\
+>   96: {\footnotesize Photo by Shrikant Rao (\oiRedirect{textbook-flickr_shrikant_rao_barking_deer}{http://flic.kr/p/4Xjdkk}) \oiRedirect{textbook-CC_BY_2}{CC~BY~2.0~license}}
+    97: \end{center}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 1139)
+  error: _st
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+  1138:     [Two figures are shown, one positioned above the other. The first is a large rectangle containing many points, where 18 of those points are circled and are a different color than the other points. The lower figure is also a large rectangle, but this rectangle contains 6 larger circles that are labeled "Stratum 1" through "Stratum 6". In each of these circles are many points, and 3 points have been circled and are in a different color within each of the six circles, specially calling out those 3 points in each of the stratum circles in a similar way to how the 18 points were being called out in the upper figure.]
+> 1139:     {}{samplingMethodsFigure}{simple_stratified}
+  1140:   \caption{
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 1187)
+  error: _mu
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+  1186:     [Two figures are shown, one positioned above the other. The first is a large rectangle containing 8 large circles with labels "Cluster 1" through "Cluster 8". All of these large circles contain points. However, three of the large circles (Cluster 3, Cluster 4, and Cluster 8) are colored differently than the other large circles and their contained points are also colored differently. The lower figure is the same as the upper figure, except that only 5 of the points are colored differently in each of the 3 large circles that have been colored differently.]
+> 1187:     {}{samplingMethodsFigure}{cluster_multistage}
+  1188:   \caption{Examples of cluster\index{sample!cluster sampling}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 11)
+  error: _pr
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+    10: \end{chapterpage}
+>   11: \renewcommand{\chapterfolder}{ch_probability}
+    12: 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\defining_probability.tex (line 45)
+  error: _BY
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+    44:   (\oiRedirect{textbook-flickr_hakan_dahlstrom_roulette_wheel}{http://flic.kr/p/93fEzp}) \\
+>   45:   \oiRedirect{textbook-CC_BY_2}{CC~BY~2.0~license}}
+    46: \end{center}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 172)
+  error: _BY
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   171:           {https://flic.kr/p/9BAFbR}).
+>  172:       \oiRedirect{textbook-CC_BY_2}
+   173:           {CC~BY~2.0~license}.}}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 1011)
+  error: _ex
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+  1010: \noindent\hspace{\textwidth}\hspace{-40mm}April 6th,
+> 1011: 2010\footnote{\oiRedirect{textbook-colbert_extrapolation}
+  1012:     {www.cc.com/video-clips/l4nkoq}} \\
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 75)
+  error: _go
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+    74:     Data prior to 2011 is all from
+>   75:     \oiRedirect{census_gov}{census.gov},
+    76:     where the specific Quick Facts page providing the data
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 83)
+  error: _go
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+    82:     \oiRedirect
+>   83:         {bls_gov-lau}
+    84:         {Bureau of Labor Statistics (bls.gov/lau)},
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 86)
+  error: _go
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+    85:     \oiRedirect
+>   86:         {census_gov-did-www-saipe}
+    87:         {SAIPE (census.gov/did/www/saipe)},
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 90)
+  error: _go
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+    89:     \oiRedirect
+>   90:         {census_gov-programs_surveys-acs}
+    91:         {American Community Survey
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 90)
+  error: _su
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+    89:     \oiRedirect
+>   90:         {census_gov-programs_surveys-acs}
+    91:         {American Community Survey
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 174)
+  error: _20
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   173:     reported at
+>  174:     \oiRedirect{textbook-breastCancerDotOrg_20090831b}
+   175:         {www.breastcancer.org}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 220)
+  error: _sa
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   219:     {\small
+>  220:     \oiRedirect{textbook-collegeboard_sat_2018_score_distribution}
+   221:         {reports.collegeboard.org/pdf/2018-total-group-sat-suite-assessments-annual-report.pdf}} \\
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 220)
+  error: _20
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   219:     {\small
+>  220:     \oiRedirect{textbook-collegeboard_sat_2018_score_distribution}
+   221:         {reports.collegeboard.org/pdf/2018-total-group-sat-suite-assessments-annual-report.pdf}} \\
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 220)
+  error: _sc
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   219:     {\small
+>  220:     \oiRedirect{textbook-collegeboard_sat_2018_score_distribution}
+   221:         {reports.collegeboard.org/pdf/2018-total-group-sat-suite-assessments-annual-report.pdf}} \\
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 220)
+  error: _di
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   219:     {\small
+>  220:     \oiRedirect{textbook-collegeboard_sat_2018_score_distribution}
+   221:         {reports.collegeboard.org/pdf/2018-total-group-sat-suite-assessments-annual-report.pdf}} \\
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 224)
+  error: _20
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   223:     {\footnotesize
+>  224:     \oiRedirect{textbook-act_2018_score_distribution}
+   225:         {act.org/content/dam/act/unsecured/documents/cccr2018/P\_99\_999999\_N\_S\_N00\_ACT-GCPR\_National.pdf}} \\
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 224)
+  error: _sc
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   223:     {\footnotesize
+>  224:     \oiRedirect{textbook-act_2018_score_distribution}
+   225:         {act.org/content/dam/act/unsecured/documents/cccr2018/P\_99\_999999\_N\_S\_N00\_ACT-GCPR\_National.pdf}} \\
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 224)
+  error: _di
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   223:     {\footnotesize
+>  224:     \oiRedirect{textbook-act_2018_score_distribution}
+   225:         {act.org/content/dam/act/unsecured/documents/cccr2018/P\_99\_999999\_N\_S\_N00\_ACT-GCPR\_National.pdf}} \\
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 293)
+  error: _go
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   292:     as of the 2017 estimate: \\
+>  293:     \oiRedirect{cdc_gov-tobacco-data_statistics}
+   294:         {cdc.gov/tobacco/data\_statistics/fact\_sheets/adult\_data/cig\_smoking/index.htm}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 293)
+  error: _st
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   292:     as of the 2017 estimate: \\
+>  293:     \oiRedirect{cdc_gov-tobacco-data_statistics}
+   294:         {cdc.gov/tobacco/data\_statistics/fact\_sheets/adult\_data/cig\_smoking/index.htm}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 356)
+  error: _eb
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   355:     New York adults between Oct 26th and~28th, 2014.
+>  356:     \oiRedirect{textbook-maristpoll_ebola_201410}
+   357:         {Poll ID NY141026 on maristpoll.marist.edu}.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 356)
+  error: _20
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   355:     New York adults between Oct 26th and~28th, 2014.
+>  356:     \oiRedirect{textbook-maristpoll_ebola_201410}
+   357:         {Poll ID NY141026 on maristpoll.marist.edu}.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 367)
+  error: _fa
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   366:     describe in their book,
+>  367:     \oiRedirect{amazon_factfulness}{Factfulness},
+   368:     The samples we describe are similar but not
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 373)
+  error: _fa
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   372:     discussed in the book, as reported in
+>  373:     \oiRedirect{amazon_factfulness}{Factfulness},
+   374:     are
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 427)
+  error: _fa
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   426:     For more information, check out the book,
+>  427:     \oiRedirect{amazon_factfulness}{Factfulness}.
+   428: \item[\ref{hypothesisTesting}]
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 504)
+  error: _fi
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   503:     Data is sourced from
+>  504:     \oiRedirect{yahoo_finance}
+   505:         {finance.yahoo.com}.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 555)
+  error: _or
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   554:     \datawrap{\datalink{run17}}
+>  555:     \oiRedirect{textbook-cherryblossom_org}{www.cherryblossom.org}
+   556: 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\data\data.tex (line 568)
+  error: _ve
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   567:         {sa.ucla.edu/ro/public/soc},
+>  568:     \oiRedirect{ucla_verbacompare}{ucla.verbacompare.com},
+   569:     and \oiRedirect{amazon}{amazon.com}.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\preamble\copyright.tex (line 15)
+  error: _so
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+    14: with the source files hosted on
+>   15: \oiRedirect{os_source}{Github}. \\
+    16: 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\preamble\preface.tex (line 220)
+  error: _op
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   219: and through a
+>  220: \oiRedirect{textbook-github_openintro}
+   221:     {companion R~package}.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\preamble\preface.tex (line 232)
+  error: _ty
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   231: A short-link to report a new typo or review known typos is
+>  232: \oiRedirect{os_typos}
+   233:     {\color{black}\textbf{openintro.org/os/typos}}. \vspace{3mm}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\preamble\preface.tex (line 250)
+  error: _ab
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   249: The authors would like to thank the
+>  250: \oiRedirect{textbook-openintro_about}{OpenIntro Staff}
+   251: for their involvement and ongoing contributions.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\preamble\preface.tex (line 262)
+  error: _ak
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   261:     {Matthew E. Aiello-Lammens},
+>  262: \oiRedirect{jonathan_akin}{Jonathan Akin},
+   263: Stacey C. Behrensmeyer,
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\preamble\preface.tex (line 266)
+  error: _ho
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   265: Jo Hardin,
+>  266: \oiRedirect{nicholas_horton}{Nicholas Horton},
+   267: \oiRedirect{danish_khan}{Danish Khan},
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\preamble\preface.tex (line 267)
+  error: _kh
+  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
+   266: \oiRedirect{nicholas_horton}{Nicholas Horton},
+>  267: \oiRedirect{danish_khan}{Danish Khan},
+   268: \oiRedirect{peter_hm_klaren}{Peter H.M. Klaren},
+
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 232)
   error: _mm
   message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
@@ -5710,431 +6137,4 @@
   2002: In the second sum let $p_1= P^-(m)$ and write $m=p_1^kn$ so that our sum is
 > 2003: \begin{align*} \leq\sum_{\substack{t_j<p_1\leq t_{j+1} \\ p_1 \text{ is a prime}}} \sum_{\substack{k\geq 1\\ p_1^k\leq x/t_j}}\frac{1}{p_1^k}\sum_{\substack{n\leq x/(p_1^kt_j) \\ P^-(n)> p_1}} \frac{1}{n} 
   2004: &\leq \sum_{\substack{t_j<p_1\leq t_{j+1} \\ p_1 \text{ is a prime}}} \sum_{\substack{k\geq 1\\ p_1^k\leq x/t_j}}\frac{1}{p_1^k}\prod_{\substack{p_1< p_2 \leq x\\ p_2 \text{ is a prime}}}\left(1-\frac{1}{p_2}\right)^{-1} \\ 
-
-- file: sample\submodules\OpenLogic\content\lambda-calculus\lambda-definability\arithmetical-functions.tex (line 30)
-  error: ^nx
-  message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-    29:    \intertext{The embedded term $\num{n}fx$ is a redex, since
->   30:      $\num{n}$ is $\lambd[fx][f^nx]$. So $\num{n}fx \redone f^nx$ and
-    31:      so, for the entire term we have}
-
-- file: sample\submodules\OpenLogic\content\lambda-calculus\lambda-definability\arithmetical-functions.tex (line 30)
-  error: ^nx
-  message: Did you mean "^{...}"? For example, write "x^{23}" or "x^2 3" instead of "x^23".
-    29:    \intertext{The embedded term $\num{n}fx$ is a redex, since
->   30:      $\num{n}$ is $\lambd[fx][f^nx]$. So $\num{n}fx \redone f^nx$ and
-    31:      so, for the entire term we have}
-
-- file: sample\submodules\OpenLogic\content\lambda-calculus\lambda-definability\fixpoints.tex (line 172)
-  error: _Cg
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   171: \end{align*}
->  172: In other words, $Y_Cg$ and $g(Y_Cg)$ reduce to a common term $g(VV)$; so $Y_Cg
-   173: \equal[\beta] g(Y_Cg)$. This is often enough for applications.
-
-- file: sample\submodules\OpenLogic\content\lambda-calculus\lambda-definability\fixpoints.tex (line 172)
-  error: _Cg
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   171: \end{align*}
->  172: In other words, $Y_Cg$ and $g(Y_Cg)$ reduce to a common term $g(VV)$; so $Y_Cg
-   173: \equal[\beta] g(Y_Cg)$. This is often enough for applications.
-
-- file: sample\submodules\OpenLogic\content\lambda-calculus\lambda-definability\fixpoints.tex (line 172)
-  error: _Cg
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   171: \end{align*}
->  172: In other words, $Y_Cg$ and $g(Y_Cg)$ reduce to a common term $g(VV)$; so $Y_Cg
-   173: \equal[\beta] g(Y_Cg)$. This is often enough for applications.
-
-- file: sample\submodules\OpenLogic\content\lambda-calculus\lambda-definability\fixpoints.tex (line 173)
-  error: _Cg
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   172: In other words, $Y_Cg$ and $g(Y_Cg)$ reduce to a common term $g(VV)$; so $Y_Cg
->  173: \equal[\beta] g(Y_Cg)$. This is often enough for applications.
-   174: 
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\binomial_distribution.tex (line 104)
-  error: _BY
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   103:   (\oiRedirect{textbook-flickr_staccabees_dreidels}{http://flic.kr/p/7gLZTf}) \\
->  104:   \oiRedirect{textbook-CC_BY_2}{CC~BY~2.0~license}} \\
-   105: \end{minipage}
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 11)
-  error: _di
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    10: \end{chapterpage}
->   11: \renewcommand{\chapterfolder}{ch_distributions}
-    12: 
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 370)
-  error: _vi
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   369:     \begin{center}
->  370:     \oiRedirect{textbook-openintro_videos}
-   371:         {www.openintro.org/videos}
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1425)
-  error: _nC
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1424: \term{n choose k}.\footnote{Other notation for
-> 1425:   $n$ choose $k$ includes $_nC_k$, $C_n^k$, and $C(n,k)$.}
-  1426: The exclamation point notation (e.g. $k!$) denotes
-
-- file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 419)
-  error: _10
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   418:    \centering
->  419:    \Figure[A histogram is shown for 10,000 sample proportions where each sample is taken from a population where the population proportion is \pewsolarparprop{} and the sample size is $n = \pewsolarpollsize{}$. The distribution is bell-shaped (appears nearly normal), is centered at 0.88 and has a standard deviation of about 0.01.]{0.8}{sampling_10k_prop_88p}
-   420:    %\Figure{0.8}{sampling_10k_prop_887p}
-
-- file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 419)
-  error: _pr
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   418:    \centering
->  419:    \Figure[A histogram is shown for 10,000 sample proportions where each sample is taken from a population where the population proportion is \pewsolarparprop{} and the sample size is $n = \pewsolarpollsize{}$. The distribution is bell-shaped (appears nearly normal), is centered at 0.88 and has a standard deviation of about 0.01.]{0.8}{sampling_10k_prop_88p}
-   420:    %\Figure{0.8}{sampling_10k_prop_887p}
-
-- file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 419)
-  error: _88
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   418:    \centering
->  419:    \Figure[A histogram is shown for 10,000 sample proportions where each sample is taken from a population where the population proportion is \pewsolarparprop{} and the sample size is $n = \pewsolarpollsize{}$. The distribution is bell-shaped (appears nearly normal), is centered at 0.88 and has a standard deviation of about 0.01.]{0.8}{sampling_10k_prop_88p}
-   420:    %\Figure{0.8}{sampling_10k_prop_887p}
-
-- file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 755)
-  error: _10
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   754:    \centering
->  755:    \Figure[There are two plots. The first plot is a histogram of 10,000 simulations of p-hat when the sample size is n equals 10 and the population proportion is p equals 0.25. The possible values are 0.0, 0.1, 0.2, and so on up to 1.0, though the graph only shows values up to 0.8. The distribution is centered at about 0.25, and is slightly right-skewed. The frequencies are about 500 for 0.0, 1900 for 0.1, 2800 for 0.2, 2400 for 0.3, 1500 for 0.4, 500 for 0.5, 100 for 0.6, and the bin heights for the remaining values have bin heights that are not visually distinguishable from zero. The second plot shows a normal distribution centered at 0.25 with a standard deviation of 0.137. The plot has a vertical line located at 0.0, which makes it more visually evident that a portion of the area under the normal distribution -- about 5\% of this area -- represents values below 0.0.]{0.97}{sampling_10_prop_25p}
-   756:    \caption{Left: simulations of $\hat{p}$ when the sample size
-
-- file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 755)
-  error: _pr
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   754:    \centering
->  755:    \Figure[There are two plots. The first plot is a histogram of 10,000 simulations of p-hat when the sample size is n equals 10 and the population proportion is p equals 0.25. The possible values are 0.0, 0.1, 0.2, and so on up to 1.0, though the graph only shows values up to 0.8. The distribution is centered at about 0.25, and is slightly right-skewed. The frequencies are about 500 for 0.0, 1900 for 0.1, 2800 for 0.2, 2400 for 0.3, 1500 for 0.4, 500 for 0.5, 100 for 0.6, and the bin heights for the remaining values have bin heights that are not visually distinguishable from zero. The second plot shows a normal distribution centered at 0.25 with a standard deviation of 0.137. The plot has a vertical line located at 0.0, which makes it more visually evident that a portion of the area under the normal distribution -- about 5\% of this area -- represents values below 0.0.]{0.97}{sampling_10_prop_25p}
-   756:    \caption{Left: simulations of $\hat{p}$ when the sample size
-
-- file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 755)
-  error: _25
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   754:    \centering
->  755:    \Figure[There are two plots. The first plot is a histogram of 10,000 simulations of p-hat when the sample size is n equals 10 and the population proportion is p equals 0.25. The possible values are 0.0, 0.1, 0.2, and so on up to 1.0, though the graph only shows values up to 0.8. The distribution is centered at about 0.25, and is slightly right-skewed. The frequencies are about 500 for 0.0, 1900 for 0.1, 2800 for 0.2, 2400 for 0.3, 1500 for 0.4, 500 for 0.5, 100 for 0.6, and the bin heights for the remaining values have bin heights that are not visually distinguishable from zero. The second plot shows a normal distribution centered at 0.25 with a standard deviation of 0.137. The plot has a vertical line located at 0.0, which makes it more visually evident that a portion of the area under the normal distribution -- about 5\% of this area -- represents values below 0.0.]{0.97}{sampling_10_prop_25p}
-   756:    \caption{Left: simulations of $\hat{p}$ when the sample size
-
-- file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 1516)
-  error: _fa
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1515: Hans Rosling, Anna Rosling R{\"o}nnlund, and Ola Rosling
-> 1516: called \emph{\oiRedirect{amazon_factfulness}{Factfulness}}:
-  1517: \begin{quote}
-
-- file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 1962)
-  error: _fa
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1961: the Roslings' book,
-> 1962: \emph{\oiRedirect{amazon_factfulness}{Factfulness}}.
-  1963: 
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 660)
-  error: _co
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   659:    -----------------------------\vspace{-2mm}\\
->  660:    {\footnotesize Photo by Mike Baird (\oiRedirect{textbook-bairdphotos_com}{www.bairdphotos.com}). \oiRedirect{textbook-CC_BY_2}{CC~BY~2.0~license}.}\vspace{-8mm}}
-   661:    \label{rissosDolphin}
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 660)
-  error: _BY
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   659:    -----------------------------\vspace{-2mm}\\
->  660:    {\footnotesize Photo by Mike Baird (\oiRedirect{textbook-bairdphotos_com}{www.bairdphotos.com}). \oiRedirect{textbook-CC_BY_2}{CC~BY~2.0~license}.}\vspace{-8mm}}
-   661:    \label{rissosDolphin}
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 1827)
-  error: _to
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1826:   Please be aware that there is some adult language:
-> 1827:   \oiRedirect{textbook-johnoliver_tobacco}{youtu.be/6UsHHOCH4q8}.}
-  1828: % Resource on this topic:
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 2366)
-  error: _nu
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2365:   \indent%
-> 2366:   \Figures[A normal distribution is shown for "x-bar-sub-treatment minus x-bar-sub-control", where the distribution is centered at zero and has a standard deviation of about 0.76 (note that this is a much smaller than in earlier plots). The distribution is labeled as "Null distribution". A second normal distribution is also shown centered at -3 with a standard deviation of about 0.76, and this distribution is labeled "Distribution with mu-sub-treatment minus mu-sub-control equals -3". The overlap of these two normal distributions is much smaller than in the last plot. Lines are shown demarking "reject" regions for the null distribution are shown at about -1.5 and positive 1.5, and the region of the second distribution centered at -3 that is below the lower demarkation line at about -1.5 is shaded, representing a bit over 95\% of the distribution.]{0.7}{power_null_0_0-76}
-  2367:       {power_null_0_0-76_with_alt_at_3_and_shaded} \\
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 2889)
-  error: _fa
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  2888: \term{prosecutor's fallacy}.\footnote{See, for example,
-> 2889:   \oiRedirect{textbook-prosecutors_fallacy}
-  2890:       {statmodeling.stat.columbia.edu/2007/05/18/the\_prosecutors}.}
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1181)
-  error: _BY
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1180:        {http://flic.kr/p/oiWLNu}).
-> 1181:    \oiRedirect{textbook-CC_BY_2}{CC-BY 2.0 license.}
-  1182:    This photo has been cropped and a border has been added.}}
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\testing_for_goodness_of_fit_using_chi-square.tex (line 96)
-  error: _BY
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    95: \Figures[A photo of a barking deer, which has pronged horns and a reddish brown color, looking out through leaves and foliage.]{0.7}{eoce/barking_deer_chisq_GOF}{barking_deer.jpg} \\
->   96: {\footnotesize Photo by Shrikant Rao (\oiRedirect{textbook-flickr_shrikant_rao_barking_deer}{http://flic.kr/p/4Xjdkk}) \oiRedirect{textbook-CC_BY_2}{CC~BY~2.0~license}}
-    97: \end{center}
-
-- file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 1139)
-  error: _st
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1138:     [Two figures are shown, one positioned above the other. The first is a large rectangle containing many points, where 18 of those points are circled and are a different color than the other points. The lower figure is also a large rectangle, but this rectangle contains 6 larger circles that are labeled "Stratum 1" through "Stratum 6". In each of these circles are many points, and 3 points have been circled and are in a different color within each of the six circles, specially calling out those 3 points in each of the stratum circles in a similar way to how the 18 points were being called out in the upper figure.]
-> 1139:     {}{samplingMethodsFigure}{simple_stratified}
-  1140:   \caption{
-
-- file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 1187)
-  error: _mu
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1186:     [Two figures are shown, one positioned above the other. The first is a large rectangle containing 8 large circles with labels "Cluster 1" through "Cluster 8". All of these large circles contain points. However, three of the large circles (Cluster 3, Cluster 4, and Cluster 8) are colored differently than the other large circles and their contained points are also colored differently. The lower figure is the same as the upper figure, except that only 5 of the points are colored differently in each of the 3 large circles that have been colored differently.]
-> 1187:     {}{samplingMethodsFigure}{cluster_multistage}
-  1188:   \caption{Examples of cluster\index{sample!cluster sampling}
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 11)
-  error: _pr
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    10: \end{chapterpage}
->   11: \renewcommand{\chapterfolder}{ch_probability}
-    12: 
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\defining_probability.tex (line 45)
-  error: _BY
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    44:   (\oiRedirect{textbook-flickr_hakan_dahlstrom_roulette_wheel}{http://flic.kr/p/93fEzp}) \\
->   45:   \oiRedirect{textbook-CC_BY_2}{CC~BY~2.0~license}}
-    46: \end{center}
-
-- file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 172)
-  error: _BY
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   171:           {https://flic.kr/p/9BAFbR}).
->  172:       \oiRedirect{textbook-CC_BY_2}
-   173:           {CC~BY~2.0~license}.}}
-
-- file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 1011)
-  error: _ex
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-  1010: \noindent\hspace{\textwidth}\hspace{-40mm}April 6th,
-> 1011: 2010\footnote{\oiRedirect{textbook-colbert_extrapolation}
-  1012:     {www.cc.com/video-clips/l4nkoq}} \\
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 75)
-  error: _go
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    74:     Data prior to 2011 is all from
->   75:     \oiRedirect{census_gov}{census.gov},
-    76:     where the specific Quick Facts page providing the data
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 83)
-  error: _go
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    82:     \oiRedirect
->   83:         {bls_gov-lau}
-    84:         {Bureau of Labor Statistics (bls.gov/lau)},
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 86)
-  error: _go
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    85:     \oiRedirect
->   86:         {census_gov-did-www-saipe}
-    87:         {SAIPE (census.gov/did/www/saipe)},
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 90)
-  error: _go
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    89:     \oiRedirect
->   90:         {census_gov-programs_surveys-acs}
-    91:         {American Community Survey
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 90)
-  error: _su
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    89:     \oiRedirect
->   90:         {census_gov-programs_surveys-acs}
-    91:         {American Community Survey
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 174)
-  error: _20
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   173:     reported at
->  174:     \oiRedirect{textbook-breastCancerDotOrg_20090831b}
-   175:         {www.breastcancer.org}
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 220)
-  error: _sa
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   219:     {\small
->  220:     \oiRedirect{textbook-collegeboard_sat_2018_score_distribution}
-   221:         {reports.collegeboard.org/pdf/2018-total-group-sat-suite-assessments-annual-report.pdf}} \\
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 220)
-  error: _20
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   219:     {\small
->  220:     \oiRedirect{textbook-collegeboard_sat_2018_score_distribution}
-   221:         {reports.collegeboard.org/pdf/2018-total-group-sat-suite-assessments-annual-report.pdf}} \\
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 220)
-  error: _sc
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   219:     {\small
->  220:     \oiRedirect{textbook-collegeboard_sat_2018_score_distribution}
-   221:         {reports.collegeboard.org/pdf/2018-total-group-sat-suite-assessments-annual-report.pdf}} \\
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 220)
-  error: _di
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   219:     {\small
->  220:     \oiRedirect{textbook-collegeboard_sat_2018_score_distribution}
-   221:         {reports.collegeboard.org/pdf/2018-total-group-sat-suite-assessments-annual-report.pdf}} \\
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 224)
-  error: _20
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   223:     {\footnotesize
->  224:     \oiRedirect{textbook-act_2018_score_distribution}
-   225:         {act.org/content/dam/act/unsecured/documents/cccr2018/P\_99\_999999\_N\_S\_N00\_ACT-GCPR\_National.pdf}} \\
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 224)
-  error: _sc
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   223:     {\footnotesize
->  224:     \oiRedirect{textbook-act_2018_score_distribution}
-   225:         {act.org/content/dam/act/unsecured/documents/cccr2018/P\_99\_999999\_N\_S\_N00\_ACT-GCPR\_National.pdf}} \\
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 224)
-  error: _di
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   223:     {\footnotesize
->  224:     \oiRedirect{textbook-act_2018_score_distribution}
-   225:         {act.org/content/dam/act/unsecured/documents/cccr2018/P\_99\_999999\_N\_S\_N00\_ACT-GCPR\_National.pdf}} \\
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 293)
-  error: _go
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   292:     as of the 2017 estimate: \\
->  293:     \oiRedirect{cdc_gov-tobacco-data_statistics}
-   294:         {cdc.gov/tobacco/data\_statistics/fact\_sheets/adult\_data/cig\_smoking/index.htm}
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 293)
-  error: _st
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   292:     as of the 2017 estimate: \\
->  293:     \oiRedirect{cdc_gov-tobacco-data_statistics}
-   294:         {cdc.gov/tobacco/data\_statistics/fact\_sheets/adult\_data/cig\_smoking/index.htm}
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 356)
-  error: _eb
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   355:     New York adults between Oct 26th and~28th, 2014.
->  356:     \oiRedirect{textbook-maristpoll_ebola_201410}
-   357:         {Poll ID NY141026 on maristpoll.marist.edu}.
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 356)
-  error: _20
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   355:     New York adults between Oct 26th and~28th, 2014.
->  356:     \oiRedirect{textbook-maristpoll_ebola_201410}
-   357:         {Poll ID NY141026 on maristpoll.marist.edu}.
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 367)
-  error: _fa
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   366:     describe in their book,
->  367:     \oiRedirect{amazon_factfulness}{Factfulness},
-   368:     The samples we describe are similar but not
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 373)
-  error: _fa
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   372:     discussed in the book, as reported in
->  373:     \oiRedirect{amazon_factfulness}{Factfulness},
-   374:     are
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 427)
-  error: _fa
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   426:     For more information, check out the book,
->  427:     \oiRedirect{amazon_factfulness}{Factfulness}.
-   428: \item[\ref{hypothesisTesting}]
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 504)
-  error: _fi
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   503:     Data is sourced from
->  504:     \oiRedirect{yahoo_finance}
-   505:         {finance.yahoo.com}.
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 555)
-  error: _or
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   554:     \datawrap{\datalink{run17}}
->  555:     \oiRedirect{textbook-cherryblossom_org}{www.cherryblossom.org}
-   556: 
-
-- file: sample\submodules\openintro-statistics\extraTeX\data\data.tex (line 568)
-  error: _ve
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   567:         {sa.ucla.edu/ro/public/soc},
->  568:     \oiRedirect{ucla_verbacompare}{ucla.verbacompare.com},
-   569:     and \oiRedirect{amazon}{amazon.com}.
-
-- file: sample\submodules\openintro-statistics\extraTeX\preamble\copyright.tex (line 15)
-  error: _so
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-    14: with the source files hosted on
->   15: \oiRedirect{os_source}{Github}. \\
-    16: 
-
-- file: sample\submodules\openintro-statistics\extraTeX\preamble\preface.tex (line 220)
-  error: _op
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   219: and through a
->  220: \oiRedirect{textbook-github_openintro}
-   221:     {companion R~package}.
-
-- file: sample\submodules\openintro-statistics\extraTeX\preamble\preface.tex (line 232)
-  error: _ty
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   231: A short-link to report a new typo or review known typos is
->  232: \oiRedirect{os_typos}
-   233:     {\color{black}\textbf{openintro.org/os/typos}}. \vspace{3mm}
-
-- file: sample\submodules\openintro-statistics\extraTeX\preamble\preface.tex (line 250)
-  error: _ab
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   249: The authors would like to thank the
->  250: \oiRedirect{textbook-openintro_about}{OpenIntro Staff}
-   251: for their involvement and ongoing contributions.
-
-- file: sample\submodules\openintro-statistics\extraTeX\preamble\preface.tex (line 262)
-  error: _ak
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   261:     {Matthew E. Aiello-Lammens},
->  262: \oiRedirect{jonathan_akin}{Jonathan Akin},
-   263: Stacey C. Behrensmeyer,
-
-- file: sample\submodules\openintro-statistics\extraTeX\preamble\preface.tex (line 266)
-  error: _ho
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   265: Jo Hardin,
->  266: \oiRedirect{nicholas_horton}{Nicholas Horton},
-   267: \oiRedirect{danish_khan}{Danish Khan},
-
-- file: sample\submodules\openintro-statistics\extraTeX\preamble\preface.tex (line 267)
-  error: _kh
-  message: Did you mean "_{...}"? For example, write "x_{23}" or "x_2 3" instead of "x_23".
-   266: \oiRedirect{nicholas_horton}{Nicholas Horton},
->  267: \oiRedirect{danish_khan}{Danish Khan},
-   268: \oiRedirect{peter_hm_klaren}{Peter H.M. Klaren},
 

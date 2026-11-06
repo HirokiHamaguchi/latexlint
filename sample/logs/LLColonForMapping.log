@@ -1,4 +1,53 @@
 [CODE] LLColonForMapping (263)
+- file: ..\latexlint-externals\submodules\OpenLogic\content\many-valued-logic\syntax-and-semantics\matrices.tex (line 25)
+  error: :
+  message: If this : is for a mapping, consider using \colon instead. It is often used for ratios, and spacing around : is different from \colon.
+    24: \item for each $n$-place connective $\star$ in $\Lang L$, a truth
+>   25: function~$\tf{\star} : V^n \to V$. If $n = 0$, then $\tf{\star}$ is
+    26: just an element of~$V$.
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\second-order-logic\syntax-and-semantics\inf-count.tex (line 24)
+  error: :
+  message: If this : is for a mapping, consider using \colon instead. It is often used for ratios, and spacing around : is different from \colon.
+    23: \]
+>   24: If $\Struct{M}$ satisfies this !!{sentence}, $\Assign{f}{M}:
+    25: \Domain{M} \to \Domain{M}$ is !!{injective}, and so $\Domain{M}$ must
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\set-theory\ordinals\iso.tex (line 98)
+  error: :
+  message: If this : is for a mapping, consider using \colon instead. It is often used for ratios, and spacing around : is different from \colon.
+    97: \colon A \to B$ is an isomorphism and $a \in A$, then
+>   98: $\funrestrictionto{f}{A_{a}} : A_a \to B_{f(a)}$ is an isomorphism.
+    99: \end{lem}
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\sets-functions-relations\arithmetization\cauchy.tex (line 84)
+  error: :
+  message: If this : is for a mapping, consider using \colon instead. It is often used for ratios, and spacing around : is different from \colon.
+    83: \begin{defn}\ollabel{def:CauchySequence}
+>   84:   A function $f: \Nat \to \Rat$ is a \emph{Cauchy sequence} iff for
+    85:   any positive $\epsilon \in \Rat$ we have that $(\exists \ell \in
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\sets-functions-relations\arithmetization\cauchy.tex (line 112)
+  error: :
+  message: If this : is for a mapping, consider using \colon instead. It is often used for ratios, and spacing around : is different from \colon.
+   111: relations. First we need the idea of a function which tends to $0$ in
+>  112: the limit. For any function $h : \Nat \to \Rat$, say that \emph{$h$
+   113: tends to $0$} iff for any positive $\epsilon \in \Rat$ we have that
+
+- file: ..\latexlint-externals\submodules\coursebook\deadlock\deadlock.tex (line 111)
+  error: :
+  message: If this : is for a mapping, consider using \colon instead. It is often used for ratios, and spacing around : is different from \colon.
+   110: 	Let assume that the system is a state at time $t$.
+>  111: 	Let us assume that the state of the system is a tuple $(h_t, w_t)$ where there are two functions $h_t: R \rightarrow P \cup \{\text{unassigned}\}$ that maps resources to the processes that own them (this is a function, meaning that we have mutual exclusion) and or unassigned and $w_t: P \rightarrow R \cup \{\text{satisfied}\}$ that maps the requests that each process makes to a resource or if the process is satisfied.
+   112: 	If the process is satisfied, we consider the work trivial and the process exits, releasing all resources -- this can also be generalized.
+
+- file: ..\latexlint-externals\submodules\coursebook\deadlock\deadlock.tex (line 111)
+  error: :
+  message: If this : is for a mapping, consider using \colon instead. It is often used for ratios, and spacing around : is different from \colon.
+   110: 	Let assume that the system is a state at time $t$.
+>  111: 	Let us assume that the state of the system is a tuple $(h_t, w_t)$ where there are two functions $h_t: R \rightarrow P \cup \{\text{unassigned}\}$ that maps resources to the processes that own them (this is a function, meaning that we have mutual exclusion) and or unassigned and $w_t: P \rightarrow R \cup \{\text{satisfied}\}$ that maps the requests that each process makes to a resource or if the process is satisfied.
+   112: 	If the process is satisfied, we consider the work trivial and the process exits, releasing all resources -- this can also be generalized.
+
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 440)
   error: :
   message: If this : is for a mapping, consider using \colon instead. It is often used for ratios, and spacing around : is different from \colon.
@@ -1790,53 +1839,4 @@
   3122: 
 > 3123: \begin{proof}[Proof of Theorem \ref{Thm:Classify_Large} for arbitrary multiplicative functions $f:\mathbb N\to \mathbb U$]
   3124: Let $g\in \mathcal F$ for which $g(p)=f(p)$ for all primes $p$ and write $f=g*h$ so that 
-
-- file: sample\submodules\OpenLogic\content\many-valued-logic\syntax-and-semantics\matrices.tex (line 25)
-  error: :
-  message: If this : is for a mapping, consider using \colon instead. It is often used for ratios, and spacing around : is different from \colon.
-    24: \item for each $n$-place connective $\star$ in $\Lang L$, a truth
->   25: function~$\tf{\star} : V^n \to V$. If $n = 0$, then $\tf{\star}$ is
-    26: just an element of~$V$.
-
-- file: sample\submodules\OpenLogic\content\second-order-logic\syntax-and-semantics\inf-count.tex (line 24)
-  error: :
-  message: If this : is for a mapping, consider using \colon instead. It is often used for ratios, and spacing around : is different from \colon.
-    23: \]
->   24: If $\Struct{M}$ satisfies this !!{sentence}, $\Assign{f}{M}:
-    25: \Domain{M} \to \Domain{M}$ is !!{injective}, and so $\Domain{M}$ must
-
-- file: sample\submodules\OpenLogic\content\set-theory\ordinals\iso.tex (line 98)
-  error: :
-  message: If this : is for a mapping, consider using \colon instead. It is often used for ratios, and spacing around : is different from \colon.
-    97: \colon A \to B$ is an isomorphism and $a \in A$, then
->   98: $\funrestrictionto{f}{A_{a}} : A_a \to B_{f(a)}$ is an isomorphism.
-    99: \end{lem}
-
-- file: sample\submodules\OpenLogic\content\sets-functions-relations\arithmetization\cauchy.tex (line 84)
-  error: :
-  message: If this : is for a mapping, consider using \colon instead. It is often used for ratios, and spacing around : is different from \colon.
-    83: \begin{defn}\ollabel{def:CauchySequence}
->   84:   A function $f: \Nat \to \Rat$ is a \emph{Cauchy sequence} iff for
-    85:   any positive $\epsilon \in \Rat$ we have that $(\exists \ell \in
-
-- file: sample\submodules\OpenLogic\content\sets-functions-relations\arithmetization\cauchy.tex (line 112)
-  error: :
-  message: If this : is for a mapping, consider using \colon instead. It is often used for ratios, and spacing around : is different from \colon.
-   111: relations. First we need the idea of a function which tends to $0$ in
->  112: the limit. For any function $h : \Nat \to \Rat$, say that \emph{$h$
-   113: tends to $0$} iff for any positive $\epsilon \in \Rat$ we have that
-
-- file: sample\submodules\coursebook\deadlock\deadlock.tex (line 111)
-  error: :
-  message: If this : is for a mapping, consider using \colon instead. It is often used for ratios, and spacing around : is different from \colon.
-   110: 	Let assume that the system is a state at time $t$.
->  111: 	Let us assume that the state of the system is a tuple $(h_t, w_t)$ where there are two functions $h_t: R \rightarrow P \cup \{\text{unassigned}\}$ that maps resources to the processes that own them (this is a function, meaning that we have mutual exclusion) and or unassigned and $w_t: P \rightarrow R \cup \{\text{satisfied}\}$ that maps the requests that each process makes to a resource or if the process is satisfied.
-   112: 	If the process is satisfied, we consider the work trivial and the process exits, releasing all resources -- this can also be generalized.
-
-- file: sample\submodules\coursebook\deadlock\deadlock.tex (line 111)
-  error: :
-  message: If this : is for a mapping, consider using \colon instead. It is often used for ratios, and spacing around : is different from \colon.
-   110: 	Let assume that the system is a state at time $t$.
->  111: 	Let us assume that the state of the system is a tuple $(h_t, w_t)$ where there are two functions $h_t: R \rightarrow P \cup \{\text{unassigned}\}$ that maps resources to the processes that own them (this is a function, meaning that we have mutual exclusion) and or unassigned and $w_t: P \rightarrow R \cup \{\text{satisfied}\}$ that maps the requests that each process makes to a resource or if the process is satisfied.
-   112: 	If the process is satisfied, we consider the work trivial and the process exits, releasing all resources -- this can also be generalized.
 

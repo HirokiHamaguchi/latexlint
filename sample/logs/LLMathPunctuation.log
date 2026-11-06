@@ -1,4 +1,32 @@
 [CODE] LLMathPunctuation (25)
+- file: ..\latexlint-externals\submodules\OpenLogic\content\computability\recursive-functions\examples.tex (line 72)
+  error: . (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+    71:    \fn{pred}'(x, 0) & = \Zero(x) = 0,\\
+>   72:    \fn{pred}'(x, y+1) & = \Proj{3}{1}(x, y, \fn{pred'}(x, y)) = y.
+    73:  \end{align*}
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\first-order-logic\axiomatic-deduction\axioms-rules-quantifiers.tex (line 18)
+  error: . (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+    17: \ollabel{ax:q1} & \lforall[x][!B] \lif !B(t), \\
+>   18: \ollabel{ax:q2} & !B(t) \lif \lexists[x][!B].
+    19: \end{align}
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\first-order-logic\syntax-and-semantics\satisfaction.tex (line 205)
+  error: , (and 3 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+   204: \Value{f(f(a,b),x)}{M}[s] & = \Assign{f}{M}(\Value{f(a, b)}{M}[s],
+>  205: \Value{x}{M}[s]) = \Assign{f}{M}(3, 1) = 3,
+   206: \end{align*}
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\incompleteness\representability-in-q\composition-representable.tex (line 66)
+  error: . (and 2 more lines...)
+  message: The punctuation or the following sentence's capitalization seems to be wrong.
+    65:   \Th{Q} & \Proves \lforall[z][(\lexists[y][(!A_g(\num{n}, y) \land
+>   66:       !A_f(y, z))] \lif \eq[z][\num{m}])].
+    67: \end{align*}
+
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 3938)
   error: . (and 2 more lines...)
   message: The punctuation or the following sentence's capitalization seems to be wrong.
@@ -145,32 +173,4 @@
   1632:  &  (\log x)^A \leq  q\leq \exp\left(c_1\frac{\sqrt{\log x}}{\log\log x}\right) ,\nonumber\\
 > 1633:    \text{ and } \quad \quad    & \max\left(q^{c_2}, (\log x)^{B\log(1+\omega(q))}\right)\leq y\leq \exp\left(c_3\frac{\log x}{\log q(\log\log q)^2}\right),
   1634: \end{align}
-
-- file: sample\submodules\OpenLogic\content\computability\recursive-functions\examples.tex (line 72)
-  error: . (and 2 more lines...)
-  message: The punctuation or the following sentence's capitalization seems to be wrong.
-    71:    \fn{pred}'(x, 0) & = \Zero(x) = 0,\\
->   72:    \fn{pred}'(x, y+1) & = \Proj{3}{1}(x, y, \fn{pred'}(x, y)) = y.
-    73:  \end{align*}
-
-- file: sample\submodules\OpenLogic\content\first-order-logic\axiomatic-deduction\axioms-rules-quantifiers.tex (line 18)
-  error: . (and 2 more lines...)
-  message: The punctuation or the following sentence's capitalization seems to be wrong.
-    17: \ollabel{ax:q1} & \lforall[x][!B] \lif !B(t), \\
->   18: \ollabel{ax:q2} & !B(t) \lif \lexists[x][!B].
-    19: \end{align}
-
-- file: sample\submodules\OpenLogic\content\first-order-logic\syntax-and-semantics\satisfaction.tex (line 205)
-  error: , (and 3 more lines...)
-  message: The punctuation or the following sentence's capitalization seems to be wrong.
-   204: \Value{f(f(a,b),x)}{M}[s] & = \Assign{f}{M}(\Value{f(a, b)}{M}[s],
->  205: \Value{x}{M}[s]) = \Assign{f}{M}(3, 1) = 3,
-   206: \end{align*}
-
-- file: sample\submodules\OpenLogic\content\incompleteness\representability-in-q\composition-representable.tex (line 66)
-  error: . (and 2 more lines...)
-  message: The punctuation or the following sentence's capitalization seems to be wrong.
-    65:   \Th{Q} & \Proves \lforall[z][(\lexists[y][(!A_g(\num{n}, y) \land
->   66:       !A_f(y, z))] \lif \eq[z][\num{m}])].
-    67: \end{align*}
 

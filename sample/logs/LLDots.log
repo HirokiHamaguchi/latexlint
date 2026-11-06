@@ -1,4 +1,466 @@
 [CODE] LLDots (323)
+- file: ..\latexlint-externals\submodules\coursebook\appendix\appendix.tex (line 387)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   386: For people to request money, they do the following:
+>  387: Consider the state of the system $(A=\{a_1, a_2, ...\}, L_t=\{l_{t,1}, l_{t,2}, ...\}, p)$ at time $t$.
+   388: A precondition is that we have $p \geq min(A)$, or we have enough money to suit at least one person.
+
+- file: ..\latexlint-externals\submodules\coursebook\appendix\appendix.tex (line 387)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   386: For people to request money, they do the following:
+>  387: Consider the state of the system $(A=\{a_1, a_2, ...\}, L_t=\{l_{t,1}, l_{t,2}, ...\}, p)$ at time $t$.
+   388: A precondition is that we have $p \geq min(A)$, or we have enough money to suit at least one person.
+
+- file: ..\latexlint-externals\submodules\coursebook\appendix\appendix.tex (line 396)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   395:           \item if $m + l_j > a_i$ they are denied
+>  396:           \item Pretend we are in a new state $(A, L_{t+1}=\{.., l_{t+1, j} = l_{t, j} + m, ...\}, p - m)$ where the process is granted the resource.
+   397:         \end{itemize}
+
+- file: ..\latexlint-externals\submodules\coursebook\deadlock\deadlock.tex (line 108)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   107: 	Though this proof is not formal, let us build a system with the three requirements not including circular wait.
+>  108: 	Let assume that there is a set of processes $P = \{p_1, p_2, ..., p_n\}$ and there is a set of resources $R = \{r_1, r_2, ..., r_m\}$.
+   109: 	For simplicity, a process can only request one resource at a time but the proof can be generalized to multiple.
+
+- file: ..\latexlint-externals\submodules\coursebook\deadlock\deadlock.tex (line 108)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   107: 	Though this proof is not formal, let us build a system with the three requirements not including circular wait.
+>  108: 	Let assume that there is a set of processes $P = \{p_1, p_2, ..., p_n\}$ and there is a set of resources $R = \{r_1, r_2, ..., r_m\}$.
+   109: 	For simplicity, a process can only request one resource at a time but the proof can be generalized to multiple.
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 266)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   265: 
+>  266: Counterintuitively, \keyword{...} could be the name of a file or directory on disk (You can try this with \keyword{mkdir ...}), not the grandparent directory.
+   267: Only the current directory and the parent directory have special aliases involving \keyword{.} (namely , \keyword{.} and \keyword{..}).
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 266)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   265: 
+>  266: Counterintuitively, \keyword{...} could be the name of a file or directory on disk (You can try this with \keyword{mkdir ...}), not the grandparent directory.
+   267: Only the current directory and the parent directory have special aliases involving \keyword{.} (namely , \keyword{.} and \keyword{..}).
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 268)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   267: Only the current directory and the parent directory have special aliases involving \keyword{.} (namely , \keyword{.} and \keyword{..}).
+>  268: Confusingly, the shell \keyword{zsh} does interpret \keyword{...} as a handy shortcut to the grandparent directory (should it exist) while expanding shell commands.
+   269: 
+
+- file: ..\latexlint-externals\submodules\coursebook\introc\common_c_functions.tex (line 116)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   115: There is a printf equivalent that works with file descriptors, called dprintf.
+>  116: Just use \keyword{dprintf(int\ fd,\ char*\ format\_string,\ ...);}.
+   117: 
+
+- file: ..\latexlint-externals\submodules\coursebook\malloc\malloc.tex (line 554)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   553: A well-known allocator of this type is the buddy allocator \cite[P. 85]{rangan1999foundations}.
+>  554: We'll discuss the binary buddy allocator which splits allocation into blocks of size $2^n; n = 1, 2, 3, ...$ times some base unit number of bytes, but others also exist like Fibonacci split where the allocation is rounded up to the next Fibonacci number.
+   555: The basic concept is simple: If there are no free blocks of size $2^n$, go to the next level and steal that block and split it into two.
+
+- file: ..\latexlint-externals\submodules\coursebook\synchronization\synchronization.tex (line 59)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+    58:   Thread 1 & Thread 2 \\ \hline
+>   59:   Load Addr, Add 1 (i=1 locally) & ...  \\
+    60:   Store (i=1 globally) & ...  \\
+
+- file: ..\latexlint-externals\submodules\coursebook\synchronization\synchronization.tex (line 60)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+    59:   Load Addr, Add 1 (i=1 locally) & ...  \\
+>   60:   Store (i=1 globally) & ...  \\
+    61:   ... & Load Addr, Add 1 (i=2 locally)  \\
+
+- file: ..\latexlint-externals\submodules\coursebook\synchronization\synchronization.tex (line 61)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+    60:   Store (i=1 globally) & ...  \\
+>   61:   ... & Load Addr, Add 1 (i=2 locally)  \\
+    62:   ... & Store (i=2 globally)  \\
+
+- file: ..\latexlint-externals\submodules\coursebook\synchronization\synchronization.tex (line 62)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+    61:   ... & Load Addr, Add 1 (i=2 locally)  \\
+>   62:   ... & Store (i=2 globally)  \\
+    63: \end{tabular}
+
+- file: ..\latexlint-externals\submodules\coursebook\synchronization\synchronization.tex (line 75)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+    74: Thread 1 & Thread 2 \\ \hline
+>   75: Load Addr, Add 1 (i=1 locally) & ... \\
+    76: Store (i=1 globally) & Load Addr, Add 1 (i=1 locally) \\
+
+- file: ..\latexlint-externals\submodules\coursebook\synchronization\synchronization.tex (line 77)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+    76: Store (i=1 globally) & Load Addr, Add 1 (i=1 locally) \\
+>   77: ... & Store (i=1 globally) \\
+    78: \end{tabular}
+
+- file: ..\latexlint-externals\submodules\coursebook\threads\threads.tex (line 100)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+    99: It means a pointer that takes a \keyword{void *} pointer and returns a \keyword{void *} pointer.
+>  100: It looks like a function declaration except that the name of the function is wrapped with \keyword{(* .... )}
+   101: 
+
+- file: ..\latexlint-externals\submodules\coursebook\threads\threads.tex (line 145)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   144: The pthread library will automatically finish the process if no other threads are running.
+>  145: \keyword{pthread\_exit(...)} is equivalent to returning from the thread's function; both finish the thread and also set the return value (void *pointer) for the thread.
+   146: Calling \keyword{pthread\_exit} in the \keyword{main} thread is a common way for simple programs to ensure that all threads finish.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 340)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   339:     and returns the lower tail area: \\
+>  340:     {\color{white}.....}%
+   341:         \texttt{> pnorm(1)} \\
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 342)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   341:         \texttt{> pnorm(1)} \\
+>  342:     {\color{white}.....}%
+   343:         \texttt{[1] 0.8413447} \\
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 350)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   349:     if we also note the mean and standard deviation: \\
+>  350:     {\color{white}.....}%
+   351:         \texttt{> pnorm(1300, mean = 1100, sd = 200)} \\
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 352)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   351:         \texttt{> pnorm(1300, mean = 1100, sd = 200)} \\
+>  352:     {\color{white}.....}%
+   353:         \texttt{[1] 0.8413447} %\\
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1735)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  1734:   what is the probability of observing
+> 1735:   $k=0$, 1, 2, ..., or \smokex{} smokers in a sample of
+  1736:   $n = \smoken{}$ when $p=\smokeprop{}$?
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 2000)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  1999: & \quad = P(\text{Brian makes three of his first five field goals, and he makes the sixth one}) \\
+> 2000: & \quad = P(\text{$1^{st}$ sequence OR $2^{nd}$ sequence OR ... OR $10^{th}$ sequence})
+  2001: \end{align*}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 2004)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  2003: {\small\begin{align*}
+> 2004: &P(\text{$1^{st}$ sequence OR $2^{nd}$ sequence OR ... OR $10^{th}$ sequence}) \\
+  2005: &\quad = P(\text{$1^{st}$ sequence}) + P(\text{$2^{nd}$ sequence}) + \cdots + P(\text{$10^{th}$ sequence})
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 1819)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  1818:   \indent\indent\indent\indent\indent\indent%
+> 1819:   {\color{white}...}on CBS' \emph{Face the Nation}, Jan 3,~1971
+  1820: \end{quotation}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_means\TeX\comparing_many_means_with_anova.tex (line 351)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   350: 
+>  351: If the null hypothesis that the means of four groups are all the same is rejected using ANOVA at a 5\% significance level, then ...
+   352: \begin{parts}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1692)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  1691:   Suppose we are to evaluate whether there is convincing
+> 1692:   evidence that a set of observed counts $O_1$, $O_2$, ...,
+  1693:   $O_k$ in $k$ categories are unusually different from what
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1696)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  1695:   Call the \emph{expected counts} that are based on the null
+> 1696:   hypothesis $E_1$, $E_2$, ..., $E_k$.
+  1697:   If each expected count is at least 5 and the null hypothesis
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1924)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  1923: provides a set of count data for waiting times
+> 1924: ($O_1=\spdaysA{}$, $O_2=\spdaysB{}$, ...)
+  1925: and expected counts under the geometric distribution
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1926)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  1925: and expected counts under the geometric distribution
+> 1926: ($E_1=\spdaysEA{}$, $E_2=\spdaysEB{}$, ...).
+  1927: Compute the chi-square test statistic, $X^2$.\footnotemark
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 2057)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  2056: ``Okay, I guess I'm supposed to go first.
+> 2057:   So you've had the iPod for 2 years ...''
+  2058: and ended with one of three questions:
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 414)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   413: This variable of the population count can only take whole
+>  414: non-negative numbers (\resp{0}, \resp{1}, \resp{2}, ...).
+   415: For~this reason, the population variable is said to be
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 422)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   421: The variable \var{state} can take up to 51 values after
+>  422: accounting for Washington, DC: \resp{AL}, \resp{AK}, ...,
+   423: and \resp{WY}.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 130)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   129: \begin{nexercise} \label{randomProcessExercise}
+>  130: Random processes include rolling a die and flipping a coin. (a) Think of another random process. (b) Describe all the possible outcomes of that process. For instance, rolling a die is a random process with possible outcomes \mbox{\resp{1}, \resp{2}, ..., \resp{6}}.\footnotemark
+   131: \end{nexercise}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 175)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   174:   \end{align*}
+>  175:   If there are many disjoint outcomes $A_1$, ..., $A_k$,
+   176:   then the probability that one of these outcomes will occur is
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 278)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   277: 
+>  278: Let's consider calculations for two events that are not disjoint in the context of a \indexthis{regular deck of 52 cards}{deck of cards}, represented in Figure~\ref{deckOfCards}. If you are unfamiliar with the cards in a regular deck, please see the footnote.\footnote{The 52 cards are split into four \term{suits}: $\clubsuit$ (club), {\color{redcards}$\diamondsuit$} (diamond), {\color{redcards}$\heartsuit$} (heart), $\spadesuit$ (spade). Each suit has its 13 cards labeled: \resp{2}, \resp{3}, ..., \resp{10}, \resp{J} (jack), \resp{Q} (queen), \resp{K} (king), and \resp{A} (ace). Thus, each card is a unique combination of a suit and a label, e.g. {\color{redcards}\resp{4$\heartsuit$}} and \resp{J$\clubsuit$}. The 12 cards represented by the jacks, queens, and kings are called \termsub{\resp{face cards}}{face card}. The cards that are {\color{redcards}$\diamondsuit$} or {\color{redcards}$\heartsuit$} are typically colored {\color{redcards}red} while the other two suits are typically colored black.}
+   279: 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 540)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   539:     That is, determine the probability of the event
+>  540:     $B = \{$\resp{4}, \resp{5}, ..., \resp{12}$\}$.
+   541: \item The sum is no more than \resp{10}.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 543)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   542:     That is, determine the probability of the event
+>  543:     $D=\{$\resp{2}, \resp{3}, ..., \resp{10}$\}$.
+   544: \end{enumerate}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 591)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   590:   \end{align*}
+>  591:   Similarly, if there are $k$ events $A_1$, ..., $A_k$
+   592:   from $k$ independent processes, then the probability
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 623)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   622: P(\text{all five are \resp{RH}})
+>  623: &= P(\text{first = \resp{RH}, second = \resp{RH}, ..., fifth = \resp{RH}}) \\
+   624: &= P(\text{first = \resp{RH}})\times P(\text{second = \resp{RH}})\times  \dots \times P(\text{fifth = \resp{RH}}) \\
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1257)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  1256: \begin{onebox}{Sum of conditional probabilities}
+> 1257: Let $A_1$, ..., $A_k$ represent all the disjoint outcomes for a variable or process. Then if $B$ is an event, possibly for another variable or process, we have: \vspace{-1mm}
+  1258: \begin{align*}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1529)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  1528: \end{align*}
+> 1529: where $A_2$, $A_3$, ..., and $A_k$ represent all other possible outcomes of the first variable.\index{Bayes' Theorem|textbf}
+  1530: \end{onebox}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1544)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  1543: \setlength{\itemsep}{0mm}
+> 1544: \item[(1)] First identify the marginal probabilities of each possible outcome of the first variable: $P(A_1)$, $P(A_2)$, ..., $P(A_k)$.
+  1545: \item[(2)] Then identify the probability of the outcome $B$, conditioned on each possible scenario for the first variable: $P(B | A_1)$, $P(B | A_2)$, ..., $P(B | A_k)$.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1545)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  1544: \item[(1)] First identify the marginal probabilities of each possible outcome of the first variable: $P(A_1)$, $P(A_2)$, ..., $P(A_k)$.
+> 1545: \item[(2)] Then identify the probability of the outcome $B$, conditioned on each possible scenario for the first variable: $P(B | A_1)$, $P(B | A_2)$, ..., $P(B | A_k)$.
+  1546: \end{enumerate}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1694)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  1693: \end{exercisewrap}
+> 1694: \footnotetext{(a) First determine the probability of not winning. The tickets are sampled without replacement, which means the probability you do not win on the first draw is $29/30$, $28/29$ for the second, ..., and $23/24$ for the seventh. The probability you win no prize is the product of these separate probabilities: $23/30$. That is, the probability of winning a prize is $1 - 23/30 = 7/30 = 0.233$. (b)~When the tickets are sampled with replacement, there are seven independent draws. Again we first find the probability of not winning a prize: $(29/30)^7 = 0.789$. Thus, the probability of winning (at least) one prize when drawing with replacement is 0.211.}
+  1695: 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1806)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  1805: \begin{onebox}{Expected value of a Discrete Random Variable}
+> 1806: If $X$ takes outcomes $x_1$, ..., $x_k$ with probabilities $P(X=x_1)$, ..., $P(X=x_k)$, the expected value of $X$ is the sum of each outcome multiplied by its corresponding probability:
+  1807: \begin{align*}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1806)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  1805: \begin{onebox}{Expected value of a Discrete Random Variable}
+> 1806: If $X$ takes outcomes $x_1$, ..., $x_k$ with probabilities $P(X=x_1)$, ..., $P(X=x_k)$, the expected value of $X$ is the sum of each outcome multiplied by its corresponding probability:
+  1807: \begin{align*}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1851)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  1850: \begin{onebox}{General variance formula}
+> 1851: If $X$ takes outcomes $x_1$, ..., $x_k$ with probabilities $P(X=x_1)$, ..., $P(X=x_k)$ and expected value $\mu=E(X)$, then the variance of $X$, denoted by $Var(X)$ or the symbol $\sigma^2$, is
+  1852: \begin{align*}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1851)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  1850: \begin{onebox}{General variance formula}
+> 1851: If $X$ takes outcomes $x_1$, ..., $x_k$ with probabilities $P(X=x_1)$, ..., $P(X=x_k)$ and expected value $\mu=E(X)$, then the variance of $X$, denoted by $Var(X)$ or the symbol $\sigma^2$, is
+  1852: \begin{align*}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1927)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  1926: \begin{examplewrap}
+> 1927: \begin{nexample}{John travels to work five days a week. We will use $X_1$ to represent his travel time on Monday, $X_2$ to represent his travel time on Tuesday, and so on. Write an equation using $X_1$, ..., $X_5$ that represents his travel time for the week, denoted by $W$.}
+  1928: His total weekly travel time is the sum of the five daily values:
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\review_exercises.tex (line 145)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   144: Suppose we have $n$ independent observations
+>  145: $X_1$, $X_2$, ..., $X_n$ from
+   146: a distribution with mean $\mu$ and standard deviation $\sigma$.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 34)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+    33: 
+>   34: Multiple regression extends simple two-variable regression to the case that still has one response but many predictors (denoted $x_1$, $x_2$, $x_3$, ...). The method is motivated by scenarios where many variables may be simultaneously connected to an output.
+    35: 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 475)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   474: We estimate the parameters
+>  475: $\beta_0$, $\beta_1$, $\beta_2$, ..., $\beta_9$
+   476: in the same way as we did in the case of a single predictor.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 477)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   476: in the same way as we did in the case of a single predictor.
+>  477: We select $b_0$, $b_1$, $b_2$, ..., $b_9$ that minimize the
+   478: sum of the squared residuals:
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 942)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   941:   \begin{tabular}{lllll}
+>  942:   Exclude ... &
+   943:       \var{income\us{}ver} &
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 975)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   974:   \begin{tabular}{llll}
+>  975:   Exclude \var{issued} and ... &
+   976:       \var{income\us{}ver} &
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 1030)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  1029:   \begin{tabular}{lllll}
+> 1030:   Add ... &
+  1031:       \var{income\us{}ver} &
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 1067)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  1066:   \begin{tabular}{llll}
+> 1067:   Add \var{term} and ... &
+  1068:       \var{income\us{}ver} &
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 1096)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  1095:   \begin{tabular}{llll}
+> 1096:   Add \var{term}, \var{credit\us{}util}, and ... &
+  1097:       \var{income\us{}ver} &
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 1841)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  1840:     \begin{tabular}{lllll}
+> 1841:     Exclude ... &
+  1842:       \var{cond\us{}new} &
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 1873)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  1872: \begin{tabular}{llll}
+> 1873: Exclude \var{duration} and ... &
+  1874: 	\var{cond\us{}new} &
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 2312)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+  2311: a resume would receive a callback ($p_i$) to the predictors
+> 2312: $x_{1,i}$, $x_{2,i}$, ..., $x_{k,i}$
+  2313: through a framework much like that of multiple regression:
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\checking_model_assumptions_using_graphs.tex (line 30)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+    29: office as the big-time summer blockbusters or
+>   30: action/adventure movies ... but there’s a huge incentive
+    31: for studios to continue pushing them out.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 451)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   450:   we can compute the correlation for observations $(x_1, y_1)$,
+>  451:   $(x_2, y_2)$, ..., $(x_n, y_n)$ using the formula
+   452:   \begin{align*}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 701)
+  error: ...
+  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
+   700: that these are the variance and standard deviation of the
+>  701: observations represented by $x_1^{}$, $x_2^{}$, ..., $x_n^{}$.
+   702: 
+
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 111)
   error: ...
   message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
@@ -1797,466 +2259,4 @@
    402: Data analysis is performed directly on the microscopy videos. The field of view, assumed to be fixed in time, is divided into $M$ square tiles based on the specified observation box length $L$ and a specified separation width $\delta L$ between the boxes. For simplicity, we only consider box lengths, separations, and positions that align with pixels.
 >  403: We then sum the intensity of each pixel that falls within each observation box, generating a time series of intensities $I_i(t)$ for the box indices $i=1,...,M$. Statistical quantities such as $\left< \Delta I(t)^2 \right>$ are estimated by first averaging over time origins $t_0$ and then using arithmetic means over all of the boxes $ \big< \left< \Delta I(t)^2 \right>_{t_0} \big>_{i}$. The average particle intensity $\left< I \right>$ and variance $\left< I^2 \right> -\left< I \right>^2$ are estimated using the sample mean and the unbiased sample variance, determined from all boxes and frames.
    404: %\note{FFT for MSD ... from Brennan}
-
-- file: sample\submodules\coursebook\appendix\appendix.tex (line 387)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   386: For people to request money, they do the following:
->  387: Consider the state of the system $(A=\{a_1, a_2, ...\}, L_t=\{l_{t,1}, l_{t,2}, ...\}, p)$ at time $t$.
-   388: A precondition is that we have $p \geq min(A)$, or we have enough money to suit at least one person.
-
-- file: sample\submodules\coursebook\appendix\appendix.tex (line 387)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   386: For people to request money, they do the following:
->  387: Consider the state of the system $(A=\{a_1, a_2, ...\}, L_t=\{l_{t,1}, l_{t,2}, ...\}, p)$ at time $t$.
-   388: A precondition is that we have $p \geq min(A)$, or we have enough money to suit at least one person.
-
-- file: sample\submodules\coursebook\appendix\appendix.tex (line 396)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   395:           \item if $m + l_j > a_i$ they are denied
->  396:           \item Pretend we are in a new state $(A, L_{t+1}=\{.., l_{t+1, j} = l_{t, j} + m, ...\}, p - m)$ where the process is granted the resource.
-   397:         \end{itemize}
-
-- file: sample\submodules\coursebook\deadlock\deadlock.tex (line 108)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   107: 	Though this proof is not formal, let us build a system with the three requirements not including circular wait.
->  108: 	Let assume that there is a set of processes $P = \{p_1, p_2, ..., p_n\}$ and there is a set of resources $R = \{r_1, r_2, ..., r_m\}$.
-   109: 	For simplicity, a process can only request one resource at a time but the proof can be generalized to multiple.
-
-- file: sample\submodules\coursebook\deadlock\deadlock.tex (line 108)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   107: 	Though this proof is not formal, let us build a system with the three requirements not including circular wait.
->  108: 	Let assume that there is a set of processes $P = \{p_1, p_2, ..., p_n\}$ and there is a set of resources $R = \{r_1, r_2, ..., r_m\}$.
-   109: 	For simplicity, a process can only request one resource at a time but the proof can be generalized to multiple.
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 266)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   265: 
->  266: Counterintuitively, \keyword{...} could be the name of a file or directory on disk (You can try this with \keyword{mkdir ...}), not the grandparent directory.
-   267: Only the current directory and the parent directory have special aliases involving \keyword{.} (namely , \keyword{.} and \keyword{..}).
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 266)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   265: 
->  266: Counterintuitively, \keyword{...} could be the name of a file or directory on disk (You can try this with \keyword{mkdir ...}), not the grandparent directory.
-   267: Only the current directory and the parent directory have special aliases involving \keyword{.} (namely , \keyword{.} and \keyword{..}).
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 268)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   267: Only the current directory and the parent directory have special aliases involving \keyword{.} (namely , \keyword{.} and \keyword{..}).
->  268: Confusingly, the shell \keyword{zsh} does interpret \keyword{...} as a handy shortcut to the grandparent directory (should it exist) while expanding shell commands.
-   269: 
-
-- file: sample\submodules\coursebook\introc\common_c_functions.tex (line 116)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   115: There is a printf equivalent that works with file descriptors, called dprintf.
->  116: Just use \keyword{dprintf(int\ fd,\ char*\ format\_string,\ ...);}.
-   117: 
-
-- file: sample\submodules\coursebook\malloc\malloc.tex (line 554)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   553: A well-known allocator of this type is the buddy allocator \cite[P. 85]{rangan1999foundations}.
->  554: We'll discuss the binary buddy allocator which splits allocation into blocks of size $2^n; n = 1, 2, 3, ...$ times some base unit number of bytes, but others also exist like Fibonacci split where the allocation is rounded up to the next Fibonacci number.
-   555: The basic concept is simple: If there are no free blocks of size $2^n$, go to the next level and steal that block and split it into two.
-
-- file: sample\submodules\coursebook\synchronization\synchronization.tex (line 59)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-    58:   Thread 1 & Thread 2 \\ \hline
->   59:   Load Addr, Add 1 (i=1 locally) & ...  \\
-    60:   Store (i=1 globally) & ...  \\
-
-- file: sample\submodules\coursebook\synchronization\synchronization.tex (line 60)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-    59:   Load Addr, Add 1 (i=1 locally) & ...  \\
->   60:   Store (i=1 globally) & ...  \\
-    61:   ... & Load Addr, Add 1 (i=2 locally)  \\
-
-- file: sample\submodules\coursebook\synchronization\synchronization.tex (line 61)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-    60:   Store (i=1 globally) & ...  \\
->   61:   ... & Load Addr, Add 1 (i=2 locally)  \\
-    62:   ... & Store (i=2 globally)  \\
-
-- file: sample\submodules\coursebook\synchronization\synchronization.tex (line 62)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-    61:   ... & Load Addr, Add 1 (i=2 locally)  \\
->   62:   ... & Store (i=2 globally)  \\
-    63: \end{tabular}
-
-- file: sample\submodules\coursebook\synchronization\synchronization.tex (line 75)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-    74: Thread 1 & Thread 2 \\ \hline
->   75: Load Addr, Add 1 (i=1 locally) & ... \\
-    76: Store (i=1 globally) & Load Addr, Add 1 (i=1 locally) \\
-
-- file: sample\submodules\coursebook\synchronization\synchronization.tex (line 77)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-    76: Store (i=1 globally) & Load Addr, Add 1 (i=1 locally) \\
->   77: ... & Store (i=1 globally) \\
-    78: \end{tabular}
-
-- file: sample\submodules\coursebook\threads\threads.tex (line 100)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-    99: It means a pointer that takes a \keyword{void *} pointer and returns a \keyword{void *} pointer.
->  100: It looks like a function declaration except that the name of the function is wrapped with \keyword{(* .... )}
-   101: 
-
-- file: sample\submodules\coursebook\threads\threads.tex (line 145)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   144: The pthread library will automatically finish the process if no other threads are running.
->  145: \keyword{pthread\_exit(...)} is equivalent to returning from the thread's function; both finish the thread and also set the return value (void *pointer) for the thread.
-   146: Calling \keyword{pthread\_exit} in the \keyword{main} thread is a common way for simple programs to ensure that all threads finish.
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 340)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   339:     and returns the lower tail area: \\
->  340:     {\color{white}.....}%
-   341:         \texttt{> pnorm(1)} \\
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 342)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   341:         \texttt{> pnorm(1)} \\
->  342:     {\color{white}.....}%
-   343:         \texttt{[1] 0.8413447} \\
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 350)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   349:     if we also note the mean and standard deviation: \\
->  350:     {\color{white}.....}%
-   351:         \texttt{> pnorm(1300, mean = 1100, sd = 200)} \\
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 352)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   351:         \texttt{> pnorm(1300, mean = 1100, sd = 200)} \\
->  352:     {\color{white}.....}%
-   353:         \texttt{[1] 0.8413447} %\\
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1735)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  1734:   what is the probability of observing
-> 1735:   $k=0$, 1, 2, ..., or \smokex{} smokers in a sample of
-  1736:   $n = \smoken{}$ when $p=\smokeprop{}$?
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 2000)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  1999: & \quad = P(\text{Brian makes three of his first five field goals, and he makes the sixth one}) \\
-> 2000: & \quad = P(\text{$1^{st}$ sequence OR $2^{nd}$ sequence OR ... OR $10^{th}$ sequence})
-  2001: \end{align*}
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 2004)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  2003: {\small\begin{align*}
-> 2004: &P(\text{$1^{st}$ sequence OR $2^{nd}$ sequence OR ... OR $10^{th}$ sequence}) \\
-  2005: &\quad = P(\text{$1^{st}$ sequence}) + P(\text{$2^{nd}$ sequence}) + \cdots + P(\text{$10^{th}$ sequence})
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 1819)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  1818:   \indent\indent\indent\indent\indent\indent%
-> 1819:   {\color{white}...}on CBS' \emph{Face the Nation}, Jan 3,~1971
-  1820: \end{quotation}
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\comparing_many_means_with_anova.tex (line 351)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   350: 
->  351: If the null hypothesis that the means of four groups are all the same is rejected using ANOVA at a 5\% significance level, then ...
-   352: \begin{parts}
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1692)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  1691:   Suppose we are to evaluate whether there is convincing
-> 1692:   evidence that a set of observed counts $O_1$, $O_2$, ...,
-  1693:   $O_k$ in $k$ categories are unusually different from what
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1696)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  1695:   Call the \emph{expected counts} that are based on the null
-> 1696:   hypothesis $E_1$, $E_2$, ..., $E_k$.
-  1697:   If each expected count is at least 5 and the null hypothesis
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1924)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  1923: provides a set of count data for waiting times
-> 1924: ($O_1=\spdaysA{}$, $O_2=\spdaysB{}$, ...)
-  1925: and expected counts under the geometric distribution
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1926)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  1925: and expected counts under the geometric distribution
-> 1926: ($E_1=\spdaysEA{}$, $E_2=\spdaysEB{}$, ...).
-  1927: Compute the chi-square test statistic, $X^2$.\footnotemark
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 2057)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  2056: ``Okay, I guess I'm supposed to go first.
-> 2057:   So you've had the iPod for 2 years ...''
-  2058: and ended with one of three questions:
-
-- file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 414)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   413: This variable of the population count can only take whole
->  414: non-negative numbers (\resp{0}, \resp{1}, \resp{2}, ...).
-   415: For~this reason, the population variable is said to be
-
-- file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 422)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   421: The variable \var{state} can take up to 51 values after
->  422: accounting for Washington, DC: \resp{AL}, \resp{AK}, ...,
-   423: and \resp{WY}.
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 130)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   129: \begin{nexercise} \label{randomProcessExercise}
->  130: Random processes include rolling a die and flipping a coin. (a) Think of another random process. (b) Describe all the possible outcomes of that process. For instance, rolling a die is a random process with possible outcomes \mbox{\resp{1}, \resp{2}, ..., \resp{6}}.\footnotemark
-   131: \end{nexercise}
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 175)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   174:   \end{align*}
->  175:   If there are many disjoint outcomes $A_1$, ..., $A_k$,
-   176:   then the probability that one of these outcomes will occur is
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 278)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   277: 
->  278: Let's consider calculations for two events that are not disjoint in the context of a \indexthis{regular deck of 52 cards}{deck of cards}, represented in Figure~\ref{deckOfCards}. If you are unfamiliar with the cards in a regular deck, please see the footnote.\footnote{The 52 cards are split into four \term{suits}: $\clubsuit$ (club), {\color{redcards}$\diamondsuit$} (diamond), {\color{redcards}$\heartsuit$} (heart), $\spadesuit$ (spade). Each suit has its 13 cards labeled: \resp{2}, \resp{3}, ..., \resp{10}, \resp{J} (jack), \resp{Q} (queen), \resp{K} (king), and \resp{A} (ace). Thus, each card is a unique combination of a suit and a label, e.g. {\color{redcards}\resp{4$\heartsuit$}} and \resp{J$\clubsuit$}. The 12 cards represented by the jacks, queens, and kings are called \termsub{\resp{face cards}}{face card}. The cards that are {\color{redcards}$\diamondsuit$} or {\color{redcards}$\heartsuit$} are typically colored {\color{redcards}red} while the other two suits are typically colored black.}
-   279: 
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 540)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   539:     That is, determine the probability of the event
->  540:     $B = \{$\resp{4}, \resp{5}, ..., \resp{12}$\}$.
-   541: \item The sum is no more than \resp{10}.
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 543)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   542:     That is, determine the probability of the event
->  543:     $D=\{$\resp{2}, \resp{3}, ..., \resp{10}$\}$.
-   544: \end{enumerate}
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 591)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   590:   \end{align*}
->  591:   Similarly, if there are $k$ events $A_1$, ..., $A_k$
-   592:   from $k$ independent processes, then the probability
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 623)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   622: P(\text{all five are \resp{RH}})
->  623: &= P(\text{first = \resp{RH}, second = \resp{RH}, ..., fifth = \resp{RH}}) \\
-   624: &= P(\text{first = \resp{RH}})\times P(\text{second = \resp{RH}})\times  \dots \times P(\text{fifth = \resp{RH}}) \\
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1257)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  1256: \begin{onebox}{Sum of conditional probabilities}
-> 1257: Let $A_1$, ..., $A_k$ represent all the disjoint outcomes for a variable or process. Then if $B$ is an event, possibly for another variable or process, we have: \vspace{-1mm}
-  1258: \begin{align*}
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1529)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  1528: \end{align*}
-> 1529: where $A_2$, $A_3$, ..., and $A_k$ represent all other possible outcomes of the first variable.\index{Bayes' Theorem|textbf}
-  1530: \end{onebox}
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1544)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  1543: \setlength{\itemsep}{0mm}
-> 1544: \item[(1)] First identify the marginal probabilities of each possible outcome of the first variable: $P(A_1)$, $P(A_2)$, ..., $P(A_k)$.
-  1545: \item[(2)] Then identify the probability of the outcome $B$, conditioned on each possible scenario for the first variable: $P(B | A_1)$, $P(B | A_2)$, ..., $P(B | A_k)$.
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1545)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  1544: \item[(1)] First identify the marginal probabilities of each possible outcome of the first variable: $P(A_1)$, $P(A_2)$, ..., $P(A_k)$.
-> 1545: \item[(2)] Then identify the probability of the outcome $B$, conditioned on each possible scenario for the first variable: $P(B | A_1)$, $P(B | A_2)$, ..., $P(B | A_k)$.
-  1546: \end{enumerate}
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1694)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  1693: \end{exercisewrap}
-> 1694: \footnotetext{(a) First determine the probability of not winning. The tickets are sampled without replacement, which means the probability you do not win on the first draw is $29/30$, $28/29$ for the second, ..., and $23/24$ for the seventh. The probability you win no prize is the product of these separate probabilities: $23/30$. That is, the probability of winning a prize is $1 - 23/30 = 7/30 = 0.233$. (b)~When the tickets are sampled with replacement, there are seven independent draws. Again we first find the probability of not winning a prize: $(29/30)^7 = 0.789$. Thus, the probability of winning (at least) one prize when drawing with replacement is 0.211.}
-  1695: 
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1806)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  1805: \begin{onebox}{Expected value of a Discrete Random Variable}
-> 1806: If $X$ takes outcomes $x_1$, ..., $x_k$ with probabilities $P(X=x_1)$, ..., $P(X=x_k)$, the expected value of $X$ is the sum of each outcome multiplied by its corresponding probability:
-  1807: \begin{align*}
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1806)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  1805: \begin{onebox}{Expected value of a Discrete Random Variable}
-> 1806: If $X$ takes outcomes $x_1$, ..., $x_k$ with probabilities $P(X=x_1)$, ..., $P(X=x_k)$, the expected value of $X$ is the sum of each outcome multiplied by its corresponding probability:
-  1807: \begin{align*}
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1851)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  1850: \begin{onebox}{General variance formula}
-> 1851: If $X$ takes outcomes $x_1$, ..., $x_k$ with probabilities $P(X=x_1)$, ..., $P(X=x_k)$ and expected value $\mu=E(X)$, then the variance of $X$, denoted by $Var(X)$ or the symbol $\sigma^2$, is
-  1852: \begin{align*}
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1851)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  1850: \begin{onebox}{General variance formula}
-> 1851: If $X$ takes outcomes $x_1$, ..., $x_k$ with probabilities $P(X=x_1)$, ..., $P(X=x_k)$ and expected value $\mu=E(X)$, then the variance of $X$, denoted by $Var(X)$ or the symbol $\sigma^2$, is
-  1852: \begin{align*}
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1927)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  1926: \begin{examplewrap}
-> 1927: \begin{nexample}{John travels to work five days a week. We will use $X_1$ to represent his travel time on Monday, $X_2$ to represent his travel time on Tuesday, and so on. Write an equation using $X_1$, ..., $X_5$ that represents his travel time for the week, denoted by $W$.}
-  1928: His total weekly travel time is the sum of the five daily values:
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\review_exercises.tex (line 145)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   144: Suppose we have $n$ independent observations
->  145: $X_1$, $X_2$, ..., $X_n$ from
-   146: a distribution with mean $\mu$ and standard deviation $\sigma$.
-
-- file: sample\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 34)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-    33: 
->   34: Multiple regression extends simple two-variable regression to the case that still has one response but many predictors (denoted $x_1$, $x_2$, $x_3$, ...). The method is motivated by scenarios where many variables may be simultaneously connected to an output.
-    35: 
-
-- file: sample\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 475)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   474: We estimate the parameters
->  475: $\beta_0$, $\beta_1$, $\beta_2$, ..., $\beta_9$
-   476: in the same way as we did in the case of a single predictor.
-
-- file: sample\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 477)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   476: in the same way as we did in the case of a single predictor.
->  477: We select $b_0$, $b_1$, $b_2$, ..., $b_9$ that minimize the
-   478: sum of the squared residuals:
-
-- file: sample\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 942)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   941:   \begin{tabular}{lllll}
->  942:   Exclude ... &
-   943:       \var{income\us{}ver} &
-
-- file: sample\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 975)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   974:   \begin{tabular}{llll}
->  975:   Exclude \var{issued} and ... &
-   976:       \var{income\us{}ver} &
-
-- file: sample\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 1030)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  1029:   \begin{tabular}{lllll}
-> 1030:   Add ... &
-  1031:       \var{income\us{}ver} &
-
-- file: sample\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 1067)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  1066:   \begin{tabular}{llll}
-> 1067:   Add \var{term} and ... &
-  1068:       \var{income\us{}ver} &
-
-- file: sample\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 1096)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  1095:   \begin{tabular}{llll}
-> 1096:   Add \var{term}, \var{credit\us{}util}, and ... &
-  1097:       \var{income\us{}ver} &
-
-- file: sample\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 1841)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  1840:     \begin{tabular}{lllll}
-> 1841:     Exclude ... &
-  1842:       \var{cond\us{}new} &
-
-- file: sample\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 1873)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  1872: \begin{tabular}{llll}
-> 1873: Exclude \var{duration} and ... &
-  1874: 	\var{cond\us{}new} &
-
-- file: sample\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 2312)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-  2311: a resume would receive a callback ($p_i$) to the predictors
-> 2312: $x_{1,i}$, $x_{2,i}$, ..., $x_{k,i}$
-  2313: through a framework much like that of multiple regression:
-
-- file: sample\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\checking_model_assumptions_using_graphs.tex (line 30)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-    29: office as the big-time summer blockbusters or
->   30: action/adventure movies ... but there’s a huge incentive
-    31: for studios to continue pushing them out.
-
-- file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 451)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   450:   we can compute the correlation for observations $(x_1, y_1)$,
->  451:   $(x_2, y_2)$, ..., $(x_n, y_n)$ using the formula
-   452:   \begin{align*}
-
-- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 701)
-  error: ...
-  message: Consider using an ellipsis command such as \dots, \ldots, \cdots, or \textellipsis instead of ... to avoid spacing issues.
-   700: that these are the variance and standard deviation of the
->  701: observations represented by $x_1^{}$, $x_2^{}$, ..., $x_n^{}$.
-   702: 
 

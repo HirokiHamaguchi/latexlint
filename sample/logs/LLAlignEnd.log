@@ -1,4 +1,39 @@
 [CODE] LLAlignEnd (16)
+- file: ..\latexlint-externals\submodules\OpenLogic\content\lambda-calculus\lambda-definability\arithmetical-functions.tex (line 44)
+  error: \\
+  message: \\ at the enf of align-like environments might be unnecessary.
+    43:     & \redone \lambd[f][\lambd[x][(f ({(\lambd[x][x])} x))]] \\
+>   44:     & \redone \lambd[f][\lambd[x][(f x)]] \ident \num{1}\\
+    45:   \end{align*}
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\normal-modal-logic\completeness\modalities-ccs.tex (line 70)
+  error: \\
+  message: \\ at the enf of align-like environments might be unnecessary.
+    69:     \Box^{-1}\Gamma & = \Setabs{!B}{\Box !B \in \Gamma}\\
+>   70:     \Diamond^{-1}\Gamma & = \Setabs{!B}{\Diamond !B \in \Gamma}\\
+    71:   \end{align*}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 2442)
+  error: \\
+  message: \\ at the enf of align-like environments might be unnecessary.
+  2441:   n &= \frac{2.8^2}{3^2} \times \left( 12^2 + 12^2 \right)
+> 2442:     = 250.88 \\
+  2443:   \end{align*}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1444)
+  error: \\
+  message: \\ at the enf of align-like environments might be unnecessary.
+  1443: 	&& Z_3 = \frac{25-33}{\sqrt{33}}=-1.39\ \ \ \ 
+> 1444: 	&& Z_4 = \frac{19-24.75}{\sqrt{24.75}}=-1.16 \\
+  1445: \end{align*}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1304)
+  error: \\
+  message: \\ at the enf of align-like environments might be unnecessary.
+  1303:       {\color{oiGB}P(X=\text{\resp{1}})} \\
+> 1304:     &= P(Y=\text{\resp{1}}) \\
+  1305: \end{align*}
+
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 392)
   error: \\
   message: \\ at the enf of align-like environments might be unnecessary.
@@ -75,39 +110,4 @@
   1760: &\ll \Big(\frac{y}{\sqrt{q_1}}+ \sqrt{yq_1\log(2q_1)}\Big)(\log y)^{-1/4+o(1)}+ye^{-(\frac12-\frac{\ep}{2})\sqrt{\log y}}\\
 > 1761: &\ll \Big(\frac{\sqrt{xy}}{\sqrt{q}}+ \sqrt{yq\log q} \Big)(\log y)^{-1/4+o(1)}+ye^{-(\frac12-\frac{\ep}{2})\sqrt{\log y}}\\
   1762:  \end{align*} 
-
-- file: sample\submodules\OpenLogic\content\lambda-calculus\lambda-definability\arithmetical-functions.tex (line 44)
-  error: \\
-  message: \\ at the enf of align-like environments might be unnecessary.
-    43:     & \redone \lambd[f][\lambd[x][(f ({(\lambd[x][x])} x))]] \\
->   44:     & \redone \lambd[f][\lambd[x][(f x)]] \ident \num{1}\\
-    45:   \end{align*}
-
-- file: sample\submodules\OpenLogic\content\normal-modal-logic\completeness\modalities-ccs.tex (line 70)
-  error: \\
-  message: \\ at the enf of align-like environments might be unnecessary.
-    69:     \Box^{-1}\Gamma & = \Setabs{!B}{\Box !B \in \Gamma}\\
->   70:     \Diamond^{-1}\Gamma & = \Setabs{!B}{\Diamond !B \in \Gamma}\\
-    71:   \end{align*}
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 2442)
-  error: \\
-  message: \\ at the enf of align-like environments might be unnecessary.
-  2441:   n &= \frac{2.8^2}{3^2} \times \left( 12^2 + 12^2 \right)
-> 2442:     = 250.88 \\
-  2443:   \end{align*}
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1444)
-  error: \\
-  message: \\ at the enf of align-like environments might be unnecessary.
-  1443: 	&& Z_3 = \frac{25-33}{\sqrt{33}}=-1.39\ \ \ \ 
-> 1444: 	&& Z_4 = \frac{19-24.75}{\sqrt{24.75}}=-1.16 \\
-  1445: \end{align*}
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1304)
-  error: \\
-  message: \\ at the enf of align-like environments might be unnecessary.
-  1303:       {\color{oiGB}P(X=\text{\resp{1}})} \\
-> 1304:     &= P(Y=\text{\resp{1}}) \\
-  1305: \end{align*}
 

@@ -1,4 +1,942 @@
 [CODE] LLPeriod (339)
+- file: ..\latexlint-externals\submodules\OpenLogic\content\set-theory\replacement\refproofs.tex (line 134)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   133: 	(\forall z, \overline{x} \in S)(&\phi \liff \phi^S)\\
+>  134: 	\text{i.e. }(\forall z, \overline{x} \in S)(&((z = 0 \land \psi) \lor (z = 1 \land \chi)) \liff {}\\
+   135: 	&\phantom{(}((z = 0 \land \psi) \lor (z = 1 \land \chi))^S)\\
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\set-theory\replacement\refproofs.tex (line 136)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   135: 	&\phantom{(}((z = 0 \land \psi) \lor (z = 1 \land \chi))^S)\\
+>  136: 	\text{i.e. }(\forall z, \overline{x} \in S)(&((z = 0 \land \psi) \lor (z = 1 \land \chi))\liff {}\\
+   137: 	&\phantom{(}((z = 0 \land \psi^S) \lor (z = 1 \land \chi^S)))\\
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\set-theory\replacement\refproofs.tex (line 138)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   137: 	&\phantom{(}((z = 0 \land \psi^S) \lor (z = 1 \land \chi^S)))\\
+>  138: 	\text{i.e. }(\forall \overline{x} \in S)(&(\psi \liff \psi^S) \land (\chi \liff \chi^S))
+   139: \end{align*}
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\sets-functions-relations\inductive-defs-proofs\introduction.tex (line 72)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+    71: \[ 0 + 1 + \ldots + k = \frac{k(k+1)}{2} \]
+>   72: We will show that $P(k+1)$ holds, i.e. that
+    73: \[ 0 + 1 + \ldots + k + (k+1) = \frac{(k+1)(k+2)}{2} \]
+
+- file: ..\latexlint-externals\submodules\coursebook\appendix\appendix.tex (line 1305)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1304: 
+> 1305:   \item As for a comparison with FCFS in the average case, it usually does better assuming that we have a smooth probability distribution -- i.e. the probability of getting any particular priority is zero.
+  1306:   In all of our formulas, we still have some probability mass to put on lower priority processes, bringing the expectation down.
+
+- file: ..\latexlint-externals\submodules\coursebook\background\background.tex (line 1015)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1014: \item Have I fixed other segmentation faults unrelated to the issue I'm having?
+> 1015: \item Am I following good programming practice? (i.e. encapsulation, functions to limit repetition, etc)
+  1016: \end{enumerate}
+
+- file: ..\latexlint-externals\submodules\coursebook\deadlock\deadlock.tex (line 147)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   146: Livelock is generally harder to detect because the processes generally look like they are working to the outside operating system whereas in deadlock the operating system generally knows when two processes are waiting on a system-wide resource.
+>  147: Another problem is that there are necessary conditions for livelock (i.e. deadlock fails to occur) but not sufficient conditions -- meaning there is no set of rules where livelock has to occur.
+   148: You must formally prove in a system by what is known as an invariant.
+
+- file: ..\latexlint-externals\submodules\coursebook\deadlock\deadlock.tex (line 202)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   201: Oops - our philosophers have deadlocked!
+>  202: Each philosopher is essentially the same, meaning that each philosopher has the same instruction set based on the other philosopher i.e. you can't tell every even philosopher to do one thing and every odd philosopher to do another thing.
+   203: 
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 517)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   516: For that matter, there are many other attributes that files also might contain.
+>  517: We distinguish a file type -- different from the file extension i.e. png, svg, pdf -- using fields inside the inode.
+   518: How does the system know what type the file is?
+
+- file: ..\latexlint-externals\submodules\coursebook\honors\kernel.tex (line 30)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+    29: System Calls use an instruction that can be run by a program operating in userspace that \textit{traps} to the kernel (by use of a signal) to complete the call.
+>   30: This includes actions such as writing data to disk, interacting directly with hardware in general or operations related to gaining or relinquishing privileges (e.g.  becoming the root user and gaining all capabilities).
+    31: 
+
+- file: ..\latexlint-externals\submodules\coursebook\introc\common_c_functions.tex (line 63)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+    62: 
+>   63: They are designated by the file descriptors 0 and 1 respectively. 2 is reserved for standard error which by library convention is unbuffered (i.e. IO operations are performed immediately).
+    64: 
+
+- file: ..\latexlint-externals\submodules\coursebook\introc\common_c_functions.tex (line 301)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   300: 	      What these functions do is take the pointer to your string
+>  301: 	      \keyword{*nptr} and a \keyword{base} (i.e. binary, octal, decimal,
+   302: 	      hexadecimal etc) and an optional pointer \keyword{endptr} and returns a
+
+- file: ..\latexlint-externals\submodules\coursebook\introc\crash_course_introduction_to_c.tex (line 29)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+    28:     Just remember to include the header and call the function with the appropriate parameters (a string literal \keyword{"Hello World\n"}).
+>   29:     If the newline isn't included, the buffer will not be flushed (i.e. the write will not complete immediately).
+    30: 	\item \keyword{return 0}.
+
+- file: ..\latexlint-externals\submodules\coursebook\introc\introc.tex (line 155)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   154: 	\item
+>  155: 	      What are some differences between the POSIX file descriptor model and C's \keyword{FILE*} (i.e. what function calls are used and which is buffered)? Does POSIX use C's \keyword{FILE*} internally or vice versa?
+   156: \end{itemize}
+
+- file: ..\latexlint-externals\submodules\coursebook\introc\language_facilities.tex (line 585)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   584: \end{lstlisting}
+>  585:     Note that shifting by the word size (e.g. by 64 in a 64-bit architecture) results in undefined behavior.
+   586: 	\item \keyword{<=/>=} are the greater than equal to/less than equal to, relational operators.
+
+- file: ..\latexlint-externals\submodules\coursebook\ipc\ipc.tex (line 36)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+    35: They can address $2^{32}$ different locations or 4GB of memory where one address is one byte.
+>   36: Imagine we had a large table for every possible address where we will store the `real' i.e. ~physical address.
+    37: Each physical address will need 4 bytes -- to hold the 32-bits.
+
+- file: ..\latexlint-externals\submodules\coursebook\malloc\malloc.tex (line 440)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   439: 
+>  440: The additional constant ensures incomplete units are rounded up. Note, real code is more likely to symbol sizes e.g. \keyword{sizeof(x)\ -\ 1}, rather than coding numerical constant 15.
+   441: \href{http://www.ibm.com/developerworks/library/pa-dalign/}{Here's a great article on memory alignment, if you are further interested}
+
+- file: ..\latexlint-externals\submodules\coursebook\networking\networking.tex (line 156)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   155: 
+>  156: To grab the IP Address of a remote website, The function \keyword{getaddrinfo} can convert a human-readable domain name (e.g. \keyword{www.illinois.edu}) into an IPv4 and IPv6 address.
+   157: It will return a linked-list of addrinfo structs:
+
+- file: ..\latexlint-externals\submodules\coursebook\networking\networking.tex (line 341)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   340: 
+>  341: Unless agreed otherwise, whenever you read or write the low-level C network structures, i.e. port and address information, remember to use the above functions to ensure correct conversion to/from a machine format.
+   342: Otherwise, the displayed or specified value may be incorrect.
+
+- file: ..\latexlint-externals\submodules\coursebook\networking\networking.tex (line 1046)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1045: This hierarchy first resolves top-level domains \keyword{.edu} \keyword{.gov} etc.
+> 1046: Next, it resolves the next level i.e. \keyword{illinois.edu}.
+  1047: Then the local resolvers can resolve any number of URLs.
+
+- file: ..\latexlint-externals\submodules\coursebook\post_mortems\post_mortems.tex (line 31)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+    30: This means that you can harden your machine ports by disallowing connections on all but a few ports.
+>   31: Also, you can harden your system to never perform exec calls to perform tasks (i.e. perform an exec call to update a value) and instead do it in C or your favorite programming language of choice.
+    32: Although you don't have flexibility, you have peace of mind what you allow users to do.
+
+- file: ..\latexlint-externals\submodules\coursebook\post_mortems\post_mortems.tex (line 41)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+    40: A server sends a string of a certain length, and the second server is supposed to send the string of the length back.
+>   41: The problem is someone can maliciously change the size of the request to larger than what they sent (i.e. send ``cat'' but request 500 bytes) and get crucial information like passwords from the server.
+    42: There is a \href{https://xkcd.com/1354/}{Relevant XKCD} on it.
+
+- file: ..\latexlint-externals\submodules\coursebook\post_mortems\post_mortems.tex (line 114)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   113: 
+>  114: Lessons Learned: Modularize your code to localize failures (i.e. keeping race conditions different between processes). If you need to synchronize among processes make sure your failure detection system is not interlaced with your system.
+   115: 
+
+- file: ..\latexlint-externals\submodules\coursebook\processes\processes.tex (line 218)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   217: If you make a mistake resulting in a fork bomb, \textbf{you can bring down an entire system}.
+>  218: To reduce the chances of this, limit your maximum number of processes to a small number e.g. 40 by typing \keyword{ulimit\ -u\ 40} into a command line.
+   219: Note, this limit is only for the user, which means if you fork bomb, then you won't be able to kill all created process since calling \keyword{killall} requires your shell to \keyword{fork()}.
+
+- file: ..\latexlint-externals\submodules\coursebook\processes\processes.tex (line 731)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   730:     \item More than one child may have finished but the parent will only get one SIGCHLD signal (signals are not queued)
+>  731:     \item SIGCHLD signals can be sent for other reasons (e.g. a child process has temporarily stopped)
+   732:     \item It uses the deprecated \keyword{signal} code, instead of the more portable sigaction.
+
+- file: ..\latexlint-externals\submodules\coursebook\processes\processes.tex (line 816)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   815: \begin{enumerate}
+>  816:     \item \keyword{open} -- will use the lowest available file descriptor (i.e. 1), so standard out (stdout) is now redirected to the log file.
+   817:     \item \keyword{chdir} -- Change the current directory to /usr/include.
+
+- file: ..\latexlint-externals\submodules\coursebook\processes\processes.tex (line 962)
+  error: E.g. 
+  message: Use "E.g.\ " (backslash space) to avoid spacing issues, or a comma "E.g.," in American English.
+   961: \item Using exec with a path
+>  962: \item Understanding what fork and exec and waitpid do. E.g. how to use their return values.
+   963: \item SIGKILL vs SIGSTOP vs SIGINT.
+
+- file: ..\latexlint-externals\submodules\coursebook\security\security.tex (line 377)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   376: 
+>  377: \item What is the impact if the RAM used to hold a shared library (e.g. the C standard library) was writable by any process?
+   378: 
+
+- file: ..\latexlint-externals\submodules\coursebook\synchronization\synchronization.tex (line 532)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   531: Also, \keyword{sem\_post} is one of a handful of functions that can be correctly used inside a signal handler \keyword{pthread\_mutex\_unlock} is not.
+>  532: We can release a waiting thread that can now make all of the calls that we disallowed to call inside the signal handler itself e.g. \keyword{printf}.
+   533: Here is some code that utilizes this;
+
+- file: ..\latexlint-externals\submodules\coursebook\threads\threads.tex (line 139)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   138: Note the thread may still continue.
+>  139: For example, it can be terminated when the thread makes an operating system call (e.g. \keyword{write}).
+   140: In practice, \keyword{pthread\_cancel} is rarely used because a thread won't clean up open resources like files.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 688)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   687:   Numerical solution: $1.000 - 0.0643 - 0.8186 = 0.1171$,
+>  688:   i.e. 11.71\%.}
+   689: 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1088)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1087:     at random, what are the chances that the first person
+> 1088:     will not have exceeded her deductible, i.e. be a success?
+  1089:     The second person?
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1092)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1091:     What about we pull $n - 1$ cases before we find
+> 1092:     the first success, i.e. the first success is the
+  1093:     $n^{th}$ person?
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1153)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1152:   \end{align*}
+> 1153:   The mean (i.e. expected value), variance,
+  1154:   and standard deviation of this wait time are given by
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1164)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  1163: 
+> 1164: It takes, on average, $1/p$ trials to get a success under the geometric distribution. This mathematical result is consistent with what we would expect intuitively. If the probability of a success is high (e.g. 0.8), then we don't usually wait very long for a success: $1/0.8 = 1.25$ trials on average. If the probability of a success is low (e.g. 0.1), then we would expect to view many trials before we see a success: $1/0.1 = 10$ trials.
+  1165: 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1164)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  1163: 
+> 1164: It takes, on average, $1/p$ trials to get a success under the geometric distribution. This mathematical result is consistent with what we would expect intuitively. If the probability of a success is high (e.g. 0.8), then we don't usually wait very long for a success: $1/0.8 = 1.25$ trials on average. If the probability of a success is low (e.g. 0.1), then we would expect to view many trials before we see a success: $1/0.1 = 10$ trials.
+  1165: 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1389)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1388: with the binomial distribution more generally,
+> 1389: i.e. we want a formula where we can use $n$, $k$, and $p$
+  1390: to obtain the probability.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1419)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1418: of ways to choose $k$ successes in $n$ trials,
+> 1419: i.e. arrange $k$ successes and $n - k$ failures:
+  1420: \begin{align*}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1426)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  1425:   $n$ choose $k$ includes $_nC_k$, $C_n^k$, and $C(n,k)$.}
+> 1426: The exclamation point notation (e.g. $k!$) denotes
+  1427: a \term{factorial} expression.\label{factorial_defined}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1485)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1484:     selected individuals will have exceeded the insurance
+> 1485:     deductible, i.e. that 5 of 8 will not exceed the deductible?
+  1486:     Recall that 70\% of individuals will not exceed the
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1644)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1643:     How many would you expect to develop a severe lung
+> 1644:     condition, i.e. what is the mean?
+  1645: \item
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1935)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  1934: \begin{examplewrap}
+> 1935: \begin{nexample}{Each day a high school football coach tells his star kicker, Brian, that he can go home after he successfully kicks four 35 yard field goals. Suppose we say each kick has a probability $p$ of being successful. If $p$ is small -- e.g. close to 0.1 -- would we expect Brian to need many attempts before he successfully kicks his fourth field goal?}
+  1936: We are waiting for the fourth success ($k=4$). If the probability of a success ($p$) is small, then the number of attempts ($n$) will probably be large. This means that Brian is more likely to need many attempts before he gets $k=4$ successes. To put this another way, the probability of $n$ being small is low.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 2120)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  2119:     How many individuals might we expect to be hospitalized
+> 2120:     for acute myocardial infarction (AMI), i.e. a heart attack,
+  2121:     each day?
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\geometric_distribution.tex (line 75)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+    74: to derive the mean of a Bernoulli random variable,
+>   75: i.e. a random variable $X$ that takes value 1
+    76: with probability $p$ and value 0 with probability $1 - p$.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\geometric_distribution.tex (line 87)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+    86: to derive the standard deviation of a Bernoulli random variable,
+>   87: i.e. a random variable $X$ that takes value 1
+    88: with probability $p$ and value 0 with probability $1 - p$.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\normal_distribution.tex (line 117)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   116: \begin{parts}
+>  117: \item The cutoff time for the fastest 5\% of athletes in the men's group, i.e. those 
+   118: who took the shortest 5\% of time to finish. 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\normal_distribution.tex (line 141)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   140: model that assumes returns on a portfolio are normally distributed. Suppose a 
+>  141: portfolio has an average annual return of 14.7\% (i.e. an average gain of 
+   142: 14.7\%) with a standard deviation of 33\%. A return of 0\% means the value of 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_distributions\TeX\normal_distribution.tex (line 146)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   145: \begin{parts}
+>  146: \item What percent of years does this portfolio lose money, i.e. have a 
+   147: return less than 0\%?
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 548)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   547:   If a sample is from a seemingly random process,
+>  548:   e.g. an occasional error on an assembly line,
+   549:   checking independence is more difficult. In~this case,
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 820)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   819:     distribution is more \term{discrete},
+>  820:     i.e. \emph{not continuous}.
+   821: \item When $np$ or $n(1-p)$ is smaller than~10,
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 1715)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1714:     new drug performs differently than the original,
+> 1715:     i.e. it could perform better or worse.}
+  1716: 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 2027)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  2026:   A Type~2 Error means the court failed to reject $H_0$
+> 2027:   (i.e. failed to convict the person) when she was
+  2028:   in fact guilty ($H_A$ true).
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 2609)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  2608: If making a Type~1 Error is dangerous or especially costly,
+> 2609: we should choose a small significance level (e.g. 0.01).
+  2610: Under this scenario we want to be very cautious about
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 2616)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  2615: costly than a Type~1 Error, then we might choose a higher
+> 2616: significance level (e.g. 0.10). Here we want to be cautious
+  2617: about failing to reject $H_0$ when the alternative hypothesis
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 1309)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  1308:   the bookstore is notably more convenient,
+> 1309:   e.g. to get started on reading or homework,
+  1310:   it's likely a good idea to go with the UCLA
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 1435)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  1434:     The data are independent within and between
+> 1435:     the two groups, e.g. the data come from
+  1436:     independent random samples or from a
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 1549)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  1548: of $n_1 - 1$ and $n_2 - 1$ for the degrees of freedom,
+> 1549: e.g. if using a $t$-table to find tail areas.
+  1550: For transparency in the Examples and Guided Practice,
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 2284)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  2283: rejection region in the calculation, which was in the
+> 2284: opposite direction of the hypothetical truth, i.e. -3.
+  2285: The reasoning?
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 2307)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  2306: the alternative hypothesis,
+> 2307: i.e. the researchers did not reject $H_0$.
+  2308: This is a very bad situation to be in for a few reasons:
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 2411)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  2410:   look almost identical when the degrees of freedom are
+> 2411:   moderately large (e.g. $df \geq 30$).
+  2412:   If that doesn't turn out to be true, then we'd need to make
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 3121)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  3120:     For processes and experiments, carefully consider whether
+> 3121:     the data may be independent (e.g. no pairing).
+  3122:     For example, in the MLB data, the data were not sampled.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 3185)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  3184: Usually this pooled standard deviation can be found in the
+> 3185: ANOVA table, e.g. along the bottom of
+  3186: Figure~\ref{anovaSummaryTableForOBPAgainstPosition}.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_means\TeX\comparing_many_means_with_anova.tex (line 195)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   194: \item What is the conclusion of the hypothesis test?
+>  195: \item How many students answered these questions on the survey, i.e. what is the sample size?
+   196: \end{parts}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 63)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+    62:   \item The sample's observations are independent,
+>   63:       e.g. are from a simple random sample.
+    64:   \item We expected to see at least 10 successes and
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 65)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+    64:   \item We expected to see at least 10 successes and
+>   65:       10 failures in the sample, i.e. $np\geq10$ and
+    66:       $n(1-p)\geq10$.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1358)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1357: 
+> 1358: In the first case, we consider data from a random sample of 275 jurors in a small county. Jurors identified their racial group, as shown in Figure~\ref{juryRepresentationAndCityRepresentationForRace}, and we would like to determine if these jurors are racially representative of the population.  If the jury is representative of the population, then the proportions in the sample should roughly reflect the population of eligible jurors, i.e. registered voters.
+  1359: 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1414)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1413: \setlength{\itemsep}{0mm}
+> 1414: \item[$H_0$:] The jurors are a random sample, i.e. there is no racial bias in who serves on a jury, and the observed counts reflect natural sampling fluctuation.
+  1415: \item[$H_A$:] The jurors are not randomly sampled, i.e. there is racial bias in juror selection.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1415)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1414: \item[$H_0$:] The jurors are a random sample, i.e. there is no racial bias in who serves on a jury, and the observed counts reflect natural sampling fluctuation.
+> 1415: \item[$H_A$:] The jurors are not randomly sampled, i.e. there is racial bias in juror selection.
+  1416: \end{itemize}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1458)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  1457: \item Any standardized difference that is squared will now be positive.
+> 1458: \item Differences that already look unusual -- e.g. a standardized difference of 2.5 -- will become much larger after being squared.
+  1459: \end{itemize}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1722)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1721:   \item[Sample size / distribution.] Each particular scenario
+> 1722:       (i.e. cell count) must have at least 5~expected cases.
+  1723:   \end{description}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1965)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1964:   for the S\&P500,
+> 1965:   i.e. we cannot reject the notion that trading days
+  1966:   are independent.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 2270)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  2269: If the null hypothesis is true
+> 2270: (i.e. the questions had no impact on the sellers in
+  2271:     the experiment),
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 2351)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  2350:   \item[$H_A$:] There is some difference in effectiveness
+> 2351:       between the three treatments, e.g. perhaps the
+  2352:       \resp{rosi} treatment performed better than
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\difference_of_two_proportions.tex (line 319)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   318: difference between the proportions of truck drivers and non-transportation 
+>  319: workers (the control group) who get less than 6 hours of sleep per day, i.e. 
+   320: are considered sleep deprived.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\review_exercises.tex (line 292)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   291: \item Identify the expected count for the highlighted cell, and 
+>  292: calculate the contribution of this cell to the test statistic, i.e. 
+   293: $(Observed-Expected)^2/Expected$.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 364)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   363:     Percent of the population that lives in their own home
+>  364:     or lives with the owner, e.g. children living with parents
+   365:     who own the home. \\
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 368)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   367:     Percent of living units that are in multi-unit structures,
+>  368:     e.g. apartments. \\
+   369: \var{unemp\us{}rate} &
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 534)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   533: which is the percent of units in multi-unit structures
+>  534: (e.g. apartments, condos).
+   535: Each point on the plot represents a single county.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 992)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   991: However, bias can crop up in other ways.
+>  992: Even when people are picked at random, e.g. for surveys,
+   993: caution must be exercised if the
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 1124)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  1123: collect data after events have taken place,
+> 1124: e.g. researchers may review past events in medical records.
+  1125: Some data sets may contain both prospectively- and
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_intro_to_data\TeX\sampling_principles_and_strategies.tex (line 194)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   193: each stratum.
+>  194: \item Cluster students by their ages (e.g. 18 years old in one cluster, 19 years 
+   195: old in one cluster, etc.), then randomly sample three clusters and survey all 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 278)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   277: 
+>  278: Let's consider calculations for two events that are not disjoint in the context of a \indexthis{regular deck of 52 cards}{deck of cards}, represented in Figure~\ref{deckOfCards}. If you are unfamiliar with the cards in a regular deck, please see the footnote.\footnote{The 52 cards are split into four \term{suits}: $\clubsuit$ (club), {\color{redcards}$\diamondsuit$} (diamond), {\color{redcards}$\heartsuit$} (heart), $\spadesuit$ (spade). Each suit has its 13 cards labeled: \resp{2}, \resp{3}, ..., \resp{10}, \resp{J} (jack), \resp{Q} (queen), \resp{K} (king), and \resp{A} (ace). Thus, each card is a unique combination of a suit and a label, e.g. {\color{redcards}\resp{4$\heartsuit$}} and \resp{J$\clubsuit$}. The 12 cards represented by the jacks, queens, and kings are called \termsub{\resp{face cards}}{face card}. The cards that are {\color{redcards}$\diamondsuit$} or {\color{redcards}$\heartsuit$} are typically colored {\color{redcards}red} while the other two suits are typically colored black.}
+   279: 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 299)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   298: 
+>  299: \term{Venn diagrams} are useful when outcomes can be categorized as ``in'' or ``out'' for two or three variables, attributes, or random processes. The Venn diagram in Figure~\ref{cardsDiamondFaceVenn} uses a circle to represent diamonds and another to represent face cards. If a card is both a diamond and a face card, it falls into the intersection of the circles. If it is a diamond but not a face card, it will be in part of the left circle that is not in the right circle (and so on). The total number of cards that are diamonds is given by the total number of cards in the diamonds circle: $10+3=13$. The probabilities are also shown (e.g. $10/52 = 0.1923$).
+   300: 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 356)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   355: 1495 loans were from joint applications
+>  356: (e.g. a couple applied together),
+   357: 4789 applicants had a mortgage,
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 365)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   364:   Both the counts and corresponding {\color{oiB}probabilities}
+>  365:   (e.g. $3839/10000 = 0.384$) are shown.
+   366:   Notice that the number of loans represented in the left
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 639)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   638: \var{sex} are independent,
+>  639: i.e. knowing someone's \var{sex} provides no useful
+   640: information about their \var{handedness} and vice-versa.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1029)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1028: Suppose we were provided only the information in
+> 1029: Figure~\ref{photoClassifyProbTable}, i.e. only probability data.
+  1030: Then if we took a sample of 1000 photos, we would anticipate
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1669)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1668: \begin{examplewrap}
+> 1669: \begin{nexample}{Suppose the professor randomly picks without regard to who she already selected, i.e. students can be picked more than once. What is the probability that you will not be picked for any of the three questions?}\label{3wRep}
+  1670: Each pick is independent, and the probability of not being picked for any individual question is $14/15$. Thus, we can use the Multiplication Rule for independent processes.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1691)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1690: \begin{nexercise} \label{raffleOf30TicketsWWOReplacement}
+> 1691: Your department is holding a raffle. They sell 30 tickets and offer seven prizes. (a) They place the tickets in a hat and draw one for each prize. The tickets are sampled without replacement, i.e. the selected tickets are not placed back in the hat. What is the probability of winning a prize if you buy one ticket? (b)~What if the tickets are sampled with replacement?\footnotemark
+  1692: \end{nexercise}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1900)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1899: \item[(a)] What proportion of students don't buy either book? Assume no students buy the supplement without the textbook.
+> 1900: \item[(b)] Let $Y$ represent the revenue from a single student. Write out the probability distribution of $Y$, i.e. a table for each outcome and its associated probability.
+  1901: \item[(c)] Compute the expected revenue from a single chemistry student. 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1940)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1939: \begin{nexample}{It takes John an average of 18 minutes each day to commute to work. What would you expect his average commute time to be for the week?}
+> 1940: We were told that the average (i.e. expected value) of the commute time is 18 minutes per day: $E(X_i) = 18$. To get the expected time for the sum of the five days, we can add up the expected time for each individual day:
+  1941: \begin{align*}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1999)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  1998: \end{align*}
+> 1999: Recall that the expected value is the same as the mean, e.g. $E(X) = \mu_X$.
+  2000: \end{onebox}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 2012)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  2011:   in percents but are in decimal form
+> 2012:   (e.g. if Caterpillar's stock increases 1\%, then $X=0.01$;
+  2013:   or if it loses 1\%, then $X=-0.01$).
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 2169)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  2168: \end{exercisewrap}
+> 2169: \footnotetext{One concern is whether traffic patterns tend to have a weekly cycle (e.g. Fridays may be worse than other days). If that is the case, and John drives, then the assumption is probably not reasonable. However, if John walks to work, then his commute is probably not affected by any weekly traffic cycle.}
+  2170: 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\defining_probability.tex (line 109)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   108: \begin{parts}
+>  109: \item Are being Independent and being a swing voter disjoint, i.e. mutually 
+   110: exclusive?
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_probability\TeX\defining_probability.tex (line 227)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   226: \item If a parent has two kids at a DeKalb County elementary school, what is the 
+>  227: probability that both kids will miss some school, i.e. at least one day? Note any 
+   228: assumption you make.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 2066)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  2065: as a tool for building models when there is a categorical
+> 2066: response variable with two levels, e.g. yes and no.
+  2067: Logistic regression is a type of
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 2289)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  2288: Because each observation has a slightly different
+> 2289: context, e.g. different education level or a different
+  2290: number of years of experience, the probability $p_i$
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 2417)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  2416: To convert from values on the logistic regression scale
+> 2417: (e.g. \resHonorsInt{} and \resHonorsIntPlusCoef{} in
+  2418: Example~\ref{logisticExampleWithHonors}),
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 640)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   639:     The data should show a linear trend.
+>  640:     If there is a nonlinear trend (e.g. left panel of
+   641:     Figure~\ref{whatCanGoWrongWithLinearModel}),
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 956)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   955:   $\$\text{1,000}\times (-0.0431) = -\$43.10$ in aid on average,
+>  956:   i.e. \$43.10 \emph{less}.
+   957:   Note that a higher family income corresponds to less aid
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 968)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   967:   if the relationship is causal,
+>  968:   i.e. if Elmhurst College's aid decisions are partially
+   969:   based on students' family income.)
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 1183)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1182:   The intercept is the estimated price when \var{cond\us{}new}
+> 1183:   takes value 0, i.e. when the game is in used condition.
+  1184:   That is, the average selling price of a used version of
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 1195)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1194:   The estimated intercept is the value of the response variable
+> 1195:   for the first category (i.e. the category corresponding to an
+  1196:   indicator value of~0).
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 1362)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  1361: We consider the percent change in the number of seats
+> 1362: of the President's party (e.g. percent change in the number
+  1363: of seats for Republicans in 2018) against the unemployment
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_simple_linear\TeX\line_fitting_residuals_and_correlation.tex (line 33)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+    32: For each of the six plots, 
+>   33: identify the strength of the relationship (e.g. weak, moderate, or 
+    34: strong) in the data and whether fitting a linear model would be 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_simple_linear\TeX\line_fitting_residuals_and_correlation.tex (line 53)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+    52: For each of the six plots, 
+>   53: identify the strength of the relationship (e.g. weak, moderate, or 
+    54: strong) in the data and whether fitting a linear model would be 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 85)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+    84: multi-unit properties
+>   85: (e.g. apartments) in the \data{county} data set.
+    86: Another scatterplot is shown in Figure~\ref{loan50_amt_vs_income},
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 273)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   272: is used to represent which variable the population mean
+>  273: refers to, e.g. $\mu_x$.
+   274: Often times it is too expensive to measure the
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 449)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   448: Observations that fall on the boundary of a bin
+>  449: (e.g. 10.00\%) are allocated to the lower bin.
+   450: This tabulation is shown in Figure~\ref{binnedIntRateAmountTable}.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 699)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   698: to the variance and standard deviation,
+>  699: i.e. $s_x^2$ and $s_x^{}$, if it is useful as a reminder
+   700: that these are the variance and standard deviation of the
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 878)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   877: (the $25^{th}$ \hiddenterm{percentile},
+>  878: i.e. 25\% of the data fall below this value)
+   879: and the \term{third quartile} \index{quartile!third quartile}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1123)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  1122:       For this plot, the x-value corresponds to the power
+> 1123:       of 10, e.g. ``4'' on the x-axis corresponds to
+  1124:       $10^4 =$ 10,000.}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1379)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  1378: provide the total counts across each row
+> 1379: (e.g. $\loanapphomeAA{} + \loanapphomeAB{} +
+  1380:   \loanapphomeAC{} = \loanapphomeAD{}$),
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1445)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  1444: showing the proportion of observations that are in each level
+> 1445: (e.g. $\loanapphomeDA{} / \loanapphomeDD{} = 0.3858$ for
+  1446:   \resp{rent}).
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1474)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1473: $\loanapphomeAA{}/\loanapphomeAD{} = 0.411$,
+> 1474: i.e. \loanapphomeAA{} divided by its row total,
+  1475: \loanapphomeAD{}.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1856)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  1855:   variable in the stacked bar plot is relatively imbalanced,
+> 1856:   e.g. the \resp{own} category has only a third of the
+  1857:   observations in the \resp{mortgage} category,
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_summarizing_data\TeX\examining_numerical_data.tex (line 12)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+    11: \item What type of an association is apparent between life span and length of gestation?
+>   12: \item What type of an association would you expect to see if the axes of the plot were reversed, i.e. if we plotted length of gestation versus life span?
+    13: \item Are life span and length of gestation independent? Explain your reasoning.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_summarizing_data\TeX\examining_numerical_data.tex (line 221)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   220: \item Number of pets per household. 
+>  221: \item Distance to work, i.e. number of miles between work and home.
+   222: \item Heights of adult males.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 199)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   198: 
+>  199: \eocesol{(a)~Non-responders may have a different response to this question, e.g. 
+   200: parents who returned the surveys likely don't have difficulty spending time 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 207)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   206: (c)~There is no control group in this study, this is an observational study, 
+>  207: and there may be confounding variables, e.g. these people may go running 
+   208: because they are generally healthier and/or do other exercises.}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 538)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   537: (c)~$\frac{3}{10} \times \frac{2}{9} \approx 0.067$.
+>  538: (d)~No, e.g. in this exercise, removing one chip meaningfully 
+   539: changes the probability of what might be drawn next.}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 693)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   692: allows for only two events or categories. Note that rolling a die could be a 
+>  693: Bernoulli trial if we simplify to two events, e.g. rolling a 6 and not rolling 
+   694: a 6, though specifying such details would be necessary.}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 824)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+   823: 
+>  824: \eocesol{$Z = 1.56$, $P(Z > 1.56) = 0.0594$, i.e. 6\%.}
+   825: 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 1324)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  1323:     However, if the confidence level is
+> 1324:     misaligned (e.g. a 99\% confidence level
+  1325:     and a $\alpha = 0.05$ significance level),
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 1415)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1414: graduates. The data also indicate that fewer college grads say they ``do not 
+> 1415: know'' than non-college grads (i.e. the data indicate the direction after we 
+  1416: reject $H_0$).}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 1819)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  1818: would observe a test statistic so far from zero is less than 0.01. \\
+> 1819: (g)~We might have made a Type~1 Error, i.e. incorrectly rejected the null 
+  1820: hypothesis.}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 2184)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  2183: An alternative way to gain insight into this solution is to create a 
+> 2184: mock data set, e.g. 5 women aged 26, 27, 28, 29, and 30, then find the 
+  2185: husband ages for each wife in each part and create a scatterplot.}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 2235)
+  error: i.e. 
+  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
+  2234: (c)~$R^2 = 0.636^2 = 0.40$. About 40\% of the variability in travel 
+> 2235: time is accounted for by the model, i.e. explained by the distance 
+  2236: traveled.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 2485)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  2484: 
+> 2485: \eocesol{(a)~There are a few potential outliers, e.g. on the left in the 
+  2486: \var{total\_\hspace{0.3mm}length} variable, but nothing that will be of serious 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 2582)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+  2581:     and perhaps we want an even higher probability
+> 2582:     threshold (e.g. 99.99\%) for emails we are
+  2583:     pretty sure are important.}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\preamble\review_copy.tex (line 30)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+    29:     There are plenty of formatting issues,
+>   30:     e.g. awkward page breaks or footnotes on the wrong page.
+    31:     These issues will be fixed during final textbook formatting.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\preamble\review_copy.tex (line 152)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+   151:     There are some bugs with spacing here and there,
+>  152:     e.g. with sections and the horizontal lines,
+   153:     that we are still working out.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\tables\TeX\chiSquareTable.tex (line 13)
+  error: e.g. 
+  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
+    12: with different degrees of freedom, and we identify a range for
+>   13: the area (e.g. 0.025 to 0.05).
+    14: Note that the chi-square table provides upper tail values,
+
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 112)
   error: i.e. 
   message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
@@ -608,19 +1546,19 @@
 > 1358: I am going to use these two skills for framing a new question such that the question requires an expertise in both the skills in order to be solved, i.e. the question will compose these two skills. However, I do not want the two skills to be very similar, i.e., they should not mean the same thing. Go through the descriptions of the skills carefully. Based on your understanding of the skills, can you please tell me whether the two skills are essentially entirely the same or not? Think step by step and give a detailed explanation of your answer. The answer should begin with a prefix '\# EXPLANATION
   1359: '. Note that your understanding of the skills should not be restricted to the sample questions provided previously. They are just example questions. Use your own prior knowledge as well. End your response with a 'Yes' or 'No' answer to whether the skills are similar or not. This final answer should be on a new line and preceded by the prefix '\# FINAL ANSWER
 
-- file: sample\arxiv_sources\2408.10342v1\Math_dance_final.tex (line 52)
+- file: sample\arxiv_sources\2408.10342v1\Math_dance_final.tex (line 53)
   error: e.g. 
   message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-    51: \paragraph*{II. Braids.} In 2018, I (Wilson) asked Wolfson back into the rehearsal studio to help decipher patterns and structures in reconstructed Shaker (a Utopian millenarian American religious sect) dances that the company was incorporating into a new performance. One specific movement sequence was giving the dancers difficulty, and when we tried to track the movements based on the paths of individual dancers, we kept getting confused and tangled up.  Wolfson realized that if you tracked pairs of dancers, then each pair traced ``elementary braids’’ and the movement of all four dancers could be represented as a ``4-stranded braid.''   This was particularly striking because Shaker iconography and theology was heavily imbued with braiding, both as fiber art and as emblem of communal meanings. Wolfson explained his experience to the dancers as follows,
->   52: \begin{quote}
-    53: Braids provide a key mathematical tool for describing how 2D and 3D spaces are put together.  They arise in multiple mathematical contexts, from motion of particles on a surface (e.g. molecules in a solution, robots on a factory floor, satellites orbiting the earth), to the solutions of families of polynomial equations. In my research, I am trying to show that certain equations don’t admit simple solutions because the associated braids are too complicated. Any time you find a new context where braids arise, you want to understand it.  I felt really excited to realize there were braids in Shaker dances, and pretty complicated ones at that. The braids were the defining structural element of the dance. Someone clearly had knowledge of braids here and they were using it in a context that for me was totally unexpected.  What else did they know?  Maybe there is knowledge there that you’ve missed, or structure you can use to understand another application.
+    52: \begin{quote}
+>   53: Braids provide a key mathematical tool for describing how 2D and 3D spaces are put together.  They arise in multiple mathematical contexts, from motion of particles on a surface (e.g. molecules in a solution, robots on a factory floor, satellites orbiting the earth), to the solutions of families of polynomial equations. In my research, I am trying to show that certain equations don’t admit simple solutions because the associated braids are too complicated. Any time you find a new context where braids arise, you want to understand it.  I felt really excited to realize there were braids in Shaker dances, and pretty complicated ones at that. The braids were the defining structural element of the dance. Someone clearly had knowledge of braids here and they were using it in a context that for me was totally unexpected.  What else did they know?  Maybe there is knowledge there that you’ve missed, or structure you can use to understand another application.
+    54: \end{quote}
 
-- file: sample\arxiv_sources\2408.10342v1\Math_dance_final.tex (line 57)
+- file: sample\arxiv_sources\2408.10342v1\Math_dance_final.tex (line 58)
   error: e.g. 
   message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-    56: \paragraph*{III. Embodied Geometries} Our collaboration has deepened our ability to ask questions in our individual fields.  Currently our thinking has shifted to what can dance do for math. 
->   57: 
-    58: Thurston’s revolutionary work on 3-dimensional geometry was one of the major developments of 20th century mathematics. Thurston advocated approaching geometry from the basic question: What is it like to live in, really live in, the abstract spaces we are studying?  While Thurston’s call has driven fundamental advances over the last forty years, it has largely been interpreted as an unembodied perspective, e.g. the motion of point particles or simple bodies like tinker toys. Can choreographic knowledge push (advance) this further?
+    57: 
+>   58: Thurston’s revolutionary work on 3-dimensional geometry was one of the major developments of 20th century mathematics. Thurston advocated approaching geometry from the basic question: What is it like to live in, really live in, the abstract spaces we are studying?  While Thurston’s call has driven fundamental advances over the last forty years, it has largely been interpreted as an unembodied perspective, e.g. the motion of point particles or simple bodies like tinker toys. Can choreographic knowledge push (advance) this further?
+    59: 
 
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 179)
   error: e.g. 
@@ -1433,942 +2371,4 @@
    243: 
 >  244: We present here results from one of the observations of PSR J2051$-$0827 in L-band which spans $\sim$4\,hrs of on-source time, capturing two eclipses during the observation. The pulse profile obtained from 320~s of sub-integrated time is shown in the left panel of Fig.~\ref{fig:profileJ2051} at four different frequency channels. This pulsar has a DM value of around 20.2 pc cm$^{-3}$ and we observe the total intensity profile to evolve as a function of frequency showing scintillation. It is also seen that the linear and circular polarisation intensities vary as a function of observing frequency. The waterfall plots (shown in the right panel of Fig.~\ref{fig:profileJ2051}) of Stokes Q and U exhibit multi-component features, and a clear evolution of  these components with frequency. We see e.g. a stronger leading component in both Q and U emerge at lower frequencies. This is similarly seen plotted as the linear polarisation profile in the left-hand side panel. While the cause of this is not fully known, it is important to note that the linear polarisation profiles have been seen to vary as a function of both frequency and time in a magnetar \citep{Lower_etal2024} providing a unique probe of the relativistic, magnetized plasma within the near-field environment of these ultra-magnetic neutron stars. The pulsar undergoes two eclipses during our observation as seen in Fig.~\ref{fig:phasetimeJ2051}. The evolution of total intensity, linear and circular polarisation across the eclipse can been seen in the first three panels of this figure. A characteristic feature of this system is that the pulsar is not fully eclipsed by its companion, as evidenced by the continued detection of pulsar flux, albeit at a reduced level, during the eclipse phase. We observed linear depolarisation during this phase. Using 40\,s sub-integrated profiles we estimate the DM, RMs and scattering timescales for this source. This choice was made to achieve a high S/N for reliable RM estimation. A template was created by summing  all the profiles in the region where no eclipses were observed (between 4000~s to 9500~s of observation). The changes in the DM and scattering timescales were estimated with respect to this template. The variation of DM, scattering timescales and RM is shown in Fig~\ref{fig:profileJ2051}. \cite{Wang_etal2023} observed gradual changes in RM from 60 rad m$^{-2}$ to 28.7 rad m$^{-2}$ and RM gradually changing back to the template value when the line of sight moved away from the eclipse. While we do not see such apparent changes in our observations, the eclipse of linear polarization does imply a rapidly changing RM. 
    245: 
-
-- file: sample\submodules\OpenLogic\content\set-theory\replacement\refproofs.tex (line 134)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   133: 	(\forall z, \overline{x} \in S)(&\phi \liff \phi^S)\\
->  134: 	\text{i.e. }(\forall z, \overline{x} \in S)(&((z = 0 \land \psi) \lor (z = 1 \land \chi)) \liff {}\\
-   135: 	&\phantom{(}((z = 0 \land \psi) \lor (z = 1 \land \chi))^S)\\
-
-- file: sample\submodules\OpenLogic\content\set-theory\replacement\refproofs.tex (line 136)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   135: 	&\phantom{(}((z = 0 \land \psi) \lor (z = 1 \land \chi))^S)\\
->  136: 	\text{i.e. }(\forall z, \overline{x} \in S)(&((z = 0 \land \psi) \lor (z = 1 \land \chi))\liff {}\\
-   137: 	&\phantom{(}((z = 0 \land \psi^S) \lor (z = 1 \land \chi^S)))\\
-
-- file: sample\submodules\OpenLogic\content\set-theory\replacement\refproofs.tex (line 138)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   137: 	&\phantom{(}((z = 0 \land \psi^S) \lor (z = 1 \land \chi^S)))\\
->  138: 	\text{i.e. }(\forall \overline{x} \in S)(&(\psi \liff \psi^S) \land (\chi \liff \chi^S))
-   139: \end{align*}
-
-- file: sample\submodules\OpenLogic\content\sets-functions-relations\inductive-defs-proofs\introduction.tex (line 72)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-    71: \[ 0 + 1 + \ldots + k = \frac{k(k+1)}{2} \]
->   72: We will show that $P(k+1)$ holds, i.e. that
-    73: \[ 0 + 1 + \ldots + k + (k+1) = \frac{(k+1)(k+2)}{2} \]
-
-- file: sample\submodules\coursebook\appendix\appendix.tex (line 1305)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1304: 
-> 1305:   \item As for a comparison with FCFS in the average case, it usually does better assuming that we have a smooth probability distribution -- i.e. the probability of getting any particular priority is zero.
-  1306:   In all of our formulas, we still have some probability mass to put on lower priority processes, bringing the expectation down.
-
-- file: sample\submodules\coursebook\background\background.tex (line 1015)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1014: \item Have I fixed other segmentation faults unrelated to the issue I'm having?
-> 1015: \item Am I following good programming practice? (i.e. encapsulation, functions to limit repetition, etc)
-  1016: \end{enumerate}
-
-- file: sample\submodules\coursebook\deadlock\deadlock.tex (line 147)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   146: Livelock is generally harder to detect because the processes generally look like they are working to the outside operating system whereas in deadlock the operating system generally knows when two processes are waiting on a system-wide resource.
->  147: Another problem is that there are necessary conditions for livelock (i.e. deadlock fails to occur) but not sufficient conditions -- meaning there is no set of rules where livelock has to occur.
-   148: You must formally prove in a system by what is known as an invariant.
-
-- file: sample\submodules\coursebook\deadlock\deadlock.tex (line 202)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   201: Oops - our philosophers have deadlocked!
->  202: Each philosopher is essentially the same, meaning that each philosopher has the same instruction set based on the other philosopher i.e. you can't tell every even philosopher to do one thing and every odd philosopher to do another thing.
-   203: 
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 517)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   516: For that matter, there are many other attributes that files also might contain.
->  517: We distinguish a file type -- different from the file extension i.e. png, svg, pdf -- using fields inside the inode.
-   518: How does the system know what type the file is?
-
-- file: sample\submodules\coursebook\honors\kernel.tex (line 30)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-    29: System Calls use an instruction that can be run by a program operating in userspace that \textit{traps} to the kernel (by use of a signal) to complete the call.
->   30: This includes actions such as writing data to disk, interacting directly with hardware in general or operations related to gaining or relinquishing privileges (e.g.  becoming the root user and gaining all capabilities).
-    31: 
-
-- file: sample\submodules\coursebook\introc\common_c_functions.tex (line 63)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-    62: 
->   63: They are designated by the file descriptors 0 and 1 respectively. 2 is reserved for standard error which by library convention is unbuffered (i.e. IO operations are performed immediately).
-    64: 
-
-- file: sample\submodules\coursebook\introc\common_c_functions.tex (line 301)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   300: 	      What these functions do is take the pointer to your string
->  301: 	      \keyword{*nptr} and a \keyword{base} (i.e. binary, octal, decimal,
-   302: 	      hexadecimal etc) and an optional pointer \keyword{endptr} and returns a
-
-- file: sample\submodules\coursebook\introc\crash_course_introduction_to_c.tex (line 29)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-    28:     Just remember to include the header and call the function with the appropriate parameters (a string literal \keyword{"Hello World\n"}).
->   29:     If the newline isn't included, the buffer will not be flushed (i.e. the write will not complete immediately).
-    30: 	\item \keyword{return 0}.
-
-- file: sample\submodules\coursebook\introc\introc.tex (line 155)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   154: 	\item
->  155: 	      What are some differences between the POSIX file descriptor model and C's \keyword{FILE*} (i.e. what function calls are used and which is buffered)? Does POSIX use C's \keyword{FILE*} internally or vice versa?
-   156: \end{itemize}
-
-- file: sample\submodules\coursebook\introc\language_facilities.tex (line 585)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   584: \end{lstlisting}
->  585:     Note that shifting by the word size (e.g. by 64 in a 64-bit architecture) results in undefined behavior.
-   586: 	\item \keyword{<=/>=} are the greater than equal to/less than equal to, relational operators.
-
-- file: sample\submodules\coursebook\ipc\ipc.tex (line 36)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-    35: They can address $2^{32}$ different locations or 4GB of memory where one address is one byte.
->   36: Imagine we had a large table for every possible address where we will store the `real' i.e. ~physical address.
-    37: Each physical address will need 4 bytes -- to hold the 32-bits.
-
-- file: sample\submodules\coursebook\malloc\malloc.tex (line 440)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   439: 
->  440: The additional constant ensures incomplete units are rounded up. Note, real code is more likely to symbol sizes e.g. \keyword{sizeof(x)\ -\ 1}, rather than coding numerical constant 15.
-   441: \href{http://www.ibm.com/developerworks/library/pa-dalign/}{Here's a great article on memory alignment, if you are further interested}
-
-- file: sample\submodules\coursebook\networking\networking.tex (line 156)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   155: 
->  156: To grab the IP Address of a remote website, The function \keyword{getaddrinfo} can convert a human-readable domain name (e.g. \keyword{www.illinois.edu}) into an IPv4 and IPv6 address.
-   157: It will return a linked-list of addrinfo structs:
-
-- file: sample\submodules\coursebook\networking\networking.tex (line 341)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   340: 
->  341: Unless agreed otherwise, whenever you read or write the low-level C network structures, i.e. port and address information, remember to use the above functions to ensure correct conversion to/from a machine format.
-   342: Otherwise, the displayed or specified value may be incorrect.
-
-- file: sample\submodules\coursebook\networking\networking.tex (line 1046)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1045: This hierarchy first resolves top-level domains \keyword{.edu} \keyword{.gov} etc.
-> 1046: Next, it resolves the next level i.e. \keyword{illinois.edu}.
-  1047: Then the local resolvers can resolve any number of URLs.
-
-- file: sample\submodules\coursebook\post_mortems\post_mortems.tex (line 31)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-    30: This means that you can harden your machine ports by disallowing connections on all but a few ports.
->   31: Also, you can harden your system to never perform exec calls to perform tasks (i.e. perform an exec call to update a value) and instead do it in C or your favorite programming language of choice.
-    32: Although you don't have flexibility, you have peace of mind what you allow users to do.
-
-- file: sample\submodules\coursebook\post_mortems\post_mortems.tex (line 41)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-    40: A server sends a string of a certain length, and the second server is supposed to send the string of the length back.
->   41: The problem is someone can maliciously change the size of the request to larger than what they sent (i.e. send ``cat'' but request 500 bytes) and get crucial information like passwords from the server.
-    42: There is a \href{https://xkcd.com/1354/}{Relevant XKCD} on it.
-
-- file: sample\submodules\coursebook\post_mortems\post_mortems.tex (line 114)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   113: 
->  114: Lessons Learned: Modularize your code to localize failures (i.e. keeping race conditions different between processes). If you need to synchronize among processes make sure your failure detection system is not interlaced with your system.
-   115: 
-
-- file: sample\submodules\coursebook\processes\processes.tex (line 218)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   217: If you make a mistake resulting in a fork bomb, \textbf{you can bring down an entire system}.
->  218: To reduce the chances of this, limit your maximum number of processes to a small number e.g. 40 by typing \keyword{ulimit\ -u\ 40} into a command line.
-   219: Note, this limit is only for the user, which means if you fork bomb, then you won't be able to kill all created process since calling \keyword{killall} requires your shell to \keyword{fork()}.
-
-- file: sample\submodules\coursebook\processes\processes.tex (line 731)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   730:     \item More than one child may have finished but the parent will only get one SIGCHLD signal (signals are not queued)
->  731:     \item SIGCHLD signals can be sent for other reasons (e.g. a child process has temporarily stopped)
-   732:     \item It uses the deprecated \keyword{signal} code, instead of the more portable sigaction.
-
-- file: sample\submodules\coursebook\processes\processes.tex (line 816)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   815: \begin{enumerate}
->  816:     \item \keyword{open} -- will use the lowest available file descriptor (i.e. 1), so standard out (stdout) is now redirected to the log file.
-   817:     \item \keyword{chdir} -- Change the current directory to /usr/include.
-
-- file: sample\submodules\coursebook\processes\processes.tex (line 962)
-  error: E.g. 
-  message: Use "E.g.\ " (backslash space) to avoid spacing issues, or a comma "E.g.," in American English.
-   961: \item Using exec with a path
->  962: \item Understanding what fork and exec and waitpid do. E.g. how to use their return values.
-   963: \item SIGKILL vs SIGSTOP vs SIGINT.
-
-- file: sample\submodules\coursebook\security\security.tex (line 377)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   376: 
->  377: \item What is the impact if the RAM used to hold a shared library (e.g. the C standard library) was writable by any process?
-   378: 
-
-- file: sample\submodules\coursebook\synchronization\synchronization.tex (line 532)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   531: Also, \keyword{sem\_post} is one of a handful of functions that can be correctly used inside a signal handler \keyword{pthread\_mutex\_unlock} is not.
->  532: We can release a waiting thread that can now make all of the calls that we disallowed to call inside the signal handler itself e.g. \keyword{printf}.
-   533: Here is some code that utilizes this;
-
-- file: sample\submodules\coursebook\threads\threads.tex (line 139)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   138: Note the thread may still continue.
->  139: For example, it can be terminated when the thread makes an operating system call (e.g. \keyword{write}).
-   140: In practice, \keyword{pthread\_cancel} is rarely used because a thread won't clean up open resources like files.
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 688)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   687:   Numerical solution: $1.000 - 0.0643 - 0.8186 = 0.1171$,
->  688:   i.e. 11.71\%.}
-   689: 
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1088)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1087:     at random, what are the chances that the first person
-> 1088:     will not have exceeded her deductible, i.e. be a success?
-  1089:     The second person?
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1092)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1091:     What about we pull $n - 1$ cases before we find
-> 1092:     the first success, i.e. the first success is the
-  1093:     $n^{th}$ person?
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1153)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1152:   \end{align*}
-> 1153:   The mean (i.e. expected value), variance,
-  1154:   and standard deviation of this wait time are given by
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1164)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  1163: 
-> 1164: It takes, on average, $1/p$ trials to get a success under the geometric distribution. This mathematical result is consistent with what we would expect intuitively. If the probability of a success is high (e.g. 0.8), then we don't usually wait very long for a success: $1/0.8 = 1.25$ trials on average. If the probability of a success is low (e.g. 0.1), then we would expect to view many trials before we see a success: $1/0.1 = 10$ trials.
-  1165: 
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1164)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  1163: 
-> 1164: It takes, on average, $1/p$ trials to get a success under the geometric distribution. This mathematical result is consistent with what we would expect intuitively. If the probability of a success is high (e.g. 0.8), then we don't usually wait very long for a success: $1/0.8 = 1.25$ trials on average. If the probability of a success is low (e.g. 0.1), then we would expect to view many trials before we see a success: $1/0.1 = 10$ trials.
-  1165: 
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1389)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1388: with the binomial distribution more generally,
-> 1389: i.e. we want a formula where we can use $n$, $k$, and $p$
-  1390: to obtain the probability.
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1419)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1418: of ways to choose $k$ successes in $n$ trials,
-> 1419: i.e. arrange $k$ successes and $n - k$ failures:
-  1420: \begin{align*}
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1426)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  1425:   $n$ choose $k$ includes $_nC_k$, $C_n^k$, and $C(n,k)$.}
-> 1426: The exclamation point notation (e.g. $k!$) denotes
-  1427: a \term{factorial} expression.\label{factorial_defined}
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1485)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1484:     selected individuals will have exceeded the insurance
-> 1485:     deductible, i.e. that 5 of 8 will not exceed the deductible?
-  1486:     Recall that 70\% of individuals will not exceed the
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1644)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1643:     How many would you expect to develop a severe lung
-> 1644:     condition, i.e. what is the mean?
-  1645: \item
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 1935)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  1934: \begin{examplewrap}
-> 1935: \begin{nexample}{Each day a high school football coach tells his star kicker, Brian, that he can go home after he successfully kicks four 35 yard field goals. Suppose we say each kick has a probability $p$ of being successful. If $p$ is small -- e.g. close to 0.1 -- would we expect Brian to need many attempts before he successfully kicks his fourth field goal?}
-  1936: We are waiting for the fourth success ($k=4$). If the probability of a success ($p$) is small, then the number of attempts ($n$) will probably be large. This means that Brian is more likely to need many attempts before he gets $k=4$ successes. To put this another way, the probability of $n$ being small is low.
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\ch_distributions.tex (line 2120)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  2119:     How many individuals might we expect to be hospitalized
-> 2120:     for acute myocardial infarction (AMI), i.e. a heart attack,
-  2121:     each day?
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\geometric_distribution.tex (line 75)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-    74: to derive the mean of a Bernoulli random variable,
->   75: i.e. a random variable $X$ that takes value 1
-    76: with probability $p$ and value 0 with probability $1 - p$.
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\geometric_distribution.tex (line 87)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-    86: to derive the standard deviation of a Bernoulli random variable,
->   87: i.e. a random variable $X$ that takes value 1
-    88: with probability $p$ and value 0 with probability $1 - p$.
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\normal_distribution.tex (line 117)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   116: \begin{parts}
->  117: \item The cutoff time for the fastest 5\% of athletes in the men's group, i.e. those 
-   118: who took the shortest 5\% of time to finish. 
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\normal_distribution.tex (line 141)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   140: model that assumes returns on a portfolio are normally distributed. Suppose a 
->  141: portfolio has an average annual return of 14.7\% (i.e. an average gain of 
-   142: 14.7\%) with a standard deviation of 33\%. A return of 0\% means the value of 
-
-- file: sample\submodules\openintro-statistics\ch_distributions\TeX\normal_distribution.tex (line 146)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   145: \begin{parts}
->  146: \item What percent of years does this portfolio lose money, i.e. have a 
-   147: return less than 0\%?
-
-- file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 548)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   547:   If a sample is from a seemingly random process,
->  548:   e.g. an occasional error on an assembly line,
-   549:   checking independence is more difficult. In~this case,
-
-- file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 820)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   819:     distribution is more \term{discrete},
->  820:     i.e. \emph{not continuous}.
-   821: \item When $np$ or $n(1-p)$ is smaller than~10,
-
-- file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 1715)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1714:     new drug performs differently than the original,
-> 1715:     i.e. it could perform better or worse.}
-  1716: 
-
-- file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 2027)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  2026:   A Type~2 Error means the court failed to reject $H_0$
-> 2027:   (i.e. failed to convict the person) when she was
-  2028:   in fact guilty ($H_A$ true).
-
-- file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 2609)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  2608: If making a Type~1 Error is dangerous or especially costly,
-> 2609: we should choose a small significance level (e.g. 0.01).
-  2610: Under this scenario we want to be very cautious about
-
-- file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 2616)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  2615: costly than a Type~1 Error, then we might choose a higher
-> 2616: significance level (e.g. 0.10). Here we want to be cautious
-  2617: about failing to reject $H_0$ when the alternative hypothesis
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 1309)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  1308:   the bookstore is notably more convenient,
-> 1309:   e.g. to get started on reading or homework,
-  1310:   it's likely a good idea to go with the UCLA
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 1435)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  1434:     The data are independent within and between
-> 1435:     the two groups, e.g. the data come from
-  1436:     independent random samples or from a
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 1549)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  1548: of $n_1 - 1$ and $n_2 - 1$ for the degrees of freedom,
-> 1549: e.g. if using a $t$-table to find tail areas.
-  1550: For transparency in the Examples and Guided Practice,
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 2284)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  2283: rejection region in the calculation, which was in the
-> 2284: opposite direction of the hypothetical truth, i.e. -3.
-  2285: The reasoning?
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 2307)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  2306: the alternative hypothesis,
-> 2307: i.e. the researchers did not reject $H_0$.
-  2308: This is a very bad situation to be in for a few reasons:
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 2411)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  2410:   look almost identical when the degrees of freedom are
-> 2411:   moderately large (e.g. $df \geq 30$).
-  2412:   If that doesn't turn out to be true, then we'd need to make
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 3121)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  3120:     For processes and experiments, carefully consider whether
-> 3121:     the data may be independent (e.g. no pairing).
-  3122:     For example, in the MLB data, the data were not sampled.
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\ch_inference_for_means.tex (line 3185)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  3184: Usually this pooled standard deviation can be found in the
-> 3185: ANOVA table, e.g. along the bottom of
-  3186: Figure~\ref{anovaSummaryTableForOBPAgainstPosition}.
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_means\TeX\comparing_many_means_with_anova.tex (line 195)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   194: \item What is the conclusion of the hypothesis test?
->  195: \item How many students answered these questions on the survey, i.e. what is the sample size?
-   196: \end{parts}
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 63)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-    62:   \item The sample's observations are independent,
->   63:       e.g. are from a simple random sample.
-    64:   \item We expected to see at least 10 successes and
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 65)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-    64:   \item We expected to see at least 10 successes and
->   65:       10 failures in the sample, i.e. $np\geq10$ and
-    66:       $n(1-p)\geq10$.
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1358)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1357: 
-> 1358: In the first case, we consider data from a random sample of 275 jurors in a small county. Jurors identified their racial group, as shown in Figure~\ref{juryRepresentationAndCityRepresentationForRace}, and we would like to determine if these jurors are racially representative of the population.  If the jury is representative of the population, then the proportions in the sample should roughly reflect the population of eligible jurors, i.e. registered voters.
-  1359: 
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1414)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1413: \setlength{\itemsep}{0mm}
-> 1414: \item[$H_0$:] The jurors are a random sample, i.e. there is no racial bias in who serves on a jury, and the observed counts reflect natural sampling fluctuation.
-  1415: \item[$H_A$:] The jurors are not randomly sampled, i.e. there is racial bias in juror selection.
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1415)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1414: \item[$H_0$:] The jurors are a random sample, i.e. there is no racial bias in who serves on a jury, and the observed counts reflect natural sampling fluctuation.
-> 1415: \item[$H_A$:] The jurors are not randomly sampled, i.e. there is racial bias in juror selection.
-  1416: \end{itemize}
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1458)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  1457: \item Any standardized difference that is squared will now be positive.
-> 1458: \item Differences that already look unusual -- e.g. a standardized difference of 2.5 -- will become much larger after being squared.
-  1459: \end{itemize}
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1722)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1721:   \item[Sample size / distribution.] Each particular scenario
-> 1722:       (i.e. cell count) must have at least 5~expected cases.
-  1723:   \end{description}
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 1965)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1964:   for the S\&P500,
-> 1965:   i.e. we cannot reject the notion that trading days
-  1966:   are independent.
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 2270)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  2269: If the null hypothesis is true
-> 2270: (i.e. the questions had no impact on the sellers in
-  2271:     the experiment),
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 2351)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  2350:   \item[$H_A$:] There is some difference in effectiveness
-> 2351:       between the three treatments, e.g. perhaps the
-  2352:       \resp{rosi} treatment performed better than
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\difference_of_two_proportions.tex (line 319)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   318: difference between the proportions of truck drivers and non-transportation 
->  319: workers (the control group) who get less than 6 hours of sleep per day, i.e. 
-   320: are considered sleep deprived.
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\review_exercises.tex (line 292)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   291: \item Identify the expected count for the highlighted cell, and 
->  292: calculate the contribution of this cell to the test statistic, i.e. 
-   293: $(Observed-Expected)^2/Expected$.
-
-- file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 364)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   363:     Percent of the population that lives in their own home
->  364:     or lives with the owner, e.g. children living with parents
-   365:     who own the home. \\
-
-- file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 368)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   367:     Percent of living units that are in multi-unit structures,
->  368:     e.g. apartments. \\
-   369: \var{unemp\us{}rate} &
-
-- file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 534)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   533: which is the percent of units in multi-unit structures
->  534: (e.g. apartments, condos).
-   535: Each point on the plot represents a single county.
-
-- file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 992)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   991: However, bias can crop up in other ways.
->  992: Even when people are picked at random, e.g. for surveys,
-   993: caution must be exercised if the
-
-- file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\ch_intro_to_data.tex (line 1124)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  1123: collect data after events have taken place,
-> 1124: e.g. researchers may review past events in medical records.
-  1125: Some data sets may contain both prospectively- and
-
-- file: sample\submodules\openintro-statistics\ch_intro_to_data\TeX\sampling_principles_and_strategies.tex (line 194)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   193: each stratum.
->  194: \item Cluster students by their ages (e.g. 18 years old in one cluster, 19 years 
-   195: old in one cluster, etc.), then randomly sample three clusters and survey all 
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 278)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   277: 
->  278: Let's consider calculations for two events that are not disjoint in the context of a \indexthis{regular deck of 52 cards}{deck of cards}, represented in Figure~\ref{deckOfCards}. If you are unfamiliar with the cards in a regular deck, please see the footnote.\footnote{The 52 cards are split into four \term{suits}: $\clubsuit$ (club), {\color{redcards}$\diamondsuit$} (diamond), {\color{redcards}$\heartsuit$} (heart), $\spadesuit$ (spade). Each suit has its 13 cards labeled: \resp{2}, \resp{3}, ..., \resp{10}, \resp{J} (jack), \resp{Q} (queen), \resp{K} (king), and \resp{A} (ace). Thus, each card is a unique combination of a suit and a label, e.g. {\color{redcards}\resp{4$\heartsuit$}} and \resp{J$\clubsuit$}. The 12 cards represented by the jacks, queens, and kings are called \termsub{\resp{face cards}}{face card}. The cards that are {\color{redcards}$\diamondsuit$} or {\color{redcards}$\heartsuit$} are typically colored {\color{redcards}red} while the other two suits are typically colored black.}
-   279: 
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 299)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   298: 
->  299: \term{Venn diagrams} are useful when outcomes can be categorized as ``in'' or ``out'' for two or three variables, attributes, or random processes. The Venn diagram in Figure~\ref{cardsDiamondFaceVenn} uses a circle to represent diamonds and another to represent face cards. If a card is both a diamond and a face card, it falls into the intersection of the circles. If it is a diamond but not a face card, it will be in part of the left circle that is not in the right circle (and so on). The total number of cards that are diamonds is given by the total number of cards in the diamonds circle: $10+3=13$. The probabilities are also shown (e.g. $10/52 = 0.1923$).
-   300: 
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 356)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   355: 1495 loans were from joint applications
->  356: (e.g. a couple applied together),
-   357: 4789 applicants had a mortgage,
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 365)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   364:   Both the counts and corresponding {\color{oiB}probabilities}
->  365:   (e.g. $3839/10000 = 0.384$) are shown.
-   366:   Notice that the number of loans represented in the left
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 639)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   638: \var{sex} are independent,
->  639: i.e. knowing someone's \var{sex} provides no useful
-   640: information about their \var{handedness} and vice-versa.
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1029)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1028: Suppose we were provided only the information in
-> 1029: Figure~\ref{photoClassifyProbTable}, i.e. only probability data.
-  1030: Then if we took a sample of 1000 photos, we would anticipate
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1669)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1668: \begin{examplewrap}
-> 1669: \begin{nexample}{Suppose the professor randomly picks without regard to who she already selected, i.e. students can be picked more than once. What is the probability that you will not be picked for any of the three questions?}\label{3wRep}
-  1670: Each pick is independent, and the probability of not being picked for any individual question is $14/15$. Thus, we can use the Multiplication Rule for independent processes.
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1691)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1690: \begin{nexercise} \label{raffleOf30TicketsWWOReplacement}
-> 1691: Your department is holding a raffle. They sell 30 tickets and offer seven prizes. (a) They place the tickets in a hat and draw one for each prize. The tickets are sampled without replacement, i.e. the selected tickets are not placed back in the hat. What is the probability of winning a prize if you buy one ticket? (b)~What if the tickets are sampled with replacement?\footnotemark
-  1692: \end{nexercise}
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1900)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1899: \item[(a)] What proportion of students don't buy either book? Assume no students buy the supplement without the textbook.
-> 1900: \item[(b)] Let $Y$ represent the revenue from a single student. Write out the probability distribution of $Y$, i.e. a table for each outcome and its associated probability.
-  1901: \item[(c)] Compute the expected revenue from a single chemistry student. 
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1940)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1939: \begin{nexample}{It takes John an average of 18 minutes each day to commute to work. What would you expect his average commute time to be for the week?}
-> 1940: We were told that the average (i.e. expected value) of the commute time is 18 minutes per day: $E(X_i) = 18$. To get the expected time for the sum of the five days, we can add up the expected time for each individual day:
-  1941: \begin{align*}
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 1999)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  1998: \end{align*}
-> 1999: Recall that the expected value is the same as the mean, e.g. $E(X) = \mu_X$.
-  2000: \end{onebox}
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 2012)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  2011:   in percents but are in decimal form
-> 2012:   (e.g. if Caterpillar's stock increases 1\%, then $X=0.01$;
-  2013:   or if it loses 1\%, then $X=-0.01$).
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\ch_probability.tex (line 2169)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  2168: \end{exercisewrap}
-> 2169: \footnotetext{One concern is whether traffic patterns tend to have a weekly cycle (e.g. Fridays may be worse than other days). If that is the case, and John drives, then the assumption is probably not reasonable. However, if John walks to work, then his commute is probably not affected by any weekly traffic cycle.}
-  2170: 
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\defining_probability.tex (line 109)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   108: \begin{parts}
->  109: \item Are being Independent and being a swing voter disjoint, i.e. mutually 
-   110: exclusive?
-
-- file: sample\submodules\openintro-statistics\ch_probability\TeX\defining_probability.tex (line 227)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   226: \item If a parent has two kids at a DeKalb County elementary school, what is the 
->  227: probability that both kids will miss some school, i.e. at least one day? Note any 
-   228: assumption you make.
-
-- file: sample\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 2066)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  2065: as a tool for building models when there is a categorical
-> 2066: response variable with two levels, e.g. yes and no.
-  2067: Logistic regression is a type of
-
-- file: sample\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 2289)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  2288: Because each observation has a slightly different
-> 2289: context, e.g. different education level or a different
-  2290: number of years of experience, the probability $p_i$
-
-- file: sample\submodules\openintro-statistics\ch_regr_mult_and_log\TeX\ch_regr_mult_and_log.tex (line 2417)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  2416: To convert from values on the logistic regression scale
-> 2417: (e.g. \resHonorsInt{} and \resHonorsIntPlusCoef{} in
-  2418: Example~\ref{logisticExampleWithHonors}),
-
-- file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 640)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   639:     The data should show a linear trend.
->  640:     If there is a nonlinear trend (e.g. left panel of
-   641:     Figure~\ref{whatCanGoWrongWithLinearModel}),
-
-- file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 956)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   955:   $\$\text{1,000}\times (-0.0431) = -\$43.10$ in aid on average,
->  956:   i.e. \$43.10 \emph{less}.
-   957:   Note that a higher family income corresponds to less aid
-
-- file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 968)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   967:   if the relationship is causal,
->  968:   i.e. if Elmhurst College's aid decisions are partially
-   969:   based on students' family income.)
-
-- file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 1183)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1182:   The intercept is the estimated price when \var{cond\us{}new}
-> 1183:   takes value 0, i.e. when the game is in used condition.
-  1184:   That is, the average selling price of a used version of
-
-- file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 1195)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1194:   The estimated intercept is the value of the response variable
-> 1195:   for the first category (i.e. the category corresponding to an
-  1196:   indicator value of~0).
-
-- file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 1362)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  1361: We consider the percent change in the number of seats
-> 1362: of the President's party (e.g. percent change in the number
-  1363: of seats for Republicans in 2018) against the unemployment
-
-- file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\line_fitting_residuals_and_correlation.tex (line 33)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-    32: For each of the six plots, 
->   33: identify the strength of the relationship (e.g. weak, moderate, or 
-    34: strong) in the data and whether fitting a linear model would be 
-
-- file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\line_fitting_residuals_and_correlation.tex (line 53)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-    52: For each of the six plots, 
->   53: identify the strength of the relationship (e.g. weak, moderate, or 
-    54: strong) in the data and whether fitting a linear model would be 
-
-- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 85)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-    84: multi-unit properties
->   85: (e.g. apartments) in the \data{county} data set.
-    86: Another scatterplot is shown in Figure~\ref{loan50_amt_vs_income},
-
-- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 273)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   272: is used to represent which variable the population mean
->  273: refers to, e.g. $\mu_x$.
-   274: Often times it is too expensive to measure the
-
-- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 449)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   448: Observations that fall on the boundary of a bin
->  449: (e.g. 10.00\%) are allocated to the lower bin.
-   450: This tabulation is shown in Figure~\ref{binnedIntRateAmountTable}.
-
-- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 699)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   698: to the variance and standard deviation,
->  699: i.e. $s_x^2$ and $s_x^{}$, if it is useful as a reminder
-   700: that these are the variance and standard deviation of the
-
-- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 878)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   877: (the $25^{th}$ \hiddenterm{percentile},
->  878: i.e. 25\% of the data fall below this value)
-   879: and the \term{third quartile} \index{quartile!third quartile}
-
-- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1123)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  1122:       For this plot, the x-value corresponds to the power
-> 1123:       of 10, e.g. ``4'' on the x-axis corresponds to
-  1124:       $10^4 =$ 10,000.}
-
-- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1379)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  1378: provide the total counts across each row
-> 1379: (e.g. $\loanapphomeAA{} + \loanapphomeAB{} +
-  1380:   \loanapphomeAC{} = \loanapphomeAD{}$),
-
-- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1445)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  1444: showing the proportion of observations that are in each level
-> 1445: (e.g. $\loanapphomeDA{} / \loanapphomeDD{} = 0.3858$ for
-  1446:   \resp{rent}).
-
-- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1474)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1473: $\loanapphomeAA{}/\loanapphomeAD{} = 0.411$,
-> 1474: i.e. \loanapphomeAA{} divided by its row total,
-  1475: \loanapphomeAD{}.
-
-- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 1856)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  1855:   variable in the stacked bar plot is relatively imbalanced,
-> 1856:   e.g. the \resp{own} category has only a third of the
-  1857:   observations in the \resp{mortgage} category,
-
-- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\examining_numerical_data.tex (line 12)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-    11: \item What type of an association is apparent between life span and length of gestation?
->   12: \item What type of an association would you expect to see if the axes of the plot were reversed, i.e. if we plotted length of gestation versus life span?
-    13: \item Are life span and length of gestation independent? Explain your reasoning.
-
-- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\examining_numerical_data.tex (line 221)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   220: \item Number of pets per household. 
->  221: \item Distance to work, i.e. number of miles between work and home.
-   222: \item Heights of adult males.
-
-- file: sample\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 199)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   198: 
->  199: \eocesol{(a)~Non-responders may have a different response to this question, e.g. 
-   200: parents who returned the surveys likely don't have difficulty spending time 
-
-- file: sample\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 207)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   206: (c)~There is no control group in this study, this is an observational study, 
->  207: and there may be confounding variables, e.g. these people may go running 
-   208: because they are generally healthier and/or do other exercises.}
-
-- file: sample\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 538)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   537: (c)~$\frac{3}{10} \times \frac{2}{9} \approx 0.067$.
->  538: (d)~No, e.g. in this exercise, removing one chip meaningfully 
-   539: changes the probability of what might be drawn next.}
-
-- file: sample\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 693)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   692: allows for only two events or categories. Note that rolling a die could be a 
->  693: Bernoulli trial if we simplify to two events, e.g. rolling a 6 and not rolling 
-   694: a 6, though specifying such details would be necessary.}
-
-- file: sample\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 824)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-   823: 
->  824: \eocesol{$Z = 1.56$, $P(Z > 1.56) = 0.0594$, i.e. 6\%.}
-   825: 
-
-- file: sample\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 1324)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  1323:     However, if the confidence level is
-> 1324:     misaligned (e.g. a 99\% confidence level
-  1325:     and a $\alpha = 0.05$ significance level),
-
-- file: sample\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 1415)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1414: graduates. The data also indicate that fewer college grads say they ``do not 
-> 1415: know'' than non-college grads (i.e. the data indicate the direction after we 
-  1416: reject $H_0$).}
-
-- file: sample\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 1819)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  1818: would observe a test statistic so far from zero is less than 0.01. \\
-> 1819: (g)~We might have made a Type~1 Error, i.e. incorrectly rejected the null 
-  1820: hypothesis.}
-
-- file: sample\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 2184)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  2183: An alternative way to gain insight into this solution is to create a 
-> 2184: mock data set, e.g. 5 women aged 26, 27, 28, 29, and 30, then find the 
-  2185: husband ages for each wife in each part and create a scatterplot.}
-
-- file: sample\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 2235)
-  error: i.e. 
-  message: Use "i.e.\ " (backslash space) to avoid spacing issues, or a comma "i.e.," in American English.
-  2234: (c)~$R^2 = 0.636^2 = 0.40$. About 40\% of the variability in travel 
-> 2235: time is accounted for by the model, i.e. explained by the distance 
-  2236: traveled.
-
-- file: sample\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 2485)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  2484: 
-> 2485: \eocesol{(a)~There are a few potential outliers, e.g. on the left in the 
-  2486: \var{total\_\hspace{0.3mm}length} variable, but nothing that will be of serious 
-
-- file: sample\submodules\openintro-statistics\extraTeX\eoceSolutions\eoceSolutions.tex (line 2582)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-  2581:     and perhaps we want an even higher probability
-> 2582:     threshold (e.g. 99.99\%) for emails we are
-  2583:     pretty sure are important.}
-
-- file: sample\submodules\openintro-statistics\extraTeX\preamble\review_copy.tex (line 30)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-    29:     There are plenty of formatting issues,
->   30:     e.g. awkward page breaks or footnotes on the wrong page.
-    31:     These issues will be fixed during final textbook formatting.
-
-- file: sample\submodules\openintro-statistics\extraTeX\preamble\review_copy.tex (line 152)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-   151:     There are some bugs with spacing here and there,
->  152:     e.g. with sections and the horizontal lines,
-   153:     that we are still working out.
-
-- file: sample\submodules\openintro-statistics\extraTeX\tables\TeX\chiSquareTable.tex (line 13)
-  error: e.g. 
-  message: Use "e.g.\ " (backslash space) to avoid spacing issues, or a comma "e.g.," in American English.
-    12: with different degrees of freedom, and we identify a range for
->   13: the area (e.g. 0.025 to 0.05).
-    14: Note that the chi-square table provides upper tail values,
 

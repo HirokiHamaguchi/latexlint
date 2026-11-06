@@ -1,4 +1,32 @@
 [CODE] LLHeading (9)
+- file: ..\latexlint-externals\submodules\coursebook\appendix\appendix.tex (line 337)
+  error: \subsubsection{
+  message: Found \subsubsection without a preceding \subsection.
+   336: 
+>  337: \subsubsection{Explanation of the Fork-FILE Problem}
+   338: 
+
+- file: ..\latexlint-externals\submodules\coursebook\threads\threads.tex (line 273)
+  error: \subsubsection{
+  message: Found \subsubsection without a preceding \subsection.
+   272: 
+>  273: \subsubsection{A day at the races}
+   274: 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\preamble\preface.tex (line 59)
+  error: \subsection*{
+  message: Found \subsection without a preceding \section.
+    58: 
+>   59: \subsection*{{\color{oiB}Textbook overview}}
+    60: 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\preamble\review_copy.tex (line 10)
+  error: \subsection*{
+  message: Found \subsection without a preceding \section.
+     9: 
+>   10: \subsection*{What *not* to watch for}
+    11: 
+
 - file: sample\arxiv_sources\2412.13041v1\Formatting-Instructions-LaTeX-2025.tex (line 299)
   error: \subsubsection{
   message: Found \subsubsection without a preceding \subsection.
@@ -33,32 +61,4 @@
    178: 
 >  179: \subsubsection*{Project Lead} Shunsuke Saito.
    180: 
-
-- file: sample\submodules\coursebook\appendix\appendix.tex (line 337)
-  error: \subsubsection{
-  message: Found \subsubsection without a preceding \subsection.
-   336: 
->  337: \subsubsection{Explanation of the Fork-FILE Problem}
-   338: 
-
-- file: sample\submodules\coursebook\threads\threads.tex (line 273)
-  error: \subsubsection{
-  message: Found \subsubsection without a preceding \subsection.
-   272: 
->  273: \subsubsection{A day at the races}
-   274: 
-
-- file: sample\submodules\openintro-statistics\extraTeX\preamble\preface.tex (line 59)
-  error: \subsection*{
-  message: Found \subsection without a preceding \section.
-    58: 
->   59: \subsection*{{\color{oiB}Textbook overview}}
-    60: 
-
-- file: sample\submodules\openintro-statistics\extraTeX\preamble\review_copy.tex (line 10)
-  error: \subsection*{
-  message: Found \subsection without a preceding \section.
-     9: 
->   10: \subsection*{What *not* to watch for}
-    11: 
 

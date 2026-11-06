@@ -1,4 +1,452 @@
 [CODE] LLSI (135)
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 218)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   217: 
+>  218: As a worked example, suppose we divide the disk into 4KiB blocks and we want to address up to $2^{32}$ blocks.
+   219: The maximum disk size is $4KiB *2^{32} = 16TiB$ remember $2^{10} = 1024$.
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 219)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   218: As a worked example, suppose we divide the disk into 4KiB blocks and we want to address up to $2^{32}$ blocks.
+>  219: The maximum disk size is $4KiB *2^{32} = 16TiB$ remember $2^{10} = 1024$.
+   220: A disk block can store $\frac{4KiB}{4B}$ possible pointers or 1024 pointers.
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 219)
+  error: 16TiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   218: As a worked example, suppose we divide the disk into 4KiB blocks and we want to address up to $2^{32}$ blocks.
+>  219: The maximum disk size is $4KiB *2^{32} = 16TiB$ remember $2^{10} = 1024$.
+   220: A disk block can store $\frac{4KiB}{4B}$ possible pointers or 1024 pointers.
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 220)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   219: The maximum disk size is $4KiB *2^{32} = 16TiB$ remember $2^{10} = 1024$.
+>  220: A disk block can store $\frac{4KiB}{4B}$ possible pointers or 1024 pointers.
+   221: Four byte wide pointers are needed because we want to address 32 bits worth of blocks.
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 222)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   221: Four byte wide pointers are needed because we want to address 32 bits worth of blocks.
+>  222: Each pointer refers to a 4KiB disk block, so you can refer up to $1024*4KiB = 4MiB$ of data.
+   223: For the same disk configuration, a double indirect block stores 1024 pointers to 1024 indirection tables.
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 222)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   221: Four byte wide pointers are needed because we want to address 32 bits worth of blocks.
+>  222: Each pointer refers to a 4KiB disk block, so you can refer up to $1024*4KiB = 4MiB$ of data.
+   223: For the same disk configuration, a double indirect block stores 1024 pointers to 1024 indirection tables.
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 222)
+  error: 4MiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   221: Four byte wide pointers are needed because we want to address 32 bits worth of blocks.
+>  222: Each pointer refers to a 4KiB disk block, so you can refer up to $1024*4KiB = 4MiB$ of data.
+   223: For the same disk configuration, a double indirect block stores 1024 pointers to 1024 indirection tables.
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 224)
+  error: 4MiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   223: For the same disk configuration, a double indirect block stores 1024 pointers to 1024 indirection tables.
+>  224: Thus a double-indirect block can refer up to $1024 * 4MiB = 4GiB$ of data.
+   225: Similarly, a triple indirect block can refer up to 4TiB of data.
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 224)
+  error: 4GiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   223: For the same disk configuration, a double indirect block stores 1024 pointers to 1024 indirection tables.
+>  224: Thus a double-indirect block can refer up to $1024 * 4MiB = 4GiB$ of data.
+   225: Similarly, a triple indirect block can refer up to 4TiB of data.
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 225)
+  error: 4TiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   224: Thus a double-indirect block can refer up to $1024 * 4MiB = 4GiB$ of data.
+>  225: Similarly, a triple indirect block can refer up to 4TiB of data.
+   226: This is three times as slow for reading between blocks, due to increased levels of indirection.
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 869)
+  error: 1 MiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   868: Use the versatile \keyword{dd} command.
+>  869: For example, the following command copies 1 MiB of data from the file \keyword{/dev/urandom} to the file \keyword{/dev/null}.
+   870: The data is copied as 1024 blocks of block size 1024 bytes.
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 1180)
+  error: 4 KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+  1179: 
+> 1180: We will assume that a data block is 4 KiB.
+  1181: 
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 1194)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+  1193: 
+> 1194: There are two full direct blocks, which together store $2*sizeof(data\_block)=2*4KiB=8KiB$.
+  1195: 
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 1194)
+  error: 8KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+  1193: 
+> 1194: There are two full direct blocks, which together store $2*sizeof(data\_block)=2*4KiB=8KiB$.
+  1195: 
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 1196)
+  error: 8KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+  1195: 
+> 1196: There are two used blocks referenced by the indirect block, which can store up to $8KiB$ as calculated above.
+  1197: 
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 1198)
+  error: 16KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+  1197: 
+> 1198: We can now add these values to get an upper bound on the file size of $16KiB$.
+  1199: 
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 1202)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+  1201: second block referenced by the indirect block.
+> 1202: With this information, we can work out the lower bound to be $2*4KiB+4KiB+1=12KiB+1B$.
+  1203: 
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 1202)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+  1201: second block referenced by the indirect block.
+> 1202: With this information, we can work out the lower bound to be $2*4KiB+4KiB+1=12KiB+1B$.
+  1203: 
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 1202)
+  error: 12KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+  1201: second block referenced by the indirect block.
+> 1202: With this information, we can work out the lower bound to be $2*4KiB+4KiB+1=12KiB+1B$.
+  1203: 
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 1208)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+  1207: While doing our above calculations, we omitted this block.
+> 1208: This would instead be counted as the overhead of the file, and thus the total overhead of storing this file on disk is $sizeof(indirect\_block)=4KiB)$.
+  1209: 
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 1215)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+  1214: Note that when a user writes the first byte, a data block will be allocated.
+> 1215: Since each data block is $4KiB$, we find that $4KiB$ is the minimum disk usage for a non-empty file.
+  1216: Here, we observe that the file size will only be $1B$, despite that $4KiB$ of the disk is used -- there is a distinction between file size and disk usage because of overhead!
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 1215)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+  1214: Note that when a user writes the first byte, a data block will be allocated.
+> 1215: Since each data block is $4KiB$, we find that $4KiB$ is the minimum disk usage for a non-empty file.
+  1216: Here, we observe that the file size will only be $1B$, despite that $4KiB$ of the disk is used -- there is a distinction between file size and disk usage because of overhead!
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 1216)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+  1215: Since each data block is $4KiB$, we find that $4KiB$ is the minimum disk usage for a non-empty file.
+> 1216: Here, we observe that the file size will only be $1B$, despite that $4KiB$ of the disk is used -- there is a distinction between file size and disk usage because of overhead!
+  1217: 
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 1220)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+  1219: As we saw earlier in this chapter, a filesystem with this structure can have $1024$ data block numbers in one indirect block.
+> 1220: This implies that the maximum filesize can be $2*4KiB + 1024*4KiB = 4MiB + 8KiB$ (after accounting for the direct blocks as well).
+  1221: However, on disk we also store the indirect block itself.
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 1220)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+  1219: As we saw earlier in this chapter, a filesystem with this structure can have $1024$ data block numbers in one indirect block.
+> 1220: This implies that the maximum filesize can be $2*4KiB + 1024*4KiB = 4MiB + 8KiB$ (after accounting for the direct blocks as well).
+  1221: However, on disk we also store the indirect block itself.
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 1220)
+  error: 4MiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+  1219: As we saw earlier in this chapter, a filesystem with this structure can have $1024$ data block numbers in one indirect block.
+> 1220: This implies that the maximum filesize can be $2*4KiB + 1024*4KiB = 4MiB + 8KiB$ (after accounting for the direct blocks as well).
+  1221: However, on disk we also store the indirect block itself.
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 1220)
+  error: 8KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+  1219: As we saw earlier in this chapter, a filesystem with this structure can have $1024$ data block numbers in one indirect block.
+> 1220: This implies that the maximum filesize can be $2*4KiB + 1024*4KiB = 4MiB + 8KiB$ (after accounting for the direct blocks as well).
+  1221: However, on disk we also store the indirect block itself.
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 1222)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+  1221: However, on disk we also store the indirect block itself.
+> 1222: This means that an additional $4KiB$ of overhead will be used to account for the indirect block, so the total disk usage will be $4MiB + 12KiB$.
+  1223: 
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 1222)
+  error: 4MiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+  1221: However, on disk we also store the indirect block itself.
+> 1222: This means that an additional $4KiB$ of overhead will be used to account for the indirect block, so the total disk usage will be $4MiB + 12KiB$.
+  1223: 
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 1222)
+  error: 12KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+  1221: However, on disk we also store the indirect block itself.
+> 1222: This means that an additional $4KiB$ of overhead will be used to account for the indirect block, so the total disk usage will be $4MiB + 12KiB$.
+  1223: 
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 1252)
+  error: 6$th KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+  1251: Performing writes fall into two categories, writes to files and writes to directories.
+> 1252: First we'll focus on files and assume that we are writing a byte to the $6$th KiB of our file.
+  1253: To perform a write on a file at a particular offset, first the filesystem must go to the data block would start at that offset.
+
+- file: ..\latexlint-externals\submodules\coursebook\filesystems\filesystems.tex (line 1255)
+  error: 2$KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+  1254: For this particular example we would have to go to the 2nd or indexed number 1 inode to perform our write.
+> 1255: We would once again fetch this number from the inode, go to the root of the data blocks, go to the $5$th data block and perform our write at the $2$KiB offset from this block because we skipped the first four kibibytes of the file in block 7.
+  1256: We perform our write and go on our merry way.
+
+- file: ..\latexlint-externals\submodules\coursebook\ipc\ipc.tex (line 35)
+  error: 4GB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+    34: To illustrate, consider a 32-bit machine, meaning pointers are 32-bits.
+>   35: They can address $2^{32}$ different locations or 4GB of memory where one address is one byte.
+    36: Imagine we had a large table for every possible address where we will store the `real' i.e. ~physical address.
+
+- file: ..\latexlint-externals\submodules\coursebook\ipc\ipc.tex (line 39)
+  error: 4GB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+    38: Naturally, This scheme would require 16 billion bytes to store all of the entries.
+>   39: It should be painfully obvious that our lookup scheme would consume all of the memory that we could buy for our 4GB machine.
+    40: Our lookup table should be smaller than the memory we have otherwise we will have no space left for our actual programs and operating system data.
+
+- file: ..\latexlint-externals\submodules\coursebook\ipc\ipc.tex (line 46)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+    45: A \textbf{page} is a block of virtual memory.
+>   46: A typical block size on Linux is 4KiB or $2^{12}$ addresses, though one can find examples of larger blocks.
+    47: So rather than talking about individual bytes, we can talk about blocks of 4KiBs, each block is called a page.
+
+- file: ..\latexlint-externals\submodules\coursebook\ipc\ipc.tex (line 48)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+    47: So rather than talking about individual bytes, we can talk about blocks of 4KiBs, each block is called a page.
+>   48: We can also number our pages (``Page 0'' ``Page 1'' etc). Let's do a sample calculation of how many pages are there assume page size of 4KiB.
+    49: 	 
+
+- file: ..\latexlint-externals\submodules\coursebook\ipc\ipc.tex (line 63)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+    62: We also call this a \textbf{frame} or sometimes called a `page frame' is a block of \emph{physical memory} or RAM -- Random Access Memory.
+>   63: A frame is the same number of bytes as a virtual page or 4KiB on our machine.
+    64: It stores the bytes of interest.
+
+- file: ..\latexlint-externals\submodules\coursebook\ipc\ipc.tex (line 81)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+    80: Now to go through the actual calculations.
+>   81: We will assume that a 32-bit machine has 4KiB pages
+    82: Naturally, to address all the possible entries, there are $2^{20}$ frames.
+
+- file: ..\latexlint-externals\submodules\coursebook\ipc\ipc.tex (line 85)
+  error: 4 MiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+    84: In practice, we'll round that up to 4 bytes and do something interesting with the rest of the bits.
+>   85: With 4 bytes per entry x $2^{20}$ entries = 4 MiB of physical memory are required to hold the entire page table for a process.
+    86: 	 
+
+- file: ..\latexlint-externals\submodules\coursebook\ipc\ipc.tex (line 129)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   128: We do have a problem with 64-bit operating systems.
+>  129: For a 64-bit machine with 4KiB pages, each entry needs 52 bits.
+   130: Meaning we need roughly
+
+- file: ..\latexlint-externals\submodules\coursebook\ipc\ipc.tex (line 154)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   153: That will contain a frame number.
+>  154: This is the good old fashioned 4KiB RAM that we were talking about earlier.
+   155: Then, the MMU adds the offset and do the read or write.
+
+- file: ..\latexlint-externals\submodules\coursebook\ipc\ipc.tex (line 180)
+  error: 2KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   179: We'll round up to 2 bytes for the sake of reasoning.
+>  180: If 2 bytes are used for each entry in the top-level table and there are only $2^{10}$ entries, we only need 2KiB to store this entire first level page table.
+   181: Each subtable will point to physical frames, and each of their entries needs to be the required 4 bytes to be able to address all the frames as mentioned earlier.
+
+- file: ..\latexlint-externals\submodules\coursebook\ipc\ipc.tex (line 184)
+  error: 4MiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   183: 	 
+>  184: Thus, the total memory overhead for our multi-level page table has shrunk from 4MiB for the single-level implementation to three page tables of memory or 2KiB for the top-level and 4KiB for the two intermediate levels of size 10KiB.
+   185: Here's why.
+
+- file: ..\latexlint-externals\submodules\coursebook\ipc\ipc.tex (line 184)
+  error: 2KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   183: 	 
+>  184: Thus, the total memory overhead for our multi-level page table has shrunk from 4MiB for the single-level implementation to three page tables of memory or 2KiB for the top-level and 4KiB for the two intermediate levels of size 10KiB.
+   185: Here's why.
+
+- file: ..\latexlint-externals\submodules\coursebook\ipc\ipc.tex (line 184)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   183: 	 
+>  184: Thus, the total memory overhead for our multi-level page table has shrunk from 4MiB for the single-level implementation to three page tables of memory or 2KiB for the top-level and 4KiB for the two intermediate levels of size 10KiB.
+   185: Here's why.
+
+- file: ..\latexlint-externals\submodules\coursebook\ipc\ipc.tex (line 184)
+  error: 10KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   183: 	 
+>  184: Thus, the total memory overhead for our multi-level page table has shrunk from 4MiB for the single-level implementation to three page tables of memory or 2KiB for the top-level and 4KiB for the two intermediate levels of size 10KiB.
+   185: Here's why.
+
+- file: ..\latexlint-externals\submodules\coursebook\ipc\ipc.tex (line 189)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   188: The other sub-table is for higher addresses used by the environment and stack.
+>  189: In practice, real programs will likely need more sub-table entries, as each subtable can only reference 1024*4KiB = 4MiB of address space.
+   190: The main point still stands.
+
+- file: ..\latexlint-externals\submodules\coursebook\ipc\ipc.tex (line 189)
+  error: 4MiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   188: The other sub-table is for higher addresses used by the environment and stack.
+>  189: In practice, real programs will likely need more sub-table entries, as each subtable can only reference 1024*4KiB = 4MiB of address space.
+   190: The main point still stands.
+
+- file: ..\latexlint-externals\submodules\coursebook\ipc\ipc.tex (line 566)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   565: The problem with using a pipe in this fashion is that writing to a pipe can block meaning the pipe only has a limited buffering capacity.
+>  566: The maximum size of the buffer is system-dependent; typical values from 4KiB up to 128KiB though they can be changed.
+   567: 	 
+
+- file: ..\latexlint-externals\submodules\coursebook\ipc\ipc.tex (line 566)
+  error: 128KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   565: The problem with using a pipe in this fashion is that writing to a pipe can block meaning the pipe only has a limited buffering capacity.
+>  566: The maximum size of the buffer is system-dependent; typical values from 4KiB up to 128KiB though they can be changed.
+   567: 	 
+
+- file: ..\latexlint-externals\submodules\coursebook\malloc\malloc.tex (line 205)
+  error: 2KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   204: 
+>  205: If a new malloc request for 2KiB is executed (\keyword{malloc(2048)}), where should \keyword{malloc} reserve the memory?
+   206: It could use the last 2KiB hole, which happens to be the perfect size!
+
+- file: ..\latexlint-externals\submodules\coursebook\malloc\malloc.tex (line 206)
+  error: 2KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   205: If a new malloc request for 2KiB is executed (\keyword{malloc(2048)}), where should \keyword{malloc} reserve the memory?
+>  206: It could use the last 2KiB hole, which happens to be the perfect size!
+   207: Or it could split one of the other two free holes.
+
+- file: ..\latexlint-externals\submodules\coursebook\malloc\malloc.tex (line 211)
+  error: 2KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   210: The newly allocated space, which will be returned to the program and a smaller hole if there is spare space left over.
+>  211: A perfect-fit strategy finds the smallest hole that is of sufficient size (at least 2KiB):
+   212: 
+
+- file: ..\latexlint-externals\submodules\coursebook\malloc\malloc.tex (line 219)
+  error: 30KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   218: 
+>  219: A worst-fit strategy finds the largest hole that is of sufficient size so break the 30KiB hole into two:
+   220: 
+
+- file: ..\latexlint-externals\submodules\coursebook\malloc\malloc.tex (line 228)
+  error: 16KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   227: 
+>  228: A first-fit strategy finds the first available hole that is of sufficient size so break the 16KiB hole into two.
+   229: We don't even have to look through the entire heap!
+
+- file: ..\latexlint-externals\submodules\coursebook\malloc\malloc.tex (line 239)
+  error: 14KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   238: For example, our first fit allocator could've returned the original block unbroken.
+>  239: Notice that this would lead to about 14KiB of space to be unused by the user and the allocator.
+   240: We call this internal fragmentation.
+
+- file: ..\latexlint-externals\submodules\coursebook\malloc\malloc.tex (line 243)
+  error: 64KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   242: In contrast, external fragmentation is that even though we have enough memory in the heap, it may be divided up in a way so a continuous block of that size is unavailable.
+>  243: In our previous example, of the 64KiB of heap memory, 17KiB is allocated, and 47KiB is free.
+   244: However, the largest available block is only 30KiB because our available unallocated heap memory is fragmented into smaller pieces.
+
+- file: ..\latexlint-externals\submodules\coursebook\malloc\malloc.tex (line 243)
+  error: 17KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   242: In contrast, external fragmentation is that even though we have enough memory in the heap, it may be divided up in a way so a continuous block of that size is unavailable.
+>  243: In our previous example, of the 64KiB of heap memory, 17KiB is allocated, and 47KiB is free.
+   244: However, the largest available block is only 30KiB because our available unallocated heap memory is fragmented into smaller pieces.
+
+- file: ..\latexlint-externals\submodules\coursebook\malloc\malloc.tex (line 243)
+  error: 47KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   242: In contrast, external fragmentation is that even though we have enough memory in the heap, it may be divided up in a way so a continuous block of that size is unavailable.
+>  243: In our previous example, of the 64KiB of heap memory, 17KiB is allocated, and 47KiB is free.
+   244: However, the largest available block is only 30KiB because our available unallocated heap memory is fragmented into smaller pieces.
+
+- file: ..\latexlint-externals\submodules\coursebook\malloc\malloc.tex (line 244)
+  error: 30KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   243: In our previous example, of the 64KiB of heap memory, 17KiB is allocated, and 47KiB is free.
+>  244: However, the largest available block is only 30KiB because our available unallocated heap memory is fragmented into smaller pieces.
+   245: 
+
+- file: ..\latexlint-externals\submodules\coursebook\malloc\malloc.tex (line 330)
+  error: 1024 KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   329: This internal information represents some overhead.
+>  330: Meaning even if we had requested 1024 KiB of contiguous memory from the system, we an allocation of that size will fail.
+   331: 
+
+- file: ..\latexlint-externals\submodules\coursebook\networking\networking.tex (line 991)
+  error: 64 KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   990: One call to recvfrom is one packet.
+>  991: To make sure that you have enough space, use 64 KiB as storage space.
+   992: 
+
+- file: ..\latexlint-externals\submodules\coursebook\review\review.tex (line 517)
+  error: 4KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   516: 
+>  517: \item In an \keyword{ext2} filesystem with 32 bit addresses and 4KiB disk blocks, an inode can store 10 direct disk block numbers. What is the minimum file size required to require a single indirection table? ii) a double direction table?
+   518: 
+
+- file: ..\latexlint-externals\submodules\coursebook\threads\threads.tex (line 495)
+  error: 8 KiB
+  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
+   494: 
+>  495: // 8 KiB stacks
+   496: #define STACK_SIZE (8 * 1024 * 1024)
+
 - file: sample\arxiv_sources\1609.03457v1\avail-engines.tex (line 146)
   error: 128GB
   message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
@@ -495,452 +943,4 @@
     45: \section{Training Parameters}
 >   46: We train our models using 64 NVIDIA A100 GPUs (80GB) via Distributed Data Parallel (DDP). For both training stages, we set the per-GPU batch size to 1, resulting in a total effective batch size of 64. The pretraining stage is conducted for $1 \times 10^{5}$ iterations, taking approximately 100 hours. Subsequently, the post-training stage is fine-tuned for $1 \times 10^{4}$ iterations, which requires approximately 10 hours to converge. For the loss weights, we set the $\ell_1$ and LPIPS coefficients to $0.1$ each, and the regularization weight $\lambda = 1.0$.
     47: 
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 218)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   217: 
->  218: As a worked example, suppose we divide the disk into 4KiB blocks and we want to address up to $2^{32}$ blocks.
-   219: The maximum disk size is $4KiB *2^{32} = 16TiB$ remember $2^{10} = 1024$.
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 219)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   218: As a worked example, suppose we divide the disk into 4KiB blocks and we want to address up to $2^{32}$ blocks.
->  219: The maximum disk size is $4KiB *2^{32} = 16TiB$ remember $2^{10} = 1024$.
-   220: A disk block can store $\frac{4KiB}{4B}$ possible pointers or 1024 pointers.
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 219)
-  error: 16TiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   218: As a worked example, suppose we divide the disk into 4KiB blocks and we want to address up to $2^{32}$ blocks.
->  219: The maximum disk size is $4KiB *2^{32} = 16TiB$ remember $2^{10} = 1024$.
-   220: A disk block can store $\frac{4KiB}{4B}$ possible pointers or 1024 pointers.
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 220)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   219: The maximum disk size is $4KiB *2^{32} = 16TiB$ remember $2^{10} = 1024$.
->  220: A disk block can store $\frac{4KiB}{4B}$ possible pointers or 1024 pointers.
-   221: Four byte wide pointers are needed because we want to address 32 bits worth of blocks.
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 222)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   221: Four byte wide pointers are needed because we want to address 32 bits worth of blocks.
->  222: Each pointer refers to a 4KiB disk block, so you can refer up to $1024*4KiB = 4MiB$ of data.
-   223: For the same disk configuration, a double indirect block stores 1024 pointers to 1024 indirection tables.
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 222)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   221: Four byte wide pointers are needed because we want to address 32 bits worth of blocks.
->  222: Each pointer refers to a 4KiB disk block, so you can refer up to $1024*4KiB = 4MiB$ of data.
-   223: For the same disk configuration, a double indirect block stores 1024 pointers to 1024 indirection tables.
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 222)
-  error: 4MiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   221: Four byte wide pointers are needed because we want to address 32 bits worth of blocks.
->  222: Each pointer refers to a 4KiB disk block, so you can refer up to $1024*4KiB = 4MiB$ of data.
-   223: For the same disk configuration, a double indirect block stores 1024 pointers to 1024 indirection tables.
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 224)
-  error: 4MiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   223: For the same disk configuration, a double indirect block stores 1024 pointers to 1024 indirection tables.
->  224: Thus a double-indirect block can refer up to $1024 * 4MiB = 4GiB$ of data.
-   225: Similarly, a triple indirect block can refer up to 4TiB of data.
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 224)
-  error: 4GiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   223: For the same disk configuration, a double indirect block stores 1024 pointers to 1024 indirection tables.
->  224: Thus a double-indirect block can refer up to $1024 * 4MiB = 4GiB$ of data.
-   225: Similarly, a triple indirect block can refer up to 4TiB of data.
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 225)
-  error: 4TiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   224: Thus a double-indirect block can refer up to $1024 * 4MiB = 4GiB$ of data.
->  225: Similarly, a triple indirect block can refer up to 4TiB of data.
-   226: This is three times as slow for reading between blocks, due to increased levels of indirection.
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 869)
-  error: 1 MiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   868: Use the versatile \keyword{dd} command.
->  869: For example, the following command copies 1 MiB of data from the file \keyword{/dev/urandom} to the file \keyword{/dev/null}.
-   870: The data is copied as 1024 blocks of block size 1024 bytes.
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1180)
-  error: 4 KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-  1179: 
-> 1180: We will assume that a data block is 4 KiB.
-  1181: 
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1194)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-  1193: 
-> 1194: There are two full direct blocks, which together store $2*sizeof(data\_block)=2*4KiB=8KiB$.
-  1195: 
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1194)
-  error: 8KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-  1193: 
-> 1194: There are two full direct blocks, which together store $2*sizeof(data\_block)=2*4KiB=8KiB$.
-  1195: 
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1196)
-  error: 8KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-  1195: 
-> 1196: There are two used blocks referenced by the indirect block, which can store up to $8KiB$ as calculated above.
-  1197: 
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1198)
-  error: 16KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-  1197: 
-> 1198: We can now add these values to get an upper bound on the file size of $16KiB$.
-  1199: 
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1202)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-  1201: second block referenced by the indirect block.
-> 1202: With this information, we can work out the lower bound to be $2*4KiB+4KiB+1=12KiB+1B$.
-  1203: 
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1202)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-  1201: second block referenced by the indirect block.
-> 1202: With this information, we can work out the lower bound to be $2*4KiB+4KiB+1=12KiB+1B$.
-  1203: 
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1202)
-  error: 12KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-  1201: second block referenced by the indirect block.
-> 1202: With this information, we can work out the lower bound to be $2*4KiB+4KiB+1=12KiB+1B$.
-  1203: 
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1208)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-  1207: While doing our above calculations, we omitted this block.
-> 1208: This would instead be counted as the overhead of the file, and thus the total overhead of storing this file on disk is $sizeof(indirect\_block)=4KiB)$.
-  1209: 
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1215)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-  1214: Note that when a user writes the first byte, a data block will be allocated.
-> 1215: Since each data block is $4KiB$, we find that $4KiB$ is the minimum disk usage for a non-empty file.
-  1216: Here, we observe that the file size will only be $1B$, despite that $4KiB$ of the disk is used -- there is a distinction between file size and disk usage because of overhead!
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1215)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-  1214: Note that when a user writes the first byte, a data block will be allocated.
-> 1215: Since each data block is $4KiB$, we find that $4KiB$ is the minimum disk usage for a non-empty file.
-  1216: Here, we observe that the file size will only be $1B$, despite that $4KiB$ of the disk is used -- there is a distinction between file size and disk usage because of overhead!
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1216)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-  1215: Since each data block is $4KiB$, we find that $4KiB$ is the minimum disk usage for a non-empty file.
-> 1216: Here, we observe that the file size will only be $1B$, despite that $4KiB$ of the disk is used -- there is a distinction between file size and disk usage because of overhead!
-  1217: 
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1220)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-  1219: As we saw earlier in this chapter, a filesystem with this structure can have $1024$ data block numbers in one indirect block.
-> 1220: This implies that the maximum filesize can be $2*4KiB + 1024*4KiB = 4MiB + 8KiB$ (after accounting for the direct blocks as well).
-  1221: However, on disk we also store the indirect block itself.
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1220)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-  1219: As we saw earlier in this chapter, a filesystem with this structure can have $1024$ data block numbers in one indirect block.
-> 1220: This implies that the maximum filesize can be $2*4KiB + 1024*4KiB = 4MiB + 8KiB$ (after accounting for the direct blocks as well).
-  1221: However, on disk we also store the indirect block itself.
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1220)
-  error: 4MiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-  1219: As we saw earlier in this chapter, a filesystem with this structure can have $1024$ data block numbers in one indirect block.
-> 1220: This implies that the maximum filesize can be $2*4KiB + 1024*4KiB = 4MiB + 8KiB$ (after accounting for the direct blocks as well).
-  1221: However, on disk we also store the indirect block itself.
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1220)
-  error: 8KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-  1219: As we saw earlier in this chapter, a filesystem with this structure can have $1024$ data block numbers in one indirect block.
-> 1220: This implies that the maximum filesize can be $2*4KiB + 1024*4KiB = 4MiB + 8KiB$ (after accounting for the direct blocks as well).
-  1221: However, on disk we also store the indirect block itself.
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1222)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-  1221: However, on disk we also store the indirect block itself.
-> 1222: This means that an additional $4KiB$ of overhead will be used to account for the indirect block, so the total disk usage will be $4MiB + 12KiB$.
-  1223: 
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1222)
-  error: 4MiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-  1221: However, on disk we also store the indirect block itself.
-> 1222: This means that an additional $4KiB$ of overhead will be used to account for the indirect block, so the total disk usage will be $4MiB + 12KiB$.
-  1223: 
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1222)
-  error: 12KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-  1221: However, on disk we also store the indirect block itself.
-> 1222: This means that an additional $4KiB$ of overhead will be used to account for the indirect block, so the total disk usage will be $4MiB + 12KiB$.
-  1223: 
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1252)
-  error: 6$th KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-  1251: Performing writes fall into two categories, writes to files and writes to directories.
-> 1252: First we'll focus on files and assume that we are writing a byte to the $6$th KiB of our file.
-  1253: To perform a write on a file at a particular offset, first the filesystem must go to the data block would start at that offset.
-
-- file: sample\submodules\coursebook\filesystems\filesystems.tex (line 1255)
-  error: 2$KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-  1254: For this particular example we would have to go to the 2nd or indexed number 1 inode to perform our write.
-> 1255: We would once again fetch this number from the inode, go to the root of the data blocks, go to the $5$th data block and perform our write at the $2$KiB offset from this block because we skipped the first four kibibytes of the file in block 7.
-  1256: We perform our write and go on our merry way.
-
-- file: sample\submodules\coursebook\ipc\ipc.tex (line 35)
-  error: 4GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-    34: To illustrate, consider a 32-bit machine, meaning pointers are 32-bits.
->   35: They can address $2^{32}$ different locations or 4GB of memory where one address is one byte.
-    36: Imagine we had a large table for every possible address where we will store the `real' i.e. ~physical address.
-
-- file: sample\submodules\coursebook\ipc\ipc.tex (line 39)
-  error: 4GB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-    38: Naturally, This scheme would require 16 billion bytes to store all of the entries.
->   39: It should be painfully obvious that our lookup scheme would consume all of the memory that we could buy for our 4GB machine.
-    40: Our lookup table should be smaller than the memory we have otherwise we will have no space left for our actual programs and operating system data.
-
-- file: sample\submodules\coursebook\ipc\ipc.tex (line 46)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-    45: A \textbf{page} is a block of virtual memory.
->   46: A typical block size on Linux is 4KiB or $2^{12}$ addresses, though one can find examples of larger blocks.
-    47: So rather than talking about individual bytes, we can talk about blocks of 4KiBs, each block is called a page.
-
-- file: sample\submodules\coursebook\ipc\ipc.tex (line 48)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-    47: So rather than talking about individual bytes, we can talk about blocks of 4KiBs, each block is called a page.
->   48: We can also number our pages (``Page 0'' ``Page 1'' etc). Let's do a sample calculation of how many pages are there assume page size of 4KiB.
-    49: 	 
-
-- file: sample\submodules\coursebook\ipc\ipc.tex (line 63)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-    62: We also call this a \textbf{frame} or sometimes called a `page frame' is a block of \emph{physical memory} or RAM -- Random Access Memory.
->   63: A frame is the same number of bytes as a virtual page or 4KiB on our machine.
-    64: It stores the bytes of interest.
-
-- file: sample\submodules\coursebook\ipc\ipc.tex (line 81)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-    80: Now to go through the actual calculations.
->   81: We will assume that a 32-bit machine has 4KiB pages
-    82: Naturally, to address all the possible entries, there are $2^{20}$ frames.
-
-- file: sample\submodules\coursebook\ipc\ipc.tex (line 85)
-  error: 4 MiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-    84: In practice, we'll round that up to 4 bytes and do something interesting with the rest of the bits.
->   85: With 4 bytes per entry x $2^{20}$ entries = 4 MiB of physical memory are required to hold the entire page table for a process.
-    86: 	 
-
-- file: sample\submodules\coursebook\ipc\ipc.tex (line 129)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   128: We do have a problem with 64-bit operating systems.
->  129: For a 64-bit machine with 4KiB pages, each entry needs 52 bits.
-   130: Meaning we need roughly
-
-- file: sample\submodules\coursebook\ipc\ipc.tex (line 154)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   153: That will contain a frame number.
->  154: This is the good old fashioned 4KiB RAM that we were talking about earlier.
-   155: Then, the MMU adds the offset and do the read or write.
-
-- file: sample\submodules\coursebook\ipc\ipc.tex (line 180)
-  error: 2KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   179: We'll round up to 2 bytes for the sake of reasoning.
->  180: If 2 bytes are used for each entry in the top-level table and there are only $2^{10}$ entries, we only need 2KiB to store this entire first level page table.
-   181: Each subtable will point to physical frames, and each of their entries needs to be the required 4 bytes to be able to address all the frames as mentioned earlier.
-
-- file: sample\submodules\coursebook\ipc\ipc.tex (line 184)
-  error: 4MiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   183: 	 
->  184: Thus, the total memory overhead for our multi-level page table has shrunk from 4MiB for the single-level implementation to three page tables of memory or 2KiB for the top-level and 4KiB for the two intermediate levels of size 10KiB.
-   185: Here's why.
-
-- file: sample\submodules\coursebook\ipc\ipc.tex (line 184)
-  error: 2KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   183: 	 
->  184: Thus, the total memory overhead for our multi-level page table has shrunk from 4MiB for the single-level implementation to three page tables of memory or 2KiB for the top-level and 4KiB for the two intermediate levels of size 10KiB.
-   185: Here's why.
-
-- file: sample\submodules\coursebook\ipc\ipc.tex (line 184)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   183: 	 
->  184: Thus, the total memory overhead for our multi-level page table has shrunk from 4MiB for the single-level implementation to three page tables of memory or 2KiB for the top-level and 4KiB for the two intermediate levels of size 10KiB.
-   185: Here's why.
-
-- file: sample\submodules\coursebook\ipc\ipc.tex (line 184)
-  error: 10KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   183: 	 
->  184: Thus, the total memory overhead for our multi-level page table has shrunk from 4MiB for the single-level implementation to three page tables of memory or 2KiB for the top-level and 4KiB for the two intermediate levels of size 10KiB.
-   185: Here's why.
-
-- file: sample\submodules\coursebook\ipc\ipc.tex (line 189)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   188: The other sub-table is for higher addresses used by the environment and stack.
->  189: In practice, real programs will likely need more sub-table entries, as each subtable can only reference 1024*4KiB = 4MiB of address space.
-   190: The main point still stands.
-
-- file: sample\submodules\coursebook\ipc\ipc.tex (line 189)
-  error: 4MiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   188: The other sub-table is for higher addresses used by the environment and stack.
->  189: In practice, real programs will likely need more sub-table entries, as each subtable can only reference 1024*4KiB = 4MiB of address space.
-   190: The main point still stands.
-
-- file: sample\submodules\coursebook\ipc\ipc.tex (line 566)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   565: The problem with using a pipe in this fashion is that writing to a pipe can block meaning the pipe only has a limited buffering capacity.
->  566: The maximum size of the buffer is system-dependent; typical values from 4KiB up to 128KiB though they can be changed.
-   567: 	 
-
-- file: sample\submodules\coursebook\ipc\ipc.tex (line 566)
-  error: 128KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   565: The problem with using a pipe in this fashion is that writing to a pipe can block meaning the pipe only has a limited buffering capacity.
->  566: The maximum size of the buffer is system-dependent; typical values from 4KiB up to 128KiB though they can be changed.
-   567: 	 
-
-- file: sample\submodules\coursebook\malloc\malloc.tex (line 205)
-  error: 2KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   204: 
->  205: If a new malloc request for 2KiB is executed (\keyword{malloc(2048)}), where should \keyword{malloc} reserve the memory?
-   206: It could use the last 2KiB hole, which happens to be the perfect size!
-
-- file: sample\submodules\coursebook\malloc\malloc.tex (line 206)
-  error: 2KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   205: If a new malloc request for 2KiB is executed (\keyword{malloc(2048)}), where should \keyword{malloc} reserve the memory?
->  206: It could use the last 2KiB hole, which happens to be the perfect size!
-   207: Or it could split one of the other two free holes.
-
-- file: sample\submodules\coursebook\malloc\malloc.tex (line 211)
-  error: 2KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   210: The newly allocated space, which will be returned to the program and a smaller hole if there is spare space left over.
->  211: A perfect-fit strategy finds the smallest hole that is of sufficient size (at least 2KiB):
-   212: 
-
-- file: sample\submodules\coursebook\malloc\malloc.tex (line 219)
-  error: 30KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   218: 
->  219: A worst-fit strategy finds the largest hole that is of sufficient size so break the 30KiB hole into two:
-   220: 
-
-- file: sample\submodules\coursebook\malloc\malloc.tex (line 228)
-  error: 16KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   227: 
->  228: A first-fit strategy finds the first available hole that is of sufficient size so break the 16KiB hole into two.
-   229: We don't even have to look through the entire heap!
-
-- file: sample\submodules\coursebook\malloc\malloc.tex (line 239)
-  error: 14KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   238: For example, our first fit allocator could've returned the original block unbroken.
->  239: Notice that this would lead to about 14KiB of space to be unused by the user and the allocator.
-   240: We call this internal fragmentation.
-
-- file: sample\submodules\coursebook\malloc\malloc.tex (line 243)
-  error: 64KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   242: In contrast, external fragmentation is that even though we have enough memory in the heap, it may be divided up in a way so a continuous block of that size is unavailable.
->  243: In our previous example, of the 64KiB of heap memory, 17KiB is allocated, and 47KiB is free.
-   244: However, the largest available block is only 30KiB because our available unallocated heap memory is fragmented into smaller pieces.
-
-- file: sample\submodules\coursebook\malloc\malloc.tex (line 243)
-  error: 17KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   242: In contrast, external fragmentation is that even though we have enough memory in the heap, it may be divided up in a way so a continuous block of that size is unavailable.
->  243: In our previous example, of the 64KiB of heap memory, 17KiB is allocated, and 47KiB is free.
-   244: However, the largest available block is only 30KiB because our available unallocated heap memory is fragmented into smaller pieces.
-
-- file: sample\submodules\coursebook\malloc\malloc.tex (line 243)
-  error: 47KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   242: In contrast, external fragmentation is that even though we have enough memory in the heap, it may be divided up in a way so a continuous block of that size is unavailable.
->  243: In our previous example, of the 64KiB of heap memory, 17KiB is allocated, and 47KiB is free.
-   244: However, the largest available block is only 30KiB because our available unallocated heap memory is fragmented into smaller pieces.
-
-- file: sample\submodules\coursebook\malloc\malloc.tex (line 244)
-  error: 30KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   243: In our previous example, of the 64KiB of heap memory, 17KiB is allocated, and 47KiB is free.
->  244: However, the largest available block is only 30KiB because our available unallocated heap memory is fragmented into smaller pieces.
-   245: 
-
-- file: sample\submodules\coursebook\malloc\malloc.tex (line 330)
-  error: 1024 KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   329: This internal information represents some overhead.
->  330: Meaning even if we had requested 1024 KiB of contiguous memory from the system, we an allocation of that size will fail.
-   331: 
-
-- file: sample\submodules\coursebook\networking\networking.tex (line 991)
-  error: 64 KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   990: One call to recvfrom is one packet.
->  991: To make sure that you have enough space, use 64 KiB as storage space.
-   992: 
-
-- file: sample\submodules\coursebook\review\review.tex (line 517)
-  error: 4KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   516: 
->  517: \item In an \keyword{ext2} filesystem with 32 bit addresses and 4KiB disk blocks, an inode can store 10 direct disk block numbers. What is the minimum file size required to require a single indirection table? ii) a double direction table?
-   518: 
-
-- file: sample\submodules\coursebook\threads\threads.tex (line 495)
-  error: 8 KiB
-  message: If this is a unit, consider using the siunitx(\SI{number}{unit}). It provides better spacing and formatting for units.
-   494: 
->  495: // 8 KiB stacks
-   496: #define STACK_SIZE (8 * 1024 * 1024)
 

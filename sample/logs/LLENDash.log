@@ -1,4 +1,228 @@
 [CODE] LLENDash (546)
+- file: ..\latexlint-externals\submodules\OpenLogic\content\computability\computability-theory\non-comp-set.tex (line 10)
+  error: Non-Computable
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+     9: \olfileid{cmp}{thy}{ncp}
+>   10: \olsection{There Are Non-Computable Sets}
+    11: 
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\first-order-logic\axiomatic-deduction\proof-theoretic-notions.tex (line 13)
+  error: Proof-Theoretic
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+    12: 
+>   13: \olsection{Proof-Theoretic Notions}
+    14: 
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\first-order-logic\natural-deduction\proof-theoretic-notions.tex (line 13)
+  error: Proof-Theoretic
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+    12: 
+>   13: \olsection{Proof-Theoretic Notions}
+    14: 
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\first-order-logic\sequent-calculus\proof-theoretic-notions.tex (line 18)
+  error: Proof-Theoretic
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+    17: 
+>   18: \olsection{Proof-Theoretic Notions}
+    19: 
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\first-order-logic\tableaux\proof-theoretic-notions.tex (line 13)
+  error: Proof-Theoretic
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+    12:       
+>   13: \olsection{Proof-Theoretic Notions}
+    14: 
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\history\biographies\kurt-goedel.tex (line 16)
+  error: Austro-Hungarian
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+    15: Kurt G{\"o}del (\textsc{ger}-dle) was born on April 28, 1906 in
+>   16: Br{\"u}nn in the Austro-Hungarian empire (now Brno in the Czech
+    17: Republic). Due to his inquisitive and bright nature, young Kurtele was
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\lambda-calculus\church-rosser\parallel-beta-eta-reduction.tex (line 13)
+  error: Church-Rosser
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+    12: 
+>   13: In this section we prove the Church-Rosser property for parallel
+    14: $\beta\eta$-reduction, the parallel reduction notion corresponding to
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\lambda-calculus\church-rosser\parallel-beta-eta-reduction.tex (line 94)
+  error: Church-Rosser
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+    93: \begin{thm}\ollabel{thm:cr}
+>   94:   $\beredpar$ has the Church-Rosser property.
+    95: \end{thm}
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\many-valued-logic\sequent-calculus\proof-theoretic-notions.tex (line 11)
+  error: Proof-Theoretic
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+    10: 
+>   11: \olsection{Proof-Theoretic Notions}
+    12: 
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\set-theory\card-arithmetic\fix.tex (line 137)
+  error: Tristram-Shandy
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+   136: of $V_\kappa$. Intuitively, then, $V_\kappa$ is as wide as it is tall.
+>  137: This is very Tristram-Shandy-esque: we move from one stage to the next
+   138: by taking \emph{powersets}, thereby making our hierarchy \emph{much}
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\set-theory\cardinals\classing.tex (line 184)
+  error: Burali-Forti
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+   183: 
+>  184: You should compare this with both Russell's Paradox and Burali-Forti. 
+   185: 
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\set-theory\choice\vitali.tex (line 8)
+  error: Banach-Tarski
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+     7: 
+>    8: To get a real sense of whether the Banach-Tarski construction is
+     9: acceptable or not, we should examine its \emph{proof}. Unfortunately,
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\set-theory\choice\vitali.tex (line 12)
+  error: Banach-Tarski
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+    11: However, we can offer some quick remarks which might shed some insight
+>   12: on the proof of Banach-Tarski,\footnote{For a much fuller treatment,
+    13: see \cite{Weston2003} or \cite{Wagon2016}.} by focussing on the
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\set-theory\choice\vitali.tex (line 26)
+  error: Banach-Tarski
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+    25: set-theoretic aspects of the proof of Vitali's Paradox and the
+>   26: Banach-Tarski Paradox are very similar. The essential difference
+    27: between the results is just that Banach-Tarski considers a
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\set-theory\choice\vitali.tex (line 27)
+  error: Banach-Tarski
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+    26: Banach-Tarski Paradox are very similar. The essential difference
+>   27: between the results is just that Banach-Tarski considers a
+    28: \emph{finite} decomposition, whereas Vitali's Paradox considers a
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\set-theory\choice\vitali.tex (line 207)
+  error: Banach-Tarski
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+   206: A couple of further algebraic tricks are needed to obtain the full
+>  207: Banach-Tarski Theorem (which concerns not just the sphere's surface,
+   208: but its interior too). Frankly, however, this is just icing on the
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\set-theory\choice\vitali.tex (line 212)
+  error: Banach-Tarski
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+   211:   [\ldots] the result on free groups is the \emph{key step} in the
+>  212:   proof of the Banach-Tarski paradox. From this point of view, the
+   213:   Banach-Tarski paradox is not a statement about $\Real^3$ so much as
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\set-theory\choice\vitali.tex (line 213)
+  error: Banach-Tarski
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+   212:   proof of the Banach-Tarski paradox. From this point of view, the
+>  213:   Banach-Tarski paradox is not a statement about $\Real^3$ so much as
+   214:   it is a statement about the complexity of the group [of translations
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\set-theory\choice\vitali.tex (line 224)
+  error: Banach-Tarski
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+   223: of \olref[banach]{sec}. Since it is  two dimensional,
+>  224: ``Banach-Tarski'' must be divided into a countable \emph{infinity} of
+   225: pieces, if one wants to rearrange those pieces to form ``Banach-Tarski
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\set-theory\choice\vitali.tex (line 225)
+  error: Banach-Tarski
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+   224: ``Banach-Tarski'' must be divided into a countable \emph{infinity} of
+>  225: pieces, if one wants to rearrange those pieces to form ``Banach-Tarski
+   226: Banach-Tarski''. To repair the joke, one must write in three
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\set-theory\choice\vitali.tex (line 226)
+  error: Banach-Tarski
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+   225: pieces, if one wants to rearrange those pieces to form ``Banach-Tarski
+>  226: Banach-Tarski''. To repair the joke, one must write in three
+   227: dimensions. We leave this as an exercise for the reader.
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\set-theory\ordinals\basic.tex (line 163)
+  error: Burali-Forti
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+   162: \begin{quote}
+>  163:   Burali-Forti himself considered the contradiction as establishing,
+   164:   by \emph{reductio ad absurdum}, the result that the natural ordering
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\set-theory\ordinals\basic.tex (line 168)
+  error: Burali-Forti
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+   167: \end{quote}
+>  168: Setting Burali-Forti's mistake to one side, we can summarize the foregoing as follows. Ordinals are sets which are individually well-ordered by
+   169: membership, and collectively well-ordered by membership (without collectively constituting a set). 
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\set-theory\ordinals\iso.tex (line 6)
+  error: Order-Isomorphisms
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+     5: \olfileid{sth}{ordinals}{iso}
+>    6: \olsection{Order-Isomorphisms}
+     7: 
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\set-theory\ordinals\wo.tex (line 6)
+  error: Well-Orderings
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+     5: \olfileid{sth}{ordinals}{wo}
+>    6: \olsection{Well-Orderings}
+     7: 
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\set-theory\spine\recursion.tex (line 80)
+  error: Burali-Forti
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+    79: \emph{set}, since then $\dom{\sigma}$ would be the set of all
+>   80: ordinals, contradicting the Burali-Forti Paradox
+    81: (\olref[ordinals][basic]{buraliforti}).
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\set-theory\story\cumulative-approach.tex (line 6)
+  error: Cumulative-Iterative
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+     5: \olfileid{sth}{story}{approach}
+>    6: \olsection{The Cumulative-Iterative Approach}
+     7: 
+
+- file: ..\latexlint-externals\submodules\coursebook\appendix\appendix.tex (line 1178)
+  error: Harchol-Balter
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+  1177: Many different tasks can get worked on at the same time but experience a slowdown.
+> 1178: All of these proofs will be adapted from Harchol-Balter's book \cite{harchol2013performance}.
+  1179: We highly recommend checking out the books if you are interested.
+
+- file: ..\latexlint-externals\submodules\coursebook\networking\networking.tex (line 4)
+  error: Berners-Lee
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+     3: \epigraph{The Web as I envisaged it, we have not seen it yet.
+>    4:   The future is still so much bigger than the past}{Tim Berners-Lee}
+     5: 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 349)
+  error: Clopper-Pearson
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+   348: isn't met, we can use what's called
+>  349: the \term{Clopper-Pearson interval}.
+   350: The details are beyond the scope of this book.
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\preamble\copyright_derivative.tex (line 6)
+  error: Attribution-ShareAlike
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+     5: 
+>    6: \noindent $\copyright$ 2015. This content is available under a Creative Commons Attribution-ShareAlike 3.0 Unported United States license. License details are available at the Creative Commons website: \urlwofont{http://www.creativecommons.org} \\
+     7: 
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\extraTeX\preamble\preface.tex (line 261)
+  error: Aiello-Lammens
+  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
+   260: \oiRedirect{matthew_e_aiello-lammens}
+>  261:     {Matthew E. Aiello-Lammens},
+   262: \oiRedirect{jonathan_akin}{Jonathan Akin},
+
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 455)
   error: Shannon-Kolmogorov-Sinai
   message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
@@ -3591,228 +3815,4 @@
     94: \section*{Acknowledgments}
 >   95: We thank Amol Agrawal, Hernan Badino, Chun-Wei Chan, Yueh-Tung Chen, Shen-Chi Chen, Yuhua Chen, Carol Cheng, Tingfang Du, Marco Dal Farra, Ryan Frazier, Sidi Fu, Ke Gao, Liuhao Ge, Chen Guo, Aaqib Habib, Ish Habib, Andrew Hou, Yuta Inoue, Ethan James, Austin James, Fei Jiang, Sam Johnson, Justin Joseph, Anjani Josyula, Song Ju, Kevin Kane, Kai Kang, Thomas Keady, Taylor Koska, Sanjeev Kumar, Jess Kuts, Jianchao Li, Steven Longay, Alex Ma, Kevyn McPhail, Sergiu Munteanu, Conor O'Hollaren, Sam Pepose, Albert Parra Pozo, Wei Pu, David Rogers, Javier Romero, Igor Santesteban, Jake Simmons, Tomas Simon, Nir Sopher, Sam Sussman, Autumn Trimble, Harshita Tupili, Julien Valentin, Carlos Vallespi-Gonzalez, Kiran Vekaria, Kishore Venkateshan, Simon Venshtain, Harsh Vora, Yimu Wang, Yuzhi Wang, Michael Wu, Longhua Wu, Chengxiang Yin, Jiu Xu, Bo Yang, Shoou-I Yu, and Junchen Zhang for data processing and discussion.
     96: 
-
-- file: sample\submodules\OpenLogic\content\computability\computability-theory\non-comp-set.tex (line 10)
-  error: Non-Computable
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-     9: \olfileid{cmp}{thy}{ncp}
->   10: \olsection{There Are Non-Computable Sets}
-    11: 
-
-- file: sample\submodules\OpenLogic\content\first-order-logic\axiomatic-deduction\proof-theoretic-notions.tex (line 13)
-  error: Proof-Theoretic
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-    12: 
->   13: \olsection{Proof-Theoretic Notions}
-    14: 
-
-- file: sample\submodules\OpenLogic\content\first-order-logic\natural-deduction\proof-theoretic-notions.tex (line 13)
-  error: Proof-Theoretic
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-    12: 
->   13: \olsection{Proof-Theoretic Notions}
-    14: 
-
-- file: sample\submodules\OpenLogic\content\first-order-logic\sequent-calculus\proof-theoretic-notions.tex (line 18)
-  error: Proof-Theoretic
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-    17: 
->   18: \olsection{Proof-Theoretic Notions}
-    19: 
-
-- file: sample\submodules\OpenLogic\content\first-order-logic\tableaux\proof-theoretic-notions.tex (line 13)
-  error: Proof-Theoretic
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-    12:       
->   13: \olsection{Proof-Theoretic Notions}
-    14: 
-
-- file: sample\submodules\OpenLogic\content\history\biographies\kurt-goedel.tex (line 16)
-  error: Austro-Hungarian
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-    15: Kurt G{\"o}del (\textsc{ger}-dle) was born on April 28, 1906 in
->   16: Br{\"u}nn in the Austro-Hungarian empire (now Brno in the Czech
-    17: Republic). Due to his inquisitive and bright nature, young Kurtele was
-
-- file: sample\submodules\OpenLogic\content\lambda-calculus\church-rosser\parallel-beta-eta-reduction.tex (line 13)
-  error: Church-Rosser
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-    12: 
->   13: In this section we prove the Church-Rosser property for parallel
-    14: $\beta\eta$-reduction, the parallel reduction notion corresponding to
-
-- file: sample\submodules\OpenLogic\content\lambda-calculus\church-rosser\parallel-beta-eta-reduction.tex (line 94)
-  error: Church-Rosser
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-    93: \begin{thm}\ollabel{thm:cr}
->   94:   $\beredpar$ has the Church-Rosser property.
-    95: \end{thm}
-
-- file: sample\submodules\OpenLogic\content\many-valued-logic\sequent-calculus\proof-theoretic-notions.tex (line 11)
-  error: Proof-Theoretic
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-    10: 
->   11: \olsection{Proof-Theoretic Notions}
-    12: 
-
-- file: sample\submodules\OpenLogic\content\set-theory\card-arithmetic\fix.tex (line 137)
-  error: Tristram-Shandy
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-   136: of $V_\kappa$. Intuitively, then, $V_\kappa$ is as wide as it is tall.
->  137: This is very Tristram-Shandy-esque: we move from one stage to the next
-   138: by taking \emph{powersets}, thereby making our hierarchy \emph{much}
-
-- file: sample\submodules\OpenLogic\content\set-theory\cardinals\classing.tex (line 184)
-  error: Burali-Forti
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-   183: 
->  184: You should compare this with both Russell's Paradox and Burali-Forti. 
-   185: 
-
-- file: sample\submodules\OpenLogic\content\set-theory\choice\vitali.tex (line 8)
-  error: Banach-Tarski
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-     7: 
->    8: To get a real sense of whether the Banach-Tarski construction is
-     9: acceptable or not, we should examine its \emph{proof}. Unfortunately,
-
-- file: sample\submodules\OpenLogic\content\set-theory\choice\vitali.tex (line 12)
-  error: Banach-Tarski
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-    11: However, we can offer some quick remarks which might shed some insight
->   12: on the proof of Banach-Tarski,\footnote{For a much fuller treatment,
-    13: see \cite{Weston2003} or \cite{Wagon2016}.} by focussing on the
-
-- file: sample\submodules\OpenLogic\content\set-theory\choice\vitali.tex (line 26)
-  error: Banach-Tarski
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-    25: set-theoretic aspects of the proof of Vitali's Paradox and the
->   26: Banach-Tarski Paradox are very similar. The essential difference
-    27: between the results is just that Banach-Tarski considers a
-
-- file: sample\submodules\OpenLogic\content\set-theory\choice\vitali.tex (line 27)
-  error: Banach-Tarski
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-    26: Banach-Tarski Paradox are very similar. The essential difference
->   27: between the results is just that Banach-Tarski considers a
-    28: \emph{finite} decomposition, whereas Vitali's Paradox considers a
-
-- file: sample\submodules\OpenLogic\content\set-theory\choice\vitali.tex (line 207)
-  error: Banach-Tarski
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-   206: A couple of further algebraic tricks are needed to obtain the full
->  207: Banach-Tarski Theorem (which concerns not just the sphere's surface,
-   208: but its interior too). Frankly, however, this is just icing on the
-
-- file: sample\submodules\OpenLogic\content\set-theory\choice\vitali.tex (line 212)
-  error: Banach-Tarski
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-   211:   [\ldots] the result on free groups is the \emph{key step} in the
->  212:   proof of the Banach-Tarski paradox. From this point of view, the
-   213:   Banach-Tarski paradox is not a statement about $\Real^3$ so much as
-
-- file: sample\submodules\OpenLogic\content\set-theory\choice\vitali.tex (line 213)
-  error: Banach-Tarski
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-   212:   proof of the Banach-Tarski paradox. From this point of view, the
->  213:   Banach-Tarski paradox is not a statement about $\Real^3$ so much as
-   214:   it is a statement about the complexity of the group [of translations
-
-- file: sample\submodules\OpenLogic\content\set-theory\choice\vitali.tex (line 224)
-  error: Banach-Tarski
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-   223: of \olref[banach]{sec}. Since it is  two dimensional,
->  224: ``Banach-Tarski'' must be divided into a countable \emph{infinity} of
-   225: pieces, if one wants to rearrange those pieces to form ``Banach-Tarski
-
-- file: sample\submodules\OpenLogic\content\set-theory\choice\vitali.tex (line 225)
-  error: Banach-Tarski
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-   224: ``Banach-Tarski'' must be divided into a countable \emph{infinity} of
->  225: pieces, if one wants to rearrange those pieces to form ``Banach-Tarski
-   226: Banach-Tarski''. To repair the joke, one must write in three
-
-- file: sample\submodules\OpenLogic\content\set-theory\choice\vitali.tex (line 226)
-  error: Banach-Tarski
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-   225: pieces, if one wants to rearrange those pieces to form ``Banach-Tarski
->  226: Banach-Tarski''. To repair the joke, one must write in three
-   227: dimensions. We leave this as an exercise for the reader.
-
-- file: sample\submodules\OpenLogic\content\set-theory\ordinals\basic.tex (line 163)
-  error: Burali-Forti
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-   162: \begin{quote}
->  163:   Burali-Forti himself considered the contradiction as establishing,
-   164:   by \emph{reductio ad absurdum}, the result that the natural ordering
-
-- file: sample\submodules\OpenLogic\content\set-theory\ordinals\basic.tex (line 168)
-  error: Burali-Forti
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-   167: \end{quote}
->  168: Setting Burali-Forti's mistake to one side, we can summarize the foregoing as follows. Ordinals are sets which are individually well-ordered by
-   169: membership, and collectively well-ordered by membership (without collectively constituting a set). 
-
-- file: sample\submodules\OpenLogic\content\set-theory\ordinals\iso.tex (line 6)
-  error: Order-Isomorphisms
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-     5: \olfileid{sth}{ordinals}{iso}
->    6: \olsection{Order-Isomorphisms}
-     7: 
-
-- file: sample\submodules\OpenLogic\content\set-theory\ordinals\wo.tex (line 6)
-  error: Well-Orderings
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-     5: \olfileid{sth}{ordinals}{wo}
->    6: \olsection{Well-Orderings}
-     7: 
-
-- file: sample\submodules\OpenLogic\content\set-theory\spine\recursion.tex (line 80)
-  error: Burali-Forti
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-    79: \emph{set}, since then $\dom{\sigma}$ would be the set of all
->   80: ordinals, contradicting the Burali-Forti Paradox
-    81: (\olref[ordinals][basic]{buraliforti}).
-
-- file: sample\submodules\OpenLogic\content\set-theory\story\cumulative-approach.tex (line 6)
-  error: Cumulative-Iterative
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-     5: \olfileid{sth}{story}{approach}
->    6: \olsection{The Cumulative-Iterative Approach}
-     7: 
-
-- file: sample\submodules\coursebook\appendix\appendix.tex (line 1178)
-  error: Harchol-Balter
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-  1177: Many different tasks can get worked on at the same time but experience a slowdown.
-> 1178: All of these proofs will be adapted from Harchol-Balter's book \cite{harchol2013performance}.
-  1179: We highly recommend checking out the books if you are interested.
-
-- file: sample\submodules\coursebook\networking\networking.tex (line 4)
-  error: Berners-Lee
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-     3: \epigraph{The Web as I envisaged it, we have not seen it yet.
->    4:   The future is still so much bigger than the past}{Tim Berners-Lee}
-     5: 
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 349)
-  error: Clopper-Pearson
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-   348: isn't met, we can use what's called
->  349: the \term{Clopper-Pearson interval}.
-   350: The details are beyond the scope of this book.
-
-- file: sample\submodules\openintro-statistics\extraTeX\preamble\copyright_derivative.tex (line 6)
-  error: Attribution-ShareAlike
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-     5: 
->    6: \noindent $\copyright$ 2015. This content is available under a Creative Commons Attribution-ShareAlike 3.0 Unported United States license. License details are available at the Creative Commons website: \urlwofont{http://www.creativecommons.org} \\
-     7: 
-
-- file: sample\submodules\openintro-statistics\extraTeX\preamble\preface.tex (line 261)
-  error: Aiello-Lammens
-  message: If these are names, en-dash (--) might be appropriate. Otherwise, register as an exception to suppress this warning.
-   260: \oiRedirect{matthew_e_aiello-lammens}
->  261:     {Matthew E. Aiello-Lammens},
-   262: \oiRedirect{jonathan_akin}{Jonathan Akin},
 

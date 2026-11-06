@@ -1,4 +1,11 @@
 [CODE] LLAlignAnd (185)
+- file: ..\latexlint-externals\submodules\OpenLogic\content\methods\induction\structural-induction.tex (line 25)
+  error: = &
+  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
+    24: \begin{align*}
+>   25:   o(s_1, s_2) = & [s_1 \circ s_2]
+    26: \end{align*}
+
 - file: sample\arxiv_sources\1601.01850v2\Cexp_-_November_2017.tex (line 1317)
   error: = &
   message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
@@ -1286,11 +1293,4 @@
    335: \begin{align*}
 >  336:     Py = & (1 - x)^3(1 - y)^2(-15/2(x + 1)y^2 + (6x^2 + 3x + 1)(y + 1/2)) - 15y^2(y - 1)^2 - 1/2
    337: \end{align*}
-
-- file: sample\submodules\OpenLogic\content\methods\induction\structural-induction.tex (line 25)
-  error: = &
-  message: Use &= or ={}& instead of =& to avoid spacing issues in align-like environments.
-    24: \begin{align*}
->   25:   o(s_1, s_2) = & [s_1 \circ s_2]
-    26: \end{align*}
 

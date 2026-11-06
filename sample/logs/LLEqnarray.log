@@ -1,4 +1,165 @@
 [CODE] LLEqnarray (391)
+- file: ..\latexlint-externals\submodules\OpenLogic\content\computability\recursive-functions\non-pr-functions.tex (line 21)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+    20: is computable. But then so is the function
+>   21: \begin{eqnarray*}
+    22: h(x) & = & g(x,x) + 1 \\
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\computability\recursive-functions\non-pr-functions.tex (line 34)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+    33: sequence $g_0,g_1,\dots$ of functions by
+>   34: \begin{eqnarray*}
+    35: g_0(x) & = & x+1 \\
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\computability\recursive-functions\non-pr-functions.tex (line 50)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+    49: recursively, as follows:
+>   50: \begin{eqnarray*}
+    51: \#(0) & = & \langle 0 \rangle \\
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\computability\recursive-functions\pr-functions-computable.tex (line 13)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+    12: Suppose a function $h$ is defined by primitive recursion
+>   13: \begin{eqnarray*}
+    14: h(\vec x, 0)     & = & f(\vec x) \\
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\incompleteness\representability-in-q\c-representable.tex (line 117)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   116: 0$, we need to show that $\Th{Q}$ proves $\eq[(x'+0)][(x+0)']$. But we have:
+>  117: \begin{eqnarray*}
+   118: & & \eq[(x' + 0)][x'] \quad \text{from axiom 4} \\
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\incompleteness\representability-in-q\c-representable.tex (line 127)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   126: n')']$. The following chain of equalities can be derived in $\Th{Q}$:
+>  127: \begin{eqnarray*}
+   128: (x' + \num n') & \eq & (x' + \num n)' \quad \text{axiom 5} \\
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\incompleteness\theories-computability\extensions-of-q-not-decidable.tex (line 59)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+    58: $!D_S(u)$. Then for every $n$, we have
+>   59: \begin{eqnarray*}
+    60: S(\num n) & \lif & T \vdash !D_S(\num n) \\
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\incompleteness\theories-computability\extensions-of-q-not-decidable.tex (line 64)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+    63: and
+>   64: \begin{eqnarray*}
+    65: \lnot S(\num n) & \lif & T \vdash \lnot !D_S(\num n) \\
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\incompleteness\theories-computability\inseparability.tex (line 35)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+    34: Suppose $S(y)$ is computable, represented by $!D_S(u)$ in $\Th{Q}$. Then
+>   35: \begin{eqnarray*}
+    36: S(\num n) & \lif & \Th{Q} \Proves !D_S(\num n) \\
+
+- file: ..\latexlint-externals\submodules\OpenLogic\content\incompleteness\theories-computability\inseparability.tex (line 40)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+    39: and 
+>   40: \begin{eqnarray*}
+    41: \lnot S(\num n) & \lif & \Th{Q} \Proves \lnot !D_S(\num n) \\
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 1091)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+  1090: that follows a normal distribution is
+> 1091: \begin{eqnarray*}
+  1092: \text{point estimate}\ \pm\ 1.96 \times SE
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 1312)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+  1311:   for a 95\% confidence level, the confidence interval is
+> 1312:   \begin{eqnarray*}
+  1313:   \text{point estimate} \ \pm\ z^{\star} \times SE
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 171)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   170:   the confidence interval is
+>  171:   \begin{eqnarray*}
+   172:   \text{point estimate} \ \pm\ z^{\star} \times SE
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 617)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   616:   \index{standard error (SE)!difference in proportions}
+>  617:   \begin{eqnarray*}
+   618:   SE %_{\hat{p}_1 - \hat{p}_2}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 988)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   987:   success-failure condition and estimate the standard error:
+>  988:   \begin{eqnarray*}
+   989:   \hat{p}_{\textit{pooled}}
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 996)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   995:   sample 1 since
+>  996:   \begin{eqnarray*}
+   997:   \hat{p}_1
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 45)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+    44: The equation for the line is
+>   45: \begin{eqnarray*}
+    46: y = 5 + 64.96 x
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 309)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   308: The residual of the $i^{th}$ observation $(x_i, y_i)$ is the difference of the observed response ($y_i$) and the response we would predict based on the model fit ($\hat{y}_i$):
+>  309: \begin{eqnarray*}
+   310: e_i = y_i - \hat{y}_i
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 319)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   318: We first compute the predicted value of point ``$\times$'' based on the model:
+>  319: \begin{eqnarray*}
+   320: \hat{y}_{\times} = 41+0.59x_{\times} = 41+0.59\times 77.0 = 86.4
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 323)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   322: Next we compute the difference of the actual head length and the predicted head length:
+>  323: \begin{eqnarray*}
+   324: e_{\times} = y_{\times} - \hat{y}_{\times} = 85.3 -  86.4 = -1.1
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 728)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   727: For the Elmhurst data, we could write the equation of the least squares regression line as
+>  728: \begin{eqnarray*}
+   729: \widehat{aid} = \beta_0 + \beta_{1}\times
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 803)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   802: \footnotetext{Compute the slope using the summary statistics from Figure~\ref{summaryStatsElmhurstRegr}:
+>  803: \begin{eqnarray*}
+   804: b_1
+
+- file: ..\latexlint-externals\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 888)
+  error: \begin{eqnarray*}
+  message: Eqnarray is not recommended. Use align or gather instead.
+   887:   It is computed as
+>  888:   \begin{eqnarray*}
+   889:   IQR = Q_3 - Q_1
+
 - file: sample\arxiv_sources\1101.2623v9\CaratheodoryGibbsMeasures4.tex (line 233)
   error: \begin{eqnarray*}
   message: Eqnarray is not recommended. Use align or gather instead.
@@ -2574,165 +2735,4 @@
   1051: \begin{widetext}
 > 1052: \begin{eqnarray}\label{f:sq}
   1053:      S(\textbf{q})
-
-- file: sample\submodules\OpenLogic\content\computability\recursive-functions\non-pr-functions.tex (line 21)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-    20: is computable. But then so is the function
->   21: \begin{eqnarray*}
-    22: h(x) & = & g(x,x) + 1 \\
-
-- file: sample\submodules\OpenLogic\content\computability\recursive-functions\non-pr-functions.tex (line 34)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-    33: sequence $g_0,g_1,\dots$ of functions by
->   34: \begin{eqnarray*}
-    35: g_0(x) & = & x+1 \\
-
-- file: sample\submodules\OpenLogic\content\computability\recursive-functions\non-pr-functions.tex (line 50)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-    49: recursively, as follows:
->   50: \begin{eqnarray*}
-    51: \#(0) & = & \langle 0 \rangle \\
-
-- file: sample\submodules\OpenLogic\content\computability\recursive-functions\pr-functions-computable.tex (line 13)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-    12: Suppose a function $h$ is defined by primitive recursion
->   13: \begin{eqnarray*}
-    14: h(\vec x, 0)     & = & f(\vec x) \\
-
-- file: sample\submodules\OpenLogic\content\incompleteness\representability-in-q\c-representable.tex (line 117)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-   116: 0$, we need to show that $\Th{Q}$ proves $\eq[(x'+0)][(x+0)']$. But we have:
->  117: \begin{eqnarray*}
-   118: & & \eq[(x' + 0)][x'] \quad \text{from axiom 4} \\
-
-- file: sample\submodules\OpenLogic\content\incompleteness\representability-in-q\c-representable.tex (line 127)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-   126: n')']$. The following chain of equalities can be derived in $\Th{Q}$:
->  127: \begin{eqnarray*}
-   128: (x' + \num n') & \eq & (x' + \num n)' \quad \text{axiom 5} \\
-
-- file: sample\submodules\OpenLogic\content\incompleteness\theories-computability\extensions-of-q-not-decidable.tex (line 59)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-    58: $!D_S(u)$. Then for every $n$, we have
->   59: \begin{eqnarray*}
-    60: S(\num n) & \lif & T \vdash !D_S(\num n) \\
-
-- file: sample\submodules\OpenLogic\content\incompleteness\theories-computability\extensions-of-q-not-decidable.tex (line 64)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-    63: and
->   64: \begin{eqnarray*}
-    65: \lnot S(\num n) & \lif & T \vdash \lnot !D_S(\num n) \\
-
-- file: sample\submodules\OpenLogic\content\incompleteness\theories-computability\inseparability.tex (line 35)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-    34: Suppose $S(y)$ is computable, represented by $!D_S(u)$ in $\Th{Q}$. Then
->   35: \begin{eqnarray*}
-    36: S(\num n) & \lif & \Th{Q} \Proves !D_S(\num n) \\
-
-- file: sample\submodules\OpenLogic\content\incompleteness\theories-computability\inseparability.tex (line 40)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-    39: and 
->   40: \begin{eqnarray*}
-    41: \lnot S(\num n) & \lif & \Th{Q} \Proves \lnot !D_S(\num n) \\
-
-- file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 1091)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-  1090: that follows a normal distribution is
-> 1091: \begin{eqnarray*}
-  1092: \text{point estimate}\ \pm\ 1.96 \times SE
-
-- file: sample\submodules\openintro-statistics\ch_foundations_for_inf\TeX\ch_foundations_for_inf.tex (line 1312)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-  1311:   for a 95\% confidence level, the confidence interval is
-> 1312:   \begin{eqnarray*}
-  1313:   \text{point estimate} \ \pm\ z^{\star} \times SE
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 171)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-   170:   the confidence interval is
->  171:   \begin{eqnarray*}
-   172:   \text{point estimate} \ \pm\ z^{\star} \times SE
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 617)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-   616:   \index{standard error (SE)!difference in proportions}
->  617:   \begin{eqnarray*}
-   618:   SE %_{\hat{p}_1 - \hat{p}_2}
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 988)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-   987:   success-failure condition and estimate the standard error:
->  988:   \begin{eqnarray*}
-   989:   \hat{p}_{\textit{pooled}}
-
-- file: sample\submodules\openintro-statistics\ch_inference_for_props\TeX\ch_inference_for_props.tex (line 996)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-   995:   sample 1 since
->  996:   \begin{eqnarray*}
-   997:   \hat{p}_1
-
-- file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 45)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-    44: The equation for the line is
->   45: \begin{eqnarray*}
-    46: y = 5 + 64.96 x
-
-- file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 309)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-   308: The residual of the $i^{th}$ observation $(x_i, y_i)$ is the difference of the observed response ($y_i$) and the response we would predict based on the model fit ($\hat{y}_i$):
->  309: \begin{eqnarray*}
-   310: e_i = y_i - \hat{y}_i
-
-- file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 319)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-   318: We first compute the predicted value of point ``$\times$'' based on the model:
->  319: \begin{eqnarray*}
-   320: \hat{y}_{\times} = 41+0.59x_{\times} = 41+0.59\times 77.0 = 86.4
-
-- file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 323)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-   322: Next we compute the difference of the actual head length and the predicted head length:
->  323: \begin{eqnarray*}
-   324: e_{\times} = y_{\times} - \hat{y}_{\times} = 85.3 -  86.4 = -1.1
-
-- file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 728)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-   727: For the Elmhurst data, we could write the equation of the least squares regression line as
->  728: \begin{eqnarray*}
-   729: \widehat{aid} = \beta_0 + \beta_{1}\times
-
-- file: sample\submodules\openintro-statistics\ch_regr_simple_linear\TeX\ch_regr_simple_linear.tex (line 803)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-   802: \footnotetext{Compute the slope using the summary statistics from Figure~\ref{summaryStatsElmhurstRegr}:
->  803: \begin{eqnarray*}
-   804: b_1
-
-- file: sample\submodules\openintro-statistics\ch_summarizing_data\TeX\ch_summarizing_data.tex (line 888)
-  error: \begin{eqnarray*}
-  message: Eqnarray is not recommended. Use align or gather instead.
-   887:   It is computed as
->  888:   \begin{eqnarray*}
-   889:   IQR = Q_3 - Q_1
 

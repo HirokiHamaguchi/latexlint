@@ -6,6 +6,7 @@ All notable changes to the "latexlint" will be documented in this file.
 
 - Add npm version badges linking to the package in both CLI guides.
 - Add npm and VS Code installation badges to both README templates.
+- Document npm publishing alongside the VS Code extension release.
 
 ## 2.0.0 - 2026-11-03
 

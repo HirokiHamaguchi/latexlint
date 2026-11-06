@@ -2,6 +2,8 @@
 
 English | [日本語](CLI_ja.md)
 
+[![npm version](https://img.shields.io/npm/v/latexlint?logo=npm)](https://www.npmjs.com/package/latexlint)
+
 LaTeX Lint integrates with pre-commit and CI.
 Node.js 22 or later and npm are required.
 

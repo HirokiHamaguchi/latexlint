@@ -2,6 +2,8 @@
 
 [English](CLI.md) | 日本語
 
+[![npm version](https://img.shields.io/npm/v/latexlint?logo=npm)](https://www.npmjs.com/package/latexlint)
+
 LaTeX Lintはpre-commitやCIに組み込めます。
 Node.js 22以降とnpmが必要です。
 

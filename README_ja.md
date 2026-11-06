@@ -5,6 +5,9 @@
 
 # LaTeX Lint
 
+[![VS Code: Install](https://img.shields.io/badge/VS_Code-Install-007ACC)](https://marketplace.visualstudio.com/items?itemName=hari64boli64.latexlint)
+[![npm version](https://img.shields.io/npm/v/latexlint?logo=npm)](https://www.npmjs.com/package/latexlint)
+
 ## 概要
 
 LaTeX Lintは、LaTeXおよび学術執筆上の一般的な問題を検出するリンターです。

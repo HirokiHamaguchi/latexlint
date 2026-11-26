@@ -7,6 +7,7 @@
   description: Check LaTeX and Markdown files.
   entry: latexlint
   language: node
+  language_version: lts
   files: \.(tex|md)$
   types: [file]
 - id: latexlint-fix
@@ -14,5 +15,6 @@
   description: Fix active Japanese spacing diagnostics, then check remaining issues.
   entry: latexlint --fix
   language: node
+  language_version: lts
   files: \.(tex|md)$
   types: [file]

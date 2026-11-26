@@ -5,6 +5,7 @@ All notable changes to the "latexlint" will be documented in this file.
 ## 2.0.2 - 2026-11-25
 
 - Include the bundled CLI and license notices in release tags for pre-commit.
+- Use Node.js LTS for both pre-commit hooks.
 - Remove install-time builds and reuse directories during license collection.
 - Add one release script for versioning, checks, tags, and both publish targets.
 - Simplify the pre-commit installation guides.

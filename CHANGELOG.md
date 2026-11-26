@@ -7,7 +7,9 @@ All notable changes to the "latexlint" will be documented in this file.
 - Include the bundled CLI and license notices in release tags for pre-commit.
 - Use Node.js LTS for both pre-commit hooks.
 - Remove install-time builds and reuse directories during license collection.
-- Add one release script for versioning, checks, tags, and both publish targets.
+- Add `prepare_release.py`; keep commits, tags, and publishing manual.
+- Read the release version from CHANGELOG and verify published versions and tags.
+- Show the version change in the publishing instructions.
 - Simplify the pre-commit installation guides.
 - Document manual package metadata edits outside the generated rule settings.
 

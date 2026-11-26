@@ -120,7 +120,7 @@ repos:
       - id: latexlint
 ```
 
-`REVISION`には、利用するバージョン(2.0.0以降)のタグを
+`REVISION`には、利用するバージョン(2.0.2以降)のタグを
 [公開タグ一覧](https://github.com/HirokiHamaguchi/latexlint/tags)から指定します。
 修正もしたい場合は、フックの指定を次に置き換えます:
 

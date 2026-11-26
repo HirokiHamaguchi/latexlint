@@ -31,10 +31,13 @@ const buildOptions = {
 
 function writeLicenses(metafile) {
     const packages = new Map();
+    const visited = new Set();
     for (const input of Object.keys(metafile.inputs)) {
         if (!input.includes('node_modules/')) continue;
         let directory = path.dirname(path.resolve(root, input));
-        while (directory !== path.dirname(directory)) {
+        // A visited directory has already been resolved to its owning package.
+        while (directory !== path.dirname(directory) && !visited.has(directory)) {
+            visited.add(directory);
             const manifestPath = path.join(directory, 'package.json');
             if (fs.existsSync(manifestPath)) {
                 const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));

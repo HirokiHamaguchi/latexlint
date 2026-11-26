@@ -3,7 +3,12 @@
 
 out
 dist
+!/dist/
+/dist/*
+!/dist/cli.cjs
+!/dist/cli-licenses.txt
 node_modules
+/tmp/
 
 sample/arxiv_sources/**
 !sample/arxiv_sources/arxiv_id_list.json

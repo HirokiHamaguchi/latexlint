@@ -189,8 +189,7 @@
     "test": "vscode-test",
     "build:cli": "node script/build-cli.cjs",
     "test:cli": "npm run build:cli && node --test script/cli.test.cjs",
-    "typecheck": "tsc --noEmit",
-    "prepare": "npm run build:cli"
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",

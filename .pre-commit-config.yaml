@@ -32,4 +32,4 @@ repos:
         types_or: [javascript, jsx, ts, tsx]
         files: \.(ts|tsx|js|jsx)$
         args: ["--fix"]
-        exclude: ^submodules/|sample/logs/
+        exclude: ^dist/|^submodules/|sample/logs/

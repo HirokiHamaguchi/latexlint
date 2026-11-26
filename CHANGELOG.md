@@ -2,6 +2,14 @@
 
 All notable changes to the "latexlint" will be documented in this file.
 
+## 2.0.2 - 2026-11-25
+
+- Include the bundled CLI and license notices in release tags for pre-commit.
+- Remove install-time builds and reuse directories during license collection.
+- Add one release script for versioning, checks, tags, and both publish targets.
+- Simplify the pre-commit installation guides.
+- Document manual package metadata edits outside the generated rule settings.
+
 ## 2.0.1 - 2026-11-06
 
 - Add npm version badges linking to the package in both CLI guides.

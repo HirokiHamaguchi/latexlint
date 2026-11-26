@@ -7794,7 +7794,7 @@ var severity = {
 
 // src/cli/config.ts
 var defaults = define_LATEXLINT_DEFAULTS_default;
-var version = "2.0.1";
+var version = "2.0.2";
 function stringArray(value, key) {
   if (!Array.isArray(value) || value.some((item) => typeof item !== "string"))
     throw new Error(`${key} must be an array of strings`);

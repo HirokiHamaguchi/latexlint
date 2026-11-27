@@ -49,6 +49,18 @@ def prepare_release() -> None:
     # Untracked development corpora are not part of the release diff.
     if run("git", "status", "--porcelain", "--untracked-files=no", capture_output=True):
         raise SystemExit("The working tree and index must be clean before preparing a release.")
+
+    # Public metadata queries succeed without login; check authentication before
+    # changing versions or preparing a release that cannot be published.
+    # https://docs.npmjs.com/cli/v10/commands/npm-whoami/
+    try:
+        run(NPM, "whoami")
+    except subprocess.CalledProcessError as error:
+        raise SystemExit(
+            f"npm authentication failed. Run '{NPM} login --auth-type=web', "
+            "then retry preparing the release."
+        ) from error
+
     changelog = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
     headings = re.findall(r"^## (.+)$", changelog, re.M)
     if len(headings) < 2:
